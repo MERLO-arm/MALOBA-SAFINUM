@@ -1,0 +1,426 @@
+/* =============================================================================
+   MALOBA ANYDOC — STYLES OFFICIELS DE L'EXTENSION D'ACCESSIBILITÉ (fub)
+   Charte graphique Maloba : Orange Maloba (#FF7900 / #ED7009), Terracotta (#E05515),
+   Bronze ambré (#7B3F0C) et Ambre (#FFA040)
+   ============================================================================= */
+
+/* Soulignement et surbrillance subtile aux couleurs Maloba des phrases traduites */
+[data-safinum-translated="true"] {
+  position: relative;
+  transition: background-color 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 4px;
+}
+
+[data-safinum-translated="true"]:hover {
+  background-color: rgba(255, 121, 0, 0.12) !important;
+  box-shadow: 0 0 0 2px rgba(255, 121, 0, 0.35) !important;
+  cursor: pointer;
+}
+
+/* Surbrillance vive lors de la lecture vocale active */
+[data-safinum-speaking="true"] {
+  background-color: rgba(255, 121, 0, 0.28) !important;
+  box-shadow: 0 0 0 3px #ff7900 !important;
+  border-radius: 4px;
+}
+
+/* Bulle interactive flottante rapide au survol d'une phrase (🔊 Écouter · 💡 Expliquer) */
+#safinum-anydoc-hover-pill {
+  position: fixed;
+  z-index: 2147483645;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #7b3f0c 0%, #2a1505 100%);
+  color: #fff7ed;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 121, 0, 0.5);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(123, 63, 12, 0.45), 0 0 0 1px rgba(255, 121, 0, 0.3);
+  pointer-events: auto;
+  user-select: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+#safinum-anydoc-hover-pill button {
+  background: rgba(255, 255, 255, 0.14);
+  border: none;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s ease;
+}
+
+#safinum-anydoc-hover-pill button:hover {
+  background: #ff7900;
+  color: #ffffff;
+}
+
+/* Carte pédagogique AnyDoc injectée automatiquement sous les erreurs et contenus Jury */
+.safinum-anydoc-inline-card {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1px solid #fdba74;
+  color: #7c2d12;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12.5px;
+  line-height: 1.45;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.12);
+}
+
+.safinum-anydoc-inline-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.safinum-anydoc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #ff7900;
+  color: #ffffff;
+}
+
+.safinum-anydoc-badge-rag {
+  background: #7b3f0c;
+  color: #ffedd5;
+  border: 1px solid rgba(255, 121, 0, 0.3);
+}
+
+.safinum-anydoc-speak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ea580c;
+  color: #ffffff;
+  border: none;
+  padding: 5px 11px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.safinum-anydoc-speak-btn:hover {
+  background: #c2410c;
+  transform: translateY(-1px);
+}
+
+.safinum-anydoc-explain-fub {
+  font-weight: 600;
+  color: #7c2d12;
+  margin-bottom: 4px;
+}
+
+.safinum-anydoc-explain-fr {
+  font-size: 11.5px;
+  color: #9a3412;
+}
+
+.safinum-anydoc-meta-row {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed rgba(234, 88, 12, 0.35);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 10.5px;
+  color: #9a3412;
+}
+
+/* =============================================================================
+   DOCK FLOTTANT "MALOBA ANYDOC" (BAS-GAUCHE AUX COULEURS DE MALOBA)
+   ============================================================================= */
+#safinum-anydoc-dock {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2147483640;
+  width: 395px;
+  max-width: calc(100vw - 32px);
+  background: #0f172a;
+  color: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 121, 0, 0.45);
+  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.75), 0 0 0 1px rgba(255, 121, 0, 0.3);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow: hidden;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#safinum-anydoc-dock.safinum-dock-minimized {
+  width: 295px;
+}
+
+.safinum-dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, #7b3f0c 0%, #e05515 50%, #ff7900 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+}
+
+.safinum-dock-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.safinum-dock-logo-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.safinum-dock-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.safinum-dock-subtitle {
+  font-size: 10.5px;
+  color: #fef3c7;
+  font-weight: 500;
+}
+
+.safinum-dock-toggle-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.safinum-dock-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.safinum-dock-body {
+  padding: 12px 14px;
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+#safinum-anydoc-dock.safinum-dock-minimized .safinum-dock-body {
+  display: none;
+}
+
+/* Sélecteur de mode (Fulfuldé fub / Bilingue / Original) */
+.safinum-mode-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  background: #1e293b;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #334155;
+}
+
+.safinum-mode-btn {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  padding: 6px 4px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.safinum-mode-btn.active {
+  background: #ff7900;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
+}
+
+/* Boutons d'action vocale globale */
+.safinum-voice-actions {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.safinum-action-primary {
+  flex: 1;
+  background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
+  color: #ffffff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(255, 121, 0, 0.3);
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.safinum-action-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.safinum-action-stop {
+  background: #334155;
+  color: #f1f5f9;
+  border: none;
+  padding: 8px 11px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.safinum-action-stop:hover {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+/* Carte d'inspection AnyDoc active */
+.safinum-inspector-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 121, 0, 0.3);
+  border-radius: 11px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+}
+
+.safinum-inspector-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #ff7900;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.safinum-inspector-fub {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.safinum-inspector-orig {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 7px;
+  font-style: italic;
+}
+
+.safinum-inspector-explain {
+  background: rgba(255, 121, 0, 0.12);
+  border-left: 3px solid #ff7900;
+  padding: 7px 9px;
+  border-radius: 0 7px 7px 0;
+  font-size: 11.5px;
+  color: #fed7aa;
+  line-height: 1.4;
+}
+
+.safinum-inspector-explain-fr {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+/* Statistiques des 18 sources & Graphe 5-Nœuds */
+.safinum-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.safinum-stat-box {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.safinum-stat-val {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ff7900;
+}
+
+.safinum-stat-lbl {
+  font-size: 9.5px;
+  color: #94a3b8;
+}
+
+.safinum-sources-details {
+  font-size: 11px;
+  color: #cbd5e1;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 7px 10px;
+}
+
+.safinum-sources-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffa040;
+  outline: none;
+}
+
+.safinum-sources-list {
+  margin-top: 6px;
+  max-height: 130px;
+  overflow-y: auto;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #94a3b8;
+}

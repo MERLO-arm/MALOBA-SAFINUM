@@ -1,0 +1,21 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & temporary
+.env
+*.tmp
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hugging Face local download cache
+corpus/raw/burkimbia/.cache/
+
+# Video demo file (optional, can be uploaded to release or video link if desired)
+*.mp4

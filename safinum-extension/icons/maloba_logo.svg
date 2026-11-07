@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="malobaGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF7900" />
+      <stop offset="50%" stop-color="#E05515" />
+      <stop offset="100%" stop-color="#7B3F0C" />
+    </linearGradient>
+    <linearGradient id="waveAccent" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFA040" />
+      <stop offset="100%" stop-color="#FF7900" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#malobaGrad)" />
+  <!-- Speech Bubble + Soundwave representing Text + Voice Translation (Maloba) -->
+  <path d="M28 40C28 31.1634 35.1634 24 44 24H76C84.8366 24 92 31.1634 92 40V68C92 76.8366 84.8366 84 76 84H54L36 96V84H44C35.1634 84 28 76.8366 28 68V40Z" fill="white" fill-opacity="0.15" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Audio bars inside bubble -->
+  <rect x="43" y="48" width="5" height="14" rx="2.5" fill="white" />
+  <rect x="53" y="38" width="5" height="34" rx="2.5" fill="#F5F2CF" />
+  <rect x="63" y="43" width="5" height="24" rx="2.5" fill="white" />
+  <rect x="73" y="50" width="5" height="10" rx="2.5" fill="#F5F2CF" />
+</svg>
