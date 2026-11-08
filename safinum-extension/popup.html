@@ -159,8 +159,11 @@
 
   <div class="mode-group">
     <select id="popup-lang-select" class="lang-dropdown" title="Choisir la langue d'accessibilité">
-      <option value="fub" selected>Fulfuldé (fub)</option>
-      <option value="ewo">Ewondo (ewo)</option>
+      <option value="fub" selected>🇨🇲 Fulfuldé (fub) · Grand-Nord</option>
+      <option value="ewo">🇨🇲 Ewondo (ewo) · Centre / Sud</option>
+      <option value="dua" disabled style="opacity:0.6;">🇨🇲 Douala (dua) [À venir]</option>
+      <option value="bbj" disabled style="opacity:0.6;">🇨🇲 Ghomálá' (bbj) [À venir]</option>
+      <option value="bas" disabled style="opacity:0.6;">🇨🇲 Bassa (bas) [À venir]</option>
     </select>
     <button class="mode-btn" data-mode="bilingual">Bilingue</button>
     <button class="mode-btn" data-mode="original">Original</button>
@@ -172,12 +175,12 @@
 
   <div class="card">
     <div class="stat-row">
-      <span>Langue nationale cible :</span>
-      <span class="stat-val">Fulfuldé (fub)</span>
+      <span>Langues actives :</span>
+      <span class="stat-val" id="stat-lang-active">Fulfuldé &amp; Ewondo</span>
     </div>
     <div class="stat-row">
-      <span>Corpus unifié moissonné :</span>
-      <span class="stat-val">99 633 paires (18 sources)</span>
+      <span>Corpus unifié :</span>
+      <span class="stat-val">18 sources (99 633 paires)</span>
     </div>
     <div class="stat-row">
       <span>Nœuds DOM traduits :</span>
@@ -185,7 +188,7 @@
     </div>
     <div class="stat-row">
       <span>Intégrité des montants :</span>
-      <span class="stat-val-green">100 % Intègre</span>
+      <span class="stat-val-green">100 % Intègre (0 écart)</span>
     </div>
   </div>
 

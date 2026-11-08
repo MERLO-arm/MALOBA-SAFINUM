@@ -18,8 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (res && typeof res.translatedNodes !== "undefined") {
       statNodes.textContent = String(res.translatedNodes);
     }
-    if (res && res.lang && langSelect) {
-      langSelect.value = res.lang;
+    if (res && res.lang) {
+      if (langSelect) langSelect.value = res.lang;
+      const statLang = document.getElementById("stat-lang-active");
+      if (statLang) {
+        statLang.textContent = res.lang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)";
+      }
     }
     if (res && res.mode) {
       modeBtns.forEach((b) => {

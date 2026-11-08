@@ -92,23 +92,31 @@
     }
 
     /**
-     * Lecture AnyDoc complète : lit la phrase dans la langue active (Fulfuldé ou Ewondo), puis son explication simplifiée
+     * Lecture AnyDoc multilingue : lit la phrase dans la langue active (fub, ewo ou futures langues),
+     * suivie de son explication pédagogique simplifiée.
+     * Conçu pour être immédiatement extensible à toute langue ajoutée au registre.
      */
     speakPhraseAndExplanation(entry, lang = "fub") {
       if (!entry) return;
-      if (lang === "ewo") {
-        const ewoText = entry.ewo || entry.fub;
-        const ewoPhon = entry.phonetic_ewo || entry.phonetic || ewoText;
-        const expEwo = entry.explain_ewo || entry.explain_fub;
-        const expPhon = entry.explain_ewo_phonetic || entry.explain_fub_phonetic || expEwo;
-        const fullPhonetic = `${ewoPhon}. Fáám : ${expPhon}.`;
-        const fullDisplay = `${ewoText} — 💡 ${expEwo}`;
-        this.speak(fullDisplay, fullPhonetic);
-      } else {
-        const fullPhonetic = `${entry.phonetic || entry.fub}. Famfingo : ${entry.explain_fub_phonetic || entry.explain_fub}.`;
-        const fullDisplay = `${entry.fub} — 💡 ${entry.explain_fub}`;
-        this.speak(fullDisplay, fullPhonetic);
-      }
+
+      const kbMeta = (window.SAFINUM_KB && window.SAFINUM_KB.meta) || {};
+      const langConfig = (kbMeta.languages && kbMeta.languages[lang]) || {};
+      const explainMarker = langConfig.explainWord || (lang === "ewo" ? "Fáám" : "Famfingo");
+
+      // Texte de la phrase
+      const text = entry[lang] || entry.fub || entry.original || "";
+      // Phonétique de la phrase
+      const phon = entry[`phonetic_${lang}`] || (lang === "fub" ? entry.phonetic : null) || text;
+
+      // Explication
+      const exp = entry[`explain_${lang}`] || entry.explain_fub || entry.explain_fr || "";
+      // Phonétique de l'explication
+      const expPhon = entry[`explain_${lang}_phonetic`] || (lang === "fub" ? entry.explain_fub_phonetic : null) || exp;
+
+      const fullPhonetic = `${phon}. ${explainMarker} : ${expPhon}.`;
+      const fullDisplay = `${text} — 💡 ${exp}`;
+
+      this.speak(fullDisplay, fullPhonetic);
     }
   }
 

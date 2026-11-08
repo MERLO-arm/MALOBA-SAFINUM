@@ -700,3 +700,4 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Fermer la boîte de dialogue ou l'alerte."
     }
 }
+

@@ -354,3 +354,4 @@ code = code.replace(old_msg_listener, new_msg_listener)
 
 CONTENT_PATH.write_text(code, encoding="utf-8")
 print("content.js updated successfully with Ewondo language and dropdown menu!")
+

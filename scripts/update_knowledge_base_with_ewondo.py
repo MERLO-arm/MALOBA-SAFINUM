@@ -20,6 +20,61 @@ def update_kb():
         "fub": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
         "ewo": "Ewondo (Yaoundé / Centre / Sud)"
     }
+    meta["languages"] = {
+        "fub": {
+            "code": "fub",
+            "name": "Fulfuldé",
+            "fullName": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
+            "flag": "🇨🇲",
+            "region": "Grand-Nord (Adamaoua, Nord, Extrême-Nord)",
+            "listenWord": "Nanugo",
+            "explainWord": "Famfingo",
+            "active": True
+        },
+        "ewo": {
+            "code": "ewo",
+            "name": "Ewondo",
+            "fullName": "Ewondo (Yaoundé / Centre / Sud / Est)",
+            "flag": "🇨🇲",
+            "region": "Centre, Sud, Est (Zone Beti-Fang)",
+            "listenWord": "Wóg",
+            "explainWord": "Fáám",
+            "active": True
+        },
+        "dua": {
+            "code": "dua",
+            "name": "Douala",
+            "fullName": "Douala (Littoral / Wouri / Sud-Ouest)",
+            "flag": "🇨🇲",
+            "region": "Littoral, Sud-Ouest",
+            "listenWord": "Senga",
+            "explainWord": "Bwele",
+            "active": False,
+            "soon": True
+        },
+        "bbj": {
+            "code": "bbj",
+            "name": "Ghomálá'",
+            "fullName": "Ghomálá' / Bamiléké (Hauts-Plateaux / Ouest)",
+            "flag": "🇨🇲",
+            "region": "Ouest (Grassfields)",
+            "listenWord": "Ju'",
+            "explainWord": "Fa'",
+            "active": False,
+            "soon": True
+        },
+        "bas": {
+            "code": "bas",
+            "name": "Bassa",
+            "fullName": "Bassa (Sanaga-Maritime / Centre-Littoral)",
+            "flag": "🇨🇲",
+            "region": "Centre, Littoral",
+            "listenWord": "Hɛp",
+            "explainWord": "Tégəl",
+            "active": False,
+            "soon": True
+        }
+    }
     
     exact_ui = data.get("exact_ui", {})
     updated_count = 0
@@ -75,3 +130,4 @@ def update_kb():
 
 if __name__ == "__main__":
     update_kb()
+

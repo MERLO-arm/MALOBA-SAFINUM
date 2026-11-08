@@ -40,6 +40,61 @@ window.SAFINUM_KB = {
     "language_names": {
       "fub": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
       "ewo": "Ewondo (Yaoundé / Centre / Sud)"
+    },
+    "languages": {
+      "fub": {
+        "code": "fub",
+        "name": "Fulfuldé",
+        "fullName": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
+        "flag": "🇨🇲",
+        "region": "Grand-Nord (Adamaoua, Nord, Extrême-Nord)",
+        "listenWord": "Nanugo",
+        "explainWord": "Famfingo",
+        "active": true
+      },
+      "ewo": {
+        "code": "ewo",
+        "name": "Ewondo",
+        "fullName": "Ewondo (Yaoundé / Centre / Sud / Est)",
+        "flag": "🇨🇲",
+        "region": "Centre, Sud, Est (Zone Beti-Fang)",
+        "listenWord": "Wóg",
+        "explainWord": "Fáám",
+        "active": true
+      },
+      "dua": {
+        "code": "dua",
+        "name": "Douala",
+        "fullName": "Douala (Littoral / Wouri / Sud-Ouest)",
+        "flag": "🇨🇲",
+        "region": "Littoral, Sud-Ouest",
+        "listenWord": "Senga",
+        "explainWord": "Bwele",
+        "active": false,
+        "soon": true
+      },
+      "bbj": {
+        "code": "bbj",
+        "name": "Ghomálá'",
+        "fullName": "Ghomálá' / Bamiléké (Hauts-Plateaux / Ouest)",
+        "flag": "🇨🇲",
+        "region": "Ouest (Grassfields)",
+        "listenWord": "Ju'",
+        "explainWord": "Fa'",
+        "active": false,
+        "soon": true
+      },
+      "bas": {
+        "code": "bas",
+        "name": "Bassa",
+        "fullName": "Bassa (Sanaga-Maritime / Centre-Littoral)",
+        "flag": "🇨🇲",
+        "region": "Centre, Littoral",
+        "listenWord": "Hɛp",
+        "explainWord": "Tégəl",
+        "active": false,
+        "soon": true
+      }
     }
   },
   "exact_ui": {
