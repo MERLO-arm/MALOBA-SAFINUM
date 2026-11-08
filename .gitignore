@@ -17,6 +17,10 @@ desktop.ini
 # Hugging Face local download cache
 corpus/raw/burkimbia/.cache/
 
+# Node modules
+node_modules/
+package-lock.json
+
 # Binary compiled automata
 *.bin
 

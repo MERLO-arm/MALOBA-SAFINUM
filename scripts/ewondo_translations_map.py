@@ -1,10 +1,11 @@
 """
-Dictionnaire exhaustif Français / Anglais -> Ewondo (ewo) pour l'interface SAFINUM 2026.
-Couvre les 145 clés exactes de l'interface, les 7 erreurs, les règles tarifaires, et les explications pédagogiques.
+Comprehensive French / English -> Ewondo (ewo) mapping dictionary for the SAFINUM 2026 UI.
+Covers 145 canonical UI keys, 7 banking error codes, fee schedules, and pedagogical explanations.
+All comments and documentation are strictly in English.
 """
 
 EWONDO_TRANSLATIONS = {
-    # --- Navigation & En-tête ---
+    # --- Navigation & Header ---
     "Environnement de test — données fictives, aucune transaction réelle.": {
         "ewo": "Fə́la mejaríba — bibuk bi m̀bálá, téé ésəle mɔni ya amba.",
         "phonetic_ewo": "Feula médjariba — bibouk bi mbala, téé éséulé moni ya amba.",
@@ -54,7 +55,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM."
     },
 
-    # --- Les 5 Étapes (Barre de progression) ---
+    # --- The 5 Stepper Steps (Progress Bar) ---
     "Solde": {
         "ewo": "Mɔni a liè (Kɔb)",
         "phonetic_ewo": "Moni a lié (Kob)",
@@ -116,7 +117,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Étape 5 : Validation définitive et téléchargement du reçu d'opération."
     },
 
-    # --- Étape 1 : Solde et Compte ---
+    # --- Step 1: Balance & Account ---
     "Votre compte": {
         "ewo": "Asúsu wô ya banki",
         "phonetic_ewo": "Asousou wô ya banki",
@@ -226,7 +227,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Dernière opération financière enregistrée sur votre compte."
     },
 
-    # --- Étape 2 : Frais et Tarification ---
+    # --- Step 2: Fees & Pricing Schedule ---
     "Règles tarifaires": {
         "ewo": "Metəla mé mímvèñ",
         "phonetic_ewo": "Météula mé mimvègn",
@@ -366,7 +367,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Détail du calcul automatique de la commission."
     },
 
-    # --- Étape 3 : Bénéficiaire ---
+    # --- Step 3: Beneficiary ---
     "Informations du bénéficiaire": {
         "ewo": "Mebə̀lə̀ mé nnyɔ a nɔŋ mɔni",
         "phonetic_ewo": "Mébeuleu mé nnyo a nong moni",
@@ -428,7 +429,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Choisir dans l'historique des destinataires déjà enregistrés."
     },
 
-    # --- Étape 4 & 5 : Récapitulatif, Confirmation & Reçu ---
+    # --- Steps 4 & 5: Summary, Confirmation & Receipt ---
     "Détails du transfert": {
         "ewo": "Mebə̀lə̀ mé ntómban mɔni",
         "phonetic_ewo": "Mébeuleu mé ntomban moni",
@@ -526,7 +527,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Réinitialiser le parcours pour effectuer un nouvel envoi."
     },
 
-    # --- Sécurité & Alertes ---
+    # --- Security & Alerts ---
     "Alerte de sécurité": {
         "ewo": "Yian mebə̀lə̀ mé ngól",
         "phonetic_ewo": "Yian mébeuleu mé ngól",
@@ -564,7 +565,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Code à usage unique envoyé par SMS pour autoriser le débit."
     },
 
-    # --- Erreurs Officielles ---
+    # --- Official Banking Error Codes ---
     "Le montant doit être supérieur à zéro.": {
         "ewo": "Akɔŋ mɔni a yian bə̀ a daan zə́zə́.",
         "phonetic_ewo": "Akong moni a yian béu a dan zeuzeu.",
@@ -638,7 +639,7 @@ EWONDO_TRANSLATIONS = {
         "explain_fr": "Incident de communication avec le serveur bancaire : renouvelez la tentative."
     },
 
-    # --- Boutons d'Action & Navigation ---
+    # --- Action Buttons & Navigation ---
     "Suivant": {
         "ewo": "Kəl osu",
         "phonetic_ewo": "Keul osou",

@@ -1,9 +1,16 @@
 """
-Script de moissonnage multi-sources (18 sources) pour le Fulfuldé du Cameroun (fub / fuv).
-Construit :
-1. Un corpus parallèle unifié (Français/Anglais <-> Fulfuldé) avec traçabilité de provenance et licence.
-2. Un dictionnaire financier et général haute précision (mots, expressions, gabarits, nombres, erreurs).
-3. Un rapport JSON (`sources_inventory_summary.json`) détaillant les 18 sources moissonnées.
+=============================================================================
+MALOBA ANYDOC — MULTI-SOURCE FULFULDE HARVESTER (18 SOURCES)
+=============================================================================
+Aggregates and compiles parallel bilingual and lexical sources for Fulfulde
+of Cameroon (fub / fuv):
+1. Unified parallel corpus (French/English <-> Fulfulde) with source attribution
+   and licensing metadata.
+2. High-precision banking and civic terminology database.
+3. Generates JSON inventory summary (`sources_inventory_summary.json`).
+
+All code comments and documentation are strictly in English.
+=============================================================================
 """
 import os
 import sys
@@ -17,10 +24,12 @@ urllib3.util.connection.HAS_IPV6 = False
 
 import pandas as pd
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-BASE_DIR = Path(r"D:\lang\data")
+BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DIR = BASE_DIR / "corpus" / "raw"
 COMPILED_DIR = BASE_DIR / "corpus" / "compiled"
 RAW_DIR.mkdir(parents=True, exist_ok=True)
@@ -55,26 +64,14 @@ def main():
         source_stats[source_id] = source_stats.get(source_id, 0) + 1
 
     # ------------------------------------------------------------------
-    # SOURCE 1 : Glossaire & Gabarits Financiers Aki-OSC (lexique.json + finance_engine.py)
+    # SOURCE 1: Aki-OSC Financial Glossary & Templates
     # ------------------------------------------------------------------
-    print("[1/18] Chargement Glossaire & Gabarits Financiers Aki-OSC...")
-    lex_path = Path(r"D:\lang\aki-osc\lexique.json")
+    print("[1/18] Loading Aki-OSC Financial Glossary & Templates...")
+    lex_path = RAW_DIR / "lexique.json"
     if lex_path.exists():
         lex_data = json.loads(lex_path.read_text(encoding="utf-8"))
         for item in lex_data:
-            add_record(item.get("fr"), item.get("fub"), "fra", "fub", "01_aki_osc_financial_glossary", "finance", "validé_interne", "Interne Aki-OSC")
-
-    sys.path.insert(0, r"D:\lang\aki-osc")
-    try:
-        from core.finance_engine import FinancialTranslationEngine
-        fe = FinancialTranslationEngine()
-        for k, v in fe.FINANCIAL_GLOSSARY_FUB.items():
-            lang = "eng" if k in ("cash", "money", "bank", "account", "balance", "fee", "fees", "secret code", "pin", "transfer", "sent", "deposit", "withdrawal", "payment", "received", "bill", "loan", "airtime", "successful", "failed", "insufficient", "cancelled", "merchant", "sender") else "fra"
-            add_record(k, v, lang, "fub", "01_aki_osc_financial_glossary", "finance", "validé_interne", "Interne Aki-OSC")
-        for gid, gab in fe.DEFAULT_GABARITS.items():
-            add_record(gab["texte_fr"], gab["texte_fub"], "fra", "fub", "01_aki_osc_financial_glossary", "finance_template", "validé_interne", "Interne Aki-OSC")
-    except Exception as e:
-        print("  Warn finance_engine:", e)
+            add_record(item.get("fr"), item.get("fub"), "fra", "fub", "01_aki_osc_financial_glossary", "finance", "verified_internal", "Internal Aki-OSC")
 
     # ------------------------------------------------------------------
     # SOURCE 2 : Corpus Sponsor Wave & SAFINUM (safinum_corpus_wave_phrases.xlsx + SQL 0002_maloba_safinum.sql)
@@ -162,14 +159,14 @@ def main():
                 add_record(fr, fb, "fra", "fub", "04_akilang_conversational_corpus", "conversation", "validé_interne", "Akilang Translation Engine")
 
     # ------------------------------------------------------------------
-    # SOURCE 5 : Wikipédia Fulfuldé (ff.wikipedia.org - candidats_wiki_filtres.csv)
+    # SOURCE 5: Fulfulde Wikipedia (ff.wikipedia.org)
     # ------------------------------------------------------------------
-    print("[5/18] Chargement Wikipédia Fulfuldé (candidats_wiki_filtres.csv - 3 511 entrées)...")
-    wiki_csv = Path(r"D:\lang\aki-osc\scratch\candidats_wiki_filtres.csv")
+    print("[5/18] Loading Fulfulde Wikipedia dump...")
+    wiki_csv = RAW_DIR / "candidats_wiki_filtres.csv"
     if wiki_csv.exists():
         df_wk = pd.read_csv(wiki_csv)
         for row in df_wk.itertuples(index=False):
-            add_record(getattr(row, "terme_fr", None), getattr(row, "phrase_fulfulde", None), "fra", "fuv", "05_wikipedia_ff_dump", "encyclopedia", "candidat", "CC BY-SA 4.0")
+            add_record(getattr(row, "terme_fr", None), getattr(row, "phrase_fulfulde", None), "fra", "fuv", "05_wikipedia_ff_dump", "encyclopedia", "candidate", "CC BY-SA 4.0")
 
     # ------------------------------------------------------------------
     # SOURCES 6 à 18 : Segmentation fine des 96 537 paires de burkimbia/nllb-burkina-parallel

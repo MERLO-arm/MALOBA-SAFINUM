@@ -1,16 +1,24 @@
 """
-Génère `D:\lang\data\safinum-extension\knowledge_base.js` à partir :
-1. De l'intégralité des chaînes FR & EN extraites du bundle officiel en production `HackathonTest-Cb2PbTlv.js` de SAFINUM 2026.
-2. Des 7 erreurs officielles (`AMOUNT_001` à `CONFIRM_001`) et 3 règles de frais (`safinum`, `mobile_money`, `other_bank`).
-3. Des 18 sources Fulfuldé moissonnées (`unified_fulfulde_corpus.parquet` - 99 633 entrées), incluant Tourneux (1 759 entrées),
-   le glossaire financier Aki-OSC, le corpus Wave/SAFINUM, la Bible en Fulfuldé, RFI Fulfuldé, CNRS ELLAF, Wikipédia FF, et Burkimbia NLLB (`fub`).
+=============================================================================
+MALOBA ANYDOC — KNOWLEDGE BASE COMPILER
+=============================================================================
+Compiles `safinum-extension/knowledge_base.js` from:
+1. Canonical French & English UI strings extracted from the SAFINUM 2026 platform.
+2. The 7 official error codes (`AMOUNT_001` through `CONFIRM_001`) and fee schedules.
+3. The 18 harvested Fulfulde sources (`unified_fulfulde_corpus.parquet` - 99,633 records),
+   including Tourneux, Aki-OSC glossary, Wave/SAFINUM corpus, eBible, RFI, CNRS, Wikipedia,
+   and Burkimbia NLLB (`fub`).
+4. Merges Ewondo (`ewo`) multilingual translations and pedagogical explanations.
+
+All code comments and documentation are strictly in English.
+=============================================================================
 """
 import json
 import re
 from pathlib import Path
 import pandas as pd
 
-BASE_DIR = Path(r"D:\lang\data")
+BASE_DIR = Path(__file__).resolve().parent.parent
 COMPILED_DIR = BASE_DIR / "corpus" / "compiled"
 EXT_DIR = BASE_DIR / "safinum-extension"
 EXT_DIR.mkdir(parents=True, exist_ok=True)
@@ -991,7 +999,7 @@ def main():
                 if 2 <= len(clean_fr) <= 35 and clean_fr not in word_lexicon:
                     word_lexicon[clean_fr] = {"fub": fb_raw, "src": "03_tourneux_dictionary_csv"}
 
-    lex_path = Path(r"D:\lang\aki-osc\lexique.json")
+    lex_path = BASE_DIR / "corpus" / "raw" / "lexique.json"
     if lex_path.exists():
         for item in json.loads(lex_path.read_text(encoding="utf-8")):
             fr_k = str(item.get("fr", "")).strip().lower()
@@ -1076,28 +1084,34 @@ def main():
     }
 
     js_content = (
-        "// =============================================================================\n"
-        "// AKI x SAFINUM ANYDOC — BASE DE CONNAISSANCES FULFULDE CAMEROUN (fub)\n"
-        "// Généré automatiquement depuis 18 sources (99 633 entrées parallèles & lexicales)\n"
-        "// =============================================================================\n"
+        "/**\n"
+        " * =============================================================================\n"
+        " * MALOBA ANYDOC — MULTILINGUAL KNOWLEDGE BASE: FULFULDE (fub) & EWONDO (ewo)\n"
+        " * =============================================================================\n"
+        " * Unified linguistic knowledge base compiled for the SAFINUM 2026 Challenge.\n"
+        " * Contains 99,633 records aggregated from 18 verified sources, exact UI mappings,\n"
+        " * dynamic patterns, phrase chunks, morphological lexicons, and RAG exemplars.\n"
+        " * All comments and documentation are strictly in English.\n"
+        " * =============================================================================\n"
+        " */\n"
         "window.SAFINUM_KB = " + json.dumps(kb_object, ensure_ascii=False, indent=2) + ";\n"
     )
 
     out_js = EXT_DIR / "knowledge_base.js"
     out_js.write_text(js_content, encoding="utf-8")
-    print(f"[OK] {out_js} régénéré ({out_js.stat().st_size:,} octets)")
-    print(f"  - Entrées UI exactes (FR+EN) : {len(exact_map)}")
-    print(f"  - Patterns dynamiques        : {len(dynamic_patterns)}")
-    print(f"  - Expressions phraséologiques: {len(phrase_chunks)}")
-    print(f"  - Mots du lexique (fub)      : {len(word_lexicon)}")
-    print(f"  - Exemplaires RAG 18 sources : {len(exemplars)}")
+    print(f"[OK] {out_js} generated ({out_js.stat().st_size:,} bytes)")
+    print(f"  - Canonical UI entries (FR+EN) : {len(exact_map)}")
+    print(f"  - Dynamic regex templates      : {len(dynamic_patterns)}")
+    print(f"  - Phrase chunks                : {len(phrase_chunks)}")
+    print(f"  - Morphological lexicon (fub)  : {len(word_lexicon)}")
+    print(f"  - Parallel RAG exemplars       : {len(exemplars)}")
 
     try:
         from update_knowledge_base_with_ewondo import update_kb
-        update_kb()
-        print("  - Module bilingue Ewondo (ewo) synchronisé avec succès !")
+        update_kb(out_js)
+        print("  - Bilingual Ewondo module synchronized successfully!")
     except Exception as e:
-        print("  - Note : synchronisation Ewondo omise :", e)
+        print("  - Notice: Ewondo synchronization skipped:", e)
 
 
 if __name__ == "__main__":
