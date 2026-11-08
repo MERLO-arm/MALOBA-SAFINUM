@@ -1,4 +1,4 @@
-# 🦁 MALOBA ANYDOC — ACCESSIBILITÉ FINANCIÈRE FULFULDE DU CAMEROUN (`fub`)
+# 🦁 MALOBA ANYDOC — ACCESSIBILITÉ FINANCIÈRE MULTILINGUE : FULFULDE (`fub`) & EWONDO (`ewo`)
 ### *Prototype Officiel de la Team Ekwali / Maloba · SAFINUM Innovate Challenge 2026*
 **Salon de la Finance Numérique (SAFINUM 2026) · Yaoundé, Cameroun**  
 **Date limite de soumission : 14 Novembre 2026 à 23:59:59**  
@@ -8,7 +8,8 @@
 ---
 
 [![SAFINUM Challenge](https://img.shields.io/badge/SAFINUM-Innovate%202026-ff7900?style=for-the-badge&logo=safari)](https://safinum.cm/hackathon)
-[![Langue Fulfulde](https://img.shields.io/badge/Langue-Fulfuld%C3%A9%20(fub%20Cameroun)-7b3f0c?style=for-the-badge)](https://fr.wikipedia.org/wiki/Peul)
+[![Langue Fulfulde](https://img.shields.io/badge/Langue-Fulfuld%C3%A9%20(fub%20Grand--Nord)-7b3f0c?style=for-the-badge)](https://fr.wikipedia.org/wiki/Peul)
+[![Langue Ewondo](https://img.shields.io/badge/Langue-Ewondo%20(ewo%20Yaound%C3%A9)-ea580c?style=for-the-badge)](https://fr.wikipedia.org/wiki/Ewondo)
 [![Intégrité Jury](https://img.shields.io/badge/Int%C3%A9grit%C3%A9-100%25%20(0%20%C3%89cart)-10b981?style=for-the-badge)]()
 [![Manifest V3](https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-blue?style=for-the-badge&logo=googlechrome)]()
 [![Charte Maloba](https://img.shields.io/badge/Charte-Maloba%20Official-ea580c?style=for-the-badge)]()
@@ -179,3 +180,4 @@ Pour une lecture détaillée de l'architecture, du code source, de la charte gra
 * **Contact & Soumission** : [forms.gle/Dt6dzQwkEiMW7q2E8](https://forms.gle/Dt6dzQwkEiMW7q2E8)
 
 *« Rendre la finance numérique accessible à chaque citoyen, dans sa propre langue, par la voix et l'explication. »*
+

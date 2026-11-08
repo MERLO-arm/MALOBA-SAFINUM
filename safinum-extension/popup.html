@@ -54,13 +54,37 @@
     }
     .mode-group {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1.25fr 1fr 1fr;
       gap: 6px;
       background: #1e293b;
       padding: 4px;
       border-radius: 10px;
       margin-bottom: 12px;
       border: 1px solid #334155;
+    }
+    .lang-dropdown {
+      background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px 6px 6px;
+      border-radius: 7px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffffff' d='M0 0l4 5 4-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 6px center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .lang-dropdown option {
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 600;
     }
     .mode-btn {
       border: none;
@@ -129,12 +153,15 @@
         <span class="title">Maloba AnyDoc</span>
         <span class="badge-ekwali">Ekwali</span>
       </div>
-      <div class="subtitle">Fulfuldé du Cameroun (Adamaoua) · 18 Sources</div>
+      <div class="subtitle" id="popup-subtitle">Fulfuldé (fub) &amp; Ewondo (ewo) · 18 Sources</div>
     </div>
   </div>
 
   <div class="mode-group">
-    <button class="mode-btn active" data-mode="fub">Fulfuldé (fub)</button>
+    <select id="popup-lang-select" class="lang-dropdown" title="Choisir la langue d'accessibilité">
+      <option value="fub" selected>Fulfuldé (fub)</option>
+      <option value="ewo">Ewondo (ewo)</option>
+    </select>
     <button class="mode-btn" data-mode="bilingual">Bilingue</button>
     <button class="mode-btn" data-mode="original">Original</button>
   </div>

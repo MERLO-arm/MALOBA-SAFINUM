@@ -1,6 +1,6 @@
 // =============================================================================
-// AKI x SAFINUM ANYDOC — BASE DE CONNAISSANCES FULFULDE CAMEROUN (fub)
-// Généré automatiquement depuis 18 sources (99 633 entrées parallèles & lexicales)
+// MALOBA ANYDOC — BASE DE CONNAISSANCES MULTILINGUE : FULFULDE (fub) & EWONDO (ewo)
+// Généré automatiquement pour le Hackathon SAFINUM 2026 (Team Ekwali)
 // =============================================================================
 window.SAFINUM_KB = {
   "meta": {
@@ -32,7 +32,15 @@ window.SAFINUM_KB = {
     "exact_ui_entries_count": 145,
     "lexicon_words_count": 2584,
     "phrase_chunks_count": 34,
-    "rag_exemplars_count": 215
+    "rag_exemplars_count": 215,
+    "supported_languages": [
+      "fub",
+      "ewo"
+    ],
+    "language_names": {
+      "fub": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
+      "ewo": "Ewondo (Yaoundé / Centre / Sud)"
+    }
   },
   "exact_ui": {
     "Environnement de test — données fictives, aucune transaction réelle.": {
@@ -42,7 +50,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nokkôuôure ndéé d'oum ngam djarribo kôuôugal Safinoum Pay tan; tchééde gônga ittatâko.",
       "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fə́la mejaríba — bibuk bi m̀bálá, téé ésəle mɔni ya amba.",
+      "phonetic_ewo": "Feula médjariba — bibouk bi mbala, téé éséulé moni ya amba.",
+      "explain_ewo": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə.",
+      "explain_ewo_phonetic": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə."
     },
     "Test environment — fictional data, no real transaction.": {
       "fub": "Nokkuure jarribo — kabaruuji jarribo tan, walaa nelal ceede goonga.",
@@ -51,7 +63,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nokkôuôure ndéé d'oum ngam djarribo kôuôugal Safinoum Pay tan; tchééde gônga ittatâko.",
       "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fə́la mejaríba — bibuk bi m̀bálá, téé ésəle mɔni ya amba.",
+      "phonetic_ewo": "Feula médjariba — bibouk bi mbala, téé éséulé moni ya amba.",
+      "explain_ewo": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə.",
+      "explain_ewo_phonetic": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə."
     },
     "Banque en ligne": {
       "fub": "Banki dow enternet (Ceede Waya)",
@@ -60,7 +76,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal banki Safinoum Pay ngam lârtougo e neldougo tchééde béé waya.",
       "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Banki ya enternet (Mɔni Waya)",
+      "phonetic_ewo": "Banki ya enternet (Moni Waya)",
+      "explain_ewo": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón.",
+      "explain_ewo_phonetic": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón."
     },
     "Online banking": {
       "fub": "Banki dow enternet (Ceede Waya)",
@@ -69,7 +89,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal banki Safinoum Pay ngam lârtougo e neldougo tchééde béé waya.",
       "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Banki ya enternet (Mɔni Waya)",
+      "phonetic_ewo": "Banki ya enternet (Moni Waya)",
+      "explain_ewo": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón.",
+      "explain_ewo_phonetic": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón."
     },
     "Protocole de test": {
       "fub": "Dokaaji jarribo",
@@ -78,7 +102,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol e dokâji d'i djoury hôuôutinirta ngam b'etougo kôuôugal ngal.",
       "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Metəla me mejaríba",
+      "phonetic_ewo": "Météula mé médjariba",
+      "explain_ewo": "Melep me jury a nzi huutinir ngam ɓet ésəle.",
+      "explain_ewo_phonetic": "Melep me jury a nzi huutinir ngam ɓet ésəle."
     },
     "Test protocol": {
       "fub": "Dokaaji jarribo",
@@ -87,7 +115,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol e dokâji d'i djoury hôuôutinirta ngam b'etougo kôuôugal ngal.",
       "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Metəla me mejaríba",
+      "phonetic_ewo": "Météula mé médjariba",
+      "explain_ewo": "Melep me jury a nzi huutinir ngam ɓet ésəle.",
+      "explain_ewo_phonetic": "Melep me jury a nzi huutinir ngam ɓet ésəle."
     },
     "Retour au hackathon": {
       "fub": "Rutto haa hello Hackathon",
@@ -96,7 +128,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ hello mawngo SAFINUM Innovate Tchhallenge.",
       "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
       "category": "navigation",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Kóbəla haa Hackathon",
+      "phonetic_ewo": "Kobeula ha Hackathon",
+      "explain_ewo": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge.",
+      "explain_ewo_phonetic": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge."
     },
     "Back to hackathon": {
       "fub": "Rutto haa hello Hackathon",
@@ -105,7 +141,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ hello mawngo SAFINUM Innovate Tchhallenge.",
       "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
       "category": "navigation",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Kóbəla haa Hackathon",
+      "phonetic_ewo": "Kobeula ha Hackathon",
+      "explain_ewo": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge.",
+      "explain_ewo_phonetic": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge."
     },
     "Solde": {
       "fub": "Ceede gonɗe",
@@ -114,7 +154,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 1 : Limngal tchééde d'e ngoni nder kofrou mâ djôni.",
       "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè (Kɔb)",
+      "phonetic_ewo": "Moni a lié (Kob)",
+      "explain_ewo": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina.",
+      "explain_ewo_phonetic": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina."
     },
     "Balance": {
       "fub": "Ceede gonɗe",
@@ -123,7 +167,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 1 : Limngal tchééde d'e ngoni nder kofrou mâ djôni.",
       "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè (Kɔb)",
+      "phonetic_ewo": "Moni a lié (Kob)",
+      "explain_ewo": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina.",
+      "explain_ewo_phonetic": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina."
     },
     "Frais": {
       "fub": "Coggu nelal",
@@ -132,7 +180,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
       "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô.",
+      "explain_ewo_phonetic": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô."
     },
     "Fees": {
       "fub": "Coggu nelal",
@@ -141,7 +193,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
       "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô.",
+      "explain_ewo_phonetic": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô."
     },
     "Fee": {
       "fub": "Coggu nelal",
@@ -150,7 +206,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
       "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ",
+      "phonetic_ewo": "Mimvègn",
+      "explain_ewo": "Asúŋa mɔni asu ésəle.",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu ésəle."
     },
     "Bénéficiaire": {
       "fub": "Jaɓoowo ceede",
@@ -159,7 +219,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Ned'd'o mo a yid'i neldougo mo tchééde d'e.",
       "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze.",
+      "explain_ewo_phonetic": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze."
     },
     "Beneficiary": {
       "fub": "Jaɓoowo ceede",
@@ -168,7 +232,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Ned'd'o mo a yid'i neldougo mo tchééde d'e.",
       "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze.",
+      "explain_ewo_phonetic": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze."
     },
     "Récapitulatif": {
       "fub": "Taƴre laartugo fuu",
@@ -177,7 +245,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 4 : Lârtougo kabarôuôuji nelal fôuôu hidde a tabitina.",
       "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban.",
+      "explain_ewo_phonetic": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban."
     },
     "Summary": {
       "fub": "Taƴre laartugo fuu",
@@ -186,7 +258,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 4 : Lârtougo kabarôuôuji nelal fôuôu hidde a tabitina.",
       "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban.",
+      "explain_ewo_phonetic": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban."
     },
     "Confirmation": {
       "fub": "Tabitingol kuugal",
@@ -195,7 +271,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 5 : Talkourou séédamkou kollirtôrou wonde tchééde mâ neldâma.",
       "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Ékaat 5 : Kaməla ntómban e nɔŋ kalara ntílán wô.",
+      "explain_ewo_phonetic": "Ékaat 5 : Kaməla ntómban e nɔŋ kalara ntílán wô."
     },
     "Votre compte": {
       "fub": "Limngal hisaabu maa",
@@ -204,7 +284,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
       "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Asúsu wô ya banki",
+      "phonetic_ewo": "Asousou wô ya banki",
+      "explain_ewo": "Fə́la asúsu wô ya Safinum Pay.",
+      "explain_ewo_phonetic": "Fə́la asúsu wô ya Safinum Pay."
     },
     "Your account": {
       "fub": "Limngal hisaabu maa",
@@ -213,7 +297,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
       "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Asúsu wô ya banki",
+      "phonetic_ewo": "Asousou wô ya banki",
+      "explain_ewo": "Fə́la asúsu wô ya Safinum Pay.",
+      "explain_ewo_phonetic": "Fə́la asúsu wô ya Safinum Pay."
     },
     "VOTRE COMPTE": {
       "fub": "Limngal hisaabu maa",
@@ -222,7 +310,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
       "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Bonjour, Amina": {
       "fub": "Jaɓɓaama, Amina",
@@ -231,7 +323,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Salâma e djab'b'âgo Amina Ngo Bell, djôm limngal hisâbou.",
       "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Hello, Amina": {
       "fub": "Jaɓɓaama, Amina",
@@ -240,7 +336,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Salâma e djab'b'âgo Amina Ngo Bell, djôm limngal hisâbou.",
       "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Consultez votre solde et lancez un transfert en toute sécurité.": {
       "fub": "Laartu ceede gonɗe nder limngal maa e fuɗɗu nelal ceede bee kisal timmungal.",
@@ -249,7 +349,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Ko adî fôuôu, lârtou to tchééde mâ hey'i, b'âwo mâjoum b'illou « Neldougo tchééde ».",
       "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Check your balance and start a secure transfer.": {
       "fub": "Laartu ceede gonɗe nder limngal maa e fuɗɗu nelal ceede bee kisal timmungal.",
@@ -258,7 +362,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Ko adî fôuôu, lârtou to tchééde mâ hey'i, b'âwo mâjoum b'illou « Neldougo tchééde ».",
       "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Solde disponible": {
       "fub": "Ceede gonɗe nder limngal",
@@ -267,7 +375,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
       "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
       "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni o nzi bəle",
+      "phonetic_ewo": "Moni o nzi béulé",
+      "explain_ewo": "Akɔŋ mɔni w'a né asu lóm jooni.",
+      "explain_ewo_phonetic": "Akɔŋ mɔni w'a né asu lóm jooni."
     },
     "Available balance": {
       "fub": "Ceede gonɗe nder limngal",
@@ -276,7 +388,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
       "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
       "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni o nzi bəle",
+      "phonetic_ewo": "Moni o nzi béulé",
+      "explain_ewo": "Akɔŋ mɔni w'a né asu lóm jooni.",
+      "explain_ewo_phonetic": "Akɔŋ mɔni w'a né asu lóm jooni."
     },
     "SOLDE DISPONIBLE": {
       "fub": "Ceede gonɗe nder limngal",
@@ -285,7 +401,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
       "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
       "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Compte courant": {
       "fub": "Limngal hisaabu ñalnde fuu",
@@ -294,7 +414,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kofrou banki mâ ngam kôuôugalji tchééde ñalnde fôuôu.",
       "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Current account": {
       "fub": "Limngal hisaabu ñalnde fuu",
@@ -303,7 +427,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kofrou banki mâ ngam kôuôugalji tchééde ñalnde fôuôu.",
       "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Effectuer un transfert": {
       "fub": "Waɗugo nelal ceede",
@@ -312,7 +440,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illou d'ô ngam foud'd'ougo neldougo tchééde hâ ned'd'o féére.",
       "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Make a transfer": {
       "fub": "Waɗugo nelal ceede",
@@ -321,7 +453,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illou d'ô ngam foud'd'ougo neldougo tchééde hâ ned'd'o féére.",
       "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Consulter les frais": {
       "fub": "Laartugo coggu nelal",
@@ -330,7 +466,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illou d'ô ngam hîsougo no foti tchoggou nelal tchééde wonata.",
       "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "View fees": {
       "fub": "Laartugo coggu nelal",
@@ -339,7 +479,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illou d'ô ngam hîsougo no foti tchoggou nelal tchééde wonata.",
       "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Transactions récentes": {
       "fub": "Kuugalji ceede cakkitiiɗi",
@@ -348,7 +492,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
       "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Recent transactions": {
       "fub": "Kuugalji ceede cakkitiiɗi",
@@ -357,7 +505,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
       "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "TRANSACTIONS RÉCENTES": {
       "fub": "Kuugalji ceede cakkitiiɗi",
@@ -366,7 +518,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
       "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Paiement marchand": {
       "fub": "Yoɓol haa joom tiggirgal (Marchand)",
@@ -375,7 +531,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a yob'î hâ tiggirgal (-12 500 FCFA).",
       "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Merchant payment": {
       "fub": "Yoɓol haa joom tiggirgal (Marchand)",
@@ -384,7 +544,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a yob'î hâ tiggirgal (-12 500 FCFA).",
       "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
       "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Salaire reçu": {
       "fub": "Njoɓdi kuugal (Salaire) keɓaandi",
@@ -393,7 +557,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde njob'di lewrou d'e nâti nder limngal mâ (+180 000 FCFA).",
       "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
       "category": "solde",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Salary received": {
       "fub": "Njoɓdi kuugal (Salaire) keɓaandi",
@@ -402,7 +570,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde njob'di lewrou d'e nâti nder limngal mâ (+180 000 FCFA).",
       "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
       "category": "solde",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Transfert reçu": {
       "fub": "Nelal ceede keɓaangal",
@@ -411,7 +583,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e ned'd'o neldî ma nder limngal mâ (+50 000 FCFA).",
       "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Transfer received": {
       "fub": "Nelal ceede keɓaangal",
@@ -420,7 +596,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e ned'd'o neldî ma nder limngal mâ (+50 000 FCFA).",
       "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Facture électricité": {
       "fub": "Yoɓol talkuru kuuran (Yiite)",
@@ -429,7 +609,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a yob'iri talkourou kôuôuran (-7 500 FCFA).",
       "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Electricity bill": {
       "fub": "Yoɓol talkuru kuuran (Yiite)",
@@ -438,7 +622,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e a yob'iri talkourou kôuôuran (-7 500 FCFA).",
       "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
       "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni a liè e asúsu",
+      "phonetic_ewo": "Moni a lié é asousou",
+      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
+      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
     },
     "Frais de transfert": {
       "fub": "Coggu nelal ceede",
@@ -447,7 +635,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 2 : Hîsougo tchoggou nelal e tchééde fôuôu d'e ittete.",
       "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
       "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Transfer fees": {
       "fub": "Coggu nelal ceede",
@@ -456,7 +648,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 2 : Hîsougo tchoggou nelal e tchééde fôuôu d'e ittete.",
       "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
       "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Choisissez le type de transfert et le montant. Les frais sont calculés automatiquement.": {
       "fub": "Suɓu iri laawol nelal e limngal ceede. Coggu nelal hiisete bee hoore mum.",
@@ -465,7 +661,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nde a soub'î lâwol (Safinoum, Mobile Money malla Banki féére) e tchééde, kôuôugal ngal hollirta tchoggou djôni-djôni.",
       "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Choose the transfer type and amount. Fees are calculated automatically.": {
       "fub": "Suɓu iri laawol nelal e limngal ceede. Coggu nelal hiisete bee hoore mum.",
@@ -474,7 +674,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nde a soub'î lâwol (Safinoum, Mobile Money malla Banki féére) e tchééde, kôuôugal ngal hollirta tchoggou djôni-djôni.",
       "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Type d'opération": {
       "fub": "Iri kuugal nelal",
@@ -483,7 +687,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol ngol tchééde mâ rewrata (Tchompte Safinoum, Mobile Money, malla Aoutre banqoue).",
       "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Operation type": {
       "fub": "Iri kuugal nelal",
@@ -492,7 +700,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol ngol tchééde mâ rewrata (Tchompte Safinoum, Mobile Money, malla Aoutre banqoue).",
       "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Compte Safinum": {
       "fub": "Limngal Safinum (0 FCFA - Meere)",
@@ -501,7 +713,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Neldougo hâ kiliyanjo Safinoum Pay féére : walâ tchoggou (0 FCFA).",
       "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Asúsu Safinum",
+      "phonetic_ewo": "Asousou Safinoum",
+      "explain_ewo": "Ntómban mɔni e asúsu Safinum a ne zə́zə́ (0 FCFA).",
+      "explain_ewo_phonetic": "Ntómban mɔni e asúsu Safinum a ne zə́zə́ (0 FCFA)."
     },
     "Safinum account": {
       "fub": "Limngal Safinum (0 FCFA - Meere)",
@@ -510,7 +726,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Neldougo hâ kiliyanjo Safinoum Pay féére : walâ tchoggou (0 FCFA).",
       "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Transfert instantané et gratuit": {
       "fub": "Nelal jooni-jooni kadi meere (walaa coggu)",
@@ -519,7 +739,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e njottoto djôni-djôni kadi walâ mbôuôud'ou ittete dow tchoggou.",
       "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Instant, free transfer": {
       "fub": "Nelal jooni-jooni kadi meere (walaa coggu)",
@@ -528,7 +752,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e njottoto djôni-djôni kadi walâ mbôuôud'ou ittete dow tchoggou.",
       "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Mobile Money": {
       "fub": "Kofru Mobile Money (1,5 %)",
@@ -537,7 +765,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Neldougo hâ waya Mobile Money (tchoggou 1,5 %).",
       "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Frais de 1,5 % (min. 100 FCFA, max. 2 500 FCFA)": {
       "fub": "Coggu nelal 1,5 % (famɗi fuu 100 FCFA, haaddi 2 500 FCFA)",
@@ -546,7 +778,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kampanîrou hôsata 1,5 % dow tchééde nelal; tchoggou les 100 FCFA walâ, kadi b'ouratâ 2 500 FCFA.",
       "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "1.5% fee (min. 100 FCFA, max. 2,500 FCFA)": {
       "fub": "Coggu nelal 1,5 % (famɗi fuu 100 FCFA, haaddi 2 500 FCFA)",
@@ -555,7 +791,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kampanîrou hôsata 1,5 % dow tchééde nelal; tchoggou les 100 FCFA walâ, kadi b'ouratâ 2 500 FCFA.",
       "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Autre banque": {
       "fub": "Banki feere (2 %)",
@@ -564,7 +804,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Neldougo hâ limngal banki féére (tchoggou 2 %).",
       "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Banki m̀fɛ́fɛ́ (Virement)",
+      "phonetic_ewo": "Banki mfèfè (Virement)",
+      "explain_ewo": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm.",
+      "explain_ewo_phonetic": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm."
     },
     "Other bank": {
       "fub": "Banki feere (2 %)",
@@ -573,7 +817,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Neldougo hâ limngal banki féére (tchoggou 2 %).",
       "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Banki m̀fɛ́fɛ́ (Virement)",
+      "phonetic_ewo": "Banki mfèfè (Virement)",
+      "explain_ewo": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm.",
+      "explain_ewo_phonetic": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm."
     },
     "Frais de 2 % (min. 200 FCFA, max. 5 000 FCFA)": {
       "fub": "Coggu nelal 2 % (famɗi fuu 200 FCFA, haaddi 5 000 FCFA)",
@@ -582,7 +830,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Banki hôsata 2 % dow tchééde nelal; famd'i fôuôu 200 FCFA, kadi b'ouratâ 5 000 FCFA.",
       "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "2% fee (min. 200 FCFA, max. 5,000 FCFA)": {
       "fub": "Coggu nelal 2 % (famɗi fuu 200 FCFA, haaddi 5 000 FCFA)",
@@ -591,7 +843,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Banki hôsata 2 % dow tchééde nelal; famd'i fôuôu 200 FCFA, kadi b'ouratâ 5 000 FCFA.",
       "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Montant à envoyer": {
       "fub": "Limngal ceede neldeteeɗe",
@@ -600,7 +856,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata (nder FCFA).",
       "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Amount to send": {
       "fub": "Limngal ceede neldeteeɗe",
@@ -609,7 +869,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata (nder FCFA).",
       "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Gratuit": {
       "fub": "Meere (0 FCFA)",
@@ -618,7 +882,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Walâ tchoggou nelal.",
       "explain_fr": "Aucun frais de transaction.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Zə́zə́ (0 FCFA)",
+      "phonetic_ewo": "Zeuzeu (0 FCFA)",
+      "explain_ewo": "Téé mímvèñ; mɔni a téé yé.",
+      "explain_ewo_phonetic": "Téé mímvèñ; mɔni a téé yé."
     },
     "Free": {
       "fub": "Meere (0 FCFA)",
@@ -627,7 +895,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Walâ tchoggou nelal.",
       "explain_fr": "Aucun frais de transaction.",
       "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Zə́zə́ (0 FCFA)",
+      "phonetic_ewo": "Zeuzeu (0 FCFA)",
+      "explain_ewo": "Téé mímvèñ; mɔni a téé yé.",
+      "explain_ewo_phonetic": "Téé mímvèñ; mɔni a téé yé."
     },
     "Total à débiter": {
       "fub": "Ceede fuu ɗe ittete",
@@ -636,7 +908,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde neldetééd'e + Tchoggou nelal = Tchééde fôuôu d'e oustete nder limngal mâ.",
       "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
       "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Total to debit": {
       "fub": "Ceede fuu ɗe ittete",
@@ -645,7 +921,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde neldetééd'e + Tchoggou nelal = Tchééde fôuôu d'e oustete nder limngal mâ.",
       "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
       "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Solde après opération": {
       "fub": "Ceede keddotooɗe ɓaawo nelal",
@@ -654,7 +934,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e keddotô nder kofrou mâ nde nelal ngal timmi.",
       "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Balance after transfer": {
       "fub": "Ceede keddotooɗe ɓaawo nelal",
@@ -663,7 +947,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e keddotô nder kofrou mâ nde nelal ngal timmi.",
       "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
       "category": "frais",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Mímvèñ mi ntómban",
+      "phonetic_ewo": "Mimvègn mi ntomban",
+      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
+      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
     },
     "Retour": {
       "fub": "Rutto ɓaawo",
@@ -672,7 +960,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure b'ennounde.",
       "explain_fr": "Revenir à l'étape précédente.",
       "category": "navigation",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Back": {
       "fub": "Rutto ɓaawo",
@@ -681,7 +973,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure b'ennounde.",
       "explain_fr": "Revenir à l'étape précédente.",
       "category": "navigation",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Continuer": {
       "fub": "Jokku yeeso",
@@ -690,7 +986,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yahougo hâ yâdôuôure tokkôre.",
       "explain_fr": "Valider cette étape et passer à la suivante.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Kəl osu",
+      "phonetic_ewo": "Keul osou",
+      "explain_ewo": "Kəl osu e ésəle.",
+      "explain_ewo_phonetic": "Kəl osu e ésəle."
     },
     "Continue": {
       "fub": "Jokku yeeso",
@@ -699,7 +999,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yahougo hâ yâdôuôure tokkôre.",
       "explain_fr": "Valider cette étape et passer à la suivante.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Kəl osu",
+      "phonetic_ewo": "Keul osou",
+      "explain_ewo": "Kəl osu e ésəle.",
+      "explain_ewo_phonetic": "Kəl osu e ésəle."
     },
     "Renseignez les informations du destinataire. Vérifiez toujours le numéro avant de valider.": {
       "fub": "Winndu kabaruuji jaɓoowo ceede. Laartu lambar waya waktu fuu hidde a tabitina.",
@@ -708,7 +1012,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 3 : Lârtou bôyma innde e lambar waya djab'ôwo ngam tchééde d'e to majja.",
       "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Enter the recipient details. Always verify the number before confirming.": {
       "fub": "Winndu kabaruuji jaɓoowo ceede. Laartu lambar waya waktu fuu hidde a tabitina.",
@@ -717,7 +1025,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 3 : Lârtou bôyma innde e lambar waya djab'ôwo ngam tchééde d'e to majja.",
       "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Ce bénéficiaire n'a jamais été utilisé sur ce compte. Vérifiez le numéro avant de continuer.": {
       "fub": "Jaɓoowo oo meeɗaa huutineego nder limngal ngal. Laartu lambar waya mum booyma hidde a jokka.",
@@ -726,7 +1038,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééntinôre kisal : d'oum nde arandéére a neldata tchééde hâ ned'd'o ô. Lârtou lambar waya lâbi d'id'i!",
       "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "This beneficiary has never been used on this account. Verify the number before continuing.": {
       "fub": "Jaɓoowo oo meeɗaa huutineego nder limngal ngal. Laartu lambar waya mum booyma hidde a jokka.",
@@ -735,7 +1051,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééntinôre kisal : d'oum nde arandéére a neldata tchééde hâ ned'd'o ô. Lârtou lambar waya lâbi d'id'i!",
       "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Nom du bénéficiaire": {
       "fub": "Innde jaɓoowo ceede",
@@ -744,7 +1064,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Innde e djammôre ned'd'o mo heb'ata tchééde d'e.",
       "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Beneficiary name": {
       "fub": "Innde jaɓoowo ceede",
@@ -753,7 +1077,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Innde e djammôre ned'd'o mo heb'ata tchééde d'e.",
       "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Numéro de téléphone": {
       "fub": "Lambar waya jaɓoowo",
@@ -762,7 +1090,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar waya (+237...) mo djab'ôwo tchééde.",
       "explain_fr": "Numéro de téléphone mobile du destinataire.",
       "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Nɔ́mba ya fón",
+      "phonetic_ewo": "Nomba ya fon",
+      "explain_ewo": "Nɔ́mba fón (+237 6xx xx xx xx).",
+      "explain_ewo_phonetic": "Nɔ́mba fón (+237 6xx xx xx xx)."
     },
     "Phone number": {
       "fub": "Lambar waya jaɓoowo",
@@ -771,7 +1103,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar waya (+237...) mo djab'ôwo tchééde.",
       "explain_fr": "Numéro de téléphone mobile du destinataire.",
       "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Nɔ́mba ya fón",
+      "phonetic_ewo": "Nomba ya fon",
+      "explain_ewo": "Nɔ́mba fón (+237 6xx xx xx xx).",
+      "explain_ewo_phonetic": "Nɔ́mba fón (+237 6xx xx xx xx)."
     },
     "Motif du transfert": {
       "fub": "Dalila nelal ceede",
@@ -780,7 +1116,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Sabou ko a neldata tchééde d'e (yerou : yob'ol kôuôugal, ballal sâre).",
       "explain_fr": "Raison de l'envoi d'argent.",
       "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Transfer reason": {
       "fub": "Dalila nelal ceede",
@@ -789,7 +1129,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Sabou ko a neldata tchééde d'e (yerou : yob'ol kôuôugal, ballal sâre).",
       "explain_fr": "Raison de l'envoi d'argent.",
       "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Note (optionnel)": {
       "fub": "Bataake pamaro (Waɗugo ɗum doole हिaa)",
@@ -798,7 +1142,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "A wâwi b'eydougo konngol pamarel ngam djab'ôwo to a yid'i.",
       "explain_fr": "Commentaire facultatif joint au transfert.",
       "category": "beneficiaire",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Note (optional)": {
       "fub": "Bataake pamaro (Waɗugo ɗum doole हिaa)",
@@ -807,7 +1155,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "A wâwi b'eydougo konngol pamarel ngam djab'ôwo to a yid'i.",
       "explain_fr": "Commentaire facultatif joint au transfert.",
       "category": "beneficiaire",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "J'ai vérifié le nom et le numéro du bénéficiaire.": {
       "fub": "Mi laartii booyma innde e lambar waya jaɓoowo ceede.",
@@ -816,7 +1168,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Sey a mânta akôtîrou ndou ngam tabitingo wonde lambar djab'ôwo d'oum gônga.",
       "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "I have verified the beneficiary name and phone number.": {
       "fub": "Mi laartii booyma innde e lambar waya jaɓoowo ceede.",
@@ -825,7 +1181,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Sey a mânta akôtîrou ndou ngam tabitingo wonde lambar djab'ôwo d'oum gônga.",
       "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
       "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Nnyɔ a nɔŋ mɔni",
+      "phonetic_ewo": "Nnyo a nong moni",
+      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
+      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
     },
     "Vérifiez les informations avant de confirmer le transfert.": {
       "fub": "Laartu kabaruuji ɗi fuu hidde a tabitina nelal ceede ngal.",
@@ -834,7 +1194,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 4 : Djanngou tchééde, tchoggou, innde e lambar djab'ôwo hidde a b'illa tabitingo.",
       "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Check the details before confirming the transfer.": {
       "fub": "Laartu kabaruuji ɗi fuu hidde a tabitina nelal ceede ngal.",
@@ -843,7 +1207,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Yâdôuôure 4 : Djanngou tchééde, tchoggou, innde e lambar djab'ôwo hidde a b'illa tabitingo.",
       "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Montant": {
       "fub": "Limngal ceede",
@@ -852,7 +1220,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata.",
       "explain_fr": "Montant net envoyé au bénéficiaire.",
       "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Amount": {
       "fub": "Limngal ceede",
@@ -861,7 +1233,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata.",
       "explain_fr": "Montant net envoyé au bénéficiaire.",
       "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Total débité": {
       "fub": "Ceede fuu ɗe ittete",
@@ -870,7 +1246,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde neldâd'e + Tchoggou nelal.",
       "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
       "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni mësə́ m'a kə́ man",
+      "phonetic_ewo": "Moni méseulé ma keu man",
+      "explain_ewo": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô.",
+      "explain_ewo_phonetic": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô."
     },
     "Total debited": {
       "fub": "Ceede fuu ɗe ittete",
@@ -879,7 +1259,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tchééde neldâd'e + Tchoggou nelal.",
       "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
       "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni mësə́ m'a kə́ man",
+      "phonetic_ewo": "Moni méseulé ma keu man",
+      "explain_ewo": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô.",
+      "explain_ewo_phonetic": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô."
     },
     "Téléphone": {
       "fub": "Lambar waya",
@@ -888,7 +1272,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar waya djab'ôwo tchééde.",
       "explain_fr": "Numéro de téléphone du destinataire.",
       "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Phone": {
       "fub": "Lambar waya",
@@ -897,7 +1285,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar waya djab'ôwo tchééde.",
       "explain_fr": "Numéro de téléphone du destinataire.",
       "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Référence": {
       "fub": "Lambar seedamku",
@@ -906,7 +1298,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar séédamkou kéérîdo mo kôuôugal ngal (SAF-2026-...).",
       "explain_fr": "Identifiant unique de traçabilité de la transaction.",
       "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Lambar ya ntómban (SAF-2026-...)",
+      "phonetic_ewo": "Lambar ya ntomban (SAF-2026-...)",
+      "explain_ewo": "Lambar immuable ya ésəle nyina.",
+      "explain_ewo_phonetic": "Lambar immuable ya ésəle nyina."
     },
     "Reference": {
       "fub": "Lambar seedamku",
@@ -915,7 +1311,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lambar séédamkou kéérîdo mo kôuôugal ngal (SAF-2026-...).",
       "explain_fr": "Identifiant unique de traçabilité de la transaction.",
       "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Lambar ya ntómban (SAF-2026-...)",
+      "phonetic_ewo": "Lambar ya ntomban (SAF-2026-...)",
+      "explain_ewo": "Lambar immuable ya ésəle nyina.",
+      "explain_ewo_phonetic": "Lambar immuable ya ésəle nyina."
     },
     "Opération": {
       "fub": "Laawol kuugal",
@@ -924,7 +1324,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Iri nelal ngal soub'ou-d'â.",
       "explain_fr": "Canal de transfert sélectionné.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Operation": {
       "fub": "Laawol kuugal",
@@ -933,7 +1337,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Iri nelal ngal soub'ou-d'â.",
       "explain_fr": "Canal de transfert sélectionné.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Je confirme que les informations ci-dessus sont correctes.": {
       "fub": "Mi tabitinii wonde kabaruuji gonɗi dow ɗoo fuu ɗum goonga.",
@@ -942,7 +1350,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Mântou akôtîrou ndou hidde a b'illa boutong « Tabitinou nelal tchééde ».",
       "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "I confirm the information above is correct.": {
       "fub": "Mi tabitinii wonde kabaruuji gonɗi dow ɗoo fuu ɗum goonga.",
@@ -951,7 +1363,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Mântou akôtîrou ndou hidde a b'illa boutong « Tabitinou nelal tchééde ».",
       "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
+      "phonetic_ewo": "Ntilan mébeuleu mé moni",
+      "explain_ewo": "Laart osu na o kaməla",
+      "explain_ewo_phonetic": "Laart osu na o kaməla"
     },
     "Modifier": {
       "fub": "Waylugo",
@@ -960,7 +1376,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 3 ngam fééwnougo kabarôuôuji.",
       "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Edit": {
       "fub": "Waylugo",
@@ -969,7 +1389,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 3 ngam fééwnougo kabarôuôuji.",
       "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Confirmer le transfert": {
       "fub": "Tabitinu nelal ceede",
@@ -978,7 +1402,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illougo d'ô neldata tchééde d'e djôni-djôni hâ djab'ôwo.",
       "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla ntómban",
+      "phonetic_ewo": "Findi / Kaméula ntomban",
+      "explain_ewo": "Fíndí asu na mɔni a kə.",
+      "explain_ewo_phonetic": "Fíndí asu na mɔni a kə."
     },
     "Confirm transfer": {
       "fub": "Tabitinu nelal ceede",
@@ -987,7 +1415,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "B'illougo d'ô neldata tchééde d'e djôni-djôni hâ djab'ôwo.",
       "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
       "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla ntómban",
+      "phonetic_ewo": "Findi / Kaméula ntomban",
+      "explain_ewo": "Fíndí asu na mɔni a kə.",
+      "explain_ewo_phonetic": "Fíndí asu na mɔni a kə."
     },
     "Transfert effectué": {
       "fub": "Nelal ceede timmii bee nasaraaku",
@@ -996,7 +1428,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Alhamdou! Tchééde mâ neldâma bôyma hâ djab'ôwo.",
       "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Transfer completed": {
       "fub": "Nelal ceede timmii bee nasaraaku",
@@ -1005,7 +1441,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Alhamdou! Tchééde mâ neldâma bôyma hâ djab'ôwo.",
       "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Votre transfert a été envoyé avec succès.": {
       "fub": "Nelal ceede maa neldaama bee nasaraaku timmungu.",
@@ -1014,7 +1454,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Djab'ôwo heb'î tchééde d'e. Resou lambar séédamkou (SAF-2026-...) gond'o les d'ô.",
       "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Your transfer has been sent successfully.": {
       "fub": "Nelal ceede maa neldaama bee nasaraaku timmungu.",
@@ -1023,7 +1467,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Djab'ôwo heb'î tchééde d'e. Resou lambar séédamkou (SAF-2026-...) gond'o les d'ô.",
       "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Statut": {
       "fub": "Darnde kuugal",
@@ -1032,7 +1480,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Hollirta to nelal ngal timmî.",
       "explain_fr": "État final du traitement de la transaction.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Émvila asúsu",
+      "phonetic_ewo": "Emvila asousou",
+      "explain_ewo": "Laart to asúsu wô a ne m̀vɛ̀.",
+      "explain_ewo_phonetic": "Laart to asúsu wô a ne m̀vɛ̀."
     },
     "Status": {
       "fub": "Darnde kuugal",
@@ -1041,7 +1493,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Hollirta to nelal ngal timmî.",
       "explain_fr": "État final du traitement de la transaction.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Émvila asúsu",
+      "phonetic_ewo": "Emvila asousou",
+      "explain_ewo": "Laart to asúsu wô a ne m̀vɛ̀.",
+      "explain_ewo_phonetic": "Laart to asúsu wô a ne m̀vɛ̀."
     },
     "Succès": {
       "fub": "Timmii (Nasaraaku)",
@@ -1050,7 +1506,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal ngal wad'î walâ bôfol.",
       "explain_fr": "Transaction réussie et validée.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Success": {
       "fub": "Timmii (Nasaraaku)",
@@ -1059,7 +1519,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal ngal wad'î walâ bôfol.",
       "explain_fr": "Transaction réussie et validée.",
       "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Fíndí / Kaməla",
+      "phonetic_ewo": "Findi / Kaméula",
+      "explain_ewo": "Kaməla ésəle ntómban",
+      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
     },
     "Nouveau transfert": {
       "fub": "Nelal ceede kesal",
@@ -1068,7 +1532,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 1 ngam wad'ougo nelal féére.",
       "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntómban m̀fɛ́fɛ́",
+      "phonetic_ewo": "Ntomban mfèfè",
+      "explain_ewo": "Bo ntómban m̀fɛ́fɛ́ ya mɔni.",
+      "explain_ewo_phonetic": "Bo ntómban m̀fɛ́fɛ́ ya mɔni."
     },
     "New transfer": {
       "fub": "Nelal ceede kesal",
@@ -1077,7 +1545,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 1 ngam wad'ougo nelal féére.",
       "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
       "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Ntómban m̀fɛ́fɛ́",
+      "phonetic_ewo": "Ntomban mfèfè",
+      "explain_ewo": "Bo ntómban m̀fɛ́fɛ́ ya mɔni.",
+      "explain_ewo_phonetic": "Bo ntómban m̀fɛ́fɛ́ ya mɔni."
     },
     "Une erreur est survenue": {
       "fub": "Boofol waɗii nder kuugal",
@@ -1086,7 +1558,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal ngal darâma sabou bôfol; djanngou famfingo les d'ô ngam fééwnougo.",
       "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "An error occurred": {
       "fub": "Boofol waɗii nder kuugal",
@@ -1095,7 +1571,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kôuôugal ngal darâma sabou bôfol; djanngou famfingo les d'ô ngam fééwnougo.",
       "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Alerte de sécurité": {
       "fub": "Reentinoore kisal ceede",
@@ -1104,7 +1584,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééna! Batâke kisal mawd'o ngam réénâgo tchééde mâ.",
       "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ osu na o kaməla; a ne ngól.",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ osu na o kaməla; a ne ngól."
     },
     "Security warning": {
       "fub": "Reentinoore kisal ceede",
@@ -1113,7 +1597,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééna! Batâke kisal mawd'o ngam réénâgo tchééde mâ.",
       "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Message important": {
       "fub": "Bataake mawɗo (Kabaruuji kisal)",
@@ -1122,7 +1610,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
       "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
       "category": "securite",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Important message": {
       "fub": "Bataake mawɗo (Kabaruuji kisal)",
@@ -1131,7 +1623,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
       "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
       "category": "securite",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "MESSAGE IMPORTANT": {
       "fub": "Bataake mawɗo (Kabaruuji kisal)",
@@ -1140,7 +1636,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
       "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
       "category": "securite",
-      "source": "03_tourneux_dictionary_csv"
+      "source": "03_tourneux_dictionary_csv",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Le montant doit être supérieur à zéro.": {
       "fub": "Limngal ceede haani ɓurugo meere (0 FCFA).",
@@ -1149,7 +1649,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol AMOUNT_001 : A wâwâ neldougo 0 FCFA. Winndou limngal tchééde (yerou : 5 000 FCFA) ngam djokkougo.",
       "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Akɔŋ mɔni a yian bə̀ a daan zə́zə́.",
+      "phonetic_ewo": "Akong moni a yian béu a dan zeuzeu.",
+      "explain_ewo": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́.",
+      "explain_ewo_phonetic": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́."
     },
     "The amount must be greater than zero.": {
       "fub": "Limngal ceede haani ɓurugo meere (0 FCFA).",
@@ -1158,7 +1662,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol AMOUNT_001 : A wâwâ neldougo 0 FCFA. Winndou limngal tchééde (yerou : 5 000 FCFA) ngam djokkougo.",
       "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Akɔŋ mɔni a yian bə̀ a daan zə́zə́.",
+      "phonetic_ewo": "Akong moni a yian béu a dan zeuzeu.",
+      "explain_ewo": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́.",
+      "explain_ewo_phonetic": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́."
     },
     "Solde insuffisant pour effectuer ce transfert.": {
       "fub": "Ceede gonɗe nder limngal maa keƴataa ngam waɗugo nelal ngal.",
@@ -1167,7 +1675,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol AMOUNT_002 : Tchééde d'e a yid'i neldougo (béé tchoggou nelal) b'ouri tchééde gond'e nder kofrou mâ (250 000 FCFA). Ustou limngal tchééde neldetééd'e!",
       "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Insufficient balance for this transfer.": {
       "fub": "Ceede gonɗe nder limngal maa keƴataa ngam waɗugo nelal ngal.",
@@ -1176,7 +1688,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol AMOUNT_002 : Tchééde d'e a yid'i neldougo (béé tchoggou nelal) b'ouri tchééde gond'e nder kofrou mâ (250 000 FCFA). Ustou limngal tchééde neldetééd'e!",
       "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Veuillez renseigner le nom et le numéro du bénéficiaire.": {
       "fub": "Useni winndu innde e lambar waya jaɓoowo ceede.",
@@ -1185,7 +1701,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol BENEFICIARY_001 : Akôtîrou innde malla lambar waya djab'ôwo d'on b'oli. Winndou d'i d'id'i fôuôu hidde a djokka.",
       "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Please provide the beneficiary name and phone number.": {
       "fub": "Useni winndu innde e lambar waya jaɓoowo ceede.",
@@ -1194,7 +1714,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol BENEFICIARY_001 : Akôtîrou innde malla lambar waya djab'ôwo d'on b'oli. Winndou d'i d'id'i fôuôu hidde a djokka.",
       "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
       "category": "erreur",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Alerte de sécurité : vérifiez le numéro du bénéficiaire avant de continuer.": {
       "fub": "Reentinoore kisal : laartu lambar waya jaɓoowo kadi maantu akootiiru tabitingol hidde a jokka.",
@@ -1203,7 +1727,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol SECURITY_001 : Sey a lârta lambar waya djab'ôwo kadi a mânta akôtîrou « Mi lârtî bôyma innde e lambar waya » les d'ô.",
       "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Security warning: verify the beneficiary phone number before continuing.": {
       "fub": "Reentinoore kisal : laartu lambar waya jaɓoowo kadi maantu akootiiru tabitingol hidde a jokka.",
@@ -1212,7 +1740,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol SECURITY_001 : Sey a lârta lambar waya djab'ôwo kadi a mânta akôtîrou « Mi lârtî bôyma innde e lambar waya » les d'ô.",
       "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Alerte de sécurité : ce bénéficiaire n'a jamais été utilisé sur ce compte.": {
       "fub": "Reentinoore kisal : jaɓoowo ceede oo meeɗaa huutineego nder limngal hisaabu ngal.",
@@ -1221,7 +1753,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééntinôre SECURITY_002 : Ned'd'o ô d'oum keso nder limngal mâ. Rééna ngouyka : lârtou innde moum e lambar waya moum lâbi d'id'i hidde a nelda tchééde!",
       "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Security warning: this beneficiary has never been used on this account.": {
       "fub": "Reentinoore kisal : jaɓoowo ceede oo meeɗaa huutineego nder limngal hisaabu ngal.",
@@ -1230,7 +1766,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Rééntinôre SECURITY_002 : Ned'd'o ô d'oum keso nder limngal mâ. Rééna ngouyka : lârtou innde moum e lambar waya moum lâbi d'id'i hidde a nelda tchééde!",
       "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Erreur réseau : le service est temporairement indisponible. Réessayez.": {
       "fub": "Boofol laawol enternet : kuugal ngal ɗon darii seeɗa jooni. Useni jarribu fahin.",
@@ -1239,7 +1779,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol NETWORK_001 : Djokkondiral enternet d'on mari tchad'ééle djôni. Hakkillo mâ hisou : walâ mbôuôud'ou (0 FCFA) ittâ nder limngal mâ! Mounyou sééd'a kadi djarribou fahin.",
       "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
       "category": "erreur",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Network error: the service is temporarily unavailable. Please try again.": {
       "fub": "Boofol laawol enternet : kuugal ngal ɗon darii seeɗa jooni. Useni jarribu fahin.",
@@ -1248,7 +1792,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol NETWORK_001 : Djokkondiral enternet d'on mari tchad'ééle djôni. Hakkillo mâ hisou : walâ mbôuôud'ou (0 FCFA) ittâ nder limngal mâ! Mounyou sééd'a kadi djarribou fahin.",
       "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
       "category": "erreur",
-      "source": "18_waxal_unesco_bamako_orthography"
+      "source": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Vous devez confirmer les informations avant de valider le transfert.": {
       "fub": "Sey a maanta akootiiru tabitingol kabaruuji ɗi hidde a nelda ceede ɗe.",
@@ -1257,7 +1805,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol TchONFIRM_001 : A yejjitî mântougo akôtîrou tabitingol. B'illou nder akôtîrou « Mi tabitinî wonde kabarôuôuji d'i d'oum gônga » hidde a nelda.",
       "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
       "category": "erreur",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "You must confirm the details before validating the transfer.": {
       "fub": "Sey a maanta akootiiru tabitingol kabaruuji ɗi hidde a nelda ceede ɗe.",
@@ -1266,7 +1818,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Bôfol TchONFIRM_001 : A yejjitî mântougo akôtîrou tabitingol. B'illou nder akôtîrou « Mi tabitinî wonde kabarôuôuji d'i d'oum gônga » hidde a nelda.",
       "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
       "category": "erreur",
-      "source": "02_safinum_wave_sponsor_corpus"
+      "source": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Díza e ntebán",
+      "phonetic_ewo": "Diza é ntéban",
+      "explain_ewo": "Díza é maneya kwə́",
+      "explain_ewo_phonetic": "Díza é maneya kwə́"
     },
     "Sécurité": {
       "fub": "Kisal ceede",
@@ -1275,7 +1831,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tinndinôre ngam réénâgo tchééde mâ.",
       "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Security": {
       "fub": "Kisal ceede",
@@ -1284,7 +1844,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Tinndinôre ngam réénâgo tchééde mâ.",
       "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Vérifiez toujours le nom et le numéro du bénéficiaire avant de confirmer un transfert.": {
       "fub": "Laartu waktu fuu innde e lambar waya jaɓoowo ceede hidde a tabitina nelal.",
@@ -1293,7 +1857,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nelal tchééde wâwâ routtinéégo to lambar bôfî. Lârtou innde e lambar waktou fôuôu!",
       "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Always verify the beneficiary name and number before confirming a transfer.": {
       "fub": "Laartu waktu fuu innde e lambar waya jaɓoowo ceede hidde a tabitina nelal.",
@@ -1302,7 +1870,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Nelal tchééde wâwâ routtinéégo to lambar bôfî. Lârtou innde e lambar waktou fôuôu!",
       "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Connexion sécurisée": {
       "fub": "Jokkondiral kisiingal (Chiffré)",
@@ -1311,7 +1883,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol enternet Safinoum Pay d'on rééna kabarôuôuji mâ.",
       "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Secure connection": {
       "fub": "Jokkondiral kisiingal (Chiffré)",
@@ -1320,7 +1896,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Lâwol enternet Safinoum Pay d'on rééna kabarôuôuji mâ.",
       "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
       "category": "securite",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Yian mebə̀lə̀ mé ngól",
+      "phonetic_ewo": "Yian mébeuleu mé ngól",
+      "explain_ewo": "Laart m̀vɛ̀ kót wô",
+      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
     },
     "Safinum Pay — environnement de démonstration. Ne saisissez aucune donnée personnelle réelle.": {
       "fub": "Safinum Pay — nokkuure jarribo kuugal. To winndu kabaruuji maa cuuɗiiɗi goonga ɗoo.",
@@ -1329,7 +1909,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Hello ngô d'oum ngam djarribo Hatchkathon SAFINUM 2026 tan.",
       "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     },
     "Safinum Pay — demonstration environment. Do not enter real personal data.": {
       "fub": "Safinum Pay — nokkuure jarribo kuugal. To winndu kabaruuji maa cuuɗiiɗi goonga ɗoo.",
@@ -1338,7 +1922,11 @@ window.SAFINUM_KB = {
       "explain_fub_phonetic": "Hello ngô d'oum ngam djarribo Hatchkathon SAFINUM 2026 tan.",
       "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
       "category": "navigation",
-      "source": "01_aki_osc_financial_glossary"
+      "source": "01_aki_osc_financial_glossary",
+      "ewo": "Ésəle ya enternet",
+      "phonetic_ewo": "Eseule ya enternet",
+      "explain_ewo": "Fáám ésəle banki",
+      "explain_ewo_phonetic": "Fáám ésəle banki"
     }
   },
   "dynamic_patterns": [
@@ -1383,172 +1971,206 @@ window.SAFINUM_KB = {
     {
       "fr": "ne partagez jamais votre code secret",
       "fub": "to hokku neɗɗo feere lambar maa cuuɗiido koo nde",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "ne communiquez jamais votre code",
       "fub": "to hokku neɗɗo feere lambar maa cuuɗiido koo nde",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "votre code secret est personnel",
       "fub": "lambar maa cuuɗiido ɗum huunde maa feere tan",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "plafond journalier de virement",
       "fub": "haaddi nelal ceede ñalnde fuu",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "le plafond journalier est fixé à",
       "fub": "haaddi ceede ñalnde fuu darnaama haa",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "au-delà de ce montant",
       "fub": "to ceede ɗe ɓurii limngal ngal",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "une pièce d'identité valide",
       "fub": "talkuru seedamku innde cahiindu",
-      "src": "03_tourneux_dictionary_csv"
+      "src": "03_tourneux_dictionary_csv",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "vérification d'identité",
       "fub": "laartugo seedamku innde",
-      "src": "03_tourneux_dictionary_csv"
+      "src": "03_tourneux_dictionary_csv",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "service client",
       "fub": "сервиs ballal kiliyan'en",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "frais supplémentaires",
       "fub": "coggu ɓeydaangu",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "aucun frais supplémentaire",
       "fub": "walaa coggu feere ɓeydete",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "sans frais",
       "fub": "meere (walaa coggu)",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "en toute sécurité",
       "fub": "bee kisal timmungal",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "votre compte sera bloqué",
       "fub": "limngal hisaabu maa maɓɓete",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "tentatives erronées",
       "fub": "jarribooji boofɗi",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "veuillez vérifier",
       "fub": "useni laartu booyma",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "avant de confirmer",
       "fub": "hidde a tabitina",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "avant de valider",
       "fub": "hidde a tabitina",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "numéro de téléphone du bénéficiaire",
       "fub": "lambar waya jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "nom du bénéficiaire",
       "fub": "innde jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "solde disponible",
       "fub": "ceede gonɗe nder limngal",
-      "src": "18_waxal_unesco_bamako_orthography"
+      "src": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "total débité",
       "fub": "ceede fuu ɗe ittete",
-      "src": "18_waxal_unesco_bamako_orthography"
+      "src": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "frais de transaction",
       "fub": "coggu nelal ceede",
-      "src": "18_waxal_unesco_bamako_orthography"
+      "src": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "frais de retrait",
       "fub": "coggu ittol ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "frais d'envoi",
       "fub": "coggu nelal ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "opérateur mobile money",
       "fub": "kampaniiru Mobile Money",
-      "src": "18_waxal_unesco_bamako_orthography"
+      "src": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "virement bancaire",
       "fub": "nelal ceede banki",
-      "src": "18_waxal_unesco_bamako_orthography"
+      "src": "18_waxal_unesco_bamako_orthography",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "compte bancaire",
       "fub": "limngal hisaabu banki",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "code de validation",
       "fub": "lambar tabitingol",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "envoyé par sms",
       "fub": "nelaaɗo bee SMS",
-      "src": "02_safinum_wave_sponsor_corpus"
+      "src": "02_safinum_wave_sponsor_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "en cas de problème",
       "fub": "to caɗeele ngoodi",
-      "src": "04_akilang_conversational_corpus"
+      "src": "04_akilang_conversational_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "veuillez patienter",
       "fub": "useni munyu seeɗa",
-      "src": "04_akilang_conversational_corpus"
+      "src": "04_akilang_conversational_corpus",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "opération irréversible",
       "fub": "kuugal ngal waawaa ruttineego",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     },
     {
       "fr": "ne peut pas être annulé",
       "fub": "waawaa haɗeego malla ruttineego",
-      "src": "01_aki_osc_financial_glossary"
+      "src": "01_aki_osc_financial_glossary",
+      "ewo": "Mɔni / Ésəle"
     }
   ],
   "word_lexicon": {

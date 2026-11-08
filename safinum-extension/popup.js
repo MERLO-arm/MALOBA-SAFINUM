@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modeBtns = document.querySelectorAll(".mode-btn");
   const statNodes = document.getElementById("stat-nodes");
   const speakBtn = document.getElementById("btn-speak-step");
+  const langSelect = document.getElementById("popup-lang-select");
 
   function sendToActiveTab(message, cb) {
     if (!chrome || !chrome.tabs) return;
@@ -17,12 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
     if (res && typeof res.translatedNodes !== "undefined") {
       statNodes.textContent = String(res.translatedNodes);
     }
+    if (res && res.lang && langSelect) {
+      langSelect.value = res.lang;
+    }
     if (res && res.mode) {
       modeBtns.forEach((b) => {
         b.classList.toggle("active", b.getAttribute("data-mode") === res.mode);
       });
     }
   });
+
+  if (langSelect) {
+    langSelect.addEventListener("change", (e) => {
+      modeBtns.forEach((b) => b.classList.remove("active"));
+      sendToActiveTab({ type: "SET_LANG", lang: e.target.value });
+    });
+  }
 
   modeBtns.forEach((btn) => {
     btn.addEventListener("click", () => {

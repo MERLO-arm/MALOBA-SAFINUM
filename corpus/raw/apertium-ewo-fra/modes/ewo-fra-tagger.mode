@@ -1,0 +1,1 @@
+hfst-proc -w '/Users/emmanuelngueum/Documents/apertium/apertium-ewo-fra/ewo-fra.automorf.hfst' | cg-proc -w '/Users/emmanuelngueum/Documents/apertium/apertium-ewo-fra/ewo-fra.rlx.bin' | apertium-tagger -u 2 -g $2 '/Users/emmanuelngueum/Documents/apertium/apertium-ewo-fra/ewo-fra.prob'

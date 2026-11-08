@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+   <!-- Define the alphabet below. -->
+  <alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệɛɛ́ɛ̀ɛ̄ɛ̂ɛ̌əə́ə̀ə̄ə̂ə̌ëfFgGhHiIíjJkKlLmm̀ḿMnǹńŋŋ́ŋ̀NñoOóöớɔɔ́ɔ̀ɔ̄ɔ̂ɔ̌òpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+
+  <sdefs>
+    <!-- Define symbol definitions within <sdef> here. -->
+    <sdef n="n"               c="Noun"/>
+    <sdef n="np"              c="Proper noun"/>
+    <sdef n="vblex"           c="Verb, lexical"/>
+    <sdef n="vbmod"           c="Modal verb"/>
+    <sdef n="vaux"            c="Auxiliary verb"/>
+    <sdef n="vbser"           c="'To be' verb"/>
+    <sdef n="vhaber"          c="'To have' verb"/>
+    <sdef n="cnjsub"          c="Subordinating conjunction"/>
+    <sdef n="cnjcoo"          c="Co-ordinating conjunction"/>
+    <sdef n="cnjadv"          c="Adverbial conjunction"/>
+    <sdef n="pr"              c="Preposition"/>
+    <sdef n="adv"             c="Adverb"/>
+    <sdef n="ij"              c="Interjection"/>
+    <sdef n="adj"             c="Adjective"/>
+    <sdef n="adjind"          c="Adjective Indefini"/>
+    <sdef n="prn"             c="Pronoun"/>
+    <sdef n="tn"              c=""/>
+    <sdef n="cl1"             c="Noun class 1"/>
+    <sdef n="cl1a"            c="Noun class 1a"/>
+    <sdef n="cl2"             c="Noun class 2"/>
+    <sdef n="cl3"             c="Noun class 3"/>
+    <sdef n="cl3a"             c="Noun class 3a"/>
+    <sdef n="cl4"             c="Noun class 4"/>
+    <sdef n="cl4a"             c="Noun class 4a"/>
+    <sdef n="cl5"             c="Noun class 5"/>
+    <sdef n="cl5a"            c="Noun class 5a"/>
+    <sdef n="cl5b"            c="Noun class 5b"/>
+    <sdef n="cl5c"            c="Noun class 5c"/>
+    <sdef n="cl5d"            c="Noun class 5d"/>
+    <sdef n="cl6"             c="Noun class 6"/>
+    <sdef n="cl6a"            c="Noun class 6a"/>
+    <sdef n="cl7"             c="Noun class 7"/>
+    <sdef n="cl8"             c="Noun class 8"/>
+    <sdef n="cl9"             c="Noun class 9"/>
+    <sdef n="cl10"            c="Noun class 10"/>
+    <sdef n="cl11"            c="Noun class 11"/>
+    <sdef n="cl16"            c="Noun class 16"/>
+    
+
+    <sdef n="attr"            c="Attributive"/>
+    <sdef n="top"             c="Toponym"/>
+    <sdef n="ant"             c="Anthroponym"/>
+    <sdef n="cog"             c="Cognomen"/>
+    <sdef n="org"             c="Organisation"/>
+    <sdef n="al"              c="Altres / misc proper nouns"/>
+
+    <sdef n="pers"            c="Personal pronoun"/>
+    <sdef n="ref"             c="Reflexive pronoun"/>
+    <sdef n="res"             c="Reciprocal pronoun"/>
+
+    <sdef n="det"             c="Determiner"/>
+    <sdef n="pos"             c="Possessive"/>
+
+    <sdef n="p1"              c="1st person"/>
+    <sdef n="p2"              c="2nd person"/>
+    <sdef n="p3"              c="3rd person"/>
+
+    <sdef n="nt"              c="Neuter"/>
+    <sdef n="ut"              c="Utrum"/>
+    <sdef n="f"               c="Feminine"/>
+    <sdef n="m"               c="Masculine"/>
+    <sdef n="mf"               c=""/>
+    <sdef n="un"              c="No gender"/>
+
+    <sdef n="sg"              c="Singular"/>
+    <sdef n="du"              c="Dual"/>
+    <sdef n="pl"              c="Plural"/>
+    <sdef n="sp"              c="Singular / plural"/>
+
+    <sdef n="ind"             c="Indefinite"/>
+    <sdef n="def"             c="Definite"/>
+
+    <sdef n="nom"             c="Nominative"/>
+    <sdef n="acc"             c="Accusative"/>
+    <sdef n="gen"             c="Genitive"/>
+
+    <sdef n="dem"             c="Demonstrative"/>
+    <sdef n="itg"             c="Question word / interrogative"/>
+    <sdef n="qnt"             c="Quantifier"/>
+    <sdef n="neg"             c="Negative"/>
+    <sdef n="emph"            c="Emphatic"/>
+
+    <sdef n="inf"             c="Infinitive"/>
+    <sdef n="pres"            c="Present"/>
+    <sdef n="imp"             c="Imperative"/>
+    <sdef n="pret"            c="Preterite"/>
+    <sdef n="pp"              c="Perfect participle"/>
+    <sdef n="pprs"            c="Present participle"/>
+    <sdef n="pasv"            c="Passive"/>
+    <sdef n="actv"            c="Active voice"/>
+    <sdef n="refl"            c="Reflexive"/>
+
+    <sdef n="sint"            c="Synthetic (of adjectives)"/>
+    <sdef n="pst"             c="Positive"/>
+    <sdef n="comp"            c="Comparative"/>
+    <sdef n="sup"             c="Superlative"/>
+
+    <sdef n="ord"             c="Ordinal"/>
+    <sdef n="acr"             c="Acronym"/>
+    <sdef n="unc"             c="Uncountable"/>
+
+    <sdef n="num"             c="Numeral"/>
+    <sdef n="sent"            c="Sentence end"/>
+    <sdef n="cm"              c="Comma"/>
+    <sdef n="apos"            c="Apostrophe"/>
+    <sdef n="guio"            c="Dash"/>
+    <sdef n="lpar"            c="Left parenthesis"/>
+    <sdef n="rpar"            c="Right parenthesis"/>
+    <sdef n="lquot"           c="Left quote"/>
+    <sdef n="rquot"           c="Right quote"/>
+
+    <sdef n="GD"              c=""/>
+    <sdef n="ND"              c=""/>
+<!--
+    <sdef n="a_gen"/>
+-->
+    <sdef n="compound-only-L" c="May only be the left-side of a compound"/>
+    <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
+  </sdefs>
+  <pardefs>
+    <pardef n="pos_GDND_Gender-1">
+      <e><p><l><s n="cl1"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="mf"/><s n="ND"/></r></p></e>
+    </pardef> 
+    <pardef n="pos_GDND_Gender-2">
+      <e><p><l><s n="cl3"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl4"/><s n="pl"/></l><r><s n="mf"/><s n="ND"/></r></p></e>
+    </pardef>    
+    <pardef n="pos_GDND_Gender-3">
+      <e><p><l><s n="cl5"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="mf"/><s n="ND"/></r></p></e>
+    </pardef>
+    <pardef n="pos_GDND_Gender-4">
+      <e><p><l><s n="cl7"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl8"/><s n="pl"/></l><r><s n="mf"/><s n="ND"/></r></p></e>
+    </pardef>
+    <pardef n="pos_GDND_Gender-5">
+      <e><p><l><s n="cl9"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl10"/><s n="pl"/></l><r><s n="mf"/><s n="GD"/></r></p></e>
+    </pardef>
+    <pardef n ="pos_GDND_Gender-6">
+      <e><p><l><s n="cl11"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e><p><l><s n="cl16"/><s n="sg"/></l><r><s n="GD"/><s n="ND"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_1/2_sg/pl">  <!-- Gender-1 -->
+      <e><p><l><s n="cl1"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+    <pardef n="n_1a/2_sg/pl"> <!-- Gender-1a -->
+      <e><p><l><s n="cl1a"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>   
+
+   <pardef n="n_3/4_sg/pl"> <!-- Gender-2 -->
+      <e><p><l><s n="cl3"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl4"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_3/3_sg/sg"> <!-- Gender-2a -->
+      <e><p><l><s n="cl3"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl3"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_4/4_pl/pl"> <!-- Gender-2b -->
+      <e><p><l><s n="cl4"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+      <e><p><l><s n="cl4"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+  <pardef n="n_5/6_sg/pl"> <!-- Gender-3 -->
+      <e><p><l><s n="cl5"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+  <pardef n="n_5a/6_sg/pl"> <!-- Gender-3a -->
+      <e><p><l><s n="cl5a"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+  <pardef n="n_5b/6_sg/pl"> <!-- Gender-3b -->
+      <e><p><l><s n="cl5b"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+  <pardef n="n_5c/5c_sg/sg"> <!-- Gender-3c -->
+      <e><p><l><s n="cl5c"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl5c"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+ </pardef>
+
+  <pardef n="n_5d/5d_sg/sg"> <!-- Gender-3d -->
+      <e><p><l><s n="cl5d"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl5d"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+  </pardef>
+
+  <pardef n="n_5/5_sg/sg"> <!-- Gender-3e -->
+      <e><p><l><s n="cl5"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl5"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+  </pardef>
+
+  <pardef n="n_6a/6a_pl/pl"> <!-- Gender-3f -->
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+ </pardef>
+
+    <pardef n="n_7/8_sg/pl"> <!-- Gender-4 -->
+      <e><p><l><s n="cl7"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl8"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_9/10_sg/pl"> <!-- Gender-5 -->
+      <e><p><l><s n="cl9"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl10"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_9/2_sg/pl"> <!-- Gender-6 -->
+      <e><p><l><s n="cl9"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+
+    <pardef n="n_9/6_sg/pl"> <!-- Gender-7 -->
+      <e><p><l><s n="cl9"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl6"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+    <pardef n="n_11/5_sg/pl"> <!-- Gender-8 -->
+      <e><p><l><s n="cl11"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl5"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+    
+
+   <pardef n="n_11/16_sg/pl"> <!-- Gender-10 -->
+      <e><p><l><s n="cl11"/><s n="sg"/></l><r><s n="sg"/></r></p></e>
+      <e><p><l><s n="cl16"/><s n="pl"/></l><r><s n="pl"/></r></p></e>
+    </pardef>
+
+   <pardef n="pos_1_m/f">
+      <e><p><l><s n="cl1"/><s n="sg"/></l><r><s n="m"/></r></p></e>
+      <e><p><l><s n="cl1"/><s n="sg"/></l><r><s n="f"/></r></p></e>
+    </pardef>
+   <pardef n="pos_2_m/f">
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="m"/></r></p></e>
+      <e><p><l><s n="cl2"/><s n="pl"/></l><r><s n="sg"/></r></p></e>
+   </pardef>
+   
+   <pardef n="cl_0">
+      <e><p><l><s n="cl1"/></l><r></r></p></e>
+   </pardef>
+
+   <!--
+   <pardef n="vblex_VERB_INF">
+      <e><p><l><s n="inf"/></l><r>< n="inf"/></r></p></e>
+   </pardef>
+   -->
+
+   </pardefs>
+
+   <section id="main" type="standard">
+      <e><p><l>a<s n="prn"/></l><r>il<s n="prn"/><s n="tn"/><s n="p3"/><s n="m"/><s n="sg"/></r></p><par n="cl_0"/></e>
+      <!-- Define entries within <e> here. -->
+      <e><p><l>ot<s n="n"/></l><r>personne<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>      
+      <e><p><l>ot<s n="n"/></l><r>homme<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>odo<s n="n"/></l><r>humanité<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e> 
+      <e><p><l>ininga<s n="n"/></l><r>femme<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>          
+      <!--<e><p><l>abui<s n="n"/></l><r>beaucoup<s n="n"/><s n="n"/></r></p></e>      -->
+      <e><p><l>a<s n="pr"/></l><r>à<s n="pr"/></r></p></e>
+      <e><p><l>abum<s n="n"/></l><r>ventre<s n="n"/><s n="m"/></r></p></e>
+      <e><p><l>abò<s n="n"/></l><r>pied<s n="n"/><s n="m"/></r></p></e>
+      <e><p><l>afë<s n="n"/></l><r>autre<s n="n"/><s n="m"/></r></p></e>
+      <e><p><l>afi<s n="pr"/></l><r>malgré<s n="pr"/></r></p></e>
+      <e><p><l>al<s n="n"/></l><r>village<s n="n"/><s n="m"/></r></p><par n="n_5a/6_sg/pl"/></e>
+      <e><p><l>aǹ<s n="n"/></l><r>médicament<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>aǹ<s n="n"/></l><r>mer<s n="n"/><s n="m"/></r></p><par n="n_9/6_sg/pl"/></e>
+      <e><p><l>anë<s n="adv"/></l><r>comme<s n="adv"/></r></p></e>        
+      <e><p><l>angondo<s n="n"/></l><r>horreur<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>atòm<s n="n"/></l><r>ulcère<s n="m"/></r></p></e>
+      <e><p><l>avus<s n="n"/></l><r>camaraderie<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>baala<s n="vblex"/></l><r>garder<s n="vblex"/></r></p></e>
+      <e><p><l>ba<s n="n"/></l><r>tambour<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bè<s n="n"/></l><r>porte<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>di<s n="vblex"/></l><r>manger<s n="vblex"/></r></p></e>
+      <e><p><l>badë<s n="vblex"/></l><r>encore<s n="vblex"/></r></p></e>
+      <e><p><l>bam<s n="vblex"/></l><r>gronder<s n="vblex"/></r></p></e>
+   <e><p><l>abui<s n="adv"/></l><r>beaucoup<s n="adv"/></r></p></e>  
+   <e><p><l>al<s n="n"/></l><r>village<s n="n"/><s n="m"/></r></p><par n="n_5a/6_sg/pl"/></e>
+   <e><p><l>anë<s n="adv"/></l><r>comme<s n="adv"/></r></p></e>    
+   <e><p><l>angondo<s n="n"/></l><r>horreur<s n="n"/><s n="f"/></r></p><par n="n_5/5_sg/sg"/></e>  
+   <e><p><l>aǹ<s n="n"/></l><r>médicament<s n="n"/><s n="m"/></r></p></e> 
+   <!--<e><p><l>anyaǹ<s n="n"/></l><r>son frère<s n="n"/><s n="m"/></r></p><par n="n_1/1_sg/sg"/></e> -->
+   <e><p><l>as<s n="n"/></l><r>don<s n="n"/><s n="f"/></r></p><par n="n_5b/6_sg/pl"/></e>
+   <e><p><l>asu<s n="cnjcoo"/></l><r>pour<s n="cnjcoo"/></r></p></e>
+   <e><p><l>bum<s n="n"/></l><r>ventre<s n="n"/><s n="m"/></r></p></e>
+   <e><p><l>abò<s n="n"/></l><r>pied<s n="n"/><s n="m"/></r></p></e>
+   <e><p><l>afë<s n="n"/></l><r>autre<s n="n"/><s n="m"/></r></p></e>
+   <e><p><l>aǹ<s n="n"/></l><r>médicament<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>      
+   <e><p><l>anë<s n="adv"/></l><r>comme<s n="adv"/></r></p></e>
+   <e><p><l>ai<s n="cnjcoo"/></l><r>avec<s n="cnjcoo"/></r></p></e>
+   <e><p><l>atòm<s n="n"/></l><r>ulcère<s n="m"/></r></p></e>
+   <e><p><l>ayoǹ<s n="n"/></l><r>chaleur<s n="n"/><s n="f"/></r></p><par n="n_5/5_sg/sg"/></e>
+   <e><p><l>avus<s n="n"/></l><r>camaraderie<s n="n"/><s n="f"/></r></p><par n="n_5/5_sg/sg"/></e>
+   <e><p><l>baala<s n="inf"/></l><r>garder<s n="inf"/></r></p></e>
+   <e><p><l>badë<s n="vblex"/></l><r>encore<s n="vblex"/></r></p></e>
+   <e><p><l>badëlòg<s n="n"/></l><r>malchance<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+   <e><p><l>bal<s n="vblex"/></l><r>sarcler<s n="vblex"/></r></p></e> 
+   <e><p><l>bam<s n="vblex"/></l><r>gronder<s n="vblex"/></r></p></e>
+      <e><p><l>ban<s n="vblex"/></l><r>appuyer sur<s n="vblex"/></r></p></e>
+      <e><p><l>banda<s n="n"/></l><r>invitation<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>baǹ<s n="n"/></l><r>noyau<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>baǹ<s n="n"/></l><r>caillot<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>baǹ<s n="n"/></l><r>fagot<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bas<s n="n"/></l><r>nageoire caudale<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>be<s n="n"/></l><r>mal<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bebe<s n="adv"/></l><r>près de<s n="adv"/></r></p></e>
+      <e><p><l>bede<s n="vblex"/></l><r>soulever<s n="vblex"/></r></p></e>
+      <e><p><l>bede<s n="vblex"/></l><r>déposer<s n="vblex"/></r></p></e>
+      <e><p><l>bende<s n="vblex"/></l><r>recommander<s n="vblex"/></r></p></e>
+      <e><p><l>bendan<s n="n"/></l><r>fait d'annoncer<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bèd<s n="vblex"/></l><r>monter<s n="vblex"/></r></p></e>
+      <e><p><l>bè<s n="vblex"/></l><r>dépecer<s n="vblex"/></r></p></e>
+      <e><p><l>bè<s n="n"/></l><r>sein<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bè<s n="n"/></l><r>cuisse<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bëbë<s n="vblex"/></l><r>regarder<s n="vblex"/></r></p></e>
+      <e><p><l>bëdan<s n="vblex"/></l><r>supplanter<s n="vblex"/></r></p></e>
+      <e><p><l>bëdan<s n="n"/></l><r>cadet<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bëg<s n="vblex"/></l><r>partitionner<s n="vblex"/></r></p></e>
+      <e><p><l>bëgë<s n="vblex"/></l><r>porter<s n="vblex"/></r></p></e>
+      <e><p><l>bëgëlë<s n="vblex"/></l><r>cafardage<s n="vblex"/></r></p></e>
+      <e><p><l>bëgëlë<s n="vblex"/></l><r>attiser le feu<s n="vblex"/></r></p></e>
+      <e><p><l>bëgë<s n="n"/></l><r>charge<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bëbëla<s n="n"/></l><r>vérité<s n="n"/><s n="f"/></r></p><par n="n_9/6_sg/pl"/></e>
+      <e><p><l>bëlan<s n="vblex"/></l><r>utiliser<s n="vblex"/></r></p></e>
+      <e><p><l>bëlë<s n="vblex"/></l><r>dire vrai<s n="vblex"/></r></p></e>
+      <e><p><l>bëm<s n="vblex"/></l><r>enfoncer<s n="vblex"/></r></p></e>
+      <e><p><l>bëm<s n="n"/></l><r>cagibi<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bëme<s n="vblex"/></l><r>prévenir<s n="vblex"/></r></p></e>
+       <e><p><l>bëmbë<s n="n"/></l><r>convenable<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>biali<s n="vblex"/></l><r>naître<s n="vblex"/></r></p></e>
+      <e><p><l>bi<s n="n"/></l><r>excrément<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bi<s n="n"/></l><r>preneur<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bifëfè<s n="n"/></l><r>végétation anarchique<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>bie<s n="vblex"/></l><r>donner naissance<s n="vblex"/></r></p></e>
+      <e><p><l>bie<s n="n"/></l><r>géniteur<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>big<s n="vblex"/></l><r>dépister<s n="vblex"/></r></p></e>
+      <e><p><l>big<s n="vblex"/></l><r>s'enrichir<s n="vblex"/></r></p></e>
+      <e><p><l>big<s n="n"/></l><r>urticaire<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>biali<s n="vblex"/></l><r>naître<s n="vblex"/></r></p></e>
+      <e><p><l>biali<s n="n"/></l><r>naissance<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bil<s n="n"/></l><r>course<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bili<s n="vblex"/></l><r>être contaminé<s n="vblex"/></r></p></e>
+      <e><p><l>bili<s n="vblex"/></l><r>être saoule<s n="vblex"/></r></p></e>
+      <e><p><l>bim<s n="vblex"/></l><r>enfler<s n="vblex"/></r></p></e>
+      <e><p><l>bin<s n="n"/></l><r>pénis<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bindi<s n="vblex"/></l><r>dénicher<s n="vblex"/></r></p></e>
+      <e><p><l>bisi<s n="vblex"/></l><r>photographier<s n="vblex"/></r></p></e>
+       <e><p><l>bisi<s n="vblex"/></l><r>tenir compte de<s n="vblex"/></r></p></e>
+      <e><p><l>bit<s n="vblex"/></l><r>entrelacer<s n="vblex"/></r></p></e>
+      <e><p><l>bob<s n="n"/></l><r>grossier<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bobo<s n="n"/></l><r>araignée<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>boe<s n="vblex"/></l><r>casser<s n="vblex"/></r></p></e>
+      <e><p><l>bog<s n="vblex"/></l><r>bûcher<s n="vblex"/></r></p></e>
+      <e><p><l>bog<s n="n"/></l><r>fête<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bom<s n="vblex"/></l><r>battre<s n="vblex"/></r></p></e>
+      <e><p><l>bom<s n="n"/></l><r>tumulus<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>boman<s n="vblex"/></l><r>entourer<s n="vblex"/></r></p></e>
+      <e><p><l>boman<s n="n"/></l><r>rhume<s n="n"/><s n="m"/></r></p><par n="n_3/3_sg/sg"/></e>
+      <e><p><l>bomanë<s n="n"/></l><r>contour<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bonde<s n="n"/></l><r>fondateur<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>bonde<s n="refl"/><s n="inf"/></l><r>fonder<s n="refl"/><s n="inf"/></r></p></e>
+      <e><p><l>bòban<s n="refl"/><s n="inf"/></l><r>se faire<s n="refl"/><s n="inf"/></r></p></e>
+      <e><p><l>bò<s n="vblex"/></l><r>faire<s n="vblex"/></r></p></e>
+      <e><p><l>bò<s n="n"/></l><r>artisan<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>bòd<s n="vblex"/></l><r>se mouiller<s n="vblex"/></r></p></e>
+      <e><p><l>bòd<s n="vblex"/></l><r>recadrer<s n="vblex"/></r></p></e>
+      <e><p><l>bòd<s n="n"/></l><r>petitesse<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bòd<s n="n"/></l><r>cabine d'habillage<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bòd<s n="n"/></l><r>accoutrement<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bòdan<s n="vblex"/></l><r>pétrir<s n="vblex"/></r></p></e>
+      <e><p><l>bòdan<s n="n"/></l><r>bénédiction<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bòòlò<s n="vblex"/></l><r>attester<s n="vblex"/></r></p></e>
+      <e><p><l>bòòlò<s n="n"/></l><r>témoin<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>bòg<s n="n"/></l><r>un<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bòm<s n="n"/></l><r>morve<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bonga<s n="n"/></l><r>câblage<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bòn<s n="n"/></l><r>huile<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bu<s n="n"/></l><r>année<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>bu<s n="n"/></l><r>touffe<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bubua<s n="n"/></l><r>calamité<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>budi<s n="vblex"/></l><r>couvrir<s n="vblex"/></r></p></e>
+      <e><p><l>bug<s n="vblex"/></l><r>casser<s n="vblex"/></r></p></e>
+      <e><p><l>bugëban<s n="vblex"/></l><r>prospérer<s n="vblex"/></r></p></e>
+      <e><p><l>bugëban<s n="n"/></l><r>prospérité<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>bugi<s n="vblex"/></l><r>être cassé<s n="vblex"/></r></p></e>
+      <e><p><l>bum<s n="vblex"/></l><r>braiser<s n="vblex"/></r></p></e>
+      <e><p><l>buma<s n="n"/></l><r>cabosse<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>bumulan<s n="vblex"/></l><r>se précipiter<s n="vblex"/></r></p></e>
+      <e><p><l>bwal<s n="vblex"/></l><r>pourrir<s n="vblex"/></r></p></e>
+      <e><p><l>bwali<s n="vblex"/></l><r>faire pourrir<s n="vblex"/></r></p></e>
+      <e><p><l>bwe<s n="vblex"/></l><r>casser<s n="vblex"/></r></p></e>
+      <e><p><l>bye<s n="vblex"/></l><r>enfanter<s n="vblex"/></r></p></e>
+      <e><p><l>daǹ<s n="vblex"/></l><r>dépasser<s n="vblex"/></r></p></e>
+      <e><p><l>daǹdaǹ<s n="adv"/></l><r>surtout<s n="adv"/></r></p></e>
+      <e><p><l>dian<s n="vblex"/></l><r>se manger mutuellement<s n="vblex"/></r></p></e>
+      <e><p><l>dib<s n="vblex"/></l><r>fermer<s n="vblex"/></r></p></e>
+      <e><p><l>diban<s n="vblex"/></l><r>se fermer<s n="vblex"/></r></p></e>
+      <e><p><l>dibidi<s n="vblex"/></l><r>dissimuler<s n="vblex"/></r></p></e>
+      <e><p><l>digi<s n="vblex"/></l><r>calciner<s n="vblex"/></r></p></e>
+      <e><p><l>diiban<s n="vblex"/></l><r>se ronger<s n="vblex"/></r></p></e>
+      <e><p><l>dim<s n="vblex"/></l><r>effacer<s n="vblex"/></r></p></e>
+      <e><p><l>dim<s n="n"/></l><r>cécité<s n="n"/><s n="f"/></r></p><par n="n_9/2_sg/pl"/></e>
+      <e><p><l>dimi<s n="vblex"/></l><r>camouffler<s n="vblex"/></r></p></e>
+      <e><p><l>dimiǹ<s n="n"/></l><r>cachoterie<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>dò<s n="cnjcoo"/></l><r>surtout<s n="cnjcoo"/></r></p></e>
+      <e><p><l>dòg<s n="n"/></l><r>voracité<s n="n"/><s n="f"/></r></p><par n="n_3/3_sg/sg"/></e>
+      <e><p><l>dòg<s n="n"/></l><r>profondeur<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>dòbëdò<s n="n"/></l><r>hôpital<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>du<s n="vblex"/></l><r>tremper<s n="vblex"/></r></p></e>
+      <e><p><l>dudu<s n="vblex"/></l><r>attirer<s n="vblex"/></r></p></e>
+      <e><p><l>dug<s n="vblex"/></l><r>mentir<s n="vblex"/></r></p></e>
+      <e><p><l>dulu<s n="n"/></l><r>marche<s n="n"/><s n="f"/></r></p></e> 
+      <e><p><l>duǹ<s n="vblex"/></l><r>dépérir<s n="vblex"/></r></p></e>
+      <e><p><l>dzëm<s n="vblex"/></l><r>danser<s n="vblex"/></r></p></e>
+      <e><p><l>dzëman<s n="vblex"/></l><r>manquer<s n="vblex"/></r></p></e>
+      <e><p><l>dzëmëlë<s n="vblex"/></l><r>dribbler<s n="vblex"/></r></p></e>
+      <e><p><l>dzëǹ<s n="vblex"/></l><r>chercher<s n="vblex"/></r></p></e>
+      <e><p><l>dzib<s n="vblex"/></l><r>voler<s n="vblex"/></r></p></e>
+      <e><p><l>dzin<s n="n"/></l><r>un certain<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>dzo<s n="vblex"/></l><r>dire<s n="vblex"/></r></p></e>
+      <e><p><l>dzo<s n="n"/></l><r>membre du corps<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+     <e><p><l>dzogodo<s n="n"/></l><r>canton<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+     <e><p><l>dzoe<s n="n"/></l><r>dirigeant<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+     <e><p><l>dzu<s n="vblex"/></l><r>pardonner<s n="vblex"/></r></p></e>
+     <e><p><l>dzug<s n="vblex"/></l><r>se faire mal<s n="vblex"/></r></p></e>
+     <e><p><l>dzugu<s n="vblex"/></l><r>avoir l'habitude de<s n="vblex"/></r></p></e>
+     <e><p><l>esanga<s n="n"/></l><r>sa tante paternelle<s n="n"/><s n="f"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>esia<s n="n"/></l><r>son père<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>esoa<s n="n"/></l><r>ton père<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>evueziǹ<s n="adv"/></l><r>peut-être<s n="adv"/></r></p></e>
+      <e><p><l>edzidzin<s n="n"/></l><r>dignité<s n="n"/><s n="f"/></r></p></e> 
+      <e><p><l>ekob<s n="n"/></l><r>peau<s n="n"/><s n="f"/></r></p></e>     
+      <e><p><l>yëgan<s n="vblex"/></l><r>s'etonner<s n="vblex"/></r></p></e>
+      <e><p><l>yëgan<s n="n"/></l><r>stupéfaction<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>yomëlo<s n="vblex"/></l><r>examiner<s n="vblex"/></r></p></e>
+      <e><p><l>fag<s n="vblex"/></l><r>creuser<s n="vblex"/></r></p></e>
+      <e><p><l>fan<s n="n"/></l><r>forêt<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>fas<s n="n"/></l><r>analyse<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>fasëban<s n="vblex"/></l><r>se faire examiner<s n="vblex"/></r></p></e>
+     <!-- <e><p><l>fë<s n="adjind"/></l><r>autre<s n="adjind"/></r></p></e>--> 
+      <e><p><l>fë<s n="adv"/></l><r>aussi<s n="adv"/></r></p></e>  
+      <e><p><l>fëb<s n="vblex"/></l><r>sonder<s n="vblex"/></r></p></e>
+      <e><p><l>fëb<s n="n"/></l><r>papier<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>fëb<s n="n"/></l><r>vapeur<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>fëg<s n="n"/></l><r>sagesse<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>fëfè<s n="n"/></l><r>végétation hanarchique<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>fël<s n="n"/></l><r>cicatrice<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>fëm<s n="vblex"/></l><r>détester<s n="vblex"/></r></p></e>
+      <e><p><l>fia<s n="n"/></l><r>avocat<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>fib<s n="vblex"/></l><r>s'épaissir<s n="vblex"/></r></p></e>
+      <e><p><l>fib<s n="n"/></l><r>épaisseur<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>fid<s n="vblex"/></l><r>écraser<s n="vblex"/></r></p></e>
+      <e><p><l>fidi<s n="vblex"/></l><r>compter sur<s n="vblex"/></r></p></e>
+      <e><p><l>fila<s n="n"/></l><r>oreiller<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>fog<s n="vblex"/></l><r>être mobile<s n="vblex"/></r></p></e>
+      <e><p><l>fola<s n="n"/></l><r>place<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e> 
+      <e><p><l>fòǹ<s n="n"/></l><r>moelle<s n="n"/><s n="f"/></r></p><par n="n_9/10_sg/pl"/></e>
+      <e><p><l>fòò<s n="adv"/></l><r>aussi<s n="adv"/></r></p></e>
+      <e><p><l>fub<s n="vblex"/></l><r>être propre<s n="vblex"/></r></p></e>
+      <e><p><l>fubu<s n="vblex"/></l><r>purifier<s n="vblex"/></r></p></e>
+      <e><p><l>fulan<s n="vblex"/></l><r>ressembler à<s n="vblex"/></r></p></e>
+      <e><p><l>fulan<s n="n"/></l><r>ressemblance<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>fulu<s n="n"/></l><r>caractère<s n="n"/><s n="m"/></r></p><par n="n_9/6_sg/pl"/></e>
+      <e><p><l>fwe<s n="vblex"/></l><r>se multiplier<s n="vblex"/></r></p></e>
+      <e><p><l>fwe<s n="n"/></l><r>reproducteur<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>guma<s n="n"/></l><r>entier<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>ininga<s n="n"/></l><r>femme<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>ka<s n="n"/></l><r>assistant<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>kada<s n="n"/></l><r>crabe<s n="n"/><s n="f"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>kad<s n="vblex"/></l><r>dire<s n="vblex"/></r></p></e>
+      <e><p><l>kadë<s n="adv"/></l><r>souvent<s n="adv"/></r></p></e>
+      <e><p><l>kag<s n="vblex"/></l><r>empiler<s n="vblex"/></r></p></e>
+      <e><p><l>kal<s n="n"/></l><r>plaidoyer<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>kalan<s n="vblex"/></l><r>transmettre<s n="vblex"/></r></p></e>
+      <e><p><l>kalasina<s n="n"/></l><r>pétrole<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>kan<s n="n"/></l><r>odeur de roussi<s n="n"/><s n="m"/></r></p></e>   
+      <e><p><l>kandi<s n="vblex"/></l><r>diminuer<s n="vblex"/></r></p></e>
+      <e><p><l>ki<s n="vblex"/></l><r>s'abstenir<s n="vblex"/></r></p></e>
+      <e><p><l>ki<s n="n"/></l><r>oeuf<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kie<s n="n"/></l><r>fer<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>kie<s n="n"/></l><r>feuille<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kig<s n="adv"/></l><r>ne...pas<s n="adv"/></r></p></e>
+      <e><p><l>kil<s n="vblex"/></l><r>refuser<s n="vblex"/></r></p></e>
+     <e><p><l>kil<s n="n"/></l><r>serve<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kilan<s n="vblex"/></l><r>tourner<s n="vblex"/></r></p></e>
+      <e><p><l>kili<s n="vblex"/></l><r>interdire à<s n="vblex"/></r></p></e>
+      <e><p><l>kim<s n="n"/></l><r>fluidité<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kele<s n="vblex"/></l><r>suspendre<s n="vblex"/></r></p></e>
+      <e><p><l>kele<s n="vblex"/></l><r>circoncier<s n="vblex"/></r></p></e>
+      <e><p><l>kele<s n="n"/></l><r>circoncision<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>këlan<s n="vblex"/></l><r>se rompre<s n="vblex"/></r></p></e>
+      <e><p><l>kende<s n="vblex"/></l><r>grignotter<s n="vblex"/></r></p></e>
+      <e><p><l>kë<s n="vblex"/></l><r>partir<s n="vblex"/></r></p></e>
+      <e><p><l>kël<s n="n"/></l><r>abcès<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>këǹ<s n="n"/></l><r>intelligence<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>këǹ<s n="n"/></l><r>technique<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kidi<s n="n"/></l><r>matin<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e> 
+      <e><p><l>koan<s n="vblex"/></l><r>entasser<s n="vblex"/></r></p></e> 
+      <e><p><l>kuan<s n="vblex"/></l><r>vendre<s n="vblex"/></r></p></e> 
+      <e><p><l>koan<s n="n"/></l><r>réunion<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>koa<s n="n"/></l><r>pierre<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kob<s n="n"/></l><r>puce<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>kod<s n="n"/></l><r>teigne<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>kodo<s n="vblex"/></l><r>quitter<s n="vblex"/></r></p></e> 
+      <e><p><l>kog<s n="n"/></l><r>pierre<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kom<s n="vblex"/></l><r>fabriquer<s n="vblex"/></r></p></e>
+      <e><p><l>komo<s n="n"/></l><r>fabriquant<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>kon<s n="n"/></l><r>fantôme<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e> 
+      <e><p><l>koan<s n="n"/></l><r>réunion<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>kòbò<s n="vblex"/></l><r>parler<s n="vblex"/></r></p></e>
+      <e><p><l>kòd<s n="vblex"/></l><r>tourner<s n="vblex"/></r></p></e>
+      <e><p><l>kol<s n="n"/></l><r>pied<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e> 
+      <e><p><l>koli<s n="n"/></l><r>piéger<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>koge<s n="vblex"/></l><r>mordre<s n="vblex"/></r></p></e>
+      <e><p><l>kogo<s n="vblex"/></l><r>ajouter<s n="vblex"/></r></p></e>
+      <e><p><l>kogolo<s n="vblex"/></l><r>ajouter<s n="vblex"/></r></p></e>
+      <e><p><l>kòbò<s n="n"/></l><r>acceptation<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>kòm<s n="adv"/></l><r>longtemps<s n="adv"/></r></p></e>   
+      <e><p><l>kòm<s n="n"/></l><r>habitude<s n="n"/><s n="f"/></r></p><par n="n_5/5_sg/sg"/></e>
+      <e><p><l>kòm<s n="n"/></l><r>lourdeur<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kòn<s n="n"/></l><r>maladie<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>  
+      <e><p><l>kòn<s n="vblex"/></l><r>être malade<s n="vblex"/></r></p></e> 
+      <e><p><l>kpëlë<s n="vblex"/></l><r>tatouer<s n="vblex"/></r></p></e>
+      <e><p><l>kpëlëban<s n="vblex"/></l><r>se faire vacciner<s n="vblex"/></r></p></e>
+      <e><p><l>kpëlëmve<s n="n"/></l><r>cellulite<s n="f"/></r></p></e>
+      <e><p><l>ku<s n="vblex"/></l><r>tomber<s n="vblex"/></r></p></e>
+      <e><p><l>kue<s n="vblex"/></l><r>tousser<s n="vblex"/></r></p></e>
+      <e><p><l>kue<s n="n"/></l><r>toux<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>kugu<s n="n"/></l><r>cuisinier<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e> 
+      <e><p><l>kukuma<s n="n"/></l><r>chef<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>kulan<s n="vblex"/></l><r>se détacher<s n="vblex"/></r></p></e>
+      <e><p><l>kuliban<s n="vblex"/></l><r>se faire détacher<s n="vblex"/></r></p></e>
+      <e><p><l>kulu<s n="n"/></l><r>tortue<s n="n"/><s n="f"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>kulu<s n="n"/></l><r>tornade<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>kun<s n="n"/></l><r>poubelle<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kus<s n="vblex"/></l><r>acheter<s n="vblex"/></r></p></e>
+      <e><p><l>kus<s n="n"/></l><r>achat<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>kus<s n="n"/></l><r>veuvage<s n="n"/><s n="f"/></r></p><par n="n_5/5_sg/sg"/></e>
+      <e><p><l>kus<s n="n"/></l><r>veuve<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>kwe<s n="vblex"/></l><r>cueillir<s n="vblex"/></r></p></e>
+      <e><p><l>kwe<s n="n"/></l><r>escargot<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kwi<s n="vblex"/></l><r>sortir<s n="vblex"/></r></p></e>
+      <e><p><l>kwi<s n="n"/></l><r>sortie<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>kya<s n="n"/></l><r>type<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>lëdë<s n="vblex"/></l><r>montrer<s n="vblex"/></r></p></e>
+      <e><p><l>lëmbë<s n="n"/></l><r>microscope<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>lëmbë<s n="vblex"/></l><r>guetter<s n="vblex"/></r></p></e>
+      <e><p><l>labi<s n="n"/></l><r>cadeau<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>lad<s n="vblex"/></l><r>coudre<s n="vblex"/></r></p></e>
+      <e><p><l>lada<s n="vblex"/></l><r>être collé à<s n="vblex"/></r></p></e>
+      <e><p><l>lamvomba<s n="n"/></l><r>bourru<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>laǹ<s n="vblex"/></l><r>lire<s n="vblex"/></r></p></e>
+      <e><p><l>len<s n="n"/></l><r>palmier<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>lè<s n="vblex"/></l><r>puiser<s n="vblex"/></r></p></e>
+      <e><p><l>lèd<s n="vblex"/></l><r>durcir<s n="vblex"/></r></p></e>
+      <e><p><l>lèd<s n="n"/></l><r>dureté<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e> 
+      <e><p><l>lèn<s n="vblex"/></l><r>ruisseler<s n="vblex"/></r></p></e>
+      <e><p><l>lèna<s n="n"/></l><r>infection due à une morsure d'araignée<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>li<s n="vblex"/></l><r>défricher<s n="vblex"/></r></p></e>
+      <e><p><l>lod<s n="vblex"/></l><r>dépasser<s n="vblex"/></r></p></e>
+      <e><p><l>lob<s n="vblex"/></l><r>mordre<s n="vblex"/></r></p></e>
+      <e><p><l>lob<s n="n"/></l><r>seneçon<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>log<s n="n"/></l><r>pêche au barrage<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>log<s n="vblex"/></l><r>faire la pêche au barrage<s n="vblex"/></r></p></e>
+      <e><p><l>lò<s n="n"/></l><r>oreille<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>lòbi<s n="n"/></l><r>marécage<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>lòg<s n="n"/></l><r>herbe<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>lòm<s n="vblex"/></l><r>célébrer<s n="vblex"/></r></p></e>
+      <e><p><l>lo<s n="n"/></l><r>tête<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>lum<s n="vblex"/></l><r>piquer<s n="vblex"/></r></p></e>
+      <e><p><l>luman<s n="vblex"/></l><r>injecter<s n="vblex"/></r></p></e>
+      <e><p><l>lunga<s n="n"/></l><r>association<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>ma<s n="n"/></l><r>mouleur<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>mag<s n="n"/></l><r>tas<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>manë<s n="vblex"/></l><r>terminer<s n="vblex"/></r></p></e>
+      <e><p><l>mba<s n="n"/></l><r>tambour<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>meki<s n="n"/></l><r>sang<s n="n"/><s n="m"/></r></p></e>
+      <e><p><l>mos<s n="n"/></l><r>journée<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>   
+      <e><p><l>mvum<s n="n"/></l><r>particule<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>nal<s n="n"/></l><r>mensonge<s n="n"/><s n="m"/></r></p><par n="n_4/4_pl/pl"/></e>
+      <e><p><l>nam<s n="n"/></l><r>membre supérieur du corps<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>namba<s n="vblex"/></l><r>toucher<s n="vblex"/></r></p></e> 
+      <e><p><l>nda<s n="n"/></l><r>maison<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>     
+      <e><p><l>ndi<s n="n"/></l><r>espoir<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ndòǹ<s n="n"/></l><r>rapport<s n="n"/><s n="f"/></r></p><par n="n_9/6_sg/pl"/></e> 
+      <e><p><l>ndim<s n="n"/></l><r>eau<s n="n"/><s n="f"/></r></p><par n="n_6a/6a_pl/pl"/></e>
+      <e><p><l>ngogòl<s n="n"/></l><r>pitié<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>ngomba<s n="n"/></l><r>ngomba<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ngoǹ<s n="n"/></l><r>cadenas<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ngan<s n="vblex"/></l><r>se braquer<s n="vblex"/></r></p></e>     
+      <e><p><l>ngan<s n="n"/></l><r>obstiné<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>  
+      <e><p><l>ngas<s n="n"/></l><r>marais<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>  
+      <e><p><l>ngëng<s n="adv"/></l><r>clair<s n="adv"/></r></p></e>
+      <e><p><l>ngëngè<s n="n"/></l><r>insecte<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>      
+      <e><p><l>ngoge<s n="n"/></l><r>soir<s n="n"/><s n="m"/></r></p></e>  
+      <e><p><l>ngos<s n="n"/></l><r>tas<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>    
+      <e><p><l>ngul<s n="n"/></l><r>force<s n="n"/><s n="f"/></r></p></e>    
+      <e><p><l>ngula<s n="n"/></l><r>cabane<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ngun<s n="vblex"/></l><r>entasser<s n="vblex"/></r></p></e> 
+      <e><p><l>ngunubu<s n="vblex"/></l><r>accumuler<s n="vblex"/></r></p></e>
+      <e><p><l>nòǹ<s n="vblex"/></l><r>prendre<s n="vblex"/></r></p></e> 
+      <e><p><l>nyama<s n="n"/></l><r>calamiteux<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>nyiǹ<s n="vblex"/></l><r>vivre<s n="vblex"/></r></p></e>  
+      <e><p><l>nyiǹ<s n="n"/></l><r>vie<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>nyu<s n="n"/></l><r>bouche<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>  
+      <e><p><l>nyum<s n="vblex"/></l><r>sentir<s n="vblex"/></r></p></e> 
+      <e><p><l>nyum<s n="n"/></l><r>odeur<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>  
+      <e><p><l>oap<s n="n"/></l><r>nombril<s n="n"/><s n="m"/></r></p><par n="n_5b/6_sg/pl"/></e>      
+     <e><p><l>oe<s n="n"/></l><r>rire<s n="n"/><s n="m"/></r></p><par n="n_5c/5c_sg/sg"/></e> 
+     <e><p><l>ooga<s n="n"/></l><r>articulation<s n="n"/><s n="f"/></r></p><par n="n_5a/6_sg/pl"/></e> 
+     <e><p><l>òǹòn<s n="n"/></l><r>rejeton<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>     
+     <e><p><l>kòn<s n="n"/></l><r>maladie<s n="n"/><s n="f"/></r></p><par n="n_11/5_sg/pl"/></e>  
+     <e><p><l>mawòd<s n="n"/></l><r>maçon<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>mëtua<s n="n"/></l><r>voiture<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>mvigi<s n="n"/></l><r>pratique médicale<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+     <e><p><l>mvim<s n="n"/></l><r>enflure<s n="n"/><s n="m"/></r></p><par n="n_9/6_sg/pl"/></e>
+     <e><p><l>myëgë<s n="n"/></l><r>digue<s n="n"/><s n="m"/></r></p><par n="n_9/2_sg/pl"/></e>
+     <e><p><l>nëǹ<s n="n"/></l><r>hôte<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+     <e><p><l>nom<s n="n"/></l><r>male<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+     <e><p><l>nyala<s n="n"/></l><r>beau-frère<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+     <e><p><l>op<s n="n"/></l><r>ciel<s n="n"/><s n="m"/></r></p><par n="n_5d/5d_sg/sg"/></e>   
+      <e><p><l>òngò<s n="n"/></l><r>enfant<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>òngò<s n="n"/></l><r>calamité<s n="n"/><s n="m"/></r></p><par n="n_5/5_sg/sg"/></e>
+      <e><p><l>salag<s n="n"/></l><r>caniveau<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>     
+      <e><p><l>sanga<s n="n"/></l><r>tisane<s n="n"/><s n="f"/></r></p><par n="n_11/16_sg/pl"/></e>
+      <e><p><l>sëdëga<s n="n"/></l><r>échantillon<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>sëǹ<s n="n"/></l><r>cour<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>     
+      <e><p><l>sëm<s n="n"/></l><r>péché<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>si<s n="n"/></l><r>terre<s n="n"/><s n="f"/></r></p><par n="n_9/6_sg/pl"/></e>
+      <e><p><l>sie<s n="n"/></l><r>cabinet<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>    
+      <e><p><l>sis<s n="n"/></l><r>nerf<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>  
+      <e><p><l>sili<s n="n"/></l><r>question<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>sò<s n="vblex"/></l><r>être venu<s n="vblex"/></r></p></e>
+      <e><p><l>sò<s n="n"/></l><r>cachette<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>sòbò<s n="n"/></l><r>savon<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>sòbò<s n="vblex"/></l><r>se cacher<s n="vblex"/></r></p></e>
+      <e><p><l>sòbò<s n="n"/></l><r>cache<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>sòlò<s n="n"/></l><r>cachette<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>soe<s n="n"/></l><r>cachette<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>soe<s n="n"/></l><r>lézard<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>soga<s n="n"/></l><r>calao<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>sòs<s n="n"/></l><r>medisance<s n="n"/><s n="m"/></r></p><par n="n_4/4_pl/pl"/></e>
+      <e><p><l>susu<s n="n"/></l><r>pluie diluvienne<s n="n"/><s n="f"/></r></p></e>  
+      <e><p><l>susud<s n="n"/></l><r>humidité<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>susug<s n="n"/></l><r>pareusseux<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>tam<s n="n"/></l><r>puits<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>tada<s n="n"/></l><r>père<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>tela<s n="n"/></l><r>tailleur<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>tè<s n="vblex"/></l><r>être douloureux<s n="vblex"/></r></p></e>
+      <e><p><l>tëg<s n="n"/></l><r>faiblesse<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ti<s n="n"/></l><r>seigneur<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>tin<s n="n"/></l><r>souche<s n="n"/><s n="f"/></r></p></e> 
+      <e><p><l>tinte<s n="n"/></l><r>encre<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>tog<s n="vblex"/></l><r>s'aggraver<s n="vblex"/></r></p></e>
+      <e><p><l>tog<s n="n"/></l><r>cuillère<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>tom<s n="n"/></l><r>colis<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>tò<s n="n"/></l><r>place<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>tòm<s n="n"/></l><r>ulcère de Buruli<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>tolog<s n="n"/></l><r>papule<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>    
+      <e><p><l>tsaǹ<s n="n"/></l><r>bouton<s n="n"/><s n="f"/></r></p><par n="n_3/4_sg/pl"/></e>  
+      <e><p><l>tug<s n="vblex"/></l><r>frotter<s n="vblex"/></r></p></e>
+      <e><p><l>tug<s n="n"/></l><r>action de frotter<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>tug<s n="n"/></l><r>désuétude<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>tugu<s n="vblex"/></l><r>être en train de frotter<s n="vblex"/></r></p></e>
+      <e><p><l>tugu"n"/></l><r>frotteur<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>tugulu<s n="vblex"/></l><r>causer une lésion<s n="vblex"/></r></p></e>
+      <e><p><l>tugulu<s n="n"/></l><r>lésion<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>tun<s n="n"/></l><r>partie<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>tye<s n="n"/></l><r>taquinerie<s n="n"/><s n="m"/></r></p><par n="n_4/4_pl/pl"/></e>
+      <e><p><l>vis<s n="n"/></l><r>amas<s n="n"/><s n="m"/></r></p><par n="n_5a/6_sg/pl"/></e>
+      <e><p><l>vè<s n="n"/></l><r>soif<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>vès<s n="n"/></l><r>os<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e> 
+      <e><p><l>vëbë<s n="vblex"/></l><r>respirer<s n="vblex"/></r></p></e>     
+      <e><p><l>vëbë<s n="n"/></l><r>respiration<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>vëga<s n="n"/></l><r>exemple<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>       
+      <e><p><l>vëǹ<s n="n"/></l><r>plaie<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>     
+      <e><p><l>vol<s n="n"/></l><r>rapidité<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>      
+      <e><p><l>vòǹ<s n="n"/></l><r>graisse<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>    
+      <!--<e><p><l>vòg<s n="adjind"/></l><r>autre<s n="adjind"/></r></p></e> -->
+      <e><p><l>weme<s n="vblex"/></l><r>se muer<s n="vblex"/></r></p></e>
+      <e><p><l>wemënga<s n="n"/></l><r>nécrose<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>wundi<s n="n"/></l><r>fenêtre<s n="n"/><s n="m"/></r></p><par n="n_1a/2_sg/pl"/></e>
+      <e><p><l>gëban<s n="vblex"/></l><r>scintiller<s n="vblex"/></r></p></e>
+      <e><p><l>wò<s n="n"/></l><r>main<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>wulu<s n="n"/></l><r>marcheur<s n="n"/><s n="m"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>ya<s n="vblex"/></l><r>grandir<s n="vblex"/></r></p></e>
+      <e><p><l>yab<s n="n"/></l><r>longueur<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yalga<s n="n"/></l><r>enveloppe<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>yaǹ<s n="n"/></l><r>couleur<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yaǹ<s n="n"/></l><r>bulbe<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ye<s n="n"/></l><r>période<s n="n"/><s n="m"/></r></p><par n="n_5a/6_sg/pl"/></e>
+      <e><p><l>yëbë<s n="n"/></l><r>acceptation<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>yëgè<s n="n"/></l><r>apprentissage<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yëm<s n="n"/></l><r>handicape<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>yëm<s n="vblex"/></l><r>savoir<s n="vblex"/></r></p></e>
+      <e><p><l>yè<s n="vblex"/></l><r>croître<s n="vblex"/></r></p></e>
+      <e><p><l>yè<s n="n"/></l><r>croissance<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yëm<s n="vblex"/></l><r>être coincé<s n="vblex"/></r></p></e>
+      <e><p><l>yi<s n="vblex"/></l><r>vouloir<s n="vblex"/></r></p></e>
+      <e><p><l>yia<s n="n"/></l><r>ulcère phagédénique<s n="n"/><s n="f"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>yie<s n="n"/></l><r>difficulté<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yoa<s n="n"/></l><r>ta mère<s n="n"/><s n="f"/></r></p><par n="n_1/2_sg/pl"/></e>
+      <e><p><l>yol<s n="n"/></l><r>amertume<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>    
+      <e><p><l>yom<s n="n"/></l><r>vieillesse<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yom<s n="n"/></l><r>caducité<s n="n"/><s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>yòǹ<s n="n"/></l><r>temps<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>yomëlo<s n="vblex"/></l><r>raviver<s n="vblex"/></r></p></e>
+      <e><p><l>yon<s n="n"/></l><r>pleur<s n="n"/><s n="m"/></r></p><par n="n_3/4_sg/pl"/></e>
+      <e><p><l>yoǹ<s n="n"/></l><r>chaleur<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>Zamba<s n="n"/></l><r>Dieu<s n="n"/><s n="m"/></r></p></e>
+      <e><p><l>zam<s n="n"/></l><r>lèpre<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>zamëda<s n="n"/></l><r>cafouillage<s n="n"/><s n="m"/></r></p><par n="n_7/8_sg/pl"/></e>
+      <e><p><l>zie<s n="n"/></l><r>faim<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l>zimbi<s n="n"/></l><r>soldats<s n="n"/><s n="m"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <!--<e><p><l>ziǹ<s n="adjind"/></l><r>un tel<s n="adjind"/></r></p></e>-->
+
+
+      <e><p><l>bò<s n="vblex"/></l><r>faire<s n="vblex"/></r></p></e>
+      <e><p><l>vë<s n="vblex"/></l><r>donner<s n="vblex"/></r></p></e>
+      <e><p><l>vëǹ<s n="n"/></l><r>plaie<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ve<b/>endëgële<s n="vblex"/></l><r>déranger<s n="vblex"/></r></p></e>
+      <e><p><l>voǹ<s n="n"/></l><r>chaleur<s n="f"/></r></p><par n="n_5/6_sg/pl"/></e>
+      <e><p><l>ndëgëlë<s n="n"/></l><r>ennui<s n="n"/><s n="m"/></r></p></e>
+
+      <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-1"/></e>
+     <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-2"/></e>
+     <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-3"/></e>
+     <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-4"/></e>
+     <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-5"/></e>
+     <e><p><l>ama<s n="adj"/><s n="pos"/></l><r>mon<s n="det"/><s n="pos"/></r></p><par n="pos_GDND_Gender-6"/></e>
+
+      <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+      <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
+   </section>
+</dictionary>
+
+<!--
+Resources:
+    http://wiki.apertium.org/wiki/Bilingual_dictionary
+    http://wiki.apertium.org/wiki/Apertium_New_Language_Pair_HOWTO#Bilingual_dictionary
+-->

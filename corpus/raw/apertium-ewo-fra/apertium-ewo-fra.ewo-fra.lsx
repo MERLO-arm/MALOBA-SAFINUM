@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary type="separable">
+    <alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệfFgGhHiIíjJkKlLmMnNoOóöớpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+    <sdefs>
+        <sdef n="adv"/>
+        <sdef n="vblex"/>
+        <sdef n="inf"/>
+        <sdef n="iv"/>
+        <sdef n="tv"/>
+        <sdef n="n"/>
+        <sdef n="cl7"/>
+        <sdef n="sg"/>
+    </sdefs>
+    <pardefs>
+    </pardefs>
+
+    <section id="main" type="standard">
+
+        <e lm="ve endegele" c="déranger"><p>
+                <l>ve<s n="vblex"/></l>
+                <r>ve<b/>endegele<s n="vblex"/></r>
+            </p>
+            <i><t/><j/></i>
+            <p><l>ndegele<s n="n"/><s n="cl7"/><s n="sg"/><j/></l><r></r></p>
+        </e>
+
+
+    </section>
+</dictionary>
+
+<!-- 
+Resources: 
+    http://wiki.apertium.org/wiki/Apertium_separable
+-->
+

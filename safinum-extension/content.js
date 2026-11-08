@@ -16,7 +16,8 @@
   const Voice = window.SafinumVoiceEngine;
   const KB = window.SAFINUM_KB || { meta: {} };
 
-  let currentMode = "fub"; // "fub" | "bilingual" | "original"
+  let currentLang = "fub"; // "fub" | "ewo"
+  let currentMode = "lang"; // "lang" | "bilingual" | "original"
   let isApplyingDOMChanges = false;
   let mutationTimer = null;
   let activeHoveredEntry = null;
@@ -100,7 +101,9 @@
     if (state) {
       const matchesOurOutput =
         trimmed === state.fubTrimmed ||
-        trimmed === state.bilingualTrimmed ||
+        trimmed === state.ewoTrimmed ||
+        trimmed === state.bilingualFubTrimmed ||
+        trimmed === state.bilingualEwoTrimmed ||
         trimmed === state.originalTrimmed;
 
       if (!matchesOurOutput) {
@@ -116,28 +119,34 @@
       const leadingSpace = (rawVal.match(/^\s*/) || [""])[0];
       const trailingSpace = (rawVal.match(/\s*$/) || [""])[0];
 
-      const fubFormatted = `${leadingSpace}${result.fub}${trailingSpace}`;
-      const bilingualFormatted = `${leadingSpace}${result.fub} [${trimmed}]${trailingSpace}`;
+      const fubText = result.fub || "";
+      const ewoText = result.ewo || fubText;
 
       state = {
         originalRaw: rawVal,
         originalTrimmed: trimmed,
-        fubFormatted,
-        fubTrimmed: result.fub.replace(/\s+/g, " ").trim(),
-        bilingualFormatted,
-        bilingualTrimmed: `${result.fub} [${trimmed}]`.replace(/\s+/g, " ").trim(),
+        fubFormatted: `${leadingSpace}${fubText}${trailingSpace}`,
+        fubTrimmed: fubText.replace(/\s+/g, " ").trim(),
+        ewoFormatted: `${leadingSpace}${ewoText}${trailingSpace}`,
+        ewoTrimmed: ewoText.replace(/\s+/g, " ").trim(),
+        bilingualFubFormatted: `${leadingSpace}${fubText} [${trimmed}]${trailingSpace}`,
+        bilingualFubTrimmed: `${fubText} [${trimmed}]`.replace(/\s+/g, " ").trim(),
+        bilingualEwoFormatted: `${leadingSpace}${ewoText} [${trimmed}]${trailingSpace}`,
+        bilingualEwoTrimmed: `${ewoText} [${trimmed}]`.replace(/\s+/g, " ").trim(),
         entry: result
       };
       nodeStateMap.set(node, state);
       trackedNodes.add(node);
     }
 
-    const targetValue =
-      currentMode === "fub"
-        ? state.fubFormatted
-        : currentMode === "bilingual"
-        ? state.bilingualFormatted
-        : state.originalRaw;
+    let targetValue = state.originalRaw;
+    if (currentMode === "lang") {
+      targetValue = currentLang === "ewo" ? state.ewoFormatted : state.fubFormatted;
+    } else if (currentMode === "bilingual") {
+      targetValue = currentLang === "ewo" ? state.bilingualEwoFormatted : state.bilingualFubFormatted;
+    } else {
+      targetValue = state.originalRaw;
+    }
 
     if (node.nodeValue !== targetValue) {
       node.nodeValue = targetValue;
@@ -198,9 +207,9 @@
     pill = document.createElement("div");
     pill.id = "safinum-anydoc-hover-pill";
     pill.innerHTML = `
-      <span style="padding-left:4px;font-weight:700;color:#ffa040;">🇨🇲 Maloba · Fulfuldé</span>
-      <button type="button" id="safinum-pill-speak">🔊 Nanugo</button>
-      <button type="button" id="safinum-pill-explain">💡 Famfingo</button>
+      <span id="safinum-pill-lang-badge" style="padding-left:4px;font-weight:700;color:#ffa040;">🇨🇲 Maloba · ${currentLang === "ewo" ? "Ewondo" : "Fulfuldé"}</span>
+      <button type="button" id="safinum-pill-speak">${currentLang === "ewo" ? "🔊 Wóg" : "🔊 Nanugo"}</button>
+      <button type="button" id="safinum-pill-explain">${currentLang === "ewo" ? "💡 Fáám" : "💡 Famfingo"}</button>
     `;
     document.body.appendChild(pill);
 
@@ -208,7 +217,13 @@
       e.stopPropagation();
       if (activeHoveredEntry) {
         highlightSpokenElement(activeHoveredElement);
-        Voice.speak(activeHoveredEntry.fub, activeHoveredEntry.phonetic);
+        if (currentLang === "ewo") {
+          const txt = activeHoveredEntry.ewo || activeHoveredEntry.fub;
+          const phon = activeHoveredEntry.phonetic_ewo || activeHoveredEntry.phonetic;
+          Voice.speak(txt, phon);
+        } else {
+          Voice.speak(activeHoveredEntry.fub, activeHoveredEntry.phonetic);
+        }
         setInspectorEntry(activeHoveredEntry, activeHoveredElement);
       }
     });
@@ -217,7 +232,7 @@
       e.stopPropagation();
       if (activeHoveredEntry) {
         highlightSpokenElement(activeHoveredElement);
-        Voice.speakPhraseAndExplanation(activeHoveredEntry);
+        Voice.speakPhraseAndExplanation(activeHoveredEntry, currentLang);
         setInspectorEntry(activeHoveredEntry, activeHoveredElement);
         const dock = document.getElementById("safinum-anydoc-dock");
         if (dock) dock.classList.remove("safinum-dock-minimized");
@@ -280,7 +295,7 @@
           <img src="${MALOBA_LOGO_DATA_URI}" alt="Maloba Logo" class="safinum-dock-logo-img" />
           <div>
             <div class="safinum-dock-title">Maloba AnyDoc</div>
-            <div class="safinum-dock-subtitle">Accessibilité Financière Fulfuldé · Graphe 5-Nœuds</div>
+            <div class="safinum-dock-subtitle" id="safinum-dock-sub">Accessibilité Financière ${currentLang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)"} · Graphe 5-Nœuds</div>
           </div>
         </div>
         <button type="button" class="safinum-dock-toggle-btn" title="Réduire / Agrandir">−</button>
@@ -288,9 +303,12 @@
 
       <div class="safinum-dock-body">
         <div class="safinum-mode-bar">
-          <button type="button" class="safinum-mode-btn active" data-mode="fub">Fulfuldé (fub)</button>
-          <button type="button" class="safinum-mode-btn" data-mode="bilingual">Bilingue</button>
-          <button type="button" class="safinum-mode-btn" data-mode="original">Original</button>
+          <select class="safinum-lang-dropdown" id="safinum-lang-select" title="Choisir la langue d'accessibilité">
+            <option value="fub" ${currentLang === "fub" ? "selected" : ""}>Fulfuldé (fub)</option>
+            <option value="ewo" ${currentLang === "ewo" ? "selected" : ""}>Ewondo (ewo)</option>
+          </select>
+          <button type="button" class="safinum-mode-btn ${currentMode === "bilingual" ? "active" : ""}" data-mode="bilingual">Bilingue</button>
+          <button type="button" class="safinum-mode-btn ${currentMode === "original" ? "active" : ""}" data-mode="original">Original</button>
         </div>
 
         <div class="safinum-voice-actions">
@@ -353,6 +371,15 @@
       dock.classList.toggle("safinum-dock-minimized");
     });
 
+    const langSelect = dock.querySelector("#safinum-lang-select");
+    if (langSelect) {
+      langSelect.addEventListener("change", (e) => {
+        setLanguage(e.target.value);
+        dock.querySelectorAll(".safinum-mode-btn").forEach((b) => b.classList.remove("active"));
+        setMode("lang");
+      });
+    }
+
     dock.querySelectorAll(".safinum-mode-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         dock.querySelectorAll(".safinum-mode-btn").forEach((b) => b.classList.remove("active"));
@@ -371,7 +398,7 @@
 
     dock.querySelector("#safinum-insp-speak-btn").addEventListener("click", () => {
       if (dock.__currentEntry) {
-        Voice.speakPhraseAndExplanation(dock.__currentEntry);
+        Voice.speakPhraseAndExplanation(dock.__currentEntry, currentLang);
       }
     });
   }
@@ -387,15 +414,19 @@
     const expFubEl = dock.querySelector("#safinum-insp-explain-fub");
     const expFrEl = dock.querySelector("#safinum-insp-explain-fr");
 
+    const isEwo = currentLang === "ewo";
+    const activeText = isEwo ? (entry.ewo || entry.fub) : entry.fub;
+    const activeExplain = isEwo ? (entry.explain_ewo || entry.explain_fub) : entry.explain_fub;
+
     if (modeEl) {
       modeEl.textContent =
         entry.mode === "CONTEXT_GRAPH_5_NODES_RAG"
-          ? `🧠 GRAPHE 5-NŒUDS (${entry.intent || "RAG"})`
+          ? `🧠 GRAPHE 5-NŒUDS (${isEwo ? "EWONDO" : "FULFULDE"})`
           : `💡 EXPLICATION ANYDOC · ${(entry.category || "FINANCE").toUpperCase()}`;
     }
-    if (fubEl) fubEl.textContent = entry.fub;
+    if (fubEl) fubEl.textContent = activeText;
     if (origEl) origEl.textContent = `Original : « ${entry.original} »`;
-    if (expFubEl) expFubEl.innerHTML = `🗣️ <strong>Famfingo (fub) :</strong> ${entry.explain_fub}`;
+    if (expFubEl) expFubEl.innerHTML = `🗣️ <strong>${isEwo ? "Fáám (ewo)" : "Famfingo (fub)"} :</strong> ${activeExplain}`;
     if (expFrEl) {
       const entitiesBadge =
         entry.entities && entry.entities.length
@@ -433,8 +464,33 @@
 
     if (targetEl && targetEl.__safinumEntry) {
       setInspectorEntry(targetEl.__safinumEntry, targetEl);
-      Voice.speakPhraseAndExplanation(targetEl.__safinumEntry);
+      Voice.speakPhraseAndExplanation(targetEl.__safinumEntry, currentLang);
     }
+  }
+
+  function setLanguage(newLang) {
+    currentLang = newLang;
+    const subEl = document.getElementById("safinum-dock-sub");
+    if (subEl) {
+      subEl.textContent = `Accessibilité Financière ${currentLang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)"} · Graphe 5-Nœuds`;
+    }
+    const pillBadge = document.getElementById("safinum-pill-lang-badge");
+    if (pillBadge) {
+      pillBadge.textContent = currentLang === "ewo" ? "🇨🇲 Maloba · Ewondo" : "🇨🇲 Maloba · Fulfuldé";
+    }
+    const pillSpeak = document.getElementById("safinum-pill-speak");
+    if (pillSpeak) {
+      pillSpeak.textContent = currentLang === "ewo" ? "🔊 Wóg" : "🔊 Nanugo";
+    }
+    const pillExplain = document.getElementById("safinum-pill-explain");
+    if (pillExplain) {
+      pillExplain.textContent = currentLang === "ewo" ? "💡 Fáám" : "💡 Famfingo";
+    }
+    const dock = document.getElementById("safinum-anydoc-dock");
+    if (dock && dock.__currentEntry) {
+      setInspectorEntry(dock.__currentEntry, null);
+    }
+    translateDOM();
   }
 
   function setMode(newMode) {
@@ -488,13 +544,18 @@
           });
           sendResponse({
             mode: currentMode,
+            lang: currentLang,
             translatedNodes: activeCount,
             stats: Graph.stats,
             meta: KB.meta
           });
         } else if (msg.type === "SET_MODE") {
           setMode(msg.mode);
-          sendResponse({ ok: true, mode: currentMode });
+          sendResponse({ ok: true, mode: currentMode, lang: currentLang });
+        } else if (msg.type === "SET_LANG") {
+          setLanguage(msg.lang);
+          setMode("lang");
+          sendResponse({ ok: true, mode: currentMode, lang: currentLang });
         } else if (msg.type === "SPEAK_STEP") {
           narrateActiveStep();
           sendResponse({ ok: true });

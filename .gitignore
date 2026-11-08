@@ -17,5 +17,9 @@ desktop.ini
 # Hugging Face local download cache
 corpus/raw/burkimbia/.cache/
 
+# Binary compiled automata
+*.bin
+
 # Video demo file (optional, can be uploaded to release or video link if desired)
 *.mp4
+

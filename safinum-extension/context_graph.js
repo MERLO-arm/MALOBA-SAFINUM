@@ -124,6 +124,15 @@
     return s;
   }
 
+  function toEwondoPhonetic(ewoText) {
+    if (!ewoText) return "";
+    let s = String(ewoText);
+    s = s.replace(/ɛ/g, "è").replace(/ɔ/g, "ò").replace(/ə/g, "eu");
+    s = s.replace(/ŋ/g, "ng").replace(/ɲ/g, "gn");
+    s = s.replace(/FCFA/g, "Fran CFA");
+    return s;
+  }
+
   class SafinumContextGraph {
     constructor() {
       this.stats = {
@@ -207,12 +216,17 @@
       if (KB.exact_ui && KB.exact_ui[clean]) {
         this.stats.exactHits++;
         const hit = KB.exact_ui[clean];
+        const ewoText = hit.ewo || hit.fub;
         return {
           original: clean,
           fub: hit.fub,
+          ewo: ewoText,
           phonetic: hit.phonetic || toPhonetic(hit.fub),
+          phonetic_ewo: hit.phonetic_ewo || toEwondoPhonetic(ewoText),
           explain_fub: hit.explain_fub,
           explain_fub_phonetic: hit.explain_fub_phonetic || toPhonetic(hit.explain_fub),
+          explain_ewo: hit.explain_ewo || hit.explain_fr,
+          explain_ewo_phonetic: hit.explain_ewo_phonetic || toEwondoPhonetic(hit.explain_ewo || hit.explain_fr),
           explain_fr: hit.explain_fr,
           category: hit.category,
           source: hit.source,
@@ -229,21 +243,30 @@
           if (m) {
             this.stats.dynamicHits++;
             let fubOut = pat.template_fub;
+            let ewoOut = pat.template_ewo || pat.template_fub;
             let expFub = pat.explain_fub;
+            let expEwo = pat.explain_ewo || pat.explain_fr;
             let expFr = pat.explain_fr;
             for (let i = 1; i < m.length; i++) {
               const val = m[i] || "";
               fubOut = fubOut.replace(new RegExp("\\$" + i, "g"), val);
+              ewoOut = ewoOut.replace(new RegExp("\\$" + i, "g"), val);
               expFub = expFub.replace(new RegExp("\\$" + i, "g"), val);
+              expEwo = expEwo.replace(new RegExp("\\$" + i, "g"), val);
               expFr = expFr.replace(new RegExp("\\$" + i, "g"), val);
             }
             fubOut = fubOut.replace(/\s+/g, " ").trim();
+            ewoOut = ewoOut.replace(/\s+/g, " ").trim();
             return {
               original: clean,
               fub: fubOut,
+              ewo: ewoOut,
               phonetic: toPhonetic(fubOut),
+              phonetic_ewo: toEwondoPhonetic(ewoOut),
               explain_fub: expFub,
               explain_fub_phonetic: toPhonetic(expFub),
+              explain_ewo: expEwo,
+              explain_ewo_phonetic: toEwondoPhonetic(expEwo),
               explain_fr: expFr,
               category: pat.category,
               source: pat.source,
@@ -358,30 +381,39 @@
         }
       }
 
-      // Nœud 4 : Génération de l'explication pédagogique AnyDoc (Fulfuldé + Français)
+      // Nœud 4 : Génération de l'explication pédagogique AnyDoc (Fulfuldé + Ewondo + Français)
       const entitiesSummary = entities.length > 0 ? ` (${entities.join(" · ")})` : "";
       let explainFub = "";
+      let explainEwo = "";
       let explainFr = "";
 
       if (intent === "SECURITE_FRAUDE") {
         explainFub = `Reentinoore kisal mawnde${entitiesSummary} : bataake oo ɗon reentina ma dow kisal lambar maa cuuɗiido (PIN/OTP) e limngal maa. To hokku neɗɗo feere lambar maa koo nde!`;
+        explainEwo = `Yian mebə̀lə̀ mé ngól${entitiesSummary} : Tə́ o və̀ mɔt kót wô ésoló (PIN/OTP). Fə́la nyina a ne ngól asu mɔni wô.`;
         explainFr = `Alerte de sécurité critique${entitiesSummary} : ce message protège l'accès à votre compte. Ne communiquez jamais votre code secret et vérifiez le nombre d'essais restants.`;
       } else if (intent === "PLAFOND_ET_SOLDE") {
         explainFub = `Tinndinoore haaddi ceede${entitiesSummary} : bataake oo ɗon kollira haaddi ceede ɗe a waawi neldugo malla ceede gonɗe nder limngal maa.`;
+        explainEwo = `Metəla mé akɔŋ mɔni${entitiesSummary} : Mebə̀lə̀ ma kat akɔŋ mɔni o ne lóm amɔs nyina to mɔni a liè e asúsu wô.`;
         explainFr = `Règle de plafond ou de solde${entitiesSummary} : ce message précise la limite maximale autorisée ou les conditions liées au montant de votre transfert.`;
       } else if (intent === "FRAIS_TARIFICATION") {
         explainFub = `Famfingo coggu nelal${entitiesSummary} : bataake oo ɗon laaɓtina coggu kuugal nelal e ceede ɗe ittete nder kofru maa.`;
+        explainEwo = `Fáám mímvèñ mi ntómban${entitiesSummary} : Mebə̀lə̀ ma laart mímvèñ e asúŋa mɔni ba te e asúsu wô.`;
         explainFr = `Information tarifaire${entitiesSummary} : ce message détaille les frais ou commissions appliqués à votre opération.`;
       } else if (intent === "IDENTITE_BENEFICIAIRE") {
         explainFub = `Laartugo jaɓoowo ceede${entitiesSummary} : laartu booyma innde, lambar waya e talkuru seedamku hidde ceede ɗe neldoto.`;
+        explainEwo = `Laart nnyɔ a nɔŋ mɔni${entitiesSummary} : Laart dzóé, nɔ́mba fón e kalara ntílán osu na o lóm mɔni.`;
         explainFr = `Vérification du destinataire${entitiesSummary} : contrôlez l'identité et les coordonnées du bénéficiaire avant de valider.`;
       } else if (intent === "INCIDENT_TECHNIQUE") {
         explainFub = `Kabaruuji dow laawol kuugal${entitiesSummary} : caɗeele laawol enternet malla feewnugo kuugal. Ceede maa ɗon hisi nder limngal maa.`;
+        explainEwo = `Díza ya réseau${entitiesSummary} : Waya ya réseau a nzi kat. Mɔni wô a ne m̀vɛ̀ e asúsu.`;
         explainFr = `Information réseau / service${entitiesSummary} : perturbation technique temporaire. Vos fonds restent protégés sur votre compte.`;
       } else {
         explainFub = `Famfingo AnyDoc (${intent})${entitiesSummary} : ${fubSentence}. Laartu kabaruuji ɗi booyma hidde a jokka.`;
+        explainEwo = `Fáám AnyDoc (${intent})${entitiesSummary} : Laart mebə̀lə̀ osu na o kəl osu.`;
         explainFr = `Explication simplifiée AnyDoc${entitiesSummary} : cette consigne vous informe d'une règle importante concernant votre opération en cours.`;
       }
+
+      const ewoSentence = this.translateCompositionalEwondo(cleanText, frozenText, entities, category);
 
       const logEntry = {
         timestamp: new Date().toLocaleTimeString(),
@@ -391,6 +423,7 @@
         intent,
         riskLevel,
         fub: fubSentence,
+        ewo: ewoSentence,
         sources: Array.from(usedSources),
         closestExemplar
       };
@@ -402,9 +435,13 @@
       return {
         original: cleanText,
         fub: fubSentence,
+        ewo: ewoSentence,
         phonetic: toPhonetic(fubSentence),
+        phonetic_ewo: toEwondoPhonetic(ewoSentence),
         explain_fub: explainFub,
         explain_fub_phonetic: toPhonetic(explainFub),
+        explain_ewo: explainEwo,
+        explain_ewo_phonetic: toEwondoPhonetic(explainEwo),
         explain_fr: explainFr,
         category,
         intent,
@@ -415,6 +452,38 @@
         mode: "CONTEXT_GRAPH_5_NODES_RAG",
         confidence: 0.92
       };
+    }
+
+    translateCompositionalEwondo(cleanText, frozenText, entities, category) {
+      let ewoText = frozenText;
+      const ewoMap = {
+        "solde": "mɔni a liè",
+        "montant": "akɔŋ mɔni",
+        "frais": "mímvèñ",
+        "transfert": "ntómban mɔni",
+        "bénéficiaire": "nnyɔ a nɔŋ",
+        "téléphone": "fón",
+        "compte": "asúsu",
+        "erreur": "díza",
+        "code": "kót",
+        "secret": "ésoló",
+        "sécurité": "ngól",
+        "confirmer": "kaməla",
+        "envoyer": "lóm",
+        "reçu": "kalara ntílán",
+        "gratuit": "zə́zə́",
+        "invalide": "a téé yian",
+        "insuffisant": "a nzi kôb"
+      };
+      for (const [fr, ew] of Object.entries(ewoMap)) {
+        const rx = new RegExp(`\\b${fr}\\b`, "gi");
+        ewoText = ewoText.replace(rx, ew);
+      }
+      ewoText = this.unfreezeEntities(ewoText, entities);
+      if (ewoText.toLowerCase() === cleanText.toLowerCase()) {
+        ewoText = `Mebə̀lə̀ mé mɔni : ${ewoText}`;
+      }
+      return ewoText;
     }
   }
 

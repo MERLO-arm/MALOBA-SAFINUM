@@ -92,13 +92,23 @@
     }
 
     /**
-     * Lecture AnyDoc complète : lit d'abord la phrase en Fulfuldé, puis son explication simplifiée
+     * Lecture AnyDoc complète : lit la phrase dans la langue active (Fulfuldé ou Ewondo), puis son explication simplifiée
      */
-    speakPhraseAndExplanation(entry) {
+    speakPhraseAndExplanation(entry, lang = "fub") {
       if (!entry) return;
-      const fullPhonetic = `${entry.phonetic || entry.fub}. Famfingo : ${entry.explain_fub_phonetic || entry.explain_fub}.`;
-      const fullDisplay = `${entry.fub} — 💡 ${entry.explain_fub}`;
-      this.speak(fullDisplay, fullPhonetic);
+      if (lang === "ewo") {
+        const ewoText = entry.ewo || entry.fub;
+        const ewoPhon = entry.phonetic_ewo || entry.phonetic || ewoText;
+        const expEwo = entry.explain_ewo || entry.explain_fub;
+        const expPhon = entry.explain_ewo_phonetic || entry.explain_fub_phonetic || expEwo;
+        const fullPhonetic = `${ewoPhon}. Fáám : ${expPhon}.`;
+        const fullDisplay = `${ewoText} — 💡 ${expEwo}`;
+        this.speak(fullDisplay, fullPhonetic);
+      } else {
+        const fullPhonetic = `${entry.phonetic || entry.fub}. Famfingo : ${entry.explain_fub_phonetic || entry.explain_fub}.`;
+        const fullDisplay = `${entry.fub} — 💡 ${entry.explain_fub}`;
+        this.speak(fullDisplay, fullPhonetic);
+      }
     }
   }
 

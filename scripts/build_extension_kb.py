@@ -1092,6 +1092,13 @@ def main():
     print(f"  - Mots du lexique (fub)      : {len(word_lexicon)}")
     print(f"  - Exemplaires RAG 18 sources : {len(exemplars)}")
 
+    try:
+        from update_knowledge_base_with_ewondo import update_kb
+        update_kb()
+        print("  - Module bilingue Ewondo (ewo) synchronisé avec succès !")
+    except Exception as e:
+        print("  - Note : synchronisation Ewondo omise :", e)
+
 
 if __name__ == "__main__":
     main()

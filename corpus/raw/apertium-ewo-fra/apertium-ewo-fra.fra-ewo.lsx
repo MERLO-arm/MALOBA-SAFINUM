@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary type="separable">
+    <alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệfFgGhHiIíjJkKlLmMnNoOóöớpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+    <sdefs>
+        <sdef n="adv"/>
+        <sdef n="v"/>
+        <sdef n="iv"/>
+        <sdef n="tv"/>
+        <sdef n="n"/>
+    </sdefs>
+    <pardefs>
+    </pardefs>
+
+    <section id="main" type="standard">
+
+        <e lm="à demain" c="???"><p>
+                <l>à<s n="pr"/></l>
+                <r>à<b/>demain<s n="ij"/></r>
+            </p>
+            <i><t/><j/></i>
+            <p><l>demain<s n="n"/><s n="m"/><s n="sg"/><j/></l><r></r></p>
+        </e>
+
+
+    </section>
+</dictionary>
+
+<!-- 
+Resources: 
+    http://wiki.apertium.org/wiki/Apertium_separable
+-->
+
