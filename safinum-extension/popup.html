@@ -29,9 +29,35 @@
     <button class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]" data-mode="original">Original</button>
   </div>
 
-  <button class="speak-btn w-full border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[12.5px] p-2.5 rounded-[10px] cursor-pointer mb-3 shadow-[0_4px_12px_rgba(255,121,0,0.3)] transition duration-150 hover:brightness-105 hover:-translate-y-0.5 active:translate-y-0" id="btn-speak-step">
+  <button class="speak-btn w-full border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[12.5px] p-2.5 rounded-[10px] cursor-pointer mb-2.5 shadow-[0_4px_12px_rgba(255,121,0,0.3)] transition duration-150 hover:brightness-105 hover:-translate-y-0.5 active:translate-y-0" id="btn-speak-step">
     🔊 Lire &amp; Expliquer l'étape active
   </button>
+
+  <div class="bg-slate-800 border border-maloba-orange/40 rounded-[10px] p-2.5 mb-2.5">
+    <div class="flex justify-between items-center text-[10.5px] font-bold text-maloba-amber mb-1.5">
+      <span>🔢 SafinumWebNumberEngine (.ogg)</span>
+      <span id="popup-num-status" class="text-emerald-400 font-mono text-[10px]">42 clés · -14 LUFS</span>
+    </div>
+    <div class="flex gap-1.5 items-center mb-1.5">
+      <input
+        id="popup-amount-input"
+        type="text"
+        value="250 000"
+        placeholder="0 - 999 999 999"
+        class="flex-1 min-w-0 bg-slate-900 text-white border border-maloba-orange/40 rounded-[7px] px-2 py-1 text-[11.5px] font-mono font-bold outline-none"
+      />
+      <button
+        id="btn-speak-amount"
+        type="button"
+        class="border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11px] px-2.5 py-1.5 rounded-[7px] cursor-pointer whitespace-nowrap"
+      >
+        🔊 Lire FCFA
+      </button>
+    </div>
+    <div id="popup-amount-words" class="text-[10.5px] text-slate-300 italic truncate">
+      teemerre ɗiɗi cappanɗe joyi ujunere FCFA (dalaaje CFA)
+    </div>
+  </div>
 
   <div class="bg-slate-800 border border-maloba-orange/30 rounded-[10px] py-2.5 px-3 text-[11.5px] leading-relaxed text-slate-300 space-y-1">
     <div class="flex justify-between items-center">
@@ -52,6 +78,9 @@
     </div>
   </div>
 
+  <script src="numberDecomposer.js"></script>
+  <script src="audioStitcherPlayer.js"></script>
+  <script src="safinumEngine.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

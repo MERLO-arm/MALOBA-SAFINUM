@@ -5,11 +5,13 @@
  * Manages user interactions within the Chrome extension action popup:
  *   - Active language switching (Fulfulde fub, Ewondo ewo, etc.)
  *   - Translation display mode (Language, Bilingual, Original)
+ *   - Direct Number-to-Speech synthesis (`SafinumWebNumberEngine`)
  *   - Audio narration trigger for the active step
  *   - Live node translation count display
  *
  * Enterprise-grade features:
  *   - Defensive handling of chrome.runtime.lastError
+ *   - Real-time segment progress feedback (`onSegmentChange`)
  *   - Graceful status fallback when tab is not on an eligible webpage
  *
  * All code comments and documentation are strictly in English.
@@ -21,6 +23,73 @@ document.addEventListener("DOMContentLoaded", () => {
   const statNodes = document.getElementById("stat-nodes");
   const speakBtn = document.getElementById("btn-speak-step");
   const langSelect = document.getElementById("popup-lang-select");
+  const amountInput = document.getElementById("popup-amount-input");
+  const speakAmountBtn = document.getElementById("btn-speak-amount");
+  const amountWordsEl = document.getElementById("popup-amount-words");
+  const numStatusEl = document.getElementById("popup-num-status");
+  const numberEngine = window.safinumNumberEngine || null;
+
+  /**
+   * Returns currently selected language ISO code.
+   * @returns {string}
+   */
+  function getActiveLang() {
+    return (langSelect && langSelect.value) || "fub";
+  }
+
+  /**
+   * Updates the written transcription preview of the entered amount.
+   */
+  function refreshAmountPreview() {
+    if (!numberEngine || !amountInput || !amountWordsEl) return;
+    const parsed = numberEngine.parseAmount(amountInput.value || "0");
+    if (parsed === null) {
+      amountWordsEl.textContent = "Montant invalide (entier de 0 à 999 999 999 FCFA)";
+      return;
+    }
+    const lang = getActiveLang();
+    amountWordsEl.textContent = numberEngine.toWords(parsed, {
+      lang,
+      includeCurrency: true
+    });
+  }
+
+  /**
+   * Plays the entered amount using `SafinumWebNumberEngine` (gapless .ogg stitcher).
+   */
+  function speakPopupAmount() {
+    if (!numberEngine || !amountInput) return;
+    const parsed = numberEngine.parseAmount(amountInput.value || "0");
+    if (parsed === null) {
+      if (numStatusEl) {
+        numStatusEl.textContent = "Erreur montant";
+      }
+      return;
+    }
+    const lang = getActiveLang();
+    refreshAmountPreview();
+
+    const keys = numberEngine.decompose(parsed, { includeCurrency: true });
+    numberEngine.speakAmount(parsed, {
+      lang,
+      includeCurrency: true,
+      onStart: () => {
+        if (numStatusEl) {
+          numStatusEl.textContent = `▶ Lecture (${keys.length} clés)`;
+        }
+      },
+      onSegmentChange: (key, index) => {
+        if (numStatusEl) {
+          numStatusEl.textContent = `▶ [${index + 1}/${keys.length}] ${key}.ogg`;
+        }
+      },
+      onEnded: () => {
+        if (numStatusEl) {
+          numStatusEl.textContent = "42 clés · -14 LUFS";
+        }
+      }
+    });
+  }
 
   /**
    * Safely dispatches a message to the active browser tab.
@@ -61,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (statLang) {
         statLang.textContent = res.lang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)";
       }
+      refreshAmountPreview();
     }
     if (res && res.mode) {
       modeBtns.forEach((b) => {
@@ -78,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (statLang) {
         statLang.textContent = e.target.value === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)";
       }
+      refreshAmountPreview();
     });
   }
 
@@ -97,4 +168,20 @@ document.addEventListener("DOMContentLoaded", () => {
       sendToActiveTab({ type: "SPEAK_STEP" });
     });
   }
+
+  // Number-to-Speech input and button listeners
+  if (amountInput) {
+    amountInput.addEventListener("input", refreshAmountPreview);
+    amountInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        speakPopupAmount();
+      }
+    });
+  }
+  if (speakAmountBtn) {
+    speakAmountBtn.addEventListener("click", speakPopupAmount);
+  }
+
+  refreshAmountPreview();
 });

@@ -38,7 +38,52 @@
 
   const Graph = window.SafinumContextGraph;
   const Voice = window.SafinumVoiceEngine;
+  const NumberEngine = window.safinumNumberEngine || null;
   const KB = window.SAFINUM_KB || { meta: {} };
+
+  /**
+   * Builds a rich AnyDoc inspection and voice entry for a standalone numeric amount
+   * without modifying the underlying DOM text node (preserving 100% Jury integrity).
+   * @param {number} amount - Validated integer amount (0 to 999,999,999)
+   * @param {string} rawLabel - Original formatted string in DOM
+   * @returns {Object}
+   */
+  function buildNumericAmountEntry(amount, rawLabel) {
+    const hasCurrency = /FCFA|XAF|CFA/i.test(rawLabel) || true;
+    const keys = NumberEngine ? NumberEngine.decompose(amount, { includeCurrency: hasCurrency }) : [];
+    const fubWords = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "fub", includeCurrency: hasCurrency })
+      : String(amount);
+    const ewoWords = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency })
+      : String(amount);
+    const fubPhon = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "fub", includeCurrency: hasCurrency, phonetic: true })
+      : fubWords;
+    const ewoPhon = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency, phonetic: true })
+      : ewoWords;
+
+    return {
+      original: rawLabel,
+      numericAmount: amount,
+      hasCurrency,
+      audioKeys: keys,
+      fub: `${rawLabel} — 🔊 ${fubWords}`,
+      ewo: `${rawLabel} — 🔊 ${ewoWords}`,
+      phonetic: fubPhon,
+      phonetic_ewo: ewoPhon,
+      explain_fub: `Limngal ceede (${rawLabel}) : « ${fubWords} ». Laartu limngal ceede ngal booyma hidde a tabitina.`,
+      explain_fub_phonetic: `Limngal tchéédé : ${fubPhon}. Lârtou limngal tchéédé ngal bôyma hiddé a tabitina.`,
+      explain_ewo: `Akɔŋ mɔni (${rawLabel}) : « ${ewoWords} ». Laart akɔŋ mɔni osu na o kaməla.`,
+      explain_ewo_phonetic: `Akong moni : ${ewoPhon}. Lârt akong moni osou na o kameula.`,
+      explain_fr: `Lecture vocale gapless (${keys.length} clés audio .ogg) : ${keys.join(" → ")}`,
+      category: "montant_audio",
+      source: "safinum_42_keys_audio_corpus (-14 LUFS)",
+      mode: "NUMBER_TO_SPEECH_ENGINE",
+      confidence: 1.0
+    };
+  }
 
   /**
    * Central Language Registry: defines active languages and upcoming national languages.
@@ -259,7 +304,20 @@
 
       if (!state) {
         if (!Graph || typeof Graph.isSacredOnly !== "function") return;
-        if (Graph.isSacredOnly(trimmed)) return;
+        if (Graph.isSacredOnly(trimmed)) {
+          // Attach SafinumWebNumberEngine audio metadata to standalone amounts (e.g., "250 000 FCFA")
+          // while keeping node.nodeValue 100% untouched for Jury 0-discrepancy integrity.
+          if (NumberEngine && parent && parent.tagName !== "OPTION") {
+            const parsedAmount = NumberEngine.parseAmount(trimmed);
+            if (parsedAmount !== null) {
+              const numericEntry = buildNumericAmountEntry(parsedAmount, trimmed);
+              parent.setAttribute("data-safinum-translated", "true");
+              parent.setAttribute("data-safinum-amount", String(parsedAmount));
+              parent.__safinumEntry = numericEntry;
+            }
+          }
+          return;
+        }
 
         const result = Graph.translateAndExplain(trimmed);
         if (!result) return;
@@ -391,12 +449,19 @@
       e.stopPropagation();
       if (activeHoveredEntry) {
         highlightSpokenElement(activeHoveredElement);
+        setInspectorEntry(activeHoveredEntry, activeHoveredElement);
+        if (typeof activeHoveredEntry.numericAmount === "number" && Voice.speakAmount) {
+          Voice.speakAmount(activeHoveredEntry.numericAmount, {
+            lang: currentLang,
+            includeCurrency: activeHoveredEntry.hasCurrency !== false
+          });
+          return;
+        }
         const spokenTxt =
           activeHoveredEntry[currentLang] || activeHoveredEntry.fub || activeHoveredEntry.original;
         const spokenPhon =
           activeHoveredEntry[`phonetic_${currentLang}`] || activeHoveredEntry.phonetic || spokenTxt;
         Voice.speak(spokenTxt, spokenPhon, { lang: currentLang });
-        setInspectorEntry(activeHoveredEntry, activeHoveredElement);
       }
     });
 
@@ -526,6 +591,30 @@
           </button>
         </div>
 
+        <div class="safinum-number-engine-bar" style="background:rgba(15,23,42,0.85);border:1px solid rgba(255,121,0,0.35);border-radius:10px;padding:8px 10px;margin-bottom:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:10.5px;font-weight:700;color:#ffa040;margin-bottom:5px;">
+            <span>🔢 LECTEUR VOCAL MONTANTS (.OGG GAPLESS)</span>
+            <span id="safinum-num-segment-badge" style="color:#10b981;font-family:monospace;font-size:10px;">42 clés prêtes</span>
+          </div>
+          <div style="display:flex;gap:5px;align-items:center;">
+            <input
+              type="text"
+              id="safinum-num-input"
+              value="250 000"
+              placeholder="0 - 999 999 999 FCFA"
+              style="flex:1;background:#0f172a;color:#f8fafc;border:1px solid rgba(255,121,0,0.4);border-radius:7px;padding:4px 8px;font-size:11.5px;font-family:monospace;font-weight:700;outline:none;"
+            />
+            <button
+              type="button"
+              id="safinum-btn-speak-num"
+              title="Décomposer et lire le montant en langue nationale"
+              style="background:linear-gradient(135deg,#ff7900,#e05515);color:#fff;border:none;border-radius:7px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;"
+            >
+              🔊 Lire FCFA
+            </button>
+          </div>
+        </div>
+
         <div class="safinum-inspector-card" id="safinum-inspector-card">
           <div class="safinum-inspector-label">
             <span id="safinum-insp-mode">💡 EXPLICATION ANYDOC · MALOBA</span>
@@ -608,6 +697,54 @@
     dock.querySelector("#safinum-insp-speak-btn").addEventListener("click", () => {
       if (dock.__currentEntry) {
         Voice.speakPhraseAndExplanation(dock.__currentEntry, currentLang);
+      }
+    });
+
+    const numInput = dock.querySelector("#safinum-num-input");
+    const numSpeakBtn = dock.querySelector("#safinum-btn-speak-num");
+    const numBadge = dock.querySelector("#safinum-num-segment-badge");
+
+    const triggerDockNumberSpeech = () => {
+      if (!NumberEngine || !numInput) return;
+      const rawVal = numInput.value || "0";
+      const parsed = NumberEngine.parseAmount(rawVal);
+      if (parsed === null) {
+        if (numBadge) {
+          numBadge.textContent = "Montant invalide";
+          numBadge.style.color = "#ef4444";
+        }
+        return;
+      }
+      const formattedLabel = `${parsed.toLocaleString("fr-FR")} FCFA`;
+      const entry = buildNumericAmountEntry(parsed, formattedLabel);
+      setInspectorEntry(entry, null);
+      Voice.speakAmount(parsed, { lang: currentLang, includeCurrency: true });
+    };
+
+    if (numSpeakBtn) {
+      numSpeakBtn.addEventListener("click", triggerDockNumberSpeech);
+    }
+    if (numInput) {
+      numInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          triggerDockNumberSpeech();
+        }
+      });
+    }
+
+    // Listen for real-time segment transitions from SafinumWebNumberEngine
+    window.addEventListener("safinum-number-speech-state", (e) => {
+      if (!numBadge) return;
+      const detail = (e && e.detail) || {};
+      if (detail.speaking && detail.currentKey) {
+        const idx = typeof detail.segmentIndex === "number" ? detail.segmentIndex + 1 : 1;
+        const total = Array.isArray(detail.keys) ? detail.keys.length : "?";
+        numBadge.textContent = `▶ [${idx}/${total}] ${detail.currentKey}.ogg`;
+        numBadge.style.color = "#fbbf24";
+      } else if (!detail.speaking) {
+        numBadge.textContent = "42 clés prêtes";
+        numBadge.style.color = "#10b981";
       }
     });
   }
@@ -801,6 +938,26 @@
         } else if (msg.type === "SPEAK_STEP") {
           narrateActiveStep();
           sendResponse({ ok: true });
+        } else if (msg.type === "SPEAK_AMOUNT") {
+          if (NumberEngine && typeof msg.amount === "number") {
+            const targetLang = msg.lang || currentLang;
+            const entry = buildNumericAmountEntry(
+              msg.amount,
+              `${msg.amount.toLocaleString("fr-FR")} FCFA`
+            );
+            setInspectorEntry(entry, null);
+            Voice.speakAmount(msg.amount, {
+              lang: targetLang,
+              includeCurrency: msg.includeCurrency !== false
+            });
+            sendResponse({
+              ok: true,
+              keys: entry.audioKeys,
+              words: NumberEngine.toWords(msg.amount, { lang: targetLang, includeCurrency: true })
+            });
+          } else {
+            sendResponse({ ok: false });
+          }
         }
         return false; // Synchronous responses handled
       });

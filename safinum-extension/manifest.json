@@ -38,7 +38,8 @@
         "icons/icon16.png",
         "icons/icon32.png",
         "icons/icon48.png",
-        "icons/icon128.png"
+        "icons/icon128.png",
+        "assets/audio/*/*.ogg"
       ],
       "matches": [
         "https://safinum.cm/*",
@@ -60,6 +61,9 @@
       "js": [
         "knowledge_base.js",
         "context_graph.js",
+        "numberDecomposer.js",
+        "audioStitcherPlayer.js",
+        "safinumEngine.js",
         "voice_engine.js",
         "content.js"
       ],
