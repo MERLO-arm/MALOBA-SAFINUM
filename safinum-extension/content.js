@@ -39,6 +39,9 @@
   const Graph = window.SafinumContextGraph;
   const Voice = window.SafinumVoiceEngine;
   const NumberEngine = window.safinumNumberEngine || null;
+  const ScreenReader =
+    window.safinumScreenReader ||
+    (window.ScreenReaderService ? new window.ScreenReaderService() : null);
   const KB = window.SAFINUM_KB || { meta: {} };
 
   /**
@@ -228,8 +231,15 @@
     // Do not touch jury evaluation panel or jury toggle buttons
     if (parent.closest("aside.fixed") || parent.closest("button.fixed")) return true;
 
-    // Do not touch Maloba AnyDoc extension elements
-    if (parent.closest("#safinum-anydoc-dock") || parent.closest("#safinum-anydoc-hover-pill")) return true;
+    // Do not touch Maloba AnyDoc extension elements or detached screen reader overlay
+    if (
+      parent.closest("#safinum-anydoc-dock") ||
+      parent.closest("#safinum-anydoc-hover-pill") ||
+      parent.closest("#safinum-screen-reader-overlay") ||
+      parent.closest("#safinum-voice-root")
+    ) {
+      return true;
+    }
 
     return false;
   }
@@ -517,18 +527,19 @@
   }
 
   /**
-   * Applies animated focus highlight to the element currently being spoken.
+   * Applies non-intrusive detached overlay focus highlight to the element currently being spoken
+   * without mutating any host element styles or attributes.
    * @param {HTMLElement} el - Element to highlight
    */
   function highlightSpokenElement(el) {
-    document.querySelectorAll('[data-safinum-speaking="true"]').forEach((node) => {
-      node.removeAttribute("data-safinum-speaking");
-    });
-    if (el) {
-      el.setAttribute("data-safinum-speaking", "true");
+    if (!el || !ScreenReader) return;
+    ScreenReader.moveHighlightTo(el);
+    if (!ScreenReader.isActive) {
       setTimeout(() => {
-        el.removeAttribute("data-safinum-speaking");
-      }, 4500);
+        if (!ScreenReader.isActive) {
+          ScreenReader.hideOverlay();
+        }
+      }, 4000);
     }
   }
 
@@ -553,7 +564,15 @@
         <div class="safinum-dock-brand">
           <img src="${MALOBA_LOGO_DATA_URI}" alt="Maloba Logo" class="safinum-dock-logo-img" />
           <div>
-            <div class="safinum-dock-title">Maloba AnyDoc</div>
+            <div class="safinum-dock-title" style="display:flex;align-items:center;gap:7px;">
+              <span>Maloba AnyDoc</span>
+              <span class="safinum-equalizer" id="safinum-dock-equalizer" data-reading="false" title="Indicateur de lecture vocale">
+                <span class="safinum-eq-bar"></span>
+                <span class="safinum-eq-bar"></span>
+                <span class="safinum-eq-bar"></span>
+                <span class="safinum-eq-bar"></span>
+              </span>
+            </div>
             <div class="safinum-dock-subtitle" id="safinum-dock-sub">Accessibilité Financière ${
               currentLang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)"
             } · Graphe 5-Nœuds</div>
@@ -582,9 +601,15 @@
           }" data-mode="original" title="Afficher l'interface originale">Original</button>
         </div>
 
-        <div class="safinum-voice-actions">
+        <div class="safinum-voice-actions" style="flex-wrap:wrap;">
+          <button type="button" class="safinum-action-read-page" id="safinum-btn-read-page" title="Parcourir et lire toute la page avec suivi lumineux">
+            🔊 Lire toute la page
+          </button>
+          <button type="button" class="safinum-action-pause" id="safinum-btn-pause-page" style="display:none;" title="Mettre en pause ou reprendre la lecture de la page">
+            ⏸
+          </button>
           <button type="button" class="safinum-action-primary" id="safinum-btn-read-step" title="Lire vocalement et expliquer la consigne de l'étape active">
-            🔊 Lire &amp; Expliquer l'étape
+            🔊 Lire l'étape
           </button>
           <button type="button" class="safinum-action-stop" id="safinum-btn-stop-voice" title="Arrêter la voix">
             ⏹
@@ -686,12 +711,78 @@
       });
     });
 
+    const readPageBtn = dock.querySelector("#safinum-btn-read-page");
+    const pausePageBtn = dock.querySelector("#safinum-btn-pause-page");
+    const dockEqualizer = dock.querySelector("#safinum-dock-equalizer");
+
+    if (readPageBtn) {
+      readPageBtn.addEventListener("click", () => {
+        if (!ScreenReader) return;
+        if (ScreenReader.isActive) {
+          ScreenReader.stop();
+        } else {
+          ScreenReader.start(currentLang);
+        }
+      });
+    }
+
+    if (pausePageBtn) {
+      pausePageBtn.addEventListener("click", () => {
+        if (!ScreenReader || !ScreenReader.isActive) return;
+        if (ScreenReader.isPaused) {
+          ScreenReader.resume();
+        } else {
+          ScreenReader.pause();
+        }
+      });
+    }
+
     dock.querySelector("#safinum-btn-read-step").addEventListener("click", () => {
+      if (ScreenReader && ScreenReader.isActive) {
+        ScreenReader.stop();
+      }
       narrateActiveStep();
     });
 
     dock.querySelector("#safinum-btn-stop-voice").addEventListener("click", () => {
+      if (ScreenReader && ScreenReader.isActive) {
+        ScreenReader.stop();
+      }
       Voice.stop();
+    });
+
+    window.addEventListener("safinum-screen-reader-state", (e) => {
+      const state = (e && e.detail) || {};
+      const isReading = Boolean(state.isActive && !state.isPaused);
+      if (dockEqualizer) {
+        dockEqualizer.setAttribute("data-reading", isReading ? "true" : "false");
+      }
+      if (readPageBtn) {
+        if (state.isActive) {
+          const idx = Math.min(state.totalElements || 1, Math.max(1, (state.currentIndex || 0) + 1));
+          readPageBtn.classList.add("active");
+          readPageBtn.textContent = `⏹ Arrêter (${idx}/${state.totalElements || 1})`;
+        } else {
+          readPageBtn.classList.remove("active");
+          readPageBtn.textContent = "🔊 Lire toute la page";
+        }
+      }
+      if (pausePageBtn) {
+        pausePageBtn.style.display = state.isActive ? "inline-flex" : "none";
+        pausePageBtn.textContent = state.isPaused ? "▶" : "⏸";
+        pausePageBtn.title = state.isPaused ? "Reprendre la lecture" : "Mettre en pause";
+      }
+      if (state.isActive && state.currentElement && state.currentElement.__safinumEntry) {
+        setInspectorEntry(state.currentElement.__safinumEntry, null);
+      }
+    });
+
+    window.addEventListener("safinum-voice-state", (e) => {
+      if (ScreenReader && ScreenReader.isActive) return;
+      const detail = (e && e.detail) || {};
+      if (dockEqualizer) {
+        dockEqualizer.setAttribute("data-reading", detail.speaking ? "true" : "false");
+      }
     });
 
     dock.querySelector("#safinum-insp-speak-btn").addEventListener("click", () => {
@@ -890,6 +981,8 @@
         if (
           t.closest?.("#safinum-anydoc-dock") ||
           t.closest?.("#safinum-anydoc-hover-pill") ||
+          t.closest?.("#safinum-screen-reader-overlay") ||
+          t.closest?.("#safinum-voice-root") ||
           t.closest?.("aside.fixed")
         ) {
           continue;
@@ -936,8 +1029,29 @@
           setMode("lang");
           sendResponse({ ok: true, mode: currentMode, lang: currentLang });
         } else if (msg.type === "SPEAK_STEP") {
+          if (ScreenReader && ScreenReader.isActive) {
+            ScreenReader.stop();
+          }
           narrateActiveStep();
           sendResponse({ ok: true });
+        } else if (msg.type === "READ_FULL_PAGE") {
+          if (ScreenReader) {
+            if (ScreenReader.isActive) {
+              ScreenReader.stop();
+              sendResponse({ ok: true, isActive: false });
+            } else {
+              ScreenReader.start(msg.lang || currentLang);
+              sendResponse({ ok: true, isActive: true });
+            }
+          } else {
+            sendResponse({ ok: false });
+          }
+        } else if (msg.type === "STOP_FULL_PAGE") {
+          if (ScreenReader) {
+            ScreenReader.stop();
+          }
+          Voice.stop();
+          sendResponse({ ok: true, isActive: false });
         } else if (msg.type === "SPEAK_AMOUNT") {
           if (NumberEngine && typeof msg.amount === "number") {
             const targetLang = msg.lang || currentLang;

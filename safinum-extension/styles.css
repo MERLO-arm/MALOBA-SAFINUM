@@ -4,25 +4,8 @@
    Bronze Amber (#7B3F0C), Golden Amber (#FFA040), and Emerald (#10B981)
    ============================================================================= */
 
-/* Subtle underline and highlight on translated elements */
-[data-safinum-translated="true"] {
-  position: relative;
-  transition: background-color 0.18s ease, box-shadow 0.18s ease;
-  border-radius: 4px;
-}
-
-[data-safinum-translated="true"]:hover {
-  background-color: rgba(255, 121, 0, 0.12) !important;
-  box-shadow: 0 0 0 2px rgba(255, 121, 0, 0.35) !important;
-  cursor: pointer;
-}
-
-/* Active speech synthesis focus highlight */
-[data-safinum-speaking="true"] {
-  background-color: rgba(255, 121, 0, 0.28) !important;
-  box-shadow: 0 0 0 3px #ff7900 !important;
-  border-radius: 4px;
-}
+/* Zero host layout/style mutation guarantee:
+   Active speech & screen-reader focus uses the detached singleton overlay (#safinum-screen-reader-overlay) */
 
 /* Context hover pill (Listen & Explain triggers) */
 #safinum-anydoc-hover-pill {
@@ -313,6 +296,102 @@
   display: flex;
   gap: 6px;
   margin-bottom: 10px;
+}
+
+.safinum-action-read-page {
+  flex: 1.25;
+  background: linear-gradient(135deg, #00e5a3 0%, #059669 100%);
+  color: #022c22;
+  border: 1px solid rgba(0, 229, 163, 0.55);
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 11.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.28);
+  transition: filter 0.15s ease, transform 0.1s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+
+.safinum-action-read-page:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.safinum-action-read-page.active {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  border-color: rgba(248, 113, 113, 0.6);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+}
+
+.safinum-action-pause {
+  background: #1e293b;
+  color: #00e5a3;
+  border: 1px solid rgba(0, 229, 163, 0.45);
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.safinum-action-pause:hover {
+  background: rgba(0, 229, 163, 0.18);
+}
+
+/* Animated Equalizer Bars (isReading = true/false) */
+.safinum-equalizer {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+  padding: 2px 5px;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(0, 229, 163, 0.4);
+}
+
+.safinum-eq-bar {
+  width: 2.5px;
+  height: 3px;
+  background: #00e5a3;
+  border-radius: 2px;
+  transition: height 0.2s ease;
+}
+
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar {
+  box-shadow: 0 0 6px #00e5a3;
+  animation: safinumDockEqBounce 0.7s ease-in-out infinite alternate;
+}
+
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(1) {
+  animation-delay: 0s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(2) {
+  animation-delay: 0.16s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(3) {
+  animation-delay: 0.32s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(4) {
+  animation-delay: 0.1s;
+}
+
+@keyframes safinumDockEqBounce {
+  0% {
+    height: 3px;
+  }
+  100% {
+    height: 11px;
+  }
 }
 
 .safinum-action-primary {

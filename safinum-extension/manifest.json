@@ -65,6 +65,7 @@
         "audioStitcherPlayer.js",
         "safinumEngine.js",
         "voice_engine.js",
+        "screenReaderService.js",
         "content.js"
       ],
       "run_at": "document_idle"

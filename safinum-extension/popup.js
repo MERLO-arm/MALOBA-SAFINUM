@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modeBtns = document.querySelectorAll(".mode-btn");
   const statNodes = document.getElementById("stat-nodes");
   const speakBtn = document.getElementById("btn-speak-step");
+  const readPageBtn = document.getElementById("btn-read-page");
   const langSelect = document.getElementById("popup-lang-select");
   const amountInput = document.getElementById("popup-amount-input");
   const speakAmountBtn = document.getElementById("btn-speak-amount");
@@ -166,6 +167,19 @@ document.addEventListener("DOMContentLoaded", () => {
   if (speakBtn) {
     speakBtn.addEventListener("click", () => {
       sendToActiveTab({ type: "SPEAK_STEP" });
+    });
+  }
+
+  // Full-page Screen Reader trigger
+  if (readPageBtn) {
+    readPageBtn.addEventListener("click", () => {
+      sendToActiveTab({ type: "READ_FULL_PAGE", lang: getActiveLang() }, (res) => {
+        if (res && res.isActive) {
+          readPageBtn.textContent = "⏹ Arrêter la page";
+        } else {
+          readPageBtn.textContent = "🔊 Lire toute la page";
+        }
+      });
     });
   }
 
