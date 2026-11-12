@@ -51,12 +51,16 @@ interface SafinumEntryRecord {
   readonly hasCurrency?: boolean;
   readonly fub?: string;
   readonly ewo?: string;
+  readonly eto?: string;
   readonly phonetic?: string;
   readonly phonetic_ewo?: string;
+  readonly phonetic_eto?: string;
   readonly explain_fub?: string;
   readonly explain_fub_phonetic?: string;
   readonly explain_ewo?: string;
   readonly explain_ewo_phonetic?: string;
+  readonly explain_eto?: string;
+  readonly explain_eto_phonetic?: string;
   readonly [key: string]: string | number | boolean | readonly string[] | undefined;
 }
 
@@ -499,25 +503,25 @@ export class ScreenReaderService {
 
     if (entry) {
       const langValue = entry[lang];
-      const localizedStr =
+      const localizedStr: string =
         typeof langValue === "string" && langValue.trim().length > 0
           ? langValue
           : lang === "eto"
             ? entry.eto ?? entry.ewo ?? entry.fub ?? entry.original ?? text
             : lang === "ewo"
-            ? entry.ewo ?? entry.fub ?? entry.original ?? text
-            : entry.fub ?? entry.original ?? text;
+              ? entry.ewo ?? entry.fub ?? entry.original ?? text
+              : entry.fub ?? entry.original ?? text;
 
       const phoneticKey = `phonetic_${lang}`;
       const rawPhonetic = entry[phoneticKey];
-      const localizedPhonetic =
+      const localizedPhonetic: string =
         typeof rawPhonetic === "string" && rawPhonetic.trim().length > 0
           ? rawPhonetic
           : lang === "eto"
             ? entry.phonetic_eto ?? localizedStr
             : lang === "ewo"
-            ? entry.phonetic_ewo ?? localizedStr
-            : entry.phonetic ?? localizedStr;
+              ? entry.phonetic_ewo ?? localizedStr
+              : entry.phonetic ?? localizedStr;
 
       displayText = localizedStr;
       phoneticText = localizedPhonetic;
