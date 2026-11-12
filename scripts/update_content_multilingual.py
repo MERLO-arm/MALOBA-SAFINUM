@@ -357,3 +357,4 @@ if insp_target in text:
 
 path.write_text(text, encoding="utf-8")
 print("content.js updated successfully with N-languages architecture!")
+

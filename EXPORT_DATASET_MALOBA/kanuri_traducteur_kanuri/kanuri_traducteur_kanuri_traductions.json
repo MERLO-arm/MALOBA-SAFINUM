@@ -1,0 +1,22 @@
+﻿{
+    "id":  "30031e64-97d7-4e20-8580-1ce0de45740e",
+    "source_db":  "collecte_voix",
+    "situation_code":  "E001",
+    "category":  "Onboarding",
+    "phrase_francais":  "Bienvenue chez Wave ! Pour commencer, entrez votre numéro de mobile.",
+    "phrase_anglais":  null,
+    "langue":  "kanuri(traducteur kanuri",
+    "dossier_langue":  "kanuri_traducteur_kanuri",
+    "traduction_ecrite":  "Wushe kənshero dandal wavyero. baditəro manəminga,number sawir nəmye galagane.",
+    "traducteur_nom":  "ABOUBAKAR ALI SIDDIK",
+    "traducteur_telephone":  "654243525",
+    "user_id":  "26c2b8cd-1e71-4928-a941-dca5acb8a9f6",
+    "duree_secondes":  9.78,
+    "taille_octets":  130904,
+    "take_number":  1,
+    "fichier_audio_local":  "kanuri_traducteur_kanuri\\audios\\e001_take1_30031e64.webm",
+    "url_audio_supabase":  "https://phbhwijxdwkfgdkehqzf.supabase.co/storage/v1/object/public/recordings/kanuri_traducteur_kanuri/26c2b8cd-1e71-4928-a941-dca5acb8a9f6/E001_take_1_1794388167240.webm",
+    "storage_path":  "kanuri_traducteur_kanuri/26c2b8cd-1e71-4928-a941-dca5acb8a9f6/E001_take_1_1794388167240.webm",
+    "statut_audio":  "OK (Deja present)",
+    "created_at":  "2026-10-31T11:37:29.274905+00:00"
+}
