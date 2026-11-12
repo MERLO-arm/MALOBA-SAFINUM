@@ -214,6 +214,8 @@
         txt = txt.replace(/FCFA/g, "dalâdjé CFA");
       } else if (langCode === "ewo") {
         txt = txt.replace(/FCFA/g, "fala CFA");
+      } else if (langCode === "eto") {
+        txt = txt.replace(/FCFA/g, "mwani Fran CFA");
       } else {
         txt = txt.replace(/FCFA/g, "Fran CFA");
       }

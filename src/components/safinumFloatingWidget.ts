@@ -384,6 +384,7 @@ export class SafinumFloatingWidget {
             <select class="safinum-lang-select" id="safinum-widget-lang">
               <option value="fub">🇨🇲 Fulfuldé (fub)</option>
               <option value="ewo">🇨🇲 Ewondo (ewo)</option>
+              <option value="eto">🇨🇲 Éton (eto)</option>
               <option value="fr">🇫🇷 Français (fr)</option>
             </select>
           </div>

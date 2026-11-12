@@ -333,7 +333,9 @@
         const localizedStr =
           typeof langValue === "string" && langValue.trim().length > 0
             ? langValue
-            : lang === "ewo"
+            : lang === "eto"
+              ? entry.eto || entry.ewo || entry.fub || entry.original || text
+              : lang === "ewo"
               ? entry.ewo || entry.fub || entry.original || text
               : entry.fub || entry.original || text;
 
@@ -342,7 +344,9 @@
         const localizedPhonetic =
           typeof rawPhonetic === "string" && rawPhonetic.trim().length > 0
             ? rawPhonetic
-            : lang === "ewo"
+            : lang === "eto"
+              ? entry.phonetic_eto || localizedStr
+              : lang === "ewo"
               ? entry.phonetic_ewo || localizedStr
               : entry.phonetic || localizedStr;
 

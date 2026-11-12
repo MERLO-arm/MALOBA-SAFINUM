@@ -60,12 +60,18 @@
     const ewoWords = NumberEngine
       ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency })
       : String(amount);
+    const etoWords = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency })
+      : String(amount);
     const fubPhon = NumberEngine
       ? NumberEngine.toWords(amount, { lang: "fub", includeCurrency: hasCurrency, phonetic: true })
       : fubWords;
     const ewoPhon = NumberEngine
       ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency, phonetic: true })
       : ewoWords;
+    const etoPhon = NumberEngine
+      ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency, phonetic: true })
+      : etoWords;
 
     return {
       original: rawLabel,
@@ -74,12 +80,16 @@
       audioKeys: keys,
       fub: `${rawLabel} — 🔊 ${fubWords}`,
       ewo: `${rawLabel} — 🔊 ${ewoWords}`,
+      eto: `${rawLabel} — 🔊 ${etoWords}`,
       phonetic: fubPhon,
       phonetic_ewo: ewoPhon,
+      phonetic_eto: etoPhon,
       explain_fub: `Limngal ceede (${rawLabel}) : « ${fubWords} ». Laartu limngal ceede ngal booyma hidde a tabitina.`,
       explain_fub_phonetic: `Limngal tchéédé : ${fubPhon}. Lârtou limngal tchéédé ngal bôyma hiddé a tabitina.`,
       explain_ewo: `Akɔŋ mɔni (${rawLabel}) : « ${ewoWords} ». Laart akɔŋ mɔni osu na o kaməla.`,
       explain_ewo_phonetic: `Akong moni : ${ewoPhon}. Lârt akong moni osou na o kameula.`,
+      explain_eto: `Itáŋ i mwání (${rawLabel}) : « ${etoWords} ». Laart itáŋ i mwání osu na o kaməla.`,
+      explain_eto_phonetic: `Itang i mwani : ${etoPhon}. Lârt itang i mwani osou na o kameula.`,
       explain_fr: `Lecture vocale gapless (${keys.length} clés audio .ogg) : ${keys.join(" → ")}`,
       category: "montant_audio",
       source: "safinum_42_keys_audio_corpus (-14 LUFS)",
@@ -109,6 +119,16 @@
       region: "Centre, Sud, Est (Zone Beti-Fang)",
       flag: "🇨🇲",
       listenWord: "Wóg",
+      explainWord: "Fáám",
+      active: true
+    },
+    eto: {
+      code: "eto",
+      name: "Éton",
+      label: "Éton (eto) · Centre / Lékié",
+      region: "Centre (Lékié, Obala, Sa'a)",
+      flag: "🇨🇲",
+      listenWord: "Wɔ́g",
       explainWord: "Fáám",
       active: true
     },
@@ -574,8 +594,8 @@
               </span>
             </div>
             <div class="safinum-dock-subtitle" id="safinum-dock-sub">Accessibilité Financière ${
-              currentLang === "ewo" ? "Ewondo (ewo)" : "Fulfuldé (fub)"
-            } · Graphe 5-Nœuds</div>
+              cfg.name
+            } (${cfg.code}) · Graphe 5-Nœuds</div>
           </div>
         </div>
         <button type="button" class="safinum-dock-toggle-btn" title="Réduire / Agrandir">−</button>
@@ -858,10 +878,10 @@
 
     const cfg = getLangConfig(currentLang);
     const activeText =
-      entry[currentLang] || (currentLang === "ewo" ? entry.ewo || entry.fub : entry.fub);
+      entry[currentLang] || entry.eto || entry.ewo || entry.fub || entry.original;
     const activeExplain =
       entry[`explain_${currentLang}`] ||
-      (currentLang === "ewo" ? entry.explain_ewo || entry.explain_fub : entry.explain_fub);
+      entry.explain_eto || entry.explain_ewo || entry.explain_fub || entry.explain_fr || "";
 
     if (modeEl) {
       modeEl.textContent =
