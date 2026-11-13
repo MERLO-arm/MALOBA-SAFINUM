@@ -53,10 +53,20 @@
    */
   function buildNumericAmountEntry(amount, rawLabel) {
     const hasCurrency = /FCFA|XAF|CFA/i.test(rawLabel) || true;
+    const humanDict =
+      (typeof window !== "undefined" && window.SafinumHumanAmounts && window.SafinumHumanAmounts[currentLang]) ||
+      (typeof window !== "undefined" && window.SafinumHumanAmounts && window.SafinumHumanAmounts.eto) ||
+      null;
+    const humanItem = humanDict && typeof amount === "number" ? humanDict[amount] : null;
+
     const keys = NumberEngine ? NumberEngine.decompose(amount, { includeCurrency: hasCurrency }) : [];
-    const etoWords = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency })
-      : String(amount);
+    const etoWords = humanItem
+      ? humanItem.text
+      : (NumberEngine
+        ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency })
+        : String(amount));
+
+    const audioPath = humanItem ? humanItem.audio : null;
 
     return {
       original: rawLabel,
@@ -64,16 +74,19 @@
       hasCurrency,
       audioKeys: keys,
       eto: etoWords,
+      audio: audioPath,
       explain_eto: `Tán i mwání : ${etoWords}`,
-      explain_fr: `Montant détecté (${rawLabel}) lu chiffre par chiffre en Éton (${keys.length} segments audio .ogg).`,
+      explain_fr: humanItem
+        ? `Montant financier (${rawLabel}) prononcé avec la voix réelle de Muriel Menye (${humanItem.code}).`
+        : `Montant détecté (${rawLabel}) lu en Éton (${keys.length} segments).`,
       category: "Montants & Chiffres Safinum",
       entities: [rawLabel],
-      source: "SafinumWebNumberEngine (.ogg)",
-      mode: "NUMBER_STITCHER",
+      source: humanItem ? `EXPORT_DATASET_MALOBA (${humanItem.code})` : "SafinumWebNumberEngine (.ogg)",
+      mode: humanItem ? "NUMBER_HUMAN_RECORDED" : "NUMBER_STITCHER",
       languages: {
         eto: {
           text: etoWords,
-          audio: null,
+          audio: audioPath,
           explain_text: `Tán i mwání : ${etoWords}`,
           explain_audio: null
         }
