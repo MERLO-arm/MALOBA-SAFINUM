@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Maloba AnyDoc — Accessibilité Financière Cameroun (Éton & N-Langues)",
-  "short_name": "Maloba AnyDoc",
+  "name": "Maloba Finance",
+  "short_name": "Maloba Finance",
   "version": "2.0.0",
-  "description": "Extension d'accessibilité financière multimodale aux couleurs de Maloba (Traduction DOM vérifiée & audio humain réel .webm en Éton eto, Architecture extensible N-langues) pour le SAFINUM Innovate Challenge 2026.",
+  "description": "Assistant d'accessibilité financière multimodale Maloba Finance (Traduction DOM vérifiée, assistant vocal interactif & audio humain réel .webm en Éton eto, Architecture extensible N-langues) pour le SAFINUM Innovate Challenge 2026.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -22,7 +22,7 @@
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Maloba AnyDoc (Éton · Cameroun)",
+    "default_title": "Maloba Finance (Éton · Cameroun)",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

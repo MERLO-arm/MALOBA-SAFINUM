@@ -334,6 +334,25 @@
         return;
       }
 
+      if (
+        existingEntry &&
+        existingEntry.digitSequence &&
+        voiceEngine &&
+        typeof voiceEngine.speakDigitSequence === "function"
+      ) {
+        await new Promise((resolve) => {
+          voiceEngine
+            .speakDigitSequence(existingEntry.digitSequence, {
+              lang,
+              onEnded: resolve,
+              onError: resolve
+            })
+            .then(() => resolve())
+            .catch(() => resolve());
+        });
+        return;
+      }
+
       // Brief focus pause when no .webm audio exists for this element
       const signal = this.abortController ? this.abortController.signal : undefined;
       await this.delay(900, signal);

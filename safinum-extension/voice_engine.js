@@ -271,26 +271,40 @@
      */
     async speakAmount(amount, options = {}) {
       this.stop();
-      const lang = options.lang || "eto";
+      const opts = typeof options === "string" ? { lang: options } : (options || {});
+      const lang = opts.lang || "eto";
       const cleanNum =
         typeof amount === "number"
           ? amount
           : parseInt(String(amount).replace(/[^\d]/g, ""), 10);
 
-      // 1. Prioritize authentic human-recorded audio (.webm) if available for this exact amount
+      // 1. Prioritize exact authentic human-recorded audio (.webm) if available
       const humanRecordings = SAFINUM_HUMAN_AMOUNTS[lang] || SAFINUM_HUMAN_AMOUNTS.eto;
       if (humanRecordings && !isNaN(cleanNum) && humanRecordings[cleanNum]) {
         const humanItem = humanRecordings[cleanNum];
         return this.playAudio(humanItem.audio, {
           displayText: humanItem.text,
-          rate: options.rate || this.playbackRate,
-          onStart: options.onStart,
-          onEnd: options.onEnded,
-          onError: options.onError
+          rate: opts.rate || this.playbackRate,
+          onStart: opts.onStart,
+          onEnd: opts.onEnded,
+          onError: opts.onError
         });
       }
 
-      // 2. Fall back to gapless number stitcher for uncatalogued amounts
+      // 2. Compose from authentic Muriel Menye .webm recordings for round/composite banking amounts (e.g. 25 000, 225 000)
+      if (humanRecordings && !isNaN(cleanNum) && cleanNum > 0) {
+        const segments = this._composeHumanSegments(cleanNum, humanRecordings);
+        if (segments && segments.length > 0) {
+          return this.playAudioSequence(segments, {
+            rate: opts.rate || this.playbackRate,
+            onStart: opts.onStart,
+            onEnd: opts.onEnded,
+            onError: opts.onError
+          });
+        }
+      }
+
+      // 3. Fall back to gapless number stitcher for uncatalogued amounts
       const numEngine = typeof window !== "undefined" ? window.safinumNumberEngine : null;
       if (!numEngine || typeof numEngine.speakAmount !== "function") {
         this.emitState(false, { missingAudio: true });
@@ -300,24 +314,107 @@
       this.emitState(true, { amount, lang });
       try {
         await numEngine.speakAmount(amount, {
-          ...options,
+          ...opts,
           lang,
           onEnded: () => {
             this.isSpeaking = false;
             this.emitState(false, { amount, lang });
-            if (typeof options.onEnded === "function") options.onEnded();
+            if (typeof opts.onEnded === "function") opts.onEnded();
           },
           onError: (err) => {
             this.isSpeaking = false;
             this.emitState(false, { amount, lang });
-            if (typeof options.onError === "function") options.onError(err);
+            if (typeof opts.onError === "function") opts.onError(err);
           }
         });
       } catch (err) {
         this.isSpeaking = false;
         this.emitState(false, { amount, lang });
-        if (typeof options.onError === "function") options.onError(err);
+        if (typeof opts.onError === "function") opts.onError(err);
       }
+    }
+
+    /**
+     * Decomposes an amount into exact recorded human denominations when possible
+     * so composite banking amounts (e.g. 25 000, 30 000, 150 000) use Muriel Menye's real voice.
+     * @private
+     */
+    _composeHumanSegments(amount, humanRecordings) {
+      const denoms = [
+        1000000, 500000, 100000, 50000, 20000, 10000,
+        5000, 2000, 1000, 200, 100, 9, 8, 7, 6, 5, 4, 3, 2, 1
+      ];
+      let remaining = Math.floor(amount);
+      const parts = [];
+      for (const d of denoms) {
+        if (!humanRecordings[d]) continue;
+        while (remaining >= d) {
+          parts.push(humanRecordings[d]);
+          remaining -= d;
+          if (parts.length > 12) return null; // Too fragmented; let full stitcher handle
+        }
+      }
+      return remaining === 0 && parts.length > 0 ? parts : null;
+    }
+
+    /**
+     * Plays a sequence of bundled .webm human recordings back-to-back.
+     */
+    async playAudioSequence(items, options = {}) {
+      this.stop();
+      const token = this.playbackToken;
+      if (!Array.isArray(items) || items.length === 0) return false;
+      if (typeof options.onStart === "function") options.onStart();
+      for (let i = 0; i < items.length; i++) {
+        if (token !== this.playbackToken) return false;
+        const item = items[i];
+        const ok = await this._playSingle(item.audio, token, {
+          displayText: item.text,
+          rate: options.rate || this.playbackRate,
+          onError: options.onError
+        });
+        if (!ok || token !== this.playbackToken) return false;
+      }
+      if (typeof options.onEnd === "function") options.onEnd();
+      return true;
+    }
+
+    /**
+     * Reads a digit sequence (account number, date digits, phone number) in Eton
+     * using Muriel Menye's real .webm digit recordings (0-9).
+     * Recognizes the canonical Safinum account CM 001 2345 6789 01 (SAF_NUM_014).
+     */
+    async speakDigitSequence(rawText, options = {}) {
+      this.stop();
+      const opts = typeof options === "string" ? { lang: options } : (options || {});
+      const text = String(rawText || "");
+      const digitsOnly = text.replace(/\D/g, "");
+
+      if (/0012345678901/.test(digitsOnly)) {
+        return this.playAudio("eton/saf_num_014_take1_4158028d.webm", {
+          displayText: "Nɔmɔ á mpə̌g mwání : CM 001 2345 6789 01",
+          rate: opts.rate || this.playbackRate,
+          onStart: opts.onStart,
+          onEnd: opts.onEnded,
+          onError: opts.onError
+        });
+      }
+
+      const humanRecordings = SAFINUM_HUMAN_AMOUNTS[opts.lang || "eto"] || SAFINUM_HUMAN_AMOUNTS.eto;
+      const items = [];
+      for (const ch of digitsOnly) {
+        const d = parseInt(ch, 10);
+        if (!isNaN(d) && humanRecordings[d]) {
+          items.push(humanRecordings[d]);
+        }
+      }
+      if (items.length === 0) return false;
+      return this.playAudioSequence(items, {
+        rate: opts.rate || this.playbackRate,
+        onStart: opts.onStart,
+        onEnd: opts.onEnded,
+        onError: opts.onError
+      });
     }
 
     /**

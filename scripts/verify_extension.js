@@ -240,4 +240,24 @@ test("Muriel Menye authentic human .webm audios are mapped for 250 000 FCFA, 15 
   }
 });
 
+test("Maloba Finance right-docked vertical toolbar and Interactive Voice Assistant are fully wired", () => {
+  const manifest = JSON.parse(fs.readFileSync(path.join(EXT_DIR, "manifest.json"), "utf8"));
+  assert.strictEqual(manifest.name, "Maloba Finance", "manifest.json name must be 'Maloba Finance'");
+
+  const contentCode = fs.readFileSync(path.join(EXT_DIR, "content.js"), "utf8");
+  assert.ok(contentCode.includes("createMalobaFinanceDock"), "content.js must contain createMalobaFinanceDock");
+  assert.ok(contentCode.includes("safinum-finance-dock"), "content.js must contain safinum-finance-dock");
+  assert.ok(contentCode.includes("safinum-finance-reopen-tab"), "content.js must contain safinum-finance-reopen-tab");
+  assert.ok(contentCode.includes("SAFINUM_STEPS"), "content.js must contain SAFINUM_STEPS");
+  assert.ok(contentCode.includes("SAFINUM_ERRORS"), "content.js must contain SAFINUM_ERRORS");
+
+  // Extract all assets/audio/eton/*.webm paths mentioned in content.js and verify they exist
+  const audioMatches = contentCode.match(/assets\/audio\/eton\/[a-zA-Z0-9_]+\.webm/g) || [];
+  assert.ok(audioMatches.length >= 10, "content.js must reference assistant audios");
+  for (const relPath of audioMatches) {
+    const fullAudioPath = path.join(EXT_DIR, relPath);
+    assert.ok(fs.existsSync(fullAudioPath), `Audio referenced in content.js must exist: ${relPath}`);
+  }
+});
+
 console.log(`\nSummary: ${passed} tests passed.`);
