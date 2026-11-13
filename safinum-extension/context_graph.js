@@ -1,21 +1,40 @@
-// =============================================================================
-// AKI × SAFINUM ANYDOC — MOTEUR GRAPHE DE CONTEXTE 5-NŒUDS & RAG MULTI-SOURCES
-// Cible : Fulfuldé du Cameroun (fub - Adamaoua / Grand-Nord)
-// =============================================================================
+/**
+ * =============================================================================
+ * MALOBA ANYDOC — PRODUCTION DATASET LOOKUP & FINANCIAL INTEGRITY ENGINE
+ * =============================================================================
+ * Replaces the legacy sandbox compositional heuristics with verified human
+ * translations and real audio recordings from EXPORT_DATASET_MALOBA.
+ *
+ * Core Guarantees:
+ *   - EntityPreservationEngine: 100% immutability of monetary amounts, IBANs,
+ *     phone numbers, references (SAF-*), and security tokens (PIN/OTP).
+ *   - IntentClassifier: Banking intent and risk classification (CRITICAL/WARNING/INFO).
+ *   - Multi-tier verified lookup:
+ *       1. Exact match in `KB.exact_ui` (FR & EN)
+ *       2. Normalized match (case-insensitive / punctuation-trimmed)
+ *       3. Dataset-backed dynamic templates (e.g. "Bonjour, <Nom>")
+ *       4. Number/amount match in `KB.numbers`
+ *   - Zero hallucination: uncatalogued strings return `null` rather than
+ *     synthesizing unverified translations.
+ * =============================================================================
+ */
 
 (function () {
   "use strict";
 
   const KB = window.SAFINUM_KB || {
+    meta: { default_language: "eto", supported_languages: ["eto"], languages: {} },
     exact_ui: {},
     dynamic_patterns: [],
-    phrase_chunks: [],
-    word_lexicon: {},
-    rag_exemplars: [],
-    meta: {}
+    numbers: {},
+    commands: {},
+    by_code: {}
   };
 
-  // Expressions régulières de protection stricte des données financières
+  /**
+   * Pure sacred regular expressions: text matching any of these patterns
+   * is strictly immutable and must never be altered by the translation pipeline.
+   */
   const PURE_SACRED_REGEXES = [
     /^[\+\-\u2212]?\s*\d[\d\s\u00A0\u202F.,]*\s*(?:FCFA|XAF|%|F\s*CFA)?$/i,
     /^\+?237[\s\d\-]{6,}$/,
@@ -24,469 +43,333 @@
     /^(?:Amina Ngo Bell|Jean-Paul Mbarga|Safinum Pay|SAFINUM|AN|FR|EN|Jury|CEMAC|ENEO|SMS|PIN|OTP)$/i
   ];
 
-  // Extraction d'entités financières à l'intérieur d'une phrase
-  const INLINE_ENTITY_REGEX = /(\+?237[\s\d\-]{8,14}|CM\d{2}[\s\d]{10,28}|SAF-\d{4}-[A-Z0-9]+|[\+\-\u2212]?\d[\d\s\u00A0\u202F.,]*\s*(?:FCFA|XAF|%)|\b\d+(?:[.,]\d+)?\b|Safinum Pay|Amina Ngo Bell|Jean-Paul Mbarga|Mobile Money|CEMAC|ENEO|SMS|PIN|OTP)/gi;
+  /**
+   * Inline entity extraction regex: detects critical financial tokens.
+   */
+  const INLINE_ENTITY_REGEX =
+    /(\+?237[\s\d\-]{8,14}|CM\d{2}[\s\d]{10,28}|SAF-\d{4}-[A-Z0-9]+|[\+\-\u2212]?\d[\d\s\u00A0\u202F.,]*\s*(?:FCFA|XAF|%)|\b\d+(?:[.,]\d+)?\b|Safinum Pay|Amina Ngo Bell|Jean-Paul Mbarga|Mobile Money|CEMAC|ENEO|SMS|PIN|OTP)/gi;
 
-  // Petits mots outils français/anglais vers Fulfuldé du Cameroun (fub)
-  const FUNCTION_WORDS_FUB = {
-    "le": "",
-    "la": "",
-    "les": "",
-    "un": "",
-    "une": "",
-    "des": "",
-    "du": "mo",
-    "de": "mo",
-    "d": "mo",
-    "l": "",
-    "au": "haa",
-    "aux": "haa",
-    "à": "haa",
-    "a": "woodi",
-    "et": "e",
-    "ou": "malla",
-    "est": "woni",
-    "sont": "ngoni",
-    "sera": "wonata",
-    "seront": "ngonata",
-    "été": "waɗaa",
-    "pas": "walaa",
-    "ne": "to",
-    "n": "to",
-    "plus": "ɓuri",
-    "moins": "les",
-    "par": "bee",
-    "sur": "dow",
-    "dans": "nder",
-    "avec": "bee",
-    "sans": "walaa",
-    "pour": "ngam",
-    "en": "nder",
-    "ce": "oo",
-    "cet": "oo",
-    "cette": "ndee",
-    "ces": "ɗee",
-    "son": "mum",
-    "sa": "mum",
-    "ses": "mum",
-    "leur": "maɓɓe",
-    "leurs": "maɓɓe",
-    "vous": "a",
-    "nous": "min",
-    "il": "o",
-    "elle": "o",
-    "on": "neɗɗo",
-    "qui": "mo",
-    "que": "wonde",
-    "qu": "wonde",
-    "si": "to",
-    "car": "sabu",
-    "mais": "kono",
-    "donc": "non",
-    "comme": "no",
-    "tout": "fuu",
-    "toute": "fuu",
-    "tous": "fuu",
-    "toutes": "fuu",
-    "the": "",
-    "is": "woni",
-    "are": "ngoni",
-    "will": "wonata",
-    "be": "wona",
-    "to": "haa",
-    "of": "mo",
-    "in": "nder",
-    "for": "ngam",
-    "with": "bee",
-    "without": "walaa",
-    "from": "iwde",
-    "by": "bee",
-    "and": "e",
-    "or": "malla",
-    "not": "walaa",
-    "your": "maa",
-    "you": "a",
-    "this": "oo",
-    "that": "wonde"
-  };
-
-  function toPhonetic(fubText) {
-    if (!fubText) return "";
-    let s = String(fubText);
-    s = s.replace(/uu/g, "ouou").replace(/u/g, "ou");
-    s = s.replace(/aa/g, "â").replace(/ee/g, "éé").replace(/ii/g, "î").replace(/oo/g, "ô");
-    s = s.replace(/ɓ/g, "b'").replace(/Ɓ/g, "B'");
-    s = s.replace(/ɗ/g, "d'").replace(/Ɗ/g, "D'");
-    s = s.replace(/ƴ/g, "y'").replace(/Ƴ/g, "Y'");
-    s = s.replace(/ŋ/g, "ng").replace(/Ŋ/g, "Ng");
-    s = s.replace(/\bc/g, "tch").replace(/\bC/g, "Tch");
-    s = s.replace(/\bj/g, "dj").replace(/\bJ/g, "Dj");
-    return s;
-  }
-
-  function toEwondoPhonetic(ewoText) {
-    if (!ewoText) return "";
-    let s = String(ewoText);
-    s = s.replace(/ɛ/g, "è").replace(/ɔ/g, "ò").replace(/ə/g, "eu");
-    s = s.replace(/ŋ/g, "ng").replace(/ɲ/g, "gn");
-    s = s.replace(/FCFA/g, "Fran CFA");
-    return s;
-  }
-
-  class SafinumContextGraph {
-    constructor() {
-      this.stats = {
-        exactHits: 0,
-        dynamicHits: 0,
-        compositionalRagHits: 0,
-        protectedSkipped: 0,
-        lastExecutionLog: []
-      };
-    }
-
-    /**
-     * NŒUD 1 : EntityFreezer — Détecte si un texte est purement sacré ou gèle les entités internes
-     */
-    isSacredOnly(text) {
+  /**
+   * EntityPreservationEngine
+   * Protects sacred financial tokens from any unintended modification.
+   */
+  class EntityPreservationEngine {
+    static isSacredOnly(text) {
       if (!text) return true;
       const trimmed = text.trim();
       if (!trimmed || trimmed.length < 2) return true;
       for (const rx of PURE_SACRED_REGEXES) {
-        if (rx.test(trimmed)) {
-          this.stats.protectedSkipped++;
-          return true;
-        }
+        if (rx.test(trimmed)) return true;
       }
       return false;
     }
 
-    freezeEntities(text) {
-      const entities = [];
-      const frozenText = text.replace(INLINE_ENTITY_REGEX, (match) => {
-        const token = `__ENT_${entities.length}__`;
-        entities.push(match);
-        return token;
-      });
-      return { frozenText, entities };
+    static extractEntities(text) {
+      if (!text) return [];
+      const matches = text.match(INLINE_ENTITY_REGEX);
+      return matches ? Array.from(new Set(matches.map((m) => m.trim()))) : [];
     }
+  }
 
-    unfreezeEntities(text, entities) {
-      let out = text;
-      entities.forEach((val, idx) => {
-        out = out.replace(new RegExp(`__ENT_${idx}__`, "g"), val);
-      });
-      return out;
-    }
+  /**
+   * IntentClassifier
+   * Classifies banking context and risk levels for inspector badges.
+   */
+  class IntentClassifier {
+    static classify(text) {
+      const low = (text || "").toLowerCase();
 
-    /**
-     * NŒUD 2 : IntentAndRiskClassifier — Analyse l'intention bancaire et le niveau de risque
-     */
-    classifyIntent(text) {
-      const low = text.toLowerCase();
-      if (/(code secret|pin|otp|mot de passe|bloqué|tentative|partagez|communiquez|fraude|arnaque|locked|password|attempts)/i.test(low)) {
-        return { intent: "SECURITE_FRAUDE", category: "securite", riskLevel: "CRITIQUE" };
+      if (
+        /(code secret|pin|otp|mot de passe|bloqué|tentative|partagez|communiquez|fraude|arnaque|locked|password|attempts|alerte de sécurité|security alert)/i.test(
+          low
+        )
+      ) {
+        return { intent: "SECURITY_FRAUD", category: "Sécurité", riskLevel: "CRITICAL" };
       }
-      if (/(plafond|limite|maximum|journalier|quotidien|dépasse|supérieur|insuffisant|invalide|limit|exceeds|insufficient)/i.test(low)) {
-        return { intent: "PLAFOND_ET_SOLDE", category: "erreur", riskLevel: "ATTENTION" };
+      if (
+        /(plafond|limite|maximum|journalier|quotidien|dépasse|supérieur|insuffisant|invalide|limit|exceeds|insufficient)/i.test(
+          low
+        )
+      ) {
+        return { intent: "BALANCE_AND_LIMITS", category: "Montants & Limites", riskLevel: "WARNING" };
       }
-      if (/(erreur|échoué|indisponible|maintenance|réseau|connexion|incomplet|failed|unavailable|error)/i.test(low)) {
-        return { intent: "INCIDENT_TECHNIQUE", category: "erreur", riskLevel: "ATTENTION" };
+      if (
+        /(erreur|échoué|indisponible|maintenance|réseau|connexion|incomplet|failed|unavailable|error)/i.test(
+          low
+        )
+      ) {
+        return { intent: "TECHNICAL_INCIDENT", category: "Erreur", riskLevel: "WARNING" };
       }
       if (/(frais|commission|taxe|tarif|gratuit|coût|débité|fee|fees|cost)/i.test(low)) {
-        return { intent: "FRAIS_TARIFICATION", category: "frais", riskLevel: "INFO" };
+        return { intent: "FEES_AND_CHARGES", category: "Frais", riskLevel: "INFO" };
       }
       if (/(bénéficiaire|destinataire|numéro|téléphone|nom complet|beneficiary|recipient)/i.test(low)) {
-        return { intent: "IDENTITE_BENEFICIAIRE", category: "beneficiaire", riskLevel: "ATTENTION" };
+        return { intent: "BENEFICIARY_IDENTITY", category: "Bénéficiaire", riskLevel: "WARNING" };
       }
       if (/(confirm|récapitulatif|vérif|reçu|référence|succès|summary|receipt)/i.test(low)) {
-        return { intent: "VALIDATION_ET_PREUVE", category: "recapitulatif", riskLevel: "INFO" };
+        return { intent: "VALIDATION_AND_RECEIPT", category: "Récapitulatif", riskLevel: "INFO" };
       }
-      return { intent: "INFORMATION_GENERALE", category: "solde", riskLevel: "INFO" };
+      return { intent: "GENERAL_INFORMATION", category: "Interface", riskLevel: "INFO" };
+    }
+  }
+
+  /**
+   * Normalizes a UI string for tolerant lookup (collapses whitespace,
+   * lowercases, and optionally strips trailing punctuation).
+   * @param {string} str
+   * @param {boolean} [stripTrailingPunct=false]
+   * @returns {string}
+   */
+  function normalizeKey(str, stripTrailingPunct = false) {
+    let out = String(str || "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLowerCase();
+    if (stripTrailingPunct) {
+      out = out.replace(/[\s:;.!?…]+$/, "").trim();
+    }
+    return out;
+  }
+
+  /**
+   * SafinumContextGraph
+   * Dataset-backed translation, explanation, and integrity engine.
+   */
+  class SafinumContextGraph {
+    constructor() {
+      this.stats = {
+        exactHits: 0,
+        normalizedHits: 0,
+        dynamicHits: 0,
+        numberHits: 0,
+        protectedSkipped: 0,
+        unmatchedSkipped: 0,
+        lastExecutionLog: []
+      };
+      this.maxLogEntries = 20;
+
+      // Build O(1) normalized lookup indices over KB.exact_ui and KB.numbers
+      this.normalizedUiIndex = new Map();
+      this.punctTrimmedUiIndex = new Map();
+      this.normalizedNumbersIndex = new Map();
+      this._buildIndices();
     }
 
     /**
-     * NŒUD 3 : MultiSourceLexicalRAG — Recherche exacte, dynamique ou compositionnelle (18 sources)
+     * Pre-indexes KB entries for fast case-insensitive and punctuation-tolerant matching.
+     * @private
+     */
+    _buildIndices() {
+      if (KB.exact_ui) {
+        for (const [key, entry] of Object.entries(KB.exact_ui)) {
+          const norm = normalizeKey(key, false);
+          if (norm && !this.normalizedUiIndex.has(norm)) {
+            this.normalizedUiIndex.set(norm, entry);
+          }
+          const trimmed = normalizeKey(key, true);
+          if (trimmed && !this.punctTrimmedUiIndex.has(trimmed)) {
+            this.punctTrimmedUiIndex.set(trimmed, entry);
+          }
+        }
+      }
+
+      if (KB.numbers) {
+        for (const [key, entry] of Object.entries(KB.numbers)) {
+          const norm = normalizeKey(key, true);
+          if (norm && !this.normalizedNumbersIndex.has(norm)) {
+            this.normalizedNumbersIndex.set(norm, entry);
+          }
+        }
+      }
+    }
+
+    isSacredOnly(text) {
+      const isSacred = EntityPreservationEngine.isSacredOnly(text);
+      if (isSacred) {
+        this.stats.protectedSkipped++;
+      }
+      return isSacred;
+    }
+
+    /**
+     * Shapes a raw KB record into the unified entry contract expected by content.js & voice_engine.js.
+     * @private
+     */
+    _formatEntry(cleanOriginal, rawRecord, mode, confidence) {
+      const supported = (KB.meta && KB.meta.supported_languages) || ["eto"];
+      const defaultLang = (KB.meta && KB.meta.default_language) || "eto";
+      const { intent, category: inferredCat, riskLevel } = IntentClassifier.classify(cleanOriginal);
+      const entities = EntityPreservationEngine.extractEntities(cleanOriginal);
+
+      const languages = {};
+      const entry = {
+        original: cleanOriginal,
+        code: rawRecord.code || null,
+        explain_code: null,
+        category: rawRecord.category || inferredCat,
+        intent,
+        riskLevel,
+        entities,
+        explain_fr: rawRecord.explain_fr || "",
+        explain_en: rawRecord.explain_en || "",
+        source: `EXPORT_DATASET_MALOBA (${rawRecord.code || "dataset"})`,
+        mode,
+        confidence,
+        languages
+      };
+
+      for (const lang of supported) {
+        const langPayload = rawRecord[lang];
+        if (!langPayload) continue;
+        languages[lang] = {
+          text: langPayload.text || "",
+          audio: langPayload.audio || null,
+          duration: langPayload.duration || 0,
+          explain_text: langPayload.explain_text || "",
+          explain_audio: langPayload.explain_audio || null,
+          explain_duration: langPayload.explain_duration || 0
+        };
+        entry[lang] = langPayload.text || "";
+        entry[`explain_${lang}`] = langPayload.explain_text || "";
+        if (lang === defaultLang) {
+          entry.audio = langPayload.audio || null;
+          entry.explain_audio = langPayload.explain_audio || null;
+          entry.explain_code = langPayload.explain_code || null;
+        }
+      }
+
+      if (!Object.keys(languages).length) return null;
+
+      this._recordLog(entry);
+      return entry;
+    }
+
+    /**
+     * Appends an entry to the bounded execution audit log.
+     * @private
+     */
+    _recordLog(entry) {
+      this.stats.lastExecutionLog.unshift({
+        timestamp: new Date().toISOString(),
+        original: entry.original,
+        code: entry.code,
+        mode: entry.mode,
+        intent: entry.intent,
+        riskLevel: entry.riskLevel
+      });
+      if (this.stats.lastExecutionLog.length > this.maxLogEntries) {
+        this.stats.lastExecutionLog.pop();
+      }
+    }
+
+    /**
+     * Translates and explains a DOM text string using verified dataset records.
+     * @param {string} rawText - Input string from DOM text node
+     * @returns {Object|null} Verified translation record or null if uncatalogued
      */
     translateAndExplain(rawText) {
       if (!rawText) return null;
       const clean = rawText.replace(/\s+/g, " ").trim();
       if (this.isSacredOnly(clean)) return null;
 
-      // 3.A : Correspondance exacte dans l'interface SAFINUM (FR ou EN)
+      // Tier 1: Exact UI dictionary match (case-sensitive)
       if (KB.exact_ui && KB.exact_ui[clean]) {
         this.stats.exactHits++;
-        const hit = KB.exact_ui[clean];
-        const ewoText = hit.ewo || hit.fub;
-        return {
-          original: clean,
-          fub: hit.fub,
-          ewo: ewoText,
-          phonetic: hit.phonetic || toPhonetic(hit.fub),
-          phonetic_ewo: hit.phonetic_ewo || toEwondoPhonetic(ewoText),
-          explain_fub: hit.explain_fub,
-          explain_fub_phonetic: hit.explain_fub_phonetic || toPhonetic(hit.explain_fub),
-          explain_ewo: hit.explain_ewo || hit.explain_fr,
-          explain_ewo_phonetic: hit.explain_ewo_phonetic || toEwondoPhonetic(hit.explain_ewo || hit.explain_fr),
-          explain_fr: hit.explain_fr,
-          category: hit.category,
-          source: hit.source,
-          mode: "EXACT_UI_DICTIONARY",
-          confidence: 1.0
-        };
+        return this._formatEntry(clean, KB.exact_ui[clean], "EXACT_DATASET", 1.0);
       }
 
-      // 3.B : Patterns dynamiques (Bonjour {nom}, Numéro de compte : {acc}, Étape {x}/{y}, Dates)
-      if (KB.dynamic_patterns) {
+      // Tier 2: Normalized lookup (case-insensitive, then punctuation-trimmed)
+      const norm = normalizeKey(clean, false);
+      if (this.normalizedUiIndex.has(norm)) {
+        this.stats.normalizedHits++;
+        return this._formatEntry(clean, this.normalizedUiIndex.get(norm), "NORMALIZED_DATASET", 0.99);
+      }
+
+      const trimmedNorm = normalizeKey(clean, true);
+      if (this.punctTrimmedUiIndex.has(trimmedNorm)) {
+        this.stats.normalizedHits++;
+        return this._formatEntry(clean, this.punctTrimmedUiIndex.get(trimmedNorm), "NORMALIZED_DATASET", 0.97);
+      }
+
+      // Tier 3: Dataset-backed dynamic patterns (e.g. "Bonjour, <Name>")
+      if (KB.dynamic_patterns && Array.isArray(KB.dynamic_patterns)) {
+        const supported = (KB.meta && KB.meta.supported_languages) || ["eto"];
         for (const pat of KB.dynamic_patterns) {
           const rx = new RegExp(pat.regex, "i");
           const m = clean.match(rx);
-          if (m) {
-            this.stats.dynamicHits++;
-            let fubOut = pat.template_fub;
-            let ewoOut = pat.template_ewo || pat.template_fub;
-            let expFub = pat.explain_fub;
-            let expEwo = pat.explain_ewo || pat.explain_fr;
-            let expFr = pat.explain_fr;
+          if (!m) continue;
+
+          this.stats.dynamicHits++;
+          const synthesized = {
+            code: pat.code,
+            category: pat.category || "Navigation & Accueil",
+            explain_fr: "",
+            explain_en: ""
+          };
+
+          for (const lang of supported) {
+            const patLang = pat[lang];
+            if (!patLang) continue;
+            let textOut = patLang.template || "";
+            let expOut = patLang.explain_text || "";
+            let expFr = patLang.explain_fr || "";
+            let expEn = patLang.explain_en || "";
+
             for (let i = 1; i < m.length; i++) {
               const val = m[i] || "";
-              fubOut = fubOut.replace(new RegExp("\\$" + i, "g"), val);
-              ewoOut = ewoOut.replace(new RegExp("\\$" + i, "g"), val);
-              expFub = expFub.replace(new RegExp("\\$" + i, "g"), val);
-              expEwo = expEwo.replace(new RegExp("\\$" + i, "g"), val);
-              expFr = expFr.replace(new RegExp("\\$" + i, "g"), val);
+              const groupRx = new RegExp("\\$" + i, "g");
+              textOut = textOut.replace(groupRx, () => val);
+              expOut = expOut.replace(groupRx, () => val);
+              expFr = expFr.replace(groupRx, () => val);
+              expEn = expEn.replace(groupRx, () => val);
             }
-            fubOut = fubOut.replace(/\s+/g, " ").trim();
-            ewoOut = ewoOut.replace(/\s+/g, " ").trim();
-            return {
-              original: clean,
-              fub: fubOut,
-              ewo: ewoOut,
-              phonetic: toPhonetic(fubOut),
-              phonetic_ewo: toEwondoPhonetic(ewoOut),
-              explain_fub: expFub,
-              explain_fub_phonetic: toPhonetic(expFub),
-              explain_ewo: expEwo,
-              explain_ewo_phonetic: toEwondoPhonetic(expEwo),
-              explain_fr: expFr,
-              category: pat.category,
-              source: pat.source,
-              mode: "DYNAMIC_TEMPLATE",
-              confidence: 0.98
+
+            synthesized.explain_fr = expFr;
+            synthesized.explain_en = expEn;
+            synthesized[lang] = {
+              text: textOut.replace(/\s+/g, " ").trim(),
+              audio: patLang.audio || null,
+              explain_text: expOut,
+              explain_audio: patLang.explain_audio || null,
+              explain_code: pat.explain_code || null
+            };
+          }
+
+          return this._formatEntry(clean, synthesized, "DYNAMIC_DATASET", 0.96);
+        }
+      }
+
+      // Tier 4: Real number/amount phrases from SAF_NUM_*
+      if (this.normalizedNumbersIndex.has(trimmedNorm)) {
+        this.stats.numberHits++;
+        const numRec = this.normalizedNumbersIndex.get(trimmedNorm);
+        const shaped = {
+          code: numRec.code,
+          category: numRec.category || "Montants & Chiffres Safinum",
+          explain_fr: numRec.fr,
+          explain_en: numRec.en
+        };
+        const supported = (KB.meta && KB.meta.supported_languages) || ["eto"];
+        for (const lang of supported) {
+          if (numRec[lang]) {
+            shaped[lang] = {
+              text: numRec[lang].text,
+              audio: numRec[lang].audio,
+              duration: numRec[lang].duration,
+              explain_text: numRec[lang].text,
+              explain_audio: null,
+              explain_code: numRec.code
             };
           }
         }
+        return this._formatEntry(clean, shaped, "NUMBER_DATASET", 1.0);
       }
 
-      // 3.C : Phrase inconnue / injectée par le Jury -> Pipeline Graphe de Contexte 5-Nœuds !
-      return this.runCompositionalContextGraph(clean);
-    }
-
-    /**
-     * Pipeline profond pour toute phrase inédite injectée par le Jury (#injected-{id})
-     */
-    runCompositionalContextGraph(cleanText) {
-      this.stats.compositionalRagHits++;
-
-      // Nœud 1 : Gel des entités sacrées (montants FCFA, %, numéros, références)
-      const { frozenText, entities } = this.freezeEntities(cleanText);
-
-      // Nœud 2 : Classification d'intention et de risque financier
-      const { intent, category, riskLevel } = this.classifyIntent(cleanText);
-
-      // Nœud 3 : Traduction compositionnelle par segments phraséologiques + lexique Tourneux/Aki-OSC
-      let working = frozenText;
-      const usedSources = new Set(["01_aki_osc_financial_glossary"]);
-
-      // Remplacer d'abord les expressions multi-mots (triées de la plus longue à la plus courte)
-      const sortedChunks = (KB.phrase_chunks || []).slice().sort((a, b) => b.fr.length - a.fr.length);
-      for (const chunk of sortedChunks) {
-        const escaped = chunk.fr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const rx = new RegExp(`\\b${escaped}\\b`, "gi");
-        if (rx.test(working)) {
-          working = working.replace(rx, chunk.fub);
-          usedSources.add(chunk.src);
-        }
-      }
-
-      // Tokenisation mot par mot en préservant les placeholders __ENT_k__ et la ponctuation
-      const tokenRegex = /(__ENT_\d+__|[A-Za-zÀ-ÖØ-öø-ÿɓɗƴŋƁƊƳŊ']+)/g;
-      const translatedTokens = working.replace(tokenRegex, (word) => {
-        if (word.startsWith("__ENT_")) return word;
-        const low = word.toLowerCase();
-
-        // Si le mot est déjà en Fulfuldé (suite au remplacement d'un chunk), ne pas le retraduire
-        if (/[ɓɗƴŋ]/.test(low) || /^(ceede|limngal|hisaabu|jaɓoowo|coggu|nelal|lambar|cuuɗiido|waya|haaddi|ñalnde|fuu|useni|laartu|booyma|hidde|tabitina|maɓɓete|jarribooji|boofɗi|talkuru|seedamku|innde|cahiindu|meere|walaa)$/.test(low)) {
-          return word;
-        }
-
-        // Recherche exacte dans le lexique des 18 sources
-        if (KB.word_lexicon && KB.word_lexicon[low]) {
-          usedSources.add(KB.word_lexicon[low].src);
-          return KB.word_lexicon[low].fub;
-        }
-
-        // Recherche par lemmatisation / radical (pluriels -s, verbes conjugués -er/-ez/-é/-ée/-és)
-        const stems = [
-          low.replace(/s$/, ""),
-          low.replace(/es$/, "e"),
-          low.replace(/(?:ez|er|é|ée|és|ées|ant)$/, "er"),
-          low.replace(/(?:ez|er|é|ée|és|ées|ant)$/, ""),
-          low.replace(/aux$/, "al"),
-          low.replace(/issement$/, "ir")
-        ];
-        for (const st of stems) {
-          if (st.length >= 3 && KB.word_lexicon && KB.word_lexicon[st]) {
-            usedSources.add(KB.word_lexicon[st].src);
-            return KB.word_lexicon[st].fub;
-          }
-        }
-
-        // Mots outils grammaticaux
-        if (Object.prototype.hasOwnProperty.call(FUNCTION_WORDS_FUB, low)) {
-          return FUNCTION_WORDS_FUB[low];
-        }
-
-        return word;
-      });
-
-      // Nettoyage des espaces multiples et restauration des entités gelées (Nœud 5 : FinancialIntegrityGuard)
-      let fubSentence = translatedTokens.replace(/\s+/g, " ").replace(/\s+([,.;:!?])/g, "$1").trim();
-      fubSentence = this.unfreezeEntities(fubSentence, entities);
-
-      // Si la phrase était très courte ou contenait uniquement du vocabulaire inconnu, préfixer par le marqueur contextuel Fulfuldé
-      if (fubSentence.toLowerCase() === cleanText.toLowerCase()) {
-        fubSentence = `Kabaruuji kisal : ${fubSentence}`;
-      } else if (fubSentence.length > 0) {
-        fubSentence = fubSentence.charAt(0).toUpperCase() + fubSentence.slice(1);
-      }
-
-      // Recherche de l'exemple parallèle le plus proche dans les 18 sources pour la traçabilité
-      let closestExemplar = null;
-      if (KB.rag_exemplars && KB.rag_exemplars.length > 0) {
-        const words = cleanText.toLowerCase().split(/\W+/).filter((w) => w.length > 3);
-        let bestScore = -1;
-        for (const ex of KB.rag_exemplars) {
-          let sc = 0;
-          const exLow = ex.fr.toLowerCase();
-          for (const w of words) {
-            if (exLow.includes(w)) sc++;
-          }
-          if (sc > bestScore) {
-            bestScore = sc;
-            closestExemplar = ex;
-          }
-        }
-        if (closestExemplar && bestScore > 0) {
-          usedSources.add(closestExemplar.src);
-        }
-      }
-
-      // Nœud 4 : Génération de l'explication pédagogique AnyDoc (Fulfuldé + Ewondo + Français)
-      const entitiesSummary = entities.length > 0 ? ` (${entities.join(" · ")})` : "";
-      let explainFub = "";
-      let explainEwo = "";
-      let explainFr = "";
-
-      if (intent === "SECURITE_FRAUDE") {
-        explainFub = `Reentinoore kisal mawnde${entitiesSummary} : bataake oo ɗon reentina ma dow kisal lambar maa cuuɗiido (PIN/OTP) e limngal maa. To hokku neɗɗo feere lambar maa koo nde!`;
-        explainEwo = `Yian mebə̀lə̀ mé ngól${entitiesSummary} : Tə́ o və̀ mɔt kót wô ésoló (PIN/OTP). Fə́la nyina a ne ngól asu mɔni wô.`;
-        explainFr = `Alerte de sécurité critique${entitiesSummary} : ce message protège l'accès à votre compte. Ne communiquez jamais votre code secret et vérifiez le nombre d'essais restants.`;
-      } else if (intent === "PLAFOND_ET_SOLDE") {
-        explainFub = `Tinndinoore haaddi ceede${entitiesSummary} : bataake oo ɗon kollira haaddi ceede ɗe a waawi neldugo malla ceede gonɗe nder limngal maa.`;
-        explainEwo = `Metəla mé akɔŋ mɔni${entitiesSummary} : Mebə̀lə̀ ma kat akɔŋ mɔni o ne lóm amɔs nyina to mɔni a liè e asúsu wô.`;
-        explainFr = `Règle de plafond ou de solde${entitiesSummary} : ce message précise la limite maximale autorisée ou les conditions liées au montant de votre transfert.`;
-      } else if (intent === "FRAIS_TARIFICATION") {
-        explainFub = `Famfingo coggu nelal${entitiesSummary} : bataake oo ɗon laaɓtina coggu kuugal nelal e ceede ɗe ittete nder kofru maa.`;
-        explainEwo = `Fáám mímvèñ mi ntómban${entitiesSummary} : Mebə̀lə̀ ma laart mímvèñ e asúŋa mɔni ba te e asúsu wô.`;
-        explainFr = `Information tarifaire${entitiesSummary} : ce message détaille les frais ou commissions appliqués à votre opération.`;
-      } else if (intent === "IDENTITE_BENEFICIAIRE") {
-        explainFub = `Laartugo jaɓoowo ceede${entitiesSummary} : laartu booyma innde, lambar waya e talkuru seedamku hidde ceede ɗe neldoto.`;
-        explainEwo = `Laart nnyɔ a nɔŋ mɔni${entitiesSummary} : Laart dzóé, nɔ́mba fón e kalara ntílán osu na o lóm mɔni.`;
-        explainFr = `Vérification du destinataire${entitiesSummary} : contrôlez l'identité et les coordonnées du bénéficiaire avant de valider.`;
-      } else if (intent === "INCIDENT_TECHNIQUE") {
-        explainFub = `Kabaruuji dow laawol kuugal${entitiesSummary} : caɗeele laawol enternet malla feewnugo kuugal. Ceede maa ɗon hisi nder limngal maa.`;
-        explainEwo = `Díza ya réseau${entitiesSummary} : Waya ya réseau a nzi kat. Mɔni wô a ne m̀vɛ̀ e asúsu.`;
-        explainFr = `Information réseau / service${entitiesSummary} : perturbation technique temporaire. Vos fonds restent protégés sur votre compte.`;
-      } else {
-        explainFub = `Famfingo AnyDoc (${intent})${entitiesSummary} : ${fubSentence}. Laartu kabaruuji ɗi booyma hidde a jokka.`;
-        explainEwo = `Fáám AnyDoc (${intent})${entitiesSummary} : Laart mebə̀lə̀ osu na o kəl osu.`;
-        explainFr = `Explication simplifiée AnyDoc${entitiesSummary} : cette consigne vous informe d'une règle importante concernant votre opération en cours.`;
-      }
-
-      const ewoSentence = this.translateCompositionalEwondo(cleanText, frozenText, entities, category);
-
-      const logEntry = {
-        timestamp: new Date().toLocaleTimeString(),
-        original: cleanText,
-        frozenText,
-        entities,
-        intent,
-        riskLevel,
-        fub: fubSentence,
-        ewo: ewoSentence,
-        sources: Array.from(usedSources),
-        closestExemplar
-      };
-      this.stats.lastExecutionLog.unshift(logEntry);
-      if (this.stats.lastExecutionLog.length > 15) {
-        this.stats.lastExecutionLog.pop();
-      }
-
-      return {
-        original: cleanText,
-        fub: fubSentence,
-        ewo: ewoSentence,
-        phonetic: toPhonetic(fubSentence),
-        phonetic_ewo: toEwondoPhonetic(ewoSentence),
-        explain_fub: explainFub,
-        explain_fub_phonetic: toPhonetic(explainFub),
-        explain_ewo: explainEwo,
-        explain_ewo_phonetic: toEwondoPhonetic(explainEwo),
-        explain_fr: explainFr,
-        category,
-        intent,
-        riskLevel,
-        entities,
-        source: Array.from(usedSources).join(" + "),
-        closestExemplar,
-        mode: "CONTEXT_GRAPH_5_NODES_RAG",
-        confidence: 0.92
-      };
-    }
-
-    translateCompositionalEwondo(cleanText, frozenText, entities, category) {
-      let ewoText = frozenText;
-      const ewoMap = {
-        "solde": "mɔni a liè",
-        "montant": "akɔŋ mɔni",
-        "frais": "mímvèñ",
-        "transfert": "ntómban mɔni",
-        "bénéficiaire": "nnyɔ a nɔŋ",
-        "téléphone": "fón",
-        "compte": "asúsu",
-        "erreur": "díza",
-        "code": "kót",
-        "secret": "ésoló",
-        "sécurité": "ngól",
-        "confirmer": "kaməla",
-        "envoyer": "lóm",
-        "reçu": "kalara ntílán",
-        "gratuit": "zə́zə́",
-        "invalide": "a téé yian",
-        "insuffisant": "a nzi kôb"
-      };
-      for (const [fr, ew] of Object.entries(ewoMap)) {
-        const rx = new RegExp(`\\b${fr}\\b`, "gi");
-        ewoText = ewoText.replace(rx, ew);
-      }
-      ewoText = this.unfreezeEntities(ewoText, entities);
-      if (ewoText.toLowerCase() === cleanText.toLowerCase()) {
-        ewoText = `Mebə̀lə̀ mé mɔni : ${ewoText}`;
-      }
-      return ewoText;
+      // No verified dataset entry found — leave original DOM text untouched
+      this.stats.unmatchedSkipped++;
+      return null;
     }
   }
 
   window.SafinumContextGraph = new SafinumContextGraph();
 })();
-

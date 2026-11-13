@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maloba-orange: #ff7900;
+  --color-maloba-terracotta: #e05515;
+  --color-maloba-amber: #ffa040;
+  --color-maloba-bronze: #7b3f0c;
+}
+
+/* Custom dropdown arrow and options for browser styling */
+.lang-dropdown {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffffff' d='M0 0l4 5 4-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+}
+
+.lang-dropdown option {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: 600;
+}
+

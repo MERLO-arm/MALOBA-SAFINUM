@@ -1,0 +1,28 @@
+{
+  "name": "maloba-safinum",
+  "version": "1.0.0",
+  "description": "**Salon de la Finance Numérique (SAFINUM 2026) · Yaoundé, Cameroun**   **Date limite de soumission : 14 Novembre 2026 à 23:59:59**   **Plateforme d'évaluation officielle : [safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**   **Dépôt GitHub : [https://github.com/MERLO-arm/MALOBA-SAFINUM](https://github.com/MERLO-arm/MALOBA-SAFINUM)**   **Formulaire de dépôt : [forms.gle/Dt6dzQwkEiMW7q2E8](https://forms.gle/Dt6dzQwkEiMW7q2E8)**",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --minify",
+    "watch:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --watch",
+    "build:kb": "python3 scripts/build_dataset_kb.py",
+    "test": "node scripts/verify_extension.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MERLO-arm/MALOBA-SAFINUM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MERLO-arm/MALOBA-SAFINUM/issues"
+  },
+  "homepage": "https://github.com/MERLO-arm/MALOBA-SAFINUM#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

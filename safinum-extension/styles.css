@@ -1,71 +1,139 @@
 /* =============================================================================
-   MALOBA ANYDOC — STYLES OFFICIELS DE L'EXTENSION D'ACCESSIBILITÉ (fub)
-   Charte graphique Maloba : Orange Maloba (#FF7900 / #ED7009), Terracotta (#E05515),
-   Bronze ambré (#7B3F0C) et Ambre (#FFA040)
+   MALOBA ANYDOC — OFFICIAL ACCESSIBILITY EXTENSION STYLES
+   Maloba Design System: Maloba Orange (#FF7900 / #ED7009), Terracotta (#E05515),
+   Bronze Amber (#7B3F0C), Golden Amber (#FFA040), and Emerald (#10B981)
    ============================================================================= */
 
-/* Soulignement et surbrillance subtile aux couleurs Maloba des phrases traduites */
+/* Clean Apple-style text highlight on hover & active speech */
 [data-safinum-translated="true"] {
   position: relative;
-  transition: background-color 0.18s ease, box-shadow 0.18s ease;
-  border-radius: 4px;
+  transition:
+    background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    text-decoration-color 0.2s ease,
+    box-shadow 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: 5px;
 }
 
-[data-safinum-translated="true"]:hover {
-  background-color: rgba(255, 121, 0, 0.12) !important;
-  box-shadow: 0 0 0 2px rgba(255, 121, 0, 0.35) !important;
+html:not([data-safinum-mode="original"]) [data-safinum-translated="true"]:hover,
+html:not([data-safinum-mode="original"]) [data-safinum-translated="true"][data-safinum-hovered="true"] {
+  background-color: rgba(120, 120, 128, 0.11) !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 159, 10, 0.65);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
   cursor: pointer;
 }
 
-/* Surbrillance vive lors de la lecture vocale active */
+/* Active speech synthesis focus highlight */
 [data-safinum-speaking="true"] {
-  background-color: rgba(255, 121, 0, 0.28) !important;
-  box-shadow: 0 0 0 3px #ff7900 !important;
-  border-radius: 4px;
+  background-color: rgba(255, 159, 10, 0.14) !important;
+  box-shadow: 0 0 0 1px rgba(255, 159, 10, 0.38) !important;
+  border-radius: 5px;
 }
 
-/* Bulle interactive flottante rapide au survol d'une phrase (🔊 Écouter · 💡 Expliquer) */
+/* Context hover popover (Apple Dynamic Island glass pill) */
 #safinum-anydoc-hover-pill {
   position: fixed;
   z-index: 2147483645;
-  display: none;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: linear-gradient(135deg, #7b3f0c 0%, #2a1505 100%);
-  color: #fff7ed;
-  padding: 5px 11px;
+  gap: 5px;
+  background: rgba(12, 12, 14, 0.92);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+  color: #f5f5f7;
+  padding: 4px 5px 4px 11px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 121, 0, 0.5);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
   font-size: 11.5px;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(123, 63, 12, 0.45), 0 0 0 1px rgba(255, 121, 0, 0.3);
-  pointer-events: auto;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.48),
+    0 2px 6px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  pointer-events: none;
   user-select: none;
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateY(6px) scale(0.94);
+  transform-origin: center bottom;
+  will-change: opacity, transform, filter;
+  transition:
+    opacity 0.22s ease,
+    filter 0.26s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.34s cubic-bezier(0.32, 1.18, 0.48, 1);
 }
 
-#safinum-anydoc-hover-pill button {
+#safinum-anydoc-hover-pill.is-visible {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Invisible pointer bridge between hovered text and popover so cursor can reach the button */
+#safinum-anydoc-hover-pill.is-visible::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -12px;
+  bottom: -12px;
+  z-index: -1;
+}
+
+.safinum-pill-lang {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(245, 245, 247, 0.65);
+  white-space: nowrap;
+}
+
+.safinum-pill-divider {
+  width: 1px;
+  height: 13px;
   background: rgba(255, 255, 255, 0.14);
+  margin: 0 2px;
+}
+
+#safinum-anydoc-hover-pill .safinum-pill-btn {
+  background: rgba(255, 255, 255, 0.1);
   border: none;
-  color: #ffffff;
-  padding: 3px 8px;
+  color: #f5f5f7;
+  padding: 5px 10px;
   border-radius: 9999px;
   font-size: 11px;
   font-weight: 600;
+  letter-spacing: -0.01em;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  transition: background 0.15s ease;
+  gap: 5px;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.14s ease;
 }
 
-#safinum-anydoc-hover-pill button:hover {
-  background: #ff7900;
+#safinum-anydoc-hover-pill .safinum-pill-btn-primary {
+  background: rgba(255, 255, 255, 0.92);
+  color: #0a0a0c;
+}
+
+#safinum-anydoc-hover-pill .safinum-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
 
-/* Carte pédagogique AnyDoc injectée automatiquement sous les erreurs et contenus Jury */
+#safinum-anydoc-hover-pill .safinum-pill-btn-primary:hover {
+  background: #ffffff;
+  color: #0a0a0c;
+}
+
+#safinum-anydoc-hover-pill .safinum-pill-btn:active {
+  transform: scale(0.95);
+}
+
+/* Pedagogical explanation card injected under dynamic alerts and jury inputs */
 .safinum-anydoc-inline-card {
   margin-top: 10px;
   padding: 12px 14px;
@@ -151,99 +219,367 @@
 }
 
 /* =============================================================================
-   DOCK FLOTTANT "MALOBA ANYDOC" (BAS-GAUCHE AUX COULEURS DE MALOBA)
+   APPLE DYNAMIC ISLAND (NOTCH) — FLOATING ACCESSIBILITY DOCK
    ============================================================================= */
 #safinum-anydoc-dock {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
+  bottom: 20px;
+  left: 20px;
   z-index: 2147483640;
-  width: 395px;
-  max-width: calc(100vw - 32px);
-  background: #0f172a;
-  color: #f8fafc;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 121, 0, 0.45);
-  box-shadow: 0 20px 45px rgba(2, 6, 23, 0.75), 0 0 0 1px rgba(255, 121, 0, 0.3);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  width: 214px;
+  max-width: calc(100vw - 24px);
+  background: rgba(10, 10, 12, 0.92);
+  -webkit-backdrop-filter: blur(28px) saturate(180%);
+  backdrop-filter: blur(28px) saturate(180%);
+  color: #f5f5f7;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.52),
+    0 2px 8px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", ui-sans-serif, system-ui, sans-serif;
   overflow: hidden;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  will-change: width, border-radius, transform;
+  transition:
+    width 0.44s cubic-bezier(0.32, 1.18, 0.48, 1),
+    border-radius 0.44s cubic-bezier(0.32, 1.18, 0.48, 1),
+    box-shadow 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.28s ease,
+    background-color 0.28s ease;
 }
 
-#safinum-anydoc-dock.safinum-dock-minimized {
-  width: 295px;
+#safinum-anydoc-dock:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 22px 54px rgba(0, 0, 0, 0.65),
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
-.safinum-dock-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 14px;
-  background: linear-gradient(90deg, #7b3f0c 0%, #e05515 50%, #ff7900 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  cursor: pointer;
+#safinum-anydoc-dock.is-expanded {
+  width: 316px;
+  border-radius: 28px;
+  background: rgba(12, 12, 14, 0.96);
 }
 
-.safinum-dock-brand {
+#safinum-anydoc-dock.is-dragging {
+  transition: none !important;
+  cursor: grabbing;
+  box-shadow:
+    0 26px 60px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+/* Compact Pill Bar (Left: Expand Icon -> Lang -> Logo -> Right: Drag Icon) */
+.safinum-notch-pill {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 44px;
+  padding: 0 10px 0 13px;
 }
 
-.safinum-dock-logo-img {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  object-fit: contain;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 2px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+#safinum-anydoc-dock.is-expanded .safinum-notch-pill {
+  padding: 0 14px 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.safinum-dock-title {
-  font-size: 13.5px;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-.safinum-dock-subtitle {
-  font-size: 10.5px;
-  color: #fef3c7;
-  font-weight: 500;
-}
-
-.safinum-dock-toggle-btn {
-  background: rgba(255, 255, 255, 0.15);
-  border: none;
-  color: #ffffff;
-  width: 26px;
-  height: 26px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 12px;
-  display: flex;
+.safinum-notch-expand-icon {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.15s ease;
+  color: rgba(245, 245, 247, 0.5);
+  transition: color 0.2s ease, transform 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+  flex-shrink: 0;
 }
 
-.safinum-dock-toggle-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+#safinum-anydoc-dock:hover .safinum-notch-expand-icon {
+  color: rgba(245, 245, 247, 0.9);
 }
 
-.safinum-dock-body {
-  padding: 12px 14px;
-  max-height: 460px;
-  overflow-y: auto;
+#safinum-anydoc-dock.is-expanded .safinum-notch-expand-icon {
+  transform: rotate(180deg);
+  color: rgba(245, 245, 247, 0.85);
 }
 
-#safinum-anydoc-dock.safinum-dock-minimized .safinum-dock-body {
+.safinum-notch-lang {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: #f5f5f7;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#safinum-anydoc-dock .safinum-equalizer[data-reading="false"] {
   display: none;
 }
 
-/* Sélecteur de mode (Menu déroulant Fulfuldé / Ewondo + Bilingue + Original) */
+#safinum-anydoc-dock .safinum-equalizer {
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.safinum-notch-logo {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.safinum-notch-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  color: rgba(245, 245, 247, 0.42);
+  cursor: grab;
+  touch-action: none;
+  flex-shrink: 0;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+.safinum-notch-drag-handle:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.safinum-notch-drag-handle:active,
+#safinum-anydoc-dock.is-dragging .safinum-notch-drag-handle {
+  cursor: grabbing;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Expanded Dynamic Island Body with Apple blur-morph transition */
+.safinum-notch-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.44s cubic-bezier(0.32, 1.12, 0.48, 1);
+}
+
+#safinum-anydoc-dock.is-expanded .safinum-notch-body {
+  grid-template-rows: 1fr;
+}
+
+.safinum-notch-body-inner {
+  overflow: hidden;
+  opacity: 0;
+  filter: blur(10px);
+  transform: scale(0.95) translateY(4px);
+  transform-origin: center top;
+  transition:
+    opacity 0.28s ease,
+    filter 0.36s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.32, 1.12, 0.48, 1);
+}
+
+#safinum-anydoc-dock.is-expanded .safinum-notch-body-inner {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1) translateY(0);
+  transition-delay: 0.04s;
+}
+
+/* Use wrapper padding only when expanded via inner layout */
+.safinum-notch-section-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(235, 235, 245, 0.5);
+  padding: 12px 16px 6px;
+}
+
+.safinum-notch-langs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 10px;
+  max-height: 230px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+.safinum-notch-lang-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  color: #f5f5f7;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.14s ease;
+}
+
+.safinum-notch-lang-item:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.safinum-notch-lang-item:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.safinum-notch-lang-item.selected {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.safinum-notch-lang-item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.safinum-notch-lang-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.safinum-notch-lang-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f5f5f7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.safinum-notch-lang-code {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(235, 235, 245, 0.48);
+  text-transform: uppercase;
+}
+
+.safinum-notch-lang-sub {
+  font-size: 10.5px;
+  color: rgba(235, 235, 245, 0.55);
+  margin-top: 1px;
+}
+
+.safinum-notch-lang-sub.is-ready {
+  color: #30d158;
+  font-weight: 500;
+}
+
+.safinum-notch-check {
+  color: #30d158;
+  flex-shrink: 0;
+}
+
+.safinum-notch-original-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(245, 245, 247, 0.8);
+  flex-shrink: 0;
+}
+
+.safinum-notch-read-btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(245, 245, 247, 0.7);
+}
+
+.safinum-notch-read-btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.safinum-notch-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 12px;
+  margin-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.safinum-notch-read-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 9999px;
+  background: #f5f5f7;
+  color: #0a0a0c;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  cursor: pointer;
+  transition: background-color 0.18s ease, transform 0.14s ease, color 0.18s ease;
+}
+
+.safinum-notch-read-btn:hover {
+  background: #ffffff;
+}
+
+.safinum-notch-read-btn:active {
+  transform: scale(0.975);
+}
+
+.safinum-notch-read-btn.active {
+  background: rgba(255, 69, 58, 0.2);
+  color: #ff6961;
+  border: 1px solid rgba(255, 69, 58, 0.35);
+}
+
+.safinum-notch-pause-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5f5f7;
+  font-size: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.18s ease, transform 0.14s ease;
+}
+
+.safinum-notch-pause-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Mode selector bar (Multilingual Dropdown + Bilingual + Original) */
 .safinum-mode-bar {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr;
@@ -289,6 +625,91 @@
   padding: 8px;
 }
 
+/* Custom language picker with circular completion rings */
+.safinum-lang-picker {
+  position: relative;
+}
+
+.safinum-lang-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 4px 7px 4px 5px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
+}
+
+.safinum-lang-trigger-content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.safinum-lang-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  width: 265px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: #0f172a;
+  border: 1px solid rgba(255, 121, 0, 0.45);
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.safinum-lang-menu.hidden {
+  display: none;
+}
+
+.safinum-lang-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: rgba(30, 41, 59, 0.8);
+  color: #e2e8f0;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.safinum-lang-option:hover:not(:disabled) {
+  background: #334155;
+}
+
+.safinum-lang-option.selected {
+  background: rgba(255, 121, 0, 0.2);
+  border-color: rgba(255, 121, 0, 0.6);
+  color: #ffffff;
+}
+
+.safinum-lang-option:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+  background: rgba(30, 41, 59, 0.4);
+}
+
 .safinum-mode-btn {
   border: none;
   background: transparent;
@@ -308,11 +729,160 @@
   box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
 }
 
-/* Boutons d'action vocale globale */
+/* Voice action buttons */
 .safinum-voice-actions {
   display: flex;
   gap: 6px;
   margin-bottom: 10px;
+}
+
+.safinum-action-read-page {
+  flex: 1.25;
+  background: linear-gradient(135deg, #00e5a3 0%, #059669 100%);
+  color: #022c22;
+  border: 1px solid rgba(0, 229, 163, 0.55);
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 11.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 4px 14px rgba(0, 229, 163, 0.28);
+  transition: filter 0.15s ease, transform 0.1s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+
+.safinum-action-read-page:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.safinum-action-read-page.active {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  border-color: rgba(248, 113, 113, 0.6);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+}
+
+.safinum-action-pause {
+  background: #1e293b;
+  color: #00e5a3;
+  border: 1px solid rgba(0, 229, 163, 0.45);
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.safinum-action-pause:hover {
+  background: rgba(0, 229, 163, 0.18);
+}
+
+.safinum-equalizer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.safinum-eq-bar {
+  width: 2.2px;
+  height: 4px;
+  background: linear-gradient(180deg, #ff9f0a 0%, #ff375f 100%);
+  border-radius: 9999px;
+  transform-origin: center;
+  transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar {
+  animation: safinumAppleWave 0.82s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(1) {
+  animation-duration: 0.68s;
+  animation-delay: 0s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(2) {
+  animation-duration: 0.54s;
+  animation-delay: 0.14s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(3) {
+  animation-duration: 0.76s;
+  animation-delay: 0.28s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(4) {
+  animation-duration: 0.58s;
+  animation-delay: 0.1s;
+}
+.safinum-equalizer[data-reading="true"] .safinum-eq-bar:nth-child(5) {
+  animation-duration: 0.72s;
+  animation-delay: 0.22s;
+}
+
+@keyframes safinumAppleWave {
+  0% {
+    height: 3.5px;
+    opacity: 0.65;
+  }
+  50% {
+    height: 14px;
+    opacity: 1;
+  }
+  100% {
+    height: 6px;
+    opacity: 0.82;
+  }
+}
+
+.safinum-num-widget {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  padding: 5px 7px;
+  margin-bottom: 10px;
+}
+
+.safinum-num-input {
+  flex: 1;
+  min-width: 0;
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  outline: none;
+}
+
+.safinum-num-input:focus {
+  border-color: #ff7900;
+}
+
+.safinum-num-speak-btn {
+  background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .safinum-action-primary {
@@ -355,7 +925,7 @@
   color: #ffffff;
 }
 
-/* Carte d'inspection AnyDoc active */
+/* Active AnyDoc Inspector Card */
 .safinum-inspector-card {
   background: #1e293b;
   border: 1px solid rgba(255, 121, 0, 0.3);
@@ -407,7 +977,7 @@
   color: #cbd5e1;
 }
 
-/* Statistiques des 18 sources & Graphe 5-Nœuds */
+/* Integrity statistics and RAG sources grid */
 .safinum-stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

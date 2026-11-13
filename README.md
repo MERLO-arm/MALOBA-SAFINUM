@@ -11,7 +11,7 @@
 [![SAFINUM Challenge](https://img.shields.io/badge/SAFINUM-Innovate%202026-ff7900?style=for-the-badge&logo=safari)](https://safinum.cm/hackathon)
 [![Langue Fulfulde](https://img.shields.io/badge/Langue-Fulfuld%C3%A9%20(fub%20Grand--Nord)-7b3f0c?style=for-the-badge)](https://fr.wikipedia.org/wiki/Peul)
 [![Langue Ewondo](https://img.shields.io/badge/Langue-Ewondo%20(ewo%20Centre--Sud)-ea580c?style=for-the-badge)](https://fr.wikipedia.org/wiki/Ewondo)
-[![Architecture N-Langues](https://img.shields.io/badge/Architecture-Extensible%20N--Langues-blueviolet?style=for-the-badge)]()
+[![Architecture Clean](https://img.shields.io/badge/Architecture-Clean%20%26%20Production--Ready-blueviolet?style=for-the-badge)]()
 [![Intégrité Jury](https://img.shields.io/badge/Int%C3%A9grit%C3%A9-100%25%20(0%20%C3%89cart)-10b981?style=for-the-badge)]()
 [![Manifest V3](https://img.shields.io/badge/Chrome%20Extension-Manifest%20V3-blue?style=for-the-badge&logo=googlechrome)]()
 [![Charte Maloba](https://img.shields.io/badge/Charte-Maloba%20Official-ea580c?style=for-the-badge)]()
@@ -21,14 +21,14 @@
 ## 🌟 Sommaire
 1. [À Propos du Projet](#-à-propos-du-projet)
 2. [Fonctionnalités Clés](#-fonctionnalités-clés)
-3. [Architecture du Graphe de Contexte 5-Nœuds](#-architecture-du-graphe-de-contexte-5-nœuds)
+3. [Architecture Clean & Graphe 5-Nœuds](#-architecture-clean--graphe-5-nœuds)
 4. [Architecture Extensible pour Plusieurs Langues](#-architecture-extensible-pour-plusieurs-langues)
 5. [Rétro-Ingénierie & Secrets de la Plateforme SAFINUM](#-rétro-ingénierie--secrets-de-la-plateforme-safinum)
 6. [Sources Linguistiques Moissonnées : Fulfuldé & Ewondo](#-sources-linguistiques-moissonnées--fulfuldé--ewondo)
 7. [Structure du Dépôt](#-structure-du-dépôt)
 8. [Installation & Déploiement en 30 Secondes](#-installation--déploiement-en-30-secondes)
 9. [Protocole de Test & Validation Jury](#-protocole-de-test--validation-jury)
-10. [Documentation Intégrale](#-documentation-intégrale)
+10. [Documentation Technique Complète](#-documentation-technique-complète)
 11. [L'Équipe Ekwali / Maloba](#-léquipe-ekwali--maloba)
 
 ---
@@ -39,12 +39,15 @@ Au Cameroun et dans l'espace CEMAC, plus de **40 % des populations adultes sont 
 * **Dans le Grand Nord (Adamaoua, Nord, Extrême-Nord)** : Le **Fulfuldé (code ISO `fub`)** est la langue commerciale de plus de 5 millions de citoyens.
 * **Dans le Grand Centre, Sud et Est (Yaoundé, Mbalmayo, Sangmélima, Bertoua)** : L'**Ewondo (code ISO `ewo`)** est la langue vernaculaire et historique du bassin économique.
 
-**Maloba AnyDoc** est une extension web d'accessibilité universelle qui s'injecte de façon non-intrusive sur n'importe quel portail financier web :
+**Maloba AnyDoc** est une extension web d'accessibilité universelle de classe entreprise qui s'injecte de façon non-intrusive sur n'importe quel portail financier web :
 * 🗣️ **Traduction In-Place Instantanée** : Choix direct via menu déroulant entre le **Fulfuldé (`fub`)** et l'**Ewondo (`ewo`)**, sans rechargement de page.
 * 🔊 **Synthèse Vocale Synchronisée** : Lecture phrase par phrase avec surbrillance dynamique pour les usagers non-lecteurs (*Nanugo* en peul, *Wóg* en ewondo).
 * 💡 **Compréhension Pédagogique (*Famfingo* / *Fáám*)** : Explications claires des notions complexes (frais de transfert, authentification OTP, erreurs de solde).
 * 🔒 **Sécurité & Intégrité Totale** : Aucune altération des montants, numéros ou codes PIN (**`0 écart` garanti sur la plateforme du Jury**).
-* 🌐 **Conçu pour l'Avenir** : Architecture modulaire extensible à toutes les langues nationales (Douala `dua`, Ghomálá' `bbj`, Bassa `bas`, Haoussa `hau`).
+* 🌐 **Conçu pour l'Avenir** : Architecture Clean modulaire extensible à toutes les langues nationales (Douala `dua`, Ghomálá' `bbj`, Bassa `bas`, Haoussa `hau`).
+
+> [!NOTE]
+> Conformément aux standards de développement logiciel de niveau entreprise, **l'ensemble des commentaires du code source ainsi que la documentation technique détaillée sont rédigés en anglais**. Le présent document README est conservé en français pour la présentation générale et le Jury du Hackathon.
 
 ---
 
@@ -56,24 +59,31 @@ Au Cameroun et dans l'espace CEMAC, plus de **40 % des populations adultes sont 
 | **Dock Flottant Maloba** | Interface escamotable aux couleurs de Maloba (`#FF7900` / `#E05515` / `#7B3F0C`) avec statistiques d'intégrité en direct. |
 | **Bascule de Mode Instantanée** | 3 modes au choix : **Langue active**, **Bilingue simultané** (avec texte original entre crochets) et **Original** (Français pur). |
 | **Bulle Contextuelle Hover Pill** | Apparaît au survol de chaque phrase avec boutons dynamiques : `🔊 Nanugo / Wóg (Écouter)` et `💡 Famfingo / Fáám (Comprendre)`. |
-| **Lecture Vocale Intelligente** | Synthèse audio adaptée aux consonnes injectives peules (`ɓ`, `ɗ`, `ƴ`, `ŋ`) et aux tons de l'Ewondo (`ɔ`, `ɛ`, `ə`, `ô`). |
-| **Défense Anti-Pièges Jury** | Interception et traduction en temps réel en 40ms de tous les messages injectés dynamiquement (`#injected-x`). |
+| **Lecture Vocale Intelligente** | Synthèse audio adaptée aux consonnes injectives peules (`ɓ`, `ɗ`, `ƴ`, `ŋ`) et aux tons de l'Ewondo (`ɔ`, `ɛ`, `ə`, `ô`), avec protection anti-coupure Chromium. |
+| **Défense Anti-Pièges Jury** | Interception et traduction en temps réel en 40ms de tous les messages injectés dynamiquement (`#injected-x`) et des codes d'erreur (`AMOUNT_001` à `CONFIRM_001`). |
 
 ---
 
-## 🧠 Architecture du Graphe de Contexte 5-Nœuds
+## 🧠 Architecture Clean & Graphe 5-Nœuds
 
-Pour traiter aussi bien les termes bancaires connus que les phrases inédites injectées par le Jury sans serveurs externes, nous avons développé un graphe sémantique embarqué :
+Pour traiter aussi bien les termes bancaires connus que les phrases inédites injectées par le Jury sans serveurs externes, nous avons développé un graphe sémantique embarqué à 5 nœuds séquentiels :
 
 ```mermaid
 flowchart TD
-    A["Texte DOM Brut\n(ex: 'Solde insuffisant de 15 000 FCFA')"] --> B["Nœud 1 : EntityFreezer\nSanctuarisation des montants et numéros (__ENT_0__)"]
+    A["Texte DOM Brut\n(ex: 'Solde insuffisant de 15 000 FCFA')"] --> B["Nœud 1 : EntityPreservationEngine\nSanctuarisation des montants et numéros (__ENT_0__)"]
     B --> C["Nœud 2 : IntentClassifier\nClassification du risque (FRAIS, SOLDE, SECURITE)"]
-    C --> D["Nœud 3 : MultiSourceLexicalRAG\nTraduction hybride multilingue (fub & ewo)"]
+    C --> D["Nœud 3 : LexicalRAG\nTraduction hybride multilingue (fub & ewo)"]
     D --> E["Nœud 4 : PedagogicalExplainer\nGénération d'explication AnyDoc (Famfingo / Fáám)"]
-    E --> F["Nœud 5 : FinancialIntegrityGuard\nRestauration exacte des jetons __ENT_0__"]
+    E --> F["Nœud 5 : FinancialIntegrityGuard\nRestauration exacte et sécurisée des jetons __ENT_0__"]
     F --> G["Affichage Sécurisé & Vocal\nStatut Jury : 100% Intègre (0 Écart)"]
 ```
+
+### Améliorations & Corrections de Bugs Majeures Apportées :
+1. **Correction du Bug de Substitution Regex** : Utilisation d'un replacer fonctionnel `() => val` dans l'unfreezer d'entités pour éviter la corruption de montants contenant des caractères monétaires ou des symboles d'échappement (`$1`, `$&`, `$$`).
+2. **Élimination des Fuites Mémoire DOM (SPA)** : Nettoyage automatique des nœuds détachés dans `trackedNodes` lors des transitions de vues Vue 3 / Nuxt 3.
+3. **Résolution du Bug de Coupure Audio Chromium** : Rétention explicite de l'instance `SpeechSynthesisUtterance` sur l'instance du moteur pour empêcher le ramasse-miettes (Garbage Collector V8) de couper la voix en cours de phrase, couplée à un timer keep-alive contre le gel au-delà de 15 secondes.
+4. **Gestion Robuste des Messages d'Extension** : Traitement défensif de `chrome.runtime.lastError` dans la popup pour éviter les exceptions non capturées hors pages applicatives.
+5. **Portabilité Complète des Scripts** : Remplacement de tous les chemins absolus codés en dur par des chemins dynamiques relatifs via `pathlib.Path`.
 
 ---
 
@@ -147,22 +157,23 @@ MALOBA-SAFINUM/
 ├── safinum-extension/                 # Extension Chrome Manifest V3 prête à charger
 │   ├── manifest.json                  # Déclaration Manifest V3 & permissions
 │   ├── content.js                     # Injection DOM, menu déroulant & orchestration
-│   ├── context_graph.js               # Graphe sémantique 5-nœuds & EntityFreezer
-│   ├── voice_engine.js                # Synthèse vocale multilingue & surbrillance
+│   ├── context_graph.js               # Graphe sémantique 5-nœuds & EntityPreservationEngine
+│   ├── voice_engine.js                # Synthèse vocale multilingue & surbrillance focus
 │   ├── knowledge_base.js              # Base de connaissances bilingue FUB + EWO
 │   ├── styles.css                     # Design System officiel Maloba & menu déroulant
 │   ├── popup.html & popup.js          # Menu contextuel avec sélecteur de langue
+│   ├── README.md                      # Documentation d'extension (en anglais)
 │   └── icons/                         # Suite d'icônes officielles Maloba (16 à 128 px)
-├── scripts/                           # Outils d'ingénierie linguistique
-│   ├── harvest_all_fulfulde_sources.py# Moissonneur des 18 sources Fulfuldé
-│   ├── ewondo_translations_map.py     # Dictionnaire et explications Ewondo
+├── scripts/                           # Outils d'ingénierie linguistique (Python 3)
+│   ├── build_extension_kb.py          # Compilateur général de la base de connaissances
 │   ├── update_knowledge_base_with_ewondo.py # Synchronisation de la KB multilingue
-│   └── build_extension_kb.py          # Compilateur général de la base de connaissances
+│   ├── ewondo_translations_map.py     # Dictionnaire et explications Ewondo
+│   └── harvest_all_fulfulde_sources.py# Moissonneur des 18 sources Fulfuldé
 ├── corpus/                            # Données brutes et compilées
 │   ├── compiled/                      # unified_fulfulde_corpus.parquet (99 633 entrées)
 │   └── raw/                           # Apertium ewo-fra, Tourneux, Burkimbia NLLB
-├── DOCUMENTATION_COMPLETE_MALOBA_EKWALI_SAFINUM.md # Manuel technique exhaustif
-└── README.md                          # Présentation générale du projet
+├── DOCUMENTATION_COMPLETE_MALOBA_EKWALI_SAFINUM.md # Manuel d'architecture complet (en anglais)
+└── README.md                          # Présentation générale du projet (en français)
 ```
 
 ---
@@ -179,7 +190,7 @@ MALOBA-SAFINUM/
    ```
 3. Activer le commutateur **« Mode développeur »** en haut à droite.
 4. Cliquer sur **« Charger l'extension non empaquetée »**.
-5. Sélectionner le sous-dossier `safinum-extension/`.
+5. Sélectionner le dossier `safinum-extension/`.
 6. Rendez-vous sur la plateforme officielle :
    **[https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**.
 
@@ -198,9 +209,9 @@ Sur l'environnement de test :
 
 ---
 
-## 📖 Documentation Intégrale
+## 📖 Documentation Technique Complète
 
-Pour une lecture détaillée de l'architecture, du code source, de la charte graphique et de l'argumentaire de pitch, consultez :
+Pour une lecture exhaustive de l'architecture logicielle, des contrats d'interface, des diagrammes de séquence et des spécifications API en anglais, consultez :
 👉 [DOCUMENTATION_COMPLETE_MALOBA_EKWALI_SAFINUM.md](DOCUMENTATION_COMPLETE_MALOBA_EKWALI_SAFINUM.md)
 
 ---

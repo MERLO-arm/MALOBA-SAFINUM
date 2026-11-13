@@ -1,197 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Maloba AnyDoc (fub)</title>
-  <style>
-    body {
-      margin: 0;
-      width: 340px;
-      background: #0f172a;
-      color: #f8fafc;
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      padding: 14px;
-    }
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 121, 0, 0.25);
-      margin-bottom: 12px;
-    }
-    .logo-img {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      object-fit: contain;
-      background: rgba(255, 121, 0, 0.15);
-      border: 1px solid rgba(255, 121, 0, 0.4);
-      padding: 2px;
-    }
-    .title-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .title {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-    }
-    .badge-ekwali {
-      font-size: 9px;
-      padding: 1px 5px;
-      border-radius: 4px;
-      border: 1px solid rgba(255, 121, 0, 0.4);
-      background: rgba(255, 121, 0, 0.15);
-      color: #ff7900;
-      font-weight: 700;
-    }
-    .subtitle {
-      font-size: 11px;
-      color: #ffa040;
-    }
-    .mode-group {
-      display: grid;
-      grid-template-columns: 1.25fr 1fr 1fr;
-      gap: 6px;
-      background: #1e293b;
-      padding: 4px;
-      border-radius: 10px;
-      margin-bottom: 12px;
-      border: 1px solid #334155;
-    }
-    .lang-dropdown {
-      background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 6px 14px 6px 6px;
-      border-radius: 7px;
-      font-size: 11px;
-      font-weight: 700;
-      cursor: pointer;
-      outline: none;
-      box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5'%3E%3Cpath fill='%23ffffff' d='M0 0l4 5 4-5z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 6px center;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    .lang-dropdown option {
-      background: #0f172a;
-      color: #ffffff;
-      font-weight: 600;
-    }
-    .mode-btn {
-      border: none;
-      background: transparent;
-      color: #94a3b8;
-      padding: 7px 4px;
-      border-radius: 7px;
-      font-size: 11px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-    .mode-btn.active {
-      background: #ff7900;
-      color: #ffffff;
-      font-weight: 700;
-      box-shadow: 0 2px 6px rgba(255, 121, 0, 0.35);
-    }
-    .speak-btn {
-      width: 100%;
-      border: none;
-      background: linear-gradient(135deg, #ff7900 0%, #e05515 100%);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 12.5px;
-      padding: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      margin-bottom: 12px;
-      box-shadow: 0 4px 12px rgba(255, 121, 0, 0.3);
-      transition: filter 0.15s ease, transform 0.1s ease;
-    }
-    .speak-btn:hover {
-      filter: brightness(1.08);
-      transform: translateY(-1px);
-    }
-    .card {
-      background: #1e293b;
-      border: 1px solid rgba(255, 121, 0, 0.3);
-      border-radius: 10px;
-      padding: 10px 12px;
-      font-size: 11.5px;
-      line-height: 1.5;
-      color: #cbd5e1;
-    }
-    .stat-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 4px;
-    }
-    .stat-val {
-      color: #ff7900;
-      font-weight: 700;
-    }
-    .stat-val-green {
-      color: #10b981;
-      font-weight: 700;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <img src="icons/logo_maloba.png" alt="Maloba Logo" class="logo-img" />
-    <div>
-      <div class="title-row">
-        <span class="title">Maloba AnyDoc</span>
-        <span class="badge-ekwali">Ekwali</span>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maloba AnyDoc (eto)</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body
+    class="w-85 m-0 bg-slate-900 text-slate-50 font-sans p-3.5 select-none antialiased"
+  >
+    <div
+      class="flex items-center gap-2.5 pb-3 border-b border-maloba-orange/25 mb-3"
+    >
+      <img
+        src="icons/logo_maloba.png"
+        alt="Maloba Logo"
+        class="w-9 h-9 rounded-[10px] object-contain bg-maloba-orange/15 border border-maloba-orange/40 p-0.5"
+      />
+      <div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-sm font-extrabold tracking-tight text-white"
+            >Maloba AnyDoc</span
+          >
+          <span
+            class="text-[9px] px-1.5 py-0.5 rounded border border-maloba-orange/40 bg-maloba-orange/15 text-maloba-orange font-bold"
+            >Ekwali</span
+          >
+        </div>
+        <div class="text-[11px] text-maloba-amber" id="popup-subtitle">
+          Éton (eto) · Dataset réel Maloba/Ekwali
+        </div>
       </div>
-      <div class="subtitle" id="popup-subtitle">Fulfuldé (fub) &amp; Ewondo (ewo) · 18 Sources</div>
     </div>
-  </div>
 
-  <div class="mode-group">
-    <select id="popup-lang-select" class="lang-dropdown" title="Choisir la langue d'accessibilité">
-      <option value="fub" selected>🇨🇲 Fulfuldé (fub) · Grand-Nord</option>
-      <option value="ewo">🇨🇲 Ewondo (ewo) · Centre / Sud</option>
-      <option value="dua" disabled style="opacity:0.6;">🇨🇲 Douala (dua) [À venir]</option>
-      <option value="bbj" disabled style="opacity:0.6;">🇨🇲 Ghomálá' (bbj) [À venir]</option>
-      <option value="bas" disabled style="opacity:0.6;">🇨🇲 Bassa (bas) [À venir]</option>
-    </select>
-    <button class="mode-btn" data-mode="bilingual">Bilingue</button>
-    <button class="mode-btn" data-mode="original">Original</button>
-  </div>
+    <div
+      class="grid grid-cols-[1.4fr_1fr_1fr] gap-1.5 bg-slate-800 p-1 rounded-[10px] mb-3 border border-slate-700 relative"
+    >
+      <div id="popup-lang-picker" class="relative">
+        <button
+          type="button"
+          id="popup-lang-trigger"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          class="w-full flex items-center justify-between gap-1.5 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white border border-white/25 py-1 pl-1.5 pr-2 rounded-[7px] text-[11px] font-bold cursor-pointer outline-none shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+          title="Choisir la langue d'accessibilité"
+        >
+          <span
+            id="popup-lang-trigger-content"
+            class="flex items-center gap-1.5 min-w-0 truncate"
+          ></span>
+          <span class="text-[9px] opacity-85 shrink-0">▾</span>
+        </button>
+        <div
+          id="popup-lang-menu"
+          role="listbox"
+          class="hidden absolute left-0 top-[calc(100%+6px)] w-68 max-h-64 overflow-y-auto bg-slate-900 border border-maloba-orange/45 rounded-[10px] p-1.5 shadow-2xl z-50 space-y-1"
+        ></div>
+      </div>
+      <button
+        class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+        data-mode="bilingual"
+      >
+        Bilingue
+      </button>
+      <button
+        class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+        data-mode="original"
+      >
+        Original
+      </button>
+    </div>
 
-  <button class="speak-btn" id="btn-speak-step">
-    🔊 Lire &amp; Expliquer l'étape active
-  </button>
+    <div class="grid grid-cols-2 gap-1.5 mb-2.5">
+      <button
+        class="speak-btn w-full border-0 bg-linear-to-br from-emerald-400 to-emerald-600 text-slate-950 font-extrabold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(16,185,129,0.3)] transition duration-150 hover:brightness-105"
+        id="btn-read-page"
+      >
+        🔊 Lire toute la page
+      </button>
+      <button
+        class="speak-btn w-full border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(255,121,0,0.3)] transition duration-150 hover:brightness-105"
+        id="btn-speak-step"
+      >
+        🔊 Lire l'étape
+      </button>
+    </div>
 
-  <div class="card">
-    <div class="stat-row">
-      <span>Langues actives :</span>
-      <span class="stat-val" id="stat-lang-active">Fulfuldé &amp; Ewondo</span>
+    <div class="flex gap-1.5 items-center bg-slate-800 border border-slate-700 rounded-[10px] p-1.5 mb-3">
+      <input
+        type="text"
+        id="popup-num-input"
+        class="flex-1 min-w-0 bg-slate-900 text-white border border-slate-700 rounded-md px-2 py-1 text-[11.5px] font-semibold outline-none focus:border-maloba-orange"
+        placeholder="Montant (ex: 250 000 FCFA)"
+        aria-label="Montant à lire"
+      />
+      <button
+        type="button"
+        id="popup-btn-speak-num"
+        class="border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11px] px-2.5 py-1.5 rounded-md cursor-pointer shrink-0 hover:brightness-105"
+      >
+        🔢 Lire
+      </button>
     </div>
-    <div class="stat-row">
-      <span>Corpus unifié :</span>
-      <span class="stat-val">18 sources (99 633 paires)</span>
-    </div>
-    <div class="stat-row">
-      <span>Nœuds DOM traduits :</span>
-      <span class="stat-val" id="stat-nodes">--</span>
-    </div>
-    <div class="stat-row">
-      <span>Intégrité des montants :</span>
-      <span class="stat-val-green">100 % Intègre (0 écart)</span>
-    </div>
-  </div>
 
-  <script src="popup.js"></script>
-</body>
+    <div
+      class="bg-slate-800 border border-maloba-orange/30 rounded-[10px] py-2.5 px-3 text-[11.5px] leading-relaxed text-slate-300 space-y-1"
+    >
+      <div class="flex justify-between items-center">
+        <span>Langue active :</span>
+        <span class="text-maloba-orange font-bold" id="stat-lang-active"
+          >Éton (eto)</span
+        >
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Dataset réel :</span>
+        <span class="text-maloba-orange font-bold" id="stat-dataset-info"
+          >192 entrées · 191 audios</span
+        >
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Nœuds DOM traduits :</span>
+        <span class="text-maloba-orange font-bold" id="stat-nodes">--</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Intégrité des montants :</span>
+        <span class="text-emerald-500 font-bold">100 % Intègre (0 écart)</span>
+      </div>
+    </div>
+
+    <script src="knowledge_base.js"></script>
+    <script src="popup.js"></script>
+  </body>
 </html>

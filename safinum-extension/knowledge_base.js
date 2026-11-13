@@ -1,13861 +1,9184 @@
-// =============================================================================
-// MALOBA ANYDOC — BASE DE CONNAISSANCES MULTILINGUE : FULFULDE (fub) & EWONDO (ewo)
-// Généré automatiquement pour le Hackathon SAFINUM 2026 (Team Ekwali)
-// =============================================================================
+/**
+ * =============================================================================
+ * MALOBA ANYDOC — PRODUCTION MULTILINGUAL KNOWLEDGE BASE
+ * =============================================================================
+ * Auto-generated from EXPORT_DATASET_MALOBA by scripts/build_dataset_kb.py.
+ * Contains verified human translations and local .webm audio references.
+ * Do NOT edit manually; re-run `python3 scripts/build_dataset_kb.py`.
+ * =============================================================================
+ */
 window.SAFINUM_KB = {
   "meta": {
-    "language_name": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
-    "iso_code": "fub",
-    "macro_code": "ff / fuv",
-    "total_harvested_records": 99633,
-    "distinct_sources_count": 18,
-    "sources_breakdown": {
-      "01_aki_osc_financial_glossary": 103,
-      "02_safinum_wave_sponsor_corpus": 76,
-      "03_tourneux_dictionary_csv": 1759,
-      "04_akilang_conversational_corpus": 39,
-      "05_wikipedia_ff_dump": 1902,
-      "18_hf_burkimbia_fuv_central_fulfulde": 39868,
-      "12_pulaagu_com_portal": 8687,
-      "09_open_science_pressbooks_parallel": 1117,
-      "06_bible_fulfulde_ebible_parallel": 6039,
-      "08_cnrs_lacito_ellaf_academic": 1101,
-      "17_hf_burkimbia_fub_adamawa_cameroon": 15423,
-      "10_wikipedia_parallel_aligned": 1200,
-      "11_pulaar_org_portal": 16911,
-      "15_webpulaaku_koode_archives": 2017,
-      "14_lewlewal_com_media": 901,
-      "07_rfi_fulfulde_news_parallel": 1203,
-      "13_demeth_net_portal": 1267,
-      "16_un_udhr_globalvoices_civic": 20
-    },
-    "exact_ui_entries_count": 145,
-    "lexicon_words_count": 2584,
-    "phrase_chunks_count": 34,
-    "rag_exemplars_count": 215,
+    "dataset_name": "EXPORT_DATASET_MALOBA (Maloba / Ekwali)",
+    "compiled_at": "2026-11-12T23:47:50.152545+00:00",
+    "default_language": "eto",
     "supported_languages": [
-      "fub",
-      "ewo"
+      "eto"
     ],
-    "language_names": {
-      "fub": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
-      "ewo": "Ewondo (Yaoundé / Centre / Sud)"
+    "total_records": 192,
+    "total_audios": 191,
+    "exact_ui_entries_count": 281,
+    "by_code_count": 192,
+    "numbers_count": 69,
+    "commands_count": 15,
+    "categories_breakdown": {
+      "Assistance Vocale Maloba": 15,
+      "Erreurs Officielles (TEST_ERRORS)": 6,
+      "Explications Vocales (Famfingo)": 65,
+      "Explications d'Erreurs (Famfingo)": 6,
+      "Montants & Chiffres Safinum": 35,
+      "Navigation & Accueil": 10,
+      "Sécurité & Anti-Fraude": 8,
+      "Étape 1 : Solde & Accueil": 11,
+      "Étape 2 : Frais & Simulation": 15,
+      "Étape 3 : Bénéficiaire": 7,
+      "Étape 4 : Récapitulatif": 9,
+      "Étape 5 : Confirmation & Reçu": 5
     },
     "languages": {
-      "fub": {
-        "code": "fub",
-        "name": "Fulfuldé",
-        "fullName": "Fulfuldé du Cameroun (Adamaoua / Grand-Nord)",
+      "eto": {
+        "code": "eto",
+        "dataset_folder": "eton",
+        "name": "Éton",
+        "fullName": "Éton (Centre · Lekié)",
+        "label": "🇨🇲 Éton (eto) · Centre",
+        "region": "Centre (Lekié, Mfoundi)",
         "flag": "🇨🇲",
-        "region": "Grand-Nord (Adamaoua, Nord, Extrême-Nord)",
-        "listenWord": "Nanugo",
-        "explainWord": "Famfingo",
-        "active": true
-      },
-      "ewo": {
-        "code": "ewo",
-        "name": "Ewondo",
-        "fullName": "Ewondo (Yaoundé / Centre / Sud / Est)",
-        "flag": "🇨🇲",
-        "region": "Centre, Sud, Est (Zone Beti-Fang)",
         "listenWord": "Wóg",
-        "explainWord": "Fáám",
-        "active": true
-      },
-      "dua": {
-        "code": "dua",
-        "name": "Douala",
-        "fullName": "Douala (Littoral / Wouri / Sud-Ouest)",
-        "flag": "🇨🇲",
-        "region": "Littoral, Sud-Ouest",
-        "listenWord": "Senga",
-        "explainWord": "Bwele",
-        "active": false,
-        "soon": true
+        "explainWord": "Ndimzana",
+        "active": true,
+        "soon": false,
+        "recordsCount": 192,
+        "targetRecordsCount": 192,
+        "completionPercent": 100
       },
       "bbj": {
         "code": "bbj",
+        "dataset_folder": "ghomala",
         "name": "Ghomálá'",
-        "fullName": "Ghomálá' / Bamiléké (Hauts-Plateaux / Ouest)",
+        "fullName": "Ghomálá' (Ouest)",
+        "label": "🇨🇲 Ghomálá' (bbj) [Collecte en cours]",
+        "region": "Ouest (Hauts-Plateaux)",
         "flag": "🇨🇲",
-        "region": "Ouest (Grassfields)",
         "listenWord": "Ju'",
         "explainWord": "Fa'",
         "active": false,
-        "soon": true
+        "soon": true,
+        "recordsCount": 46,
+        "targetRecordsCount": 192,
+        "completionPercent": 24
+      },
+      "dua": {
+        "code": "dua",
+        "dataset_folder": "duala",
+        "name": "Duala",
+        "fullName": "Duala (Littoral / Wouri)",
+        "label": "🇨🇲 Duala (dua) [Collecte en cours]",
+        "region": "Littoral (Wouri)",
+        "flag": "🇨🇲",
+        "listenWord": "Senga",
+        "explainWord": "Bwele",
+        "active": false,
+        "soon": true,
+        "recordsCount": 25,
+        "targetRecordsCount": 192,
+        "completionPercent": 13
+      },
+      "lns": {
+        "code": "lns",
+        "dataset_folder": "lamnso",
+        "name": "Lámnso'",
+        "fullName": "Lámnso' (Nord-Ouest)",
+        "label": "🇨🇲 Lámnso' (lns) [Collecte en cours]",
+        "region": "Nord-Ouest (Bui)",
+        "flag": "🇨🇲",
+        "listenWord": "Yuu",
+        "explainWord": "Lii",
+        "active": false,
+        "soon": true,
+        "recordsCount": 16,
+        "targetRecordsCount": 192,
+        "completionPercent": 8
+      },
+      "fub": {
+        "code": "fub",
+        "dataset_folder": "fulfulde",
+        "name": "Fulfuldé",
+        "fullName": "Fulfuldé (Grand-Nord)",
+        "label": "🇨🇲 Fulfuldé (fub) [Collecte en cours]",
+        "region": "Grand-Nord (Adamaoua, Nord, Extrême-Nord)",
+        "flag": "🇨🇲",
+        "listenWord": "Nanugo",
+        "explainWord": "Famfingo",
+        "active": false,
+        "soon": true,
+        "recordsCount": 0,
+        "targetRecordsCount": 192,
+        "completionPercent": 0
+      },
+      "ewo": {
+        "code": "ewo",
+        "dataset_folder": "ewondo",
+        "name": "Ewondo",
+        "fullName": "Ewondo (Centre / Sud)",
+        "label": "🇨🇲 Ewondo (ewo) [Collecte en cours]",
+        "region": "Centre, Sud, Est",
+        "flag": "🇨🇲",
+        "listenWord": "Wóg",
+        "explainWord": "Fáám",
+        "active": false,
+        "soon": true,
+        "recordsCount": 0,
+        "targetRecordsCount": 192,
+        "completionPercent": 0
       },
       "bas": {
         "code": "bas",
+        "dataset_folder": "bassa",
         "name": "Bassa",
-        "fullName": "Bassa (Sanaga-Maritime / Centre-Littoral)",
-        "flag": "🇨🇲",
+        "fullName": "Bassa (Sanaga-Maritime)",
+        "label": "🇨🇲 Bassa (bas) [Collecte en cours]",
         "region": "Centre, Littoral",
+        "flag": "🇨🇲",
         "listenWord": "Hɛp",
         "explainWord": "Tégəl",
         "active": false,
-        "soon": true
+        "soon": true,
+        "recordsCount": 0,
+        "targetRecordsCount": 192,
+        "completionPercent": 0
       }
     }
   },
   "exact_ui": {
-    "Environnement de test — données fictives, aucune transaction réelle.": {
-      "fub": "Nokkuure jarribo — kabaruuji jarribo tan, walaa nelal ceede goonga.",
-      "phonetic": "Nokkôuôure djarribo — kabarôuôuji djarribo tan, walâ nelal tchééde gônga.",
-      "explain_fub": "Nokkuure ndee ɗum ngam jarribo kuugal Safinum Pay tan; ceede goonga ittataako.",
-      "explain_fub_phonetic": "Nokkôuôure ndéé d'oum ngam djarribo kôuôugal Safinoum Pay tan; tchééde gônga ittatâko.",
+    "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.": {
+      "code": "SAF_EXP_001",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+      "en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
       "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fə́la mejaríba — bibuk bi m̀bálá, téé ésəle mɔni ya amba.",
-      "phonetic_ewo": "Feula médjariba — bibouk bi mbala, téé éséulé moni ya amba.",
-      "explain_ewo": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə.",
-      "explain_ewo_phonetic": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə."
+      "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "eto": {
+        "text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "duration": 7.88,
+        "explain_text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "explain_audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "explain_duration": 7.88,
+        "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+        "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+        "code": "SAF_EXP_001",
+        "explain_code": "SAF_EXP_001",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "This space is an evaluation simulator for the Hackathon: no real money is handled.": {
+      "code": "SAF_EXP_001",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+      "en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+      "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "eto": {
+        "text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "duration": 7.88,
+        "explain_text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "explain_audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "explain_duration": 7.88,
+        "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+        "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+        "code": "SAF_EXP_001",
+        "explain_code": "SAF_EXP_001",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.": {
+      "code": "SAF_EXP_002",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+      "en": "Digital banking service accessible from your mobile phone or computer.",
+      "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+      "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+      "eto": {
+        "text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "duration": 8.43,
+        "explain_text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "explain_audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "explain_duration": 8.43,
+        "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+        "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+        "code": "SAF_EXP_002",
+        "explain_code": "SAF_EXP_002",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Digital banking service accessible from your mobile phone or computer.": {
+      "code": "SAF_EXP_002",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+      "en": "Digital banking service accessible from your mobile phone or computer.",
+      "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+      "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+      "eto": {
+        "text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "duration": 8.43,
+        "explain_text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "explain_audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "explain_duration": 8.43,
+        "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+        "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+        "code": "SAF_EXP_002",
+        "explain_code": "SAF_EXP_002",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Document officiel présentant les consignes et le barème de test du hackathon.": {
+      "code": "SAF_EXP_003",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+      "en": "Official document presenting test instructions and scoring for the hackathon.",
+      "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+      "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+      "eto": {
+        "text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "duration": 4.93,
+        "explain_text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "explain_audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "explain_duration": 4.93,
+        "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+        "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+        "code": "SAF_EXP_003",
+        "explain_code": "SAF_EXP_003",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Official document presenting test instructions and scoring for the hackathon.": {
+      "code": "SAF_EXP_003",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+      "en": "Official document presenting test instructions and scoring for the hackathon.",
+      "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+      "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+      "eto": {
+        "text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "duration": 4.93,
+        "explain_text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "explain_audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "explain_duration": 4.93,
+        "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+        "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+        "code": "SAF_EXP_003",
+        "explain_code": "SAF_EXP_003",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Revenir à la page principale de présentation du Hackathon SAFINUM.": {
+      "code": "SAF_EXP_004",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+      "en": "Return to the main SAFINUM Hackathon presentation page.",
+      "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+      "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "duration": 4.21,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "explain_audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "explain_duration": 4.21,
+        "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+        "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+        "code": "SAF_EXP_004",
+        "explain_code": "SAF_EXP_004",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Return to the main SAFINUM Hackathon presentation page.": {
+      "code": "SAF_EXP_004",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+      "en": "Return to the main SAFINUM Hackathon presentation page.",
+      "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+      "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "duration": 4.21,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "explain_audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "explain_duration": 4.21,
+        "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+        "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+        "code": "SAF_EXP_004",
+        "explain_code": "SAF_EXP_004",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 1 : Somme d'argent actuellement disponible sur votre compte.": {
+      "code": "SAF_EXP_005",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+      "en": "Step 1: Money currently available in your account.",
+      "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+      "explain_en": "Step 1: Money currently available in your account.",
+      "eto": {
+        "text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "duration": 4.35,
+        "explain_text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "explain_audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "explain_duration": 4.35,
+        "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+        "explain_en": "Step 1: Money currently available in your account.",
+        "code": "SAF_EXP_005",
+        "explain_code": "SAF_EXP_005",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 1: Money currently available in your account.": {
+      "code": "SAF_EXP_005",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+      "en": "Step 1: Money currently available in your account.",
+      "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+      "explain_en": "Step 1: Money currently available in your account.",
+      "eto": {
+        "text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "duration": 4.35,
+        "explain_text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "explain_audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "explain_duration": 4.35,
+        "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+        "explain_en": "Step 1: Money currently available in your account.",
+        "code": "SAF_EXP_005",
+        "explain_code": "SAF_EXP_005",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Commission prélevée par le service financier pour traiter l'envoi de votre argent.": {
+      "code": "SAF_EXP_006",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+      "en": "Fee charged by the financial service to process your money transfer.",
+      "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+      "explain_en": "Fee charged by the financial service to process your money transfer.",
+      "eto": {
+        "text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "duration": 5.36,
+        "explain_text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "explain_duration": 5.36,
+        "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+        "explain_en": "Fee charged by the financial service to process your money transfer.",
+        "code": "SAF_EXP_006",
+        "explain_code": "SAF_EXP_006",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Fee charged by the financial service to process your money transfer.": {
+      "code": "SAF_EXP_006",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+      "en": "Fee charged by the financial service to process your money transfer.",
+      "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+      "explain_en": "Fee charged by the financial service to process your money transfer.",
+      "eto": {
+        "text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "duration": 5.36,
+        "explain_text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "explain_duration": 5.36,
+        "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+        "explain_en": "Fee charged by the financial service to process your money transfer.",
+        "code": "SAF_EXP_006",
+        "explain_code": "SAF_EXP_006",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "La personne qui va recevoir l'argent que vous envoyez.": {
+      "code": "SAF_EXP_007",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La personne qui va recevoir l'argent que vous envoyez.",
+      "en": "The person who will receive the money you are sending.",
+      "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+      "explain_en": "The person who will receive the money you are sending.",
+      "eto": {
+        "text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "duration": 2.88,
+        "explain_text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "explain_audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "explain_duration": 2.88,
+        "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+        "explain_en": "The person who will receive the money you are sending.",
+        "code": "SAF_EXP_007",
+        "explain_code": "SAF_EXP_007",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "The person who will receive the money you are sending.": {
+      "code": "SAF_EXP_007",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La personne qui va recevoir l'argent que vous envoyez.",
+      "en": "The person who will receive the money you are sending.",
+      "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+      "explain_en": "The person who will receive the money you are sending.",
+      "eto": {
+        "text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "duration": 2.88,
+        "explain_text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "explain_audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "explain_duration": 2.88,
+        "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+        "explain_en": "The person who will receive the money you are sending.",
+        "code": "SAF_EXP_007",
+        "explain_code": "SAF_EXP_007",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.": {
+      "code": "SAF_EXP_008",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+      "en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+      "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "eto": {
+        "text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "duration": 6.44,
+        "explain_text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "explain_audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "explain_duration": 6.44,
+        "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+        "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+        "code": "SAF_EXP_008",
+        "explain_code": "SAF_EXP_008",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 4: Full summary of your transaction to verify everything before final payment.": {
+      "code": "SAF_EXP_008",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+      "en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+      "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "eto": {
+        "text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "duration": 6.44,
+        "explain_text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "explain_audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "explain_duration": 6.44,
+        "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+        "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+        "code": "SAF_EXP_008",
+        "explain_code": "SAF_EXP_008",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.": {
+      "code": "SAF_EXP_009",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+      "en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+      "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "eto": {
+        "text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "duration": 6.9,
+        "explain_text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "explain_audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "explain_duration": 6.9,
+        "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+        "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+        "code": "SAF_EXP_009",
+        "explain_code": "SAF_EXP_009",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 5: Official proof and receipt confirming your transaction succeeded.": {
+      "code": "SAF_EXP_009",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+      "en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+      "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "eto": {
+        "text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "duration": 6.9,
+        "explain_text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "explain_audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "explain_duration": 6.9,
+        "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+        "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+        "code": "SAF_EXP_009",
+        "explain_code": "SAF_EXP_009",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.": {
+      "code": "SAF_EXP_010",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+      "en": "Your personal banking space displaying your balance and account number.",
+      "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+      "explain_en": "Your personal banking space displaying your balance and account number.",
+      "eto": {
+        "text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "duration": 6.16,
+        "explain_text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "explain_audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "explain_duration": 6.16,
+        "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+        "explain_en": "Your personal banking space displaying your balance and account number.",
+        "code": "SAF_EXP_010",
+        "explain_code": "SAF_EXP_010",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Your personal banking space displaying your balance and account number.": {
+      "code": "SAF_EXP_010",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+      "en": "Your personal banking space displaying your balance and account number.",
+      "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+      "explain_en": "Your personal banking space displaying your balance and account number.",
+      "eto": {
+        "text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "duration": 6.16,
+        "explain_text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "explain_audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "explain_duration": 6.16,
+        "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+        "explain_en": "Your personal banking space displaying your balance and account number.",
+        "code": "SAF_EXP_010",
+        "explain_code": "SAF_EXP_010",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.": {
+      "code": "SAF_EXP_011",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+      "en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+      "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "eto": {
+        "text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "duration": 6.56,
+        "explain_text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "explain_audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "explain_duration": 6.56,
+        "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+        "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+        "code": "SAF_EXP_011",
+        "explain_code": "SAF_EXP_011",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Welcome message addressed to the account holder, Amina Ngo Bell.": {
+      "code": "SAF_EXP_011",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+      "en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+      "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "eto": {
+        "text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "duration": 6.56,
+        "explain_text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "explain_audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "explain_duration": 6.56,
+        "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+        "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+        "code": "SAF_EXP_011",
+        "explain_code": "SAF_EXP_011",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.": {
+      "code": "SAF_EXP_012",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+      "en": "Check your available account balance first before starting your money transfer.",
+      "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+      "explain_en": "Check your available account balance first before starting your money transfer.",
+      "eto": {
+        "text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "duration": 6.68,
+        "explain_text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "explain_audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "explain_duration": 6.68,
+        "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+        "explain_en": "Check your available account balance first before starting your money transfer.",
+        "code": "SAF_EXP_012",
+        "explain_code": "SAF_EXP_012",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Check your available account balance first before starting your money transfer.": {
+      "code": "SAF_EXP_012",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+      "en": "Check your available account balance first before starting your money transfer.",
+      "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+      "explain_en": "Check your available account balance first before starting your money transfer.",
+      "eto": {
+        "text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "duration": 6.68,
+        "explain_text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "explain_audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "explain_duration": 6.68,
+        "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+        "explain_en": "Check your available account balance first before starting your money transfer.",
+        "code": "SAF_EXP_012",
+        "explain_code": "SAF_EXP_012",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Montant exact immédiatement utilisable sur votre compte.": {
+      "code": "SAF_EXP_013",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant exact immédiatement utilisable sur votre compte.",
+      "en": "Exact amount immediately available on your account.",
+      "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+      "explain_en": "Exact amount immediately available on your account.",
+      "eto": {
+        "text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "duration": 3.95,
+        "explain_text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "explain_audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "explain_duration": 3.95,
+        "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+        "explain_en": "Exact amount immediately available on your account.",
+        "code": "SAF_EXP_013",
+        "explain_code": "SAF_EXP_013",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Exact amount immediately available on your account.": {
+      "code": "SAF_EXP_013",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant exact immédiatement utilisable sur votre compte.",
+      "en": "Exact amount immediately available on your account.",
+      "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+      "explain_en": "Exact amount immediately available on your account.",
+      "eto": {
+        "text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "duration": 3.95,
+        "explain_text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "explain_audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "explain_duration": 3.95,
+        "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+        "explain_en": "Exact amount immediately available on your account.",
+        "code": "SAF_EXP_013",
+        "explain_code": "SAF_EXP_013",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.": {
+      "code": "SAF_EXP_014",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+      "en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+      "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "eto": {
+        "text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "duration": 7.96,
+        "explain_text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "explain_audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "explain_duration": 7.96,
+        "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+        "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+        "code": "SAF_EXP_014",
+        "explain_code": "SAF_EXP_014",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Main bank account used for daily deposits, withdrawals, and transfers.": {
+      "code": "SAF_EXP_014",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+      "en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+      "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "eto": {
+        "text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "duration": 7.96,
+        "explain_text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "explain_audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "explain_duration": 7.96,
+        "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+        "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+        "code": "SAF_EXP_014",
+        "explain_code": "SAF_EXP_014",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.": {
+      "code": "SAF_EXP_015",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+      "en": "Click this button to start sending money and move to Step 2.",
+      "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+      "explain_en": "Click this button to start sending money and move to Step 2.",
+      "eto": {
+        "text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "duration": 5.35,
+        "explain_text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "explain_audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "explain_duration": 5.35,
+        "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+        "explain_en": "Click this button to start sending money and move to Step 2.",
+        "code": "SAF_EXP_015",
+        "explain_code": "SAF_EXP_015",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Click this button to start sending money and move to Step 2.": {
+      "code": "SAF_EXP_015",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+      "en": "Click this button to start sending money and move to Step 2.",
+      "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+      "explain_en": "Click this button to start sending money and move to Step 2.",
+      "eto": {
+        "text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "duration": 5.35,
+        "explain_text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "explain_audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "explain_duration": 5.35,
+        "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+        "explain_en": "Click this button to start sending money and move to Step 2.",
+        "code": "SAF_EXP_015",
+        "explain_code": "SAF_EXP_015",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Accéder au simulateur de tarification pour connaître le coût d'un transfert.": {
+      "code": "SAF_EXP_016",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+      "en": "Access the fee simulator to know the cost of a transfer.",
+      "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+      "explain_en": "Access the fee simulator to know the cost of a transfer.",
+      "eto": {
+        "text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "duration": 5.18,
+        "explain_text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "explain_audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "explain_duration": 5.18,
+        "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+        "explain_en": "Access the fee simulator to know the cost of a transfer.",
+        "code": "SAF_EXP_016",
+        "explain_code": "SAF_EXP_016",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Access the fee simulator to know the cost of a transfer.": {
+      "code": "SAF_EXP_016",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+      "en": "Access the fee simulator to know the cost of a transfer.",
+      "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+      "explain_en": "Access the fee simulator to know the cost of a transfer.",
+      "eto": {
+        "text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "duration": 5.18,
+        "explain_text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "explain_audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "explain_duration": 5.18,
+        "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+        "explain_en": "Access the fee simulator to know the cost of a transfer.",
+        "code": "SAF_EXP_016",
+        "explain_code": "SAF_EXP_016",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).": {
+      "code": "SAF_EXP_017",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+      "en": "History of your last 4 money movements (payments and receipts).",
+      "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+      "explain_en": "History of your last 4 money movements (payments and receipts).",
+      "eto": {
+        "text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "duration": 6.84,
+        "explain_text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "explain_audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "explain_duration": 6.84,
+        "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+        "explain_en": "History of your last 4 money movements (payments and receipts).",
+        "code": "SAF_EXP_017",
+        "explain_code": "SAF_EXP_017",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "History of your last 4 money movements (payments and receipts).": {
+      "code": "SAF_EXP_017",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+      "en": "History of your last 4 money movements (payments and receipts).",
+      "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+      "explain_en": "History of your last 4 money movements (payments and receipts).",
+      "eto": {
+        "text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "duration": 6.84,
+        "explain_text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "explain_audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "explain_duration": 6.84,
+        "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+        "explain_en": "History of your last 4 money movements (payments and receipts).",
+        "code": "SAF_EXP_017",
+        "explain_code": "SAF_EXP_017",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).": {
+      "code": "SAF_EXP_018",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+      "en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+      "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "eto": {
+        "text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "duration": 10.77,
+        "explain_text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "explain_duration": 10.77,
+        "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+        "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+        "code": "SAF_EXP_018",
+        "explain_code": "SAF_EXP_018",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Purchase or payment made to a merchant (-12,500 FCFA).": {
+      "code": "SAF_EXP_018",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+      "en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+      "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "eto": {
+        "text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "duration": 10.77,
+        "explain_text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "explain_duration": 10.77,
+        "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+        "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+        "code": "SAF_EXP_018",
+        "explain_code": "SAF_EXP_018",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Versement de votre salaire reçu sur le compte (+180 000 FCFA).": {
+      "code": "SAF_EXP_019",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+      "en": "Salary payment received in your account (+180,000 FCFA).",
+      "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+      "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+      "eto": {
+        "text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "duration": 9.08,
+        "explain_text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "explain_audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "explain_duration": 9.08,
+        "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+        "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+        "code": "SAF_EXP_019",
+        "explain_code": "SAF_EXP_019",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Salary payment received in your account (+180,000 FCFA).": {
+      "code": "SAF_EXP_019",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+      "en": "Salary payment received in your account (+180,000 FCFA).",
+      "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+      "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+      "eto": {
+        "text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "duration": 9.08,
+        "explain_text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "explain_audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "explain_duration": 9.08,
+        "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+        "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+        "code": "SAF_EXP_019",
+        "explain_code": "SAF_EXP_019",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).": {
+      "code": "SAF_EXP_020",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+      "en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+      "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "eto": {
+        "text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "duration": 6.09,
+        "explain_text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "explain_audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "explain_duration": 6.09,
+        "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+        "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+        "code": "SAF_EXP_020",
+        "explain_code": "SAF_EXP_020",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Money transfer received from a third party into your account (+50,000 FCFA).": {
+      "code": "SAF_EXP_020",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+      "en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+      "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "eto": {
+        "text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "duration": 6.09,
+        "explain_text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "explain_audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "explain_duration": 6.09,
+        "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+        "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+        "code": "SAF_EXP_020",
+        "explain_code": "SAF_EXP_020",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Règlement de votre facture d'électricité (-7 500 FCFA).": {
+      "code": "SAF_EXP_021",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+      "en": "Payment of your electricity bill (-7,500 FCFA).",
+      "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+      "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+      "eto": {
+        "text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "duration": 7.7,
+        "explain_text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "explain_duration": 7.7,
+        "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+        "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+        "code": "SAF_EXP_021",
+        "explain_code": "SAF_EXP_021",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Payment of your electricity bill (-7,500 FCFA).": {
+      "code": "SAF_EXP_021",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+      "en": "Payment of your electricity bill (-7,500 FCFA).",
+      "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+      "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+      "eto": {
+        "text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "duration": 7.7,
+        "explain_text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "explain_duration": 7.7,
+        "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+        "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+        "code": "SAF_EXP_021",
+        "explain_code": "SAF_EXP_021",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 2 : Calcul du coût du transfert selon le canal choisi.": {
+      "code": "SAF_EXP_022",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+      "en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+      "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "eto": {
+        "text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "duration": 4.57,
+        "explain_text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "explain_audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "explain_duration": 4.57,
+        "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+        "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+        "code": "SAF_EXP_022",
+        "explain_code": "SAF_EXP_022",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 2: Calculation of the transfer cost based on chosen channel.": {
+      "code": "SAF_EXP_022",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+      "en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+      "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "eto": {
+        "text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "duration": 4.57,
+        "explain_text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "explain_audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "explain_duration": 4.57,
+        "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+        "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+        "code": "SAF_EXP_022",
+        "explain_code": "SAF_EXP_022",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.": {
+      "code": "SAF_EXP_023",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+      "en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+      "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "eto": {
+        "text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "duration": 9.3,
+        "explain_text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "explain_audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "explain_duration": 9.3,
+        "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+        "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+        "code": "SAF_EXP_023",
+        "explain_code": "SAF_EXP_023",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.": {
+      "code": "SAF_EXP_023",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+      "en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+      "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "eto": {
+        "text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "duration": 9.3,
+        "explain_text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "explain_audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "explain_duration": 9.3,
+        "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+        "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+        "code": "SAF_EXP_023",
+        "explain_code": "SAF_EXP_023",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.": {
+      "code": "SAF_EXP_024",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+      "en": "The financial network used to send funds to the recipient.",
+      "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+      "explain_en": "The financial network used to send funds to the recipient.",
+      "eto": {
+        "text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "duration": 7.97,
+        "explain_text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "explain_audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "explain_duration": 7.97,
+        "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+        "explain_en": "The financial network used to send funds to the recipient.",
+        "code": "SAF_EXP_024",
+        "explain_code": "SAF_EXP_024",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "The financial network used to send funds to the recipient.": {
+      "code": "SAF_EXP_024",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+      "en": "The financial network used to send funds to the recipient.",
+      "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+      "explain_en": "The financial network used to send funds to the recipient.",
+      "eto": {
+        "text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "duration": 7.97,
+        "explain_text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "explain_audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "explain_duration": 7.97,
+        "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+        "explain_en": "The financial network used to send funds to the recipient.",
+        "code": "SAF_EXP_024",
+        "explain_code": "SAF_EXP_024",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).": {
+      "code": "SAF_EXP_025",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+      "en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+      "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "eto": {
+        "text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "duration": 7.68,
+        "explain_text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "explain_audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "explain_duration": 7.68,
+        "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+        "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+        "code": "SAF_EXP_025",
+        "explain_code": "SAF_EXP_025",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).": {
+      "code": "SAF_EXP_025",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+      "en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+      "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "eto": {
+        "text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "duration": 7.68,
+        "explain_text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "explain_audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "explain_duration": 7.68,
+        "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+        "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+        "code": "SAF_EXP_025",
+        "explain_code": "SAF_EXP_025",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.": {
+      "code": "SAF_EXP_026",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+      "en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+      "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "eto": {
+        "text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "duration": 6.17,
+        "explain_text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "explain_audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "explain_duration": 6.17,
+        "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+        "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+        "code": "SAF_EXP_026",
+        "explain_code": "SAF_EXP_026",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "The money arrives immediately at the recipient and no fee is deducted.": {
+      "code": "SAF_EXP_026",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+      "en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+      "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "eto": {
+        "text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "duration": 6.17,
+        "explain_text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "explain_audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "explain_duration": 6.17,
+        "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+        "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+        "code": "SAF_EXP_026",
+        "explain_code": "SAF_EXP_026",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).": {
+      "code": "SAF_EXP_027",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+      "en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+      "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "eto": {
+        "text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "duration": 9.06,
+        "explain_text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "explain_audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "explain_duration": 9.06,
+        "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+        "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+        "code": "SAF_EXP_027",
+        "explain_code": "SAF_EXP_027",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Transfer to a Mobile Money wallet (1.5% fee).": {
+      "code": "SAF_EXP_027",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+      "en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+      "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "eto": {
+        "text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "duration": 9.06,
+        "explain_text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "explain_audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "explain_duration": 9.06,
+        "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+        "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+        "code": "SAF_EXP_027",
+        "explain_code": "SAF_EXP_027",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.": {
+      "code": "SAF_EXP_028",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+      "en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+      "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "eto": {
+        "text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "duration": 12.23,
+        "explain_text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "explain_audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "explain_duration": 12.23,
+        "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+        "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+        "code": "SAF_EXP_028",
+        "explain_code": "SAF_EXP_028",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.": {
+      "code": "SAF_EXP_028",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+      "en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+      "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "eto": {
+        "text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "duration": 12.23,
+        "explain_text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "explain_audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "explain_duration": 12.23,
+        "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+        "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+        "code": "SAF_EXP_028",
+        "explain_code": "SAF_EXP_028",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Virement vers un compte ouvert dans une autre banque (commission de 2 %).": {
+      "code": "SAF_EXP_029",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+      "en": "Transfer to an account in another bank (2% fee).",
+      "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+      "explain_en": "Transfer to an account in another bank (2% fee).",
+      "eto": {
+        "text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "duration": 7.18,
+        "explain_text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "explain_audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "explain_duration": 7.18,
+        "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+        "explain_en": "Transfer to an account in another bank (2% fee).",
+        "code": "SAF_EXP_029",
+        "explain_code": "SAF_EXP_029",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Transfer to an account in another bank (2% fee).": {
+      "code": "SAF_EXP_029",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+      "en": "Transfer to an account in another bank (2% fee).",
+      "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+      "explain_en": "Transfer to an account in another bank (2% fee).",
+      "eto": {
+        "text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "duration": 7.18,
+        "explain_text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "explain_audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "explain_duration": 7.18,
+        "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+        "explain_en": "Transfer to an account in another bank (2% fee).",
+        "code": "SAF_EXP_029",
+        "explain_code": "SAF_EXP_029",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.": {
+      "code": "SAF_EXP_030",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+      "en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+      "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "eto": {
+        "text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "duration": 12.36,
+        "explain_text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "explain_audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "explain_duration": 12.36,
+        "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+        "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+        "code": "SAF_EXP_030",
+        "explain_code": "SAF_EXP_030",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.": {
+      "code": "SAF_EXP_030",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+      "en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+      "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "eto": {
+        "text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "duration": 12.36,
+        "explain_text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "explain_audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "explain_duration": 12.36,
+        "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+        "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+        "code": "SAF_EXP_030",
+        "explain_code": "SAF_EXP_030",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "La somme en FCFA que vous souhaitez faire parvenir au destinataire.": {
+      "code": "SAF_EXP_031",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+      "en": "The amount in FCFA you want to send to the recipient.",
+      "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+      "explain_en": "The amount in FCFA you want to send to the recipient.",
+      "eto": {
+        "text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "duration": 3.37,
+        "explain_text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "explain_audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "explain_duration": 3.37,
+        "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+        "explain_en": "The amount in FCFA you want to send to the recipient.",
+        "code": "SAF_EXP_031",
+        "explain_code": "SAF_EXP_031",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "The amount in FCFA you want to send to the recipient.": {
+      "code": "SAF_EXP_031",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+      "en": "The amount in FCFA you want to send to the recipient.",
+      "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+      "explain_en": "The amount in FCFA you want to send to the recipient.",
+      "eto": {
+        "text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "duration": 3.37,
+        "explain_text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "explain_audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "explain_duration": 3.37,
+        "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+        "explain_en": "The amount in FCFA you want to send to the recipient.",
+        "code": "SAF_EXP_031",
+        "explain_code": "SAF_EXP_031",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Aucun frais de transaction.": {
+      "code": "SAF_EXP_032",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Aucun frais de transaction.",
+      "en": "No transaction fees.",
+      "explain_fr": "Aucun frais de transaction.",
+      "explain_en": "No transaction fees.",
+      "eto": {
+        "text": "Bɔ frɛ bǝ́sǝ̂",
+        "audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "duration": 2.13,
+        "explain_text": "Bɔ frɛ bǝ́sǝ̂",
+        "explain_audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "explain_duration": 2.13,
+        "explain_fr": "Aucun frais de transaction.",
+        "explain_en": "No transaction fees.",
+        "code": "SAF_EXP_032",
+        "explain_code": "SAF_EXP_032",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "No transaction fees.": {
+      "code": "SAF_EXP_032",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Aucun frais de transaction.",
+      "en": "No transaction fees.",
+      "explain_fr": "Aucun frais de transaction.",
+      "explain_en": "No transaction fees.",
+      "eto": {
+        "text": "Bɔ frɛ bǝ́sǝ̂",
+        "audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "duration": 2.13,
+        "explain_text": "Bɔ frɛ bǝ́sǝ̂",
+        "explain_audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "explain_duration": 2.13,
+        "explain_fr": "Aucun frais de transaction.",
+        "explain_en": "No transaction fees.",
+        "code": "SAF_EXP_032",
+        "explain_code": "SAF_EXP_032",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.": {
+      "code": "SAF_EXP_033",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+      "en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+      "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "eto": {
+        "text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "duration": 6.45,
+        "explain_text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "explain_audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "explain_duration": 6.45,
+        "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+        "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+        "code": "SAF_EXP_033",
+        "explain_code": "SAF_EXP_033",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Total sum (Amount + Fee) that will be deducted from your account.": {
+      "code": "SAF_EXP_033",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+      "en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+      "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "eto": {
+        "text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "duration": 6.45,
+        "explain_text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "explain_audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "explain_duration": 6.45,
+        "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+        "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+        "code": "SAF_EXP_033",
+        "explain_code": "SAF_EXP_033",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Montant qui restera disponible sur votre compte après cette opération.": {
+      "code": "SAF_EXP_034",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant qui restera disponible sur votre compte après cette opération.",
+      "en": "Amount that will remain available in your account after this transfer.",
+      "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+      "explain_en": "Amount that will remain available in your account after this transfer.",
+      "eto": {
+        "text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "duration": 7.14,
+        "explain_text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "explain_audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "explain_duration": 7.14,
+        "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+        "explain_en": "Amount that will remain available in your account after this transfer.",
+        "code": "SAF_EXP_034",
+        "explain_code": "SAF_EXP_034",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Amount that will remain available in your account after this transfer.": {
+      "code": "SAF_EXP_034",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant qui restera disponible sur votre compte après cette opération.",
+      "en": "Amount that will remain available in your account after this transfer.",
+      "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+      "explain_en": "Amount that will remain available in your account after this transfer.",
+      "eto": {
+        "text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "duration": 7.14,
+        "explain_text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "explain_audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "explain_duration": 7.14,
+        "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+        "explain_en": "Amount that will remain available in your account after this transfer.",
+        "code": "SAF_EXP_034",
+        "explain_code": "SAF_EXP_034",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Revenir à l'étape précédente.": {
+      "code": "SAF_EXP_035",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente.",
+      "en": "Return to previous step.",
+      "explain_fr": "Revenir à l'étape précédente.",
+      "explain_en": "Return to previous step.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "duration": 2.4,
+        "explain_text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "explain_audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "explain_duration": 2.4,
+        "explain_fr": "Revenir à l'étape précédente.",
+        "explain_en": "Return to previous step.",
+        "code": "SAF_EXP_035",
+        "explain_code": "SAF_EXP_035",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Return to previous step.": {
+      "code": "SAF_EXP_035",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente.",
+      "en": "Return to previous step.",
+      "explain_fr": "Revenir à l'étape précédente.",
+      "explain_en": "Return to previous step.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "duration": 2.4,
+        "explain_text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "explain_audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "explain_duration": 2.4,
+        "explain_fr": "Revenir à l'étape précédente.",
+        "explain_en": "Return to previous step.",
+        "code": "SAF_EXP_035",
+        "explain_code": "SAF_EXP_035",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Valider cette étape et passer à la suivante.": {
+      "code": "SAF_EXP_036",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider cette étape et passer à la suivante.",
+      "en": "Validate this step and proceed to next.",
+      "explain_fr": "Valider cette étape et passer à la suivante.",
+      "explain_en": "Validate this step and proceed to next.",
+      "eto": {
+        "text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "duration": 4.88,
+        "explain_text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "explain_audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "explain_duration": 4.88,
+        "explain_fr": "Valider cette étape et passer à la suivante.",
+        "explain_en": "Validate this step and proceed to next.",
+        "code": "SAF_EXP_036",
+        "explain_code": "SAF_EXP_036",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Validate this step and proceed to next.": {
+      "code": "SAF_EXP_036",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider cette étape et passer à la suivante.",
+      "en": "Validate this step and proceed to next.",
+      "explain_fr": "Valider cette étape et passer à la suivante.",
+      "explain_en": "Validate this step and proceed to next.",
+      "eto": {
+        "text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "duration": 4.88,
+        "explain_text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "explain_audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "explain_duration": 4.88,
+        "explain_fr": "Valider cette étape et passer à la suivante.",
+        "explain_en": "Validate this step and proceed to next.",
+        "code": "SAF_EXP_036",
+        "explain_code": "SAF_EXP_036",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.": {
+      "code": "SAF_EXP_037",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+      "en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+      "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "eto": {
+        "text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "duration": 9.32,
+        "explain_text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "explain_audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "explain_duration": 9.32,
+        "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+        "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+        "code": "SAF_EXP_037",
+        "explain_code": "SAF_EXP_037",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 3: Enter the recipient identity and phone number, checking each digit.": {
+      "code": "SAF_EXP_037",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+      "en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+      "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "eto": {
+        "text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "duration": 9.32,
+        "explain_text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "explain_audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "explain_duration": 9.32,
+        "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+        "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+        "code": "SAF_EXP_037",
+        "explain_code": "SAF_EXP_037",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.": {
+      "code": "SAF_EXP_038",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+      "en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+      "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "eto": {
+        "text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "duration": 12.12,
+        "explain_text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "explain_audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "explain_duration": 12.12,
+        "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+        "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+        "code": "SAF_EXP_038",
+        "explain_code": "SAF_EXP_038",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.": {
+      "code": "SAF_EXP_038",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+      "en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+      "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "eto": {
+        "text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "duration": 12.12,
+        "explain_text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "explain_audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "explain_duration": 12.12,
+        "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+        "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+        "code": "SAF_EXP_038",
+        "explain_code": "SAF_EXP_038",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Nom complet de la personne à qui vous envoyez l'argent.": {
+      "code": "SAF_EXP_039",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+      "en": "Full name of the person you are sending money to.",
+      "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+      "explain_en": "Full name of the person you are sending money to.",
+      "eto": {
+        "text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "duration": 2.12,
+        "explain_text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "explain_duration": 2.12,
+        "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+        "explain_en": "Full name of the person you are sending money to.",
+        "code": "SAF_EXP_039",
+        "explain_code": "SAF_EXP_039",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Full name of the person you are sending money to.": {
+      "code": "SAF_EXP_039",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+      "en": "Full name of the person you are sending money to.",
+      "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+      "explain_en": "Full name of the person you are sending money to.",
+      "eto": {
+        "text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "duration": 2.12,
+        "explain_text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "explain_duration": 2.12,
+        "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+        "explain_en": "Full name of the person you are sending money to.",
+        "code": "SAF_EXP_039",
+        "explain_code": "SAF_EXP_039",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Numéro de téléphone mobile du destinataire.": {
+      "code": "SAF_EXP_040",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Numéro de téléphone mobile du destinataire.",
+      "en": "Mobile phone number of the recipient.",
+      "explain_fr": "Numéro de téléphone mobile du destinataire.",
+      "explain_en": "Mobile phone number of the recipient.",
+      "eto": {
+        "text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "duration": 3.01,
+        "explain_text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "explain_duration": 3.01,
+        "explain_fr": "Numéro de téléphone mobile du destinataire.",
+        "explain_en": "Mobile phone number of the recipient.",
+        "code": "SAF_EXP_040",
+        "explain_code": "SAF_EXP_040",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Mobile phone number of the recipient.": {
+      "code": "SAF_EXP_040",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Numéro de téléphone mobile du destinataire.",
+      "en": "Mobile phone number of the recipient.",
+      "explain_fr": "Numéro de téléphone mobile du destinataire.",
+      "explain_en": "Mobile phone number of the recipient.",
+      "eto": {
+        "text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "duration": 3.01,
+        "explain_text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "explain_duration": 3.01,
+        "explain_fr": "Numéro de téléphone mobile du destinataire.",
+        "explain_en": "Mobile phone number of the recipient.",
+        "code": "SAF_EXP_040",
+        "explain_code": "SAF_EXP_040",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Raison de l'envoi d'argent.": {
+      "code": "SAF_EXP_041",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Raison de l'envoi d'argent.",
+      "en": "Reason for sending money.",
+      "explain_fr": "Raison de l'envoi d'argent.",
+      "explain_en": "Reason for sending money.",
+      "eto": {
+        "text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "duration": 2.62,
+        "explain_text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "explain_duration": 2.62,
+        "explain_fr": "Raison de l'envoi d'argent.",
+        "explain_en": "Reason for sending money.",
+        "code": "SAF_EXP_041",
+        "explain_code": "SAF_EXP_041",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Reason for sending money.": {
+      "code": "SAF_EXP_041",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Raison de l'envoi d'argent.",
+      "en": "Reason for sending money.",
+      "explain_fr": "Raison de l'envoi d'argent.",
+      "explain_en": "Reason for sending money.",
+      "eto": {
+        "text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "duration": 2.62,
+        "explain_text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "explain_duration": 2.62,
+        "explain_fr": "Raison de l'envoi d'argent.",
+        "explain_en": "Reason for sending money.",
+        "code": "SAF_EXP_041",
+        "explain_code": "SAF_EXP_041",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Commentaire facultatif joint au transfert.": {
+      "code": "SAF_EXP_042",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commentaire facultatif joint au transfert.",
+      "en": "Optional comment attached to the transfer.",
+      "explain_fr": "Commentaire facultatif joint au transfert.",
+      "explain_en": "Optional comment attached to the transfer.",
+      "eto": {
+        "text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "duration": 4.05,
+        "explain_text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "explain_audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "explain_duration": 4.05,
+        "explain_fr": "Commentaire facultatif joint au transfert.",
+        "explain_en": "Optional comment attached to the transfer.",
+        "code": "SAF_EXP_042",
+        "explain_code": "SAF_EXP_042",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Optional comment attached to the transfer.": {
+      "code": "SAF_EXP_042",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commentaire facultatif joint au transfert.",
+      "en": "Optional comment attached to the transfer.",
+      "explain_fr": "Commentaire facultatif joint au transfert.",
+      "explain_en": "Optional comment attached to the transfer.",
+      "eto": {
+        "text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "duration": 4.05,
+        "explain_text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "explain_audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "explain_duration": 4.05,
+        "explain_fr": "Commentaire facultatif joint au transfert.",
+        "explain_en": "Optional comment attached to the transfer.",
+        "code": "SAF_EXP_042",
+        "explain_code": "SAF_EXP_042",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.": {
+      "code": "SAF_EXP_043",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+      "en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+      "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "duration": 9.6,
+        "explain_text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "explain_audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "explain_duration": 9.6,
+        "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+        "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+        "code": "SAF_EXP_043",
+        "explain_code": "SAF_EXP_043",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Mandatory action: check this box to confirm you verified the recipient name and number.": {
+      "code": "SAF_EXP_043",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+      "en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+      "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "duration": 9.6,
+        "explain_text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "explain_audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "explain_duration": 9.6,
+        "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+        "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+        "code": "SAF_EXP_043",
+        "explain_code": "SAF_EXP_043",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.": {
+      "code": "SAF_EXP_044",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+      "en": "Step 4: Review every line of the summary before giving final approval.",
+      "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+      "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+      "eto": {
+        "text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "duration": 8.53,
+        "explain_text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "explain_audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "explain_duration": 8.53,
+        "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+        "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+        "code": "SAF_EXP_044",
+        "explain_code": "SAF_EXP_044",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Step 4: Review every line of the summary before giving final approval.": {
+      "code": "SAF_EXP_044",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+      "en": "Step 4: Review every line of the summary before giving final approval.",
+      "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+      "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+      "eto": {
+        "text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "duration": 8.53,
+        "explain_text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "explain_audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "explain_duration": 8.53,
+        "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+        "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+        "code": "SAF_EXP_044",
+        "explain_code": "SAF_EXP_044",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Montant net envoyé au bénéficiaire.": {
+      "code": "SAF_EXP_045",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant net envoyé au bénéficiaire.",
+      "en": "Net amount sent to recipient.",
+      "explain_fr": "Montant net envoyé au bénéficiaire.",
+      "explain_en": "Net amount sent to recipient.",
+      "eto": {
+        "text": "Táŋ ī mwání úlôm.",
+        "audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "duration": 2.29,
+        "explain_text": "Táŋ ī mwání úlôm.",
+        "explain_audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "explain_duration": 2.29,
+        "explain_fr": "Montant net envoyé au bénéficiaire.",
+        "explain_en": "Net amount sent to recipient.",
+        "code": "SAF_EXP_045",
+        "explain_code": "SAF_EXP_045",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Net amount sent to recipient.": {
+      "code": "SAF_EXP_045",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant net envoyé au bénéficiaire.",
+      "en": "Net amount sent to recipient.",
+      "explain_fr": "Montant net envoyé au bénéficiaire.",
+      "explain_en": "Net amount sent to recipient.",
+      "eto": {
+        "text": "Táŋ ī mwání úlôm.",
+        "audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "duration": 2.29,
+        "explain_text": "Táŋ ī mwání úlôm.",
+        "explain_audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "explain_duration": 2.29,
+        "explain_fr": "Montant net envoyé au bénéficiaire.",
+        "explain_en": "Net amount sent to recipient.",
+        "code": "SAF_EXP_045",
+        "explain_code": "SAF_EXP_045",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Somme totale retirée de votre compte (montant + frais).": {
+      "code": "SAF_EXP_046",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale retirée de votre compte (montant + frais).",
+      "en": "Total amount debited from your account (amount + fees).",
+      "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+      "explain_en": "Total amount debited from your account (amount + fees).",
+      "eto": {
+        "text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "duration": 5.77,
+        "explain_text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "explain_audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "explain_duration": 5.77,
+        "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+        "explain_en": "Total amount debited from your account (amount + fees).",
+        "code": "SAF_EXP_046",
+        "explain_code": "SAF_EXP_046",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Total amount debited from your account (amount + fees).": {
+      "code": "SAF_EXP_046",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale retirée de votre compte (montant + frais).",
+      "en": "Total amount debited from your account (amount + fees).",
+      "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+      "explain_en": "Total amount debited from your account (amount + fees).",
+      "eto": {
+        "text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "duration": 5.77,
+        "explain_text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "explain_audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "explain_duration": 5.77,
+        "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+        "explain_en": "Total amount debited from your account (amount + fees).",
+        "code": "SAF_EXP_046",
+        "explain_code": "SAF_EXP_046",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Numéro de téléphone du destinataire.": {
+      "code": "SAF_EXP_047",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Numéro de téléphone du destinataire.",
+      "en": "Numéro de téléphone du destinataire.",
+      "explain_fr": "Numéro de téléphone du destinataire.",
+      "explain_en": "Numéro de téléphone du destinataire.",
+      "eto": {
+        "text": "Nɔmɔ a téléfɔ̃n ímôd úlôm mwání.",
+        "audio": "eton/saf_exp_047_take1_34b15aa8.webm",
+        "duration": 3.2,
+        "explain_text": "Nɔmɔ a téléfɔ̃n ímôd úlôm mwání.",
+        "explain_audio": "eton/saf_exp_047_take1_34b15aa8.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Numéro de téléphone du destinataire.",
+        "explain_en": "Numéro de téléphone du destinataire.",
+        "code": "SAF_EXP_047",
+        "explain_code": "SAF_EXP_047",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Identifiant unique de traçabilité de la transaction.": {
+      "code": "SAF_EXP_048",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Identifiant unique de traçabilité de la transaction.",
+      "en": "Unique transaction reference ID.",
+      "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+      "explain_en": "Unique transaction reference ID.",
+      "eto": {
+        "text": "Idaŋtité ílôm mwání.",
+        "audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "duration": 2.76,
+        "explain_text": "Idaŋtité ílôm mwání.",
+        "explain_audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "explain_duration": 2.76,
+        "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+        "explain_en": "Unique transaction reference ID.",
+        "code": "SAF_EXP_048",
+        "explain_code": "SAF_EXP_048",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Unique transaction reference ID.": {
+      "code": "SAF_EXP_048",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Identifiant unique de traçabilité de la transaction.",
+      "en": "Unique transaction reference ID.",
+      "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+      "explain_en": "Unique transaction reference ID.",
+      "eto": {
+        "text": "Idaŋtité ílôm mwání.",
+        "audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "duration": 2.76,
+        "explain_text": "Idaŋtité ílôm mwání.",
+        "explain_audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "explain_duration": 2.76,
+        "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+        "explain_en": "Unique transaction reference ID.",
+        "code": "SAF_EXP_048",
+        "explain_code": "SAF_EXP_048",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Canal de transfert sélectionné.": {
+      "code": "SAF_EXP_049",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Canal de transfert sélectionné.",
+      "en": "Selected transfer channel.",
+      "explain_fr": "Canal de transfert sélectionné.",
+      "explain_en": "Selected transfer channel.",
+      "eto": {
+        "text": "Zɛ̌n ílôm í mwání itwábban.",
+        "audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "duration": 3.2,
+        "explain_text": "Zɛ̌n ílôm í mwání itwábban.",
+        "explain_audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Canal de transfert sélectionné.",
+        "explain_en": "Selected transfer channel.",
+        "code": "SAF_EXP_049",
+        "explain_code": "SAF_EXP_049",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Selected transfer channel.": {
+      "code": "SAF_EXP_049",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Canal de transfert sélectionné.",
+      "en": "Selected transfer channel.",
+      "explain_fr": "Canal de transfert sélectionné.",
+      "explain_en": "Selected transfer channel.",
+      "eto": {
+        "text": "Zɛ̌n ílôm í mwání itwábban.",
+        "audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "duration": 3.2,
+        "explain_text": "Zɛ̌n ílôm í mwání itwábban.",
+        "explain_audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Canal de transfert sélectionné.",
+        "explain_en": "Selected transfer channel.",
+        "code": "SAF_EXP_049",
+        "explain_code": "SAF_EXP_049",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.": {
+      "code": "SAF_EXP_050",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+      "en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+      "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "duration": 6.36,
+        "explain_text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "explain_audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "explain_duration": 6.36,
+        "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+        "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+        "code": "SAF_EXP_050",
+        "explain_code": "SAF_EXP_050",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Mandatory action: check this box to authorize the debit and final transfer.": {
+      "code": "SAF_EXP_050",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+      "en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+      "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "duration": 6.36,
+        "explain_text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "explain_audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "explain_duration": 6.36,
+        "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+        "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+        "code": "SAF_EXP_050",
+        "explain_code": "SAF_EXP_050",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Revenir à l'étape précédente pour corriger une information.": {
+      "code": "SAF_EXP_051",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente pour corriger une information.",
+      "en": "Return to previous step to edit information.",
+      "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+      "explain_en": "Return to previous step to edit information.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "duration": 3.88,
+        "explain_text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "explain_audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "explain_duration": 3.88,
+        "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+        "explain_en": "Return to previous step to edit information.",
+        "code": "SAF_EXP_051",
+        "explain_code": "SAF_EXP_051",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Return to previous step to edit information.": {
+      "code": "SAF_EXP_051",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente pour corriger une information.",
+      "en": "Return to previous step to edit information.",
+      "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+      "explain_en": "Return to previous step to edit information.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "duration": 3.88,
+        "explain_text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "explain_audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "explain_duration": 3.88,
+        "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+        "explain_en": "Return to previous step to edit information.",
+        "code": "SAF_EXP_051",
+        "explain_code": "SAF_EXP_051",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Valider définitivement et envoyer les fonds maintenant.": {
+      "code": "SAF_EXP_052",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider définitivement et envoyer les fonds maintenant.",
+      "en": "Confirm definitively and send funds now.",
+      "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+      "explain_en": "Confirm definitively and send funds now.",
+      "eto": {
+        "text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "duration": 3.24,
+        "explain_text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "explain_audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "explain_duration": 3.24,
+        "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+        "explain_en": "Confirm definitively and send funds now.",
+        "code": "SAF_EXP_052",
+        "explain_code": "SAF_EXP_052",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Confirm definitively and send funds now.": {
+      "code": "SAF_EXP_052",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider définitivement et envoyer les fonds maintenant.",
+      "en": "Confirm definitively and send funds now.",
+      "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+      "explain_en": "Confirm definitively and send funds now.",
+      "eto": {
+        "text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "duration": 3.24,
+        "explain_text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "explain_audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "explain_duration": 3.24,
+        "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+        "explain_en": "Confirm definitively and send funds now.",
+        "code": "SAF_EXP_052",
+        "explain_code": "SAF_EXP_052",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Opération terminée : votre virement a bien été exécuté.": {
+      "code": "SAF_EXP_053",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Opération terminée : votre virement a bien été exécuté.",
+      "en": "Operation completed: your transfer was successfully processed.",
+      "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+      "explain_en": "Operation completed: your transfer was successfully processed.",
+      "eto": {
+        "text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "duration": 3.48,
+        "explain_text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "explain_audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "explain_duration": 3.48,
+        "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+        "explain_en": "Operation completed: your transfer was successfully processed.",
+        "code": "SAF_EXP_053",
+        "explain_code": "SAF_EXP_053",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Operation completed: your transfer was successfully processed.": {
+      "code": "SAF_EXP_053",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Opération terminée : votre virement a bien été exécuté.",
+      "en": "Operation completed: your transfer was successfully processed.",
+      "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+      "explain_en": "Operation completed: your transfer was successfully processed.",
+      "eto": {
+        "text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "duration": 3.48,
+        "explain_text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "explain_audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "explain_duration": 3.48,
+        "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+        "explain_en": "Operation completed: your transfer was successfully processed.",
+        "code": "SAF_EXP_053",
+        "explain_code": "SAF_EXP_053",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.": {
+      "code": "SAF_EXP_054",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+      "en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+      "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "eto": {
+        "text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "duration": 5.5,
+        "explain_text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "explain_audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "explain_duration": 5.5,
+        "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+        "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+        "code": "SAF_EXP_054",
+        "explain_code": "SAF_EXP_054",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Funds successfully sent. Keep the reference number shown on this receipt.": {
+      "code": "SAF_EXP_054",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+      "en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+      "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "eto": {
+        "text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "duration": 5.5,
+        "explain_text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "explain_audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "explain_duration": 5.5,
+        "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+        "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+        "code": "SAF_EXP_054",
+        "explain_code": "SAF_EXP_054",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "État final du traitement de la transaction.": {
+      "code": "SAF_EXP_055",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "État final du traitement de la transaction.",
+      "en": "Final processing status of the transaction.",
+      "explain_fr": "État final du traitement de la transaction.",
+      "explain_en": "Final processing status of the transaction.",
+      "eto": {
+        "text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "duration": 3.08,
+        "explain_text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "explain_audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "explain_duration": 3.08,
+        "explain_fr": "État final du traitement de la transaction.",
+        "explain_en": "Final processing status of the transaction.",
+        "code": "SAF_EXP_055",
+        "explain_code": "SAF_EXP_055",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Final processing status of the transaction.": {
+      "code": "SAF_EXP_055",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "État final du traitement de la transaction.",
+      "en": "Final processing status of the transaction.",
+      "explain_fr": "État final du traitement de la transaction.",
+      "explain_en": "Final processing status of the transaction.",
+      "eto": {
+        "text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "duration": 3.08,
+        "explain_text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "explain_audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "explain_duration": 3.08,
+        "explain_fr": "État final du traitement de la transaction.",
+        "explain_en": "Final processing status of the transaction.",
+        "code": "SAF_EXP_055",
+        "explain_code": "SAF_EXP_055",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Transaction réussie et validée.": {
+      "code": "SAF_EXP_056",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transaction réussie et validée.",
+      "en": "Transaction successful and confirmed.",
+      "explain_fr": "Transaction réussie et validée.",
+      "explain_en": "Transaction successful and confirmed.",
+      "eto": {
+        "text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "duration": 4.23,
+        "explain_text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "explain_audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "explain_duration": 4.23,
+        "explain_fr": "Transaction réussie et validée.",
+        "explain_en": "Transaction successful and confirmed.",
+        "code": "SAF_EXP_056",
+        "explain_code": "SAF_EXP_056",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Transaction successful and confirmed.": {
+      "code": "SAF_EXP_056",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transaction réussie et validée.",
+      "en": "Transaction successful and confirmed.",
+      "explain_fr": "Transaction réussie et validée.",
+      "explain_en": "Transaction successful and confirmed.",
+      "eto": {
+        "text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "duration": 4.23,
+        "explain_text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "explain_audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "explain_duration": 4.23,
+        "explain_fr": "Transaction réussie et validée.",
+        "explain_en": "Transaction successful and confirmed.",
+        "code": "SAF_EXP_056",
+        "explain_code": "SAF_EXP_056",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Revenir à l'accueil du compte pour effectuer une autre opération.": {
+      "code": "SAF_EXP_057",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+      "en": "Return to home page to perform another operation.",
+      "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+      "explain_en": "Return to home page to perform another operation.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "duration": 4.79,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "explain_audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "explain_duration": 4.79,
+        "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+        "explain_en": "Return to home page to perform another operation.",
+        "code": "SAF_EXP_057",
+        "explain_code": "SAF_EXP_057",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Return to home page to perform another operation.": {
+      "code": "SAF_EXP_057",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+      "en": "Return to home page to perform another operation.",
+      "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+      "explain_en": "Return to home page to perform another operation.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "duration": 4.79,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "explain_audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "explain_duration": 4.79,
+        "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+        "explain_en": "Return to home page to perform another operation.",
+        "code": "SAF_EXP_057",
+        "explain_code": "SAF_EXP_057",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.": {
+      "code": "SAF_EXP_058",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+      "en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+      "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "eto": {
+        "text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "duration": 4.6,
+        "explain_text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "explain_audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "explain_duration": 4.6,
+        "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+        "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+        "code": "SAF_EXP_058",
+        "explain_code": "SAF_EXP_058",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "An issue is blocking the operation: read the explanation below to learn how to fix it.": {
+      "code": "SAF_EXP_058",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+      "en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+      "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "eto": {
+        "text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "duration": 4.6,
+        "explain_text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "explain_audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "explain_duration": 4.6,
+        "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+        "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+        "code": "SAF_EXP_058",
+        "explain_code": "SAF_EXP_058",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.": {
+      "code": "SAF_EXP_059",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+      "en": "Banking security warning requesting your vigilance before sending money.",
+      "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+      "explain_en": "Banking security warning requesting your vigilance before sending money.",
+      "eto": {
+        "text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "duration": 4.94,
+        "explain_text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "explain_duration": 4.94,
+        "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+        "explain_en": "Banking security warning requesting your vigilance before sending money.",
+        "code": "SAF_EXP_059",
+        "explain_code": "SAF_EXP_059",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Banking security warning requesting your vigilance before sending money.": {
+      "code": "SAF_EXP_059",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+      "en": "Banking security warning requesting your vigilance before sending money.",
+      "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+      "explain_en": "Banking security warning requesting your vigilance before sending money.",
+      "eto": {
+        "text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "duration": 4.94,
+        "explain_text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "explain_duration": 4.94,
+        "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+        "explain_en": "Banking security warning requesting your vigilance before sending money.",
+        "code": "SAF_EXP_059",
+        "explain_code": "SAF_EXP_059",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Information prioritaire affichée en temps réel sur votre espace bancaire.": {
+      "code": "SAF_EXP_060",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+      "en": "Priority information displayed in real time on your banking screen.",
+      "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+      "explain_en": "Priority information displayed in real time on your banking screen.",
+      "eto": {
+        "text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "duration": 4.2,
+        "explain_text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "explain_audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "explain_duration": 4.2,
+        "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+        "explain_en": "Priority information displayed in real time on your banking screen.",
+        "code": "SAF_EXP_060",
+        "explain_code": "SAF_EXP_060",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Priority information displayed in real time on your banking screen.": {
+      "code": "SAF_EXP_060",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+      "en": "Priority information displayed in real time on your banking screen.",
+      "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+      "explain_en": "Priority information displayed in real time on your banking screen.",
+      "eto": {
+        "text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "duration": 4.2,
+        "explain_text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "explain_audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "explain_duration": 4.2,
+        "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+        "explain_en": "Priority information displayed in real time on your banking screen.",
+        "code": "SAF_EXP_060",
+        "explain_code": "SAF_EXP_060",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.": {
+      "code": "SAF_EXP_061",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+      "en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+      "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "eto": {
+        "text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "duration": 11.5,
+        "explain_text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "explain_audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "explain_duration": 11.5,
+        "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+        "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+        "code": "SAF_EXP_061",
+        "explain_code": "SAF_EXP_061",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.": {
+      "code": "SAF_EXP_061",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+      "en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+      "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "eto": {
+        "text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "duration": 11.5,
+        "explain_text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "explain_audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "explain_duration": 11.5,
+        "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+        "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+        "code": "SAF_EXP_061",
+        "explain_code": "SAF_EXP_061",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.": {
+      "code": "SAF_EXP_062",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+      "en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+      "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "eto": {
+        "text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "audio": null,
+        "duration": 10.24,
+        "explain_text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "explain_audio": null,
+        "explain_duration": 10.24,
+        "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+        "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+        "code": "SAF_EXP_062",
+        "explain_code": "SAF_EXP_062",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.": {
+      "code": "SAF_EXP_062",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+      "en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+      "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "eto": {
+        "text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "audio": null,
+        "duration": 10.24,
+        "explain_text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "explain_audio": null,
+        "explain_duration": 10.24,
+        "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+        "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+        "code": "SAF_EXP_062",
+        "explain_code": "SAF_EXP_062",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.": {
+      "code": "SAF_EXP_063",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+      "en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+      "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "eto": {
+        "text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "duration": 11.01,
+        "explain_text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "explain_audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "explain_duration": 11.01,
+        "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+        "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+        "code": "SAF_EXP_063",
+        "explain_code": "SAF_EXP_063",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.": {
+      "code": "SAF_EXP_063",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+      "en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+      "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "eto": {
+        "text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "duration": 11.01,
+        "explain_text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "explain_audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "explain_duration": 11.01,
+        "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+        "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+        "code": "SAF_EXP_063",
+        "explain_code": "SAF_EXP_063",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.": {
+      "code": "SAF_EXP_064",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+      "en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+      "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "eto": {
+        "text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "duration": 18.98,
+        "explain_text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "explain_audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "explain_duration": 18.98,
+        "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+        "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+        "code": "SAF_EXP_064",
+        "explain_code": "SAF_EXP_064",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.": {
+      "code": "SAF_EXP_064",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+      "en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+      "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "eto": {
+        "text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "duration": 18.98,
+        "explain_text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "explain_audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "explain_duration": 18.98,
+        "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+        "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+        "code": "SAF_EXP_064",
+        "explain_code": "SAF_EXP_064",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.": {
+      "code": "SAF_EXP_065",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+      "en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+      "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "eto": {
+        "text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "duration": 11.22,
+        "explain_text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "explain_audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "explain_duration": 11.22,
+        "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+        "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+        "code": "SAF_EXP_065",
+        "explain_code": "SAF_EXP_065",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.": {
+      "code": "SAF_EXP_065",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+      "en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+      "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "eto": {
+        "text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "duration": 11.22,
+        "explain_text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "explain_audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "explain_duration": 11.22,
+        "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+        "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+        "code": "SAF_EXP_065",
+        "explain_code": "SAF_EXP_065",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.": {
+      "code": "SAF_EXP_066",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+      "en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+      "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "eto": {
+        "text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "duration": 10.28,
+        "explain_text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "explain_audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "explain_duration": 10.28,
+        "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+        "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+        "code": "SAF_EXP_066",
+        "explain_code": "SAF_EXP_066",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.": {
+      "code": "SAF_EXP_066",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+      "en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+      "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "eto": {
+        "text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "duration": 10.28,
+        "explain_text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "explain_audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "explain_duration": 10.28,
+        "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+        "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+        "code": "SAF_EXP_066",
+        "explain_code": "SAF_EXP_066",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.": {
+      "code": "SAF_EXP_067",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+      "en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+      "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "eto": {
+        "text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "duration": 15.59,
+        "explain_text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "explain_audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "explain_duration": 15.59,
+        "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+        "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+        "code": "SAF_EXP_067",
+        "explain_code": "SAF_EXP_067",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.": {
+      "code": "SAF_EXP_067",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+      "en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+      "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "eto": {
+        "text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "duration": 15.59,
+        "explain_text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "explain_audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "explain_duration": 15.59,
+        "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+        "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+        "code": "SAF_EXP_067",
+        "explain_code": "SAF_EXP_067",
+        "category": "Explications d'Erreurs (Famfingo)"
+      }
+    },
+    "Conseils de protection contre les erreurs et la fraude.": {
+      "code": "SAF_EXP_068",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Conseils de protection contre les erreurs et la fraude.",
+      "en": "Protection tips against errors and fraud.",
+      "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+      "explain_en": "Protection tips against errors and fraud.",
+      "eto": {
+        "text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "duration": 5.0,
+        "explain_text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "explain_audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "explain_duration": 5.0,
+        "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+        "explain_en": "Protection tips against errors and fraud.",
+        "code": "SAF_EXP_068",
+        "explain_code": "SAF_EXP_068",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Protection tips against errors and fraud.": {
+      "code": "SAF_EXP_068",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Conseils de protection contre les erreurs et la fraude.",
+      "en": "Protection tips against errors and fraud.",
+      "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+      "explain_en": "Protection tips against errors and fraud.",
+      "eto": {
+        "text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "duration": 5.0,
+        "explain_text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "explain_audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "explain_duration": 5.0,
+        "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+        "explain_en": "Protection tips against errors and fraud.",
+        "code": "SAF_EXP_068",
+        "explain_code": "SAF_EXP_068",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.": {
+      "code": "SAF_EXP_069",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+      "en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+      "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "eto": {
+        "text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "duration": 7.53,
+        "explain_text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "explain_audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "explain_duration": 7.53,
+        "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+        "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+        "code": "SAF_EXP_069",
+        "explain_code": "SAF_EXP_069",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Essential rule: systematically check the recipient name and number before each transfer.": {
+      "code": "SAF_EXP_069",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+      "en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+      "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "eto": {
+        "text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "duration": 7.53,
+        "explain_text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "explain_audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "explain_duration": 7.53,
+        "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+        "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+        "code": "SAF_EXP_069",
+        "explain_code": "SAF_EXP_069",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Votre connexion avec Safinum Pay est protégée et chiffrée.": {
+      "code": "SAF_EXP_070",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+      "en": "Your connection with Safinum Pay is secure and encrypted.",
+      "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+      "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+      "eto": {
+        "text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "duration": 3.9,
+        "explain_text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "explain_audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "explain_duration": 3.9,
+        "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+        "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+        "code": "SAF_EXP_070",
+        "explain_code": "SAF_EXP_070",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Your connection with Safinum Pay is secure and encrypted.": {
+      "code": "SAF_EXP_070",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+      "en": "Your connection with Safinum Pay is secure and encrypted.",
+      "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+      "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+      "eto": {
+        "text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "duration": 3.9,
+        "explain_text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "explain_audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "explain_duration": 3.9,
+        "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+        "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+        "code": "SAF_EXP_070",
+        "explain_code": "SAF_EXP_070",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.": {
+      "code": "SAF_EXP_071",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+      "en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+      "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "eto": {
+        "text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "duration": 8.15,
+        "explain_text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "explain_audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "explain_duration": 8.15,
+        "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+        "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+        "code": "SAF_EXP_071",
+        "explain_code": "SAF_EXP_071",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Demo environment: never enter your real secret PIN or real bank details.": {
+      "code": "SAF_EXP_071",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+      "en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+      "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "eto": {
+        "text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "duration": 8.15,
+        "explain_text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "explain_audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "explain_duration": 8.15,
+        "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+        "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+        "code": "SAF_EXP_071",
+        "explain_code": "SAF_EXP_071",
+        "category": "Explications Vocales (Famfingo)"
+      }
+    },
+    "Environnement de test — données fictives, aucune transaction réelle.": {
+      "code": "SAF_UI_001",
+      "category": "Navigation & Accueil",
+      "fr": "Environnement de test — données fictives, aucune transaction réelle.",
+      "en": "Test environment — fictional data, no real transaction.",
+      "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+      "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "eto": {
+        "text": "Ípǝ̀ yi dâm ɛ́sǝ tɔ́",
+        "audio": "eton/saf_ui_001_take1_bc630dbf.webm",
+        "duration": 3.03,
+        "explain_text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "explain_audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "explain_duration": 7.88,
+        "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+        "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+        "code": "SAF_UI_001",
+        "explain_code": "SAF_EXP_001",
+        "category": "Navigation & Accueil"
+      }
     },
     "Test environment — fictional data, no real transaction.": {
-      "fub": "Nokkuure jarribo — kabaruuji jarribo tan, walaa nelal ceede goonga.",
-      "phonetic": "Nokkôuôure djarribo — kabarôuôuji djarribo tan, walâ nelal tchééde gônga.",
-      "explain_fub": "Nokkuure ndee ɗum ngam jarribo kuugal Safinum Pay tan; ceede goonga ittataako.",
-      "explain_fub_phonetic": "Nokkôuôure ndéé d'oum ngam djarribo kôuôugal Safinoum Pay tan; tchééde gônga ittatâko.",
+      "code": "SAF_UI_001",
+      "category": "Navigation & Accueil",
+      "fr": "Environnement de test — données fictives, aucune transaction réelle.",
+      "en": "Test environment — fictional data, no real transaction.",
       "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fə́la mejaríba — bibuk bi m̀bálá, téé ésəle mɔni ya amba.",
-      "phonetic_ewo": "Feula médjariba — bibouk bi mbala, téé éséulé moni ya amba.",
-      "explain_ewo": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə.",
-      "explain_ewo_phonetic": "Fə́la nyina é ne ve asu mejaríba ya Safinum Pay; mɔni ya amba a téé kə."
+      "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "eto": {
+        "text": "Ípǝ̀ yi dâm ɛ́sǝ tɔ́",
+        "audio": "eton/saf_ui_001_take1_bc630dbf.webm",
+        "duration": 3.03,
+        "explain_text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "explain_audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "explain_duration": 7.88,
+        "explain_fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+        "explain_en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+        "code": "SAF_UI_001",
+        "explain_code": "SAF_EXP_001",
+        "category": "Navigation & Accueil"
+      }
     },
     "Banque en ligne": {
-      "fub": "Banki dow enternet (Ceede Waya)",
-      "phonetic": "Banki dow enternet (Tchééde Waya)",
-      "explain_fub": "Kuugal banki Safinum Pay ngam laartugo e neldugo ceede bee waya.",
-      "explain_fub_phonetic": "Kôuôugal banki Safinoum Pay ngam lârtougo e neldougo tchééde béé waya.",
+      "code": "SAF_UI_002",
+      "category": "Navigation & Accueil",
+      "fr": "Banque en ligne",
+      "en": "Online banking",
       "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Banki ya enternet (Mɔni Waya)",
-      "phonetic_ewo": "Banki ya enternet (Moni Waya)",
-      "explain_ewo": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón.",
-      "explain_ewo_phonetic": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón."
+      "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+      "eto": {
+        "text": "Báŋ á intɛnɛd",
+        "audio": "eton/saf_ui_002_take1_055eb3b8.webm",
+        "duration": 2.2,
+        "explain_text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "explain_audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "explain_duration": 8.43,
+        "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+        "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+        "code": "SAF_UI_002",
+        "explain_code": "SAF_EXP_002",
+        "category": "Navigation & Accueil"
+      }
     },
     "Online banking": {
-      "fub": "Banki dow enternet (Ceede Waya)",
-      "phonetic": "Banki dow enternet (Tchééde Waya)",
-      "explain_fub": "Kuugal banki Safinum Pay ngam laartugo e neldugo ceede bee waya.",
-      "explain_fub_phonetic": "Kôuôugal banki Safinoum Pay ngam lârtougo e neldougo tchééde béé waya.",
+      "code": "SAF_UI_002",
+      "category": "Navigation & Accueil",
+      "fr": "Banque en ligne",
+      "en": "Online banking",
       "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Banki ya enternet (Mɔni Waya)",
-      "phonetic_ewo": "Banki ya enternet (Moni Waya)",
-      "explain_ewo": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón.",
-      "explain_ewo_phonetic": "Ésəle banki Safinum Pay asu na o laart e o lóm mɔni e fón."
+      "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+      "eto": {
+        "text": "Báŋ á intɛnɛd",
+        "audio": "eton/saf_ui_002_take1_055eb3b8.webm",
+        "duration": 2.2,
+        "explain_text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "explain_audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "explain_duration": 8.43,
+        "explain_fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+        "explain_en": "Digital banking service accessible from your mobile phone or computer.",
+        "code": "SAF_UI_002",
+        "explain_code": "SAF_EXP_002",
+        "category": "Navigation & Accueil"
+      }
     },
     "Protocole de test": {
-      "fub": "Dokaaji jarribo",
-      "phonetic": "Dokâji djarribo",
-      "explain_fub": "Laawol e dokaaji ɗi jury huutinirta ngam ɓetugo kuugal ngal.",
-      "explain_fub_phonetic": "Lâwol e dokâji d'i djoury hôuôutinirta ngam b'etougo kôuôugal ngal.",
+      "code": "SAF_UI_003",
+      "category": "Navigation & Accueil",
+      "fr": "Protocole de test",
+      "en": "Test protocol",
       "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Metəla me mejaríba",
-      "phonetic_ewo": "Météula mé médjariba",
-      "explain_ewo": "Melep me jury a nzi huutinir ngam ɓet ésəle.",
-      "explain_ewo_phonetic": "Melep me jury a nzi huutinir ngam ɓet ésəle."
+      "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+      "eto": {
+        "text": "protokól abɔ́ tɛ́d",
+        "audio": "eton/saf_ui_003_take1_82018579.webm",
+        "duration": 2.41,
+        "explain_text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "explain_audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "explain_duration": 4.93,
+        "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+        "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+        "code": "SAF_UI_003",
+        "explain_code": "SAF_EXP_003",
+        "category": "Navigation & Accueil"
+      }
     },
     "Test protocol": {
-      "fub": "Dokaaji jarribo",
-      "phonetic": "Dokâji djarribo",
-      "explain_fub": "Laawol e dokaaji ɗi jury huutinirta ngam ɓetugo kuugal ngal.",
-      "explain_fub_phonetic": "Lâwol e dokâji d'i djoury hôuôutinirta ngam b'etougo kôuôugal ngal.",
+      "code": "SAF_UI_003",
+      "category": "Navigation & Accueil",
+      "fr": "Protocole de test",
+      "en": "Test protocol",
       "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Metəla me mejaríba",
-      "phonetic_ewo": "Météula mé médjariba",
-      "explain_ewo": "Melep me jury a nzi huutinir ngam ɓet ésəle.",
-      "explain_ewo_phonetic": "Melep me jury a nzi huutinir ngam ɓet ésəle."
+      "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+      "eto": {
+        "text": "protokól abɔ́ tɛ́d",
+        "audio": "eton/saf_ui_003_take1_82018579.webm",
+        "duration": 2.41,
+        "explain_text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "explain_audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "explain_duration": 4.93,
+        "explain_fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+        "explain_en": "Official document presenting test instructions and scoring for the hackathon.",
+        "code": "SAF_UI_003",
+        "explain_code": "SAF_EXP_003",
+        "category": "Navigation & Accueil"
+      }
     },
     "Retour au hackathon": {
-      "fub": "Rutto haa hello Hackathon",
-      "phonetic": "Routto hâ hello Hatchkathon",
-      "explain_fub": "Ruttoraago haa hello mawngo SAFINUM Innovate Challenge.",
-      "explain_fub_phonetic": "Routtorâgo hâ hello mawngo SAFINUM Innovate Tchhallenge.",
+      "code": "SAF_UI_004",
+      "category": "Navigation & Accueil",
+      "fr": "Retour au hackathon",
+      "en": "Back to hackathon",
       "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
-      "category": "navigation",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Kóbəla haa Hackathon",
-      "phonetic_ewo": "Kobeula ha Hackathon",
-      "explain_ewo": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge.",
-      "explain_ewo_phonetic": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge."
+      "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+      "eto": {
+        "text": "Dúgnǝ kǝ́ á hakatɔ́ŋ",
+        "audio": "eton/saf_ui_004_take1_489d7342.webm",
+        "duration": 2.3,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "explain_audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "explain_duration": 4.21,
+        "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+        "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+        "code": "SAF_UI_004",
+        "explain_code": "SAF_EXP_004",
+        "category": "Navigation & Accueil"
+      }
     },
     "Back to hackathon": {
-      "fub": "Rutto haa hello Hackathon",
-      "phonetic": "Routto hâ hello Hatchkathon",
-      "explain_fub": "Ruttoraago haa hello mawngo SAFINUM Innovate Challenge.",
-      "explain_fub_phonetic": "Routtorâgo hâ hello mawngo SAFINUM Innovate Tchhallenge.",
+      "code": "SAF_UI_004",
+      "category": "Navigation & Accueil",
+      "fr": "Retour au hackathon",
+      "en": "Back to hackathon",
       "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
-      "category": "navigation",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Kóbəla haa Hackathon",
-      "phonetic_ewo": "Kobeula ha Hackathon",
-      "explain_ewo": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge.",
-      "explain_ewo_phonetic": "Kóbəla e fə́la énen ya SAFINUM Innovate Challenge."
+      "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+      "eto": {
+        "text": "Dúgnǝ kǝ́ á hakatɔ́ŋ",
+        "audio": "eton/saf_ui_004_take1_489d7342.webm",
+        "duration": 2.3,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "explain_audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "explain_duration": 4.21,
+        "explain_fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+        "explain_en": "Return to the main SAFINUM Hackathon presentation page.",
+        "code": "SAF_UI_004",
+        "explain_code": "SAF_EXP_004",
+        "category": "Navigation & Accueil"
+      }
     },
     "Solde": {
-      "fub": "Ceede gonɗe",
-      "phonetic": "Tchééde gond'e",
-      "explain_fub": "Yaaduure 1 : Limngal ceede ɗe ngoni nder kofru maa jooni.",
-      "explain_fub_phonetic": "Yâdôuôure 1 : Limngal tchééde d'e ngoni nder kofrou mâ djôni.",
+      "code": "SAF_UI_005",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde",
+      "en": "Balance",
       "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè (Kɔb)",
-      "phonetic_ewo": "Moni a lié (Kob)",
-      "explain_ewo": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina.",
-      "explain_ewo_phonetic": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina."
+      "explain_en": "Step 1: Money currently available in your account.",
+      "eto": {
+        "text": "Táŋ ī mwání inǝ́ á mpǝ̄g",
+        "audio": "eton/saf_ui_005_take1_e1b441b9.webm",
+        "duration": 2.1,
+        "explain_text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "explain_audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "explain_duration": 4.35,
+        "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+        "explain_en": "Step 1: Money currently available in your account.",
+        "code": "SAF_UI_005",
+        "explain_code": "SAF_EXP_005",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Balance": {
-      "fub": "Ceede gonɗe",
-      "phonetic": "Tchééde gond'e",
-      "explain_fub": "Yaaduure 1 : Limngal ceede ɗe ngoni nder kofru maa jooni.",
-      "explain_fub_phonetic": "Yâdôuôure 1 : Limngal tchééde d'e ngoni nder kofrou mâ djôni.",
+      "code": "SAF_UI_005",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde",
+      "en": "Balance",
       "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè (Kɔb)",
-      "phonetic_ewo": "Moni a lié (Kob)",
-      "explain_ewo": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina.",
-      "explain_ewo_phonetic": "Ékaat 1 : Akɔŋ mɔni o nzi bəle e asúsu wô éyɔŋ nyina."
+      "explain_en": "Step 1: Money currently available in your account.",
+      "eto": {
+        "text": "Táŋ ī mwání inǝ́ á mpǝ̄g",
+        "audio": "eton/saf_ui_005_take1_e1b441b9.webm",
+        "duration": 2.1,
+        "explain_text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "explain_audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "explain_duration": 4.35,
+        "explain_fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+        "explain_en": "Step 1: Money currently available in your account.",
+        "code": "SAF_UI_005",
+        "explain_code": "SAF_EXP_005",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Frais": {
-      "fub": "Coggu nelal",
-      "phonetic": "Tchoggou nelal",
-      "explain_fub": "Ceede cewɗe ɗe banki malla kampaniiru hoosata ngam neldugo ceede maa.",
-      "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
+      "code": "SAF_UI_006",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais",
+      "en": "Fees",
       "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô.",
-      "explain_ewo_phonetic": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô."
+      "explain_en": "Fee charged by the financial service to process your money transfer.",
+      "eto": {
+        "text": "Bɔ frɛ́",
+        "audio": "eton/saf_ui_006_take1_f10449f4.webm",
+        "duration": 1.33,
+        "explain_text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "explain_duration": 5.36,
+        "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+        "explain_en": "Fee charged by the financial service to process your money transfer.",
+        "code": "SAF_UI_006",
+        "explain_code": "SAF_EXP_006",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Fees": {
-      "fub": "Coggu nelal",
-      "phonetic": "Tchoggou nelal",
-      "explain_fub": "Ceede cewɗe ɗe banki malla kampaniiru hoosata ngam neldugo ceede maa.",
-      "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
+      "code": "SAF_UI_006",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais",
+      "en": "Fees",
       "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô.",
-      "explain_ewo_phonetic": "Mɔni banki ya fón a nzi téé ngam lóm mɔni wô."
-    },
-    "Fee": {
-      "fub": "Coggu nelal",
-      "phonetic": "Tchoggou nelal",
-      "explain_fub": "Ceede cewɗe ɗe banki malla kampaniiru hoosata ngam neldugo ceede maa.",
-      "explain_fub_phonetic": "Tchééde tchewd'e d'e banki malla kampanîrou hôsata ngam neldougo tchééde mâ.",
-      "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ",
-      "phonetic_ewo": "Mimvègn",
-      "explain_ewo": "Asúŋa mɔni asu ésəle.",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu ésəle."
+      "explain_en": "Fee charged by the financial service to process your money transfer.",
+      "eto": {
+        "text": "Bɔ frɛ́",
+        "audio": "eton/saf_ui_006_take1_f10449f4.webm",
+        "duration": 1.33,
+        "explain_text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "explain_duration": 5.36,
+        "explain_fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+        "explain_en": "Fee charged by the financial service to process your money transfer.",
+        "code": "SAF_UI_006",
+        "explain_code": "SAF_EXP_006",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Bénéficiaire": {
-      "fub": "Jaɓoowo ceede",
-      "phonetic": "Djab'ôwo tchééde",
-      "explain_fub": "Neɗɗo mo a yiɗi neldugo mo ceede ɗe.",
-      "explain_fub_phonetic": "Ned'd'o mo a yid'i neldougo mo tchééde d'e.",
+      "code": "SAF_UI_007",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Bénéficiaire",
+      "en": "Beneficiary",
       "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze.",
-      "explain_ewo_phonetic": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze."
+      "explain_en": "The person who will receive the money you are sending.",
+      "eto": {
+        "text": "Ímôdee gbǝ mwání",
+        "audio": "eton/saf_ui_007_take1_eac2de33.webm",
+        "duration": 2.29,
+        "explain_text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "explain_audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "explain_duration": 2.88,
+        "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+        "explain_en": "The person who will receive the money you are sending.",
+        "code": "SAF_UI_007",
+        "explain_code": "SAF_EXP_007",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Beneficiary": {
-      "fub": "Jaɓoowo ceede",
-      "phonetic": "Djab'ôwo tchééde",
-      "explain_fub": "Neɗɗo mo a yiɗi neldugo mo ceede ɗe.",
-      "explain_fub_phonetic": "Ned'd'o mo a yid'i neldougo mo tchééde d'e.",
+      "code": "SAF_UI_007",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Bénéficiaire",
+      "en": "Beneficiary",
       "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze.",
-      "explain_ewo_phonetic": "Ékaat 3 : Mɔt w'a lóm nyə mɔni e fón ya dze."
+      "explain_en": "The person who will receive the money you are sending.",
+      "eto": {
+        "text": "Ímôdee gbǝ mwání",
+        "audio": "eton/saf_ui_007_take1_eac2de33.webm",
+        "duration": 2.29,
+        "explain_text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "explain_audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "explain_duration": 2.88,
+        "explain_fr": "La personne qui va recevoir l'argent que vous envoyez.",
+        "explain_en": "The person who will receive the money you are sending.",
+        "code": "SAF_UI_007",
+        "explain_code": "SAF_EXP_007",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Récapitulatif": {
-      "fub": "Taƴre laartugo fuu",
-      "phonetic": "Tay're lârtougo fôuôu",
-      "explain_fub": "Yaaduure 4 : Laartugo kabaruuji nelal fuu hidde a tabitina.",
-      "explain_fub_phonetic": "Yâdôuôure 4 : Lârtougo kabarôuôuji nelal fôuôu hidde a tabitina.",
+      "code": "SAF_UI_008",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Récapitulatif",
+      "en": "Summary",
       "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban.",
-      "explain_ewo_phonetic": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban."
+      "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "eto": {
+        "text": "Dâm ɛ́sǝ úkwâm",
+        "audio": "eton/saf_ui_008_take1_8e33366e.webm",
+        "duration": 1.64,
+        "explain_text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "explain_audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "explain_duration": 6.44,
+        "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+        "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+        "code": "SAF_UI_008",
+        "explain_code": "SAF_EXP_008",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Summary": {
-      "fub": "Taƴre laartugo fuu",
-      "phonetic": "Tay're lârtougo fôuôu",
-      "explain_fub": "Yaaduure 4 : Laartugo kabaruuji nelal fuu hidde a tabitina.",
-      "explain_fub_phonetic": "Yâdôuôure 4 : Lârtougo kabarôuôuji nelal fôuôu hidde a tabitina.",
+      "code": "SAF_UI_008",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Récapitulatif",
+      "en": "Summary",
       "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban.",
-      "explain_ewo_phonetic": "Ékaat 4 : Fáám e laart mësə́ osu na o kaməla ntómban."
+      "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "eto": {
+        "text": "Dâm ɛ́sǝ úkwâm",
+        "audio": "eton/saf_ui_008_take1_8e33366e.webm",
+        "duration": 1.64,
+        "explain_text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "explain_audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "explain_duration": 6.44,
+        "explain_fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+        "explain_en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+        "code": "SAF_UI_008",
+        "explain_code": "SAF_EXP_008",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Confirmation": {
-      "fub": "Tabitingol kuugal",
-      "phonetic": "Tabitingol kôuôugal",
-      "explain_fub": "Yaaduure 5 : Talkuru seedamku kollirtooru wonde ceede maa neldaama.",
-      "explain_fub_phonetic": "Yâdôuôure 5 : Talkourou séédamkou kollirtôrou wonde tchééde mâ neldâma.",
+      "code": "SAF_UI_009",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Confirmation",
+      "en": "Confirmation",
       "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Ékaat 5 : Kaməla ntómban e nɔŋ kalara ntílán wô.",
-      "explain_ewo_phonetic": "Ékaat 5 : Kaməla ntómban e nɔŋ kalara ntílán wô."
+      "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "eto": {
+        "text": "koŋfirmasíōŋ",
+        "audio": "eton/saf_ui_009_take1_ad9cbf83.webm",
+        "duration": 1.71,
+        "explain_text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "explain_audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "explain_duration": 6.9,
+        "explain_fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+        "explain_en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+        "code": "SAF_UI_009",
+        "explain_code": "SAF_EXP_009",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Votre compte": {
-      "fub": "Limngal hisaabu maa",
-      "phonetic": "Limngal hisâbou mâ",
-      "explain_fub": "Nokkuure nde ceede maa resaa nder Safinum Pay.",
-      "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
+      "code": "SAF_UI_010",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Votre compte",
+      "en": "Your account",
       "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Asúsu wô ya banki",
-      "phonetic_ewo": "Asousou wô ya banki",
-      "explain_ewo": "Fə́la asúsu wô ya Safinum Pay.",
-      "explain_ewo_phonetic": "Fə́la asúsu wô ya Safinum Pay."
+      "explain_en": "Your personal banking space displaying your balance and account number.",
+      "eto": {
+        "text": "Mpǝ́g mwán wɔ̄",
+        "audio": "eton/saf_ui_010_take1_82d1d231.webm",
+        "duration": 1.94,
+        "explain_text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "explain_audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "explain_duration": 6.16,
+        "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+        "explain_en": "Your personal banking space displaying your balance and account number.",
+        "code": "SAF_UI_010",
+        "explain_code": "SAF_EXP_010",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Your account": {
-      "fub": "Limngal hisaabu maa",
-      "phonetic": "Limngal hisâbou mâ",
-      "explain_fub": "Nokkuure nde ceede maa resaa nder Safinum Pay.",
-      "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
+      "code": "SAF_UI_010",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Votre compte",
+      "en": "Your account",
       "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Asúsu wô ya banki",
-      "phonetic_ewo": "Asousou wô ya banki",
-      "explain_ewo": "Fə́la asúsu wô ya Safinum Pay.",
-      "explain_ewo_phonetic": "Fə́la asúsu wô ya Safinum Pay."
-    },
-    "VOTRE COMPTE": {
-      "fub": "Limngal hisaabu maa",
-      "phonetic": "Limngal hisâbou mâ",
-      "explain_fub": "Nokkuure nde ceede maa resaa nder Safinum Pay.",
-      "explain_fub_phonetic": "Nokkôuôure nde tchééde mâ resâ nder Safinoum Pay.",
-      "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Your personal banking space displaying your balance and account number.",
+      "eto": {
+        "text": "Mpǝ́g mwán wɔ̄",
+        "audio": "eton/saf_ui_010_take1_82d1d231.webm",
+        "duration": 1.94,
+        "explain_text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "explain_audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "explain_duration": 6.16,
+        "explain_fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+        "explain_en": "Your personal banking space displaying your balance and account number.",
+        "code": "SAF_UI_010",
+        "explain_code": "SAF_EXP_010",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Bonjour, Amina": {
-      "fub": "Jaɓɓaama, Amina",
-      "phonetic": "Djab'b'âma, Amina",
-      "explain_fub": "Salaama e jaɓɓaago Amina Ngo Bell, joom limngal hisaabu.",
-      "explain_fub_phonetic": "Salâma e djab'b'âgo Amina Ngo Bell, djôm limngal hisâbou.",
+      "code": "SAF_UI_011",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Bonjour, Amina",
+      "en": "Hello, Amina",
       "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "eto": {
+        "text": "M̀mǝmǝ kídî Amina",
+        "audio": "eton/saf_ui_011_take1_92ec46cd.webm",
+        "duration": 2.16,
+        "explain_text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "explain_audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "explain_duration": 6.56,
+        "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+        "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+        "code": "SAF_UI_011",
+        "explain_code": "SAF_EXP_011",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Hello, Amina": {
-      "fub": "Jaɓɓaama, Amina",
-      "phonetic": "Djab'b'âma, Amina",
-      "explain_fub": "Salaama e jaɓɓaago Amina Ngo Bell, joom limngal hisaabu.",
-      "explain_fub_phonetic": "Salâma e djab'b'âgo Amina Ngo Bell, djôm limngal hisâbou.",
+      "code": "SAF_UI_011",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Bonjour, Amina",
+      "en": "Hello, Amina",
       "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "eto": {
+        "text": "M̀mǝmǝ kídî Amina",
+        "audio": "eton/saf_ui_011_take1_92ec46cd.webm",
+        "duration": 2.16,
+        "explain_text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "explain_audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "explain_duration": 6.56,
+        "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+        "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+        "code": "SAF_UI_011",
+        "explain_code": "SAF_EXP_011",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Consultez votre solde et lancez un transfert en toute sécurité.": {
-      "fub": "Laartu ceede gonɗe nder limngal maa e fuɗɗu nelal ceede bee kisal timmungal.",
-      "phonetic": "Lârtou tchééde gond'e nder limngal mâ e foud'd'ou nelal tchééde béé kisal timmoungal.",
-      "explain_fub": "Ko adii fuu, laartu to ceede maa heƴi, ɓaawo maajum ɓillu « Neldugo ceede ».",
-      "explain_fub_phonetic": "Ko adî fôuôu, lârtou to tchééde mâ hey'i, b'âwo mâjoum b'illou « Neldougo tchééde ».",
+      "code": "SAF_UI_012",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Consultez votre solde et lancez un transfert en toute sécurité.",
+      "en": "Check your balance and start a secure transfer.",
       "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Check your available account balance first before starting your money transfer.",
+      "eto": {
+        "text": "Tál ítāŋ í mwání ugbɛlǝ̂ á mpǝ́g úlôm mwání tǝ́ pūn.",
+        "audio": "eton/saf_ui_012_take1_5880ea62.webm",
+        "duration": 4.82,
+        "explain_text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "explain_audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "explain_duration": 6.68,
+        "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+        "explain_en": "Check your available account balance first before starting your money transfer.",
+        "code": "SAF_UI_012",
+        "explain_code": "SAF_EXP_012",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Check your balance and start a secure transfer.": {
-      "fub": "Laartu ceede gonɗe nder limngal maa e fuɗɗu nelal ceede bee kisal timmungal.",
-      "phonetic": "Lârtou tchééde gond'e nder limngal mâ e foud'd'ou nelal tchééde béé kisal timmoungal.",
-      "explain_fub": "Ko adii fuu, laartu to ceede maa heƴi, ɓaawo maajum ɓillu « Neldugo ceede ».",
-      "explain_fub_phonetic": "Ko adî fôuôu, lârtou to tchééde mâ hey'i, b'âwo mâjoum b'illou « Neldougo tchééde ».",
+      "code": "SAF_UI_012",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Consultez votre solde et lancez un transfert en toute sécurité.",
+      "en": "Check your balance and start a secure transfer.",
       "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Check your available account balance first before starting your money transfer.",
+      "eto": {
+        "text": "Tál ítāŋ í mwání ugbɛlǝ̂ á mpǝ́g úlôm mwání tǝ́ pūn.",
+        "audio": "eton/saf_ui_012_take1_5880ea62.webm",
+        "duration": 4.82,
+        "explain_text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "explain_audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "explain_duration": 6.68,
+        "explain_fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+        "explain_en": "Check your available account balance first before starting your money transfer.",
+        "code": "SAF_UI_012",
+        "explain_code": "SAF_EXP_012",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Solde disponible": {
-      "fub": "Ceede gonɗe nder limngal",
-      "phonetic": "Tchééde gond'e nder limngal",
-      "explain_fub": "Ceede ɗe a waawi huutinirgo malla neldugo jooni-jooni (250 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
+      "code": "SAF_UI_013",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde disponible",
+      "en": "Available balance",
       "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
-      "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni o nzi bəle",
-      "phonetic_ewo": "Moni o nzi béulé",
-      "explain_ewo": "Akɔŋ mɔni w'a né asu lóm jooni.",
-      "explain_ewo_phonetic": "Akɔŋ mɔni w'a né asu lóm jooni."
+      "explain_en": "Exact amount immediately available on your account.",
+      "eto": {
+        "text": "Táŋ ī mwání anǝ wɔ á mpǝ̄g",
+        "audio": "eton/saf_ui_013_take2_cf18e389.webm",
+        "duration": 2.39,
+        "explain_text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "explain_audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "explain_duration": 3.95,
+        "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+        "explain_en": "Exact amount immediately available on your account.",
+        "code": "SAF_UI_013",
+        "explain_code": "SAF_EXP_013",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Available balance": {
-      "fub": "Ceede gonɗe nder limngal",
-      "phonetic": "Tchééde gond'e nder limngal",
-      "explain_fub": "Ceede ɗe a waawi huutinirgo malla neldugo jooni-jooni (250 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
+      "code": "SAF_UI_013",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde disponible",
+      "en": "Available balance",
       "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
-      "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni o nzi bəle",
-      "phonetic_ewo": "Moni o nzi béulé",
-      "explain_ewo": "Akɔŋ mɔni w'a né asu lóm jooni.",
-      "explain_ewo_phonetic": "Akɔŋ mɔni w'a né asu lóm jooni."
-    },
-    "SOLDE DISPONIBLE": {
-      "fub": "Ceede gonɗe nder limngal",
-      "phonetic": "Tchééde gond'e nder limngal",
-      "explain_fub": "Ceede ɗe a waawi huutinirgo malla neldugo jooni-jooni (250 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a wâwi hôuôutinirgo malla neldougo djôni-djôni (250 000 FCFA).",
-      "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
-      "category": "solde",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Exact amount immediately available on your account.",
+      "eto": {
+        "text": "Táŋ ī mwání anǝ wɔ á mpǝ̄g",
+        "audio": "eton/saf_ui_013_take2_cf18e389.webm",
+        "duration": 2.39,
+        "explain_text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "explain_audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "explain_duration": 3.95,
+        "explain_fr": "Montant exact immédiatement utilisable sur votre compte.",
+        "explain_en": "Exact amount immediately available on your account.",
+        "code": "SAF_UI_013",
+        "explain_code": "SAF_EXP_013",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Compte courant": {
-      "fub": "Limngal hisaabu ñalnde fuu",
-      "phonetic": "Limngal hisâbou ñalnde fôuôu",
-      "explain_fub": "Kofru banki maa ngam kuugalji ceede ñalnde fuu.",
-      "explain_fub_phonetic": "Kofrou banki mâ ngam kôuôugalji tchééde ñalnde fôuôu.",
+      "code": "SAF_UI_014",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Compte courant",
+      "en": "Current account",
       "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "eto": {
+        "text": "Táŋ ī mwání á bāŋ",
+        "audio": "eton/saf_ui_014_take1_f3a57398.webm",
+        "duration": 2.44,
+        "explain_text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "explain_audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "explain_duration": 7.96,
+        "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+        "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+        "code": "SAF_UI_014",
+        "explain_code": "SAF_EXP_014",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Current account": {
-      "fub": "Limngal hisaabu ñalnde fuu",
-      "phonetic": "Limngal hisâbou ñalnde fôuôu",
-      "explain_fub": "Kofru banki maa ngam kuugalji ceede ñalnde fuu.",
-      "explain_fub_phonetic": "Kofrou banki mâ ngam kôuôugalji tchééde ñalnde fôuôu.",
+      "code": "SAF_UI_014",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Compte courant",
+      "en": "Current account",
       "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "eto": {
+        "text": "Táŋ ī mwání á bāŋ",
+        "audio": "eton/saf_ui_014_take1_f3a57398.webm",
+        "duration": 2.44,
+        "explain_text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "explain_audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "explain_duration": 7.96,
+        "explain_fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+        "explain_en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+        "code": "SAF_UI_014",
+        "explain_code": "SAF_EXP_014",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Effectuer un transfert": {
-      "fub": "Waɗugo nelal ceede",
-      "phonetic": "Wad'ougo nelal tchééde",
-      "explain_fub": "Ɓillu ɗoo ngam fuɗɗugo neldugo ceede haa neɗɗo feere.",
-      "explain_fub_phonetic": "B'illou d'ô ngam foud'd'ougo neldougo tchééde hâ ned'd'o féére.",
+      "code": "SAF_UI_015",
+      "category": "Navigation & Accueil",
+      "fr": "Effectuer un transfert",
+      "en": "Make a transfer",
       "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Click this button to start sending money and move to Step 2.",
+      "eto": {
+        "text": "Kwâm trásfɛɛ",
+        "audio": "eton/saf_ui_015_take1_936e3f69.webm",
+        "duration": 1.77,
+        "explain_text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "explain_audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "explain_duration": 5.35,
+        "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+        "explain_en": "Click this button to start sending money and move to Step 2.",
+        "code": "SAF_UI_015",
+        "explain_code": "SAF_EXP_015",
+        "category": "Navigation & Accueil"
+      }
     },
     "Make a transfer": {
-      "fub": "Waɗugo nelal ceede",
-      "phonetic": "Wad'ougo nelal tchééde",
-      "explain_fub": "Ɓillu ɗoo ngam fuɗɗugo neldugo ceede haa neɗɗo feere.",
-      "explain_fub_phonetic": "B'illou d'ô ngam foud'd'ougo neldougo tchééde hâ ned'd'o féére.",
+      "code": "SAF_UI_015",
+      "category": "Navigation & Accueil",
+      "fr": "Effectuer un transfert",
+      "en": "Make a transfer",
       "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Click this button to start sending money and move to Step 2.",
+      "eto": {
+        "text": "Kwâm trásfɛɛ",
+        "audio": "eton/saf_ui_015_take1_936e3f69.webm",
+        "duration": 1.77,
+        "explain_text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "explain_audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "explain_duration": 5.35,
+        "explain_fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+        "explain_en": "Click this button to start sending money and move to Step 2.",
+        "code": "SAF_UI_015",
+        "explain_code": "SAF_EXP_015",
+        "category": "Navigation & Accueil"
+      }
     },
     "Consulter les frais": {
-      "fub": "Laartugo coggu nelal",
-      "phonetic": "Lârtougo tchoggou nelal",
-      "explain_fub": "Ɓillu ɗoo ngam hiisugo no foti coggu nelal ceede wonata.",
-      "explain_fub_phonetic": "B'illou d'ô ngam hîsougo no foti tchoggou nelal tchééde wonata.",
+      "code": "SAF_UI_016",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Consulter les frais",
+      "en": "View fees",
       "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Access the fee simulator to know the cost of a transfer.",
+      "eto": {
+        "text": "Tál bɔ frɛ",
+        "audio": "eton/saf_ui_016_take1_7ec59800.webm",
+        "duration": 2.1,
+        "explain_text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "explain_audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "explain_duration": 5.18,
+        "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+        "explain_en": "Access the fee simulator to know the cost of a transfer.",
+        "code": "SAF_UI_016",
+        "explain_code": "SAF_EXP_016",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "View fees": {
-      "fub": "Laartugo coggu nelal",
-      "phonetic": "Lârtougo tchoggou nelal",
-      "explain_fub": "Ɓillu ɗoo ngam hiisugo no foti coggu nelal ceede wonata.",
-      "explain_fub_phonetic": "B'illou d'ô ngam hîsougo no foti tchoggou nelal tchééde wonata.",
+      "code": "SAF_UI_016",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Consulter les frais",
+      "en": "View fees",
       "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Access the fee simulator to know the cost of a transfer.",
+      "eto": {
+        "text": "Tál bɔ frɛ",
+        "audio": "eton/saf_ui_016_take1_7ec59800.webm",
+        "duration": 2.1,
+        "explain_text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "explain_audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "explain_duration": 5.18,
+        "explain_fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+        "explain_en": "Access the fee simulator to know the cost of a transfer.",
+        "code": "SAF_UI_016",
+        "explain_code": "SAF_EXP_016",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Transactions récentes": {
-      "fub": "Kuugalji ceede cakkitiiɗi",
-      "phonetic": "Kôuôugalji tchééde tchakkitîd'i",
-      "explain_fub": "Doggol ceede ɗe naati (+) e ɗe ngurti (-) nder limngal maa ɗii balɗe.",
-      "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
+      "code": "SAF_UI_017",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transactions récentes",
+      "en": "Recent transactions",
       "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "History of your last 4 money movements (payments and receipts).",
+      "eto": {
+        "text": "Ílôm mwání úndom ákwâm",
+        "audio": "eton/saf_ui_017_take1_5d00a075.webm",
+        "duration": 2.73,
+        "explain_text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "explain_audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "explain_duration": 6.84,
+        "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+        "explain_en": "History of your last 4 money movements (payments and receipts).",
+        "code": "SAF_UI_017",
+        "explain_code": "SAF_EXP_017",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Recent transactions": {
-      "fub": "Kuugalji ceede cakkitiiɗi",
-      "phonetic": "Kôuôugalji tchééde tchakkitîd'i",
-      "explain_fub": "Doggol ceede ɗe naati (+) e ɗe ngurti (-) nder limngal maa ɗii balɗe.",
-      "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
+      "code": "SAF_UI_017",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transactions récentes",
+      "en": "Recent transactions",
       "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
-    },
-    "TRANSACTIONS RÉCENTES": {
-      "fub": "Kuugalji ceede cakkitiiɗi",
-      "phonetic": "Kôuôugalji tchééde tchakkitîd'i",
-      "explain_fub": "Doggol ceede ɗe naati (+) e ɗe ngurti (-) nder limngal maa ɗii balɗe.",
-      "explain_fub_phonetic": "Doggol tchééde d'e nâti (+) e d'e ngourti (-) nder limngal mâ d'î bald'e.",
-      "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "History of your last 4 money movements (payments and receipts).",
+      "eto": {
+        "text": "Ílôm mwání úndom ákwâm",
+        "audio": "eton/saf_ui_017_take1_5d00a075.webm",
+        "duration": 2.73,
+        "explain_text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "explain_audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "explain_duration": 6.84,
+        "explain_fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+        "explain_en": "History of your last 4 money movements (payments and receipts).",
+        "code": "SAF_UI_017",
+        "explain_code": "SAF_EXP_017",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Paiement marchand": {
-      "fub": "Yoɓol haa joom tiggirgal (Marchand)",
-      "phonetic": "Yob'ol hâ djôm tiggirgal (Marchand)",
-      "explain_fub": "Ceede ɗe a yoɓii haa tiggirgal (-12 500 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a yob'î hâ tiggirgal (-12 500 FCFA).",
+      "code": "SAF_UI_018",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Paiement marchand",
+      "en": "Merchant payment",
       "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "eto": {
+        "text": "Iyágnâ ipatila",
+        "audio": "eton/saf_ui_018_take1_8fa07bac.webm",
+        "duration": 1.78,
+        "explain_text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "explain_duration": 10.77,
+        "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+        "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+        "code": "SAF_UI_018",
+        "explain_code": "SAF_EXP_018",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Merchant payment": {
-      "fub": "Yoɓol haa joom tiggirgal (Marchand)",
-      "phonetic": "Yob'ol hâ djôm tiggirgal (Marchand)",
-      "explain_fub": "Ceede ɗe a yoɓii haa tiggirgal (-12 500 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a yob'î hâ tiggirgal (-12 500 FCFA).",
+      "code": "SAF_UI_018",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Paiement marchand",
+      "en": "Merchant payment",
       "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "eto": {
+        "text": "Iyágnâ ipatila",
+        "audio": "eton/saf_ui_018_take1_8fa07bac.webm",
+        "duration": 1.78,
+        "explain_text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "explain_duration": 10.77,
+        "explain_fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+        "explain_en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+        "code": "SAF_UI_018",
+        "explain_code": "SAF_EXP_018",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Salaire reçu": {
-      "fub": "Njoɓdi kuugal (Salaire) keɓaandi",
-      "phonetic": "Njob'di kôuôugal (Salaire) keb'ândi",
-      "explain_fub": "Ceede njoɓdi lewru ɗe naati nder limngal maa (+180 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde njob'di lewrou d'e nâti nder limngal mâ (+180 000 FCFA).",
+      "code": "SAF_UI_019",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Salaire reçu",
+      "en": "Salary received",
       "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
-      "category": "solde",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+      "eto": {
+        "text": "mwán a ŋgwan úgbǝ̂",
+        "audio": "eton/saf_ui_019_take1_2c7e0adf.webm",
+        "duration": 1.98,
+        "explain_text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "explain_audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "explain_duration": 9.08,
+        "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+        "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+        "code": "SAF_UI_019",
+        "explain_code": "SAF_EXP_019",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Salary received": {
-      "fub": "Njoɓdi kuugal (Salaire) keɓaandi",
-      "phonetic": "Njob'di kôuôugal (Salaire) keb'ândi",
-      "explain_fub": "Ceede njoɓdi lewru ɗe naati nder limngal maa (+180 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde njob'di lewrou d'e nâti nder limngal mâ (+180 000 FCFA).",
+      "code": "SAF_UI_019",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Salaire reçu",
+      "en": "Salary received",
       "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
-      "category": "solde",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+      "eto": {
+        "text": "mwán a ŋgwan úgbǝ̂",
+        "audio": "eton/saf_ui_019_take1_2c7e0adf.webm",
+        "duration": 1.98,
+        "explain_text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "explain_audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "explain_duration": 9.08,
+        "explain_fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+        "explain_en": "Salary payment received in your account (+180,000 FCFA).",
+        "code": "SAF_UI_019",
+        "explain_code": "SAF_EXP_019",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Transfert reçu": {
-      "fub": "Nelal ceede keɓaangal",
-      "phonetic": "Nelal tchééde keb'ângal",
-      "explain_fub": "Ceede ɗe neɗɗo neldii ma nder limngal maa (+50 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e ned'd'o neldî ma nder limngal mâ (+50 000 FCFA).",
+      "code": "SAF_UI_020",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transfert reçu",
+      "en": "Transfer received",
       "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "eto": {
+        "text": "Ílôm mwání mǝ́gbǝ̂",
+        "audio": "eton/saf_ui_020_take1_cefac217.webm",
+        "duration": 2.49,
+        "explain_text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "explain_audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "explain_duration": 6.09,
+        "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+        "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+        "code": "SAF_UI_020",
+        "explain_code": "SAF_EXP_020",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Transfer received": {
-      "fub": "Nelal ceede keɓaangal",
-      "phonetic": "Nelal tchééde keb'ângal",
-      "explain_fub": "Ceede ɗe neɗɗo neldii ma nder limngal maa (+50 000 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e ned'd'o neldî ma nder limngal mâ (+50 000 FCFA).",
+      "code": "SAF_UI_020",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transfert reçu",
+      "en": "Transfer received",
       "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "eto": {
+        "text": "Ílôm mwání mǝ́gbǝ̂",
+        "audio": "eton/saf_ui_020_take1_cefac217.webm",
+        "duration": 2.49,
+        "explain_text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "explain_audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "explain_duration": 6.09,
+        "explain_fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+        "explain_en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+        "code": "SAF_UI_020",
+        "explain_code": "SAF_EXP_020",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Facture électricité": {
-      "fub": "Yoɓol talkuru kuuran (Yiite)",
-      "phonetic": "Yob'ol talkourou kôuôuran (Yîte)",
-      "explain_fub": "Ceede ɗe a yoɓiri talkuru kuuran (-7 500 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a yob'iri talkourou kôuôuran (-7 500 FCFA).",
+      "code": "SAF_UI_021",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Facture électricité",
+      "en": "Electricity bill",
       "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+      "eto": {
+        "text": "mwání a kudáŋ",
+        "audio": "eton/saf_ui_021_take1_c6cb4590.webm",
+        "duration": 2.07,
+        "explain_text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "explain_duration": 7.7,
+        "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+        "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+        "code": "SAF_UI_021",
+        "explain_code": "SAF_EXP_021",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Electricity bill": {
-      "fub": "Yoɓol talkuru kuuran (Yiite)",
-      "phonetic": "Yob'ol talkourou kôuôuran (Yîte)",
-      "explain_fub": "Ceede ɗe a yoɓiri talkuru kuuran (-7 500 FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e a yob'iri talkourou kôuôuran (-7 500 FCFA).",
+      "code": "SAF_UI_021",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Facture électricité",
+      "en": "Electricity bill",
       "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni a liè e asúsu",
-      "phonetic_ewo": "Moni a lié é asousou",
-      "explain_ewo": "Mɔni o nzi bəle e asúsu wô",
-      "explain_ewo_phonetic": "Mɔni o nzi bəle e asúsu wô"
+      "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+      "eto": {
+        "text": "mwání a kudáŋ",
+        "audio": "eton/saf_ui_021_take1_c6cb4590.webm",
+        "duration": 2.07,
+        "explain_text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "explain_audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "explain_duration": 7.7,
+        "explain_fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+        "explain_en": "Payment of your electricity bill (-7,500 FCFA).",
+        "code": "SAF_UI_021",
+        "explain_code": "SAF_EXP_021",
+        "category": "Étape 1 : Solde & Accueil"
+      }
     },
     "Frais de transfert": {
-      "fub": "Coggu nelal ceede",
-      "phonetic": "Tchoggou nelal tchééde",
-      "explain_fub": "Yaaduure 2 : Hiisugo coggu nelal e ceede fuu ɗe ittete.",
-      "explain_fub_phonetic": "Yâdôuôure 2 : Hîsougo tchoggou nelal e tchééde fôuôu d'e ittete.",
+      "code": "SAF_UI_022",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de transfert",
+      "en": "Transfer fees",
       "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
-      "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "eto": {
+        "text": "frɛ bɔ traŋfɛɛ",
+        "audio": "eton/saf_ui_022_take1_9677de82.webm",
+        "duration": 2.42,
+        "explain_text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "explain_audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "explain_duration": 4.57,
+        "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+        "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+        "code": "SAF_UI_022",
+        "explain_code": "SAF_EXP_022",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Transfer fees": {
-      "fub": "Coggu nelal ceede",
-      "phonetic": "Tchoggou nelal tchééde",
-      "explain_fub": "Yaaduure 2 : Hiisugo coggu nelal e ceede fuu ɗe ittete.",
-      "explain_fub_phonetic": "Yâdôuôure 2 : Hîsougo tchoggou nelal e tchééde fôuôu d'e ittete.",
+      "code": "SAF_UI_022",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de transfert",
+      "en": "Transfer fees",
       "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
-      "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "eto": {
+        "text": "frɛ bɔ traŋfɛɛ",
+        "audio": "eton/saf_ui_022_take1_9677de82.webm",
+        "duration": 2.42,
+        "explain_text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "explain_audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "explain_duration": 4.57,
+        "explain_fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+        "explain_en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+        "code": "SAF_UI_022",
+        "explain_code": "SAF_EXP_022",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Choisissez le type de transfert et le montant. Les frais sont calculés automatiquement.": {
-      "fub": "Suɓu iri laawol nelal e limngal ceede. Coggu nelal hiisete bee hoore mum.",
-      "phonetic": "Soub'ou iri lâwol nelal e limngal tchééde. Tchoggou nelal hîsete béé hôre moum.",
-      "explain_fub": "Nde a suɓii laawol (Safinum, Mobile Money malla Banki feere) e ceede, kuugal ngal hollirta coggu jooni-jooni.",
-      "explain_fub_phonetic": "Nde a soub'î lâwol (Safinoum, Mobile Money malla Banki féére) e tchééde, kôuôugal ngal hollirta tchoggou djôni-djôni.",
+      "code": "SAF_UI_023",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Choisissez le type de transfert et le montant. Les frais sont calculés automatiquement.",
+      "en": "Choose the transfer type and amount. Fees are calculated automatically.",
       "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "eto": {
+        "text": "twáb íkānî tráŋfɛ ee táŋ imwání. Táŋ itǝ́ kwamban ábɔ̄ frɛ inutɛ̂n.",
+        "audio": "eton/saf_ui_023_take1_4c61f28e.webm",
+        "duration": 7.03,
+        "explain_text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "explain_audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "explain_duration": 9.3,
+        "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+        "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+        "code": "SAF_UI_023",
+        "explain_code": "SAF_EXP_023",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Choose the transfer type and amount. Fees are calculated automatically.": {
-      "fub": "Suɓu iri laawol nelal e limngal ceede. Coggu nelal hiisete bee hoore mum.",
-      "phonetic": "Soub'ou iri lâwol nelal e limngal tchééde. Tchoggou nelal hîsete béé hôre moum.",
-      "explain_fub": "Nde a suɓii laawol (Safinum, Mobile Money malla Banki feere) e ceede, kuugal ngal hollirta coggu jooni-jooni.",
-      "explain_fub_phonetic": "Nde a soub'î lâwol (Safinoum, Mobile Money malla Banki féére) e tchééde, kôuôugal ngal hollirta tchoggou djôni-djôni.",
+      "code": "SAF_UI_023",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Choisissez le type de transfert et le montant. Les frais sont calculés automatiquement.",
+      "en": "Choose the transfer type and amount. Fees are calculated automatically.",
       "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "eto": {
+        "text": "twáb íkānî tráŋfɛ ee táŋ imwání. Táŋ itǝ́ kwamban ábɔ̄ frɛ inutɛ̂n.",
+        "audio": "eton/saf_ui_023_take1_4c61f28e.webm",
+        "duration": 7.03,
+        "explain_text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "explain_audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "explain_duration": 9.3,
+        "explain_fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+        "explain_en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+        "code": "SAF_UI_023",
+        "explain_code": "SAF_EXP_023",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Type d'opération": {
-      "fub": "Iri kuugal nelal",
-      "phonetic": "Iri kôuôugal nelal",
-      "explain_fub": "Laawol ngol ceede maa rewrata (Compte Safinum, Mobile Money, malla Autre banque).",
-      "explain_fub_phonetic": "Lâwol ngol tchééde mâ rewrata (Tchompte Safinoum, Mobile Money, malla Aoutre banqoue).",
+      "code": "SAF_UI_024",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Type d'opération",
+      "en": "Operation type",
       "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The financial network used to send funds to the recipient.",
+      "eto": {
+        "text": "íkāni opedasíōŋ",
+        "audio": "eton/saf_ui_024_take1_b6e4002c.webm",
+        "duration": 1.97,
+        "explain_text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "explain_audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "explain_duration": 7.97,
+        "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+        "explain_en": "The financial network used to send funds to the recipient.",
+        "code": "SAF_UI_024",
+        "explain_code": "SAF_EXP_024",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Operation type": {
-      "fub": "Iri kuugal nelal",
-      "phonetic": "Iri kôuôugal nelal",
-      "explain_fub": "Laawol ngol ceede maa rewrata (Compte Safinum, Mobile Money, malla Autre banque).",
-      "explain_fub_phonetic": "Lâwol ngol tchééde mâ rewrata (Tchompte Safinoum, Mobile Money, malla Aoutre banqoue).",
+      "code": "SAF_UI_024",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Type d'opération",
+      "en": "Operation type",
       "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The financial network used to send funds to the recipient.",
+      "eto": {
+        "text": "íkāni opedasíōŋ",
+        "audio": "eton/saf_ui_024_take1_b6e4002c.webm",
+        "duration": 1.97,
+        "explain_text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "explain_audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "explain_duration": 7.97,
+        "explain_fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+        "explain_en": "The financial network used to send funds to the recipient.",
+        "code": "SAF_UI_024",
+        "explain_code": "SAF_EXP_024",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Compte Safinum": {
-      "fub": "Limngal Safinum (0 FCFA - Meere)",
-      "phonetic": "Limngal Safinoum (0 FCFA - Méére)",
-      "explain_fub": "Neldugo haa kiliyanjo Safinum Pay feere : walaa coggu (0 FCFA).",
-      "explain_fub_phonetic": "Neldougo hâ kiliyanjo Safinoum Pay féére : walâ tchoggou (0 FCFA).",
+      "code": "SAF_UI_025",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Compte Safinum",
+      "en": "Safinum account",
       "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Asúsu Safinum",
-      "phonetic_ewo": "Asousou Safinoum",
-      "explain_ewo": "Ntómban mɔni e asúsu Safinum a ne zə́zə́ (0 FCFA).",
-      "explain_ewo_phonetic": "Ntómban mɔni e asúsu Safinum a ne zə́zə́ (0 FCFA)."
+      "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "eto": {
+        "text": "M̀pǝ́g mwání Safinum",
+        "audio": "eton/saf_ui_025_take1_d5a152e6.webm",
+        "duration": 2.55,
+        "explain_text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "explain_audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "explain_duration": 7.68,
+        "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+        "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+        "code": "SAF_UI_025",
+        "explain_code": "SAF_EXP_025",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Safinum account": {
-      "fub": "Limngal Safinum (0 FCFA - Meere)",
-      "phonetic": "Limngal Safinoum (0 FCFA - Méére)",
-      "explain_fub": "Neldugo haa kiliyanjo Safinum Pay feere : walaa coggu (0 FCFA).",
-      "explain_fub_phonetic": "Neldougo hâ kiliyanjo Safinoum Pay féére : walâ tchoggou (0 FCFA).",
+      "code": "SAF_UI_025",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Compte Safinum",
+      "en": "Safinum account",
       "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "eto": {
+        "text": "M̀pǝ́g mwání Safinum",
+        "audio": "eton/saf_ui_025_take1_d5a152e6.webm",
+        "duration": 2.55,
+        "explain_text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "explain_audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "explain_duration": 7.68,
+        "explain_fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+        "explain_en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+        "code": "SAF_UI_025",
+        "explain_code": "SAF_EXP_025",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Transfert instantané et gratuit": {
-      "fub": "Nelal jooni-jooni kadi meere (walaa coggu)",
-      "phonetic": "Nelal djôni-djôni kadi méére (walâ tchoggou)",
-      "explain_fub": "Ceede ɗe njottoto jooni-jooni kadi walaa mbuuɗu ittete dow coggu.",
-      "explain_fub_phonetic": "Tchééde d'e njottoto djôni-djôni kadi walâ mbôuôud'ou ittete dow tchoggou.",
+      "code": "SAF_UI_026",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Transfert instantané et gratuit",
+      "en": "Instant, free transfer",
       "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "eto": {
+        "text": "Traŋfɛ inutɛ̂n ee a zǝzǝ.",
+        "audio": "eton/saf_ui_026_take1_267e964a.webm",
+        "duration": 2.83,
+        "explain_text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "explain_audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "explain_duration": 6.17,
+        "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+        "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+        "code": "SAF_UI_026",
+        "explain_code": "SAF_EXP_026",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Instant, free transfer": {
-      "fub": "Nelal jooni-jooni kadi meere (walaa coggu)",
-      "phonetic": "Nelal djôni-djôni kadi méére (walâ tchoggou)",
-      "explain_fub": "Ceede ɗe njottoto jooni-jooni kadi walaa mbuuɗu ittete dow coggu.",
-      "explain_fub_phonetic": "Tchééde d'e njottoto djôni-djôni kadi walâ mbôuôud'ou ittete dow tchoggou.",
+      "code": "SAF_UI_026",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Transfert instantané et gratuit",
+      "en": "Instant, free transfer",
       "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "eto": {
+        "text": "Traŋfɛ inutɛ̂n ee a zǝzǝ.",
+        "audio": "eton/saf_ui_026_take1_267e964a.webm",
+        "duration": 2.83,
+        "explain_text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "explain_audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "explain_duration": 6.17,
+        "explain_fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+        "explain_en": "The money arrives immediately at the recipient and no fee is deducted.",
+        "code": "SAF_UI_026",
+        "explain_code": "SAF_EXP_026",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Mobile Money": {
-      "fub": "Kofru Mobile Money (1,5 %)",
-      "phonetic": "Kofrou Mobile Money (1,5 %)",
-      "explain_fub": "Neldugo haa waya Mobile Money (coggu 1,5 %).",
-      "explain_fub_phonetic": "Neldougo hâ waya Mobile Money (tchoggou 1,5 %).",
+      "code": "SAF_UI_027",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Mobile Money",
+      "en": "Mobile Money",
       "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "eto": {
+        "text": "Mobây mɔ́nî",
+        "audio": "eton/saf_ui_027_take1_62b7013d.webm",
+        "duration": 1.83,
+        "explain_text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "explain_audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "explain_duration": 9.06,
+        "explain_fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+        "explain_en": "Transfer to a Mobile Money wallet (1.5% fee).",
+        "code": "SAF_UI_027",
+        "explain_code": "SAF_EXP_027",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Frais de 1,5 % (min. 100 FCFA, max. 2 500 FCFA)": {
-      "fub": "Coggu nelal 1,5 % (famɗi fuu 100 FCFA, haaddi 2 500 FCFA)",
-      "phonetic": "Tchoggou nelal 1,5 % (famd'i fôuôu 100 FCFA, hâddi 2 500 FCFA)",
-      "explain_fub": "Kampaniiru hoosata 1,5 % dow ceede nelal; coggu les 100 FCFA walaa, kadi ɓurataa 2 500 FCFA.",
-      "explain_fub_phonetic": "Kampanîrou hôsata 1,5 % dow tchééde nelal; tchoggou les 100 FCFA walâ, kadi b'ouratâ 2 500 FCFA.",
+      "code": "SAF_UI_028",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 1,5 % (min. 100 FCFA, max. 2 500 FCFA)",
+      "en": "1.5% fee (min. 100 FCFA, max. 2,500 FCFA)",
       "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "eto": {
+        "text": "Bɔ Frɛ púdsáŋ a pwág etwan ɛ́ mvozobo (táŋ mǝkaza ntɛd, táŋ mǝmana mintɛd mítãn)",
+        "audio": "eton/saf_ui_028_take1_70293068.webm",
+        "duration": 8.91,
+        "explain_text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "explain_audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "explain_duration": 12.23,
+        "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+        "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+        "code": "SAF_UI_028",
+        "explain_code": "SAF_EXP_028",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "1.5% fee (min. 100 FCFA, max. 2,500 FCFA)": {
-      "fub": "Coggu nelal 1,5 % (famɗi fuu 100 FCFA, haaddi 2 500 FCFA)",
-      "phonetic": "Tchoggou nelal 1,5 % (famd'i fôuôu 100 FCFA, hâddi 2 500 FCFA)",
-      "explain_fub": "Kampaniiru hoosata 1,5 % dow ceede nelal; coggu les 100 FCFA walaa, kadi ɓurataa 2 500 FCFA.",
-      "explain_fub_phonetic": "Kampanîrou hôsata 1,5 % dow tchééde nelal; tchoggou les 100 FCFA walâ, kadi b'ouratâ 2 500 FCFA.",
+      "code": "SAF_UI_028",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 1,5 % (min. 100 FCFA, max. 2 500 FCFA)",
+      "en": "1.5% fee (min. 100 FCFA, max. 2,500 FCFA)",
       "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "eto": {
+        "text": "Bɔ Frɛ púdsáŋ a pwág etwan ɛ́ mvozobo (táŋ mǝkaza ntɛd, táŋ mǝmana mintɛd mítãn)",
+        "audio": "eton/saf_ui_028_take1_70293068.webm",
+        "duration": 8.91,
+        "explain_text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "explain_audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "explain_duration": 12.23,
+        "explain_fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+        "explain_en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+        "code": "SAF_UI_028",
+        "explain_code": "SAF_EXP_028",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Autre banque": {
-      "fub": "Banki feere (2 %)",
-      "phonetic": "Banki féére (2 %)",
-      "explain_fub": "Neldugo haa limngal banki feere (coggu 2 %).",
-      "explain_fub_phonetic": "Neldougo hâ limngal banki féére (tchoggou 2 %).",
+      "code": "SAF_UI_029",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Autre banque",
+      "en": "Other bank",
       "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Banki m̀fɛ́fɛ́ (Virement)",
-      "phonetic_ewo": "Banki mfèfè (Virement)",
-      "explain_ewo": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm.",
-      "explain_ewo_phonetic": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm."
+      "explain_en": "Transfer to an account in another bank (2% fee).",
+      "eto": {
+        "text": "Báŋ mpǝ́bǝ̂",
+        "audio": "eton/saf_ui_029_take1_57623b29.webm",
+        "duration": 1.8,
+        "explain_text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "explain_audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "explain_duration": 7.18,
+        "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+        "explain_en": "Transfer to an account in another bank (2% fee).",
+        "code": "SAF_UI_029",
+        "explain_code": "SAF_EXP_029",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Other bank": {
-      "fub": "Banki feere (2 %)",
-      "phonetic": "Banki féére (2 %)",
-      "explain_fub": "Neldugo haa limngal banki feere (coggu 2 %).",
-      "explain_fub_phonetic": "Neldougo hâ limngal banki féére (tchoggou 2 %).",
+      "code": "SAF_UI_029",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Autre banque",
+      "en": "Other bank",
       "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Banki m̀fɛ́fɛ́ (Virement)",
-      "phonetic_ewo": "Banki mfèfè (Virement)",
-      "explain_ewo": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm.",
-      "explain_ewo_phonetic": "Mímvèñ mi ne 2 % ya akɔŋ mɔni w'a lóm."
+      "explain_en": "Transfer to an account in another bank (2% fee).",
+      "eto": {
+        "text": "Báŋ mpǝ́bǝ̂",
+        "audio": "eton/saf_ui_029_take1_57623b29.webm",
+        "duration": 1.8,
+        "explain_text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "explain_audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "explain_duration": 7.18,
+        "explain_fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+        "explain_en": "Transfer to an account in another bank (2% fee).",
+        "code": "SAF_UI_029",
+        "explain_code": "SAF_EXP_029",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Frais de 2 % (min. 200 FCFA, max. 5 000 FCFA)": {
-      "fub": "Coggu nelal 2 % (famɗi fuu 200 FCFA, haaddi 5 000 FCFA)",
-      "phonetic": "Tchoggou nelal 2 % (famd'i fôuôu 200 FCFA, hâddi 5 000 FCFA)",
-      "explain_fub": "Banki hoosata 2 % dow ceede nelal; famɗi fuu 200 FCFA, kadi ɓurataa 5 000 FCFA.",
-      "explain_fub_phonetic": "Banki hôsata 2 % dow tchééde nelal; famd'i fôuôu 200 FCFA, kadi b'ouratâ 5 000 FCFA.",
+      "code": "SAF_UI_030",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 2 % (min. 200 FCFA, max. 5 000 FCFA)",
+      "en": "2% fee (min. 200 FCFA, max. 5,000 FCFA)",
       "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "eto": {
+        "text": "Bɔ frɛ pudsáŋ íbā (táŋ i mwání a mǝkaza mintɛd mítān táŋ i mwání á mǝmana twágsîn ítān)",
+        "audio": "eton/saf_ui_030_take1_51c50dd5.webm",
+        "duration": 7.6,
+        "explain_text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "explain_audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "explain_duration": 12.36,
+        "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+        "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+        "code": "SAF_UI_030",
+        "explain_code": "SAF_EXP_030",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "2% fee (min. 200 FCFA, max. 5,000 FCFA)": {
-      "fub": "Coggu nelal 2 % (famɗi fuu 200 FCFA, haaddi 5 000 FCFA)",
-      "phonetic": "Tchoggou nelal 2 % (famd'i fôuôu 200 FCFA, hâddi 5 000 FCFA)",
-      "explain_fub": "Banki hoosata 2 % dow ceede nelal; famɗi fuu 200 FCFA, kadi ɓurataa 5 000 FCFA.",
-      "explain_fub_phonetic": "Banki hôsata 2 % dow tchééde nelal; famd'i fôuôu 200 FCFA, kadi b'ouratâ 5 000 FCFA.",
+      "code": "SAF_UI_030",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 2 % (min. 200 FCFA, max. 5 000 FCFA)",
+      "en": "2% fee (min. 200 FCFA, max. 5,000 FCFA)",
       "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "eto": {
+        "text": "Bɔ frɛ pudsáŋ íbā (táŋ i mwání a mǝkaza mintɛd mítān táŋ i mwání á mǝmana twágsîn ítān)",
+        "audio": "eton/saf_ui_030_take1_51c50dd5.webm",
+        "duration": 7.6,
+        "explain_text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "explain_audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "explain_duration": 12.36,
+        "explain_fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+        "explain_en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+        "code": "SAF_UI_030",
+        "explain_code": "SAF_EXP_030",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Montant à envoyer": {
-      "fub": "Limngal ceede neldeteeɗe",
-      "phonetic": "Limngal tchééde neldetééd'e",
-      "explain_fub": "Ceede ɗe jaɓoowo heɓata (nder FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata (nder FCFA).",
+      "code": "SAF_UI_031",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Montant à envoyer",
+      "en": "Amount to send",
       "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The amount in FCFA you want to send to the recipient.",
+      "eto": {
+        "text": "í Táŋ ī mwání weey lom",
+        "audio": "eton/saf_ui_031_take2_bdfdf580.webm",
+        "duration": 2.12,
+        "explain_text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "explain_audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "explain_duration": 3.37,
+        "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+        "explain_en": "The amount in FCFA you want to send to the recipient.",
+        "code": "SAF_UI_031",
+        "explain_code": "SAF_EXP_031",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Amount to send": {
-      "fub": "Limngal ceede neldeteeɗe",
-      "phonetic": "Limngal tchééde neldetééd'e",
-      "explain_fub": "Ceede ɗe jaɓoowo heɓata (nder FCFA).",
-      "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata (nder FCFA).",
+      "code": "SAF_UI_031",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Montant à envoyer",
+      "en": "Amount to send",
       "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "The amount in FCFA you want to send to the recipient.",
+      "eto": {
+        "text": "í Táŋ ī mwání weey lom",
+        "audio": "eton/saf_ui_031_take2_bdfdf580.webm",
+        "duration": 2.12,
+        "explain_text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "explain_audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "explain_duration": 3.37,
+        "explain_fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+        "explain_en": "The amount in FCFA you want to send to the recipient.",
+        "code": "SAF_UI_031",
+        "explain_code": "SAF_EXP_031",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Gratuit": {
-      "fub": "Meere (0 FCFA)",
-      "phonetic": "Méére (0 FCFA)",
-      "explain_fub": "Walaa coggu nelal.",
-      "explain_fub_phonetic": "Walâ tchoggou nelal.",
+      "code": "SAF_UI_032",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Gratuit",
+      "en": "Free",
       "explain_fr": "Aucun frais de transaction.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Zə́zə́ (0 FCFA)",
-      "phonetic_ewo": "Zeuzeu (0 FCFA)",
-      "explain_ewo": "Téé mímvèñ; mɔni a téé yé.",
-      "explain_ewo_phonetic": "Téé mímvèñ; mɔni a téé yé."
+      "explain_en": "No transaction fees.",
+      "eto": {
+        "text": "á zǝzǝ",
+        "audio": "eton/saf_ui_032_take1_20779686.webm",
+        "duration": 1.88,
+        "explain_text": "Bɔ frɛ bǝ́sǝ̂",
+        "explain_audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "explain_duration": 2.13,
+        "explain_fr": "Aucun frais de transaction.",
+        "explain_en": "No transaction fees.",
+        "code": "SAF_UI_032",
+        "explain_code": "SAF_EXP_032",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Free": {
-      "fub": "Meere (0 FCFA)",
-      "phonetic": "Méére (0 FCFA)",
-      "explain_fub": "Walaa coggu nelal.",
-      "explain_fub_phonetic": "Walâ tchoggou nelal.",
+      "code": "SAF_UI_032",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Gratuit",
+      "en": "Free",
       "explain_fr": "Aucun frais de transaction.",
-      "category": "frais",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Zə́zə́ (0 FCFA)",
-      "phonetic_ewo": "Zeuzeu (0 FCFA)",
-      "explain_ewo": "Téé mímvèñ; mɔni a téé yé.",
-      "explain_ewo_phonetic": "Téé mímvèñ; mɔni a téé yé."
+      "explain_en": "No transaction fees.",
+      "eto": {
+        "text": "á zǝzǝ",
+        "audio": "eton/saf_ui_032_take1_20779686.webm",
+        "duration": 1.88,
+        "explain_text": "Bɔ frɛ bǝ́sǝ̂",
+        "explain_audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "explain_duration": 2.13,
+        "explain_fr": "Aucun frais de transaction.",
+        "explain_en": "No transaction fees.",
+        "code": "SAF_UI_032",
+        "explain_code": "SAF_EXP_032",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Total à débiter": {
-      "fub": "Ceede fuu ɗe ittete",
-      "phonetic": "Tchééde fôuôu d'e ittete",
-      "explain_fub": "Ceede neldeteeɗe + Coggu nelal = Ceede fuu ɗe ustete nder limngal maa.",
-      "explain_fub_phonetic": "Tchééde neldetééd'e + Tchoggou nelal = Tchééde fôuôu d'e oustete nder limngal mâ.",
+      "code": "SAF_UI_033",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Total à débiter",
+      "en": "Total to debit",
       "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
-      "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "eto": {
+        "text": "Ítāŋ ī mwání beey vaza",
+        "audio": "eton/saf_ui_033_take1_479329f6.webm",
+        "duration": 2.29,
+        "explain_text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "explain_audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "explain_duration": 6.45,
+        "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+        "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+        "code": "SAF_UI_033",
+        "explain_code": "SAF_EXP_033",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Total to debit": {
-      "fub": "Ceede fuu ɗe ittete",
-      "phonetic": "Tchééde fôuôu d'e ittete",
-      "explain_fub": "Ceede neldeteeɗe + Coggu nelal = Ceede fuu ɗe ustete nder limngal maa.",
-      "explain_fub_phonetic": "Tchééde neldetééd'e + Tchoggou nelal = Tchééde fôuôu d'e oustete nder limngal mâ.",
+      "code": "SAF_UI_033",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Total à débiter",
+      "en": "Total to debit",
       "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
-      "category": "frais",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "eto": {
+        "text": "Ítāŋ ī mwání beey vaza",
+        "audio": "eton/saf_ui_033_take1_479329f6.webm",
+        "duration": 2.29,
+        "explain_text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "explain_audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "explain_duration": 6.45,
+        "explain_fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+        "explain_en": "Total sum (Amount + Fee) that will be deducted from your account.",
+        "code": "SAF_UI_033",
+        "explain_code": "SAF_EXP_033",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Solde après opération": {
-      "fub": "Ceede keddotooɗe ɓaawo nelal",
-      "phonetic": "Tchééde keddotôd'e b'âwo nelal",
-      "explain_fub": "Ceede ɗe keddotoo nder kofru maa nde nelal ngal timmi.",
-      "explain_fub_phonetic": "Tchééde d'e keddotô nder kofrou mâ nde nelal ngal timmi.",
+      "code": "SAF_UI_034",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Solde après opération",
+      "en": "Balance after transfer",
       "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Amount that will remain available in your account after this transfer.",
+      "eto": {
+        "text": "Í tāŋ ī mwání á mbuz opedasíōŋ",
+        "audio": "eton/saf_ui_034_take1_a289d8ee.webm",
+        "duration": 3.09,
+        "explain_text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "explain_audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "explain_duration": 7.14,
+        "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+        "explain_en": "Amount that will remain available in your account after this transfer.",
+        "code": "SAF_UI_034",
+        "explain_code": "SAF_EXP_034",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Balance after transfer": {
-      "fub": "Ceede keddotooɗe ɓaawo nelal",
-      "phonetic": "Tchééde keddotôd'e b'âwo nelal",
-      "explain_fub": "Ceede ɗe keddotoo nder kofru maa nde nelal ngal timmi.",
-      "explain_fub_phonetic": "Tchééde d'e keddotô nder kofrou mâ nde nelal ngal timmi.",
+      "code": "SAF_UI_034",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Solde après opération",
+      "en": "Balance after transfer",
       "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
-      "category": "frais",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Mímvèñ mi ntómban",
-      "phonetic_ewo": "Mimvègn mi ntomban",
-      "explain_ewo": "Asúŋa mɔni asu lóm mɔni",
-      "explain_ewo_phonetic": "Asúŋa mɔni asu lóm mɔni"
+      "explain_en": "Amount that will remain available in your account after this transfer.",
+      "eto": {
+        "text": "Í tāŋ ī mwání á mbuz opedasíōŋ",
+        "audio": "eton/saf_ui_034_take1_a289d8ee.webm",
+        "duration": 3.09,
+        "explain_text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "explain_audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "explain_duration": 7.14,
+        "explain_fr": "Montant qui restera disponible sur votre compte après cette opération.",
+        "explain_en": "Amount that will remain available in your account after this transfer.",
+        "code": "SAF_UI_034",
+        "explain_code": "SAF_EXP_034",
+        "category": "Étape 2 : Frais & Simulation"
+      }
     },
     "Retour": {
-      "fub": "Rutto ɓaawo",
-      "phonetic": "Routto b'âwo",
-      "explain_fub": "Ruttoraago haa yaaduure ɓennunde.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure b'ennounde.",
+      "code": "SAF_UI_035",
+      "category": "Navigation & Accueil",
+      "fr": "Retour",
+      "en": "Back",
       "explain_fr": "Revenir à l'étape précédente.",
-      "category": "navigation",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Return to previous step.",
+      "eto": {
+        "text": "Á mbūz",
+        "audio": "eton/saf_ui_035_take1_00981a16.webm",
+        "duration": 1.21,
+        "explain_text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "explain_audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "explain_duration": 2.4,
+        "explain_fr": "Revenir à l'étape précédente.",
+        "explain_en": "Return to previous step.",
+        "code": "SAF_UI_035",
+        "explain_code": "SAF_EXP_035",
+        "category": "Navigation & Accueil"
+      }
     },
     "Back": {
-      "fub": "Rutto ɓaawo",
-      "phonetic": "Routto b'âwo",
-      "explain_fub": "Ruttoraago haa yaaduure ɓennunde.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure b'ennounde.",
+      "code": "SAF_UI_035",
+      "category": "Navigation & Accueil",
+      "fr": "Retour",
+      "en": "Back",
       "explain_fr": "Revenir à l'étape précédente.",
-      "category": "navigation",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Return to previous step.",
+      "eto": {
+        "text": "Á mbūz",
+        "audio": "eton/saf_ui_035_take1_00981a16.webm",
+        "duration": 1.21,
+        "explain_text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "explain_audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "explain_duration": 2.4,
+        "explain_fr": "Revenir à l'étape précédente.",
+        "explain_en": "Return to previous step.",
+        "code": "SAF_UI_035",
+        "explain_code": "SAF_EXP_035",
+        "category": "Navigation & Accueil"
+      }
     },
     "Continuer": {
-      "fub": "Jokku yeeso",
-      "phonetic": "Djokkou yééso",
-      "explain_fub": "Yahugo haa yaaduure tokkoore.",
-      "explain_fub_phonetic": "Yahougo hâ yâdôuôure tokkôre.",
+      "code": "SAF_UI_036",
+      "category": "Navigation & Accueil",
+      "fr": "Continuer",
+      "en": "Continue",
       "explain_fr": "Valider cette étape et passer à la suivante.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Kəl osu",
-      "phonetic_ewo": "Keul osou",
-      "explain_ewo": "Kəl osu e ésəle.",
-      "explain_ewo_phonetic": "Kəl osu e ésəle."
+      "explain_en": "Validate this step and proceed to next.",
+      "eto": {
+        "text": "kǝ́ úsú",
+        "audio": "eton/saf_ui_036_take1_b6d89452.webm",
+        "duration": 2.12,
+        "explain_text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "explain_audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "explain_duration": 4.88,
+        "explain_fr": "Valider cette étape et passer à la suivante.",
+        "explain_en": "Validate this step and proceed to next.",
+        "code": "SAF_UI_036",
+        "explain_code": "SAF_EXP_036",
+        "category": "Navigation & Accueil"
+      }
     },
     "Continue": {
-      "fub": "Jokku yeeso",
-      "phonetic": "Djokkou yééso",
-      "explain_fub": "Yahugo haa yaaduure tokkoore.",
-      "explain_fub_phonetic": "Yahougo hâ yâdôuôure tokkôre.",
+      "code": "SAF_UI_036",
+      "category": "Navigation & Accueil",
+      "fr": "Continuer",
+      "en": "Continue",
       "explain_fr": "Valider cette étape et passer à la suivante.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Kəl osu",
-      "phonetic_ewo": "Keul osou",
-      "explain_ewo": "Kəl osu e ésəle.",
-      "explain_ewo_phonetic": "Kəl osu e ésəle."
+      "explain_en": "Validate this step and proceed to next.",
+      "eto": {
+        "text": "kǝ́ úsú",
+        "audio": "eton/saf_ui_036_take1_b6d89452.webm",
+        "duration": 2.12,
+        "explain_text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "explain_audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "explain_duration": 4.88,
+        "explain_fr": "Valider cette étape et passer à la suivante.",
+        "explain_en": "Validate this step and proceed to next.",
+        "code": "SAF_UI_036",
+        "explain_code": "SAF_EXP_036",
+        "category": "Navigation & Accueil"
+      }
     },
     "Renseignez les informations du destinataire. Vérifiez toujours le numéro avant de valider.": {
-      "fub": "Winndu kabaruuji jaɓoowo ceede. Laartu lambar waya waktu fuu hidde a tabitina.",
-      "phonetic": "Winndou kabarôuôuji djab'ôwo tchééde. Lârtou lambar waya waktou fôuôu hidde a tabitina.",
-      "explain_fub": "Yaaduure 3 : Laartu booyma innde e lambar waya jaɓoowo ngam ceede ɗe to majja.",
-      "explain_fub_phonetic": "Yâdôuôure 3 : Lârtou bôyma innde e lambar waya djab'ôwo ngam tchééde d'e to majja.",
+      "code": "SAF_UI_037",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Renseignez les informations du destinataire. Vérifiez toujours le numéro avant de valider.",
+      "en": "Enter the recipient details. Always verify the number before confirming.",
       "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "eto": {
+        "text": "Púd idaŋtité ímôd utǝ́ lôm mwání. Ijɔŋ ísǝ̂ tɔŋlan nɔmɔ usúsú nâ ulôm mwání",
+        "audio": "eton/saf_ui_037_take1_9f377bdd.webm",
+        "duration": 7.33,
+        "explain_text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "explain_audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "explain_duration": 9.32,
+        "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+        "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+        "code": "SAF_UI_037",
+        "explain_code": "SAF_EXP_037",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Enter the recipient details. Always verify the number before confirming.": {
-      "fub": "Winndu kabaruuji jaɓoowo ceede. Laartu lambar waya waktu fuu hidde a tabitina.",
-      "phonetic": "Winndou kabarôuôuji djab'ôwo tchééde. Lârtou lambar waya waktou fôuôu hidde a tabitina.",
-      "explain_fub": "Yaaduure 3 : Laartu booyma innde e lambar waya jaɓoowo ngam ceede ɗe to majja.",
-      "explain_fub_phonetic": "Yâdôuôure 3 : Lârtou bôyma innde e lambar waya djab'ôwo ngam tchééde d'e to majja.",
+      "code": "SAF_UI_037",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Renseignez les informations du destinataire. Vérifiez toujours le numéro avant de valider.",
+      "en": "Enter the recipient details. Always verify the number before confirming.",
       "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "eto": {
+        "text": "Púd idaŋtité ímôd utǝ́ lôm mwání. Ijɔŋ ísǝ̂ tɔŋlan nɔmɔ usúsú nâ ulôm mwání",
+        "audio": "eton/saf_ui_037_take1_9f377bdd.webm",
+        "duration": 7.33,
+        "explain_text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "explain_audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "explain_duration": 9.32,
+        "explain_fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+        "explain_en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+        "code": "SAF_UI_037",
+        "explain_code": "SAF_EXP_037",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Ce bénéficiaire n'a jamais été utilisé sur ce compte. Vérifiez le numéro avant de continuer.": {
-      "fub": "Jaɓoowo oo meeɗaa huutineego nder limngal ngal. Laartu lambar waya mum booyma hidde a jokka.",
-      "phonetic": "Djab'ôwo ô mééd'â hôuôutinéégo nder limngal ngal. Lârtou lambar waya moum bôyma hidde a djokka.",
-      "explain_fub": "Reentinoore kisal : ɗum nde arandeere a neldata ceede haa neɗɗo oo. Laartu lambar waya laabi ɗiɗi!",
-      "explain_fub_phonetic": "Rééntinôre kisal : d'oum nde arandéére a neldata tchééde hâ ned'd'o ô. Lârtou lambar waya lâbi d'id'i!",
+      "code": "SAF_UI_038",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Ce bénéficiaire n'a jamais été utilisé sur ce compte. Vérifiez le numéro avant de continuer.",
+      "en": "This beneficiary has never been used on this account. Verify the number before continuing.",
       "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "eto": {
+        "text": "Imôd utǝ́ lôm mwání aŋgɛntǝ̄ bɛɛni ee mpǝ́g mwán vî. Tɔŋlan nɔmɔ usúsú nâ úkǝ̂ úsú",
+        "audio": "eton/saf_ui_038_take2_9b63cee1.webm",
+        "duration": 7.87,
+        "explain_text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "explain_audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "explain_duration": 12.12,
+        "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+        "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+        "code": "SAF_UI_038",
+        "explain_code": "SAF_EXP_038",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "This beneficiary has never been used on this account. Verify the number before continuing.": {
-      "fub": "Jaɓoowo oo meeɗaa huutineego nder limngal ngal. Laartu lambar waya mum booyma hidde a jokka.",
-      "phonetic": "Djab'ôwo ô mééd'â hôuôutinéégo nder limngal ngal. Lârtou lambar waya moum bôyma hidde a djokka.",
-      "explain_fub": "Reentinoore kisal : ɗum nde arandeere a neldata ceede haa neɗɗo oo. Laartu lambar waya laabi ɗiɗi!",
-      "explain_fub_phonetic": "Rééntinôre kisal : d'oum nde arandéére a neldata tchééde hâ ned'd'o ô. Lârtou lambar waya lâbi d'id'i!",
+      "code": "SAF_UI_038",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Ce bénéficiaire n'a jamais été utilisé sur ce compte. Vérifiez le numéro avant de continuer.",
+      "en": "This beneficiary has never been used on this account. Verify the number before continuing.",
       "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "eto": {
+        "text": "Imôd utǝ́ lôm mwání aŋgɛntǝ̄ bɛɛni ee mpǝ́g mwán vî. Tɔŋlan nɔmɔ usúsú nâ úkǝ̂ úsú",
+        "audio": "eton/saf_ui_038_take2_9b63cee1.webm",
+        "duration": 7.87,
+        "explain_text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "explain_audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "explain_duration": 12.12,
+        "explain_fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+        "explain_en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+        "code": "SAF_UI_038",
+        "explain_code": "SAF_EXP_038",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Nom du bénéficiaire": {
-      "fub": "Innde jaɓoowo ceede",
-      "phonetic": "Innde djab'ôwo tchééde",
-      "explain_fub": "Innde e jammoore neɗɗo mo heɓata ceede ɗe.",
-      "explain_fub_phonetic": "Innde e djammôre ned'd'o mo heb'ata tchééde d'e.",
+      "code": "SAF_UI_039",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Nom du bénéficiaire",
+      "en": "Beneficiary name",
       "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Full name of the person you are sending money to.",
+      "eto": {
+        "text": "dwě ímôd utǝ́ lôm mwánî",
+        "audio": "eton/saf_ui_039_take1_a8c7fb69.webm",
+        "duration": 2.43,
+        "explain_text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "explain_duration": 2.12,
+        "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+        "explain_en": "Full name of the person you are sending money to.",
+        "code": "SAF_UI_039",
+        "explain_code": "SAF_EXP_039",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Beneficiary name": {
-      "fub": "Innde jaɓoowo ceede",
-      "phonetic": "Innde djab'ôwo tchééde",
-      "explain_fub": "Innde e jammoore neɗɗo mo heɓata ceede ɗe.",
-      "explain_fub_phonetic": "Innde e djammôre ned'd'o mo heb'ata tchééde d'e.",
+      "code": "SAF_UI_039",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Nom du bénéficiaire",
+      "en": "Beneficiary name",
       "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Full name of the person you are sending money to.",
+      "eto": {
+        "text": "dwě ímôd utǝ́ lôm mwánî",
+        "audio": "eton/saf_ui_039_take1_a8c7fb69.webm",
+        "duration": 2.43,
+        "explain_text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "explain_duration": 2.12,
+        "explain_fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+        "explain_en": "Full name of the person you are sending money to.",
+        "code": "SAF_UI_039",
+        "explain_code": "SAF_EXP_039",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Numéro de téléphone": {
-      "fub": "Lambar waya jaɓoowo",
-      "phonetic": "Lambar waya djab'ôwo",
-      "explain_fub": "Lambar waya (+237...) mo jaɓoowo ceede.",
-      "explain_fub_phonetic": "Lambar waya (+237...) mo djab'ôwo tchééde.",
+      "code": "SAF_UI_040",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Numéro de téléphone",
+      "en": "Phone number",
       "explain_fr": "Numéro de téléphone mobile du destinataire.",
-      "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Nɔ́mba ya fón",
-      "phonetic_ewo": "Nomba ya fon",
-      "explain_ewo": "Nɔ́mba fón (+237 6xx xx xx xx).",
-      "explain_ewo_phonetic": "Nɔ́mba fón (+237 6xx xx xx xx)."
+      "explain_en": "Mobile phone number of the recipient.",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n",
+        "audio": "eton/saf_ui_040_take1_fcb7c399.webm",
+        "duration": 2.19,
+        "explain_text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "explain_duration": 3.01,
+        "explain_fr": "Numéro de téléphone mobile du destinataire.",
+        "explain_en": "Mobile phone number of the recipient.",
+        "code": "SAF_UI_040",
+        "explain_code": "SAF_EXP_040",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Phone number": {
-      "fub": "Lambar waya jaɓoowo",
-      "phonetic": "Lambar waya djab'ôwo",
-      "explain_fub": "Lambar waya (+237...) mo jaɓoowo ceede.",
-      "explain_fub_phonetic": "Lambar waya (+237...) mo djab'ôwo tchééde.",
+      "code": "SAF_UI_040",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Numéro de téléphone",
+      "en": "Phone number",
       "explain_fr": "Numéro de téléphone mobile du destinataire.",
-      "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Nɔ́mba ya fón",
-      "phonetic_ewo": "Nomba ya fon",
-      "explain_ewo": "Nɔ́mba fón (+237 6xx xx xx xx).",
-      "explain_ewo_phonetic": "Nɔ́mba fón (+237 6xx xx xx xx)."
+      "explain_en": "Mobile phone number of the recipient.",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n",
+        "audio": "eton/saf_ui_040_take1_fcb7c399.webm",
+        "duration": 2.19,
+        "explain_text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "explain_duration": 3.01,
+        "explain_fr": "Numéro de téléphone mobile du destinataire.",
+        "explain_en": "Mobile phone number of the recipient.",
+        "code": "SAF_UI_040",
+        "explain_code": "SAF_EXP_040",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Motif du transfert": {
-      "fub": "Dalila nelal ceede",
-      "phonetic": "Dalila nelal tchééde",
-      "explain_fub": "Sabu ko a neldata ceede ɗe (yeru : yoɓol kuugal, ballal saare).",
-      "explain_fub_phonetic": "Sabou ko a neldata tchééde d'e (yerou : yob'ol kôuôugal, ballal sâre).",
+      "code": "SAF_UI_041",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Motif du transfert",
+      "en": "Transfer reason",
       "explain_fr": "Raison de l'envoi d'argent.",
-      "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Reason for sending money.",
+      "eto": {
+        "text": "asú jǝ̂ utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_041_take1_29e0ea0a.webm",
+        "duration": 2.28,
+        "explain_text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "explain_duration": 2.62,
+        "explain_fr": "Raison de l'envoi d'argent.",
+        "explain_en": "Reason for sending money.",
+        "code": "SAF_UI_041",
+        "explain_code": "SAF_EXP_041",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Transfer reason": {
-      "fub": "Dalila nelal ceede",
-      "phonetic": "Dalila nelal tchééde",
-      "explain_fub": "Sabu ko a neldata ceede ɗe (yeru : yoɓol kuugal, ballal saare).",
-      "explain_fub_phonetic": "Sabou ko a neldata tchééde d'e (yerou : yob'ol kôuôugal, ballal sâre).",
+      "code": "SAF_UI_041",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Motif du transfert",
+      "en": "Transfer reason",
       "explain_fr": "Raison de l'envoi d'argent.",
-      "category": "beneficiaire",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Reason for sending money.",
+      "eto": {
+        "text": "asú jǝ̂ utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_041_take1_29e0ea0a.webm",
+        "duration": 2.28,
+        "explain_text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "explain_audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "explain_duration": 2.62,
+        "explain_fr": "Raison de l'envoi d'argent.",
+        "explain_en": "Reason for sending money.",
+        "code": "SAF_UI_041",
+        "explain_code": "SAF_EXP_041",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Note (optionnel)": {
-      "fub": "Bataake pamaro (Waɗugo ɗum doole हिaa)",
-      "phonetic": "Batâke pamaro (Wad'ougo d'oum dôle हिâ)",
-      "explain_fub": "A waawi ɓeydugo konngol pamarel ngam jaɓoowo to a yiɗi.",
-      "explain_fub_phonetic": "A wâwi b'eydougo konngol pamarel ngam djab'ôwo to a yid'i.",
+      "code": "SAF_UI_042",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Note (optionnel)",
+      "en": "Note (optional)",
       "explain_fr": "Commentaire facultatif joint au transfert.",
-      "category": "beneficiaire",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Optional comment attached to the transfer.",
+      "eto": {
+        "text": "nód",
+        "audio": "eton/saf_ui_042_take1_84a7184d.webm",
+        "duration": 0.71,
+        "explain_text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "explain_audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "explain_duration": 4.05,
+        "explain_fr": "Commentaire facultatif joint au transfert.",
+        "explain_en": "Optional comment attached to the transfer.",
+        "code": "SAF_UI_042",
+        "explain_code": "SAF_EXP_042",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Note (optional)": {
-      "fub": "Bataake pamaro (Waɗugo ɗum doole हिaa)",
-      "phonetic": "Batâke pamaro (Wad'ougo d'oum dôle हिâ)",
-      "explain_fub": "A waawi ɓeydugo konngol pamarel ngam jaɓoowo to a yiɗi.",
-      "explain_fub_phonetic": "A wâwi b'eydougo konngol pamarel ngam djab'ôwo to a yid'i.",
+      "code": "SAF_UI_042",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Note (optionnel)",
+      "en": "Note (optional)",
       "explain_fr": "Commentaire facultatif joint au transfert.",
-      "category": "beneficiaire",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Optional comment attached to the transfer.",
+      "eto": {
+        "text": "nód",
+        "audio": "eton/saf_ui_042_take1_84a7184d.webm",
+        "duration": 0.71,
+        "explain_text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "explain_audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "explain_duration": 4.05,
+        "explain_fr": "Commentaire facultatif joint au transfert.",
+        "explain_en": "Optional comment attached to the transfer.",
+        "code": "SAF_UI_042",
+        "explain_code": "SAF_EXP_042",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "J'ai vérifié le nom et le numéro du bénéficiaire.": {
-      "fub": "Mi laartii booyma innde e lambar waya jaɓoowo ceede.",
-      "phonetic": "Mi lârtî bôyma innde e lambar waya djab'ôwo tchééde.",
-      "explain_fub": "Sey a maanta akootiiru ndu ngam tabitingo wonde lambar jaɓoowo ɗum goonga.",
-      "explain_fub_phonetic": "Sey a mânta akôtîrou ndou ngam tabitingo wonde lambar djab'ôwo d'oum gônga.",
+      "code": "SAF_UI_043",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "J'ai vérifié le nom et le numéro du bénéficiaire.",
+      "en": "I have verified the beneficiary name and phone number.",
       "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "eto": {
+        "text": "Mǝmâ cáz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání",
+        "audio": "eton/saf_ui_043_take1_e24eef76.webm",
+        "duration": 3.72,
+        "explain_text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "explain_audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "explain_duration": 9.6,
+        "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+        "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+        "code": "SAF_UI_043",
+        "explain_code": "SAF_EXP_043",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "I have verified the beneficiary name and phone number.": {
-      "fub": "Mi laartii booyma innde e lambar waya jaɓoowo ceede.",
-      "phonetic": "Mi lârtî bôyma innde e lambar waya djab'ôwo tchééde.",
-      "explain_fub": "Sey a maanta akootiiru ndu ngam tabitingo wonde lambar jaɓoowo ɗum goonga.",
-      "explain_fub_phonetic": "Sey a mânta akôtîrou ndou ngam tabitingo wonde lambar djab'ôwo d'oum gônga.",
+      "code": "SAF_UI_043",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "J'ai vérifié le nom et le numéro du bénéficiaire.",
+      "en": "I have verified the beneficiary name and phone number.",
       "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
-      "category": "beneficiaire",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Nnyɔ a nɔŋ mɔni",
-      "phonetic_ewo": "Nnyo a nong moni",
-      "explain_ewo": "Mɔt w'a nɔŋ mɔni",
-      "explain_ewo_phonetic": "Mɔt w'a nɔŋ mɔni"
+      "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "eto": {
+        "text": "Mǝmâ cáz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání",
+        "audio": "eton/saf_ui_043_take1_e24eef76.webm",
+        "duration": 3.72,
+        "explain_text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "explain_audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "explain_duration": 9.6,
+        "explain_fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+        "explain_en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+        "code": "SAF_UI_043",
+        "explain_code": "SAF_EXP_043",
+        "category": "Étape 3 : Bénéficiaire"
+      }
     },
     "Vérifiez les informations avant de confirmer le transfert.": {
-      "fub": "Laartu kabaruuji ɗi fuu hidde a tabitina nelal ceede ngal.",
-      "phonetic": "Lârtou kabarôuôuji d'i fôuôu hidde a tabitina nelal tchééde ngal.",
-      "explain_fub": "Yaaduure 4 : Janngu ceede, coggu, innde e lambar jaɓoowo hidde a ɓilla tabitingo.",
-      "explain_fub_phonetic": "Yâdôuôure 4 : Djanngou tchééde, tchoggou, innde e lambar djab'ôwo hidde a b'illa tabitingo.",
+      "code": "SAF_UI_044",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Vérifiez les informations avant de confirmer le transfert.",
+      "en": "Check the details before confirming the transfer.",
       "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+      "eto": {
+        "text": "Tɔ́ŋlân mǝpɔ́ ususu nâ úkwâm traŋsfɛ",
+        "audio": "eton/saf_ui_044_take1_36ae4285.webm",
+        "duration": 3.99,
+        "explain_text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "explain_audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "explain_duration": 8.53,
+        "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+        "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+        "code": "SAF_UI_044",
+        "explain_code": "SAF_EXP_044",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Check the details before confirming the transfer.": {
-      "fub": "Laartu kabaruuji ɗi fuu hidde a tabitina nelal ceede ngal.",
-      "phonetic": "Lârtou kabarôuôuji d'i fôuôu hidde a tabitina nelal tchééde ngal.",
-      "explain_fub": "Yaaduure 4 : Janngu ceede, coggu, innde e lambar jaɓoowo hidde a ɓilla tabitingo.",
-      "explain_fub_phonetic": "Yâdôuôure 4 : Djanngou tchééde, tchoggou, innde e lambar djab'ôwo hidde a b'illa tabitingo.",
+      "code": "SAF_UI_044",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Vérifiez les informations avant de confirmer le transfert.",
+      "en": "Check the details before confirming the transfer.",
       "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+      "eto": {
+        "text": "Tɔ́ŋlân mǝpɔ́ ususu nâ úkwâm traŋsfɛ",
+        "audio": "eton/saf_ui_044_take1_36ae4285.webm",
+        "duration": 3.99,
+        "explain_text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "explain_audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "explain_duration": 8.53,
+        "explain_fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+        "explain_en": "Step 4: Review every line of the summary before giving final approval.",
+        "code": "SAF_UI_044",
+        "explain_code": "SAF_EXP_044",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Montant": {
-      "fub": "Limngal ceede",
-      "phonetic": "Limngal tchééde",
-      "explain_fub": "Ceede ɗe jaɓoowo heɓata.",
-      "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata.",
+      "code": "SAF_UI_045",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Montant",
+      "en": "Amount",
       "explain_fr": "Montant net envoyé au bénéficiaire.",
-      "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Net amount sent to recipient.",
+      "eto": {
+        "text": "Táŋ ī mwání",
+        "audio": "eton/saf_ui_045_take1_50d73239.webm",
+        "duration": 1.53,
+        "explain_text": "Táŋ ī mwání úlôm.",
+        "explain_audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "explain_duration": 2.29,
+        "explain_fr": "Montant net envoyé au bénéficiaire.",
+        "explain_en": "Net amount sent to recipient.",
+        "code": "SAF_UI_045",
+        "explain_code": "SAF_EXP_045",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Amount": {
-      "fub": "Limngal ceede",
-      "phonetic": "Limngal tchééde",
-      "explain_fub": "Ceede ɗe jaɓoowo heɓata.",
-      "explain_fub_phonetic": "Tchééde d'e djab'ôwo heb'ata.",
+      "code": "SAF_UI_045",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Montant",
+      "en": "Amount",
       "explain_fr": "Montant net envoyé au bénéficiaire.",
-      "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Net amount sent to recipient.",
+      "eto": {
+        "text": "Táŋ ī mwání",
+        "audio": "eton/saf_ui_045_take1_50d73239.webm",
+        "duration": 1.53,
+        "explain_text": "Táŋ ī mwání úlôm.",
+        "explain_audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "explain_duration": 2.29,
+        "explain_fr": "Montant net envoyé au bénéficiaire.",
+        "explain_en": "Net amount sent to recipient.",
+        "code": "SAF_UI_045",
+        "explain_code": "SAF_EXP_045",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Total débité": {
-      "fub": "Ceede fuu ɗe ittete",
-      "phonetic": "Tchééde fôuôu d'e ittete",
-      "explain_fub": "Ceede neldaaɗe + Coggu nelal.",
-      "explain_fub_phonetic": "Tchééde neldâd'e + Tchoggou nelal.",
+      "code": "SAF_UI_046",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Total débité",
+      "en": "Total debited",
       "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
-      "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni mësə́ m'a kə́ man",
-      "phonetic_ewo": "Moni méseulé ma keu man",
-      "explain_ewo": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô.",
-      "explain_ewo_phonetic": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô."
+      "explain_en": "Total amount debited from your account (amount + fees).",
+      "eto": {
+        "text": "Itāŋ ī lwání ivazban",
+        "audio": "eton/saf_ui_046_take1_7a887855.webm",
+        "duration": 2.45,
+        "explain_text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "explain_audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "explain_duration": 5.77,
+        "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+        "explain_en": "Total amount debited from your account (amount + fees).",
+        "code": "SAF_UI_046",
+        "explain_code": "SAF_EXP_046",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Total debited": {
-      "fub": "Ceede fuu ɗe ittete",
-      "phonetic": "Tchééde fôuôu d'e ittete",
-      "explain_fub": "Ceede neldaaɗe + Coggu nelal.",
-      "explain_fub_phonetic": "Tchééde neldâd'e + Tchoggou nelal.",
+      "code": "SAF_UI_046",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Total débité",
+      "en": "Total debited",
       "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
-      "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni mësə́ m'a kə́ man",
-      "phonetic_ewo": "Moni méseulé ma keu man",
-      "explain_ewo": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô.",
-      "explain_ewo_phonetic": "Akɔŋ mɔni e mímvèñ ba te e asúsu wô."
+      "explain_en": "Total amount debited from your account (amount + fees).",
+      "eto": {
+        "text": "Itāŋ ī lwání ivazban",
+        "audio": "eton/saf_ui_046_take1_7a887855.webm",
+        "duration": 2.45,
+        "explain_text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "explain_audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "explain_duration": 5.77,
+        "explain_fr": "Somme totale retirée de votre compte (montant + frais).",
+        "explain_en": "Total amount debited from your account (amount + fees).",
+        "code": "SAF_UI_046",
+        "explain_code": "SAF_EXP_046",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Téléphone": {
-      "fub": "Lambar waya",
-      "phonetic": "Lambar waya",
-      "explain_fub": "Lambar waya jaɓoowo ceede.",
-      "explain_fub_phonetic": "Lambar waya djab'ôwo tchééde.",
+      "code": "SAF_UI_047",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Téléphone",
+      "en": "Phone",
       "explain_fr": "Numéro de téléphone du destinataire.",
-      "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Numéro de téléphone du destinataire.",
+      "eto": {
+        "text": "Téléfɔ̄n",
+        "audio": "eton/saf_ui_047_take1_a236e4fb.webm",
+        "duration": 1.55,
+        "explain_text": "Nɔmɔ a téléfɔ̃n ímôd úlôm mwání.",
+        "explain_audio": "eton/saf_exp_047_take1_34b15aa8.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Numéro de téléphone du destinataire.",
+        "explain_en": "Numéro de téléphone du destinataire.",
+        "code": "SAF_UI_047",
+        "explain_code": "SAF_EXP_047",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Phone": {
-      "fub": "Lambar waya",
-      "phonetic": "Lambar waya",
-      "explain_fub": "Lambar waya jaɓoowo ceede.",
-      "explain_fub_phonetic": "Lambar waya djab'ôwo tchééde.",
+      "code": "SAF_UI_047",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Téléphone",
+      "en": "Phone",
       "explain_fr": "Numéro de téléphone du destinataire.",
-      "category": "recapitulatif",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Numéro de téléphone du destinataire.",
+      "eto": {
+        "text": "Téléfɔ̄n",
+        "audio": "eton/saf_ui_047_take1_a236e4fb.webm",
+        "duration": 1.55,
+        "explain_text": "Nɔmɔ a téléfɔ̃n ímôd úlôm mwání.",
+        "explain_audio": "eton/saf_exp_047_take1_34b15aa8.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Numéro de téléphone du destinataire.",
+        "explain_en": "Numéro de téléphone du destinataire.",
+        "code": "SAF_UI_047",
+        "explain_code": "SAF_EXP_047",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Référence": {
-      "fub": "Lambar seedamku",
-      "phonetic": "Lambar séédamkou",
-      "explain_fub": "Lambar seedamku keeriido mo kuugal ngal (SAF-2026-...).",
-      "explain_fub_phonetic": "Lambar séédamkou kéérîdo mo kôuôugal ngal (SAF-2026-...).",
+      "code": "SAF_UI_048",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Référence",
+      "en": "Reference",
       "explain_fr": "Identifiant unique de traçabilité de la transaction.",
-      "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Lambar ya ntómban (SAF-2026-...)",
-      "phonetic_ewo": "Lambar ya ntomban (SAF-2026-...)",
-      "explain_ewo": "Lambar immuable ya ésəle nyina.",
-      "explain_ewo_phonetic": "Lambar immuable ya ésəle nyina."
+      "explain_en": "Unique transaction reference ID.",
+      "eto": {
+        "text": "Rǝféraŋs",
+        "audio": "eton/saf_ui_048_take1_63c69c2d.webm",
+        "duration": 1.46,
+        "explain_text": "Idaŋtité ílôm mwání.",
+        "explain_audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "explain_duration": 2.76,
+        "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+        "explain_en": "Unique transaction reference ID.",
+        "code": "SAF_UI_048",
+        "explain_code": "SAF_EXP_048",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Reference": {
-      "fub": "Lambar seedamku",
-      "phonetic": "Lambar séédamkou",
-      "explain_fub": "Lambar seedamku keeriido mo kuugal ngal (SAF-2026-...).",
-      "explain_fub_phonetic": "Lambar séédamkou kéérîdo mo kôuôugal ngal (SAF-2026-...).",
+      "code": "SAF_UI_048",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Référence",
+      "en": "Reference",
       "explain_fr": "Identifiant unique de traçabilité de la transaction.",
-      "category": "recapitulatif",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Lambar ya ntómban (SAF-2026-...)",
-      "phonetic_ewo": "Lambar ya ntomban (SAF-2026-...)",
-      "explain_ewo": "Lambar immuable ya ésəle nyina.",
-      "explain_ewo_phonetic": "Lambar immuable ya ésəle nyina."
+      "explain_en": "Unique transaction reference ID.",
+      "eto": {
+        "text": "Rǝféraŋs",
+        "audio": "eton/saf_ui_048_take1_63c69c2d.webm",
+        "duration": 1.46,
+        "explain_text": "Idaŋtité ílôm mwání.",
+        "explain_audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "explain_duration": 2.76,
+        "explain_fr": "Identifiant unique de traçabilité de la transaction.",
+        "explain_en": "Unique transaction reference ID.",
+        "code": "SAF_UI_048",
+        "explain_code": "SAF_EXP_048",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Opération": {
-      "fub": "Laawol kuugal",
-      "phonetic": "Lâwol kôuôugal",
-      "explain_fub": "Iri nelal ngal suɓu-ɗaa.",
-      "explain_fub_phonetic": "Iri nelal ngal soub'ou-d'â.",
+      "code": "SAF_UI_049",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Opération",
+      "en": "Operation",
       "explain_fr": "Canal de transfert sélectionné.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Selected transfer channel.",
+      "eto": {
+        "text": "opérasíōŋ",
+        "audio": "eton/saf_ui_049_take1_fe2b9ae9.webm",
+        "duration": 2.18,
+        "explain_text": "Zɛ̌n ílôm í mwání itwábban.",
+        "explain_audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Canal de transfert sélectionné.",
+        "explain_en": "Selected transfer channel.",
+        "code": "SAF_UI_049",
+        "explain_code": "SAF_EXP_049",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Operation": {
-      "fub": "Laawol kuugal",
-      "phonetic": "Lâwol kôuôugal",
-      "explain_fub": "Iri nelal ngal suɓu-ɗaa.",
-      "explain_fub_phonetic": "Iri nelal ngal soub'ou-d'â.",
+      "code": "SAF_UI_049",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Opération",
+      "en": "Operation",
       "explain_fr": "Canal de transfert sélectionné.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Selected transfer channel.",
+      "eto": {
+        "text": "opérasíōŋ",
+        "audio": "eton/saf_ui_049_take1_fe2b9ae9.webm",
+        "duration": 2.18,
+        "explain_text": "Zɛ̌n ílôm í mwání itwábban.",
+        "explain_audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "explain_duration": 3.2,
+        "explain_fr": "Canal de transfert sélectionné.",
+        "explain_en": "Selected transfer channel.",
+        "code": "SAF_UI_049",
+        "explain_code": "SAF_EXP_049",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Je confirme que les informations ci-dessus sont correctes.": {
-      "fub": "Mi tabitinii wonde kabaruuji gonɗi dow ɗoo fuu ɗum goonga.",
-      "phonetic": "Mi tabitinî wonde kabarôuôuji gond'i dow d'ô fôuôu d'oum gônga.",
-      "explain_fub": "Maantu akootiiru ndu hidde a ɓilla butoŋ « Tabitinu nelal ceede ».",
-      "explain_fub_phonetic": "Mântou akôtîrou ndou hidde a b'illa boutong « Tabitinou nelal tchééde ».",
+      "code": "SAF_UI_050",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Je confirme que les informations ci-dessus sont correctes.",
+      "en": "I confirm the information above is correct.",
       "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "eto": {
+        "text": "Ilɛ́ ntī, mǝpɔ́ mǝ́vǝ̂ mǝnǝ tɔ̄",
+        "audio": "eton/saf_ui_050_take1_f5a12266.webm",
+        "duration": 3.62,
+        "explain_text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "explain_audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "explain_duration": 6.36,
+        "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+        "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+        "code": "SAF_UI_050",
+        "explain_code": "SAF_EXP_050",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "I confirm the information above is correct.": {
-      "fub": "Mi tabitinii wonde kabaruuji gonɗi dow ɗoo fuu ɗum goonga.",
-      "phonetic": "Mi tabitinî wonde kabarôuôuji gond'i dow d'ô fôuôu d'oum gônga.",
-      "explain_fub": "Maantu akootiiru ndu hidde a ɓilla butoŋ « Tabitinu nelal ceede ».",
-      "explain_fub_phonetic": "Mântou akôtîrou ndou hidde a b'illa boutong « Tabitinou nelal tchééde ».",
+      "code": "SAF_UI_050",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Je confirme que les informations ci-dessus sont correctes.",
+      "en": "I confirm the information above is correct.",
       "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ntílán mebə̀lə̀ mé mɔni",
-      "phonetic_ewo": "Ntilan mébeuleu mé moni",
-      "explain_ewo": "Laart osu na o kaməla",
-      "explain_ewo_phonetic": "Laart osu na o kaməla"
+      "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "eto": {
+        "text": "Ilɛ́ ntī, mǝpɔ́ mǝ́vǝ̂ mǝnǝ tɔ̄",
+        "audio": "eton/saf_ui_050_take1_f5a12266.webm",
+        "duration": 3.62,
+        "explain_text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "explain_audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "explain_duration": 6.36,
+        "explain_fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+        "explain_en": "Mandatory action: check this box to authorize the debit and final transfer.",
+        "code": "SAF_UI_050",
+        "explain_code": "SAF_EXP_050",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Modifier": {
-      "fub": "Waylugo",
-      "phonetic": "Waylougo",
-      "explain_fub": "Ruttoraago haa yaaduure 3 ngam feewnugo kabaruuji.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 3 ngam fééwnougo kabarôuôuji.",
+      "code": "SAF_UI_051",
+      "category": "Navigation & Accueil",
+      "fr": "Modifier",
+      "en": "Edit",
       "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Return to previous step to edit information.",
+      "eto": {
+        "text": "Cɛ́nî",
+        "audio": "eton/saf_ui_051_take1_9c32c7f8.webm",
+        "duration": 1.27,
+        "explain_text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "explain_audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "explain_duration": 3.88,
+        "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+        "explain_en": "Return to previous step to edit information.",
+        "code": "SAF_UI_051",
+        "explain_code": "SAF_EXP_051",
+        "category": "Navigation & Accueil"
+      }
     },
     "Edit": {
-      "fub": "Waylugo",
-      "phonetic": "Waylougo",
-      "explain_fub": "Ruttoraago haa yaaduure 3 ngam feewnugo kabaruuji.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 3 ngam fééwnougo kabarôuôuji.",
+      "code": "SAF_UI_051",
+      "category": "Navigation & Accueil",
+      "fr": "Modifier",
+      "en": "Edit",
       "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Return to previous step to edit information.",
+      "eto": {
+        "text": "Cɛ́nî",
+        "audio": "eton/saf_ui_051_take1_9c32c7f8.webm",
+        "duration": 1.27,
+        "explain_text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "explain_audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "explain_duration": 3.88,
+        "explain_fr": "Revenir à l'étape précédente pour corriger une information.",
+        "explain_en": "Return to previous step to edit information.",
+        "code": "SAF_UI_051",
+        "explain_code": "SAF_EXP_051",
+        "category": "Navigation & Accueil"
+      }
     },
     "Confirmer le transfert": {
-      "fub": "Tabitinu nelal ceede",
-      "phonetic": "Tabitinou nelal tchééde",
-      "explain_fub": "Ɓillugo ɗoo neldata ceede ɗe jooni-jooni haa jaɓoowo.",
-      "explain_fub_phonetic": "B'illougo d'ô neldata tchééde d'e djôni-djôni hâ djab'ôwo.",
+      "code": "SAF_UI_052",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Confirmer le transfert",
+      "en": "Confirm transfer",
       "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla ntómban",
-      "phonetic_ewo": "Findi / Kaméula ntomban",
-      "explain_ewo": "Fíndí asu na mɔni a kə.",
-      "explain_ewo_phonetic": "Fíndí asu na mɔni a kə."
+      "explain_en": "Confirm definitively and send funds now.",
+      "eto": {
+        "text": "Vǝ́ cīŋ i traŋsfɛ",
+        "audio": "eton/saf_ui_052_take1_34719753.webm",
+        "duration": 2.09,
+        "explain_text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "explain_audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "explain_duration": 3.24,
+        "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+        "explain_en": "Confirm definitively and send funds now.",
+        "code": "SAF_UI_052",
+        "explain_code": "SAF_EXP_052",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Confirm transfer": {
-      "fub": "Tabitinu nelal ceede",
-      "phonetic": "Tabitinou nelal tchééde",
-      "explain_fub": "Ɓillugo ɗoo neldata ceede ɗe jooni-jooni haa jaɓoowo.",
-      "explain_fub_phonetic": "B'illougo d'ô neldata tchééde d'e djôni-djôni hâ djab'ôwo.",
+      "code": "SAF_UI_052",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Confirmer le transfert",
+      "en": "Confirm transfer",
       "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
-      "category": "recapitulatif",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla ntómban",
-      "phonetic_ewo": "Findi / Kaméula ntomban",
-      "explain_ewo": "Fíndí asu na mɔni a kə.",
-      "explain_ewo_phonetic": "Fíndí asu na mɔni a kə."
+      "explain_en": "Confirm definitively and send funds now.",
+      "eto": {
+        "text": "Vǝ́ cīŋ i traŋsfɛ",
+        "audio": "eton/saf_ui_052_take1_34719753.webm",
+        "duration": 2.09,
+        "explain_text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "explain_audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "explain_duration": 3.24,
+        "explain_fr": "Valider définitivement et envoyer les fonds maintenant.",
+        "explain_en": "Confirm definitively and send funds now.",
+        "code": "SAF_UI_052",
+        "explain_code": "SAF_EXP_052",
+        "category": "Étape 4 : Récapitulatif"
+      }
     },
     "Transfert effectué": {
-      "fub": "Nelal ceede timmii bee nasaraaku",
-      "phonetic": "Nelal tchééde timmî béé nasarâkou",
-      "explain_fub": "Alhamdu! Ceede maa neldaama booyma haa jaɓoowo.",
-      "explain_fub_phonetic": "Alhamdou! Tchééde mâ neldâma bôyma hâ djab'ôwo.",
+      "code": "SAF_UI_053",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Transfert effectué",
+      "en": "Transfer completed",
       "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Operation completed: your transfer was successfully processed.",
+      "eto": {
+        "text": "Traŋsfɛ ikwâmban",
+        "audio": "eton/saf_ui_053_take1_c78b32a3.webm",
+        "duration": 2.44,
+        "explain_text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "explain_audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "explain_duration": 3.48,
+        "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+        "explain_en": "Operation completed: your transfer was successfully processed.",
+        "code": "SAF_UI_053",
+        "explain_code": "SAF_EXP_053",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Transfer completed": {
-      "fub": "Nelal ceede timmii bee nasaraaku",
-      "phonetic": "Nelal tchééde timmî béé nasarâkou",
-      "explain_fub": "Alhamdu! Ceede maa neldaama booyma haa jaɓoowo.",
-      "explain_fub_phonetic": "Alhamdou! Tchééde mâ neldâma bôyma hâ djab'ôwo.",
+      "code": "SAF_UI_053",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Transfert effectué",
+      "en": "Transfer completed",
       "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Operation completed: your transfer was successfully processed.",
+      "eto": {
+        "text": "Traŋsfɛ ikwâmban",
+        "audio": "eton/saf_ui_053_take1_c78b32a3.webm",
+        "duration": 2.44,
+        "explain_text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "explain_audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "explain_duration": 3.48,
+        "explain_fr": "Opération terminée : votre virement a bien été exécuté.",
+        "explain_en": "Operation completed: your transfer was successfully processed.",
+        "code": "SAF_UI_053",
+        "explain_code": "SAF_EXP_053",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Votre transfert a été envoyé avec succès.": {
-      "fub": "Nelal ceede maa neldaama bee nasaraaku timmungu.",
-      "phonetic": "Nelal tchééde mâ neldâma béé nasarâkou timmoungou.",
-      "explain_fub": "Jaɓoowo heɓii ceede ɗe. Resu lambar seedamku (SAF-2026-...) gonɗo les ɗoo.",
-      "explain_fub_phonetic": "Djab'ôwo heb'î tchééde d'e. Resou lambar séédamkou (SAF-2026-...) gond'o les d'ô.",
+      "code": "SAF_UI_054",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Votre transfert a été envoyé avec succès.",
+      "en": "Your transfer has been sent successfully.",
       "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "eto": {
+        "text": "Traŋsfɛ a mina ikwâmban ee mǝkaba",
+        "audio": "eton/saf_ui_054_take1_313f1fa7.webm",
+        "duration": 4.3,
+        "explain_text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "explain_audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "explain_duration": 5.5,
+        "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+        "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+        "code": "SAF_UI_054",
+        "explain_code": "SAF_EXP_054",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Your transfer has been sent successfully.": {
-      "fub": "Nelal ceede maa neldaama bee nasaraaku timmungu.",
-      "phonetic": "Nelal tchééde mâ neldâma béé nasarâkou timmoungou.",
-      "explain_fub": "Jaɓoowo heɓii ceede ɗe. Resu lambar seedamku (SAF-2026-...) gonɗo les ɗoo.",
-      "explain_fub_phonetic": "Djab'ôwo heb'î tchééde d'e. Resou lambar séédamkou (SAF-2026-...) gond'o les d'ô.",
+      "code": "SAF_UI_054",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Votre transfert a été envoyé avec succès.",
+      "en": "Your transfer has been sent successfully.",
       "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "eto": {
+        "text": "Traŋsfɛ a mina ikwâmban ee mǝkaba",
+        "audio": "eton/saf_ui_054_take1_313f1fa7.webm",
+        "duration": 4.3,
+        "explain_text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "explain_audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "explain_duration": 5.5,
+        "explain_fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+        "explain_en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+        "code": "SAF_UI_054",
+        "explain_code": "SAF_EXP_054",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Statut": {
-      "fub": "Darnde kuugal",
-      "phonetic": "Darnde kôuôugal",
-      "explain_fub": "Hollirta to nelal ngal timmii.",
-      "explain_fub_phonetic": "Hollirta to nelal ngal timmî.",
+      "code": "SAF_UI_055",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Statut",
+      "en": "Status",
       "explain_fr": "État final du traitement de la transaction.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Émvila asúsu",
-      "phonetic_ewo": "Emvila asousou",
-      "explain_ewo": "Laart to asúsu wô a ne m̀vɛ̀.",
-      "explain_ewo_phonetic": "Laart to asúsu wô a ne m̀vɛ̀."
+      "explain_en": "Final processing status of the transaction.",
+      "eto": {
+        "text": "Statu",
+        "audio": "eton/saf_ui_055_take1_40ab7c5d.webm",
+        "duration": 1.18,
+        "explain_text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "explain_audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "explain_duration": 3.08,
+        "explain_fr": "État final du traitement de la transaction.",
+        "explain_en": "Final processing status of the transaction.",
+        "code": "SAF_UI_055",
+        "explain_code": "SAF_EXP_055",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Status": {
-      "fub": "Darnde kuugal",
-      "phonetic": "Darnde kôuôugal",
-      "explain_fub": "Hollirta to nelal ngal timmii.",
-      "explain_fub_phonetic": "Hollirta to nelal ngal timmî.",
+      "code": "SAF_UI_055",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Statut",
+      "en": "Status",
       "explain_fr": "État final du traitement de la transaction.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Émvila asúsu",
-      "phonetic_ewo": "Emvila asousou",
-      "explain_ewo": "Laart to asúsu wô a ne m̀vɛ̀.",
-      "explain_ewo_phonetic": "Laart to asúsu wô a ne m̀vɛ̀."
+      "explain_en": "Final processing status of the transaction.",
+      "eto": {
+        "text": "Statu",
+        "audio": "eton/saf_ui_055_take1_40ab7c5d.webm",
+        "duration": 1.18,
+        "explain_text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "explain_audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "explain_duration": 3.08,
+        "explain_fr": "État final du traitement de la transaction.",
+        "explain_en": "Final processing status of the transaction.",
+        "code": "SAF_UI_055",
+        "explain_code": "SAF_EXP_055",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Succès": {
-      "fub": "Timmii (Nasaraaku)",
-      "phonetic": "Timmî (Nasarâkou)",
-      "explain_fub": "Kuugal ngal waɗii walaa boofol.",
-      "explain_fub_phonetic": "Kôuôugal ngal wad'î walâ bôfol.",
+      "code": "SAF_UI_056",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Succès",
+      "en": "Success",
       "explain_fr": "Transaction réussie et validée.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Transaction successful and confirmed.",
+      "eto": {
+        "text": "Mǝkaba",
+        "audio": "eton/saf_ui_056_take1_2bc4142d.webm",
+        "duration": 1.34,
+        "explain_text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "explain_audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "explain_duration": 4.23,
+        "explain_fr": "Transaction réussie et validée.",
+        "explain_en": "Transaction successful and confirmed.",
+        "code": "SAF_UI_056",
+        "explain_code": "SAF_EXP_056",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Success": {
-      "fub": "Timmii (Nasaraaku)",
-      "phonetic": "Timmî (Nasarâkou)",
-      "explain_fub": "Kuugal ngal waɗii walaa boofol.",
-      "explain_fub_phonetic": "Kôuôugal ngal wad'î walâ bôfol.",
+      "code": "SAF_UI_056",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Succès",
+      "en": "Success",
       "explain_fr": "Transaction réussie et validée.",
-      "category": "confirmation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Fíndí / Kaməla",
-      "phonetic_ewo": "Findi / Kaméula",
-      "explain_ewo": "Kaməla ésəle ntómban",
-      "explain_ewo_phonetic": "Kaməla ésəle ntómban"
+      "explain_en": "Transaction successful and confirmed.",
+      "eto": {
+        "text": "Mǝkaba",
+        "audio": "eton/saf_ui_056_take1_2bc4142d.webm",
+        "duration": 1.34,
+        "explain_text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "explain_audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "explain_duration": 4.23,
+        "explain_fr": "Transaction réussie et validée.",
+        "explain_en": "Transaction successful and confirmed.",
+        "code": "SAF_UI_056",
+        "explain_code": "SAF_EXP_056",
+        "category": "Étape 5 : Confirmation & Reçu"
+      }
     },
     "Nouveau transfert": {
-      "fub": "Nelal ceede kesal",
-      "phonetic": "Nelal tchééde kesal",
-      "explain_fub": "Ruttoraago haa yaaduure 1 ngam waɗugo nelal feere.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 1 ngam wad'ougo nelal féére.",
+      "code": "SAF_UI_057",
+      "category": "Navigation & Accueil",
+      "fr": "Nouveau transfert",
+      "en": "New transfer",
       "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntómban m̀fɛ́fɛ́",
-      "phonetic_ewo": "Ntomban mfèfè",
-      "explain_ewo": "Bo ntómban m̀fɛ́fɛ́ ya mɔni.",
-      "explain_ewo_phonetic": "Bo ntómban m̀fɛ́fɛ́ ya mɔni."
+      "explain_en": "Return to home page to perform another operation.",
+      "eto": {
+        "text": "M̀pámgî tráŋsfɛ",
+        "audio": "eton/saf_ui_057_take1_cbd3e57c.webm",
+        "duration": 1.66,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "explain_audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "explain_duration": 4.79,
+        "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+        "explain_en": "Return to home page to perform another operation.",
+        "code": "SAF_UI_057",
+        "explain_code": "SAF_EXP_057",
+        "category": "Navigation & Accueil"
+      }
     },
     "New transfer": {
-      "fub": "Nelal ceede kesal",
-      "phonetic": "Nelal tchééde kesal",
-      "explain_fub": "Ruttoraago haa yaaduure 1 ngam waɗugo nelal feere.",
-      "explain_fub_phonetic": "Routtorâgo hâ yâdôuôure 1 ngam wad'ougo nelal féére.",
+      "code": "SAF_UI_057",
+      "category": "Navigation & Accueil",
+      "fr": "Nouveau transfert",
+      "en": "New transfer",
       "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
-      "category": "navigation",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Ntómban m̀fɛ́fɛ́",
-      "phonetic_ewo": "Ntomban mfèfè",
-      "explain_ewo": "Bo ntómban m̀fɛ́fɛ́ ya mɔni.",
-      "explain_ewo_phonetic": "Bo ntómban m̀fɛ́fɛ́ ya mɔni."
+      "explain_en": "Return to home page to perform another operation.",
+      "eto": {
+        "text": "M̀pámgî tráŋsfɛ",
+        "audio": "eton/saf_ui_057_take1_cbd3e57c.webm",
+        "duration": 1.66,
+        "explain_text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "explain_audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "explain_duration": 4.79,
+        "explain_fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+        "explain_en": "Return to home page to perform another operation.",
+        "code": "SAF_UI_057",
+        "explain_code": "SAF_EXP_057",
+        "category": "Navigation & Accueil"
+      }
     },
     "Une erreur est survenue": {
-      "fub": "Boofol waɗii nder kuugal",
-      "phonetic": "Bôfol wad'î nder kôuôugal",
-      "explain_fub": "Kuugal ngal daraama sabu boofol; janngu famfingo les ɗoo ngam feewnugo.",
-      "explain_fub_phonetic": "Kôuôugal ngal darâma sabou bôfol; djanngou famfingo les d'ô ngam fééwnougo.",
+      "code": "SAF_UI_058",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Une erreur est survenue",
+      "en": "An error occurred",
       "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "eto": {
+        "text": "Dâm laánjī wul mmǝŋ",
+        "audio": "eton/saf_ui_058_take1_9c772660.webm",
+        "duration": 2.11,
+        "explain_text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "explain_audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "explain_duration": 4.6,
+        "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+        "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+        "code": "SAF_UI_058",
+        "explain_code": "SAF_EXP_058",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "An error occurred": {
-      "fub": "Boofol waɗii nder kuugal",
-      "phonetic": "Bôfol wad'î nder kôuôugal",
-      "explain_fub": "Kuugal ngal daraama sabu boofol; janngu famfingo les ɗoo ngam feewnugo.",
-      "explain_fub_phonetic": "Kôuôugal ngal darâma sabou bôfol; djanngou famfingo les d'ô ngam fééwnougo.",
+      "code": "SAF_UI_058",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Une erreur est survenue",
+      "en": "An error occurred",
       "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "eto": {
+        "text": "Dâm laánjī wul mmǝŋ",
+        "audio": "eton/saf_ui_058_take1_9c772660.webm",
+        "duration": 2.11,
+        "explain_text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "explain_audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "explain_duration": 4.6,
+        "explain_fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+        "explain_en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+        "code": "SAF_UI_058",
+        "explain_code": "SAF_EXP_058",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Alerte de sécurité": {
-      "fub": "Reentinoore kisal ceede",
-      "phonetic": "Rééntinôre kisal tchééde",
-      "explain_fub": "Reena! Bataake kisal mawɗo ngam reenaago ceede maa.",
-      "explain_fub_phonetic": "Rééna! Batâke kisal mawd'o ngam réénâgo tchééde mâ.",
+      "code": "SAF_UI_059",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité",
+      "en": "Security warning",
       "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ osu na o kaməla; a ne ngól.",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ osu na o kaməla; a ne ngól."
+      "explain_en": "Banking security warning requesting your vigilance before sending money.",
+      "eto": {
+        "text": "Ukálga",
+        "audio": "eton/saf_ui_059_take1_411ac1b2.webm",
+        "duration": 1.37,
+        "explain_text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "explain_duration": 4.94,
+        "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+        "explain_en": "Banking security warning requesting your vigilance before sending money.",
+        "code": "SAF_UI_059",
+        "explain_code": "SAF_EXP_059",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Security warning": {
-      "fub": "Reentinoore kisal ceede",
-      "phonetic": "Rééntinôre kisal tchééde",
-      "explain_fub": "Reena! Bataake kisal mawɗo ngam reenaago ceede maa.",
-      "explain_fub_phonetic": "Rééna! Batâke kisal mawd'o ngam réénâgo tchééde mâ.",
+      "code": "SAF_UI_059",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité",
+      "en": "Security warning",
       "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Banking security warning requesting your vigilance before sending money.",
+      "eto": {
+        "text": "Ukálga",
+        "audio": "eton/saf_ui_059_take1_411ac1b2.webm",
+        "duration": 1.37,
+        "explain_text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "explain_audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "explain_duration": 4.94,
+        "explain_fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+        "explain_en": "Banking security warning requesting your vigilance before sending money.",
+        "code": "SAF_UI_059",
+        "explain_code": "SAF_EXP_059",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Message important": {
-      "fub": "Bataake mawɗo (Kabaruuji kisal)",
-      "phonetic": "Batâke mawd'o (Kabarôuôuji kisal)",
-      "explain_fub": "Kabaruuji kesi ɗi banki neldii ma jooni-jooni.",
-      "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
+      "code": "SAF_UI_060",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Message important",
+      "en": "Important message",
       "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
-      "category": "securite",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Priority information displayed in real time on your banking screen.",
+      "eto": {
+        "text": "Mpaŋ pɔ́",
+        "audio": "eton/saf_ui_060_take1_2a6aa4c4.webm",
+        "duration": 1.86,
+        "explain_text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "explain_audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "explain_duration": 4.2,
+        "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+        "explain_en": "Priority information displayed in real time on your banking screen.",
+        "code": "SAF_UI_060",
+        "explain_code": "SAF_EXP_060",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Important message": {
-      "fub": "Bataake mawɗo (Kabaruuji kisal)",
-      "phonetic": "Batâke mawd'o (Kabarôuôuji kisal)",
-      "explain_fub": "Kabaruuji kesi ɗi banki neldii ma jooni-jooni.",
-      "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
+      "code": "SAF_UI_060",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Message important",
+      "en": "Important message",
       "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
-      "category": "securite",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
-    },
-    "MESSAGE IMPORTANT": {
-      "fub": "Bataake mawɗo (Kabaruuji kisal)",
-      "phonetic": "Batâke mawd'o (Kabarôuôuji kisal)",
-      "explain_fub": "Kabaruuji kesi ɗi banki neldii ma jooni-jooni.",
-      "explain_fub_phonetic": "Kabarôuôuji kesi d'i banki neldî ma djôni-djôni.",
-      "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
-      "category": "securite",
-      "source": "03_tourneux_dictionary_csv",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Priority information displayed in real time on your banking screen.",
+      "eto": {
+        "text": "Mpaŋ pɔ́",
+        "audio": "eton/saf_ui_060_take1_2a6aa4c4.webm",
+        "duration": 1.86,
+        "explain_text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "explain_audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "explain_duration": 4.2,
+        "explain_fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+        "explain_en": "Priority information displayed in real time on your banking screen.",
+        "code": "SAF_UI_060",
+        "explain_code": "SAF_EXP_060",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Le montant doit être supérieur à zéro.": {
-      "fub": "Limngal ceede haani ɓurugo meere (0 FCFA).",
-      "phonetic": "Limngal tchééde hâni b'ourougo méére (0 FCFA).",
-      "explain_fub": "Boofol AMOUNT_001 : A waawaa neldugo 0 FCFA. Winndu limngal ceede (yeru : 5 000 FCFA) ngam jokkugo.",
-      "explain_fub_phonetic": "Bôfol AMOUNT_001 : A wâwâ neldougo 0 FCFA. Winndou limngal tchééde (yerou : 5 000 FCFA) ngam djokkougo.",
+      "code": "SAF_UI_061",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Le montant doit être supérieur à zéro.",
+      "en": "The amount must be greater than zero.",
       "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Akɔŋ mɔni a yian bə̀ a daan zə́zə́.",
-      "phonetic_ewo": "Akong moni a yian béu a dan zeuzeu.",
-      "explain_ewo": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́.",
-      "explain_ewo_phonetic": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́."
+      "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "eto": {
+        "text": "Itáŋ i mwánî utǝ́ lód zǝzǝ",
+        "audio": "eton/saf_ui_061_take1_afccbcf2.webm",
+        "duration": 2.74,
+        "explain_text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "explain_audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "explain_duration": 11.5,
+        "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+        "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+        "code": "SAF_UI_061",
+        "explain_code": "SAF_EXP_061",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "The amount must be greater than zero.": {
-      "fub": "Limngal ceede haani ɓurugo meere (0 FCFA).",
-      "phonetic": "Limngal tchééde hâni b'ourougo méére (0 FCFA).",
-      "explain_fub": "Boofol AMOUNT_001 : A waawaa neldugo 0 FCFA. Winndu limngal ceede (yeru : 5 000 FCFA) ngam jokkugo.",
-      "explain_fub_phonetic": "Bôfol AMOUNT_001 : A wâwâ neldougo 0 FCFA. Winndou limngal tchééde (yerou : 5 000 FCFA) ngam djokkougo.",
+      "code": "SAF_UI_061",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Le montant doit être supérieur à zéro.",
+      "en": "The amount must be greater than zero.",
       "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Akɔŋ mɔni a yian bə̀ a daan zə́zə́.",
-      "phonetic_ewo": "Akong moni a yian béu a dan zeuzeu.",
-      "explain_ewo": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́.",
-      "explain_ewo_phonetic": "Téé lóm 0 FCFA; tili mɔni a daan zə́zə́."
+      "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "eto": {
+        "text": "Itáŋ i mwánî utǝ́ lód zǝzǝ",
+        "audio": "eton/saf_ui_061_take1_afccbcf2.webm",
+        "duration": 2.74,
+        "explain_text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "explain_audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "explain_duration": 11.5,
+        "explain_fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+        "explain_en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+        "code": "SAF_UI_061",
+        "explain_code": "SAF_EXP_061",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Solde insuffisant pour effectuer ce transfert.": {
-      "fub": "Ceede gonɗe nder limngal maa keƴataa ngam waɗugo nelal ngal.",
-      "phonetic": "Tchééde gond'e nder limngal mâ key'atâ ngam wad'ougo nelal ngal.",
-      "explain_fub": "Boofol AMOUNT_002 : Ceede ɗe a yiɗi neldugo (bee coggu nelal) ɓuri ceede gonɗe nder kofru maa (250 000 FCFA). Ustu limngal ceede neldeteeɗe!",
-      "explain_fub_phonetic": "Bôfol AMOUNT_002 : Tchééde d'e a yid'i neldougo (béé tchoggou nelal) b'ouri tchééde gond'e nder kofrou mâ (250 000 FCFA). Ustou limngal tchééde neldetééd'e!",
+      "code": "SAF_UI_062",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Solde insuffisant pour effectuer ce transfert.",
+      "en": "Insufficient balance for this transfer.",
       "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "eto": {
+        "text": "Itáŋ ī mwání ugbɛɛ isǝ́ abwî nâ úlôm mwánî",
+        "audio": "eton/saf_ui_062_take1_3ddc244f.webm",
+        "duration": 2.7,
+        "explain_text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "explain_audio": null,
+        "explain_duration": 10.24,
+        "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+        "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+        "code": "SAF_UI_062",
+        "explain_code": "SAF_EXP_062",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Insufficient balance for this transfer.": {
-      "fub": "Ceede gonɗe nder limngal maa keƴataa ngam waɗugo nelal ngal.",
-      "phonetic": "Tchééde gond'e nder limngal mâ key'atâ ngam wad'ougo nelal ngal.",
-      "explain_fub": "Boofol AMOUNT_002 : Ceede ɗe a yiɗi neldugo (bee coggu nelal) ɓuri ceede gonɗe nder kofru maa (250 000 FCFA). Ustu limngal ceede neldeteeɗe!",
-      "explain_fub_phonetic": "Bôfol AMOUNT_002 : Tchééde d'e a yid'i neldougo (béé tchoggou nelal) b'ouri tchééde gond'e nder kofrou mâ (250 000 FCFA). Ustou limngal tchééde neldetééd'e!",
+      "code": "SAF_UI_062",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Solde insuffisant pour effectuer ce transfert.",
+      "en": "Insufficient balance for this transfer.",
       "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "eto": {
+        "text": "Itáŋ ī mwání ugbɛɛ isǝ́ abwî nâ úlôm mwánî",
+        "audio": "eton/saf_ui_062_take1_3ddc244f.webm",
+        "duration": 2.7,
+        "explain_text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "explain_audio": null,
+        "explain_duration": 10.24,
+        "explain_fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+        "explain_en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+        "code": "SAF_UI_062",
+        "explain_code": "SAF_EXP_062",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Veuillez renseigner le nom et le numéro du bénéficiaire.": {
-      "fub": "Useni winndu innde e lambar waya jaɓoowo ceede.",
-      "phonetic": "Useni winndou innde e lambar waya djab'ôwo tchééde.",
-      "explain_fub": "Boofol BENEFICIARY_001 : Akootiiru innde malla lambar waya jaɓoowo ɗon ɓoli. Winndu ɗi ɗiɗi fuu hidde a jokka.",
-      "explain_fub_phonetic": "Bôfol BENEFICIARY_001 : Akôtîrou innde malla lambar waya djab'ôwo d'on b'oli. Winndou d'i d'id'i fôuôu hidde a djokka.",
+      "code": "SAF_UI_063",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Veuillez renseigner le nom et le numéro du bénéficiaire.",
+      "en": "Please provide the beneficiary name and phone number.",
       "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "eto": {
+        "text": "Púd do ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_063_take1_f04b48d4.webm",
+        "duration": 4.37,
+        "explain_text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "explain_audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "explain_duration": 11.01,
+        "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+        "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+        "code": "SAF_UI_063",
+        "explain_code": "SAF_EXP_063",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Please provide the beneficiary name and phone number.": {
-      "fub": "Useni winndu innde e lambar waya jaɓoowo ceede.",
-      "phonetic": "Useni winndou innde e lambar waya djab'ôwo tchééde.",
-      "explain_fub": "Boofol BENEFICIARY_001 : Akootiiru innde malla lambar waya jaɓoowo ɗon ɓoli. Winndu ɗi ɗiɗi fuu hidde a jokka.",
-      "explain_fub_phonetic": "Bôfol BENEFICIARY_001 : Akôtîrou innde malla lambar waya djab'ôwo d'on b'oli. Winndou d'i d'id'i fôuôu hidde a djokka.",
+      "code": "SAF_UI_063",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Veuillez renseigner le nom et le numéro du bénéficiaire.",
+      "en": "Please provide the beneficiary name and phone number.",
       "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
-      "category": "erreur",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "eto": {
+        "text": "Púd do ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_063_take1_f04b48d4.webm",
+        "duration": 4.37,
+        "explain_text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "explain_audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "explain_duration": 11.01,
+        "explain_fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+        "explain_en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+        "code": "SAF_UI_063",
+        "explain_code": "SAF_EXP_063",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Alerte de sécurité : vérifiez le numéro du bénéficiaire avant de continuer.": {
-      "fub": "Reentinoore kisal : laartu lambar waya jaɓoowo kadi maantu akootiiru tabitingol hidde a jokka.",
-      "phonetic": "Rééntinôre kisal : lârtou lambar waya djab'ôwo kadi mântou akôtîrou tabitingol hidde a djokka.",
-      "explain_fub": "Boofol SECURITY_001 : Sey a laarta lambar waya jaɓoowo kadi a maanta akootiiru « Mi laartii booyma innde e lambar waya » les ɗoo.",
-      "explain_fub_phonetic": "Bôfol SECURITY_001 : Sey a lârta lambar waya djab'ôwo kadi a mânta akôtîrou « Mi lârtî bôyma innde e lambar waya » les d'ô.",
+      "code": "SAF_UI_064",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : vérifiez le numéro du bénéficiaire avant de continuer.",
+      "en": "Security warning: verify the beneficiary phone number before continuing.",
       "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "eto": {
+        "text": "Ukálga : tál nɔmɔ ímôd utǝ́ lôm mwáni usúsú nâ úkǝ̂ usú.",
+        "audio": "eton/saf_ui_064_take1_09ac39af.webm",
+        "duration": 5.07,
+        "explain_text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "explain_audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "explain_duration": 18.98,
+        "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+        "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+        "code": "SAF_UI_064",
+        "explain_code": "SAF_EXP_064",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Security warning: verify the beneficiary phone number before continuing.": {
-      "fub": "Reentinoore kisal : laartu lambar waya jaɓoowo kadi maantu akootiiru tabitingol hidde a jokka.",
-      "phonetic": "Rééntinôre kisal : lârtou lambar waya djab'ôwo kadi mântou akôtîrou tabitingol hidde a djokka.",
-      "explain_fub": "Boofol SECURITY_001 : Sey a laarta lambar waya jaɓoowo kadi a maanta akootiiru « Mi laartii booyma innde e lambar waya » les ɗoo.",
-      "explain_fub_phonetic": "Bôfol SECURITY_001 : Sey a lârta lambar waya djab'ôwo kadi a mânta akôtîrou « Mi lârtî bôyma innde e lambar waya » les d'ô.",
+      "code": "SAF_UI_064",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : vérifiez le numéro du bénéficiaire avant de continuer.",
+      "en": "Security warning: verify the beneficiary phone number before continuing.",
       "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "eto": {
+        "text": "Ukálga : tál nɔmɔ ímôd utǝ́ lôm mwáni usúsú nâ úkǝ̂ usú.",
+        "audio": "eton/saf_ui_064_take1_09ac39af.webm",
+        "duration": 5.07,
+        "explain_text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "explain_audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "explain_duration": 18.98,
+        "explain_fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+        "explain_en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+        "code": "SAF_UI_064",
+        "explain_code": "SAF_EXP_064",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Alerte de sécurité : ce bénéficiaire n'a jamais été utilisé sur ce compte.": {
-      "fub": "Reentinoore kisal : jaɓoowo ceede oo meeɗaa huutineego nder limngal hisaabu ngal.",
-      "phonetic": "Rééntinôre kisal : djab'ôwo tchééde ô mééd'â hôuôutinéégo nder limngal hisâbou ngal.",
-      "explain_fub": "Reentinoore SECURITY_002 : Neɗɗo oo ɗum keso nder limngal maa. Reena nguyka : laartu innde mum e lambar waya mum laabi ɗiɗi hidde a nelda ceede!",
-      "explain_fub_phonetic": "Rééntinôre SECURITY_002 : Ned'd'o ô d'oum keso nder limngal mâ. Rééna ngouyka : lârtou innde moum e lambar waya moum lâbi d'id'i hidde a nelda tchééde!",
+      "code": "SAF_UI_065",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : ce bénéficiaire n'a jamais été utilisé sur ce compte.",
+      "en": "Security warning: this beneficiary has never been used on this account.",
       "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "eto": {
+        "text": "Ukalga : ímôd utǝ́ lôm mwání aŋgɛ́ntə̄ bɛɛni ee mpǝ́g mwán vî.",
+        "audio": "eton/saf_ui_065_take1_0f2174e7.webm",
+        "duration": 4.96,
+        "explain_text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "explain_audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "explain_duration": 11.22,
+        "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+        "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+        "code": "SAF_UI_065",
+        "explain_code": "SAF_EXP_065",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Security warning: this beneficiary has never been used on this account.": {
-      "fub": "Reentinoore kisal : jaɓoowo ceede oo meeɗaa huutineego nder limngal hisaabu ngal.",
-      "phonetic": "Rééntinôre kisal : djab'ôwo tchééde ô mééd'â hôuôutinéégo nder limngal hisâbou ngal.",
-      "explain_fub": "Reentinoore SECURITY_002 : Neɗɗo oo ɗum keso nder limngal maa. Reena nguyka : laartu innde mum e lambar waya mum laabi ɗiɗi hidde a nelda ceede!",
-      "explain_fub_phonetic": "Rééntinôre SECURITY_002 : Ned'd'o ô d'oum keso nder limngal mâ. Rééna ngouyka : lârtou innde moum e lambar waya moum lâbi d'id'i hidde a nelda tchééde!",
+      "code": "SAF_UI_065",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : ce bénéficiaire n'a jamais été utilisé sur ce compte.",
+      "en": "Security warning: this beneficiary has never been used on this account.",
       "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "eto": {
+        "text": "Ukalga : ímôd utǝ́ lôm mwání aŋgɛ́ntə̄ bɛɛni ee mpǝ́g mwán vî.",
+        "audio": "eton/saf_ui_065_take1_0f2174e7.webm",
+        "duration": 4.96,
+        "explain_text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "explain_audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "explain_duration": 11.22,
+        "explain_fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+        "explain_en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+        "code": "SAF_UI_065",
+        "explain_code": "SAF_EXP_065",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Erreur réseau : le service est temporairement indisponible. Réessayez.": {
-      "fub": "Boofol laawol enternet : kuugal ngal ɗon darii seeɗa jooni. Useni jarribu fahin.",
-      "phonetic": "Bôfol lâwol enternet : kôuôugal ngal d'on darî sééd'a djôni. Useni djarribou fahin.",
-      "explain_fub": "Boofol NETWORK_001 : Jokkondiral enternet ɗon mari caɗeele jooni. Hakkillo maa hisu : walaa mbuuɗu (0 FCFA) ittaa nder limngal maa! Munyu seeɗa kadi jarribu fahin.",
-      "explain_fub_phonetic": "Bôfol NETWORK_001 : Djokkondiral enternet d'on mari tchad'ééle djôni. Hakkillo mâ hisou : walâ mbôuôud'ou (0 FCFA) ittâ nder limngal mâ! Mounyou sééd'a kadi djarribou fahin.",
+      "code": "SAF_UI_066",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Erreur réseau : le service est temporairement indisponible. Réessayez.",
+      "en": "Network error: the service is temporarily unavailable. Please try again.",
       "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
-      "category": "erreur",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "eto": {
+        "text": "Ivuz i reso : dàm ɛ́tǝ̄ dǝ́glǝ. Dúgnǝ̂ ndǝ̄ŋ á mbūz",
+        "audio": "eton/saf_ui_066_take1_12be85da.webm",
+        "duration": 4.1,
+        "explain_text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "explain_audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "explain_duration": 10.28,
+        "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+        "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+        "code": "SAF_UI_066",
+        "explain_code": "SAF_EXP_066",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Network error: the service is temporarily unavailable. Please try again.": {
-      "fub": "Boofol laawol enternet : kuugal ngal ɗon darii seeɗa jooni. Useni jarribu fahin.",
-      "phonetic": "Bôfol lâwol enternet : kôuôugal ngal d'on darî sééd'a djôni. Useni djarribou fahin.",
-      "explain_fub": "Boofol NETWORK_001 : Jokkondiral enternet ɗon mari caɗeele jooni. Hakkillo maa hisu : walaa mbuuɗu (0 FCFA) ittaa nder limngal maa! Munyu seeɗa kadi jarribu fahin.",
-      "explain_fub_phonetic": "Bôfol NETWORK_001 : Djokkondiral enternet d'on mari tchad'ééle djôni. Hakkillo mâ hisou : walâ mbôuôud'ou (0 FCFA) ittâ nder limngal mâ! Mounyou sééd'a kadi djarribou fahin.",
+      "code": "SAF_UI_066",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Erreur réseau : le service est temporairement indisponible. Réessayez.",
+      "en": "Network error: the service is temporarily unavailable. Please try again.",
       "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
-      "category": "erreur",
-      "source": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "eto": {
+        "text": "Ivuz i reso : dàm ɛ́tǝ̄ dǝ́glǝ. Dúgnǝ̂ ndǝ̄ŋ á mbūz",
+        "audio": "eton/saf_ui_066_take1_12be85da.webm",
+        "duration": 4.1,
+        "explain_text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "explain_audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "explain_duration": 10.28,
+        "explain_fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+        "explain_en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+        "code": "SAF_UI_066",
+        "explain_code": "SAF_EXP_066",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Vous devez confirmer les informations avant de valider le transfert.": {
-      "fub": "Sey a maanta akootiiru tabitingol kabaruuji ɗi hidde a nelda ceede ɗe.",
-      "phonetic": "Sey a mânta akôtîrou tabitingol kabarôuôuji d'i hidde a nelda tchééde d'e.",
-      "explain_fub": "Boofol CONFIRM_001 : A yejjitii maantugo akootiiru tabitingol. Ɓillu nder akootiiru « Mi tabitinii wonde kabaruuji ɗi ɗum goonga » hidde a nelda.",
-      "explain_fub_phonetic": "Bôfol TchONFIRM_001 : A yejjitî mântougo akôtîrou tabitingol. B'illou nder akôtîrou « Mi tabitinî wonde kabarôuôuji d'i d'oum gônga » hidde a nelda.",
+      "code": "SAF_UI_067",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Vous devez confirmer les informations avant de valider le transfert.",
+      "en": "You must confirm the details before validating the transfer.",
       "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
-      "category": "erreur",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "eto": {
+        "text": "Ugbɛɛ ú cɔŋfidmé mǝpɔ́ usúsú nâ ujǝ́blǝ̂ traŋsfɛ",
+        "audio": "eton/saf_ui_067_take1_96e7d33f.webm",
+        "duration": 4.98,
+        "explain_text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "explain_audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "explain_duration": 15.59,
+        "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+        "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+        "code": "SAF_UI_067",
+        "explain_code": "SAF_EXP_067",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "You must confirm the details before validating the transfer.": {
-      "fub": "Sey a maanta akootiiru tabitingol kabaruuji ɗi hidde a nelda ceede ɗe.",
-      "phonetic": "Sey a mânta akôtîrou tabitingol kabarôuôuji d'i hidde a nelda tchééde d'e.",
-      "explain_fub": "Boofol CONFIRM_001 : A yejjitii maantugo akootiiru tabitingol. Ɓillu nder akootiiru « Mi tabitinii wonde kabaruuji ɗi ɗum goonga » hidde a nelda.",
-      "explain_fub_phonetic": "Bôfol TchONFIRM_001 : A yejjitî mântougo akôtîrou tabitingol. B'illou nder akôtîrou « Mi tabitinî wonde kabarôuôuji d'i d'oum gônga » hidde a nelda.",
+      "code": "SAF_UI_067",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Vous devez confirmer les informations avant de valider le transfert.",
+      "en": "You must confirm the details before validating the transfer.",
       "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
-      "category": "erreur",
-      "source": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Díza e ntebán",
-      "phonetic_ewo": "Diza é ntéban",
-      "explain_ewo": "Díza é maneya kwə́",
-      "explain_ewo_phonetic": "Díza é maneya kwə́"
+      "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "eto": {
+        "text": "Ugbɛɛ ú cɔŋfidmé mǝpɔ́ usúsú nâ ujǝ́blǝ̂ traŋsfɛ",
+        "audio": "eton/saf_ui_067_take1_96e7d33f.webm",
+        "duration": 4.98,
+        "explain_text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "explain_audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "explain_duration": 15.59,
+        "explain_fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+        "explain_en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+        "code": "SAF_UI_067",
+        "explain_code": "SAF_EXP_067",
+        "category": "Erreurs Officielles (TEST_ERRORS)"
+      }
     },
     "Sécurité": {
-      "fub": "Kisal ceede",
-      "phonetic": "Kisal tchééde",
-      "explain_fub": "Tinndinoore ngam reenaago ceede maa.",
-      "explain_fub_phonetic": "Tinndinôre ngam réénâgo tchééde mâ.",
+      "code": "SAF_UI_068",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Sécurité",
+      "en": "Security",
       "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Protection tips against errors and fraud.",
+      "eto": {
+        "text": "Sékudíté",
+        "audio": "eton/saf_ui_068_take1_4b32c3df.webm",
+        "duration": 1.19,
+        "explain_text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "explain_audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "explain_duration": 5.0,
+        "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+        "explain_en": "Protection tips against errors and fraud.",
+        "code": "SAF_UI_068",
+        "explain_code": "SAF_EXP_068",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Security": {
-      "fub": "Kisal ceede",
-      "phonetic": "Kisal tchééde",
-      "explain_fub": "Tinndinoore ngam reenaago ceede maa.",
-      "explain_fub_phonetic": "Tinndinôre ngam réénâgo tchééde mâ.",
+      "code": "SAF_UI_068",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Sécurité",
+      "en": "Security",
       "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Protection tips against errors and fraud.",
+      "eto": {
+        "text": "Sékudíté",
+        "audio": "eton/saf_ui_068_take1_4b32c3df.webm",
+        "duration": 1.19,
+        "explain_text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "explain_audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "explain_duration": 5.0,
+        "explain_fr": "Conseils de protection contre les erreurs et la fraude.",
+        "explain_en": "Protection tips against errors and fraud.",
+        "code": "SAF_UI_068",
+        "explain_code": "SAF_EXP_068",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Vérifiez toujours le nom et le numéro du bénéficiaire avant de confirmer un transfert.": {
-      "fub": "Laartu waktu fuu innde e lambar waya jaɓoowo ceede hidde a tabitina nelal.",
-      "phonetic": "Lârtou waktou fôuôu innde e lambar waya djab'ôwo tchééde hidde a tabitina nelal.",
-      "explain_fub": "Nelal ceede waawaa ruttineego to lambar boofii. Laartu innde e lambar waktu fuu!",
-      "explain_fub_phonetic": "Nelal tchééde wâwâ routtinéégo to lambar bôfî. Lârtou innde e lambar waktou fôuôu!",
+      "code": "SAF_UI_069",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Vérifiez toujours le nom et le numéro du bénéficiaire avant de confirmer un transfert.",
+      "en": "Always verify the beneficiary name and number before confirming a transfer.",
       "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "eto": {
+        "text": "ijɔŋ isǝ tāl swě ee nɔmɔ ímôd utǝ́ lôm mwání usúsú nâ úkɔŋfidmé traŋsfɛ",
+        "audio": "eton/saf_ui_069_take1_65efd6ab.webm",
+        "duration": 7.55,
+        "explain_text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "explain_audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "explain_duration": 7.53,
+        "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+        "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+        "code": "SAF_UI_069",
+        "explain_code": "SAF_EXP_069",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Always verify the beneficiary name and number before confirming a transfer.": {
-      "fub": "Laartu waktu fuu innde e lambar waya jaɓoowo ceede hidde a tabitina nelal.",
-      "phonetic": "Lârtou waktou fôuôu innde e lambar waya djab'ôwo tchééde hidde a tabitina nelal.",
-      "explain_fub": "Nelal ceede waawaa ruttineego to lambar boofii. Laartu innde e lambar waktu fuu!",
-      "explain_fub_phonetic": "Nelal tchééde wâwâ routtinéégo to lambar bôfî. Lârtou innde e lambar waktou fôuôu!",
+      "code": "SAF_UI_069",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Vérifiez toujours le nom et le numéro du bénéficiaire avant de confirmer un transfert.",
+      "en": "Always verify the beneficiary name and number before confirming a transfer.",
       "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "eto": {
+        "text": "ijɔŋ isǝ tāl swě ee nɔmɔ ímôd utǝ́ lôm mwání usúsú nâ úkɔŋfidmé traŋsfɛ",
+        "audio": "eton/saf_ui_069_take1_65efd6ab.webm",
+        "duration": 7.55,
+        "explain_text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "explain_audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "explain_duration": 7.53,
+        "explain_fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+        "explain_en": "Essential rule: systematically check the recipient name and number before each transfer.",
+        "code": "SAF_UI_069",
+        "explain_code": "SAF_EXP_069",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Connexion sécurisée": {
-      "fub": "Jokkondiral kisiingal (Chiffré)",
-      "phonetic": "Djokkondiral kisîngal (Tchhiffré)",
-      "explain_fub": "Laawol enternet Safinum Pay ɗon reena kabaruuji maa.",
-      "explain_fub_phonetic": "Lâwol enternet Safinoum Pay d'on rééna kabarôuôuji mâ.",
+      "code": "SAF_UI_070",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Connexion sécurisée",
+      "en": "Secure connection",
       "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+      "eto": {
+        "text": "kɔnɛksíōŋ ityâ ɛŋgaŋ",
+        "audio": "eton/saf_ui_070_take1_5d0002f7.webm",
+        "duration": 2.42,
+        "explain_text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "explain_audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "explain_duration": 3.9,
+        "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+        "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+        "code": "SAF_UI_070",
+        "explain_code": "SAF_EXP_070",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Secure connection": {
-      "fub": "Jokkondiral kisiingal (Chiffré)",
-      "phonetic": "Djokkondiral kisîngal (Tchhiffré)",
-      "explain_fub": "Laawol enternet Safinum Pay ɗon reena kabaruuji maa.",
-      "explain_fub_phonetic": "Lâwol enternet Safinoum Pay d'on rééna kabarôuôuji mâ.",
+      "code": "SAF_UI_070",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Connexion sécurisée",
+      "en": "Secure connection",
       "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
-      "category": "securite",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Yian mebə̀lə̀ mé ngól",
-      "phonetic_ewo": "Yian mébeuleu mé ngól",
-      "explain_ewo": "Laart m̀vɛ̀ kót wô",
-      "explain_ewo_phonetic": "Laart m̀vɛ̀ kót wô"
+      "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+      "eto": {
+        "text": "kɔnɛksíōŋ ityâ ɛŋgaŋ",
+        "audio": "eton/saf_ui_070_take1_5d0002f7.webm",
+        "duration": 2.42,
+        "explain_text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "explain_audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "explain_duration": 3.9,
+        "explain_fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+        "explain_en": "Your connection with Safinum Pay is secure and encrypted.",
+        "code": "SAF_UI_070",
+        "explain_code": "SAF_EXP_070",
+        "category": "Sécurité & Anti-Fraude"
+      }
     },
     "Safinum Pay — environnement de démonstration. Ne saisissez aucune donnée personnelle réelle.": {
-      "fub": "Safinum Pay — nokkuure jarribo kuugal. To winndu kabaruuji maa cuuɗiiɗi goonga ɗoo.",
-      "phonetic": "Safinoum Pay — nokkôuôure djarribo kôuôugal. To winndou kabarôuôuji mâ tchôuôud'îd'i gônga d'ô.",
-      "explain_fub": "Hello ngoo ɗum ngam jarribo Hackathon SAFINUM 2026 tan.",
-      "explain_fub_phonetic": "Hello ngô d'oum ngam djarribo Hatchkathon SAFINUM 2026 tan.",
+      "code": "SAF_UI_071",
+      "category": "Navigation & Accueil",
+      "fr": "Safinum Pay — environnement de démonstration. Ne saisissez aucune donnée personnelle réelle.",
+      "en": "Safinum Pay — demonstration environment. Do not enter real personal data.",
       "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "eto": {
+        "text": "Safinum pay ɛ́nǝ̂ zǝkúl á ŋkâb. Bǝ́lígî idaŋtíté wɔ̂ i wē",
+        "audio": "eton/saf_ui_071_take1_c5e121b7.webm",
+        "duration": 4.56,
+        "explain_text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "explain_audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "explain_duration": 8.15,
+        "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+        "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+        "code": "SAF_UI_071",
+        "explain_code": "SAF_EXP_071",
+        "category": "Navigation & Accueil"
+      }
     },
     "Safinum Pay — demonstration environment. Do not enter real personal data.": {
-      "fub": "Safinum Pay — nokkuure jarribo kuugal. To winndu kabaruuji maa cuuɗiiɗi goonga ɗoo.",
-      "phonetic": "Safinoum Pay — nokkôuôure djarribo kôuôugal. To winndou kabarôuôuji mâ tchôuôud'îd'i gônga d'ô.",
-      "explain_fub": "Hello ngoo ɗum ngam jarribo Hackathon SAFINUM 2026 tan.",
-      "explain_fub_phonetic": "Hello ngô d'oum ngam djarribo Hatchkathon SAFINUM 2026 tan.",
+      "code": "SAF_UI_071",
+      "category": "Navigation & Accueil",
+      "fr": "Safinum Pay — environnement de démonstration. Ne saisissez aucune donnée personnelle réelle.",
+      "en": "Safinum Pay — demonstration environment. Do not enter real personal data.",
       "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
-      "category": "navigation",
-      "source": "01_aki_osc_financial_glossary",
-      "ewo": "Ésəle ya enternet",
-      "phonetic_ewo": "Eseule ya enternet",
-      "explain_ewo": "Fáám ésəle banki",
-      "explain_ewo_phonetic": "Fáám ésəle banki"
+      "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "eto": {
+        "text": "Safinum pay ɛ́nǝ̂ zǝkúl á ŋkâb. Bǝ́lígî idaŋtíté wɔ̂ i wē",
+        "audio": "eton/saf_ui_071_take1_c5e121b7.webm",
+        "duration": 4.56,
+        "explain_text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "explain_audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "explain_duration": 8.15,
+        "explain_fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+        "explain_en": "Demo environment: never enter your real secret PIN or real bank details.",
+        "code": "SAF_UI_071",
+        "explain_code": "SAF_EXP_071",
+        "category": "Navigation & Accueil"
+      }
     }
   },
   "dynamic_patterns": [
     {
       "id": "greeting_user",
       "regex": "^(?:Bonjour|Hello),\\s*(.+)$",
-      "template_fub": "Jaɓɓaama, $1",
-      "explain_fub": "Salaama e jaɓɓaago $1, joom limngal hisaabu.",
-      "explain_fr": "Message d'accueil personnalisé du titulaire du compte ($1).",
-      "category": "solde",
-      "source": "02_safinum_wave_sponsor_corpus"
-    },
-    {
-      "id": "account_number_line",
-      "regex": "^(?:Numéro de compte\\s*:|Account number\\s*:)\\s*(.+)$",
-      "template_fub": "Lambar limngal hisaabu : $1",
-      "explain_fub": "Lambar limngal banki maa keeriido ($1). Lambar oo waylataako.",
-      "explain_fr": "Identifiant unique de votre compte bancaire ($1), conservé intact sans aucune modification.",
-      "category": "solde",
-      "source": "01_aki_osc_financial_glossary"
-    },
-    {
-      "id": "date_fr",
-      "regex": "^(\\d{1,2})\\s+(nov\\.|oct\\.|déc\\.|janv\\.|févr\\.|mars|avr\\.|mai|juin|juil\\.|août|sept\\.)\\s+(\\d{4})$",
-      "template_fub": "Ñalnde $1 lewru $2 $3",
-      "explain_fub": "Ñalnde kuugal ceede ngal waɗaa ($1 $2 $3).",
-      "explain_fr": "Date d'enregistrement de l'opération dans votre historique.",
-      "category": "solde",
-      "source": "03_tourneux_dictionary_csv"
-    },
-    {
-      "id": "date_en",
-      "regex": "^(Nov|Oct|Dec|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep)\\s+(\\d{1,2}),\\s*(\\d{4})$",
-      "template_fub": "Ñalnde $2 lewru $1 $3",
-      "explain_fub": "Ñalnde kuugal ceede ngal waɗaa ($2 $1 $3).",
-      "explain_fr": "Date d'enregistrement de l'opération dans votre historique.",
-      "category": "solde",
-      "source": "03_tourneux_dictionary_csv"
+      "code": "SAF_UI_011",
+      "explain_code": "SAF_EXP_011",
+      "category": "Étape 1 : Solde & Accueil",
+      "eto": {
+        "template": "M̀mǝmǝ kídî $1",
+        "audio": "eton/saf_ui_011_take1_92ec46cd.webm",
+        "explain_text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "explain_audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "explain_fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+        "explain_en": "Welcome message addressed to the account holder, Amina Ngo Bell."
+      }
     }
   ],
-  "phrase_chunks": [
-    {
-      "fr": "ne partagez jamais votre code secret",
-      "fub": "to hokku neɗɗo feere lambar maa cuuɗiido koo nde",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "ne communiquez jamais votre code",
-      "fub": "to hokku neɗɗo feere lambar maa cuuɗiido koo nde",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "votre code secret est personnel",
-      "fub": "lambar maa cuuɗiido ɗum huunde maa feere tan",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "plafond journalier de virement",
-      "fub": "haaddi nelal ceede ñalnde fuu",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "le plafond journalier est fixé à",
-      "fub": "haaddi ceede ñalnde fuu darnaama haa",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "au-delà de ce montant",
-      "fub": "to ceede ɗe ɓurii limngal ngal",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "une pièce d'identité valide",
-      "fub": "talkuru seedamku innde cahiindu",
-      "src": "03_tourneux_dictionary_csv",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "vérification d'identité",
-      "fub": "laartugo seedamku innde",
-      "src": "03_tourneux_dictionary_csv",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "service client",
-      "fub": "сервиs ballal kiliyan'en",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "frais supplémentaires",
-      "fub": "coggu ɓeydaangu",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "aucun frais supplémentaire",
-      "fub": "walaa coggu feere ɓeydete",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "sans frais",
-      "fub": "meere (walaa coggu)",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "en toute sécurité",
-      "fub": "bee kisal timmungal",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "votre compte sera bloqué",
-      "fub": "limngal hisaabu maa maɓɓete",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "tentatives erronées",
-      "fub": "jarribooji boofɗi",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "veuillez vérifier",
-      "fub": "useni laartu booyma",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "avant de confirmer",
-      "fub": "hidde a tabitina",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "avant de valider",
-      "fub": "hidde a tabitina",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "numéro de téléphone du bénéficiaire",
-      "fub": "lambar waya jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "nom du bénéficiaire",
-      "fub": "innde jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "solde disponible",
-      "fub": "ceede gonɗe nder limngal",
-      "src": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "total débité",
-      "fub": "ceede fuu ɗe ittete",
-      "src": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "frais de transaction",
-      "fub": "coggu nelal ceede",
-      "src": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "frais de retrait",
-      "fub": "coggu ittol ceede",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "frais d'envoi",
-      "fub": "coggu nelal ceede",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "opérateur mobile money",
-      "fub": "kampaniiru Mobile Money",
-      "src": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "virement bancaire",
-      "fub": "nelal ceede banki",
-      "src": "18_waxal_unesco_bamako_orthography",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "compte bancaire",
-      "fub": "limngal hisaabu banki",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "code de validation",
-      "fub": "lambar tabitingol",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "envoyé par sms",
-      "fub": "nelaaɗo bee SMS",
-      "src": "02_safinum_wave_sponsor_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "en cas de problème",
-      "fub": "to caɗeele ngoodi",
-      "src": "04_akilang_conversational_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "veuillez patienter",
-      "fub": "useni munyu seeɗa",
-      "src": "04_akilang_conversational_corpus",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "opération irréversible",
-      "fub": "kuugal ngal waawaa ruttineego",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    },
-    {
-      "fr": "ne peut pas être annulé",
-      "fub": "waawaa haɗeego malla ruttineego",
-      "src": "01_aki_osc_financial_glossary",
-      "ewo": "Mɔni / Ésəle"
-    }
-  ],
-  "word_lexicon": {
-    "attention": {
-      "fub": "reena",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "alerte": {
-      "fub": "reentinoore",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "avertissement": {
-      "fub": "reentinoore",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "important": {
-      "fub": "mawɗum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "information": {
-      "fub": "kabaruuji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "informations": {
-      "fub": "kabaruuji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "message": {
-      "fub": "bataake",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "client": {
-      "fub": "kiliyanjo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "clients": {
-      "fub": "kiliyan'en",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "cher": {
-      "fub": "tedduɗo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chère": {
-      "fub": "tedduɗo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "virement": {
-      "fub": "nelal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "virements": {
-      "fub": "nele ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "transfert": {
-      "fub": "nelal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "transferts": {
-      "fub": "nele ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "transaction": {
-      "fub": "kuugal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "transactions": {
-      "fub": "kuugalji ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "opération": {
-      "fub": "kuugal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "opérations": {
-      "fub": "kuugalji",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "montant": {
-      "fub": "limngal ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "montants": {
-      "fub": "limle ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "somme": {
-      "fub": "ceede",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "argent": {
-      "fub": "ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "fonds": {
-      "fub": "ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "solde": {
-      "fub": "ceede heddiiɗe",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "frais": {
-      "fub": "coggu nelal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "commission": {
-      "fub": "coggu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "commissions": {
-      "fub": "cogguuji",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "taxe": {
-      "fub": "jomorgol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "taxes": {
-      "fub": "jomorli",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tarif": {
-      "fub": "coggu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tarifs": {
-      "fub": "cogguuji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gratuit": {
-      "fub": "meere (walaa coggu)",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "gratuite": {
-      "fub": "meere (walaa coggu)",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "gratuits": {
-      "fub": "meere (walaa coggu)",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "plafond": {
-      "fub": "haaddi ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "limite": {
-      "fub": "haaddi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maximum": {
-      "fub": "ko ɓuri ɗuuɗugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "minimum": {
-      "fub": "famɗi fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "journalier": {
-      "fub": "ñalnde fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quotidien": {
-      "fub": "ñalnde fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hebdomadaire": {
-      "fub": "asaweere fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mensuel": {
-      "fub": "lewru fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "supérieur": {
-      "fub": "ɓurɗo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inférieur": {
-      "fub": "les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dépasser": {
-      "fub": "ɓurugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dépasse": {
-      "fub": "ɓuri",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "compte": {
-      "fub": "limngal hisaabu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "comptes": {
-      "fub": "limle hisaabu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "bancaire": {
-      "fub": "banki",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "banque": {
-      "fub": "resdugal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "agence": {
-      "fub": "nokkuure banki",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "guichet": {
-      "fub": "nokkuure ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "bénéficiaire": {
-      "fub": "kebɗo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "destinataire": {
-      "fub": "jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "expéditeur": {
-      "fub": "nelɗo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "titulaire": {
-      "fub": "joom limngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "numéro": {
-      "fub": "lambar",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "téléphone": {
-      "fub": "waya",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "mobile": {
-      "fub": "waya",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "code": {
-      "fub": "lambar",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "secret": {
-      "fub": "cuuɗiido",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "confidentiel": {
-      "fub": "cuuɗiido",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "sécurité": {
-      "fub": "kisal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "vérification": {
-      "fub": "laartugo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "vérifier": {
-      "fub": "laartugo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "vérifiez": {
-      "fub": "laartu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "validation": {
-      "fub": "tabitingol",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "valider": {
-      "fub": "tabitingo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "validez": {
-      "fub": "tabitinu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "confirmer": {
-      "fub": "tabitingo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "confirmez": {
-      "fub": "tabitinu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "confirmation": {
-      "fub": "tabitingol",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "envoyer": {
-      "fub": "neldugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "envoyez": {
-      "fub": "neldu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "envoi": {
-      "fub": "nelal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "recevoir": {
-      "fub": "heɓugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "reçu": {
-      "fub": "keɓal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "retrait": {
-      "fub": "ittol ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "retirer": {
-      "fub": "ittugo ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "dépôt": {
-      "fub": "resngo ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "déposer": {
-      "fub": "resugo ceede",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "paiement": {
-      "fub": "yoɓol",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "payer": {
-      "fub": "yoɓugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "payez": {
-      "fub": "yoɓu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "facture": {
-      "fub": "talkuru hisaabu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "factures": {
-      "fub": "talkuruuji hisaabu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "remboursement": {
-      "fub": "yoɓol nyamaande",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "annuler": {
-      "fub": "haɗugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "annulé": {
-      "fub": "haɗaama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "annulation": {
-      "fub": "haɗgol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bloqué": {
-      "fub": "maɓɓaama",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "bloquer": {
-      "fub": "maɓɓugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "suspendu": {
-      "fub": "daraama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "erreur": {
-      "fub": "boofol",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "échec": {
-      "fub": "woofii",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "échoué": {
-      "fub": "woofii",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "succès": {
-      "fub": "tabitinaama",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "réseau": {
-      "fub": "laawol enternet",
-      "src": "18_waxal_unesco_bamako_orthography"
-    },
-    "connexion": {
-      "fub": "jokkondiral",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "indisponible": {
-      "fub": "woodaa jooni",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "disponible": {
-      "fub": "woodi",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "maintenance": {
-      "fub": "feewnugo laawol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "service": {
-      "fub": "kuugal",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "clientèle": {
-      "fub": "ballal kiliyan'en",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "support": {
-      "fub": "ballal",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "aide": {
-      "fub": "ballal",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "identité": {
-      "fub": "innde e seedamku",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pièce": {
-      "fub": "talkuru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "carte": {
-      "fub": "karti",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nationale": {
-      "fub": "lesdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "obligatoire": {
-      "fub": "haani doole",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "requis": {
-      "fub": "haani",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "requise": {
-      "fub": "haani",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "nécessaire": {
-      "fub": "haani",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jamais": {
-      "fub": "koo nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toujours": {
-      "fub": "waktu fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avant": {
-      "fub": "hidde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "après": {
-      "fub": "ɓaawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pendant": {
-      "fub": "nder",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sans": {
-      "fub": "walaa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avec": {
-      "fub": "bee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pour": {
-      "fub": "ngam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dans": {
-      "fub": "nder",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sur": {
-      "fub": "dow",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sous": {
-      "fub": "les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vers": {
-      "fub": "faa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entre": {
-      "fub": "hakkunde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "votre": {
-      "fub": "maa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vos": {
-      "fub": "maa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "notre": {
-      "fub": "amen",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nos": {
-      "fub": "amen",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "veuillez": {
-      "fub": "useni",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "merci": {
-      "fub": "useko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "immédiatement": {
-      "fub": "jooni-jooni",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "automatiquement": {
-      "fub": "bee hoore mum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "temporairement": {
-      "fub": "nder saa'i seeɗa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "définitivement": {
-      "fub": "haa abada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "partager": {
-      "fub": "senndugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "partagez": {
-      "fub": "to senndu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "communiquer": {
-      "fub": "hokkugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "communiquez": {
-      "fub": "hokkugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne": {
-      "fub": "neɗɗo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aucun": {
-      "fub": "walaa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aucune": {
-      "fub": "walaa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tout": {
-      "fub": "fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toute": {
-      "fub": "fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tous": {
-      "fub": "fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toutes": {
-      "fub": "fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaque": {
-      "fub": "fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plusieurs": {
-      "fub": "ɗuuɗɗum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "heures": {
-      "fub": "saa'iiji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "heure": {
-      "fub": "saa'i",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "minutes": {
-      "fub": "hojomaaji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "minute": {
-      "fub": "hojom",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jour": {
-      "fub": "ñalnde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jours": {
-      "fub": "balɗe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mois": {
-      "fub": "lewru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "année": {
-      "fub": "hitaande",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aujourd'hui": {
-      "fub": "hannde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "demain": {
-      "fub": "jaango",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hier": {
-      "fub": "keñi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nouveau": {
-      "fub": "keso",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nouvelle": {
-      "fub": "kesal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ancien": {
-      "fub": "kiɗɗo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "total": {
-      "fub": "fuu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "restant": {
-      "fub": "keddiiɗo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "suffisant": {
-      "fub": "heƴi",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "insuffisant": {
-      "fub": "heyaayi",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "invalide": {
-      "fub": "boofɗum",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "valide": {
-      "fub": "cahiidum",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "incorrect": {
-      "fub": "boofɗum",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "correct": {
-      "fub": "goonga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tentative": {
-      "fub": "jarribo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "tentatives": {
-      "fub": "jarribooji",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "essais": {
-      "fub": "jarribooji",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "essai": {
-      "fub": "jarribo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "réessayer": {
-      "fub": "jarribaago fahin",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "réessayez": {
-      "fub": "jarribu fahin",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "continuer": {
-      "fub": "jokkugo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "retour": {
-      "fub": "ruttoraago",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "modifier": {
-      "fub": "waylugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "supprimer": {
-      "fub": "momtugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "ajouter": {
-      "fub": "ɓeydugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "choisir": {
-      "fub": "suɓugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sélectionnez": {
-      "fub": "suɓu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saisir": {
-      "fub": "winndugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "saisissez": {
-      "fub": "winndu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "entrez": {
-      "fub": "naatnu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "cocher": {
-      "fub": "maantugo",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "cochez": {
-      "fub": "maantu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "warning": {
-      "fub": "reena",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "please": {
-      "fub": "useni",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "transfer": {
-      "fub": "nelal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "amount": {
-      "fub": "limngal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "balance": {
-      "fub": "ceede gonɗe",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "fee": {
-      "fub": "coggu nelal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "fees": {
-      "fub": "cogguuji nelal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "account": {
-      "fub": "limngal hisaabu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "beneficiary": {
-      "fub": "jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "recipient": {
-      "fub": "jaɓoowo ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "phone": {
-      "fub": "waya",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "number": {
-      "fub": "lambar",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "security": {
-      "fub": "kisal",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "confirm": {
-      "fub": "tabitinu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "verify": {
-      "fub": "laartu",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "limit": {
-      "fub": "haaddi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "daily": {
-      "fub": "ñalnde fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "exceeds": {
-      "fub": "ɓuri",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "failed": {
-      "fub": "waɗaayi",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "successful": {
-      "fub": "timmii bee nasaraaku",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "never": {
-      "fub": "koo nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "share": {
-      "fub": "senndu",
-      "src": "02_safinum_wave_sponsor_corpus"
-    },
-    "password": {
-      "fub": "helmere suuɗiinde",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "customers": {
-      "fub": "kiliyan'en",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "customer": {
-      "fub": "kiliyanjo",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "se réchauffer": {
-      "fub": "aamta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "colporteur": {
-      "fub": "abooki / abooki'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grand lit métallique à deux places": {
-      "fub": "abudaUaalaawo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "femme libre": {
-      "fub": "adda-jamdi-o",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ajabaajo": {
-      "fub": "adda-jamdi-o",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "premier-né": {
-      "fub": "afo / ame-oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir son premier-né": {
-      "fub": "afoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf dikkoo": {
-      "fub": "afoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accident de la circulation": {
-      "fub": "aksidag / aksidaqji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sababu": {
-      "fub": "aksidag / aksidaqji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coutume règles": {
-      "fub": "al'aada - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "menstrues": {
-      "fub": "al'aada - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. hayla": {
-      "fub": "al'aada - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tuundi": {
-      "fub": "al'aada - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "etc.": {
-      "fub": "al'aada - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "signe": {
-      "fub": "alaama / alaamaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "symptôme": {
-      "fub": "alaama / alaamaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "marque": {
-      "fub": "alaama / alaamaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "calamité": {
-      "fub": "albalaawol/ albalaaji - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "catastrophe naturelle": {
-      "fub": "albalaawol/ albalaaji - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "allergie": {
-      "fub": "alerzi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dieu": {
-      "fub": "Alla - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tablette coranique": {
-      "fub": "alluha / alluhaaje - ka/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "parfois en cuivre)": {
-      "fub": "alluha njamndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amibiase": {
-      "fub": "amibiyaas - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amibes": {
-      "fub": "amii6 - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anémie": {
-      "fub": "anemi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yiï)'\"am": {
-      "fub": "anemi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "animatrice": {
-      "fub": "animater-debbo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ankylostome": {
-      "fub": "ankilostom - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "alcool pharmaceutique": {
-      "fub": "ankol- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "savoir": {
-      "fub": "annda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "connaître": {
-      "fub": "annda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "antibiotique": {
-      "fub": "antibiyotik - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "euphorisant": {
-      "fub": "antimoral- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anxiolytique": {
-      "fub": "antimoral- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anuscope": {
-      "fub": "apare anoskopi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pulvérisateur": {
-      "fub": "apare fuufgo / apareeji fuufgo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "microscope": {
-      "fub": "apare laargo coofe looroe bee cewoe fuu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pulvérisateur  se pulvérise)": {
-      "fub": "apare puufreteenga / apareeji puufreteedi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tensiomètre": {
-      "fub": "apare tansiyog ou apare laargo tansiyog",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conjonctivite virale épidémique": {
-      "fub": "apolo - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "alcool de fabrication artisanale": {
-      "fub": "arge - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "race": {
-      "fub": "asngol / asli - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ethnie": {
-      "fub": "asngol / asli - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspirateur": {
-      "fub": "aspirater / aspiraterji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "à l'origine": {
-      "fub": "aspuro - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "comprimé d'aspro": {
-      "fub": "aspuro - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf empisi": {
-      "fub": "aspuro - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être affaibli": {
-      "fub": "awsa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "affaiblir": {
-      "fub": "awsina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tort": {
-      "fub": "ayiibe / ayiibeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faute": {
-      "fub": "ayiibe / ayiibeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "garder": {
-      "fub": "ayna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "protéger": {
-      "fub": "ayna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "surveiller": {
-      "fub": "ayna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "contrôler": {
-      "fub": "ayna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "destin": {
-      "fub": "azal- 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mort": {
-      "fub": "azal- 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "père": {
-      "fub": "baaba / baabaaji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "père de famille": {
-      "fub": "baaba-saare /baaba-saare'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "homme marié qui a des enfants": {
-      "fub": "baaba-saare /baaba-saare'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rites magiques": {
-      "fub": "baalamwol/ baalamji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réservés aux seuls initiés": {
-      "fub": "baalamwol/ baalamji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui permettent": {
-      "fub": "baalamwol/ baalamji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grâce à des sacrifices appropriés": {
-      "fub": "baalamwol/ baalamji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "les génies": {
-      "fub": "baalamwol/ baalamji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coït": {
-      "fub": "baaldal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accouplement": {
-      "fub": "baaldal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "relations sexuelles": {
-      "fub": "baaldal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bacille de koch": {
-      "fub": "baasil-kok - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aiguille": {
-      "fub": "baatal/ baate - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "seringue": {
-      "fub": "baatal/ baate - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf tufiroum injection": {
-      "fub": "baatal/ baate - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "piqûre": {
-      "fub": "baatal/ baate - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "perfusion": {
-      "fub": "baatal &ilaawal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. perfuyog": {
-      "fub": "baatal &ilaawal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sérum antivenimeux  le poison": {
-      "fub": "baatal tooke ou baatal oaare",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "venin": {
-      "fub": "baatal tooke ou baatal oaare",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "injection": {
-      "fub": "baatal tooke ou baatal oaare",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccin antiméningococcique": {
-      "fub": "baatal minizi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccin antituberculeux": {
-      "fub": "baatal sonndaaru ou baatal beseze",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccin bcg": {
-      "fub": "baatal sonndaaru ou baatal beseze",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. lekki tufeteeki": {
-      "fub": "baatal vat",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "placenta": {
-      "fub": "baawol /baa'wi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mïdyiraawo": {
-      "fub": "baawol /baa'wi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "placenta prrevia": {
-      "fub": "baawol aartungol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accueil": {
-      "fub": "babal jal>l>aago",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "service d'accueil": {
-      "fub": "babal jal>l>aago",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "champ opératoire": {
-      "fub": "babal seekgo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aube": {
-      "fub": "ba6601- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hémorroïdes externes avec thrombose": {
-      "fub": "bagarmi - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bactérie": {
-      "fub": "bakteri - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "atteindre l'âge de la puberté": {
-      "fub": "balingoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyuufoo": {
-      "fub": "balingoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blesser à l'arme blanche": {
-      "fub": "balma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ventouse en verre": {
-      "fub": "bantus / bantusji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf luwal": {
-      "fub": "bantus / bantusji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ventouse obstétricale": {
-      "fub": "poser des ventouses",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quoi que la": {
-      "fub": "barka - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bacille": {
-      "fub": "basil- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ngilngu": {
-      "fub": "basil- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "traces": {
-      "fub": "batte - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "séquelles": {
-      "fub": "batte - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conséquences": {
-      "fub": "batte - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aller à la selle": {
-      "fub": "bawla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aller aux toilettes": {
-      "fub": "bawla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déféquer": {
-      "fub": "bawla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf bu'a": {
-      "fub": "bawla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "urine": {
-      "fub": "bawle - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf coofe": {
-      "fub": "bawle - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "côte": {
-      "fub": "beccal/ becce - ngaVde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "flanc de montagne": {
-      "fub": "becce hooseere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rasoir « coupe-chou »": {
-      "fub": "beluuhi /beluuje - ki/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bistouri": {
-      "fub": "beluuhi /beluuje - ki/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf la6i": {
-      "fub": "beluuhi /beluuje - ki/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cache-sexe masculin": {
-      "fub": "benteere /benteeje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit morceau": {
-      "fub": "bedakkanaayel / bedakkanaahon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf liflifa": {
-      "fub": "bedel/ mbedon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ndinkiri": {
-      "fub": "bedel/ mbedon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "natte de cheveux": {
-      "fub": "bijiIol /bijili - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tresse de cheveux": {
-      "fub": "bijiIol /bijili - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écrit": {
-      "fub": "binndol /binndi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bureau": {
-      "fub": "biro - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "institut": {
-      "fub": "biro - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prononcer la formule bismillaahi": {
-      "fub": "bismoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« au nom de dieu ! »": {
-      "fub": "bismoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prostitution": {
-      "fub": "bordelku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf wancuru": {
-      "fub": "bordelku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rectum": {
-      "fub": "bordodol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pleur": {
-      "fub": "boyol /bojji - ngoUdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chier": {
-      "fub": "bu'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf daaba": {
-      "fub": "bu'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "redouter": {
-      "fub": "bu'a-jogoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "excrément": {
-      "fub": "bu'e - De",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "merde": {
-      "fub": "bu'e - De",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "étron": {
-      "fub": "bu'e - De",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf soofe": {
-      "fub": "bu'e - De",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nyaama": {
-      "fub": "bu'e - De",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "selles trop molles": {
-      "fub": "bu'e bosüde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "selles dures": {
-      "fub": "bu'e caatude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "étrons": {
-      "fub": "bu'e dakamde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "selles consistantes": {
-      "fub": "bu'e dakamde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gros étrons": {
-      "fub": "bu'e loorde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grosses selles": {
-      "fub": "bu'e loorde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cérumen": {
-      "fub": "bu'e noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bloc opératoire": {
-      "fub": "bulok /bulokji - oga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "salle d'opération": {
-      "fub": "bulok /bulokji - oga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. suudu seekgo": {
-      "fub": "bulok /bulokji - oga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mont de vénus": {
-      "fub": "burnburnre / burnburnje - ode/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pénil": {
-      "fub": "burnburnre / burnburnje - ode/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "région pubienne de la femme": {
-      "fub": "burnburnre / burnburnje - ode/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aveugle": {
-      "fub": "burncfo /wurn6e - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosse": {
-      "fub": "buros / burosji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosse à habits": {
-      "fub": "buros limce",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosse à dents en plastique": {
-      "fub": "buros nyii'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosse à chaussures": {
-      "fub": "buros pade",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bronches": {
-      "fub": "burogs - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf dadol": {
-      "fub": "burogs - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bronchite": {
-      "fub": "burogsit - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sonndaaru": {
-      "fub": "burogsit - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ndamba": {
-      "fub": "burogsit - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moucheron": {
-      "fub": "buubel/ mbuubon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "marabout pratiquant la magie": {
-      "fub": "buudeejo / buude'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« maraboutage »": {
-      "fub": "kuugal buude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« marabouter»": {
-      "fub": "buudoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dégagé)": {
-      "fub": "buulol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf cellere": {
-      "fub": "buulol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "à un âge où elle devrait": {
-      "fub": "buuroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anus": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf les": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ndunnaaru": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ndunna": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rummoodu": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bunkaaru": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "loomoondu": {
-      "fub": "buurudu / buurudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cache-sexe garniture périodique": {
-      "fub": "buutol /buuti - ngoIldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. garnatir": {
-      "fub": "buutol /buuti - ngoIldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "watlaare i>inngel": {
-      "fub": "buutol /buuti - ngoIldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boitiller": {
-      "fub": "6aaca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dos": {
-      "fub": "6aawo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne porte-bonheur": {
-      "fub": "hoya-I>aawoojo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toilettes": {
-      "fub": "Ilaawo-suudu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cabinets": {
-      "fub": "Ilaawo-suudu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enduire avec": {
-      "fub": "Ilakka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre une couche de (onguent": {
-      "fub": "Ilakka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pommade) sans frotter": {
-      "fub": "Ilakka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "noir": {
-      "fub": "Ilalee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mélanoderme": {
-      "fub": "Ilalee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "noircir": {
-      "fub": "Ilalina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "teindre en noir": {
-      "fub": "Ilalina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "corps": {
-      "fub": "Banndu / Bali - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "organisme": {
-      "fub": "Banndu / Bali - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "douleur dans tout le corps": {
-      "fub": "naawralfianndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "recouvrer la santé": {
-      "fub": "hefitugo fianndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre du poids": {
-      "fub": "waogo fianndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grossir": {
-      "fub": "waogo fianndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne qui a la peau douce": {
-      "fub": "digga-fiannduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne corpulente": {
-      "fub": "loora-fiannduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne mince": {
-      "fub": "sewa-6annduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne obèse": {
-      "fub": "uppa-6annduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne amorphe": {
-      "fub": "waata-6annduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne qui a bon caractère": {
-      "fub": "wela-6annduujo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être mariée": {
-      "fub": "6agee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se mettre debout": {
-      "fub": "6agtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cuisson": {
-      "fub": "6enndal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "immunisation contre le mauvais sort": {
-      "fub": "l>enndall>anndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en français local « blindage»": {
-      "fub": "l>enndall>anndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "procurer une protection magique à": {
-      "fub": "6enndina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "immuniser  contre le": {
-      "fub": "6enndina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn d'irascible": {
-      "fub": "faaôa-6erndeejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn de calme et d'indulgent": {
-      "fub": "feeco-6erndeejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn d'honnête": {
-      "fub": "laa6a-6erndeejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "courage)": {
-      "fub": "waata-6erndeejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être courageux": {
-      "fub": "margo / woodgo llernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire le fier": {
-      "fub": "wadgo llernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "augmenter": {
-      "fub": "6esda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être augmenté subir une épisiotomie": {
-      "fub": "6esdee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accouchée": {
-      "fub": "6esoo / 6es6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "femme qui a accouché récemment": {
-      "fub": "6esoo / 6es6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accoucher": {
-      "fub": "Ilesna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf danya": {
-      "fub": "Ilesna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accouchement": {
-      "fub": "Ilesngu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire accoucher": {
-      "fub": "6esnina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accoucheuse": {
-      "fub": "6esninoowo / 6esuinoo6e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sage-femme": {
-      "fub": "6esninoowo / 6esuinoo6e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "matrone": {
-      "fub": "6esninoowo / 6esuinoo6e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "constiper": {
-      "fub": "6eta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être constipé et ballonné": {
-      "fub": "6etoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir des nausées": {
-      "fub": "6ewlita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant  fils": {
-      "fub": "6icfcfo / 6i66e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fille": {
-      "fub": "6icfcfo / 6i66e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fils de": {
-      "fub": "6ii / 6i66e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fille de": {
-      "fub": "6ii / 6i66e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "suspendre": {
-      "fub": "6ila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accrocher": {
-      "fub": "6ila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poser une perfusion": {
-      "fub": "IJilgo perfIZyog / ndiyam / baatal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant nouveau-né": {
-      "fub": "I>inngel danyaangel / I>ikkon ndanyaakon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant né à terme": {
-      "fub": "I>inngel kebbidinngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nouveau-né": {
-      "fub": "I>inngel keccel / I>ikkon keccon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant de la rue": {
-      "fub": "I>inngellaawol / I>ikkon laabi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant prématuré": {
-      "fub": "I>inngel ngel hebbidinaay",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant élevé par ses grands-parents": {
-      "fub": "I>inngel maama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nourrisson": {
-      "fub": "I>inngel musinanngel / I>ikkon musinankon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant à la mamelle": {
-      "fub": "I>inngel musinanngel / I>ikkon musinankon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "embryon": {
-      "fub": "I>inngel reedu / I>ikkon reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fœtus": {
-      "fub": "I>inngel reedu / I>ikkon reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "traire": {
-      "fub": "6ira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tirer": {
-      "fub": "6ira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cravache": {
-      "fub": "6occol/ 60cci - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chicote": {
-      "fub": "6occol/ 60cci - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "testicule": {
-      "fub": "fioccoonde / fioccoode - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. haloore": {
-      "fub": "fioccoonde / fioccoode - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf hallere": {
-      "fub": "fioccoonde / fioccoode - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "peler": {
-      "fub": "fioloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "désenfler": {
-      "fub": "fioofia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diminuer de volume": {
-      "fub": "fioofia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écorcher": {
-      "fub": "600sta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "arracher la peau": {
-      "fub": "600sta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "égratignure": {
-      "fub": "600stannde / 600stanôe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écorchure": {
-      "fub": "600stannde / 600stanôe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'écorcher": {
-      "fub": "6oostoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tomber": {
-      "fub": "6oroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tordre provoquer": {
-      "fub": "60sla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rein": {
-      "fub": "60yre / 600ye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sourdre": {
-      "fub": "6ula",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jaillir  être gorgé de lait": {
-      "fub": "6ula",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "puits": {
-      "fub": "6unndu / 6ulli - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "résister à la douleur": {
-      "fub": "6usoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire preuve d'endurance": {
-      "fub": "6usoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enflure": {
-      "fub": "6uudi / 6uule - ndilde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gonflement": {
-      "fub": "6uudi / 6uule - ndilde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enflure de la tête": {
-      "fub": "l>uuIe hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p. 60b)": {
-      "fub": "l>uuIe hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "loupe": {
-      "fub": "6uulde / 6uule - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "excroissance": {
-      "fub": "6uulde / 6uule - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kyste": {
-      "fub": "6uulde / 6uule - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "polype tumeur": {
-      "fub": "6uulde / 6uule - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tumeur cancéreuse": {
-      "fub": "l>uuIde nyawu ngaoanngu oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chiasse": {
-      "fub": "caarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diarrhée": {
-      "fub": "caarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf doggere": {
-      "fub": "caarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eemoral": {
-      "fub": "caarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sida": {
-      "fub": "caarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« inflammation»": {
-      "fub": "caayoori / caayooje - ndi/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "angine": {
-      "fub": "caayoori daande",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyawu daande 1": {
-      "fub": "caayoori daande",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inflammation du sein": {
-      "fub": "caayoori enndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inflammation de la tête": {
-      "fub": "caayoori hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inflammation des os": {
-      "fub": "caayoori i'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "otite": {
-      "fub": "caayoori noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "carie dentaire avec abcès": {
-      "fub": "caayoori nyiiye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie de peau sp.": {
-      "fub": "cadawyel-dubbude - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "taille": {
-      "fub": "cakaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ceinture": {
-      "fub": "cakaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. haddorde": {
-      "fub": "cakaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cas compliqué": {
-      "fub": "caklungol/ cakludi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cas difficile": {
-      "fub": "caklungol/ cakludi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cas embarrassant": {
-      "fub": "caklungol/ cakludi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lieux d'aisance": {
-      "fub": "calka / calkaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "latrines": {
-      "fub": "calka / calkaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "w.-c.": {
-      "fub": "calka / calkaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ngaska bu'e": {
-      "fub": "calka / calkaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf llaawo- suudu": {
-      "fub": "calka / calkaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bête": {
-      "fub": "caylaaoo /saylaa6e - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stupide": {
-      "fub": "caylaaoo /saylaa6e - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saison sèche et chaude": {
-      "fub": "ceeou / ceeouuji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déchirure opération chirurgicale": {
-      "fub": "ceekgol/ ceekli - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "césarienne": {
-      "fub": "ceekgoll>esngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "forte douleur dans les jambes": {
-      "fub": "ceekol kosoe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chirurgien": {
-      "fub": "ceekoowo yiml>e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui cause un amaigrissement": {
-      "fub": "cii600wu /cü600ji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "zizi de garçon incirconcis": {
-      "fub": "ciici - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. guugu": {
-      "fub": "ciici - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prépuce verge d'incirconcis": {
-      "fub": "ciiciyel / ciicihon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pisse": {
-      "fub": "cille - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cystite": {
-      "fub": "cille-naange",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tendon d'achille": {
-      "fub": "coddungol/ codduli - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fatigue": {
-      "fub": "cornri - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "excreta (euphémisme": {
-      "fub": "coofe - ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : mouillures)": {
-      "fub": "coofe - ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "selles": {
-      "fub": "coofe looroe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moustique (anophèle": {
-      "fub": "cufu / cufi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "culex": {
-      "fub": "cufu / cufi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aedes)": {
-      "fub": "cufu / cufi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aedes aegypti l. et aedes spp.": {
-      "fub": "cufu cüwu 1cuti cüwi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "culex spp.": {
-      "fub": "cufu ndiyam salte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moustique des eaux usées": {
-      "fub": "cufu ndiyam salte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "asthme": {
-      "fub": "cukku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf peewri-cukku": {
-      "fub": "cukku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. peewri-cukku": {
-      "fub": "cukkuure - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf peewri": {
-      "fub": "cukkuure - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mauvaise odeur corporelle": {
-      "fub": "cunal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poire à lavement": {
-      "fub": "cuutirgel/ cuutirkon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lavement": {
-      "fub": "euutol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf cuutirgel": {
-      "fub": "euutorgel/ euutorkon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "omoplate saillante": {
-      "fub": "euya / euyo - nga/ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "formant une bosse sur le dos": {
-      "fub": "euya / euyo - nga/ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire des selles": {
-      "fub": "daaba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "transmission": {
-      "fub": "daalloral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "contagion": {
-      "fub": "daalloral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "partie principale": {
-      "fub": "daadaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "partie mère": {
-      "fub": "daadaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "siège": {
-      "fub": "daadaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tête du ténia": {
-      "fub": "daadaare gildi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "scolex": {
-      "fub": "daadaare gildi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "annulaire": {
-      "fub": "daada-cimatel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mère de famille": {
-      "fub": "daada-Ilikkon /daada-Ilikkon'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boutons infectés du cuir chevelu": {
-      "fub": "daaginne -de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amélioration de l'état de santé": {
-      "fub": "daama - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cou": {
-      "fub": "daande / daaôe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poignet": {
-      "fub": "daande junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cou-de-pied  gorge voix": {
-      "fub": "daande korlal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bassin": {
-      "fub": "daaro / daarooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bassine": {
-      "fub": "daaro / daarooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bassin hygiénique": {
-      "fub": "daaro leeso / daarooji leece",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voyant": {
-      "fub": "daaroowo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "devin": {
-      "fub": "daaroowo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "miroir": {
-      "fub": "daarorgal /daarorde - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verre grossissant": {
-      "fub": "daarorgel /ndaarorkon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "espacer": {
-      "fub": "daaynindira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "les accouchements)": {
-      "fub": "daaynindirgo l'Jikkon / l'Jesli",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saison sèche et froide": {
-      "fub": "dabbunde / dabbude - ode/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'échapper": {
-      "fub": "dada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "significatif": {
-      "fub": "dakam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "consistant": {
-      "fub": "dakam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "malpropreté": {
-      "fub": "dakkaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manque d'hygiène": {
-      "fub": "dakkaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "porte": {
-      "fub": "dammugal/ dammuoe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "col de l'utérus": {
-      "fub": "dammugal rennga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cheveux blancs": {
-      "fub": "dandanndi - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cuisse": {
-      "fub": "danndariya - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "engendrer": {
-      "fub": "danya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "empêcher": {
-      "fub": "faddaago danygo ou faddaago reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "induction de l'accouchement": {
-      "fub": "fofgo danygo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maternité": {
-      "fub": "danygol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "valeur": {
-      "fub": "darja - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "degré": {
-      "fub": "darja - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stade": {
-      "fub": "darja - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stade d'une maladie": {
-      "fub": "darja nyawu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "niveau de gravité d'une maladie": {
-      "fub": "darja nyawu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre droit": {
-      "fub": "darna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "redresser arrêter": {
-      "fub": "darna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stopper une hémorragie": {
-      "fub": "darnugo y.. .iy'\"am",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être debout": {
-      "fub": "daroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "davier": {
-      "fub": "daviye - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "1976": {
-      "fub": "daviye - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p. 276])": {
-      "fub": "daviye - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "femme": {
-      "fub": "debbo / rewIJe - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "femme multipare": {
-      "fub": "debbo boowâo danygo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maîtresse": {
-      "fub": "debbo yaasi / rewl>e yaasi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amante": {
-      "fub": "debbo yaasi / rewl>e yaasi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "drogue en comprimé": {
-      "fub": "dedis - oga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aux vertus hallucinogènes  defriiza": {
-      "fub": "dedis - oga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se défriser": {
-      "fub": "defriizoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "registre d'inscription": {
-      "fub": "deftere maaoda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "polype nasal": {
-      "fub": "dendene - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jeune  de 6 à 17 ans": {
-      "fub": "derkeejo / derke'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sukaajo": {
-      "fub": "derkeejo / derke'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bosse sur le dos": {
-      "fub": "dültaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "religion": {
-      "fub": "diina - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de petit piment en poudre": {
-      "fub": "dine - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de sel": {
-      "fub": "dine - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'huile végétale": {
-      "fub": "dine - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de cubes maggi": {
-      "fub": "dine - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écraser": {
-      "fub": "dir6a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réduire en pâte digérer": {
-      "fub": "dir6a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trembler": {
-      "fub": "diwna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grelotter": {
-      "fub": "diwna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trembloter": {
-      "fub": "diwna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frissonner": {
-      "fub": "diwna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tremblement": {
-      "fub": "diwnugo I)anndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire sursauter": {
-      "fub": "diwtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sursauter": {
-      "fub": "diwtora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diabète": {
-      "fub": "diyabet - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyawu-sukar": {
-      "fub": "diyabet - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dysenterie (à flagellés": {
-      "fub": "dizanteri - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amibienne ou bacillaire)": {
-      "fub": "dizanteri - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf eemoral": {
-      "fub": "dizanteri - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diarrhée (euphémisme": {
-      "fub": "doggere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : courante)": {
-      "fub": "doggere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf caarol": {
-      "fub": "doggere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir la diarrhée (euphémisme": {
-      "fub": "doggina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : faire courir)": {
-      "fub": "doggina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf saara": {
-      "fub": "doggina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une diarrhée aiguë": {
-      "fub": "doggingo ndiyam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir envie de vomir": {
-      "fub": "doha",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir la nausée": {
-      "fub": "doha",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. sicca": {
-      "fub": "doha",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf llernde": {
-      "fub": "doha",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "infinnier": {
-      "fub": "doktor baalanôo kuugal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médecin de garde": {
-      "fub": "doktor baalanôo kuugal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pédiatre": {
-      "fub": "doktor 6ikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ophtalmologue": {
-      "fub": "doktor gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "psychiatre": {
-      "fub": "doktor hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laborantin": {
-      "fub": "doktor laboratuwar",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laborantine": {
-      "fub": "doktor laboratuwar",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dentiste": {
-      "fub": "doktor nyüy\"e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pharmacien": {
-      "fub": "doktor parmasin",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pharmacienne": {
-      "fub": "doktor parmasin",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gynécologue": {
-      "fub": "doktor rew6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir faim": {
-      "fub": "dola",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf weelo": {
-      "fub": "dola",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire bouillir": {
-      "fub": "doUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "draps lavés à 100°": {
-      "fub": "leppi dollaadi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "décoction à boire": {
-      "fub": "dolla-yara - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "décocté (litt. : [on] fait bouillir": {
-      "fub": "dolla-yara - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "[on] boit)": {
-      "fub": "dolla-yara - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faim": {
-      "fub": "dolo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire tomber": {
-      "fub": "doyya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire une chute": {
-      "fub": "doyyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yana": {
-      "fub": "doyyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vertèbres lombaires": {
-      "fub": "dUDgal / dUDUe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "repousser": {
-      "fub": "dunya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écarter": {
-      "fub": "dunya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saison des pluies": {
-      "fub": "duumol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ndunngu": {
-      "fub": "duumol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nduunngu": {
-      "fub": "duumol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "au milieu de la saison des pluies": {
-      "fub": "duumol culumlugum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rate": {
-      "fub": "d'aamol /d'aami - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf. nanol": {
-      "fub": "d'aamol /d'aami - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "donnir": {
-      "fub": "oaanoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se rendonnir": {
-      "fub": "oaantoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède antivenimeux": {
-      "fub": "oaare / oaaje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "contre-poison": {
-      "fub": "oaare / oaaje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf koyoowu": {
-      "fub": "oaayoowu / oaayooji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "koyooji": {
-      "fub": "oaayoowu / oaayooji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poser une compresse chaude": {
-      "fub": "oabba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "apaiser": {
-      "fub": "dalllla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "glu": {
-      "fub": "daeeere / daeee - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf taari": {
-      "fub": "daeeere / daeee - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "racine": {
-      "fub": "dadol/ dam - ngoUdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui infonnent) muscle": {
-      "fub": "dam maatinanm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "muscle du dos": {
-      "fub": "dadol 6aawo / dam 6aawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "artère carotide interne": {
-      "fub": "âaâol daande serawoll âadi daande seraaji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "veines pulmonaires": {
-      "fub": "âadi bumsuâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "artères pulmonaires": {
-      "fub": "âadi bumsuâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gencive": {
-      "fub": "dakkudi - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf woowo": {
-      "fub": "dakkudi - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire dormir": {
-      "fub": "dannina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blesser superficiellement": {
-      "fub": "d\"eed\"a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "érafler": {
-      "fub": "d\"eed\"a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "langue fourchue": {
-      "fub": "demngal cinndal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "métaphore: « hypocrite »": {
-      "fub": "demngal cinndal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "langue de varan aquatique": {
-      "fub": "demngal el'eldu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "métaphore : « hypocrite »": {
-      "fub": "demngal el'eldu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "langue à laquelle  répond": {
-      "fub": "demngal jaabanaangal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn qui s'exprime avec clarté": {
-      "fub": "dama-demngaljo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn de peu loquace": {
-      "fub": "ramma-d\"emngaljo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qqn de mielleux  voix": {
-      "fub": "wela-demngaljo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "feuille de papier": {
-      "fub": "d\"ereewol/ d\"ereeji - ngollm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bordereau": {
-      "fub": "d\"ereewol/ d\"ereeji - ngollm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fiche": {
-      "fub": "d\"ereewol/ d\"ereeji - ngollm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf binndol": {
-      "fub": "d\"ereewol/ d\"ereeji - ngollm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fiche de stock": {
-      "fub": "dereewol siga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf. sase": {
-      "fub": "oereeyel/ oereehon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "érection du pénis": {
-      "fub": "dingere / dinge - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bander": {
-      "fub": "dingina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entrer en érection": {
-      "fub": "dingina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf. ummina": {
-      "fub": "dingina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tousser": {
-      "fub": "ooija",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf. sonndoo": {
-      "fub": "ooija",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "induration sous-cutanée douloureuse": {
-      "fub": "ookkere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ombre": {
-      "fub": "oowdi /oowle - ndi/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ombrage": {
-      "fub": "oowdi /oowle - ndi/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sommeil": {
-      "fub": "âoyngol/ âoydi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manque de sommeil": {
-      "fub": "sooynde doydi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toux": {
-      "fub": "âoyru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'abriter": {
-      "fub": "âuwoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se mettre à l'abri": {
-      "fub": "âuwoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pousser en ahanant": {
-      "fub": "eemoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bébé)": {
-      "fub": "eemoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. otta": {
-      "fub": "eemoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ténesme rectal": {
-      "fub": "eemoral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amibienne ou bactérienne)": {
-      "fub": "eemoral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf dizanteri": {
-      "fub": "eemoral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "les parois d'une cavité naturelle": {
-      "fub": "ekarter - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "etc. (quevauvilliers 2005": {
-      "fub": "ekarter - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p. 162)": {
-      "fub": "ekarter - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "échographie échographe": {
-      "fub": "ekogarfi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appareil à échographie": {
-      "fub": "ekogarfi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blesser à la tête": {
-      "fub": "ela",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blessure à la tête": {
-      "fub": "eloodu /eloodi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bosse sur la tête": {
-      "fub": "eloodu muukaaru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blessure sanglante à la tête": {
-      "fub": "eloodu yIiyamru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dresser  éduquer": {
-      "fub": "elta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le mettre dans le droit chemin": {
-      "fub": "elta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hémorroïdes": {
-      "fub": "emoroyiâ- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf bagarmi": {
-      "fub": "emoroyiâ- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspirine vendue par les colporteurs": {
-      "fub": "empisi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf aspuro": {
-      "fub": "empisi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lait maternel": {
-      "fub": "enoam-oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kosam": {
-      "fub": "enoam-oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sein": {
-      "fub": "enndu / endi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mamelle": {
-      "fub": "enndu / endi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "un sein bien rond": {
-      "fub": "faandu enndu / paali endi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf iiwa) • musingo enndu téter": {
-      "fub": "fungo endi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écraser les seins": {
-      "fub": "namgo endi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sevrer": {
-      "fub": "enta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant sevré": {
-      "fub": "Ilinngel entaangel / Ilikkon entaakon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sevrage": {
-      "fub": "enteeki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fait d'être sevré": {
-      "fub": "enteeki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fait de sevrer": {
-      "fub": "entuki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fait de cesser d'allaiter": {
-      "fub": "entuki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hernie": {
-      "fub": "erni - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlures d'estomac": {
-      "fub": "estoma - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyawu ljernde": {
-      "fub": "estoma - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "examen de laboratoire": {
-      "fub": "ezameg - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prolapsus utérin": {
-      "fub": "faaldu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "comprendre diagnostiquer": {
-      "fub": "faama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "intelligence": {
-      "fub": "faamu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf hakkiilo": {
-      "fub": "faamu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mot employé au pluriel)": {
-      "fub": "faarde / paare - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poils pubiens": {
-      "fub": "faasko - ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf. lal>ruba": {
-      "fub": "faasko - ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mourir": {
-      "fub": "faatoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "empêcher de     passer": {
-      "fub": "faddoo /padd",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "barrer le passage à": {
-      "fub": "faddoo /padd",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "arrêter": {
-      "fub": "faddoo /padd",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pratiquer la contraception": {
-      "fub": "faddaago danygol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être assommé": {
-      "fub": "faooee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "perdre connaissance": {
-      "fub": "faooee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tomber dans le coma": {
-      "fub": "faooee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "évanouissement": {
-      "fub": "faooere /paooe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coma": {
-      "fub": "faooere /paooe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "perte de connaissance": {
-      "fub": "faooere /paooe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "reprendre connaissance": {
-      "fub": "fadditee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaussures à talons aiguilles": {
-      "fub": "paoe teppere gi'el",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaussures à talons hauts": {
-      "fub": "paoe juuta-teppereeje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "protège-x": {
-      "fub": "faka-bone - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "masque de protection": {
-      "fub": "faka-bone kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "barres de protection sur une moto": {
-      "fub": "faka-bone moto",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être bloqué": {
-      "fub": "faloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être en trop petite quantité": {
-      "fub": "famoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manquer": {
-      "fub": "famoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sexe féminin": {
-      "fub": "farji - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kuttu": {
-      "fub": "farji - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bouillonner  gargouiller": {
-      "fub": "fata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poudre de talc": {
-      "fub": "fawda - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poche des eaux": {
-      "fub": "fawyere / pawye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "embonpoint": {
-      "fub": "fayfayru - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ongle": {
-      "fub": "feoeengo / peoeeli - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éclater": {
-      "fub": "feera",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'ouvrir": {
-      "fub": "feera",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "refroidir": {
-      "fub": "feewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rafraîchir calmer": {
-      "fub": "feewtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fer": {
-      "fub": "fer - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir l'esprit ouvert": {
-      "fub": "fera",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être civilisé": {
-      "fub": "fera",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "égayer": {
-      "fub": "fertina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre dans de bonnes dispositions": {
-      "fub": "fertina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre de l'exercice physique": {
-      "fub": "fertingo I)anndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éclater (abcès": {
-      "fub": "fetta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pneu)": {
-      "fub": "fetta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "survenir à l'improviste": {
-      "fub": "feyyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrir d'une rétention (de selles": {
-      "fub": "fi600",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'urine)": {
-      "fub": "fi600",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'où être constipé": {
-      "fub": "fi600",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrir d'une rétention d'urine": {
-      "fub": "fi600",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rétention (de selles": {
-      "fub": "fi6re /pi6e - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'où constipation": {
-      "fub": "fi6re /pi6e - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rétention d'urine": {
-      "fub": "fi6re /pi6e - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lancer (une flèche": {
-      "fub": "fiua",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "un caillou": {
-      "fub": "fiua",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se moucher": {
-      "fub": "fiifa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyitta": {
-      "fub": "fiifa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "battre": {
-      "fub": "frlta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jouer": {
-      "fub": "fija",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gonfler au maximum": {
-      "fub": "fillinoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf uppa": {
-      "fub": "fillinoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se réveiller": {
-      "fub": "tina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frapper": {
-      "fub": "tiya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "causer": {
-      "fub": "fofa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "provoquer": {
-      "fub": "fofa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pâlir": {
-      "fub": "follitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspirer": {
-      "fub": "fooôa / pOOÔ",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inspirer": {
-      "fub": "fooôa / pOOÔ",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yara": {
-      "fub": "fooôa / pOOÔ",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fumer": {
-      "fub": "fooogo taba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "respirer": {
-      "fub": "foofa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "respirer par la bouche": {
-      "fub": "foofrugo hunnduko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "respirer par le nez": {
-      "fub": "foofrugo kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "péter": {
-      "fub": "foofrugo les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bien respirer (litt. : inspirer": {
-      "fub": "foofa-Iorna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "renvoyer)": {
-      "fub": "foofa-Iorna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "i.e. être en vie": {
-      "fub": "foofa-Iorna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "respiration": {
-      "fub": "foofaango / poofaali - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maigreur": {
-      "fub": "fooyre - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maigrir": {
-      "fub": "fooy'\"a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tendre (la main": {
-      "fub": "forta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le bras": {
-      "fub": "forta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la jambe)": {
-      "fub": "forta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'allonger": {
-      "fub": "fortoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'étendre": {
-      "fub": "fortoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "photographie": {
-      "fub": "foto / fotooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "illustration photographique": {
-      "fub": "foto / fotooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plaire à": {
-      "fub": "fottana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hernie abdominale ou inguinale": {
-      "fub": "fuloodu / puloodi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf erni": {
-      "fub": "fuloodu / puloodi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retrousser": {
-      "fub": "funya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retourner un repli cutané": {
-      "fub": "funya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retrousser un vêtement": {
-      "fub": "funyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir les yeux exorbités": {
-      "fub": "furtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gris": {
-      "fub": "fur",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pauvre  grise": {
-      "fub": "puro 1 furâulJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pet silencieux": {
-      "fub": "fustere /puste - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf fuutere": {
-      "fub": "fustere /puste - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fonner des vésicules": {
-      "fub": "futta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vésicule": {
-      "fub": "futtere /putte - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit bouton": {
-      "fub": "futtere /putte - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ampoule": {
-      "fub": "futtere /putte - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cloque": {
-      "fub": "futtere /putte - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soufller  pulvériser": {
-      "fub": "fuufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "papule": {
-      "fub": "fuufre / puufe - nde/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pustules": {
-      "fub": "puufe bornune",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éruption sèche": {
-      "fub": "puufe muukaaje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bourbouille": {
-      "fub": "puufe wulweende",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boutons de chaleur": {
-      "fub": "puufe wulweende",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "affection douloureuse": {
-      "fub": "fuuli - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soignée par la pose de ventouses": {
-      "fub": "fuuli - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pet": {
-      "fub": "fuutere / puute - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écraser entre ses ongles (puce": {
-      "fub": "fuya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pou": {
-      "fub": "fuya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bouton": {
-      "fub": "fuya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "point noir)": {
-      "fub": "fuya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant": {
-      "fub": "gaamaangel/ ngaamaakon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fœtus avorté": {
-      "fub": "gaamaangel/ ngaamaakon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fil": {
-      "fub": "gaarawol/ gaaraaji - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pilosité": {
-      "fub": "gaasa /gaasaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poils": {
-      "fub": "gaasa /gaasaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chevelure": {
-      "fub": "gaasa hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cheveux  • gaasa kine poils du nez": {
-      "fub": "gaasa hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éclampsie": {
-      "fub": "gaddol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. gayyinol": {
-      "fub": "gaddol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crotte": {
-      "fub": "gaddal /gadde - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. waôôere": {
-      "fub": "gaddal /gadde - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gaôôe": {
-      "fub": "gaddal /gadde - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "molaire": {
-      "fub": "gaggirre /gaggidde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p. boa)": {
-      "fub": "galagal/ galage - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. pagame maxillaire inférieur": {
-      "fub": "i' al galagal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plate-forme sablée": {
-      "fub": "gangirre /gangirde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "garniture périodique": {
-      "fub": "garnatir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "serviette hygiénique": {
-      "fub": "garnatir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf buutol": {
-      "fub": "garnatir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "part sort réservé à qqn": {
-      "fub": "geâal/ geâe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "destinée": {
-      "fub": "geâal/ geâe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cohabitation": {
-      "fub": "gendal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fait de vivre avec": {
-      "fub": "gendal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épine": {
-      "fub": "gi'al /gi'e - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vue": {
-      "fub": "giââe - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf baaldal": {
-      "fub": "giidal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vendeur ambulant de remèdes": {
-      "fub": "gügal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf agaajo": {
-      "fub": "gügal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit ver": {
-      "fub": "gilngel/ ngilkon - ogel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "globule blanc": {
-      "fub": "gilobil-bulag / gilobilji-bulag - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "globule rouge": {
-      "fub": "gilobil-ruus / gilobilji-ruus - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "génie": {
-      "fub": "ginnawol/ ginnaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "djinn": {
-      "fub": "ginnawol/ ginnaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf henndu": {
-      "fub": "ginnawol/ ginnaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gramme": {
-      "fub": "giram /giramji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne  humaine": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être humain": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quelqu'un": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yiml)e": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. innu": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "neooo": {
-      "fub": "goddo /wodDe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ce avec quoi on brosse": {
-      "fub": "goggirdum - oum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frotte": {
-      "fub": "goggirdum - oum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. giggiroum": {
-      "fub": "goggirdum - oum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "larme": {
-      "fub": "gonngol/ gonm - ngoIldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gonorrhée": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blennorragie": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaude-pisse": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf koros": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. [nyawu] koros": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sompis": {
-      "fub": "gono - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amant": {
-      "fub": "gorko yaasi / worl>e yaasi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chassie": {
-      "fub": "gotottol/ gototti - ngoIldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chassie purulente": {
-      "fub": "gotottol mbordi-mbordi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "estropié (manchot": {
-      "fub": "guddo /wuddu6e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "unijambiste)": {
-      "fub": "guddo /wuddu6e - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlure": {
-      "fub": "gulol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sensation de brûlure": {
-      "fub": "gulol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crâne (litt. : calebasse de la tête": {
-      "fub": "gumbal boore ou gumbal ngaandi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "calebasse du cerveau)": {
-      "fub": "gumbal boore ou gumbal ngaandi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie de la goutte": {
-      "fub": "gut - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "zizi": {
-      "fub": "guugu - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ciicî": {
-      "fub": "guugu - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quéquette": {
-      "fub": "guuguyel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sexe de petit garçon": {
-      "fub": "guuguyel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ciici": {
-      "fub": "guuguyel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prise par voie orale": {
-      "fub": "haabu biriiji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. gaasa masarru barbe de maïs": {
-      "fub": "haabu biriiji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "barbe de maïs rouge": {
-      "fub": "haabu mbooeewu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "barbe de maïs blanche": {
-      "fub": "haabu ndaneewu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être amer": {
-      "fub": "haaoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vésicule biliaire": {
-      "fub": "haahaande / kaakaaoe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyaama": {
-      "fub": "haahaande / kaakaaoe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "besoin": {
-      "fub": "haaje - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "envie": {
-      "fub": "haaje - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "parole": {
-      "fub": "haala - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne qui parle trop": {
-      "fub": "ouuoa-haalaajo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne qui a mauvais caractère": {
-      "fub": "wona-haaliijo / wona-haali'en",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être convenable": {
-      "fub": "haana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "convenir": {
-      "fub": "haana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être bien": {
-      "fub": "haana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être rassasié": {
-      "fub": "haara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir mangé et bu à satiété": {
-      "fub": "haara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "satiété": {
-      "fub": "haarannde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cracher après s'être raclé la gorge": {
-      "fub": "haartoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf tuuta": {
-      "fub": "haartoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tableau": {
-      "fub": "haatummeere / kaatummeeje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "encadré": {
-      "fub": "haatummeere / kaatummeeje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre la tension": {
-      "fub": "hal>l>ugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "esprit": {
-      "fub": "hakkiilo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jugement": {
-      "fub": "hakkiilo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf hoore": {
-      "fub": "hakkiilo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ngaandi": {
-      "fub": "hakkiilo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par euphémisme": {
-      "fub": "hakkiilo didorwo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'évanouir": {
-      "fub": "hakkiilo didorwo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être mauvais": {
-      "fub": "halla / kall",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être de mauvaise qualité": {
-      "fub": "halla / kall",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être méchant": {
-      "fub": "halla / kall",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être grave": {
-      "fub": "halla / kall",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être dangereux": {
-      "fub": "halla / kall",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "méchanceté": {
-      "fub": "halleende - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "testicule atteint d'hydrocèle": {
-      "fub": "kaUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ljoccoonde": {
-      "fub": "kaUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "haloore": {
-      "fub": "kaUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "wokoloore": {
-      "fub": "kaUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par exemple": {
-      "fub": "hamya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ou une induration)": {
-      "fub": "hamya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ronfler": {
-      "fub": "hara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire du bruit": {
-      "fub": "harka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf cata": {
-      "fub": "harka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réunir": {
-      "fub": "hawta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rassembler s'accoupler": {
-      "fub": "hawta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "règles": {
-      "fub": "hayla - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yi'a": {
-      "fub": "hayla - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. al'aada": {
-      "fub": "hayla - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lootgol": {
-      "fub": "hayla - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ménopause": {
-      "fub": "daraago hayla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« pierre noire»": {
-      "fub": "hayre yargo tooke ou hayre l)aleere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sortir d'affaire recouvrer la santé": {
-      "fub": "hel>tugo hoore mum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se rétablir": {
-      "fub": "hel>tugo hoore mum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« choses fraîches »": {
-      "fub": "kuuje kecce",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écouter": {
-      "fub": "hedoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "douleur à la hauteur de l'abdomen": {
-      "fub": "heede - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frapper avec le plat (de la main": {
-      "fub": "hella",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ou d'une planche": {
-      "fub": "hella",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'un livre etc.)": {
-      "fub": "hella",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frapper des mains": {
-      "fub": "hellugo juucfe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "battre des mains": {
-      "fub": "hellugo juucfe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "applaudir": {
-      "fub": "hellugo juucfe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couper les ongles de": {
-      "fub": "helnya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tailler les ongles de": {
-      "fub": "helnya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se tailler les ongles": {
-      "fub": "helnyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vent air": {
-      "fub": "henndu /keni - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oxygène": {
-      "fub": "henndu laalJndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "foie": {
-      "fub": "hegre /kege - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "malchance": {
-      "fub": "hersumku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "caillot": {
-      "fub": "heyYere / keyye - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "interrompre": {
-      "fub": "hida",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'interrompre": {
-      "fub": "hidoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "examiner sous toutes les coutures": {
-      "fub": "hiinya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "veiller": {
-      "fub": "hiira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "et inversement)": {
-      "fub": "hiira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "narine": {
-      "fub": "hinere / kine - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tourner à l'envers": {
-      "fub": "hippa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retourner": {
-      "fub": "hippa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se coucher sur le ventre": {
-      "fub": "hippoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éviter": {
-      "fub": "hisa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "échapper à": {
-      "fub": "hisa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "occiput": {
-      "fub": "holllludu-ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "décision divine": {
-      "fub": "hoddiroore / koddirooje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être sevré": {
-      "fub": "hoddee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "genou": {
-      "fub": "hofru / koppi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rotule": {
-      "fub": "le'el hofru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cheville": {
-      "fub": "hoillunde / koillule - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "montrer expliquer": {
-      "fub": "hoUa / koU",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ourler": {
-      "fub": "hommba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coudre un ourlet cicatriser": {
-      "fub": "hommba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir confiance en": {
-      "fub": "hooloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se fier à": {
-      "fub": "hooloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "doigt": {
-      "fub": "hoondu / kooli - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "auriculaire": {
-      "fub": "hoondu simarru, syn. [koolel] cimatel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médius": {
-      "fub": "hoondu caka-kooliiru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "index  • hoondu wordu": {
-      "fub": "hoondu sappordu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "doigt père)": {
-      "fub": "hoondu sappordu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "extrémité supérieure": {
-      "fub": "yoora-hooreejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se surveiller": {
-      "fub": "aynugo hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se contrôler": {
-      "fub": "nanngugo hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ne pas se contrôler": {
-      "fub": "yoofgo hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir la tête)": {
-      "fub": "jogaago hoore / helJgo hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "étoile": {
-      "fub": "hoorre / koode - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être épousée pour la première fois": {
-      "fub": "hoowee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "insecte volant": {
-      "fub": "hoowowre / koowoowe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf koowoyel": {
-      "fub": "hoowowre / koowoowe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coton": {
-      "fub": "hottollo - ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rêver": {
-      "fub": "hoyoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rendre plus facile décontracter": {
-      "fub": "hoytina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "allumer": {
-      "fub": "hu66a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enf1ammer être brûlant de fièvre": {
-      "fub": "hu66a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "herbe": {
-      "fub": "huoo / huoooji - ko/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plante herbacée": {
-      "fub": "huoo / huoooji - ko/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir peur": {
-      "fub": "hula",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "craindre": {
-      "fub": "hula",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être bouché": {
-      "fub": "humoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir l'esprit lent et lourd": {
-      "fub": "humoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tenir un double langage  lèvre": {
-      "fub": "margo kunnduae mm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lèvre supérieure": {
-      "fub": "hunnduko dow",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lèvre inférieure extrémité": {
-      "fub": "hunnduko les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mamelon": {
-      "fub": "hunnduko enndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pot-de-vin": {
-      "fub": "ma66iraum hunnduko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "guérir": {
-      "fub": "hurga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soigner": {
-      "fub": "hurga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "traiter": {
-      "fub": "hurga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyawndugo": {
-      "fub": "hurga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se soigner": {
-      "fub": "hurgoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manche de louche en calebasse": {
-      "fub": "huudu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plaie": {
-      "fub": "huuduure / kuuduuje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ulcère": {
-      "fub": "huuduure / kuuduuje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plaie infectée": {
-      "fub": "huuduure marnde mbordi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plaie cancéreuse": {
-      "fub": "huuduure nde ôam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cancer": {
-      "fub": "huuduure nde ôam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plaie non infectée": {
-      "fub": "huuduure sookre",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couper un morceau": {
-      "fub": "huusa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "travailler lancer un mauvais sort à": {
-      "fub": "huuwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "os": {
-      "fub": "j'al/ i'e - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produire un bruit continu": {
-      "fub": "üda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diarrhée)": {
-      "fub": "ürtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "puberté": {
-      "fub": "iiwo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ultrasons": {
-      "fub": "i1tirasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appareil à ultrasons": {
-      "fub": "apare iltirasog",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nom commercial  espèce": {
-      "fub": "innde soorude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne humaine": {
-      "fub": "innu - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf god\"d\"o": {
-      "fub": "innu - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hypertension": {
-      "fub": "ipertaasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hypotension": {
-      "fub": "ipotaasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éternuer": {
-      "fub": "isla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "speculum": {
-      "fub": "ispekilom - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "staphylocoque": {
-      "fub": "istafilokok - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "streptocoque": {
-      "fub": "isterokop - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "outil pour enlever": {
-      "fub": "ittiroum - dum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pince à écharder": {
-      "fub": "ittiroum gi'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pluie": {
-      "fub": "iyeende / iyeele - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nombril": {
-      "fub": "jaabuuru /jaabuuji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nombril creux": {
-      "fub": "jaabuuru rewru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nombril saillant": {
-      "fub": "jaabuuru wordu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hernie ombilicale  cordon ombilical": {
-      "fub": "jaabuuru wordu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "analphabétisme": {
-      "fub": "jaahilaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "froid sec": {
-      "fub": "jaangol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ramener  causer": {
-      "fub": "jaanya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rire": {
-      "fub": "jala",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se moquer de": {
-      "fub": "jala",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "germer": {
-      "fub": "jal6a / nja16",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sortir le germe": {
-      "fub": "jal6a / nja16",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf fud'a": {
-      "fub": "jal6a / nja16",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "paix": {
-      "fub": "jam - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tranquillité": {
-      "fub": "jam - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre le feu à la brousse": {
-      "fub": "jamna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se taire": {
-      "fub": "jeedoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre au monde": {
-      "fub": "jibbina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "infirmité": {
-      "fub": "jüja - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyawu": {
-      "fub": "jüja - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "paralysie d'un membre": {
-      "fub": "jüjannde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être infirme": {
-      "fub": "jiijoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "estropié": {
-      "fub": "jiijoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "handicapé": {
-      "fub": "jiijoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se pencher sur": {
-      "fub": "jimmitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire descendre éjaculer": {
-      "fub": "jippina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "joindre les extrémités": {
-      "fub": "jokka / njokk",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "abouter": {
-      "fub": "jokka / njokk",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "raccorder": {
-      "fub": "jokka / njokk",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souder réduire": {
-      "fub": "jokka / njokk",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf jokkina": {
-      "fub": "jokka / njokk",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jointure": {
-      "fub": "jokkere /jokke - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "articulation": {
-      "fub": "jokkere /jokke - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être réduit": {
-      "fub": "jokkina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "perlèche": {
-      "fub": "jonte-jemma - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'asseoir": {
-      "fub": "joodOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rester": {
-      "fub": "joodOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "position assise": {
-      "fub": "joonde /joole - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "façon de s'asseoir vie": {
-      "fub": "joonde /joole - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "façon de vivre réunion": {
-      "fub": "joonde /joole - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saliver": {
-      "fub": "joorda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "baver": {
-      "fub": "joorda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bave": {
-      "fub": "joorde - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "salive": {
-      "fub": "joorde - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "solvant (dans un pesticide": {
-      "fub": "joosniroam lekki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par exemple)": {
-      "fub": "joosniroam lekki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "main": {
-      "fub": "junngo /juude - ngo/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bras": {
-      "fub": "junngo /juude - ngo/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ne pas faire mal quand on tresse": {
-      "fub": "feewgo junngo her moorm",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'entraider": {
-      "fub": "hawtugo junngel junngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir beaucoup d'estime pour": {
-      "fub": "jogoraago",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voler (euphémisme": {
-      "fub": "juttingo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : allonger la main)": {
-      "fub": "juttingo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voleur  (euphémisme": {
-      "fub": "juuta-junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : qui a la main longue)": {
-      "fub": "juuta-junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se rencontrer avec les mains)": {
-      "fub": "yiidugo juuoe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "main droite": {
-      "fub": "junngo nyaamo / junngo nano",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "main gauche": {
-      "fub": "junngo nyaamo / junngo nano",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de main en main": {
-      "fub": "junngo dow junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la main dans la main": {
-      "fub": "junngo e junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dos de la main": {
-      "fub": "l:Jaawo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "revers de la main": {
-      "fub": "l:Jaawo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. :": {
-      "fub": "nanngugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "menstrues (euphémisme": {
-      "fub": "wartugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : retour de la main)": {
-      "fub": "wartugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pingre": {
-      "fub": "saata-junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avare": {
-      "fub": "saata-junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lancer un mauvais sort à qqn": {
-      "fub": "wad\"go god\"d\"o junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pratique de la sorcellerie": {
-      "fub": "kuugal junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "circoncire": {
-      "fub": "juuIna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se faire circoncire": {
-      "fub": "juuInoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sorcier": {
-      "fub": "kaaramaajo / kaarama'en - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mistiriijo": {
-      "fub": "kaaramaajo / kaarama'en - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sorcellerie": {
-      "fub": "kaaramaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mistiraaku": {
-      "fub": "kaaramaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "molard": {
-      "fub": "kaartudi-ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "glaviot": {
-      "fub": "kaartudi-ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "variété de caayoori ngordi": {
-      "fub": "kalJlJorgel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf caayoori": {
-      "fub": "kalJlJorgel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mauvaise odeur": {
-      "fub": "kacceenga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mauvaise haleine": {
-      "fub": "kacceenga hunnduko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se bloquer": {
-      "fub": "kaloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "calcium": {
-      "fub": "kalsiyom - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en-cas": {
-      "fub": "kalu / kaluuji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. huuduure nde dam": {
-      "fub": "kagser /kagserji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cassette audio": {
-      "fub": "kaset radiyo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "caoutchouc": {
-      "fub": "kawsu - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "matière plastique": {
-      "fub": "kawsu - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gants en caoutchouc": {
-      "fub": "kawsu juude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gants isolants": {
-      "fub": "kawsu juude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tuyau en plastique": {
-      "fub": "kawsuwol / kawsuuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cahier": {
-      "fub": "kaye / kayeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "registre des patients": {
-      "fub": "kaye inde nyawlJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "villageois": {
-      "fub": "kayweejo /kaywe'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "villageoise": {
-      "fub": "kayweejo /kaywe'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rustrerie": {
-      "fub": "kayweeku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jeune fille de mœurs libres": {
-      "fub": "kecco-ajabaajo / heccufie-ajaba'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "reins": {
-      "fub": "keeci - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bas du dos": {
-      "fub": "keeci - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bile": {
-      "fub": "keefam - cfam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dose": {
-      "fub": "ketol/ keti - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mesure": {
-      "fub": "ketol/ keti - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf teko": {
-      "fub": "kiikook",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bruit fort de respiration": {
-      "fub": "kiikor -nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "respiration bruyante": {
-      "fub": "kiikor -nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "natron d'apparence fibreuse": {
-      "fub": "kilbu laacüjam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "clinique": {
-      "fub": "kilinik / kilinikji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "établissement hospitalier privé": {
-      "fub": "kilinik / kilinikji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kilogramme": {
-      "fub": "kilo / kilooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poids": {
-      "fub": "kilo / kilooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "peser sur une bascule": {
-      "fub": "kiloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nez droit": {
-      "fub": "kinal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "os du nez": {
-      "fub": "leggal kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "comprimé": {
-      "fub": "kinin /kininji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. kompirme": {
-      "fub": "kinin /kininji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mooeteeki": {
-      "fub": "kinin /kininji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ijuulde kyste amibien": {
-      "fub": "kiste - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coca-cola": {
-      "fub": "koka-oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cabine téléphonique": {
-      "fub": "kolbos / kolbosji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« cali-box»": {
-      "fub": "kolbos / kolbosji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cuurel telefon": {
-      "fub": "kolbos / kolbosji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "choléra": {
-      "fub": "kolera - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bouteille": {
-      "fub": "kolobaaru / kolobaaji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "extincteur": {
-      "fub": "kolobaaru nyifgo yüte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyifruoum": {
-      "fub": "kolobaaru nyifgo yüte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. kinin": {
-      "fub": "kompirme /kompirmeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "antirétroviraux": {
-      "fub": "kompirme SIDA; syn.lekki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède du sida)": {
-      "fub": "kompirme SIDA; syn.lekki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trachée + œsophage": {
-      "fub": "kondondol/ kondondi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "préservatif": {
-      "fub": "konndom / konndomji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "capote": {
-      "fub": "konndom / konndomji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "condom": {
-      "fub": "konndom / konndomji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. danko": {
-      "fub": "konndom / konndomji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kawsu": {
-      "fub": "konndom / konndomji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "parole blessante": {
-      "fub": "konngol/ konngi - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit insecte": {
-      "fub": "koowoyel/ koowoohon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf hoowowre": {
-      "fub": "koowoyel/ koowoohon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faim matinale": {
-      "fub": "kooye - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "partie antérieure de la jambe": {
-      "fub": "korlal / korle - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« avant-jambe»": {
-      "fub": "korlal / korle - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lait maternel de mauvaise qualité": {
-      "fub": "kosam daada mbonnüoam ; syn. mulla, murla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyawu > nyawu kosam": {
-      "fub": "kosam daada mbonnüoam ; syn. mulla, murla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lait en boîte": {
-      "fub": "kosam goggog",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pied": {
-      "fub": "kosngal/ kosde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jambe": {
-      "fub": "kosngal/ kosde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yaa6irde": {
-      "fub": "kosngal/ kosde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mayramwal": {
-      "fub": "kosngal/ kosde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plante du pied": {
-      "fub": "I>ernde kosngal ou nder kosngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sexe (euphémisme": {
-      "fub": "caka kosde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : entre les jambes)": {
-      "fub": "caka kosde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cou de pied": {
-      "fub": "daande kosngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dessus du pied": {
-      "fub": "danki kosngal ou lJaawo kosngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rêve": {
-      "fub": "koyd'ol / koydi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "songe": {
-      "fub": "koyd'ol / koydi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. d'aayoowu 1 d'aayooji": {
-      "fub": "kOYOOWll /koyooji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède": {
-      "fub": "kurgun - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médication": {
-      "fub": "kurgun - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf lekki": {
-      "fub": "kurgun - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "viande": {
-      "fub": "kusel/ kuselji - ngel/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mutiler": {
-      "fub": "kuta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vagin": {
-      "fub": "kuttu / kutti - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lèpre": {
-      "fub": "kuturaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf saoawre": {
-      "fub": "kuturaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kuturu": {
-      "fub": "kuturaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyawu kuturu": {
-      "fub": "kuturu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf oyawu": {
-      "fub": "kuturu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "insulte": {
-      "fub": "kuudi - ode",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toise": {
-      "fub": "kuultorga-darnde - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pénis (très grossier enfulfulde": {
-      "fub": "kuutol /kuuti - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plus encore que mbasu)": {
-      "fub": "kuutol /kuuti - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mbasu": {
-      "fub": "kuutol /kuuti - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couveuse": {
-      "fub": "kuvees - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cuiller": {
-      "fub": "kuyer /kuyerji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cuiller à soupe cuillerée": {
-      "fub": "kuyer /kuyerji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cuiller à café": {
-      "fub": "kuyer-kafe /kuyerji-kafe - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être propre": {
-      "fub": "laa6a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pauvre": {
-      "fub": "laafuôo /laafufie - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne démunie": {
-      "fub": "laafuôo /laafufie - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dépérir": {
-      "fub": "laalaata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire dépérir": {
-      "fub": "laalaata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écorce sèche": {
-      "fub": "laalawal /laalaaje - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voir": {
-      "fub": "laara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "regarder": {
-      "fub": "laara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "examiner": {
-      "fub": "laara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "examiner une femme": {
-      "fub": "laargo debbo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "examiner la conjonctive": {
-      "fub": "laargo gîte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit poil": {
-      "fub": "laasel / laacon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "filament": {
-      "fub": "laasel / laacon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "long poil": {
-      "fub": "laasol / laaci - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cheveu": {
-      "fub": "laasol / laaci - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "route": {
-      "fub": "laawol / laabi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voie": {
-      "fub": "laawol / laabi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "passage": {
-      "fub": "laawol / laabi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "canal": {
-      "fub": "laawol / laabi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trompe de fallope": {
-      "fub": "laawollJinngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "canal spennatique": {
-      "fub": "laawol mani",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voies respiratoires": {
-      "fub": "laawol poofne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "urètre": {
-      "fub": "laawol sillugo ou laawol cille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laboratoire d'analyses": {
-      "fub": "laboratuwar - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf suudu": {
-      "fub": "laboratuwar - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "raser": {
-      "fub": "lalla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couteau": {
-      "fub": "lalli / lalle - ki/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bistouri électrique": {
-      "fub": "la6i latirik",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf penndisit": {
-      "fub": "lallo-lalloongel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. faasko": {
-      "fub": "lallruha - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brousse": {
-      "fub": "ladde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "habitant de la brousse": {
-      "fub": "laddeejo /ladde'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "broussard": {
-      "fub": "laddeejo /ladde'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retirer  qui est resté coincé": {
-      "fub": "laggita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fade": {
-      "fub": "lakas",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "insipide": {
-      "fub": "lakas",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf wela": {
-      "fub": "lakas",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laver  nettoyer (une plaie": {
-      "fub": "lalla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "les seins": {
-      "fub": "lalla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la zone génito-urinaire)": {
-      "fub": "lalla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "taches blanches sur la peau": {
-      "fub": "lamlame - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être acide": {
-      "fub": "lamma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être salé": {
-      "fub": "lamma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être piquant": {
-      "fub": "lamma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "étiquette": {
-      "fub": "lammbayel/ lammbahon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "clitoris": {
-      "fub": "langal / lagde - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épiderme": {
-      "fub": "taret dowyel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "donner des coups de pied": {
-      "fub": "lata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "courant électrique": {
-      "fub": "latirik - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "électricité": {
-      "fub": "latirik - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "précipitation": {
-      "fub": "lawlawku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se propager": {
-      "fub": "laya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amulette enveloppée dans du cuir": {
-      "fub": "layaaru /layaaji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gris-gris": {
-      "fub": "layaaru /layaaji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lame de rasoir": {
-      "fub": "lazuwar - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. lam": {
-      "fub": "lazuwar - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "reeza": {
-      "fub": "lazuwar - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf reeza": {
-      "fub": "lazuwar - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boiter": {
-      "fub": "laya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "imperméable": {
-      "fub": "leeda-ndiyam - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. toggoore ndiyam": {
-      "fub": "leeda-ndiyam - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "beurre frais": {
-      "fub": "lee601 /lee6i - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bois": {
-      "fub": "ledDaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bois à brûler": {
-      "fub": "ledDaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bois de feu": {
-      "fub": "ledDaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médicament périmé": {
-      "fub": "lekki baatki / leââe baatâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poison": {
-      "fub": "lekki baroohi / leââe barooje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit toxique": {
-      "fub": "lekki baroohi / leââe barooje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit pour anesthésie locale": {
-      "fub": "lekki baroohi llanndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède traditionnel": {
-      "fub": "lekki Haleelle / leââe Haleelle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède indigène": {
-      "fub": "lekki Haleelle / leââe Haleelle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "onguent ou pommade en tube": {
-      "fub": "lekki lliââeteeki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "macéré": {
-      "fub": "lekki coofnaaki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède fumigatoire": {
-      "fub": "lekki cuurneteeki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "antidiarrhéique": {
-      "fub": "lekki doggere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "décocté": {
-      "fub": "lekki dollaaki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "décoction": {
-      "fub": "lekki dollaaki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "somnifère": {
-      "fub": "lekki âaanaago",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit pour anesthésie générale": {
-      "fub": "lekki âanningo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anti-amibien": {
-      "fub": "lekki eemoral",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vermifuge": {
-      "fub": "lekki gildi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pommade ophtalmique": {
-      "fub": "lekki gite Iliâdi-Iliâdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "collyre ophtalmique": {
-      "fub": "lekki gite tolllli-tolllli",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspirine": {
-      "fub": "lekki hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "paracétamol": {
-      "fub": "lekki hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "potion": {
-      "fub": "lekki jareteeki 1leââe jareteeâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède inefficace": {
-      "fub": "lekki ki walaa nafuuda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède anti-sorcellerie": {
-      "fub": "lekki mistiri'en",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médicament à prendre par voie orale": {
-      "fub": "lekki moâeteeki Il lekki modi-modi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "antalgique": {
-      "fub": "lekki naawreenga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède efficace": {
-      "fub": "lekki nafoohi / leooe nafooje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède fort": {
-      "fub": "lekki nyaadki / leooe nyaaooe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "comprimé du sida)": {
-      "fub": "lekki nyaanyaare",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "remède contre les maux de dents": {
-      "fub": "lekki nyiiy\"e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "antipaludéen": {
-      "fub": "lekki palJlJooje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit pharmaceutique": {
-      "fub": "lekki parmasin Il lekki Nasaara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médicament à pulvériser": {
-      "fub": "lekki puufeteeki / leooe puufeteeoe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aérosol": {
-      "fub": "lekki puufeteeki / leooe puufeteeoe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit anti-inflammatoire": {
-      "fub": "lekki sillJere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médicament injectable": {
-      "fub": "lekki tufeteeki / leooe tufeteeoe ou lekki tufi-tufi / leooe tufi-tufi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. baatal": {
-      "fub": "lekki tufeteeki / leooe tufeteeoe ou lekki tufi-tufi / leooe tufi-tufi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bleu de méthylène": {
-      "fub": "lekki woowo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "onguent": {
-      "fub": "lekki wuji-wuji / leooe wuji-wujüje Il lekki wuja-wuja /Ieooe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne atteinte de strabisme": {
-      "fub": "lelbaajo / lelba'en - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "strabisme": {
-      "fub": "lelbaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "méningite": {
-      "fub": "lelu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf minizi": {
-      "fub": "lelu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lignage": {
-      "fub": "lenyol/ leyy1- ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "famille étendue": {
-      "fub": "lenyol/ leyy1- ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bande de tissu": {
-      "fub": "leppol/ leppi - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bande velpeau": {
-      "fub": "leppol bannde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en bas": {
-      "fub": "les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en bas de": {
-      "fub": "les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sol": {
-      "fub": "lesdi /lesoe - ndi/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "terrain": {
-      "fub": "lesdi /lesoe - ndi/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "terre  région": {
-      "fub": "lesdi /lesoe - ndi/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pays terre": {
-      "fub": "lesdi /lesoe - ndi/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lune": {
-      "fub": "lewru / lebbi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lit bas à montants en bois": {
-      "fub": "liibatoowo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dépourvu de pieds": {
-      "fub": "liibatoowo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mollet": {
-      "fub": "lünguyel/ liinguhon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "muscle gastrocnémien": {
-      "fub": "lünguyel/ liinguhon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litre": {
-      "fub": "liitir /liitirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hoquet": {
-      "fub": "likkirre - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hoqueter": {
-      "fub": "likkiya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir le hoquet": {
-      "fub": "likkiya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "scruter": {
-      "fub": "lincita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chercher à tout savoir": {
-      "fub": "lincita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entrer dans l'œil de": {
-      "fub": "lojita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bride": {
-      "fub": "lonkoyol/ lonkoye - ngollde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "colonne vertébrale": {
-      "fub": "lonkoyol IJaawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "suppositoire": {
-      "fub": "loofti /loofte - ki/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ovule vaginal": {
-      "fub": "loofti gal yeeso",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre un lavement": {
-      "fub": "looftoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être gros": {
-      "fub": "loora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laver (habits": {
-      "fub": "loota",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mains": {
-      "fub": "loota",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pieds...)": {
-      "fub": "loota",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "purger": {
-      "fub": "lootgo reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être laxatif": {
-      "fub": "lootgo reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hayla": {
-      "fub": "lootgol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verser": {
-      "fub": "loowa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir des spasmes comme pour vomir": {
-      "fub": "looyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sans toutefois vomir": {
-      "fub": "looyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dispensaire": {
-      "fub": "lopital- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "centre de santé": {
-      "fub": "lopital- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "centre de santé public": {
-      "fub": "lopital ngomnati",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hôpital provincial": {
-      "fub": "lopital mannga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "centre de santé confessionnel": {
-      "fub": "lopital misiyog ou lopital njappa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "centre de santé privé": {
-      "fub": "lopital pirive",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire demi-tour récidiver": {
-      "fub": "iortoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "clavicule": {
-      "fub": "loygal / loyoe - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ecchymose": {
-      "fub": "lukkannde / lukkanoe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coup direct": {
-      "fub": "lukkere / lukke - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "baigner": {
-      "fub": "lummba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "donner un bain à": {
-      "fub": "lummba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être homosexuel": {
-      "fub": "luuoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "homosexualité": {
-      "fub": "luuou - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "homosexuel": {
-      "fub": "gadoowo luudu / wadoo6e luudu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lesbienne": {
-      "fub": "gadoowo luudu / wadoo6e luudu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être en travail": {
-      "fub": "luuwee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "corne ventouse en corne": {
-      "fub": "luwal/ luwe - nga/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "médicament": {
-      "fub": "maagani - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf lekki": {
-      "fub": "maagani - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grand-parent (grand-père": {
-      "fub": "maama /maama'en - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se souvenir exactement de": {
-      "fub": "maandoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sentir": {
-      "fub": "maata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se sentir (goût": {
-      "fub": "maata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "odeur)": {
-      "fub": "maata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf faatoo": {
-      "fub": "maaya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yana": {
-      "fub": "maaya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mortalité importante": {
-      "fub": "maayarle - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nombreuses morts": {
-      "fub": "maayarle - de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la mort": {
-      "fub": "maayde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. waade": {
-      "fub": "maayde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "un mort": {
-      "fub": "maayd\"o / maay6e - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une morte": {
-      "fub": "maayd\"o / maay6e - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fermer": {
-      "fub": "ma66a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couvrir": {
-      "fub": "ma66a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "empêcher  qqn de prospérer": {
-      "fub": "malJfmgo god'd'o ladde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ouvrir": {
-      "fub": "ma66ita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mal)l)a": {
-      "fub": "ma66ita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ouvrir les yeux": {
-      "fub": "malJlJititgo gite, hunnduko, junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la bouche": {
-      "fub": "malJlJititgo gite, hunnduko, junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la main": {
-      "fub": "malJlJititgo gite, hunnduko, junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éveiller l'intelligence": {
-      "fub": "malJlJititgo hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écarter les jambes": {
-      "fub": "malJlJititgo kosd'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ouvrir les oreilles": {
-      "fub": "malJlJititgo noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être éduqué": {
-      "fub": "ma66itoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hésitation": {
-      "fub": "ma6ma6tere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "indécision": {
-      "fub": "ma6ma6tere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tergiversation": {
-      "fub": "ma6ma6tere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cligno- ter": {
-      "fub": "maja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tressaillir": {
-      "fub": "maja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sojjita": {
-      "fub": "makiyas - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grande tunique": {
-      "fub": "marabbaawa / marabbaaji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maroua": {
-      "fub": "Marwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grandir": {
-      "fub": "mawna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "deuil": {
-      "fub": "mayyiiti - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cérémonie consécutive à un décès": {
-      "fub": "mayyiiti - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui se déroule après l'inhu- mation": {
-      "fub": "mayyiiti - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cligner des yeux": {
-      "fub": "mayya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "temps d'un clin d'œil": {
-      "fub": "mayyannde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "papa-poule": {
-      "fub": "mbabbaajo / mbabba'en - o/lje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bière de mil boisson alcoolisée": {
-      "fub": "mbal- oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pénis": {
-      "fub": "mbasu / basi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. kuutol": {
-      "fub": "mbasu / basi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ombre portée": {
-      "fub": "mbeelu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bonté": {
-      "fub": "mboodeenga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pus": {
-      "fub": "mbordi / borde - ndi/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moelle": {
-      "fub": "mbosam - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moelle épinière": {
-      "fub": "mbosam i'al 6aawo ou mbosam 6aawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cécité": {
-      "fub": "mbumndam - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "filaire de médine": {
-      "fub": "mburuutu /buruuti - nguldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver de guinée": {
-      "fub": "mburuutu /buruuti - nguldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bouillie": {
-      "fub": "mbusiri - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. gaari": {
-      "fub": "mbusiri - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "muscidae)": {
-      "fub": "mbuubu /buubi - nguldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mouche métallique": {
-      "fub": "mbuubu bu'e / buubi bu'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chrysomyia putoria  (diptera": {
-      "fub": "mbuubu bu'e / buubi bu'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "callipho- ridae)": {
-      "fub": "mbuubu bu'e / buubi bu'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mouche verte": {
-      "fub": "mbuubu kusel/ buubi kusel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lucilia cuprina wied. (diptera": {
-      "fub": "mbuubu kusel/ buubi kusel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "callophoridae)": {
-      "fub": "mbuubu kusel/ buubi kusel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mycose entre les orteils": {
-      "fub": "mbuunya-nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bégayer": {
-      "fub": "me'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toucher": {
-      "fub": "meema",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "palper": {
-      "fub": "meema",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "morsure de serpent": {
-      "fub": "meemtannde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "méningocoque": {
-      "fub": "menengokop - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "teigne tondante": {
-      "fub": "metemetelde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mycose du cuir chevelu": {
-      "fub": "metemetelde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf daaginne": {
-      "fub": "metemetelde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faarde": {
-      "fub": "metemetelde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être fade": {
-      "fub": "metta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sans saveur être îa.ché": {
-      "fub": "metta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "irritation": {
-      "fub": "mettam-fieram - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tension nerveuse": {
-      "fub": "mettam-fieram - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tension psychologique excessive": {
-      "fub": "mettam-fieram - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soucis": {
-      "fub": "metteenga / metteeli - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chagrin": {
-      "fub": "metteenga / metteeli - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hésiter": {
-      "fub": "müjoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trotter  avoir des fourmillements": {
-      "fub": "müra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "des picotements": {
-      "fub": "müra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mooy\"ooy\"o": {
-      "fub": "müra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. lelu": {
-      "fub": "minizi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nyawu daande": {
-      "fub": "minizi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. kaaramaaku": {
-      "fub": "mistiraaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avaler": {
-      "fub": "moda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre par voie orale": {
-      "fub": "moda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kompirme": {
-      "fub": "modeteeki - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "œsophage": {
-      "fub": "modorgol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kondondol": {
-      "fub": "modorgol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "relations sexuelles (euphémisme": {
-      "fub": "moo6odal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : le fait de se réunir)": {
-      "fub": "moo6odal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se rassembler": {
-      "fub": "moo6oo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "demander protection à dieu": {
-      "fub": "mooltoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avaler sa salive": {
-      "fub": "moosindoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "caresser": {
-      "fub": "moyta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se caresser soi-même": {
-      "fub": "moytitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre  dans la bouche": {
-      "fub": "mukkoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mauvais lait maternel": {
-      "fub": "mulla - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ndagasi": {
-      "fub": "mulla - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. kosam daada mbon- niioam": {
-      "fub": "mulla - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "essuyer": {
-      "fub": "mumta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "torcher": {
-      "fub": "mumta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "torche-cul": {
-      "fub": "mumtirgal / mumtirde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "«ce avec quoi on torche»)": {
-      "fub": "mumtirgal / mumtirde - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'essuyer": {
-      "fub": "mumtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se torcher": {
-      "fub": "mumtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "patienter": {
-      "fub": "munya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir de la patience": {
-      "fub": "munya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être patient": {
-      "fub": "munya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "patience": {
-      "fub": "munyal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "endurance": {
-      "fub": "munyal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "calme": {
-      "fub": "munyal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stoïcisme": {
-      "fub": "munyal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en grattouillant": {
-      "fub": "munyu-munyu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf musina": {
-      "fub": "mura",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pot à pommade": {
-      "fub": "murtaare /murtaaje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "téter": {
-      "fub": "musina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sucer": {
-      "fub": "musina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déglutir": {
-      "fub": "musindoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "problème": {
-      "fub": "muskilaawol/ muskilaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "difficulté": {
-      "fub": "muskilaawol/ muskilaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf sababu": {
-      "fub": "muskilaawol/ muskilaaji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mentholatum": {
-      "fub": "mustalanta - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manger": {
-      "fub": "muuda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boucher les voies respiratoires": {
-      "fub": "muuka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sourd-muet": {
-      "fub": "muukaajo / muuka'en - o/Ile",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "musique": {
-      "fub": "muzik- ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aisselle": {
-      "fub": "naafki / naafde - ki/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "creux axillaire": {
-      "fub": "naafki / naafde - ki/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kiledis": {
-      "fub": "naafki / naafde - ki/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui pue des aisselles": {
-      "fub": "hacca-naafki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soleil": {
-      "fub": "naange - nge",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entrer dans reprendre leur place": {
-      "fub": "naasta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire mal à": {
-      "fub": "naawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire souffrir": {
-      "fub": "naawna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se faire mal": {
-      "fub": "naawnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se blesser": {
-      "fub": "naawnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "douleur": {
-      "fub": "naawral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. naawreenga": {
-      "fub": "naawral- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mal de dos": {
-      "fub": "naawrallJaawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épigastre) peine": {
-      "fub": "naawrallJernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "douleur morale": {
-      "fub": "naawrallJernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conjonctivite": {
-      "fub": "naawral gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maux de tête": {
-      "fub": "naawral hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "migraine": {
-      "fub": "naawral hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maux d'oreilles": {
-      "fub": "naawral noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maux de dents": {
-      "fub": "naawral nyüye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maux de ventre": {
-      "fub": "naawral reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. naawral": {
-      "fub": "naawreenga - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épigastre)": {
-      "fub": "naawreenga lJernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être utile": {
-      "fub": "nafa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "servir": {
-      "fub": "nafa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anxiété": {
-      "fub": "nakan - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "angoisse": {
-      "fub": "nakan - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sentiment d'impuissance": {
-      "fub": "nakan - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "percevoir": {
-      "fub": "nana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entendre": {
-      "fub": "nana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gaucher": {
-      "fub": "nannano / nannanlJe - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gauchère": {
-      "fub": "nannano / nannanlJe - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. agulaajo": {
-      "fub": "nannano / nannanlJe - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ablutions rituelles": {
-      "fub": "nannganfam - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf junngo": {
-      "fub": "nano - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rate douloureuse": {
-      "fub": "nanol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf oaamol": {
-      "fub": "nanol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nivaquine": {
-      "fub": "navakin - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne âgée": {
-      "fub": "nayeejo / nayeelle - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vieillard": {
-      "fub": "nayeejo / nayeelle - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vieille": {
-      "fub": "nayeejo / nayeelle - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ndottiijo": {
-      "fub": "nayeejo / nayeelle - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vieillesse": {
-      "fub": "nayeewll - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grand âge": {
-      "fub": "nayeewll - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "variole": {
-      "fub": "ndagga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coqueluche": {
-      "fub": "ndamba derke'en ou ndamba fiikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. de teko": {
-      "fub": "ndamba derke'en ou ndamba fiikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rhume provoqué par un coup de froid": {
-      "fub": "ndamba peewri",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diarrhée glaireuse": {
-      "fub": "caarol ndamba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "estomac": {
-      "fub": "ndeera / ndeero - nga/ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jeunesse": {
-      "fub": "nderkaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sukaaku": {
-      "fub": "nderkaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qualités féminines": {
-      "fub": "ndewaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "liberté": {
-      "fub": "ndimu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "condition d'homme     libre": {
-      "fub": "ndimu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ndümaaku": {
-      "fub": "ndimu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf beâel": {
-      "fub": "ndinkiri - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne avare": {
-      "fub": "ndigaajo / ndiga'en - o/fie",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "égoïste": {
-      "fub": "ndigaajo / ndiga'en - o/fie",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : eau noire)": {
-      "fub": "ndiyam lJaleejam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de puits": {
-      "fub": "ndiyam lJunndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : eau vide)": {
-      "fub": "ndiyam cookam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de forage": {
-      "fub": "ndiyam dampel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de marigot": {
-      "fub": "ndiyam luggere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau du fleuve": {
-      "fub": "ndiyam maayo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pertes blanches": {
-      "fub": "ndiyam ndaneejam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau minérale de marque tangui)": {
-      "fub": "ndiyam okoloore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau du robinet": {
-      "fub": "ndiyam tiyo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau puisée dans un séane": {
-      "fub": "ndiyam wawru maayo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de mare": {
-      "fub": "ndiyam weendu // ndiyam beeli",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau à boire": {
-      "fub": "ndiyam yargo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de riz  jus": {
-      "fub": "ndiyam maaroori",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "karkadé": {
-      "fub": "ndiyam hoyoro",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jus de citron": {
-      "fub": "ndiyam leemun",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kyste abdominal  (hammawa djouldé": {
-      "fub": "ndiyam caawaadam nder reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "infirmier": {
-      "fub": "ndiyam caawaadam nder reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dogba": {
-      "fub": "ndiyam caawaadam nder reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "liquide méconial": {
-      "fub": "ndiyam fawy\"ere fialeejam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne âgée (de sexe masculin": {
-      "fub": "ndotilijo /ndotti'en - o/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "à partir de 45 ans)": {
-      "fub": "ndotilijo /ndotti'en - o/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nayeejo": {
-      "fub": "ndotilijo /ndotti'en - o/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rachitisme apparence frêle": {
-      "fub": "nduppu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fluette": {
-      "fub": "nduppu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. mannda- gertoode": {
-      "fub": "nduuda - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. duumol": {
-      "fub": "nduunngu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "huile d'arachides": {
-      "fub": "nebbam birüji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "huile de caïlcédrat": {
-      "fub": "nebbam daaleejam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "huile de karité": {
-      "fub": "nebbam kaareeje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "huile de poisson": {
-      "fub": "nebbam Hddi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "produit (lait": {
-      "fub": "nebbam makiyas",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lotion": {
-      "fub": "nebbam makiyas",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "huile de palme": {
-      "fub": "nebbam palme",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dignité personnelle": {
-      "fub": "ned'd'aaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être humain quelqu'un": {
-      "fub": "ned'd'o-o",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éprouver de la répulsion pour": {
-      "fub": "nefa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "contenu d'un égout ou d'un caniveau": {
-      "fub": "nefre / nefe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "paume de la main": {
-      "fub": "newre / newe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "varicelle": {
-      "fub": "ngaadiga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cerveau": {
-      "fub": "ngaandi - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crétin": {
-      "fub": "fJalwa-ngaandi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "érection bien rigide": {
-      "fub": "ngag - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trou  caverne": {
-      "fub": "ngaska / gasde - ka/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mâchoire inférieure": {
-      "fub": "ngaydoore / ngaydooje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "furoncle": {
-      "fub": "ngeemuure / ngeemuuje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vie": {
-      "fub": "ngeendam - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "luette": {
-      "fub": "ngel-daande - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver": {
-      "fub": "ngilngu /gildi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ankilostom": {
-      "fub": "ngilngu /gildi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sistozom": {
-      "fub": "ngilngu /gildi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vers du corps": {
-      "fub": "gildi Ilanndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : vers du dos": {
-      "fub": "gildi Ilaawo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver de la poitrine": {
-      "fub": "ngilngu I>ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "région épigastrique": {
-      "fub": "ngilngu I>ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver suceur": {
-      "fub": "ngilngu ciil>oowu / gildi ciil>ooji ; syn. moderne ankilostom",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver hématophage": {
-      "fub": "ngilngu ciil>oowu / gildi ciil>ooji ; syn. moderne ankilostom",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver de la hernie": {
-      "fub": "ngilngu fuloodu // ngilngu erni ; cf erni",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver de la tête": {
-      "fub": "ngilngu hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oxyure (litt. : ver mangeur": {
-      "fub": "ngilngu nyaamoowu / gildi nyaamooji cf nyaamoowu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« vers de la faim»": {
-      "fub": "gildi weelo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ascaris": {
-      "fub": "ngilngu mboâeewu / gildi boâeeji), syn. cf ngilngu jallJalwu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trenia": {
-      "fub": "ngilngu ndaneewu / gildi daneeji)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ver solitaire": {
-      "fub": "ngilngu ndaneewu / gildi daneeji)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le nom est généralement uti-": {
-      "fub": "ngilngu ndaneewu / gildi daneeji)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vers qui provoquent des coliques": {
-      "fub": "gildi gornyooji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "virus du sida": {
-      "fub": "gildi SIDA",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "puissance sexuelle": {
-      "fub": "ngorgaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "virilité": {
-      "fub": "ngorgaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "courage": {
-      "fub": "ngorgu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sans manger": {
-      "fub": "ngude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le ventre vide": {
-      "fub": "ngude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fontanelle": {
-      "fub": "ngudurnre / ngudurnje - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ko'el-suka": {
-      "fub": "ngudurnre / ngudurnje - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaleur": {
-      "fub": "nguleenga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "température": {
-      "fub": "nguleenga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre la température de": {
-      "fub": "laargo nguleenga lJanndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "transpiration": {
-      "fub": "nguli - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sueur": {
-      "fub": "nguli - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf wulweende": {
-      "fub": "nguli - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ballonnement": {
-      "fub": "nguttu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mousse": {
-      "fub": "nguufo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écume": {
-      "fub": "nguufo - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "renifler": {
-      "fub": "nisfiitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspirer par le nez": {
-      "fub": "nisfioo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "priser": {
-      "fub": "nisfioo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bâtard": {
-      "fub": "njaaluujo / njaalu'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfant illégitime": {
-      "fub": "njaaluujo / njaalu'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "né hors mariage": {
-      "fub": "njaaluujo / njaalu'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bâtard!": {
-      "fub": "njaalu fJale",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "santé": {
-      "fub": "njamu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "puissance sexuelle (euphémisme": {
-      "fub": "njamu fJifJfJe-Aadama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt.: santé de": {
-      "fub": "njamu fJifJfJe-Aadama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boisson": {
-      "fub": "njaram - Dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "commettre l'adultère": {
-      "fub": "njeena",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se prostituer": {
-      "fub": "njeena",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "adultère": {
-      "fub": "njeenu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "relation sexuelle illicite": {
-      "fub": "njeenu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prostitution péché de chair": {
-      "fub": "njeenu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "miel noir d'abeilles": {
-      "fub": "njumri - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oreillettes du cœur": {
-      "fub": "noppi 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cavités cardiaques": {
-      "fub": "noppi 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "atrium droit et atrium gauche": {
-      "fub": "noppi 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : oreilles de lièvre)": {
-      "fub": "noppi bojel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dur d'oreille  têtu": {
-      "fub": "noppi hayre",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "désobéissant": {
-      "fub": "noppi hayre",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écouter attentivement": {
-      "fub": "ma66ititgo noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir l'oreille musicale": {
-      "fub": "margo nofru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir l'oreille fine": {
-      "fub": "margo noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "un peu dur d'oreille": {
-      "fub": "faaoa-noppiijo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sourd": {
-      "fub": "mo walaa noppi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "graines": {
-      "fub": "nokkande / nokkande - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gravier...) dose": {
-      "fub": "nokkande / nokkande - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ketol": {
-      "fub": "nokkande / nokkande - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "notice": {
-      "fub": "notis / notisji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sperme": {
-      "fub": "nudIa - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mani": {
-      "fub": "nudIa - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "flairer": {
-      "fub": "nufnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sentir de près": {
-      "fub": "nufnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "penser": {
-      "fub": "numa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réfléchir": {
-      "fub": "numa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réfléchir sur le passé": {
-      "fub": "numtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "essayer de se rappeler": {
-      "fub": "numtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf siftora": {
-      "fub": "numtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "taaskoo": {
-      "fub": "numtoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "victime de la sorcellerie  mangée)": {
-      "fub": "nyaamaaoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nourriture": {
-      "fub": "nyaarndu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "alimentation": {
-      "fub": "nyaarndu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nourriture pour bébés": {
-      "fub": "nyaamdu I)ikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une nourriture insipide": {
-      "fub": "nyaamdu lakasndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nourriture moderne": {
-      "fub": "nyaamdu Nasaara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une nourriture savoureuse": {
-      "fub": "nyaamdu welndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sous-alimentation": {
-      "fub": "sooynde nyaamdu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nourrir": {
-      "fub": "nyaamna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oxyure": {
-      "fub": "nyaamoowu / nyaamooji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "démanger": {
-      "fub": "nyaanya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "démangeaison": {
-      "fub": "nyaanyaare / nyaanyaaje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prurit": {
-      "fub": "nyaanyaare / nyaanyaaje - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se gratter": {
-      "fub": "nyaanyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jour de 24 h.": {
-      "fub": "nyalde / nyaloe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jour néfaste": {
-      "fub": "nyalde I>aleere / nyalde I>aleeje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jour faste": {
-      "fub": "nyalde raneere / nyalde daneeje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pli de la peau": {
-      "fub": "nyar6aa601/ nyar6aa6i - ngoUdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ride": {
-      "fub": "nyar6aa601/ nyar6aa6i - ngoUdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être malade": {
-      "fub": "nyawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "attraper une maladie": {
-      "fub": "nyawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. hurgugo": {
-      "fub": "nyawnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "traitement": {
-      "fub": "nyawndügu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kurgun": {
-      "fub": "nyawndügu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se faire soigner": {
-      "fub": "nyawndoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie": {
-      "fub": "nyawu / nyawuuji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saoawre 6aleere": {
-      "fub": "nyawu baariki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie sans 'vers'": {
-      "fub": "nyawu bilaa gildi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épigastre')": {
-      "fub": "nyawu 6ernde ; syn. estoma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie du sommeil": {
-      "fub": "nyawu ooydi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie bénigne": {
-      "fub": "nyawu es'es ou nyawu pespes",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ascaridiose": {
-      "fub": "nyawu gildi jalBalji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oxyurose": {
-      "fub": "nyawu gildi nyaamooji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "'maladie du céphalophe' de grimm": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ou céphalophe couronné": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cepha": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "o- phus (sy": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vicapra) grimmia (linné": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "1758) cephalophinae": {
-      "fub": "nyawu hamfurde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "folie légère  •  buutooru marasme": {
-      "fub": "nyawu henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "(litt. : maladie du varan": {
-      "fub": "nyawu henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "marasme": {
-      "fub": "nyawu henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "3 ans": {
-      "fub": "nyawu henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p. 177b).": {
-      "fub": "nyawu henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poliomyélite": {
-      "fub": "nyawu jüja ou nyawu poliyo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie envoyée par sorcellerie": {
-      "fub": "nyawu junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie grave": {
-      "fub": "nyawu kallungu / nyawuuji kalium",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie de peau": {
-      "fub": "nyawu laral Ilanndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dennatose": {
-      "fub": "nyawu laral Ilanndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie évolutive": {
-      "fub": "nyawu layanngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : maladie d'en bas)": {
-      "fub": "nyawu les",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie avec 'vers'": {
-      "fub": "nyawu marngu gildi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie douloureuse": {
-      "fub": "nyawu naawngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie contagieuse": {
-      "fub": "nyawu ndaalloowu / nyawuuji daallooji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nyawuuji danydaadi maladie innée": {
-      "fub": "nyawu ndaalloowu gal dubbe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie envoyée": {
-      "fub": "nyawu neldaangu / nyawuuji neldaadi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie chronique": {
-      "fub": "nyawu ngartanngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épilepsie": {
-      "fub": "nyawu pacfcfe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ist)": {
-      "fub": "nyawu rewfJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être sale": {
-      "fub": "nyidda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "malpropre": {
-      "fub": "nyidda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dent en or": {
-      "fub": "nylindere Makka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "canine": {
-      "fub": "nyiindere rawaanduure 1nyiiye rawaanduuje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dents de lait": {
-      "fub": "nyiiye kosam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dents surnuméraires": {
-      "fub": "nyiiye cakke",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dents tachées": {
-      "fub": "nyiiye puunâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dents écartées": {
-      "fub": "nyliye caakiliije",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "carie dentaire": {
-      "fub": "nyawu nyiiye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poussée des dents": {
-      "fub": "puâol nyiiye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "perdre ses dents": {
-      "fub": "solgo nyiiye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir les dents qui tombent": {
-      "fub": "solgo nyiiye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boule au lait": {
-      "fub": "nyüri kosam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mucosités nasales": {
-      "fub": "nyillle - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "morve": {
-      "fub": "nyillle - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf ndamba": {
-      "fub": "nyillle - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "moucher": {
-      "fub": "nyitta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf fiifa": {
-      "fub": "nyitta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. balingoo": {
-      "fub": "nyuufoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bâiller": {
-      "fub": "gaa600",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "torticolis": {
-      "fub": "ga'el- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "beauté": {
-      "fub": "garol/ gari - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "morsure": {
-      "fub": "gatannde / gatanae - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "morsure de chien": {
-      "fub": "gatannde rawaandu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se mordre soi-même": {
-      "fub": "gattoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : faire se raidir)": {
-      "fub": "gayy1na",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "convulsions": {
-      "fub": "gayy1nol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf gaddol": {
-      "fub": "gayy1nol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chatouiller": {
-      "fub": "gelina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le pire moment de la saison chaude": {
-      "fub": "ceeou gereetu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "courber": {
-      "fub": "goIJa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pourrir": {
-      "fub": "gola",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se décomposer": {
-      "fub": "gola",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se putréfier": {
-      "fub": "gola",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ronger": {
-      "fub": "gonyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une crampe": {
-      "fub": "goocfa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "donner des coliques": {
-      "fub": "gornya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir des coliques": {
-      "fub": "gornyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se contorsionner": {
-      "fub": "gosloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "auberge": {
-      "fub": "oberze / oberzeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "petit hôtel": {
-      "fub": "oberze / oberzeeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de javel": {
-      "fub": "odezavel- dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jaunir": {
-      "fub": "ooldita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "devenir jaune": {
-      "fub": "ooldita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "haut-parleur": {
-      "fub": "oparle / oparleeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fièvre accompagnée de maux de tête": {
-      "fub": "oppere /oppe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ordonnance": {
-      "fub": "ordonas /ordonasji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "qui a des propriétés excitantes": {
-      "fub": "osama - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "otoscope": {
-      "fub": "otoskop - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf tetekop": {
-      "fub": "otoskop - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. eemoo": {
-      "fub": "oUa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "flacon": {
-      "fub": "paalel/ paalon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hernie de petite taille": {
-      "fub": "flacon de collyre",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nubilité": {
-      "fub": "paanyaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "idiot": {
-      "fub": "paataad\"o /faataalJe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "débile mental": {
-      "fub": "paataad\"o /faataalJe - o/lJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fièvres": {
-      "fub": "palJlJooje - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf yontere paludisme": {
-      "fub": "palJlJooje - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fièvres infantiles": {
-      "fub": "pa&&ooje &ikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf nyündere > nyiikon-suwa": {
-      "fub": "pa&&ooje &ikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accès palustre sévère": {
-      "fub": "paIJIJooje caatude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "palu neurologique": {
-      "fub": "paIJIJooje caatude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "planning familial": {
-      "fub": "palanin-famiyal- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épiderme desséché": {
-      "fub": "paranti-Banki - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "d'aspect réticulé": {
-      "fub": "paranti-Banki - di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "libertin": {
-      "fub": "paspartuujo / paspartu'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "libertine": {
-      "fub": "paspartuujo / paspartu'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf njeenoowo": {
-      "fub": "paspartuujo / paspartu'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pince": {
-      "fub": "pees / peesji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pince de kocher": {
-      "fub": "pees dekoseer",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gerçure (de la peau": {
-      "fub": "peetinereewol/ peetinereeji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "des lèvres)": {
-      "fub": "peetinereewol/ peetinereeji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf pey'yol": {
-      "fub": "peetinereewol/ peetinereeji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "froid humide": {
-      "fub": "peewol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fraîcheur": {
-      "fub": "peewol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "humidité": {
-      "fub": "peewol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "localisé ou non": {
-      "fub": "peeWri-ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rhumatismes": {
-      "fub": "peeWri-ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cukku": {
-      "fub": "peewri-cukku - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "peser": {
-      "fub": "peeza",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mesurer le poids de": {
-      "fub": "peeza",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appendicite": {
-      "fub": "penndisit - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf laljo-laljoongel": {
-      "fub": "penndisit - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "anneau de ténia": {
-      "fub": "pentellu /pentelli - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. baatal ndiyam": {
-      "fub": "perftzyog / perftzyoqje - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pennanganate de potassium": {
-      "fub": "permagat - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crevasse au talon": {
-      "fub": "peyyol /peyy1 - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf peetinereewol": {
-      "fub": "peyyol /peyy1 - ngol/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "constriction": {
-      "fub": "pifiol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sensation d'oppression cardiaque": {
-      "fub": "pi60l 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épigastrique": {
-      "fub": "pi60l 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "battement": {
-      "fub": "piitol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pouls": {
-      "fub": "piitol 6ernde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pneumopathie": {
-      "fub": "pilmoneer - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "affection pulmonaire": {
-      "fub": "pilmoneer - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "khôl": {
-      "fub": "pinaari - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pneumonie": {
-      "fub": "pinemoni - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accès de maladie": {
-      "fub": "piyal / piye - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crise": {
-      "fub": "piyal / piye - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accès palustre": {
-      "fub": "piyal pa6600je",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "insolation": {
-      "fub": "piyal naange",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nyawu jiija": {
-      "fub": "poliyo - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "teint pâle": {
-      "fub": "pollitol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "administrer un lavement": {
-      "fub": "pompa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "injecter": {
-      "fub": "pompa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'administrer un lavement": {
-      "fub": "pompitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pompe poire à lavement": {
-      "fub": "pompo / pompooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. pompirgel": {
-      "fub": "pompo / pompooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ponctionner": {
-      "fub": "pogsona",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hydrocèle": {
-      "fub": "poocüre / poociije - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être atteint d'hydrocèle": {
-      "fub": "poocoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "expirer": {
-      "fub": "lornugo poofde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prostate": {
-      "fub": "posta - oga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "adénome de la prostate": {
-      "fub": "nyawu purostat, ou purostat",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "et": {
-      "fub": "nyawu purostat, ou purostat",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ou cancer de la prostate": {
-      "fub": "nyawu purostat, ou purostat",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "assiette": {
-      "fub": "pula / pulaaji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "plâtre": {
-      "fub": "pulaatir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stérilisateur": {
-      "fub": "pupinel- ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pulvérisation": {
-      "fub": "puufol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf fuufa": {
-      "fub": "puufol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "radiographie": {
-      "fub": "radiyo / radiyooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "radioscopie": {
-      "fub": "radiyo / radiyooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blanc de peau": {
-      "fub": "ranee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "leucoderme": {
-      "fub": "ranee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blanchir": {
-      "fub": "ranwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "devenir blanc éclaircir": {
-      "fub": "ranwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être enceinte": {
-      "fub": "reeda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf haara": {
-      "fub": "reeda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "reedu": {
-      "fub": "reeda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "waama": {
-      "fub": "reeda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "engrosser": {
-      "fub": "reedina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rendre enceinte": {
-      "fub": "reedina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "abdomen": {
-      "fub": "reedu / deedi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ventre": {
-      "fub": "reedu / deedi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf bonnjokru": {
-      "fub": "reedu / deedi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "waynaare": {
-      "fub": "reedu / deedi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tomber enceinte (litt. : prendre": {
-      "fub": "hoocugo / waogo reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire une grossesse)": {
-      "fub": "hoocugo / waogo reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grossesse simple": {
-      "fub": "reedu IJinngel gootel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "grossesse gémellaire": {
-      "fub": "reedu siwtuIJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "femme enceinte": {
-      "fub": "reeduujo/ reedu'en -o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir ses règles": {
-      "fub": "reegila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. loota": {
-      "fub": "reegila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf loota": {
-      "fub": "reegila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se protéger": {
-      "fub": "reentoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se tenir à l'écart de": {
-      "fub": "reentoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'abstenir": {
-      "fub": "reentoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rasoir": {
-      "fub": "reeza - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lazuwar": {
-      "fub": "reeza - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf lazuwar": {
-      "fub": "reeza - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pour un garçon ou une fille": {
-      "fub": "regilye /regilye'en - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf titileer": {
-      "fub": "regilye /regilye'en - 0/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "utérus": {
-      "fub": "rennga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. suudu 6ioogel": {
-      "fub": "rennga - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être âpre": {
-      "fub": "rijja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fructifier mettre bas": {
-      "fub": "rima",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "libre": {
-      "fub": "rim",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chance d'être riche": {
-      "fub": "risku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "p.415)": {
-      "fub": "rizin - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hériter": {
-      "fub": "rona",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fesse": {
-      "fub": "rubbere / dubbe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être attirante sexuellement": {
-      "fub": "margo rubberde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cul": {
-      "fub": "yirlugo rubberde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sexe masculin ou féminin": {
-      "fub": "yirlugo rubberde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "région urogénitale": {
-      "fub": "yirlugo rubberde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tout nu": {
-      "fub": "dubbe meere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verser à terre": {
-      "fub": "rufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : verser à terre le ventre": {
-      "fub": "rufgo geeraaôe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "la grossesse)": {
-      "fub": "rufgo geeraaôe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "esprit mauvais": {
-      "fub": "ruuhuwol/ ruuhuuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "démon": {
-      "fub": "ruuhuwol/ ruuhuuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. ginnawol": {
-      "fub": "ruuhuwol/ ruuhuuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "savon de ménage": {
-      "fub": "saabullootirgo limce ou saabullootirde limce",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "savon de ~arseille": {
-      "fub": "saabullootirgo limce ou saabullootirde limce",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "savon de toilette": {
-      "fub": "saabul tuwalet",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avant-bras": {
-      "fub": "saagorde / caagonfe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se disperser": {
-      "fub": "saakoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "passer": {
-      "fub": "saaloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir la chiasse": {
-      "fub": "saara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir la diarrhée": {
-      "fub": "saara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf dogga": {
-      "fub": "saara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "donner la diarrhée à": {
-      "fub": "saarna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être dur être grave": {
-      "fub": "saata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être sévère (affection": {
-      "fub": "saata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie)": {
-      "fub": "saata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être pénible": {
-      "fub": "saata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déballer devenir fou": {
-      "fub": "saawta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "complication": {
-      "fub": "sababu /sababuuji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "accident": {
-      "fub": "sababu /sababuuji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf aksidag": {
-      "fub": "sababu /sababuuji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être difficile coûter cher": {
-      "fub": "sada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir de la valeur": {
-      "fub": "sada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être important": {
-      "fub": "sada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dermatose": {
-      "fub": "sadawre - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf tarzagüre": {
-      "fub": "sadawre - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mycose   mycose prungmeuse": {
-      "fub": "sad'awre lJaleere, ou, sans précision: sad'awre ; syn. tarzagüre",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éléphantiasis": {
-      "fub": "sad'awre nyiiwaare",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kuturaaku": {
-      "fub": "sad'awre raneere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "exciter": {
-      "fub": "saggita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réveiller": {
-      "fub": "saggitana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "filtrer": {
-      "fub": "sakoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se filtrer": {
-      "fub": "sakoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "colle à rustines": {
-      "fub": "salisog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crier en donnant": {
-      "fub": "salmitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sous l'effet d'un cauchemar": {
-      "fub": "salmitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saleté": {
-      "fub": "salte / salteeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "impureté": {
-      "fub": "salte / salteeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "insecticide en bombe": {
-      "fub": "saltos - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "homme qui a un comportement féminin": {
-      "fub": "samarookaajo/samarooka'en -o/be",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. danndariya": {
-      "fub": "samarookaajo/samarooka'en -o/be",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "disperser": {
-      "fub": "sankita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire disparaître une grossesse": {
-      "fub": "sankititgo reedu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "centre (de formation": {
-      "fub": "santir / santirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de recherche ...) centre de santé": {
-      "fub": "santir / santirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf lopital": {
-      "fub": "santir / santirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pour une fille": {
-      "fub": "sappaajo / sappa'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amie ou camarade de même âge": {
-      "fub": "sappaajo / sappa'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf soobaajo": {
-      "fub": "sappaajo / sappa'en - oille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "montrer du doigt pointer": {
-      "fub": "sappoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "règle à suivre": {
-      "fub": "sarduwol / sarduuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prescription à respecter": {
-      "fub": "sarduwol / sarduuji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire du mal à": {
-      "fub": "sarra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "blesser": {
-      "fub": "sarra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "demander conseil": {
-      "fub": "sarwoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "'jaunisse'": {
-      "fub": "sawoora - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ictère": {
-      "fub": "sawoora - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stade avancé de la jaunisse": {
-      "fub": "sawoora caka iy\"e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bâton": {
-      "fub": "sawru / cabbi-ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coup de bâton": {
-      "fub": "sawru / cabbi-ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "satan": {
-      "fub": "sayd'aan",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf saydaanwol": {
-      "fub": "sayd'aan",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maladie d'origine diabolique": {
-      "fub": "sayoaanu / sayoaanuuji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "possession diabolique": {
-      "fub": "sayoaanu / sayoaanuuji - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diable": {
-      "fub": "sayoaanwol/ sayoaanji - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être bête": {
-      "fub": "saylee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "morceau d'écorce fraîche": {
-      "fub": "sellre / celle - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déchirer": {
-      "fub": "seeka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "instruments chirurgicaux": {
-      "fub": "kuuje ceekrude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "émettre l'hypothèse que": {
-      "fub": "seka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quitter la route principale": {
-      "fub": "sela",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bifurquer aller aux toilettes": {
-      "fub": "sela",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. widdoo": {
-      "fub": "sela",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "force": {
-      "fub": "semmbe - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "énergie efficacité": {
-      "fub": "semmbe - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chose peu efficace  petite": {
-      "fub": "famoa-semmbeejum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "quant à sa force)": {
-      "fub": "famoa-semmbeejum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chose efficace": {
-      "fub": "cemmbiooum keyoum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chose très efficace": {
-      "fub": "cemmbiooum masin",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chose à efficacité incertaine": {
-      "fub": "cemmbiooum teema",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "honte": {
-      "fub": "semteende - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pudeur": {
-      "fub": "semteende - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retenue": {
-      "fub": "semteende - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "côté": {
-      "fub": "sera-ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rebord": {
-      "fub": "sera-ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bord": {
-      "fub": "sera-ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cul-de-sac vaginal latéral": {
-      "fub": "sera suudu 6inngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être mince": {
-      "fub": "sewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. doha": {
-      "fub": "sicca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf 6ernde": {
-      "fub": "sicca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf cü600wu": {
-      "fub": "SIDA - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "diarrhée du sida": {
-      "fub": "caarol SIDA",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "apparences": {
-      "fub": "sifa /sifaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aspect extérieur": {
-      "fub": "sifa /sifaaji - ka/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mode d'emploi d'un livre": {
-      "fub": "sifa deftere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se rappeler": {
-      "fub": "siftora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf taskoo": {
-      "fub": "siftora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "numtoo": {
-      "fub": "siftora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stocker": {
-      "fub": "sigoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre en réserve": {
-      "fub": "sigoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épargner": {
-      "fub": "sigoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "isoler": {
-      "fub": "sigaago goddo fcere maako",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "les lèvres non serrées": {
-      "fub": "sii6itoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boire du thé": {
-      "fub": "sül)aago saa'i",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mauvais sort": {
-      "fub": "siiri / süriiji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf süroo": {
-      "fub": "siiri / süriiji - o/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jeter un sort à": {
-      "fub": "siiroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sakoo": {
-      "fub": "süwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "causer une entorse ou une luxation": {
-      "fub": "sillJa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "entorse": {
-      "fub": "sillJere / cillJe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "luxation": {
-      "fub": "sillJere / cillJe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une entorse": {
-      "fub": "sillJoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pisser": {
-      "fub": "silla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de)": {
-      "fub": "silla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf soofa": {
-      "fub": "silla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "méat urétral": {
-      "fub": "sillirde / cilliroe - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être énurétique": {
-      "fub": "sillitora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couler goutte à goutte": {
-      "fub": "simta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire couler goutte à goutte": {
-      "fub": "simtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "instiller": {
-      "fub": "simtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se plaindre de": {
-      "fub": "sinka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sirop": {
-      "fub": "siro / sirooji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "etc.)": {
-      "fub": "sirya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "schistosome": {
-      "fub": "sistozom - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bilharzie": {
-      "fub": "sistozom - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coude": {
-      "fub": "sollllundu / colllluli - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "forte envie": {
-      "fub": "sommu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "convoitise": {
-      "fub": "sommu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf suuno": {
-      "fub": "sommu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gonococcie": {
-      "fub": "sompis - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. koros": {
-      "fub": "sompis - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gono": {
-      "fub": "sompis - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf cille-naange": {
-      "fub": "sompis - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toux rebelle": {
-      "fub": "sonndaaru - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. teko": {
-      "fub": "sonndaaru I>ikkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "broncho-pneumonie": {
-      "fub": "sonndaaru fitinaaru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bronchite chronique": {
-      "fub": "sonndaaru hiindu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ne": {
-      "fub": "sonndaaru i'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tuberculose": {
-      "fub": "sonndaaru manngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toux de rhino-pharyngite": {
-      "fub": "sonndaaru ndamba",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sonde urinaire": {
-      "fub": "sonnde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tousser fortement": {
-      "fub": "sonndoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une toux incoercible": {
-      "fub": "sonndoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amiee) intime": {
-      "fub": "soobaajo daande bee hoore",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être mouillé": {
-      "fub": "soofa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se mouiller": {
-      "fub": "soofa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mouiller faire macérer": {
-      "fub": "soofna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "macération à boire": {
-      "fub": "soofna-yara - ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vide": {
-      "fub": "sook",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nu": {
-      "fub": "sook",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manque de vivres sous-alimentation": {
-      "fub": "sooynde nguure",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "manque de nourriture": {
-      "fub": "sooynde nyaamdu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se déplacer céder à une médication": {
-      "fub": "sotta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nrevus": {
-      "fub": "suBaBre / cuBaBe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tache de naissance": {
-      "fub": "suBaBre / cuBaBe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "homme jeune": {
-      "fub": "sukaajo / suka'en - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf derkeejo": {
-      "fub": "sukaajo / suka'en - oIlle",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jeunesse dans la force de l'âge": {
-      "fub": "sukaaku - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "devenir jeune homme": {
-      "fub": "sukda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se laver le visage": {
-      "fub": "sulmoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cautériser": {
-      "fub": "suma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tradition islamique devoir conjugal": {
-      "fub": "sunna - ka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être en surcharge  surcharger": {
-      "fub": "waôgo susaar",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "société": {
-      "fub": "susete / suseteeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "firme": {
-      "fub": "susete / suseteeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "maison": {
-      "fub": "suudu / cuudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "case": {
-      "fub": "suudu / cuudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chambre": {
-      "fub": "suudu / cuudi - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "salle d'accouchement": {
-      "fub": "suudu 6esningo rew6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : pièce froide)": {
-      "fub": "suudu feewndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "l'au-delà": {
-      "fub": "suudu goonga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "salle de soins": {
-      "fub": "suudu nyawndugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "magasin de stockage": {
-      "fub": "suudu siga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "réceptacle": {
-      "fub": "suudu wallingo nyaw6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "logement": {
-      "fub": "suudu wallingo nyaw6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf suudu-6inngel": {
-      "fub": "suudu wallingo nyaw6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ampoule rectale": {
-      "fub": "suudu bu'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vessie": {
-      "fub": "suudu cille",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "estomac ou gros intestin": {
-      "fub": "suudu coowoowri",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ovaire": {
-      "fub": "suudu geeraaoe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "orbite": {
-      "fub": "suudu gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. rennga": {
-      "fub": "suudu-6inngel / cuudi-6ikkon - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "utérus cicatriciel": {
-      "fub": "suudu-6inngei seekaandu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "col de l'utérus (en tant qu'orifice": {
-      "fub": "dammugai suudu-6inngei",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "convoiter être envieux": {
-      "fub": "suunee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une forte envie": {
-      "fub": "suunee",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fringale": {
-      "fub": "suuno - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf sommu": {
-      "fub": "suuno - ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se faire des fumigations": {
-      "fub": "suurnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être brûlant": {
-      "fub": "suurta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir une forte fièvre": {
-      "fub": "suurta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chaussette": {
-      "fub": "suuset / suusetji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soutien-gorge": {
-      "fub": "suuset endi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "des mains)": {
-      "fub": "suuset junngo / juude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "administrer un lavement à": {
-      "fub": "suuta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "omoplate": {
-      "fub": "soyre /coye - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "couper": {
-      "fub": "ta'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se couper interrompre": {
-      "fub": "ta'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "table": {
-      "fub": "taabal/ taabe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "table d'accouchement": {
-      "fub": "taaballiesngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "table d'opération": {
-      "fub": "taabal seekgo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrance": {
-      "fub": "taako - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "garder en mémoire": {
-      "fub": "taaskoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se souvenir de": {
-      "fub": "taaskoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tension": {
-      "fub": "taasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pression artérielle": {
-      "fub": "taasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre la tension hypertension": {
-      "fub": "laargo taasog ; syn. hafJfJugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf mettam-&eram": {
-      "fub": "laargo taasog ; syn. hafJfJugo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tablier": {
-      "fub": "tabilye - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "créer": {
-      "fub": "taga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lécher": {
-      "fub": "taha",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "préparer": {
-      "fub": "taka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "espérer": {
-      "fub": "tammoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tenir le poing fermé": {
-      "fub": "tamnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tenir dans le poing fermé": {
-      "fub": "tamnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être très affaibli": {
-      "fub": "tampa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faiblesse": {
-      "fub": "tampere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épuisement": {
-      "fub": "tampere - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "éosine aqueuse": {
-      "fub": "tanndarazol- oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mercurochrome": {
-      "fub": "tanndarazol- oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prolapsus rectal": {
-      "fub": "tanndaw - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hanche bassin": {
-      "fub": "tagalawal / tagalaaje - ngal/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. apare tansiyog": {
-      "fub": "tagsiyomeetir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trouver avec": {
-      "fub": "tawda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trouver vierge": {
-      "fub": "tawda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. nokk.ooyel sera nofro": {
-      "fub": "tawtaw - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rideau séparateur": {
-      "fub": "tayloore / taylooje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appendice xiphoïde": {
-      "fub": "te6te6el/ te6te6on - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf beoel": {
-      "fub": "te6te6el/ te6te6on - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être lourd": {
-      "fub": "tedda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hurler": {
-      "fub": "tedka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pousser des hurlements": {
-      "fub": "tedka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chiffon couche": {
-      "fub": "tekkere / tekke - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire épaissir": {
-      "fub": "tekkina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "provoquer un épaississement": {
-      "fub": "tekkina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se coucher sur le dos": {
-      "fub": "telloo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nudité": {
-      "fub": "temmbu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf gunyaawu": {
-      "fub": "tenngu /tendi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ndondonu": {
-      "fub": "tenngu /tendi - ngu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pou de corps": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tendi faasko morpion": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pou du pubis": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "phtirus pubis l.   • tenngu hoore": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tendi hoore pou de tête": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tendi lumce pou de corps": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pediculus humanus humanus": {
-      "fub": "tenngu ndaneewu / tendi daneeji",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "talon": {
-      "fub": "teppere /teppe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "membre": {
-      "fub": "tergal /teroe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "partie du corps articulée ou non": {
-      "fub": "tergal /teroe - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "thermomètre": {
-      "fub": "termomeetir - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "percer (pour des vésicules": {
-      "fub": "tesa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pour un abcès)": {
-      "fub": "tesa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "test de dépistage": {
-      "fub": "teste - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tétanos": {
-      "fub": "tetanos - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf tooke": {
-      "fub": "tetanos - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "intestin": {
-      "fub": "tetekol/ teteki - ngolldi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "intestin grêle": {
-      "fub": "tetekol cewngol / teteki cewdi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gros intestin": {
-      "fub": "tetekolloorngol / teteki loordi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stéthoscope": {
-      "fub": "tetekop - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf heditoo": {
-      "fub": "tetekop - ngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "théâtre": {
-      "fub": "teyaatir / teyaatirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pièce de théâtre": {
-      "fub": "teyaatir / teyaatirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "saynète": {
-      "fub": "teyaatir / teyaatirji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fièvre typhoïde": {
-      "fub": "tifoyio- nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fixer": {
-      "fub": "tigga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'appuyer contre": {
-      "fub": "tügoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sourcils": {
-      "fub": "tümeelO-ko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se fàcher": {
-      "fub": "tikka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par exemple) être ballonné": {
-      "fub": "tira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trichomonas": {
-      "fub": "tirikomonas - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poser une sonde urinaire": {
-      "fub": "waogo tiyo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "eau de pluie": {
-      "fub": "tofiatofiaalam - oam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verser goutte à goutte": {
-      "fub": "tofifia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "goutte pour instillation": {
-      "fub": "tollllitannde / tollllitanae - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "collyre": {
-      "fub": "tol>l>itande gîte",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccin antipoliomyé-": {
-      "fub": "tol>l)itande hunnduko",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gouttes pour instillations nasales": {
-      "fub": "tol>l>itande kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vêtement mi-long à manches": {
-      "fub": "toggoore / toggooje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lampe torche": {
-      "fub": "toojiyel /toojihon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. tostilam": {
-      "fub": "toojiyel /toojihon - ngellkon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "venin tétanos": {
-      "fub": "tooke - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire plus mal": {
-      "fub": "toora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "importuner": {
-      "fub": "torra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "déranger": {
-      "fub": "torra",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrance fœtale": {
-      "fub": "torraaru fiinngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrir": {
-      "fub": "torroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être importuné": {
-      "fub": "torroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. toojiyel": {
-      "fub": "tostilamyel /tostilamhon - ngel/kon",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "piquer": {
-      "fub": "tufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "percer (avec une épine": {
-      "fub": "tufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une aiguille) faire une piqûre": {
-      "fub": "tufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une injection": {
-      "fub": "tufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf baatai": {
-      "fub": "tufirdum - oum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aiguille à injecter": {
-      "fub": "tufrugal/ tufrude - ngal/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aiguë": {
-      "fub": "tuftufal- ngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "empirer": {
-      "fub": "tuila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'aggraver": {
-      "fub": "tuila",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aller de mal en pis": {
-      "fub": "tullita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être souillé": {
-      "fub": "tunwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être sale (personne": {
-      "fub": "tunwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vêtement)": {
-      "fub": "tunwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "flou • yiigo turum-turum voir flou": {
-      "fub": "turum-turum",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crachat": {
-      "fub": "tuude - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf kaartudi": {
-      "fub": "tuude - oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fait d'être sale": {
-      "fub": "tuundi - ndi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crasse": {
-      "fub": "tuundi 6anndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vomissures": {
-      "fub": "tuure - ode",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vomissements": {
-      "fub": "tuure - ode",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vomir": {
-      "fub": "tuuta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf looyoo": {
-      "fub": "tuuta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vomir du sang": {
-      "fub": "tuutgo yrlyam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cracher de la salive": {
-      "fub": "tuutgo tuude",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire vomir": {
-      "fub": "tuutna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "toupet de cheveux": {
-      "fub": "tuutuuru / tuutuuji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "touffe de cheveux": {
-      "fub": "tuutuuru / tuutuuji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "épistaxis": {
-      "fub": "tuyyam - dam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire lever avoir une érection": {
-      "fub": "ummina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se lever": {
-      "fub": "ummoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "démarrer": {
-      "fub": "ummoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "consigne": {
-      "fub": "umroore / umrooje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "enfler": {
-      "fub": "uppa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gonfler": {
-      "fub": "uppa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf 6uuta": {
-      "fub": "uppa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fillinoo": {
-      "fub": "uppa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccin": {
-      "fub": "vakse /vakseeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf baatal": {
-      "fub": "vakse /vakseeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tarol": {
-      "fub": "vakse /vakseeji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vacciner": {
-      "fub": "vaksina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccination": {
-      "fub": "vaksinasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf vakse": {
-      "fub": "vaksinasog - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verre": {
-      "fub": "veerru /veerji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vibrion cholérique": {
-      "fub": "vibirog /vibiroqji - nga/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "« vidéoclub »": {
-      "fub": "vidiyokulolJ / vidiyokulolJji - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vitamine": {
-      "fub": "vitamin - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "teinture de dakin": {
-      "fub": "viyole - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être": {
-      "fub": "wa'a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. maayde": {
-      "fub": "waade - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coucher avec": {
-      "fub": "waaldoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être couché": {
-      "fub": "waaloo / mbaal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crever (pour un animal": {
-      "fub": "waata",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "porter sur le dos": {
-      "fub": "waawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "charge portée sur le dos grossesse": {
-      "fub": "waawdu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "roter": {
-      "fub": "waaya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conseiller": {
-      "fub": "waazina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "exhortation": {
-      "fub": "waazu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "recommandations": {
-      "fub": "waazu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conseils": {
-      "fub": "waazu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire": {
-      "fub": "wada",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire du mal à qqn": {
-      "fub": "wadgo goddo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire du bien à qqn": {
-      "fub": "wadango goddo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "signer": {
-      "fub": "wadgo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "apposer sa signature": {
-      "fub": "wadgo junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. gaddal": {
-      "fub": "waddere / gadde - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gadde": {
-      "fub": "waddere / gadde - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oreiller": {
-      "fub": "waflaare / gaflaaje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coussin": {
-      "fub": "waflaare / gaflaaje - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre sur": {
-      "fub": "wakkoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "à l'épaule": {
-      "fub": "wakkoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "barbe": {
-      "fub": "wakkude / bakkude - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aliter": {
-      "fub": "wallina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "obliger à rester couché": {
-      "fub": "wallina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "danser": {
-      "fub": "wama",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aire de danse": {
-      "fub": "wamarde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "danse": {
-      "fub": "wamarde - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire sauter dans ses bras": {
-      "fub": "wamnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se promener se prostituer": {
-      "fub": "wanca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mener une vie dépravée": {
-      "fub": "wanca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "promenade prostitution": {
-      "fub": "wancuru - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. bordelku": {
-      "fub": "wancuru - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yiilaaru": {
-      "fub": "wancuru - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trouver par hasard": {
-      "fub": "wapoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "revenir": {
-      "fub": "warta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rentrer • wartugo junngo règles": {
-      "fub": "warta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ramener   d'une certaine façon": {
-      "fub": "wartira",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se suicider": {
-      "fub": "wartoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mettre (un récipient": {
-      "fub": "waylita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par exemple) à l'envers": {
-      "fub": "waylita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "stériliser une femme": {
-      "fub": "waylititgo suudu-6inngel debbo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "loup-garou": {
-      "fub": "waylooru / gaylooji - ndu/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "feuillet  estomac": {
-      "fub": "waynaare / gaynaaje - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf reedu": {
-      "fub": "waynaare / gaynaaje - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vergetures": {
-      "fub": "wayoonde / bayoode - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cil": {
-      "fub": "waywayko / baybaydi - ko/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "famine": {
-      "fub": "weelo /weelooji - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "disette": {
-      "fub": "weelo /weelooji - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf dolo": {
-      "fub": "weelo /weelooji - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "kooye": {
-      "fub": "weelo /weelooji - ngo/di",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "traîner au lit le matin": {
-      "fub": "weetora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire la grasse matinée": {
-      "fub": "weetora",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être savoureux": {
-      "fub": "weia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "bon au goût": {
-      "fub": "weia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être sucré": {
-      "fub": "weia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf lakas-": {
-      "fub": "weia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "courtiser": {
-      "fub": "weltinoroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "draguer": {
-      "fub": "weltinoroo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "asperger ou éclabousser  avec": {
-      "fub": "wicca",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "contourner (une maison": {
-      "fub": "widdoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par exemple) aller aux toilettes": {
-      "fub": "widdoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. sela": {
-      "fub": "widdoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "soofa": {
-      "fub": "widdoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aux vertus hallucinogènes": {
-      "fub": "wiiwii - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "écrire": {
-      "fub": "winnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prescrire par écrit": {
-      "fub": "winnda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rédiger une ordonnance pour qqn": {
-      "fub": "winndango goooo lekki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "graine de coton verrue plantaire": {
-      "fub": "wiyyere /biyye - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosser": {
-      "fub": "wogga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frotter énergiquement": {
-      "fub": "wogga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. yigga": {
-      "fub": "wogga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brosser les dents": {
-      "fub": "woggugo nyii'e ; syn. yiggugo nyii'e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "parole ésotérique": {
-      "fub": "wolde saawaande / boUe caawaaâe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "abréviation": {
-      "fub": "wolde rammitinaande / boUe dammitinaaâe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sigle": {
-      "fub": "wolde rammitinaande / boUe dammitinaaâe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "acronyme (litt. : parole": {
-      "fub": "wolde rammitinaande / boUe dammitinaaâe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "raccourcie)": {
-      "fub": "wolde rammitinaande / boUe dammitinaaâe)",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "parler": {
-      "fub": "wolwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dire du mal de qqn": {
-      "fub": "wolwugo kalluka dow goââo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gâter": {
-      "fub": "wonna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "abîmer déflorer": {
-      "fub": "wonna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boire par petites quantités": {
-      "fub": "woo6a",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "crier": {
-      "fub": "wooka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être habitué": {
-      "fub": "woowa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir l'habitude de": {
-      "fub": "woowa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "gingivite": {
-      "fub": "woowo- ngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mûrir (furoncle": {
-      "fub": "worda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "abcès)": {
-      "fub": "worda",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nodule cutané ou sous-cutané": {
-      "fub": "worlere / gorie - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pleurer": {
-      "fub": "woya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffrir du 'cœur'": {
-      "fub": "woyrugo 6ernde, hoore, reedu etc.",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de la tête": {
-      "fub": "woyrugo 6ernde, hoore, reedu etc.",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "du ventre": {
-      "fub": "woyrugo 6ernde, hoore, reedu etc.",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nordiste": {
-      "fub": "woyla-maayoojo / woyla-maayo'en - o/6e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mutilé": {
-      "fub": "wudd",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "oindre": {
-      "fub": "wuja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "passer une pommade": {
-      "fub": "wuja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "un onguent": {
-      "fub": "wuja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "frotter avec un médicament liquide": {
-      "fub": "wuja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voler": {
-      "fub": "wujja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dérober": {
-      "fub": "wujja",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûler": {
-      "fub": "wula",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlé au premier degré": {
-      "fub": "gulaaâo mo degire arana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlé au deuxième degré": {
-      "fub": "guIaaâo mo degire diâafia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlé au troisième degré": {
-      "fub": "guIaaâo mo degire tatafia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlure au premier degré": {
-      "fub": "wuIannde nde degire arana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlure au deuxième degré": {
-      "fub": "wuIannde nde degire diâafia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "brûlure au troisième degré": {
-      "fub": "wuIannde nde degire tatafia",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "transpirer": {
-      "fub": "wulina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être aveugle": {
-      "fub": "wuma",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être un jeteur de sorts": {
-      "fub": "wumgo oemngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir le mauvais œil": {
-      "fub": "wumgo oemngal",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rendre aveugle": {
-      "fub": "wumna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "poumon et bronches": {
-      "fub": "wumsunde / bumsuoe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "trou (dans un tissu": {
-      "fub": "wurde /burde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une feuille": {
-      "fub": "wurde /burde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une paroi": {
-      "fub": "wurde /burde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une peau)": {
-      "fub": "wurde /burde - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pores de la peau": {
-      "fub": "burde gaasa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "narines": {
-      "fub": "burde kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf hinere": {
-      "fub": "burde kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire sortir": {
-      "fub": "wurtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "extraire": {
-      "fub": "wurtina",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "extraire par voie haute": {
-      "fub": "wurtingo gal dow",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se présenter par l'épaule": {
-      "fub": "aarta wurtina balawal / kosde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "par les pieds": {
-      "fub": "aarta wurtina balawal / kosde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sortir": {
-      "fub": "wurtoo / ngurt",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prolapsus vaginal": {
-      "fub": "gurtaaki suudu 6inngel",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "jambes)": {
-      "fub": "wurtoraago junngo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se sécher": {
-      "fub": "wutta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir le ventre gonflé": {
-      "fub": "wuttOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être ballonné": {
-      "fub": "wuttOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "garder  dans la bouche sans avaler": {
-      "fub": "wuufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "chiquer": {
-      "fub": "wuufa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vivre": {
-      "fub": "wuura",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'enivrer": {
-      "fub": "wuyka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se saouler": {
-      "fub": "wuyka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se droguer": {
-      "fub": "wuyka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "drogués qui se piquent": {
-      "fub": "wuykoolJe bee baate",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "démarche": {
-      "fub": "yaadu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "allure": {
-      "fub": "yaadu - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "emmener": {
-      "fub": "yaara / njaar",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "conduire": {
-      "fub": "yaara / njaar",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "emmener plus loin": {
-      "fub": "yaarugo yeeso",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "développer": {
-      "fub": "yaarugo yeeso",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire progresser": {
-      "fub": "yaarugo yeeso",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le dehors": {
-      "fub": "yaasi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "l'extérieur": {
-      "fub": "yaasi - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aller": {
-      "fub": "yaha / njah",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "marcher aller ~ux toilettes": {
-      "fub": "yaha / njah",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "avoir ses règles (euphémisme": {
-      "fub": "yaago maayo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : aller au fleuve)": {
-      "fub": "yaago maayo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coucher avec une femme (euphémisme": {
-      "fub": "yabana debbo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "litt. : se rendre à une femme)": {
-      "fub": "yabana debbo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "en bonne santé": {
-      "fub": "yam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être en bonne santé": {
-      "fub": "yamna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "retrouver la santé": {
-      "fub": "yamdita",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se sentir en bonne santé": {
-      "fub": "yamoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tomber d'un endroit élevé": {
-      "fub": "yana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "cf do\"oo perdre connaissance": {
-      "fub": "yana",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tomber sur (un endroit": {
-      "fub": "yanta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une chose": {
-      "fub": "yanta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une situation": {
-      "fub": "yanta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "une personne)": {
-      "fub": "yanta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "boire": {
-      "fub": "yara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffiir": {
-      "fub": "yargo bone",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "prendre l'air": {
-      "fub": "yargo henndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire boire": {
-      "fub": "yarna",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire boire par le nez": {
-      "fub": "yarnirgo kine",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être insatisfait de": {
-      "fub": "yawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ne pas se contenter de": {
-      "fub": "yawa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "mépris": {
-      "fub": "yawaare /jawaaje - ode",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être en vie": {
-      "fub": "yeeoa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "œuf": {
-      "fub": "yeeraande / geeraaoe - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "œufs de vers  ovule": {
-      "fub": "geeraade gildi",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "face antérieure": {
-      "fub": "avoir le visage ramassé",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "devant sexe féminin": {
-      "fub": "avoir le visage ramassé",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "silence": {
-      "fub": "yeeweende - ode",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tourner la tête pour regarder": {
-      "fub": "yeeyoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "muscle gastrocnérnien": {
-      "fub": "yelemre / geleme - ode/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. liioguyel": {
-      "fub": "yelemre / geleme - ode/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tombe": {
-      "fub": "yenaande / genaale - ode/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "renvoyer  au quartier": {
-      "fub": "yerllititgo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "transférer": {
-      "fub": "yerllugo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "briser": {
-      "fub": "yewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "casser se fracturer": {
-      "fub": "yewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rompre la pureté rituelle": {
-      "fub": "yewgo nanngardam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rompre le jeûne": {
-      "fub": "yewgo suumaye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fracture": {
-      "fub": "yewre / gewe - nde/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "fracture comminutive  rupture": {
-      "fub": "yewre nde ylye campiti",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rupture de la pureté rituelle": {
-      "fub": "yewre nanngardam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rupture du jeûne (en français local": {
-      "fub": "yewre suumaye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "on parle de « casser le jeûne»)": {
-      "fub": "yewre suumaye",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "le mois)": {
-      "fub": "yügo lewru",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "aimer": {
-      "fub": "yiâa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vouloir": {
-      "fub": "yiâa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "amour": {
-      "fub": "yiide - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "promenade": {
-      "fub": "yiilaaru - ndu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se faire voir": {
-      "fub": "yiinoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être visible": {
-      "fub": "yiinoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "laver": {
-      "fub": "YÜwa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se laver": {
-      "fub": "yÜWOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "faire sa toilette": {
-      "fub": "yÜWOO",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pairs éducateurs": {
-      "fub": "yim6e SIDA",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "tourner": {
-      "fub": "yirla",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "rouler les hanches": {
-      "fub": "yirlugo po066e",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "œil": {
-      "fub": "yitere /gite - ode/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yeux aux sclérotiques très blanches": {
-      "fub": "gite I>iraadam",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yeux très rouges": {
-      "fub": "gite cirta bodeeje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yeux atteints de strabisme": {
-      "fub": "gite lelbaaje // gite lebbaaje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "yeux qui louchent": {
-      "fub": "gite lelbaaje // gite lebbaaje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "pupille de l'œil": {
-      "fub": "I>inngel yitere",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "acuité visuelle": {
-      "fub": "mbeldi gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne aux yeux caves": {
-      "fub": "lugga-giteejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "métaphoriquement": {
-      "fub": "lugga-giteejo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "regarder des choses neuves": {
-      "fub": "holtingo gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "nouvelles": {
-      "fub": "holtingo gite",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "sorcellerie des yeux": {
-      "fub": "gite pidooje",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "souffle vital": {
-      "fub": "yonki- ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "âme": {
-      "fub": "yonki- ki",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "négligence": {
-      "fub": "yoofaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "lâcher": {
-      "fub": "yoofta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "relâcher être sans force": {
-      "fub": "yoofta",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "glande thyroïde goitre": {
-      "fub": "yookoode /jookoode - nde/oe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "arriver à terme": {
-      "fub": "yottitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'enfoncer": {
-      "fub": "yulkitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "s'affaisser": {
-      "fub": "yulkitoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "coup de couteau": {
-      "fub": "yuwannde / juwanôe - nde/ne",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être hydropique": {
-      "fub": "yaafa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "hydropisie": {
-      "fub": "yaafu - ngu",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "indépendance beauté": {
-      "fub": "yaggaare - nde",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "de type pincement": {
-      "fub": "yakka",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "inciser": {
-      "fub": "yara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "scarifier": {
-      "fub": "yara",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "incision": {
-      "fub": "yarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "scarification": {
-      "fub": "yarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "vaccination par scarification": {
-      "fub": "yarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. vakse": {
-      "fub": "yarol- ngol",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "apercevoir de loin": {
-      "fub": "yeewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "voir de loin": {
-      "fub": "yeewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "regarder de loin": {
-      "fub": "yeewa",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appeler par son nom": {
-      "fub": "yeewnoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "se dresser sur la pointe des pieds": {
-      "fub": "yegoo",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "presser": {
-      "fub": "y1ya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "appuyer sur": {
-      "fub": "y1ya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "ruse": {
-      "fub": "yoyre /yoye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "astuce": {
-      "fub": "yoyre /yoye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "forme d'intelligence débrouillarde": {
-      "fub": "yoyre /yoye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "syn. cf dabare": {
-      "fub": "yoyre /yoye - nde/de",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être rusé": {
-      "fub": "yoya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "être malin": {
-      "fub": "yoya",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "verge": {
-      "fub": "zakari - 0",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "personne séropositive": {
-      "fub": "zeropozitif/zeropozitif'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "envie de viande": {
-      "fub": "zindar - nga",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "évanoui": {
-      "fub": "zig",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "dans le coma": {
-      "fub": "zig",
-      "src": "03_tourneux_dictionary_csv"
-    },
-    "monnaie": {
-      "fub": "ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "la banque": {
-      "fub": "resdugal ceede",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "mon compte": {
-      "fub": "limngal am",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "votre compte": {
-      "fub": "limngal maa",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "nouveau solde": {
-      "fub": "ceede heddiiɗe kesum",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "code secret": {
-      "fub": "lambar cuuɗiido",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "code de validation": {
-      "fub": "lambar tabitingol",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "envoyé": {
-      "fub": "neldi",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "crédit": {
-      "fub": "nyamaande",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "prêt": {
-      "fub": "nyamaande",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "réussi": {
-      "fub": "tabitinaama",
-      "src": "01_aki_osc_financial_glossary"
-    },
-    "confirmé": {
-      "fub": "tabitinaama",
-      "src": "01_aki_osc_financial_glossary"
+  "numbers": {
+    "Deux cent cinquante mille francs CFA": {
+      "code": "SAF_NUM_001",
+      "fr": "Deux cent cinquante mille francs CFA",
+      "en": "Two hundred and fifty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn íbā ee twágsîn mintɛd mítān.",
+        "audio": "eton/saf_num_001_take1_f4c3ff7e.webm",
+        "duration": 3.56,
+        "code": "SAF_NUM_001"
+      }
+    },
+    "Two hundred and fifty thousand FCFA": {
+      "code": "SAF_NUM_001",
+      "fr": "Deux cent cinquante mille francs CFA",
+      "en": "Two hundred and fifty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn íbā ee twágsîn mintɛd mítān.",
+        "audio": "eton/saf_num_001_take1_f4c3ff7e.webm",
+        "duration": 3.56,
+        "code": "SAF_NUM_001"
+      }
+    },
+    "Quinze mille francs CFA": {
+      "code": "SAF_NUM_002",
+      "fr": "Quinze mille francs CFA",
+      "en": "Fifteen thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ɛwóm ee ítān",
+        "audio": "eton/saf_num_002_take1_e39d0bd7.webm",
+        "duration": 2.13,
+        "code": "SAF_NUM_002"
+      }
+    },
+    "Fifteen thousand FCFA": {
+      "code": "SAF_NUM_002",
+      "fr": "Quinze mille francs CFA",
+      "en": "Fifteen thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ɛwóm ee ítān",
+        "audio": "eton/saf_num_002_take1_e39d0bd7.webm",
+        "duration": 2.13,
+        "code": "SAF_NUM_002"
+      }
+    },
+    "Douze mille cinq cents francs CFA": {
+      "code": "SAF_NUM_003",
+      "fr": "Douze mille cinq cents francs CFA",
+      "en": "Twelve thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ewóm ee íbā ee mintɛd mítān",
+        "audio": "eton/saf_num_003_take1_701fc666.webm",
+        "duration": 3.28,
+        "code": "SAF_NUM_003"
+      }
+    },
+    "Twelve thousand five hundred FCFA": {
+      "code": "SAF_NUM_003",
+      "fr": "Douze mille cinq cents francs CFA",
+      "en": "Twelve thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ewóm ee íbā ee mintɛd mítān",
+        "audio": "eton/saf_num_003_take1_701fc666.webm",
+        "duration": 3.28,
+        "code": "SAF_NUM_003"
+      }
+    },
+    "Cent quatre-vingts mille francs CFA": {
+      "code": "SAF_NUM_004",
+      "fr": "Cent quatre-vingts mille francs CFA",
+      "en": "One hundred and eighty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ee twágsîn mǝwóm ŋmâm.",
+        "audio": "eton/saf_num_004_take1_8ad0c5a2.webm",
+        "duration": 3.65,
+        "code": "SAF_NUM_004"
+      }
+    },
+    "One hundred and eighty thousand FCFA": {
+      "code": "SAF_NUM_004",
+      "fr": "Cent quatre-vingts mille francs CFA",
+      "en": "One hundred and eighty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ee twágsîn mǝwóm ŋmâm.",
+        "audio": "eton/saf_num_004_take1_8ad0c5a2.webm",
+        "duration": 3.65,
+        "code": "SAF_NUM_004"
+      }
+    },
+    "Cinquante mille francs CFA": {
+      "code": "SAF_NUM_005",
+      "fr": "Cinquante mille francs CFA",
+      "en": "Fifty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn mǝwóm tān",
+        "audio": "eton/saf_num_005_take3_0be66162.webm",
+        "duration": 2.42,
+        "code": "SAF_NUM_005"
+      }
+    },
+    "Fifty thousand FCFA": {
+      "code": "SAF_NUM_005",
+      "fr": "Cinquante mille francs CFA",
+      "en": "Fifty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn mǝwóm tān",
+        "audio": "eton/saf_num_005_take3_0be66162.webm",
+        "duration": 2.42,
+        "code": "SAF_NUM_005"
+      }
+    },
+    "Sept mille cinq cents francs CFA": {
+      "code": "SAF_NUM_006",
+      "fr": "Sept mille cinq cents francs CFA",
+      "en": "Seven thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn zaŋmál ee mintɛd mítān",
+        "audio": "eton/saf_num_006_take1_cbda9317.webm",
+        "duration": 3.4,
+        "code": "SAF_NUM_006"
+      }
+    },
+    "Seven thousand five hundred FCFA": {
+      "code": "SAF_NUM_006",
+      "fr": "Sept mille cinq cents francs CFA",
+      "en": "Seven thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn zaŋmál ee mintɛd mítān",
+        "audio": "eton/saf_num_006_take1_cbda9317.webm",
+        "duration": 3.4,
+        "code": "SAF_NUM_006"
+      }
+    },
+    "Cent francs CFA": {
+      "code": "SAF_NUM_007",
+      "fr": "Cent francs CFA",
+      "en": "One hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd",
+        "audio": "eton/saf_num_007_take1_8bdcf75c.webm",
+        "duration": 1.88,
+        "code": "SAF_NUM_007"
+      }
+    },
+    "One hundred FCFA": {
+      "code": "SAF_NUM_007",
+      "fr": "Cent francs CFA",
+      "en": "One hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd",
+        "audio": "eton/saf_num_007_take1_8bdcf75c.webm",
+        "duration": 1.88,
+        "code": "SAF_NUM_007"
+      }
+    },
+    "Deux mille cinq cents francs CFA": {
+      "code": "SAF_NUM_008",
+      "fr": "Deux mille cinq cents francs CFA",
+      "en": "Two thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn íbā ee mintɛd mítān.",
+        "audio": "eton/saf_num_008_take1_e3f95f93.webm",
+        "duration": 3.25,
+        "code": "SAF_NUM_008"
+      }
+    },
+    "Two thousand five hundred FCFA": {
+      "code": "SAF_NUM_008",
+      "fr": "Deux mille cinq cents francs CFA",
+      "en": "Two thousand five hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn íbā ee mintɛd mítān.",
+        "audio": "eton/saf_num_008_take1_e3f95f93.webm",
+        "duration": 3.25,
+        "code": "SAF_NUM_008"
+      }
+    },
+    "Deux cents francs CFA": {
+      "code": "SAF_NUM_009",
+      "fr": "Deux cents francs CFA",
+      "en": "Two hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Mintɛd míbā",
+        "audio": "eton/saf_num_009_take1_c6ca4715.webm",
+        "duration": 2.22,
+        "code": "SAF_NUM_009"
+      }
+    },
+    "Two hundred FCFA": {
+      "code": "SAF_NUM_009",
+      "fr": "Deux cents francs CFA",
+      "en": "Two hundred FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Mintɛd míbā",
+        "audio": "eton/saf_num_009_take1_c6ca4715.webm",
+        "duration": 2.22,
+        "code": "SAF_NUM_009"
+      }
+    },
+    "Cinq mille francs CFA": {
+      "code": "SAF_NUM_010",
+      "fr": "Cinq mille francs CFA",
+      "en": "Five thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ítān",
+        "audio": "eton/saf_num_010_take1_bce4cdc0.webm",
+        "duration": 2.38,
+        "code": "SAF_NUM_010"
+      }
+    },
+    "Five thousand FCFA": {
+      "code": "SAF_NUM_010",
+      "fr": "Cinq mille francs CFA",
+      "en": "Five thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ítān",
+        "audio": "eton/saf_num_010_take1_bce4cdc0.webm",
+        "duration": 2.38,
+        "code": "SAF_NUM_010"
+      }
+    },
+    "Zéro franc CFA": {
+      "code": "SAF_NUM_011",
+      "fr": "Zéro franc CFA",
+      "en": "Zero FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_011_take1_3a14d384.webm",
+        "duration": 1.52,
+        "code": "SAF_NUM_011"
+      }
+    },
+    "Zero FCFA": {
+      "code": "SAF_NUM_011",
+      "fr": "Zéro franc CFA",
+      "en": "Zero FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_011_take1_3a14d384.webm",
+        "duration": 1.52,
+        "code": "SAF_NUM_011"
+      }
+    },
+    "Un virgule cinq pour cent": {
+      "code": "SAF_NUM_012",
+      "fr": "Un virgule cinq pour cent",
+      "en": "One point five percent",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pudsáŋ a pwág ɛtwan ɛ́ mvozobo ee itán",
+        "audio": "eton/saf_num_012_take1_1bbb77f2.webm",
+        "duration": 3.74,
+        "code": "SAF_NUM_012"
+      }
+    },
+    "One point five percent": {
+      "code": "SAF_NUM_012",
+      "fr": "Un virgule cinq pour cent",
+      "en": "One point five percent",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pudsáŋ a pwág ɛtwan ɛ́ mvozobo ee itán",
+        "audio": "eton/saf_num_012_take1_1bbb77f2.webm",
+        "duration": 3.74,
+        "code": "SAF_NUM_012"
+      }
+    },
+    "Deux pour cent": {
+      "code": "SAF_NUM_013",
+      "fr": "Deux pour cent",
+      "en": "Two percent",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pudsáŋ íbā",
+        "audio": "eton/saf_num_013_take1_5b2660c3.webm",
+        "duration": 1.98,
+        "code": "SAF_NUM_013"
+      }
+    },
+    "Two percent": {
+      "code": "SAF_NUM_013",
+      "fr": "Deux pour cent",
+      "en": "Two percent",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pudsáŋ íbā",
+        "audio": "eton/saf_num_013_take1_5b2660c3.webm",
+        "duration": 1.98,
+        "code": "SAF_NUM_013"
+      }
+    },
+    "Numéro de compte : CM zéro zéro un, deux trois quatre cinq, six sept huit neuf, zéro un": {
+      "code": "SAF_NUM_014",
+      "fr": "Numéro de compte : CM zéro zéro un, deux trois quatre cinq, six sept huit neuf, zéro un",
+      "en": "Account number: CM zero zero one, two three four five, six seven eight nine, zero one",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Nɔmɔ á mpǝ̄g mwání : CM zǝzǝ , zǝzǝ, pwág, ba, lá, na, tán, samna, zaŋmál, ŋmâm, ibuu, zǝzǝ, pwág",
+        "audio": "eton/saf_num_014_take1_4158028d.webm",
+        "duration": 16.38,
+        "code": "SAF_NUM_014"
+      }
+    },
+    "Account number: CM zero zero one, two three four five, six seven eight nine, zero one": {
+      "code": "SAF_NUM_014",
+      "fr": "Numéro de compte : CM zéro zéro un, deux trois quatre cinq, six sept huit neuf, zéro un",
+      "en": "Account number: CM zero zero one, two three four five, six seven eight nine, zero one",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Nɔmɔ á mpǝ̄g mwání : CM zǝzǝ , zǝzǝ, pwág, ba, lá, na, tán, samna, zaŋmál, ŋmâm, ibuu, zǝzǝ, pwág",
+        "audio": "eton/saf_num_014_take1_4158028d.webm",
+        "duration": 16.38,
+        "code": "SAF_NUM_014"
+      }
+    },
+    "Téléphone : plus deux cent trente-sept, six quatre-vingt-dix-neuf, zéro zéro, onze, vingt-deux": {
+      "code": "SAF_NUM_015",
+      "fr": "Téléphone : plus deux cent trente-sept, six quatre-vingt-dix-neuf, zéro zéro, onze, vingt-deux",
+      "en": "Phone number: plus two three seven, six nine nine, zero zero, one one, two two",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n : úbâg Mintɛd míbā ee mǝwóm lā ee zaŋmál, samna, mǝwóm ibuu ee ibuu, zǝzǝ zǝzǝ, ewom ee pwág, mǝwóm ba ee ibā.",
+        "audio": "eton/saf_num_015_take1_6c775481.webm",
+        "duration": 14.07,
+        "code": "SAF_NUM_015"
+      }
+    },
+    "Phone number: plus two three seven, six nine nine, zero zero, one one, two two": {
+      "code": "SAF_NUM_015",
+      "fr": "Téléphone : plus deux cent trente-sept, six quatre-vingt-dix-neuf, zéro zéro, onze, vingt-deux",
+      "en": "Phone number: plus two three seven, six nine nine, zero zero, one one, two two",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n : úbâg Mintɛd míbā ee mǝwóm lā ee zaŋmál, samna, mǝwóm ibuu ee ibuu, zǝzǝ zǝzǝ, ewom ee pwág, mǝwóm ba ee ibā.",
+        "audio": "eton/saf_num_015_take1_6c775481.webm",
+        "duration": 14.07,
+        "code": "SAF_NUM_015"
+      }
+    },
+    "Référence : S-A-F tiret deux mille vingt-six tiret X quatre-vingt-neuf": {
+      "code": "SAF_NUM_016",
+      "fr": "Référence : S-A-F tiret deux mille vingt-six tiret X quatre-vingt-neuf",
+      "en": "Reference: S-A-F dash twenty twenty-six dash X eighty-nine",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Reference : S-A-F twágsîn ee mǝwóm bā ee samna ntɛn X mǝwóm ŋmâm ee ibuu.",
+        "audio": "eton/saf_num_016_take1_41d42866.webm",
+        "duration": 9.75,
+        "code": "SAF_NUM_016"
+      }
+    },
+    "Reference: S-A-F dash twenty twenty-six dash X eighty-nine": {
+      "code": "SAF_NUM_016",
+      "fr": "Référence : S-A-F tiret deux mille vingt-six tiret X quatre-vingt-neuf",
+      "en": "Reference: S-A-F dash twenty twenty-six dash X eighty-nine",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Reference : S-A-F twágsîn ee mǝwóm bā ee samna ntɛn X mǝwóm ŋmâm ee ibuu.",
+        "audio": "eton/saf_num_016_take1_41d42866.webm",
+        "duration": 9.75,
+        "code": "SAF_NUM_016"
+      }
+    },
+    "Un": {
+      "code": "SAF_NUM_017",
+      "fr": "Un",
+      "en": "One",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pwág",
+        "audio": "eton/saf_num_017_take1_3df57171.webm",
+        "duration": 1.45,
+        "code": "SAF_NUM_017"
+      }
+    },
+    "One": {
+      "code": "SAF_NUM_017",
+      "fr": "Un",
+      "en": "One",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Pwág",
+        "audio": "eton/saf_num_017_take1_3df57171.webm",
+        "duration": 1.45,
+        "code": "SAF_NUM_017"
+      }
+    },
+    "Deux": {
+      "code": "SAF_NUM_018",
+      "fr": "Deux",
+      "en": "Two",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "bā",
+        "audio": "eton/saf_num_018_take1_1fa5a8b2.webm",
+        "duration": 1.08,
+        "code": "SAF_NUM_018"
+      }
+    },
+    "Two": {
+      "code": "SAF_NUM_018",
+      "fr": "Deux",
+      "en": "Two",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "bā",
+        "audio": "eton/saf_num_018_take1_1fa5a8b2.webm",
+        "duration": 1.08,
+        "code": "SAF_NUM_018"
+      }
+    },
+    "Trois": {
+      "code": "SAF_NUM_019",
+      "fr": "Trois",
+      "en": "Three",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "lāá",
+        "audio": "eton/saf_num_019_take1_ad682116.webm",
+        "duration": 1.13,
+        "code": "SAF_NUM_019"
+      }
+    },
+    "Three": {
+      "code": "SAF_NUM_019",
+      "fr": "Trois",
+      "en": "Three",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "lāá",
+        "audio": "eton/saf_num_019_take1_ad682116.webm",
+        "duration": 1.13,
+        "code": "SAF_NUM_019"
+      }
+    },
+    "Quatre": {
+      "code": "SAF_NUM_020",
+      "fr": "Quatre",
+      "en": "Four",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "na",
+        "audio": "eton/saf_num_020_take1_40c8e5ae.webm",
+        "duration": 0.99,
+        "code": "SAF_NUM_020"
+      }
+    },
+    "Four": {
+      "code": "SAF_NUM_020",
+      "fr": "Quatre",
+      "en": "Four",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "na",
+        "audio": "eton/saf_num_020_take1_40c8e5ae.webm",
+        "duration": 0.99,
+        "code": "SAF_NUM_020"
+      }
+    },
+    "Cinq": {
+      "code": "SAF_NUM_021",
+      "fr": "Cinq",
+      "en": "Five",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "tán",
+        "audio": "eton/saf_num_021_take1_54d34059.webm",
+        "duration": 1.4,
+        "code": "SAF_NUM_021"
+      }
+    },
+    "Five": {
+      "code": "SAF_NUM_021",
+      "fr": "Cinq",
+      "en": "Five",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "tán",
+        "audio": "eton/saf_num_021_take1_54d34059.webm",
+        "duration": 1.4,
+        "code": "SAF_NUM_021"
+      }
+    },
+    "Six": {
+      "code": "SAF_NUM_022",
+      "fr": "Six",
+      "en": "Six",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "samna",
+        "audio": "eton/saf_num_022_take1_7c84389a.webm",
+        "duration": 1.61,
+        "code": "SAF_NUM_022"
+      }
+    },
+    "Sept": {
+      "code": "SAF_NUM_023",
+      "fr": "Sept",
+      "en": "Seven",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zaŋmál",
+        "audio": "eton/saf_num_023_take1_b1ac2cf3.webm",
+        "duration": 1.55,
+        "code": "SAF_NUM_023"
+      }
+    },
+    "Seven": {
+      "code": "SAF_NUM_023",
+      "fr": "Sept",
+      "en": "Seven",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zaŋmál",
+        "audio": "eton/saf_num_023_take1_b1ac2cf3.webm",
+        "duration": 1.55,
+        "code": "SAF_NUM_023"
+      }
+    },
+    "Huit": {
+      "code": "SAF_NUM_024",
+      "fr": "Huit",
+      "en": "Eight",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "ŋmam",
+        "audio": "eton/saf_num_024_take1_899346b5.webm",
+        "duration": 1.4,
+        "code": "SAF_NUM_024"
+      }
+    },
+    "Eight": {
+      "code": "SAF_NUM_024",
+      "fr": "Huit",
+      "en": "Eight",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "ŋmam",
+        "audio": "eton/saf_num_024_take1_899346b5.webm",
+        "duration": 1.4,
+        "code": "SAF_NUM_024"
+      }
+    },
+    "Neuf": {
+      "code": "SAF_NUM_025",
+      "fr": "Neuf",
+      "en": "Nine",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "ibuu",
+        "audio": "eton/saf_num_025_take1_3c0ea601.webm",
+        "duration": 2.02,
+        "code": "SAF_NUM_025"
+      }
+    },
+    "Nine": {
+      "code": "SAF_NUM_025",
+      "fr": "Neuf",
+      "en": "Nine",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "ibuu",
+        "audio": "eton/saf_num_025_take1_3c0ea601.webm",
+        "duration": 2.02,
+        "code": "SAF_NUM_025"
+      }
+    },
+    "Zéro": {
+      "code": "SAF_NUM_026",
+      "fr": "Zéro",
+      "en": "Zero",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_026_take1_1966e64e.webm",
+        "duration": 1.49,
+        "code": "SAF_NUM_026"
+      }
+    },
+    "Zero": {
+      "code": "SAF_NUM_026",
+      "fr": "Zéro",
+      "en": "Zero",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_026_take1_1966e64e.webm",
+        "duration": 1.49,
+        "code": "SAF_NUM_026"
+      }
+    },
+    "Mille francs CFA": {
+      "code": "SAF_NUM_027",
+      "fr": "Mille francs CFA",
+      "en": "One thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn",
+        "audio": "eton/saf_num_027_take1_2ed37687.webm",
+        "duration": 1.47,
+        "code": "SAF_NUM_027"
+      }
+    },
+    "One thousand FCFA": {
+      "code": "SAF_NUM_027",
+      "fr": "Mille francs CFA",
+      "en": "One thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn",
+        "audio": "eton/saf_num_027_take1_2ed37687.webm",
+        "duration": 1.47,
+        "code": "SAF_NUM_027"
+      }
+    },
+    "Deux mille francs CFA": {
+      "code": "SAF_NUM_028",
+      "fr": "Deux mille francs CFA",
+      "en": "Two thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn íbā",
+        "audio": "eton/saf_num_028_take1_8c391d57.webm",
+        "duration": 1.86,
+        "code": "SAF_NUM_028"
+      }
+    },
+    "Two thousand FCFA": {
+      "code": "SAF_NUM_028",
+      "fr": "Deux mille francs CFA",
+      "en": "Two thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn íbā",
+        "audio": "eton/saf_num_028_take1_8c391d57.webm",
+        "duration": 1.86,
+        "code": "SAF_NUM_028"
+      }
+    },
+    "Dix mille francs CFA": {
+      "code": "SAF_NUM_029",
+      "fr": "Dix mille francs CFA",
+      "en": "Ten thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ɛwóm",
+        "audio": "eton/saf_num_029_take1_58473ec1.webm",
+        "duration": 2.1,
+        "code": "SAF_NUM_029"
+      }
+    },
+    "Ten thousand FCFA": {
+      "code": "SAF_NUM_029",
+      "fr": "Dix mille francs CFA",
+      "en": "Ten thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn ɛwóm",
+        "audio": "eton/saf_num_029_take1_58473ec1.webm",
+        "duration": 2.1,
+        "code": "SAF_NUM_029"
+      }
+    },
+    "Vingt mille francs CFA": {
+      "code": "SAF_NUM_030",
+      "fr": "Vingt mille francs CFA",
+      "en": "Twenty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn mǝwóm bā",
+        "audio": "eton/saf_num_030_take1_6633d352.webm",
+        "duration": 2.49,
+        "code": "SAF_NUM_030"
+      }
+    },
+    "Twenty thousand FCFA": {
+      "code": "SAF_NUM_030",
+      "fr": "Vingt mille francs CFA",
+      "en": "Twenty thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Twágsîn mǝwóm bā",
+        "audio": "eton/saf_num_030_take1_6633d352.webm",
+        "duration": 2.49,
+        "code": "SAF_NUM_030"
+      }
+    },
+    "Cent mille francs CFA": {
+      "code": "SAF_NUM_031",
+      "fr": "Cent mille francs CFA",
+      "en": "One hundred thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn",
+        "audio": "eton/saf_num_031_take1_0ed75cce.webm",
+        "duration": 2.12,
+        "code": "SAF_NUM_031"
+      }
+    },
+    "One hundred thousand FCFA": {
+      "code": "SAF_NUM_031",
+      "fr": "Cent mille francs CFA",
+      "en": "One hundred thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn",
+        "audio": "eton/saf_num_031_take1_0ed75cce.webm",
+        "duration": 2.12,
+        "code": "SAF_NUM_031"
+      }
+    },
+    "Cinq cent mille francs CFA": {
+      "code": "SAF_NUM_032",
+      "fr": "Cinq cent mille francs CFA",
+      "en": "Five hundred thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ítān",
+        "audio": "eton/saf_num_032_take1_5d35a666.webm",
+        "duration": 2.58,
+        "code": "SAF_NUM_032"
+      }
+    },
+    "Five hundred thousand FCFA": {
+      "code": "SAF_NUM_032",
+      "fr": "Cinq cent mille francs CFA",
+      "en": "Five hundred thousand FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ítān",
+        "audio": "eton/saf_num_032_take1_5d35a666.webm",
+        "duration": 2.58,
+        "code": "SAF_NUM_032"
+      }
+    },
+    "Un million de francs CFA": {
+      "code": "SAF_NUM_033",
+      "fr": "Un million de francs CFA",
+      "en": "One million FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Miliɔ́ŋ mwág",
+        "audio": "eton/saf_num_033_take1_b103abb4.webm",
+        "duration": 1.81,
+        "code": "SAF_NUM_033"
+      }
+    },
+    "One million FCFA": {
+      "code": "SAF_NUM_033",
+      "fr": "Un million de francs CFA",
+      "en": "One million FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Miliɔ́ŋ mwág",
+        "audio": "eton/saf_num_033_take1_b103abb4.webm",
+        "duration": 1.81,
+        "code": "SAF_NUM_033"
+      }
+    },
+    "Total : quinze mille deux cent vingt-cinq francs CFA": {
+      "code": "SAF_NUM_034",
+      "fr": "Total : quinze mille deux cent vingt-cinq francs CFA",
+      "en": "Total: fifteen thousand two hundred and twenty-five FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Táŋ i mwání : twágsîn ewóm ee mintɛd míbā ee mǝwóm bā ee ítān",
+        "audio": "eton/saf_num_034_take1_e759c9d4.webm",
+        "duration": 6.2,
+        "code": "SAF_NUM_034"
+      }
+    },
+    "Total: fifteen thousand two hundred and twenty-five FCFA": {
+      "code": "SAF_NUM_034",
+      "fr": "Total : quinze mille deux cent vingt-cinq francs CFA",
+      "en": "Total: fifteen thousand two hundred and twenty-five FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Táŋ i mwání : twágsîn ewóm ee mintɛd míbā ee mǝwóm bā ee ítān",
+        "audio": "eton/saf_num_034_take1_e759c9d4.webm",
+        "duration": 6.2,
+        "code": "SAF_NUM_034"
+      }
+    },
+    "Solde restant : deux cent trente-quatre mille sept cent soixante-quinze francs CFA": {
+      "code": "SAF_NUM_035",
+      "fr": "Solde restant : deux cent trente-quatre mille sept cent soixante-quinze francs CFA",
+      "en": "Remaining balance: two hundred thirty-four thousand seven hundred seventy-five FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Táŋ i mwání : Ǹtɛd twágsîn íbā ee twágsîn mǝwóm lā ee mintɛd zaŋmál ee mǝwóm zaŋmál ee ítān",
+        "audio": "eton/saf_num_035_take1_bc347470.webm",
+        "duration": 9.38,
+        "code": "SAF_NUM_035"
+      }
+    },
+    "Remaining balance: two hundred thirty-four thousand seven hundred seventy-five FCFA": {
+      "code": "SAF_NUM_035",
+      "fr": "Solde restant : deux cent trente-quatre mille sept cent soixante-quinze francs CFA",
+      "en": "Remaining balance: two hundred thirty-four thousand seven hundred seventy-five FCFA",
+      "category": "Montants & Chiffres Safinum",
+      "eto": {
+        "text": "Táŋ i mwání : Ǹtɛd twágsîn íbā ee twágsîn mǝwóm lā ee mintɛd zaŋmál ee mǝwóm zaŋmál ee ítān",
+        "audio": "eton/saf_num_035_take1_bc347470.webm",
+        "duration": 9.38,
+        "code": "SAF_NUM_035"
+      }
     }
   },
-  "rag_exemplars": [
-    {
-      "fr": "mon compte",
-      "fub": "limngal am",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "votre compte",
-      "fub": "limngal maa",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "code secret",
-      "fub": "lambar cuuɗiido",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "code de validation",
-      "fub": "lambar tabitingol",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "mon compte",
-      "fub": "limngal am",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "votre compte",
-      "fub": "limngal maa",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "code secret",
-      "fub": "lambar cuuɗiido",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "code de validation",
-      "fub": "lambar tabitingol",
-      "src": "01_aki_osc_financial_glossary",
-      "dom": "finance"
-    },
-    {
-      "fr": "père de famille, homme marié qui a des enfants",
-      "fub": "baaba-saare /baaba-saare'en - o/lJe",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "perfusion (litt. : injection d'eau) ; syn. perfuyog",
-      "fub": "baatal ndiyam",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "« maraboutage » (litt. : travail de marabout magicien)",
-      "fub": "kuugal buude",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "nouveau-né (litt. : enfant frais)",
-      "fub": "I>inngel keccel / I>ikkon keccon",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "Culex spp., moustique des eaux usées (litt. : moustique de l'eau sale)",
-      "fub": "cufu ndiyam salte",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "mère de famille",
-      "fub": "daada-Ilikkon /daada-Ilikkon'en - o/IJe",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "maternité, fait de donner naissance à un enfant",
-      "fub": "danygol- ngol",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "diabète (nom moderne de la maladie appelée couramment nyawu sukar); cf nyawu-sukar",
-      "fub": "diyabet - nga",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "infinnier/médecin de garde (litt. : qui passe la nuit au travail)",
-      "fub": "doktor baalanôo kuugal",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "donner un coup tranchant oblique ressentir une douleur analogue à celle que peut provoquer un coup de hache",
-      "fub": "feyYa / peyy",
-      "src": "03_tourneux_dictionary_csv",
-      "dom": "lexicon_cameroon"
-    },
-    {
-      "fr": "Je veux manger",
-      "fub": "Mi yidi nyaamde",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je veux partir",
-      "fub": "Mi yidi yahude",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je suis allé à la maison",
-      "fub": "Mi yahii suudu",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je veux boire de l'eau",
-      "fub": "Mi yidi yarude ndiyam",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Veux-tu manger ?",
-      "fub": "A yidi nyaamde?",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je veux dormir",
-      "fub": "Mi yidi daaɗe",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je veux aller à la maison",
-      "fub": "Mi yidi yahude suudu",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Comment vas-tu ?",
-      "fub": "No mbaɗɗaa?",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Je veux te parler",
-      "fub": "Mi yidi haalde e maa",
-      "src": "04_akilang_conversational_corpus",
-      "dom": "conversation"
-    },
-    {
-      "fr": "Penchez le tronc vers l'avant (au niveau des hanches) en gardant le corps droit.",
-      "fub": "Taadee goonga kama taadorde, ɓornee aadilaaku kama toggoore njamndi nde konu.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "En effet, vous ne pourrez pas recevoir ce que vous n'êtes pas en mesure de vous donner.\"",
-      "fub": "Jittanan no wonɗaa gollirde, ko fii a waawataa wonude mbatulaajo an hande kadi.›",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "tous ceux qui l'ont reçu, à ceux qui croient en son nom, [il] a donné le pouvoir de devenir enfants de Dieu.",
-      "fub": "12Ammaa fuu jaɓuɓemo kooliiɓe inde maako, o hokkiiɓe bawɗe wartuki ɓiɓɓe Allah.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Mais j'ai estimé qu'il était nécessaire de vous envoyer Epaphrodite mon frère, compagnon d'œuvre et d'armes avec moi, qui a été aussi envoyé de votre part pour m'administrer ce dont j'ai eu besoin.",
-      "fub": "25 Amma mi tawi e haani mi lila banniraawo am Epaforoditus, gollodiiɗo am, e wallitammi hawre, kanko lilunoɗon to am gam o wallammi huuntugo haaje am.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "mangèrent avec lui dans sa maison.",
-      "fub": "Ɓe nyaamdi bee maako nder saare maako.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Et ils lui dirent, Il n'y a aucun en ta parenté qui soit appelé de ce nom,",
-      "fub": "Ɓe mbi'ataa: Jawmiraawo huuwi ɗum fuu.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "[25] Ses portes ne se fermeront point chaque jour, car il n'y aura point de nuit.",
-      "fub": "25 Dammuɗe mayre maɓɓataako nyalooma, gam jemma walaa der mayre.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Elle enfantera un fils et tu lui donneras le nom de Jésus (C'est-à-dire Le-Seigneur-sauve), car c'est lui qui sauvera son peuple de ses péchés .\"",
-      "fub": "O danyay ɓiɗɗo gorko nden a noddaymo Yeesu, ngam o hisnay yimɓe maako daga hakke maɓɓe.\"",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Et le tiers du soleil fut frappé, ainsi que le tiers de la lune, et le tiers des étoiles, afin que le tiers en soit obscurci; le jour perdit un tiers de sa clarté, et la nuit de même.",
-      "fub": "12 Malaa'ika nayaɓo oo fuufi buututal mum, non tatoɓere naange e tatoɓere lewru e tatoɓere koode piyaa, faa gootel hen fuu tatoɓere mum niɓɓa, jemma e ɲalooma fuu mbaasa tatoɓere fooyre mum'en.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "11 Ensuite on me dit: \" Tu dois encore parler au nom de Dieu, au sujet de beaucoup de peuples et de pays, de beaucoup de gens de toutes langues et au sujet de beaucoup de rois. \"",
-      "fub": "11 Ɓaawo majjum, bi'aami: \"Sey bataa kade ko Alla hollitin maa dow himɓe ɗuuɓɓe, e lenyi ɗuuɗɗi, e ɗelle ɗuuɗɗe, e laamiiɓe ɗuuɓɓe.\"",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Il a quatre filles qui ne sont pas mariées et qui parlent au nom de Dieu.",
-      "fub": "9 O woodi ɓiɓɓe rewɓe nayo ɓe te'aaka, ɓe ɗon ngaajo wolde Allah.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Or, Moïse nous a ordonné dans la loi, de lapider de telles personnes; toi donc qu'en dis-tu?",
-      "fub": "Haa e denndaangal muusallaaji, ɗi meeɗno-ɗen heɓde kadi ?...",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "29Rebecca avait un frère du nom de Laban.",
-      "fub": "29 Rebekka woodi deerɗiraawo gorko, innde maako Laban.",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Ils t'interrogent au sujet de l'Heure: \"Quand va-t-elle jeter l'ancre ?\"",
-      "fub": "Ɓe findini mo, ɓe wi'i: \"Karamoko'en, e on kippataa fii ko men woni mulude kon?\"",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "22 Nous est-il permis ou non de payer le tribut à l'empereur ? \"",
-      "fub": "22E hara no haani ka men yoɓa lanɗo mawɗo Roomu on sagalle kaa haanaa?\"",
-      "src": "06_bible_fulfulde_ebible_parallel",
-      "dom": "bible_syntax"
-    },
-    {
-      "fr": "Le travail des enfants au Burkina Faso",
-      "fub": "Haɓugol golle sukaaɓe e nder Burkina Faso",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "L'école à l'heure des tablettes et d'Internet",
-      "fub": "Alhaali janngingol e dow palleeji Internet",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "MISE À JOUR: L'accident a fait trois morts",
-      "fub": "Wagadugu: Ciwlaaɓe ɓen tato maayi",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Elle s'occupe aussi de la recherche de nouvelles sources d'argent.",
-      "fub": "Hino farlii mo kadi ɗaɓɓugol pehe kese wallayɗe heɓude seedeeji.",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Il y a un grand nombre de chiens à La Calamine.",
-      "fub": "Haa woodi laana huɓɓuka heewɓe mbaasi heen pittaali mumen",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "l'eau dans la ville ?",
-      "fub": "Holko seerndi ladde e wuro ?",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Il conduit également des études pour tout vérifier en bonne et due forme.",
-      "fub": "O jangtiima kadi cadeele muusɗi ɗi o tawi e ɗiin laaɓi.",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Vous auriez préféré qu'on les jette à l'eau ?",
-      "fub": "Holko haɗi enn calotaako so en tottaama buuñaa ?",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "- Conservation de l'eau et du sol dans la région du Sahel",
-      "fub": "Caɗeele walla ŋakkere ndiyam laaɓuɗam e nder leyɗe sahel",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Etat des lieux: Nos problèmes économiques sont en train de s'aggraver de plus en plus chaque jour.",
-      "fub": "Kamerun: Yanugol otooje torraaji mum no ɓeydaade ñannde kala",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "les jeunes et les marchés du travail",
-      "fub": "Elto sukaaɓe e luumooji golle",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Avez-vous une idée de l'augmentation des prix sur la période de Noël ?",
-      "fub": "Ko saabi ɓeyduugol cogguuji ñamri e saha balɗe juulde?",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Son autre nom, c'est Beijing.",
-      "fub": "Inde makko burnde luttude noon woni inde Doyen Diop.",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Et puis, chaque jour vous pouvez discuter de cette expérience sur les réseaux sociaux Facebook, Twitter et Instagram, avec le hashtag #UnpackageYourself.",
-      "fub": "Oɗon mbaawi heɓude ɗii kabaruji fuu e hello amen Facebook, Twitter e ka aplikasiyon \"PURE RADIO.\"",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Qu'est-ce que le home staging pour vendre sa maison ?",
-      "fub": "Mate gollade fiirti welsindaade galle mum ?",
-      "src": "07_rfi_fulfulde_news_parallel",
-      "dom": "news_media"
-    },
-    {
-      "fr": "Laissez-moi vous la donner. \"",
-      "fub": "Mi hokki ma ɗum. \"",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Ils sont rentrés à la maison:",
-      "fub": "Ɓe njaali wuro Asta:",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "L'eau est montée jusqu'à.",
-      "fub": "Ndiyam wari haa daande.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Et l'eau est montée jusqu'ici.",
-      "fub": "Ndiyam wari haa ɗoo.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Il a laissé une maison.",
-      "fub": "O ɓenna wuro wonngo.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "\" Bois un peu d'eau, ça va te faire du bien. \"",
-      "fub": "War yar ndiyam maa no ngiɗɗaa. \"",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "A quelle heure est-ce qu'on commence demain du coup, les gens ?",
-      "fub": "En mbaalataa ɗoo haa subaka ndawen ?",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Je peux courir sur l'eau.",
-      "fub": "Miin Waawi ladde ndee fof.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Le mystère pour moi est dans le nom.",
-      "fub": "Yimɓe cuusaa sowtude innde am.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Il y avait beaucoup d'eau.",
-      "fub": "Ngo ɗon heewi ndiyam.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Pour l'eau...dans mon cas j'opte plus pour de l'eau demineralise.",
-      "fub": "Ɓurmi wonde ko nder ndiyam, ngam mi suusaa naange.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Il est venu terminer son travail, il est venu l'achever.",
-      "fub": "O wari oon boo, kuugal timmi.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Ils m'ont mis de côté et m'ont demandé mon nom.",
-      "fub": "Ɓe njiɗaa soowtude innde am, ɓe cuusaa sowtude innde am.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Ils entre dans la maison de la victime.",
-      "fub": "Ɓe njehi to galle laamɗo.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Il marcha vers l'eau.",
-      "fub": "Ɗon yaha nder ndiyam.",
-      "src": "08_cnrs_lacito_ellaf_academic",
-      "dom": "academic_literature"
-    },
-    {
-      "fr": "Il est généralement associé à l' Université de Cambridge et le travail de Joan Robinson.",
-      "fub": "Eɗum hauti be jami'are Cambridge be kuuɗe Joan Robinson.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Le livre axé sur les déterminants du revenu national à court terme lorsque les prix sont relativement rigides.",
-      "fub": "Deftere nden ɗon laara yaccoɓe jawdi nastugol leydi be lau to ceedeji kareji wala daral.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "En revanche, l'Europe a été presque toujours divisé en un certain nombre d'Etats en guerre.",
-      "fub": "Sai ni nder bolliɗe fere bo, naahiya Nasaara wooni luural hakkude dewalji ferefere.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Cependant, même si la direction de sélection ne inverse de cette manière, les traits qui ont été perdus dans le passé peut ne pas ré-évoluer dans une forme identique (voir La loi de Dollo).",
-      "fub": "Seini, ko huushal subol ngol wiytiri ta atal nga'al, gikkuuji majjude e' baawo wiytata ummutuki nder tagaade nanndude (ndaaru Dollo's law).",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Depuis ce temps, le nombre total des périodiques actifs a augmenté de façon constante.",
-      "fub": "Iga wakkati mai jimilla limgal wakkatiiji kemminiidi do besdo.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Comme l'argent, l'écriture a été rendue nécessaire par la taille de la population d'une ville et de la complexité de son commerce parmi les personnes qui ne sont pas tous personnellement familiarisés avec l'autre.",
-      "fub": "Ba ceede, binndi ɗi ɗaɓɓitaaɗum on darnde ɗuuɗol yimɓe der birniwol be saɗirma coggu be filu caka yimɓe ɓe anda komoy.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "En conséquence, la Terre a commencé à recevoir plus de chaleur du soleil dans l'éon protérozoïque.",
-      "fub": "Ɗo saggiti duuniyaaru fuɗɗi heɓugo nguleega naange nyaade walaama bana yebre dimbol kooseje walla lesdi andiraaɗum be 'Proterozoic eon'.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "En outre, les savants islamiques traduits et interprété les œuvres antérieures des Romains et Grecs et a établi le Maison de la Sagesse à Bagdad à cette fin.",
-      "fub": "Haa yahugo yeeso, Mallum en Diina Islama fassiri nden tarjimi kuuɗe ko yimɓe Roma bee Girik waɗi nden ɓe Nyiɓi Saare Andal haa Baghdad ngam ɗo man.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Compte tenu de ses différentes formes, il existe différentes façons de représenter l'incertitude et la modélisation des réponses des agents économiques à elle.",
-      "fub": "Hokkugo kalaji majji fere-fere, wodi laabi ɗuɗɗe je maganki shiya tabbas be moftowa jawdi tokkitaɗo be amsaji maɓɓe daw.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Il comprend l'idée de la somme d'un nombre unique, lui-même, et la somme vide, qui est zéro .",
-      "fub": "Dun hawti e kawtal limgal gootal dun latti kawtal wala merewal e na how'nde.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "(Cette \"loi,\" cependant, est moins précise que les modèles plus récents, comme la loi de puissance de Stevens.)",
-      "fub": "\"Ngo'ol \"\"keeriwol\",\" fuu e non, yo lest to goonga naa bano moodelji kesi, bano keeriwol hiite ngol Stevens.) \"",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "En parfaitement marchés concurrentiels étudiés dans la théorie de l'offre et de la demande, il ya beaucoup de producteurs, dont aucun ne influencent significativement prix.",
-      "fub": "To luumoji je mari gasa bo jannde to faamu waddanki be tefanki, wodi woɗoɓe ɗuɗɗe, wala mo chanjata ceede kare bo nder maɓɓe.",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Une loi de la psychologie des formes dit que les objets qui se déplacent dans la même direction sont perçus comme liés les uns aux autres.",
-      "fub": "Raa'i hokkaa ɗun dow ilmu ɓernde yi;i huundeji dilloje dow laawol gootol woodi alaka e bandun",
-      "src": "09_open_science_pressbooks_parallel",
-      "dom": "education_science"
-    },
-    {
-      "fr": "Une maison portant son nom existe d'ailleurs toujours dans la Ville Sainte.",
-      "fub": "Galle mo o inniraa ina woodi ni haa jooni e wuro teddungo ngo.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Elle étudie également l'amharique, le droit, les affaires internationales et la politique[2].",
-      "fub": "O jangi kadi amharique, ñaawooje , geɗe adunnayaŋkooje e politiki.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "En effet la famille de la future impératrice dispose d'un appui dans le nord, lieu d'origine des deux précédents empereurs, Téwodros II et Yohannes IV[5].",
-      "fub": "Ko teeŋtini ɗum, ɓesngu kanko jogorɗo wonoyde laamuyaŋke, omo jogi ballal to rewo too, iwdi laamuyaŋkooɓe ɗiɗo ɓennuɓe ɓe, woni Téwodros II eYohannes IV[5].",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Descendant d'une ancienne famille noble du nord de l'Éthiopie, elle reçoit une éducation traditionnelle orthodoxe.",
-      "fub": "Sabu iwdemo e ɓesngu rimɗungu ɓooyngu to rewo Ecopi, o heɓii nehdi ñiiɓndi e cosaan e aada.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Taytu Betul est la troisième d'une famille de quatre enfants, deux frères et deux sœurs, qui arrive tous à l'âge adulte, fait rare, étant donné la forte mortalité infantile en Ethiopie à cette époque.",
-      "fub": "Taytu Betul ko kumbaajo ɓesngu ngu sukaaɓe nayo, ɗiɗo worɓe e ɗiɗo rewɓe, kamɓe fof ɓe keɓi cagataagal, ko heewaani, sabu kewgol maayirgol cukaaku keewnongol to Ecopi e oon jamaanu.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Bou El Mogdad est le nom du bateau qui assurait le transport de marchandises et de personnes sur le fleuve Sénégal entre 1950 et 1970.",
-      "fub": "Buu El Mogdaad ko innde laana mbaɗatnooka rusooji marsandiis e yimɓe e maayo Senegaall hakkunde 1950 e 1970.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Tout est que ses agissements dérangent, de nombreuses accusations et rumeurs voient le jour, de la part des légations étrangères, mais également d'une partie de son peuple.",
-      "fub": "Fof tan ko wiide darnde makko won ɓe muusi, tuumaamuyaaji keewɗi kam haalaluuji peeñii, ummoraade e ñaawooje koɗe, kadi wonndude e heen baŋnge yimɓe leudi makko.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Dans une mesure, on compte le nombre d'unités standard qui est égal à l'observation.",
-      "fub": "Ha foondugo lambaaji dartiidi je laati fotan be ko laarete fu limtete.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Ainsi renforcé, Sahle Myriam devient roi des rois d'Éthiopie en 1889 sous le nom Menelik II.",
-      "fub": "Ngaal ballital saabi Sahle Myriam jiimi e kala laamu e nder Ecopi e hitaande 1889 e nootitoraademo Menelik II.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Son petit-fils Lidj Iyasou, devenu empereur sous le nom Iyasou V, est déposé en septembre 1916 , la noblesse et l'église n'acceptant pas qu'un musulman dirige le pays[19].",
-      "fub": "Taaniiko Lidj Iyasou, gontuɗo laamuyaŋke e dow innitoraade Iyasou V, fiiltaa e siilto 1916 sabu rimɓe ɓe e egiliis o njaɓaani juulɗo ardo leydi ndi[19].",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "La commune compte aujourd'hui 768 habitants (2015).",
-      "fub": "Labe no jogii hannde 788 (2013) yimɓe.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Bou El Mogdad est issu d'une grande famille saint-louisienne proche de l'administration coloniale.",
-      "fub": "Bou El Mogdad ummii ko e galle mawɗo ndarnaaɓe ɓadiiɗo laamu njiimaandi tuubakooɓe. .",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "En 2019 , elle est la lauréate du Prix littéraire des Rotary Clubs de langue Française pour son roman Les veilleurs de Sangomar.",
-      "fub": "E hitaande 2019, o nawi raay Prix littéraire mo Rotary Clubs e ɗemŋgal farayse sabaabunde deftere makko wiiteende Les veilleurs de Sangomar.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "Taytu Betul descend d'une famille Oromos influente dans le nord de l'Abyssinie et revendiquant des liens avec la dynastie salomonide et l'empereur du XVIIe siècle Susneyos.",
-      "fub": "Taytu Betul ummi ko e ɓesngu Oromos dowlungu e baŋnge rewo Abyssinie kadi foottungu jokkere e lasli salomonide kam e laamɗo mo teemidinol XVII ɓiwol, Susneyos.",
-      "src": "10_wikipedia_parallel_aligned",
-      "dom": "encyclopedia"
-    },
-    {
-      "fr": "(bénédiction et salut soient sur lui) dit: \"certes, l'eau est pure et rien ne la rend impure.\"",
-      "fub": "O wiyi \" ndiyam nduun ɗoon woyndu ina laaɓi hay huunde soɓnataa ɗum.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Toute famille dans les cieux et sur la terre.",
-      "fub": "Ko kanko tagi Leydi e Asamaan.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Depuis 1984, il n'y a aucune loi.",
-      "fub": "Gila 1984 ngal meeɗaa juumde.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Depuis 1998, le nombre de pays qualifiés est passé à 32.",
-      "fub": "Gila 1998 noon kippuuji tawtorteeɗi kawgel ngel njettiima 32.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il a pour nom George Weah.",
-      "fub": "Oon woni biyeteeɗo George Weah.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Ce qui compte, c'est notre \" oui .\"",
-      "fub": "Ko ɗum waɗɗi mbiyɗen \"sinno\").",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Le soir nous sommes allées à la maison.",
-      "fub": "Midi yoni en ko nder wuro Kita.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "L'inspection du travail et la politique du travail en PACA en 2013",
-      "fub": "Jaɓɓorgo Kewuuji ngenndi Golle parlemaa e daawal sulyee 2007",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Lauréate du prix Nobel de la paix en 1991.",
-      "fub": "Ko ndeen darnde maantinde addani mo heɓde njeenaari Nobel e hitaande 1991.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il avait reçu le Prix en 1992.",
-      "fub": "Ko he hitaande 1992 ɓe cosi Ngatamaare.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Google est à l'heure actuelle une des plus grosses boites du web.",
-      "fub": "Google jeyaa hannde ko kuutorɗe Enternet ɓurɗe mawnude.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Au début de l'année 2015, l'Unité de Gestion des Marchés a vu le jour.",
-      "fub": "E hitaande 2015, peeñgol maalde ndimaagu Maasina",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il est devenu connu aujourd'hui sous le nom d'Al-Baka.",
-      "fub": "Ɗoon anndiraa hannde ko Ksar Al Baka.",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Le juge tient compte de ce genre de chose?",
-      "fub": "Hol miijo men e ɗuum ?",
-      "src": "11_pulaar_org_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Elle est en prison depuis le jour des meurtres.",
-      "fub": "Oo fitina ena ŋeñetenoo gila lewru maayndu nduu.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "- Est-ce que tu joues aussi à la maison ?",
-      "fub": "Holi daartol wuro maa?",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Juste une somme d'argent !",
-      "fub": "\"Min koɗi tan ko e huɗo!",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il y avait énormément de travail à la clinique.",
-      "fub": "Ngaanumma heewii alaa ɗo yitere golle seedaa tawo.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Une cave coopérative a par ailleurs vu le jour en 1939.",
-      "fub": "Ko kaŋngo kadi yeɓannde bonnde bonnunoo e hitaade 1939.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "\"Ils l'ont montré aujourd'hui et ils font un excellent travail.\"",
-      "fub": "Kono haa hannde ko e eÉ\"É\"o ngoo É\"e ngoni nde wonnoo ena heewi golle haa É\"urti.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Aujourd'hui, elle est présente dans 14 pays européens et compte plus de 9000 adhérents.",
-      "fub": "Hannde ende njogii 21 catal e Amerik e ko ɓuri 4000 tergal.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "C'est-à-dire que le processus j peut recevoir les",
-      "fub": "Ko hikka waɗtata laabi j",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il peut tomber toute l'eau du ciel.",
-      "fub": "Mo waawaa kala yoo abbo dow!",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Je le travail qu'il.",
-      "fub": "Mi weltiima he golle maa.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "La maison Bleue est la deuxième maison.",
-      "fub": "Ko toon Galle Laamorgo ɗiɗaɓo oo woni.",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "La valeur de l'argent ?",
-      "fub": "Hol kowaɗi ceede ŋakkude?",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Dans la mesure où le même nom peut être attribu...",
-      "fub": "Ko ndee innde suundu nduu foti innireede ha...",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Indestructible Nokia 3310 est le nom donné à la s...",
-      "fub": "Nokia 3310 woni baban cinnde e wiyde...",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "A été enlevé par des hommes de sécurité",
-      "fub": "A jaɓɓaama moodi Abuubakri",
-      "src": "12_pulaagu_com_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Le nom signifie-t-il quelque chose dans une autre langue ?",
-      "fub": "Mbele durngol ina innde wonnde?",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Cependant il octroie un nom à chacun de ses produits.",
-      "fub": "O, ɗum, kala fedde innde wonnde e teelal Ɓe Ɓe",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "matin du jour de l'exécution.",
-      "fub": "Ƴiiwoonde arnde subaka law.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Il y avait beaucoup de monde sur les quais et sur l'eau .\"",
-      "fub": "Ina heewi ñaamde kullmaayɗe e ladde.',",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "les montres et pendules à l'heure .",
-      "fub": "Nate gabbiiɗe e Waktu",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "C'est un travail sur toi que tu feras.",
-      "fub": "Omo ardoo gollal, Yeru: A waɗii.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Assez de la grandeur des gens à l'heure actuelle.",
-      "fub": "Ko ɗum heɓtotoo yimɓe jooni ina heewi.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "l'eau ne coule pas.",
-      "fub": "Ndiyam ɓolam lammataa..",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "le nom de Repentigny.",
-      "fub": "Innde renndaande.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Les douches et l'eau chaude ne sont pas fournies.",
-      "fub": "Jullaare ɓooyde ɗum e ndiyam addantaa ɗum wontude nooroo..",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Tous ces lieux portent le nom de l'ancien édile.",
-      "fub": "Alluwal Alluwal Alluuje Innde renndinnde Jaŋde",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "de qui toute famille reçoit son nom dans les cieux et sur la terre.",
-      "fub": "Hoɗorde kala ko woodi e aduna oo, ko e dow leydi kuɓeeje ndarii, leɗɗe puɗi.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Le verbe peut s'accorder avec le nom ou avec le complément du nom.",
-      "fub": "Felde innde nafata ko e joofaade innde walla toɗɗaade ɗum.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Les parties s'enchaînaient, et les minutes commencèrent à défiler sans que l'on s'en rende compte.",
-      "fub": "Ɗo ngelooba ñaamata ɗoo, mbeewa ina sooynoo kono heɓataa..",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Hélas, le nom est presque effacé, illisible.",
-      "fub": "Innde aaynaande woni nde toɗɗaaka, joofaaka.",
-      "src": "13_demeth_net_portal",
-      "dom": "community_portal"
-    },
-    {
-      "fr": "Cette période d'activité lui ouvre droit à l'ARE pendant quatre mois.",
-      "fub": "Dartingol ngol maa duumo hakke lebbi 4.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Chaque mois de novembre, la fondation internationale du même nom convie les hommes à se laisser pousser la moustache.",
-      "fub": "Kala goo lewru Me aduna oo fof ina mawnina ñalawma gollotooɓe.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Aujourd'hui, il continue un travail entrepris sur la France et ses mythes.",
-      "fub": "Hannde o fuɗɗiima waylowaylo no feewi e yoga e mitiyelaaji.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "On était au nombre de 11 personnes.",
-      "fub": "Keewal suɓeteeɓe 11 lawake",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Au premier étage de la maison du [...]",
-      "fub": "E wiyde gardiiɗo Galle Seek [...]",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "D'autres facteurs sont à prendre en compte comme la grande instabilité géopolitique internationale.",
-      "fub": "Gammbi ina joginoo yaakaare mawnde e jahgol Yahyaa Jammee.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Il a visité bon nombre d'écoles durant toute sa scolarité.",
-      "fub": "Kono noon kam o jannginii e duɗe keewɗe e nder Muritani.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "ils utilisaient du parfum à l'eau de rose.",
-      "fub": "Ɓe mbaɗii batu kuuɓtodinngu baylugol yiilirde to bannge goomu kisnal ndiyam.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Ils appartenaient à une sépulture et, lors de leur mise au jour, auraient été au nombre de douze.",
-      "fub": "Ko ɓe ƴamooɓe sappo e goo ɓe ngonnoo e suɓngoooji leydi Farayse... njeenayo ɗaftaama heddiima ɗiɗo.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Les résultats de ces recherchent commencent à voir le jour et envahiront nos [...]",
-      "fub": "E nder ɗuum seppooji puɗɗiima heewde e ɓeen gubbitooɓe so on mbaɗanaani min, min [...]",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Mais le travail doit être fait correctement.",
-      "fub": "Golle ɗe njahrii no haanirta nih.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "En 2010, un groupe de travail a été créé, qui a identifié les domaines les plus prometteurs du travail.",
-      "fub": "E hitaande 2010 kamɓe ngoni hooreeɓe e kawgel rafi jontinooje tawii ko Yuusu Nduur joginoo ɗeen golle.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "Leur nombre est d'environ deux millions.",
-      "fub": "Banndiiji ɗii nawi toon ko ina wona miliyonaaji ɗiɗi.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "C'est la maison des parents, la maison de famille.",
-      "fub": "Ɗiin ngoni Nabbaaji, Oogo, wuro Siidi.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "De multiples expériences ont été menées afin de vérifier cette hypothèse.",
-      "fub": "Eɓɓooje keewɗe nana ndarii ngam tabitinde ngoon miijo.",
-      "src": "14_lewlewal_com_media",
-      "dom": "community_media"
-    },
-    {
-      "fr": "et à l'argent.",
-      "fub": "Nden bee Ceede.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Isolez toutes les fuites dans la maison.",
-      "fub": "Ngoɗɗoɗee jinngol faltaade kala fooyre wuro.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Cette étoile est toujours portée disparue à l'heure actuelle,",
-      "fub": "hoodere nde fuɗan jom maa e jooni;",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Elle a aussi côtoyé de nombreux collègues de travail, certains depuis de nombreuses années.",
-      "fub": "O aynii kadi golle moƴƴe ɗe adinooɓe mo accani neɗɗanke, goɗɗe e majje heɓii duuɓi teemeɗɗe.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "3- Nous devons faire du droit à la meilleure éducation du monde, à une très [...]",
-      "fub": "2) Paama kona tefee nder duuniya fu wo anndal ɓuri teddeengal to Alla e to [...]",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "En effet d'après des recherches, on a retrouvé des descendants d'une certaine famille qu'on croyait disparue.",
-      "fub": "Hay ko Seyku maayi ko koreeji maɓɓe ndonkii holleede ɗo ɓe ubba.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Elle n'est pas sans prix à payer.",
-      "fub": "ndi nooɗaa ŋoottataad fey.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "La facturation nette agit comme un compte d'épargne.",
-      "fub": "bayloowo mbaaki no muuyri ngooti jogaaki fey.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "des enfants et de leur famille .\"",
-      "fub": "so doonii e ɓiɓɓe maɓɓe fiɓii. \"",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "L'eau ne peut être contrôlée.",
-      "fub": "Ndiyam ɗam wuɗɗataa ɗum hakkille deeƴo.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Malheur à ceux qui ont été induits en erreur tandis que ce qu'ils détestent les aborde, ce qu'ils aiment les abandonne et il leur arrive ce qui leur avait été promis.",
-      "fub": "Yo Alla junnu balɗe hedditiiɓe ɓen e maɓɓe, O newnana en nafitorgol ɓe. aamiin Siɗɓe e yiɗɓe toraama yarlagol.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Je compte sur vous pour commenter car j'apprécie les critiques.",
-      "fub": "Kono mi tiiɗinaali, sabu ko haala ganndo.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "en [2], ce nombre a été accepté",
-      "fub": "[2] E hino nde ɗoo",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Ce point de vue ne peut cependant rendre compte ni des importantes variations observées selon les cas, ni d'un certain nombre d'agis.",
-      "fub": "Hawnaaki hara sabu on ko ko tawi kon golle ɗen ko e yarlitaare fawii, kadi ko feere feere wonaa e gollireede.",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Contrat de scolarisation et le Droit à l'image pdf",
-      "fub": "Janngiree Jaaynde nden e mbaadi PDF",
-      "src": "15_webpulaaku_koode_archives",
-      "dom": "cultural_archives"
-    },
-    {
-      "fr": "Parmi celles-ci, il y a plus de 5.000 groupes différents dans plus de 70 pays.",
-      "fub": "Ɗun hawti e yimɓe wala ko gakki 5,000 ferɗoodirɓe e lesɗe ko ɓuri 72.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Cependant, la proportion d'êtres humains souffrant de la faim semble diminuer dans le monde.",
-      "fub": "Bano no ɗuuɗagal kala nooneeji digiri hokkaaɗun hollta, ilmu humanities ko deye ustoto.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Les gens qui ont [l'accès] à de telles armes ne sont pas des paysans.",
-      "fub": "Fewjooɓe fewji no hewra jawle ɗe lannataa.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Aujourd'hui, il y a un approvisionnement en nourriture.",
-      "fub": "Hannden wanaa nyaaƳo pulaaku wuuraali.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Au contraire, a plaidé le représentant, un tel texte pourrait causer du tort au Traité sur la non-prolifération des armes nucléaires (TNP).",
-      "fub": "Konankooɓe sooje'en ngi'iraay balmol ngol saman, ammaa ngol fooɗii hakkiilo ummaatoore dow teroristeeku nuukiliya.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Au lieu de cela, ils m'ont violée, battue, ils ont pris mes vêtements et m'ont jetée dans une fosse commune.",
-      "fub": "Nden ɓe ɓortan ma pat, ɓe njaɓtan fawne ma booɗɗe, ɓe accan ma a tembo.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "La loi contre le blanchiment d'argent permet-elle de confisquer les biens des personnes impliquées?",
-      "fub": "• Jawdi wasiyiiɗo on hino waawi yeebaade e juuɗe halfinaaɗo wasuyee on?",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Mes amis me demandent parfois si je ne trouve pas démoralisant le fait de travailler dans un lieu où les personnes souffrent.",
-      "fub": "Lomtin lontooji Nulaaɓe Ma'a to misiide amen haa huuɓa geɓal.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "À cette fin, il peut détenir des candidats à l'immigration.",
-      "fub": "Gam majjum, o waawan wallugo jarbaaɓe.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Elle a récemment fait un nouveau déplacement mais, cette fois-ci, c'était avec joie, car ces derniers mois ont été les plus traumatisants de sa vie.",
-      "fub": "Yimɓe ɓen juhaa, sabu si ɓe meemii furee, haray ɓe tuunintinike yeru balɗe buy.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Le Brésil a soutenu l'adoption du rapport de l'Ouganda.",
-      "fub": "Lawyaen Uganda Tefraama fadda nufo Ardiido lesdi ndin",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "Il ne faut pas laisser de tels évènements entacher ces efforts.",
-      "fub": "haanaa ka accen ɗii ɗi walta ɗi funnataa.",
-      "src": "16_un_udhr_globalvoices_civic",
-      "dom": "civic_human_rights"
-    },
-    {
-      "fr": "[6:52] Et n'écarte pas ceux qui implorent leur Seigneur jour et nuit, se vouant à Lui seul.",
-      "fub": "7 Kadi Allah waɗataa gooŋgaaku bee law haa suɓaaɓe muuɗum, wookananɓe mo jemma e naaŋge na? 8 Mi ɗon wi'a on, o waɗanan ɓe gooŋgaaku bee law.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "246 - \"Au nom d'Allah, et Allah est le Plus Grand.",
-      "fub": "4 Ammaa enɗam Allah ɗuuɗi, yiide maako boo mawni masin.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Yune elle-même s'en rend compte.",
-      "fub": "Yuhanna bee hoore muuɗum yi'i ɗum.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "C'est lui qui va ensuite mettre à jour les registres.",
-      "fub": "Nden o ɓaditi nde, o lii'i kirsaaɗi dow maare.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "16 n'était pas un grand nombre de personnes.",
-      "fub": "16 O ardoto yimɓe ɗuuɗɓe ɓe ngalaa limgal.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "D'autres se sont d'ailleurs déjà chargés de lui donner les étrivières; quant à nous, en vérité, nous lui faisons grâce.",
-      "fub": "Ɗuuɗɓe ɗon ndo'ano min, Allah boo jaɓanan ɓe, woonanan min, ngam haa ɗuuɗɓe ngetta mo ngam amin.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Et il m'a dit: \" Ne scelle pas les mots de la prophétie, car l'heure est proche.",
-      "fub": "Sujidan Allah!\" 10 Fahin, o wi'i yam: \"Taa maɓɓu bolle annabaaku nder deftere nde'e, ngam wakkatiire nde kuuje ɗe'e laatoto, ɓadake yottaago.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "17 trouver l'argent nécessaire.",
-      "fub": "17 Taa nume mi ɗon ɗaɓɓa ceede mon.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Seigneur, pardonne-moi, ainsi qu'à mes enfants, aux fidèles qui entreront dans ma maison, aux hommes, aux femmes qui croient, et extermine les méchants.",
-      "fub": "12 Ceye ton yeeso Allah Jawmiraawo mon, onon e ɓikkoy mon e maccuɓe mon e horɓe mon e Lewiŋko'en jooɗiiɓe nder gure mon, ngam Lewiŋko'en marataa lesdi caka mooɗon.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "22 Nous avons également apporté de l'argent supplémentaire pour acheter de la nourriture.",
-      "fub": "22 Min ngaddi ceede feere boo ngam soodugo nyaamdu.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Moïse a frappé le rocher (Christ) dans le désert et il est sorti de l'eau en abondance...",
-      "fub": "Muusa sakkini ngal nder ndiyam, ɗam laati mbelɗam.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Dieu a-t-il un nom ?",
-      "fub": "Allah woodi innde na?",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Ce mal, vicieux, insidieux, s'insinuait en vous à chaque fois que la pénombre chassait le jour.",
-      "fub": "To on itti toonyaare e sappaago bee kooli e bolle kalluɗe fuu caka mooɗon, 10 to on kaarni weelaaɓe, to on mballi laafuɓe, nden kam annoora mon fuɗan nder nyiɓre, jemma mon laatoto bana caka nyalawma.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Avant tout, aimez-vous ardemment les uns les autres, car l'amour efface un grand nombre de péchés.",
-      "fub": "8 Ko ɓuri fuu, ngiɗindire bee yiide gooŋgaare, ngam yiide suddan hakkeeji ɗuuɗɗi.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Le troisième jour, Joseph vient leur dire: \" Moi, je crains Dieu.",
-      "fub": "18 Nyande tataɓre Yusufu wi'i ɓe: \"Min boo mi kulɗo Allah.",
-      "src": "17_hf_burkimbia_fub_adamawa_cameroon",
-      "dom": "parallel_adamawa"
-    },
-    {
-      "fr": "Les personnes qui n'ont pas obtenu au moins deux heures - même si elles ont dépassé une heure par semaine - n'ont pas touché les prestations.",
-      "fub": "Yimɓe ko walaa keɓa ko famɗi fuu awaji ɗiɗi - ko to ɓe saali awa gootel haa asawere - walaa keɓa boteji man.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Beaucoup considèrent le profilage racial de facto comme un exemple de racisme institutionnel dans l'application de la loi.",
-      "fub": "Dubbe hoositiri wadugo himbe nder gebe sanadu laral mabbe dum misalu on je hollata hukuma tabiti hollugo feeroritiral ngam nonde laral.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Avec 16 millions vétérans éligibles, la possibilité d'acheter une maison a été soudainement à la main.",
-      "fub": "Bee nanta andaaɓe miliyonji 16, laawol suudugo saare ɗo dow koyɗum.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "C'est sur eux que se lèvera l'Heure.\"",
-      "fub": "Ammaa ɗum woni wakkati mooɗon e baawɗe nyiɓre.\"",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Si seulement quelques OGM ont été approuvés pour la culture dans l'UE, un certain nombre d'OGM ont été approuvés pour l'importation et la transformation.",
-      "fub": "Ko nde ni tageefooji baylaaɗi seɗɗa tan ndemetee nder Kawtal Leyɗe Tuuranko'en (EU), ammaa ɗum jaɓii iri maaji ɗuuɗɗi nastinoyee ngam sarrafaago kujje.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Il n'y a pas d'accord universel sur le nombre de \" pays \" dans le monde puisque plusieurs États se sont disputés le statut de souveraineté .",
-      "fub": "\"Walaa yerdol dow kuuje gootel dow \"\"lesɗe\"\" woni nder duniyaru nden jihaji ɗuɗɗum ɗo miija dow darnde joonde maɓɓe leydi.\"",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "En vertu du droit international, l' ONU et l' UNESCO tentent d'établir et d'appliquer des règles à cet effet.",
-      "fub": "Les doka lesdi e lesdi, UN e UNESCO tiinake haro tigguki e semmbiɗinki doka ngam manufa ka'a.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "La maison dans ce contexte est synonyme de racines familiales.",
-      "fub": "Cuuɗi e ɗo'o ɗon nanndi e ɗaɗi iyalji.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Cependant, un genre dans un royaume est autorisé à porter un nom scientifique utilisé comme nom générique (ou le nom d'un taxon d'un autre rang) dans un royaume régi par un code de nomenclature différent.",
-      "fub": "Seini, dun don dala genus nder laamurde woore hoosha innde dun huwirta ba innde jenerik (ko bou innde tagzonwol nder darnde goddum) nder laamurde huwotoojum dou dooka inndinnki feere.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Un certain nombre de pays européens, dont la France et la Suisse , ne collectent pas d'informations sur l'origine ethnique de leur population résidente.",
-      "fub": "Ɗuuɗal yimɓe lesɗe Tuubanko'en hawtidiri e Faransa e Siwizilan jaɓayi bayanuuji dow lanyolgu yimɓe lesdi maɓɓe.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Cependant, Pythagoras croyait au nombre absolu et ne pouvait accepter l'existence de nombres irrationnels.",
-      "fub": "Fuu e non, Paytagorasɓe nuɗɗinii nder semmbe limɗe, kadin mbaawata njaɓa wonuki limɗe e ngalla nder hakkiilo.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "La Liberté des Anciens était une liberté républicaine participative, qui donnait aux citoyens le droit d'influencer directement la politique à travers des débats et des votes dans l'assemblée publique.",
-      "fub": "Ndimu yimɓe nane saaliiɓe hawtidiri e huuduki nder leddi, hokkuɗun yimɓe daama ndimu ko moye sembiɗina siyaasa mun nder muhawara e suɓal e nder yimɓe.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "La construction du canal était un important travail d'ingénierie au cours des premières phases de la révolution industrielle.",
-      "fub": "Maadi Canalwal laatakeno himminiindi kuugal injiiniyaarin sarde geɓe arane ɗe way.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Finances peut également être définie comme la science de la gestion de l'argent.",
-      "fub": "Ɗum wawan wiigo Finansi ɗum science moftiki be anndugo ceede.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
-    },
-    {
-      "fr": "Ces résultats inattendus conduisent les chercheurs à essayer de corriger ce qu'ils pensent être une erreur dans leur méthode.",
-      "fub": "Ɗe'e ƴewte ɗe kammaaka ngaɗta ardiiɓe tewtuki anndal e kaɓda dow mo\"inki ko ɓe kammii ɗum boofal nder ɗtal maɓɓe.",
-      "src": "18_hf_burkimbia_fuv_central_fulfulde",
-      "dom": "parallel_general"
+  "commands": {
+    "SAF_CMD_001": {
+      "code": "SAF_CMD_001",
+      "fr": "Appuyez pour entendre l'explication vocale de cette étape.",
+      "en": "Tap to hear the voice explanation of this step.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Bán nâ úwôg ndimzana itǝ́ yî.",
+        "audio": "eton/saf_cmd_001_take1_b54a5522.webm",
+        "duration": 3.65
+      }
+    },
+    "SAF_CMD_002": {
+      "code": "SAF_CMD_002",
+      "fr": "Écouter la traduction vocale.",
+      "en": "Listen to the voice translation.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Wóg mpɛlní bibug",
+        "audio": "eton/saf_cmd_002_take1_2ec0123c.webm",
+        "duration": 1.8
+      }
+    },
+    "SAF_CMD_003": {
+      "code": "SAF_CMD_003",
+      "fr": "Répéter l'explication vocale.",
+      "en": "Repeat the voice explanation.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Báglǝ̂ vǝ̄ ndimzana",
+        "audio": "eton/saf_cmd_003_take1_37395e0c.webm",
+        "duration": 2.88
+      }
+    },
+    "SAF_CMD_004": {
+      "code": "SAF_CMD_004",
+      "fr": "Lire l'explication à vitesse ralentie.",
+      "en": "Play the explanation at a slower speed.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "láŋ ndimzana utǝ́tǝ̂g",
+        "audio": "eton/saf_cmd_004_take1_d561b3ed.webm",
+        "duration": 3.57
+      }
+    },
+    "SAF_CMD_005": {
+      "code": "SAF_CMD_005",
+      "fr": "Changer la langue d'écoute et de traduction.",
+      "en": "Change the listening and translation language.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Cɛ́nî ŋkálɔ̂ íwôg ee ndimzana",
+        "audio": "eton/saf_cmd_005_take1_fd4689f0.webm",
+        "duration": 3.33
+      }
+    },
+    "SAF_CMD_006": {
+      "code": "SAF_CMD_006",
+      "fr": "Afficher la traduction sous le texte original.",
+      "en": "Display translation under original text.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Púdî ndimzana ásī ítin bibúg",
+        "audio": "eton/saf_cmd_006_take1_ce6aa019.webm",
+        "duration": 3.45
+      }
+    },
+    "SAF_CMD_007": {
+      "code": "SAF_CMD_007",
+      "fr": "Afficher uniquement le texte officiel français.",
+      "en": "Display only original French text.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Púd bibúg vǝ́ á ŋkwál pulasí",
+        "audio": "eton/saf_cmd_007_take1_befec8e2.webm",
+        "duration": 3.04
+      }
+    },
+    "SAF_CMD_008": {
+      "code": "SAF_CMD_008",
+      "fr": "Remplacer l'affichage par votre langue nationale.",
+      "en": "Replace display with your national language.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Púd téléfɔ̄n wɔ̂ á ŋkwál itón",
+        "audio": "eton/saf_cmd_008_take1_88547d95.webm",
+        "duration": 2.95
+      }
+    },
+    "SAF_CMD_009": {
+      "code": "SAF_CMD_009",
+      "fr": "Arrêter la voix.",
+      "en": "Stop the voice playback.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "cíg cīŋ",
+        "audio": "eton/saf_cmd_009_take1_77302cbf.webm",
+        "duration": 1.58
+      }
+    },
+    "SAF_CMD_010": {
+      "code": "SAF_CMD_010",
+      "fr": "Entrez votre code secret pour autoriser la transaction.",
+      "en": "Enter your secret PIN to authorize the transaction.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Púdǝ̀ ɛsɔ bivǝglǝ bibúg byɔ̂ újǝ̂blǝ traŋsaksíōŋ",
+        "audio": "eton/saf_cmd_010_take1_e1286fce.webm",
+        "duration": 5.62
+      }
+    },
+    "SAF_CMD_011": {
+      "code": "SAF_CMD_011",
+      "fr": "Entrez le code de vérification reçu par SMS.",
+      "en": "Enter the verification code received via SMS.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Púdǝ̀ ɛsɔ́ bivǝglǝ bibúg úgbǝ̂ ee pɔ̄.",
+        "audio": "eton/saf_cmd_011_take1_452e31a6.webm",
+        "duration": 5.01
+      }
+    },
+    "SAF_CMD_012": {
+      "code": "SAF_CMD_012",
+      "fr": "Le plafond de transfert quotidien a été atteint.",
+      "en": "The daily transfer limit has been reached.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Í tāŋ í mwān unǝ lôm amǒz mwág úpâm",
+        "audio": "eton/saf_cmd_012_take1_f513782c.webm",
+        "duration": 5.04
+      }
+    },
+    "SAF_CMD_013": {
+      "code": "SAF_CMD_013",
+      "fr": "Télécharger le reçu de paiement en PDF.",
+      "en": "Download the payment receipt in PDF.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "ɲɔŋ resu íyagna í mwání idí pdf",
+        "audio": "eton/saf_cmd_013_take1_bd8f2136.webm",
+        "duration": 4.03
+      }
+    },
+    "SAF_CMD_014": {
+      "code": "SAF_CMD_014",
+      "fr": "Partager la confirmation de transfert par SMS ou WhatsApp.",
+      "en": "Share the transfer confirmation via SMS or WhatsApp.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Káb koŋfimasíoŋ ílôm mwání á pɔ̄ ee whatsapps",
+        "audio": "eton/saf_cmd_014_take1_74131fa2.webm",
+        "duration": 4.31
+      }
+    },
+    "SAF_CMD_015": {
+      "code": "SAF_CMD_015",
+      "fr": "Votre transaction est protégée par le protocole bancaire Safinum Innovate 2026.",
+      "en": "Your transaction is secured by the Safinum Innovate 2026 banking protocol.",
+      "category": "Assistance Vocale Maloba",
+      "eto": {
+        "text": "Protokól á bāŋ Safinum Innovate m̀mú akuda íbā ee mǝwóm bā ee samna utǝ́ baglǝ traŋsasíōŋ á mwán wɔ̄.",
+        "audio": "eton/saf_cmd_015_take2_4ce32e32.webm",
+        "duration": 10.19
+      }
     }
-  ]
+  },
+  "by_code": {
+    "SAF_CMD_001": {
+      "code": "SAF_CMD_001",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Appuyez pour entendre l'explication vocale de cette étape.",
+      "en": "Tap to hear the voice explanation of this step.",
+      "eto": {
+        "text": "Bán nâ úwôg ndimzana itǝ́ yî.",
+        "audio": "eton/saf_cmd_001_take1_b54a5522.webm",
+        "duration": 3.65
+      }
+    },
+    "SAF_CMD_002": {
+      "code": "SAF_CMD_002",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Écouter la traduction vocale.",
+      "en": "Listen to the voice translation.",
+      "eto": {
+        "text": "Wóg mpɛlní bibug",
+        "audio": "eton/saf_cmd_002_take1_2ec0123c.webm",
+        "duration": 1.8
+      }
+    },
+    "SAF_CMD_003": {
+      "code": "SAF_CMD_003",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Répéter l'explication vocale.",
+      "en": "Repeat the voice explanation.",
+      "eto": {
+        "text": "Báglǝ̂ vǝ̄ ndimzana",
+        "audio": "eton/saf_cmd_003_take1_37395e0c.webm",
+        "duration": 2.88
+      }
+    },
+    "SAF_CMD_004": {
+      "code": "SAF_CMD_004",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Lire l'explication à vitesse ralentie.",
+      "en": "Play the explanation at a slower speed.",
+      "eto": {
+        "text": "láŋ ndimzana utǝ́tǝ̂g",
+        "audio": "eton/saf_cmd_004_take1_d561b3ed.webm",
+        "duration": 3.57
+      }
+    },
+    "SAF_CMD_005": {
+      "code": "SAF_CMD_005",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Changer la langue d'écoute et de traduction.",
+      "en": "Change the listening and translation language.",
+      "eto": {
+        "text": "Cɛ́nî ŋkálɔ̂ íwôg ee ndimzana",
+        "audio": "eton/saf_cmd_005_take1_fd4689f0.webm",
+        "duration": 3.33
+      }
+    },
+    "SAF_CMD_006": {
+      "code": "SAF_CMD_006",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Afficher la traduction sous le texte original.",
+      "en": "Display translation under original text.",
+      "eto": {
+        "text": "Púdî ndimzana ásī ítin bibúg",
+        "audio": "eton/saf_cmd_006_take1_ce6aa019.webm",
+        "duration": 3.45
+      }
+    },
+    "SAF_CMD_007": {
+      "code": "SAF_CMD_007",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Afficher uniquement le texte officiel français.",
+      "en": "Display only original French text.",
+      "eto": {
+        "text": "Púd bibúg vǝ́ á ŋkwál pulasí",
+        "audio": "eton/saf_cmd_007_take1_befec8e2.webm",
+        "duration": 3.04
+      }
+    },
+    "SAF_CMD_008": {
+      "code": "SAF_CMD_008",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Remplacer l'affichage par votre langue nationale.",
+      "en": "Replace display with your national language.",
+      "eto": {
+        "text": "Púd téléfɔ̄n wɔ̂ á ŋkwál itón",
+        "audio": "eton/saf_cmd_008_take1_88547d95.webm",
+        "duration": 2.95
+      }
+    },
+    "SAF_CMD_009": {
+      "code": "SAF_CMD_009",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Arrêter la voix.",
+      "en": "Stop the voice playback.",
+      "eto": {
+        "text": "cíg cīŋ",
+        "audio": "eton/saf_cmd_009_take1_77302cbf.webm",
+        "duration": 1.58
+      }
+    },
+    "SAF_CMD_010": {
+      "code": "SAF_CMD_010",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Entrez votre code secret pour autoriser la transaction.",
+      "en": "Enter your secret PIN to authorize the transaction.",
+      "eto": {
+        "text": "Púdǝ̀ ɛsɔ bivǝglǝ bibúg byɔ̂ újǝ̂blǝ traŋsaksíōŋ",
+        "audio": "eton/saf_cmd_010_take1_e1286fce.webm",
+        "duration": 5.62
+      }
+    },
+    "SAF_CMD_011": {
+      "code": "SAF_CMD_011",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Entrez le code de vérification reçu par SMS.",
+      "en": "Enter the verification code received via SMS.",
+      "eto": {
+        "text": "Púdǝ̀ ɛsɔ́ bivǝglǝ bibúg úgbǝ̂ ee pɔ̄.",
+        "audio": "eton/saf_cmd_011_take1_452e31a6.webm",
+        "duration": 5.01
+      }
+    },
+    "SAF_CMD_012": {
+      "code": "SAF_CMD_012",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Le plafond de transfert quotidien a été atteint.",
+      "en": "The daily transfer limit has been reached.",
+      "eto": {
+        "text": "Í tāŋ í mwān unǝ lôm amǒz mwág úpâm",
+        "audio": "eton/saf_cmd_012_take1_f513782c.webm",
+        "duration": 5.04
+      }
+    },
+    "SAF_CMD_013": {
+      "code": "SAF_CMD_013",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Télécharger le reçu de paiement en PDF.",
+      "en": "Download the payment receipt in PDF.",
+      "eto": {
+        "text": "ɲɔŋ resu íyagna í mwání idí pdf",
+        "audio": "eton/saf_cmd_013_take1_bd8f2136.webm",
+        "duration": 4.03
+      }
+    },
+    "SAF_CMD_014": {
+      "code": "SAF_CMD_014",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Partager la confirmation de transfert par SMS ou WhatsApp.",
+      "en": "Share the transfer confirmation via SMS or WhatsApp.",
+      "eto": {
+        "text": "Káb koŋfimasíoŋ ílôm mwání á pɔ̄ ee whatsapps",
+        "audio": "eton/saf_cmd_014_take1_74131fa2.webm",
+        "duration": 4.31
+      }
+    },
+    "SAF_CMD_015": {
+      "code": "SAF_CMD_015",
+      "category": "Assistance Vocale Maloba",
+      "fr": "Votre transaction est protégée par le protocole bancaire Safinum Innovate 2026.",
+      "en": "Your transaction is secured by the Safinum Innovate 2026 banking protocol.",
+      "eto": {
+        "text": "Protokól á bāŋ Safinum Innovate m̀mú akuda íbā ee mǝwóm bā ee samna utǝ́ baglǝ traŋsasíōŋ á mwán wɔ̄.",
+        "audio": "eton/saf_cmd_015_take2_4ce32e32.webm",
+        "duration": 10.19
+      }
+    },
+    "SAF_EXP_001": {
+      "code": "SAF_EXP_001",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cet espace est un simulateur d'évaluation pour le Hackathon : aucun argent réel n'est manipulé.",
+      "en": "This space is an evaluation simulator for the Hackathon: no real money is handled.",
+      "eto": {
+        "text": "ipǝ́ yî inǝ nǝ́ ŋkâd asú hackaton vǝdâ laáyeey mbyadgan ee m̀paŋ mwání.",
+        "audio": "eton/saf_exp_001_take1_f4d8732a.webm",
+        "duration": 7.88
+      }
+    },
+    "SAF_EXP_002": {
+      "code": "SAF_EXP_002",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Service bancaire numérique accessible depuis votre téléphone ou ordinateur.",
+      "en": "Digital banking service accessible from your mobile phone or computer.",
+      "eto": {
+        "text": "Isá ī báŋ nǝ́ unǝ bɛlnǝ ee yɔ̂ vôm úsǝ̂ ŋgǝ́ ee ŋkwǎl wɔ̂ ŋgǝ ee ɔrdinateur wɔ̂ .",
+        "audio": "eton/saf_exp_002_take1_bbcfbc8f.webm",
+        "duration": 8.43
+      }
+    },
+    "SAF_EXP_003": {
+      "code": "SAF_EXP_003",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Document officiel présentant les consignes et le barème de test du hackathon.",
+      "en": "Official document presenting test instructions and scoring for the hackathon.",
+      "eto": {
+        "text": "Mǝpǝ́b mǝ̄ ŋgwamnɔ mǝvǝ́gǝ̂ mǝlǝ́bgǝ̂ ee táŋ í ŋkad í hakaton.",
+        "audio": "eton/saf_exp_003_take1_c5f81cd6.webm",
+        "duration": 4.93
+      }
+    },
+    "SAF_EXP_004": {
+      "code": "SAF_EXP_004",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à la page principale de présentation du Hackathon SAFINUM.",
+      "en": "Return to the main SAFINUM Hackathon presentation page.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á wúnâ ílɛ̄d ɲǒl í Hakaton.",
+        "audio": "eton/saf_exp_004_take1_bbda5637.webm",
+        "duration": 4.21
+      }
+    },
+    "SAF_EXP_005": {
+      "code": "SAF_EXP_005",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 1 : Somme d'argent actuellement disponible sur votre compte.",
+      "en": "Step 1: Money currently available in your account.",
+      "eto": {
+        "text": "Itǝ́ ivwág : itáŋ i mwání inǝ́ wɔ ā mpǝ́g mwání.",
+        "audio": "eton/saf_exp_005_take2_b83d6aa2.webm",
+        "duration": 4.35
+      }
+    },
+    "SAF_EXP_006": {
+      "code": "SAF_EXP_006",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commission prélevée par le service financier pour traiter l'envoi de votre argent.",
+      "en": "Fee charged by the financial service to process your money transfer.",
+      "eto": {
+        "text": "ídâm isá í mwání itǝ́ ɲɔŋ ijɔŋ ísǝ̂ itǝ́ kwam nâ úlôm mwání.",
+        "audio": "eton/saf_exp_006_take1_55cc6161.webm",
+        "duration": 5.36
+      }
+    },
+    "SAF_EXP_007": {
+      "code": "SAF_EXP_007",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La personne qui va recevoir l'argent que vous envoyez.",
+      "en": "The person who will receive the money you are sending.",
+      "eto": {
+        "text": "Ímôd ee gbǝ̂ ì mwán utǝ́ lôm.",
+        "audio": "eton/saf_exp_007_take1_ba7c19a3.webm",
+        "duration": 2.88
+      }
+    },
+    "SAF_EXP_008": {
+      "code": "SAF_EXP_008",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Résumé complet de votre opération pour tout vérifier avant le paiement définitif.",
+      "en": "Step 4: Full summary of your transaction to verify everything before final payment.",
+      "eto": {
+        "text": "Itǝ́ ína : ijwam í dâm ɛ́sǝ̂ ukwam ususwâ nâ uyagnǝ mwání.",
+        "audio": "eton/saf_exp_008_take4_2b7571c8.webm",
+        "duration": 6.44
+      }
+    },
+    "SAF_EXP_009": {
+      "code": "SAF_EXP_009",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 5 : Preuve officielle et reçu confirmant que votre transaction a réussi.",
+      "en": "Step 5: Official proof and receipt confirming your transaction succeeded.",
+      "eto": {
+        "text": "Itǝ́ ítān : ndǝm í ŋgwamnɔ ee ɛpǝ́b bǝ́lɛ̄gǝ̂ nâ ílôm i mwání íkâb.",
+        "audio": "eton/saf_exp_009_take1_8d1addca.webm",
+        "duration": 6.9
+      }
+    },
+    "SAF_EXP_010": {
+      "code": "SAF_EXP_010",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre espace bancaire personnel où figurent votre solde et votre numéro de compte.",
+      "en": "Your personal banking space displaying your balance and account number.",
+      "eto": {
+        "text": "Ɛpolo ɛ́ bāŋ daání ɛtǝ́ lɛ́dǝ̂ mwan wɔ̄ ee nɔmɔ a mpǝ́g mwán wɔ̄.",
+        "audio": "eton/saf_exp_010_take2_e36e844f.webm",
+        "duration": 6.16
+      }
+    },
+    "SAF_EXP_011": {
+      "code": "SAF_EXP_011",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Message de bienvenue adressé à la titulaire du compte, Amina Ngo Bell.",
+      "en": "Welcome message addressed to the account holder, Amina Ngo Bell.",
+      "eto": {
+        "text": "Pɔ́ ī mmǝmǝ nsɔɔní ímôd agbɛɛ mpǝ́g mwán, Amina Ngo Bell.",
+        "audio": "eton/saf_exp_011_take2_f7029023.webm",
+        "duration": 6.56
+      }
+    },
+    "SAF_EXP_012": {
+      "code": "SAF_EXP_012",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vérifiez d'abord le montant disponible sur votre compte avant de démarrer votre envoi d'argent.",
+      "en": "Check your available account balance first before starting your money transfer.",
+      "eto": {
+        "text": "Kaza jwam í tāŋ mwánî inǝ wɔ̂ á pǝ̄g mwání ususu nâ kázâ lōm mwani.",
+        "audio": "eton/saf_exp_012_take1_762dd7bf.webm",
+        "duration": 6.68
+      }
+    },
+    "SAF_EXP_013": {
+      "code": "SAF_EXP_013",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant exact immédiatement utilisable sur votre compte.",
+      "en": "Exact amount immediately available on your account.",
+      "eto": {
+        "text": "Ítāŋ í mwání inǝ wɔ̂ mpaŋpaŋ á pǝ̄g mwání.",
+        "audio": "eton/saf_exp_013_take1_e9d76567.webm",
+        "duration": 3.95
+      }
+    },
+    "SAF_EXP_014": {
+      "code": "SAF_EXP_014",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Compte bancaire principal servant aux dépôts, retraits et virements quotidiens.",
+      "en": "Main bank account used for daily deposits, withdrawals, and transfers.",
+      "eto": {
+        "text": "Ŋ̀kúkúmá pǝ́g mwání uságâ asú inɛ, ivaza , ilôm mwani amú usǝ̂.",
+        "audio": "eton/saf_exp_014_take1_2005ee98.webm",
+        "duration": 7.96
+      }
+    },
+    "SAF_EXP_015": {
+      "code": "SAF_EXP_015",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Cliquez sur ce bouton pour commencer un envoi d'argent et passer à l'étape 2.",
+      "en": "Click this button to start sending money and move to Step 2.",
+      "eto": {
+        "text": "Kǒm í logo yi nâ ukaza lóm mwání ee ulôd itǝ́ íbā.",
+        "audio": "eton/saf_exp_015_take1_e2f95a90.webm",
+        "duration": 5.35
+      }
+    },
+    "SAF_EXP_016": {
+      "code": "SAF_EXP_016",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Accéder au simulateur de tarification pour connaître le coût d'un transfert.",
+      "en": "Access the fee simulator to know the cost of a transfer.",
+      "eto": {
+        "text": "Kɛ́nî ípǝ̂ bǝ́tǝ̄ yɛ́n ítāŋ í mwání ilôm mwání í ɲɔŋ.",
+        "audio": "eton/saf_exp_016_take1_e639b371.webm",
+        "duration": 5.18
+      }
+    },
+    "SAF_EXP_017": {
+      "code": "SAF_EXP_017",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Historique de vos 4 derniers mouvements d'argent (paiements et réceptions).",
+      "en": "History of your last 4 money movements (payments and receipts).",
+      "eto": {
+        "text": "Kálâda ilôm i mwání ínâ (isuzuni ee ɛjǝblǝ)",
+        "audio": "eton/saf_exp_017_take2_e596d97d.webm",
+        "duration": 6.84
+      }
+    },
+    "SAF_EXP_018": {
+      "code": "SAF_EXP_018",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Achat ou paiement effectué auprès d'un commerçant (-12 500 FCFA).",
+      "en": "Purchase or payment made to a merchant (-12,500 FCFA).",
+      "eto": {
+        "text": "Ŋ̀kuz ee isuzuni úkwâm abɔ́ bɛɛsɛɛ (ivaza i twágsîn ɛwóm ee íbā ee mintɛd mítān)",
+        "audio": "eton/saf_exp_018_take1_266c6e57.webm",
+        "duration": 10.77
+      }
+    },
+    "SAF_EXP_019": {
+      "code": "SAF_EXP_019",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Versement de votre salaire reçu sur le compte (+180 000 FCFA).",
+      "en": "Salary payment received in your account (+180,000 FCFA).",
+      "eto": {
+        "text": "Ilôm í mwán a ŋgwan wɔ̂ á pǝ̄g mwání (Ntɛd twágsîn ee twágsîn mǝwóm ŋmâm. )",
+        "audio": "eton/saf_exp_019_take1_8c898055.webm",
+        "duration": 9.08
+      }
+    },
+    "SAF_EXP_020": {
+      "code": "SAF_EXP_020",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement d'argent reçu d'un tiers sur votre compte (+50 000 FCFA).",
+      "en": "Money transfer received from a third party into your account (+50,000 FCFA).",
+      "eto": {
+        "text": "Ilóm mwání môd alóm á pǝg mwán wɔ ( Twágsîn mǝwóm tān )",
+        "audio": "eton/saf_exp_020_take2_40bf9606.webm",
+        "duration": 6.09
+      }
+    },
+    "SAF_EXP_021": {
+      "code": "SAF_EXP_021",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règlement de votre facture d'électricité (-7 500 FCFA).",
+      "en": "Payment of your electricity bill (-7,500 FCFA).",
+      "eto": {
+        "text": "Iyagna í mwān a kudáŋ (ivaza i twágsîn zaŋmɛɛ ee mintɛd mítān)",
+        "audio": "eton/saf_exp_021_take1_91b480d1.webm",
+        "duration": 7.7
+      }
+    },
+    "SAF_EXP_022": {
+      "code": "SAF_EXP_022",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 2 : Calcul du coût du transfert selon le canal choisi.",
+      "en": "Step 2: Calculation of the transfer cost based on chosen channel.",
+      "eto": {
+        "text": "Itǝ́ íbā : kwam táŋ ílôm í mwání ízɛ̄n útwâb.",
+        "audio": "eton/saf_exp_022_take2_c0ea22f6.webm",
+        "duration": 4.57
+      }
+    },
+    "SAF_EXP_023": {
+      "code": "SAF_EXP_023",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Sélectionnez le canal d'envoi et tapez le montant : la commission et le total à débiter s'affichent instantanément.",
+      "en": "Select the transfer channel and enter the amount: the fee and total to debit are displayed instantly.",
+      "eto": {
+        "text": "Twáb zɛ̄n ílôm mwání ee pud táŋi mwání : mwán abɔ frais ee mwán ásǝ̂ ɛtǝ́ yé.",
+        "audio": "eton/saf_exp_023_take1_2f8f513b.webm",
+        "duration": 9.3
+      }
+    },
+    "SAF_EXP_024": {
+      "code": "SAF_EXP_024",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Le réseau financier utilisé pour transmettre les fonds au bénéficiaire.",
+      "en": "The financial network used to send funds to the recipient.",
+      "eto": {
+        "text": "Résó a mwání bǝ́bɛlnǝŋgan ee wɔ̂ nâ bǝ́lôm mwání ímôd atǝ́ dī isuzuni.",
+        "audio": "eton/saf_exp_024_take1_a906937a.webm",
+        "duration": 7.97
+      }
+    },
+    "SAF_EXP_025": {
+      "code": "SAF_EXP_025",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transfert interne vers un autre compte Safinum Pay : 100 % gratuit (0 FCFA de frais).",
+      "en": "Internal transfer to another Safinum Pay account: 100% free (0 FCFA fees).",
+      "eto": {
+        "text": "Ilôm í mwān á nnǝ̄m mpǝg mwánì Safinum Pay mpǝ́bǝ̂ : ɛ́nǝ̂ á zǝzǝ (laátǝ̃ ɲɔ̂ŋ mwání).",
+        "audio": "eton/saf_exp_025_take1_5306b4ac.webm",
+        "duration": 7.68
+      }
+    },
+    "SAF_EXP_026": {
+      "code": "SAF_EXP_026",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "L'argent arrive immédiatement chez le destinataire et aucun frais n'est prélevé.",
+      "en": "The money arrives immediately at the recipient and no fee is deducted.",
+      "eto": {
+        "text": "Mwán atǝ́ pãm ábɔ̄ ímôd utǝ́ lôm mwání ee baátǝ̄ wɔ cíg bɔ frais",
+        "audio": "eton/saf_exp_026_take1_fb41284b.webm",
+        "duration": 6.17
+      }
+    },
+    "SAF_EXP_027": {
+      "code": "SAF_EXP_027",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Envoi vers un portefeuille Mobile Money (commission de 1,5 %).",
+      "en": "Transfer to a Mobile Money wallet (1.5% fee).",
+      "eto": {
+        "text": "Lóm mwání ā mpǝg mwání a Mobile money ( komisón pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān )",
+        "audio": "eton/saf_exp_027_take1_88a79b14.webm",
+        "duration": 9.06
+      }
+    },
+    "SAF_EXP_028": {
+      "code": "SAF_EXP_028",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif Mobile Money : 1,5 % du montant envoyé, avec un minimum de 100 FCFA et un plafond de 2 500 FCFA.",
+      "en": "Mobile Money fee: 1.5% of the sent amount, with minimum 100 FCFA and maximum 2,500 FCFA.",
+      "eto": {
+        "text": "Mwání a mobile money pudcáŋ a pwág ɛtwan ɛ́ mvozobo ee ítān í mwán úlôm, ee mwán a mǝkazi ntɛd ee mwán a mǝman twágsîn íbā ee mintɛd mítãn.",
+        "audio": "eton/saf_exp_028_take3_91f83dfa.webm",
+        "duration": 12.23
+      }
+    },
+    "SAF_EXP_029": {
+      "code": "SAF_EXP_029",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Virement vers un compte ouvert dans une autre banque (commission de 2 %).",
+      "en": "Transfer to an account in another bank (2% fee).",
+      "eto": {
+        "text": "iÍôm mwání á mpǝ́g mwání mpǝ́bǝ̂ uŋgáyázban á bāŋ mpǝ́bê (komisón pudsáŋ íbā)",
+        "audio": "eton/saf_exp_029_take1_229d39a5.webm",
+        "duration": 7.18
+      }
+    },
+    "SAF_EXP_030": {
+      "code": "SAF_EXP_030",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Tarif interbancaire : 2 % du montant envoyé, avec un minimum de 200 FCFA et un maximum de 5 000 FCFA.",
+      "en": "Interbank fee: 2% of the sent amount, with minimum 200 FCFA and maximum 5,000 FCFA.",
+      "eto": {
+        "text": "Táŋ i mwání í bɔ báŋ bɔ ee bɔ : pudsáŋ íbā ímwán úlôm, ee mwán a mǝkaza mintɛd mī tān ee ŋkóŋ abú mwán unǝ lôm twágsîn ítān.",
+        "audio": "eton/saf_exp_030_take1_a353c2a5.webm",
+        "duration": 12.36
+      }
+    },
+    "SAF_EXP_031": {
+      "code": "SAF_EXP_031",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "La somme en FCFA que vous souhaitez faire parvenir au destinataire.",
+      "en": "The amount in FCFA you want to send to the recipient.",
+      "eto": {
+        "text": "Itáŋ i mwání utǝ́ jǝ lôm mód a fcfa.",
+        "audio": "eton/saf_exp_031_take1_29f3181b.webm",
+        "duration": 3.37
+      }
+    },
+    "SAF_EXP_032": {
+      "code": "SAF_EXP_032",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Aucun frais de transaction.",
+      "en": "No transaction fees.",
+      "eto": {
+        "text": "Bɔ frɛ bǝ́sǝ̂",
+        "audio": "eton/saf_exp_032_take1_5dd272de.webm",
+        "duration": 2.13
+      }
+    },
+    "SAF_EXP_033": {
+      "code": "SAF_EXP_033",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale (Montant + Frais) qui sera effectivement prélevée sur votre compte.",
+      "en": "Total sum (Amount + Fee) that will be deducted from your account.",
+      "eto": {
+        "text": "Mwán ásǝ (táŋ i mwáni ee bɔ frɛ ) yeey vazban á mpǝ̂g mwán wɔ̂.",
+        "audio": "eton/saf_exp_033_take1_13b35306.webm",
+        "duration": 6.45
+      }
+    },
+    "SAF_EXP_034": {
+      "code": "SAF_EXP_034",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant qui restera disponible sur votre compte après cette opération.",
+      "en": "Amount that will remain available in your account after this transfer.",
+      "eto": {
+        "text": "Ítāŋ i mwání yeey líg á mpǝ̄g mwán wɔ̂ á mbūz ílôm ee ivaza mwán ítǝ",
+        "audio": "eton/saf_exp_034_take1_bc627fdd.webm",
+        "duration": 7.14
+      }
+    },
+    "SAF_EXP_035": {
+      "code": "SAF_EXP_035",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente.",
+      "en": "Return to previous step.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ ítǝ̄ usúswâ.",
+        "audio": "eton/saf_exp_035_take1_fd3c217b.webm",
+        "duration": 2.4
+      }
+    },
+    "SAF_EXP_036": {
+      "code": "SAF_EXP_036",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider cette étape et passer à la suivante.",
+      "en": "Validate this step and proceed to next.",
+      "eto": {
+        "text": "Jǝ́blǝ̂ itǝ́ yî úlôd ítǝ̄ itǝ́ sɔ̄ .",
+        "audio": "eton/saf_exp_036_take1_15feb519.webm",
+        "duration": 4.88
+      }
+    },
+    "SAF_EXP_037": {
+      "code": "SAF_EXP_037",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 3 : Indiquez l'identité et le téléphone du bénéficiaire en vérifiant chaque chiffre.",
+      "en": "Step 3: Enter the recipient identity and phone number, checking each digit.",
+      "eto": {
+        "text": "Itǝ́ ílā : Vǝ́ idaŋtité ee nɔmɔ a téléfɔ̄n ímôd eey gbǝ mwání utɔ́ŋlǝ̂ŋgan mǝŋ mǝŋ nɔmɔ ásǝ.",
+        "audio": "eton/saf_exp_037_take1_14819f03.webm",
+        "duration": 9.32
+      }
+    },
+    "SAF_EXP_038": {
+      "code": "SAF_EXP_038",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Vigilance sécurité : comme c'est votre premier envoi vers ce destinataire, vérifiez son numéro et cochez la case de vérification en bas.",
+      "en": "Security alert: as this is your first transfer to this recipient, check the phone number and check the verification box below.",
+      "eto": {
+        "text": "Ukálgâ : anǝ́ ɛ́nǝ̂ wɔ ilóm mwání usúswâ abɔ ímôd ɲɔ̂, tál nɔmɔ a téléfɔ̄n wé upud ndǝm á mɔ̄ ndā ijwam ásī.",
+        "audio": "eton/saf_exp_038_take1_7ecd4d0c.webm",
+        "duration": 12.12
+      }
+    },
+    "SAF_EXP_039": {
+      "code": "SAF_EXP_039",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Nom complet de la personne à qui vous envoyez l'argent.",
+      "en": "Full name of the person you are sending money to.",
+      "eto": {
+        "text": "Dǒ ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_039_take1_3f957e78.webm",
+        "duration": 2.12
+      }
+    },
+    "SAF_EXP_040": {
+      "code": "SAF_EXP_040",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Numéro de téléphone mobile du destinataire.",
+      "en": "Mobile phone number of the recipient.",
+      "eto": {
+        "text": "Nɔmɔ a téléfɔ̄n ímôd utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_040_take1_29d93fdf.webm",
+        "duration": 3.01
+      }
+    },
+    "SAF_EXP_041": {
+      "code": "SAF_EXP_041",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Raison de l'envoi d'argent.",
+      "en": "Reason for sending money.",
+      "eto": {
+        "text": "Asú jǝ̄ utǝ́ lôm mwání.",
+        "audio": "eton/saf_exp_041_take1_42575d61.webm",
+        "duration": 2.62
+      }
+    },
+    "SAF_EXP_042": {
+      "code": "SAF_EXP_042",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Commentaire facultatif joint au transfert.",
+      "en": "Optional comment attached to the transfer.",
+      "eto": {
+        "text": "Kad asú jǝ̂ utǝ́ lôm mwání ɛ́sǝ ubila.",
+        "audio": "eton/saf_exp_042_take1_0ff54488.webm",
+        "duration": 4.05
+      }
+    },
+    "SAF_EXP_043": {
+      "code": "SAF_EXP_043",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour attester que vous avez contrôlé le nom et le numéro du destinataire.",
+      "en": "Mandatory action: check this box to confirm you verified the recipient name and number.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ Ubila : Púd ndǝm á mɔ̄ ndā yî asú nâ ɛ́jǝ̂m nâ úmâ tɔŋlɔ dwé ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_exp_043_take1_7465c1fe.webm",
+        "duration": 9.6
+      }
+    },
+    "SAF_EXP_044": {
+      "code": "SAF_EXP_044",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Étape 4 : Contrôlez chaque ligne du résumé avant de donner votre validation définitive.",
+      "en": "Step 4: Review every line of the summary before giving final approval.",
+      "eto": {
+        "text": "Ítǝ̄ inâ : tɔŋlǝŋgan ibúg ísǝ usúsú nâ úvǝ̂ cíŋ nâ ilôm ŋgǝ́ ivaza mwání íkwâmban.",
+        "audio": "eton/saf_exp_044_take3_9d767e86.webm",
+        "duration": 8.53
+      }
+    },
+    "SAF_EXP_045": {
+      "code": "SAF_EXP_045",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Montant net envoyé au bénéficiaire.",
+      "en": "Net amount sent to recipient.",
+      "eto": {
+        "text": "Táŋ ī mwání úlôm.",
+        "audio": "eton/saf_exp_045_take1_9ae6b47a.webm",
+        "duration": 2.29
+      }
+    },
+    "SAF_EXP_046": {
+      "code": "SAF_EXP_046",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Somme totale retirée de votre compte (montant + frais).",
+      "en": "Total amount debited from your account (amount + fees).",
+      "eto": {
+        "text": "Táŋ i mwání úvaza á mpǝ́g mwán wɔ̄ (táŋ î mwání ee bɔ frɛ ).",
+        "audio": "eton/saf_exp_046_take1_336116f2.webm",
+        "duration": 5.77
+      }
+    },
+    "SAF_EXP_047": {
+      "code": "SAF_EXP_047",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Numéro de téléphone du destinataire.",
+      "en": "Numéro de téléphone du destinataire.",
+      "eto": {
+        "text": "Nɔmɔ a téléfɔ̃n ímôd úlôm mwání.",
+        "audio": "eton/saf_exp_047_take1_34b15aa8.webm",
+        "duration": 3.2
+      }
+    },
+    "SAF_EXP_048": {
+      "code": "SAF_EXP_048",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Identifiant unique de traçabilité de la transaction.",
+      "en": "Unique transaction reference ID.",
+      "eto": {
+        "text": "Idaŋtité ílôm mwání.",
+        "audio": "eton/saf_exp_048_take1_451a70a7.webm",
+        "duration": 2.76
+      }
+    },
+    "SAF_EXP_049": {
+      "code": "SAF_EXP_049",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Canal de transfert sélectionné.",
+      "en": "Selected transfer channel.",
+      "eto": {
+        "text": "Zɛ̌n ílôm í mwání itwábban.",
+        "audio": "eton/saf_exp_049_take1_4d5b14cc.webm",
+        "duration": 3.2
+      }
+    },
+    "SAF_EXP_050": {
+      "code": "SAF_EXP_050",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Action obligatoire : cochez cette case pour autoriser le prélèvement et l'envoi définitif.",
+      "en": "Mandatory action: check this box to authorize the debit and final transfer.",
+      "eto": {
+        "text": "Ɛ́nǝ̂ ubila : púd ndǝm nâ úvǝ̂ cíŋ nâ bǝ́vaza mwání ee nâ bǝ́lôm.",
+        "audio": "eton/saf_exp_050_take1_ae9a05cd.webm",
+        "duration": 6.36
+      }
+    },
+    "SAF_EXP_051": {
+      "code": "SAF_EXP_051",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'étape précédente pour corriger une information.",
+      "en": "Return to previous step to edit information.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ itǝ́ usú nâ úkôm pɔ́.",
+        "audio": "eton/saf_exp_051_take1_7049cc66.webm",
+        "duration": 3.88
+      }
+    },
+    "SAF_EXP_052": {
+      "code": "SAF_EXP_052",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Valider définitivement et envoyer les fonds maintenant.",
+      "en": "Confirm definitively and send funds now.",
+      "eto": {
+        "text": "Vǝ́ cīŋ úlôm mwání itǝ́tǝ́gǝ̂ ɲɔ̂.",
+        "audio": "eton/saf_exp_052_take1_4ec55a85.webm",
+        "duration": 3.24
+      }
+    },
+    "SAF_EXP_053": {
+      "code": "SAF_EXP_053",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Opération terminée : votre virement a bien été exécuté.",
+      "en": "Operation completed: your transfer was successfully processed.",
+      "eto": {
+        "text": "Dam ɛ́sǝ ɛ́mân : ílôm mwání ikwamban.",
+        "audio": "eton/saf_exp_053_take1_9c570f92.webm",
+        "duration": 3.48
+      }
+    },
+    "SAF_EXP_054": {
+      "code": "SAF_EXP_054",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Les fonds ont été transmis avec succès. Conservez le numéro de référence affiché sur ce reçu.",
+      "en": "Funds successfully sent. Keep the reference number shown on this receipt.",
+      "eto": {
+        "text": "Mwání alômban. Nɛ̌ í nɔmɔ atǝ́ pam á resú.",
+        "audio": "eton/saf_exp_054_take1_6fff4f4c.webm",
+        "duration": 5.5
+      }
+    },
+    "SAF_EXP_055": {
+      "code": "SAF_EXP_055",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "État final du traitement de la transaction.",
+      "en": "Final processing status of the transaction.",
+      "eto": {
+        "text": "Itǝ́ ī mǝmana ílôm mwání.",
+        "audio": "eton/saf_exp_055_take1_a41c2b67.webm",
+        "duration": 3.08
+      }
+    },
+    "SAF_EXP_056": {
+      "code": "SAF_EXP_056",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Transaction réussie et validée.",
+      "en": "Transaction successful and confirmed.",
+      "eto": {
+        "text": "Ilôm ŋgǝ́ ivaza mwání íkâb.",
+        "audio": "eton/saf_exp_056_take1_05e679ee.webm",
+        "duration": 4.23
+      }
+    },
+    "SAF_EXP_057": {
+      "code": "SAF_EXP_057",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Revenir à l'accueil du compte pour effectuer une autre opération.",
+      "en": "Return to home page to perform another operation.",
+      "eto": {
+        "text": "Dúgnǝ̂ sɔ̄ á mmǝ́ndā mpǝ̄g mwání nâ úkwâm opedasiɔ́ŋ mpǝ́bǝ̂.",
+        "audio": "eton/saf_exp_057_take1_c73944a2.webm",
+        "duration": 4.79
+      }
+    },
+    "SAF_EXP_058": {
+      "code": "SAF_EXP_058",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Une anomalie bloque l'opération : lisez l'explication ci-dessous pour savoir comment la corriger.",
+      "en": "An issue is blocking the operation: read the explanation below to learn how to fix it.",
+      "eto": {
+        "text": "Dam ɛ́tǝ̄ ndǝglǝ : láŋ ndimzaná ásī nâ úyɛ̄n nǝ ́unǝ̂ dɔ̂ kom.",
+        "audio": "eton/saf_exp_058_take1_c702bccb.webm",
+        "duration": 4.6
+      }
+    },
+    "SAF_EXP_059": {
+      "code": "SAF_EXP_059",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Avertissement de sécurité bancaire demandant votre vigilance avant d'envoyer l'argent.",
+      "en": "Banking security warning requesting your vigilance before sending money.",
+      "eto": {
+        "text": "Báŋ atǝ́ bólô úbô ǹnǝ́m wɔ̂ usǝ usúsūnnâ úlôm mwání.",
+        "audio": "eton/saf_exp_059_take1_f8743e3c.webm",
+        "duration": 4.94
+      }
+    },
+    "SAF_EXP_060": {
+      "code": "SAF_EXP_060",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Information prioritaire affichée en temps réel sur votre espace bancaire.",
+      "en": "Priority information displayed in real time on your banking screen.",
+      "eto": {
+        "text": "Mpáŋ pɔ̄ utǝ́ vām ɛpólô ɛ́ bāŋ dɔ̂.",
+        "audio": "eton/saf_exp_060_take1_5696ffdf.webm",
+        "duration": 4.2
+      }
+    },
+    "SAF_EXP_061": {
+      "code": "SAF_EXP_061",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_001 : Le montant saisi est égal à zéro. Tapez une somme valide supérieure à 0 FCFA.",
+      "en": "Explanation AMOUNT_001: Entered amount is zero. Enter a valid amount greater than 0 FCFA.",
+      "eto": {
+        "text": "Ndimzana Amount _001 : táŋ í mwání iɲɔ̄ŋbân ɛ́nǝ zǝzǝ. Púd ítāŋ ī mwání utǝ́ jǝ ilódgo zǝzǝ cfa.",
+        "audio": "eton/saf_exp_061_take1_c23db818.webm",
+        "duration": 11.5
+      }
+    },
+    "SAF_EXP_062": {
+      "code": "SAF_EXP_062",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication AMOUNT_002 : Vous n'avez pas assez d'argent disponible sur votre compte pour couvrir ce montant. Réduisez la somme à envoyer.",
+      "en": "Explanation AMOUNT_002: You do not have enough money in your account to cover this transfer. Reduce the amount to send.",
+      "eto": {
+        "text": "Ndimzana Amount _002 : Miniaágbɛɛ táŋ i mwání itǝ á mpǝ̄g lwán wɔ̄. Vaza í táŋ í mwání weey lôm.",
+        "audio": null,
+        "duration": 10.24
+      }
+    },
+    "SAF_EXP_063": {
+      "code": "SAF_EXP_063",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication BENEFICIARY_001 : Il manque le nom ou le numéro de téléphone du destinataire. Remplissez les deux champs obligatoires.",
+      "en": "Explanation BENEFICIARY_001: Recipient name or phone number is missing. Fill in both mandatory fields.",
+      "eto": {
+        "text": "Ndimzana beneficiary _001 : dwě ee nɔmɔ ímôd utǝ́ lôm mwání itǝ́ jǝ́ŋban. Tíl á ɛpólô ɛ́bā ɛ́nǝ̂ ubila.",
+        "audio": "eton/saf_exp_063_take1_b0e01add.webm",
+        "duration": 11.01
+      }
+    },
+    "SAF_EXP_064": {
+      "code": "SAF_EXP_064",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_001 : Par sécurité, vous devez vérifier le numéro du destinataire et cocher la case « J'ai vérifié le nom et le numéro du bénéficiaire » avant de continuer.",
+      "en": "Explanation SECURITY_001: For security, you must verify the recipient phone number and check the verification box before continuing.",
+      "eto": {
+        "text": "Ndimzana SECURITY_001 : Asú mbwágɛ, ugbɛɛ nâ útɔ̄ŋlǝŋgan nɔmɔ ímôd utǝ́ lôm mwání úpud ndǝm á mɔ̄ ndā. Mǝmâ cāz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání. Usúsú nâ úkǝ̂ usū.",
+        "audio": "eton/saf_exp_064_take1_6a5c5d4f.webm",
+        "duration": 18.98
+      }
+    },
+    "SAF_EXP_065": {
+      "code": "SAF_EXP_065",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Explication SECURITY_002 : Vous n'avez encore jamais envoyé d'argent à ce contact. Assurez-vous qu'il s'agit bien de la bonne personne et du bon numéro.",
+      "en": "Explanation SECURITY_002: You have never sent money to this recipient before. Make sure it is the right person and number.",
+      "eto": {
+        "text": "Ndimzana SECURITY_002 : miniŋgɛ́ntǝ̄ lôm ímôd ɲɔ̂ mwání. Tɔŋlan ɛ́nǝ̂ ímôd utǝ́ jǝ̂ ee mpaŋ nɔmɔ.",
+        "audio": "eton/saf_exp_065_take1_7d9fc4b3.webm",
+        "duration": 11.22
+      }
+    },
+    "SAF_EXP_066": {
+      "code": "SAF_EXP_066",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication NETWORK_001 : Le réseau est momentanément coupé. Rassurez-vous : aucun argent n'a été débité de votre compte. Patientez quelques instants puis réessayez.",
+      "en": "Explanation NETWORK_001: The network is temporarily unavailable. Don't worry: no money was deducted from your account. Please wait and try again.",
+      "eto": {
+        "text": "Ndimzana Network _001: Resó íkǝ̂. Tāl nâ mwán aánjī wɔ vaza á mpǝ̄g. Yaŋa bwân binutɛ̂n",
+        "audio": "eton/saf_exp_066_take1_a793bc03.webm",
+        "duration": 10.28
+      }
+    },
+    "SAF_EXP_067": {
+      "code": "SAF_EXP_067",
+      "category": "Explications d'Erreurs (Famfingo)",
+      "fr": "Explication CONFIRM_001 : Vous devez cocher la case « Je confirme que les informations ci-dessus sont correctes » avant de cliquer sur le bouton de confirmation.",
+      "en": "Explanation CONFIRM_001: You must check the box 'I confirm the information above is correct' before clicking the confirmation button.",
+      "eto": {
+        "text": "Ndimzana CONFIRM_001 : Ugbɛɛ nâ úpûd ndǝm á mɔ̄ ndā « Mǝtǝ́ jǝ́blǝ̂ nâ mǝpɔ́ ma mǝnǝtɔ̄» usúsú nâ úpûd unǔŋ á lōgô kɔŋfirmasíōŋ.",
+        "audio": "eton/saf_exp_067_take1_642a22a0.webm",
+        "duration": 15.59
+      }
+    },
+    "SAF_EXP_068": {
+      "code": "SAF_EXP_068",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Conseils de protection contre les erreurs et la fraude.",
+      "en": "Protection tips against errors and fraud.",
+      "eto": {
+        "text": "Mǝlǝ́bgǝ̂ asú bǝ́bǝ̂ wɔ̂ jib mwání ee ida í nnó.",
+        "audio": "eton/saf_exp_068_take1_b7774fc3.webm",
+        "duration": 5.0
+      }
+    },
+    "SAF_EXP_069": {
+      "code": "SAF_EXP_069",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Règle essentielle : contrôlez systématiquement le nom et le numéro du destinataire avant chaque envoi.",
+      "en": "Essential rule: systematically check the recipient name and number before each transfer.",
+      "eto": {
+        "text": "Mpaŋ mǝlǝ́bgǝ̂ : Tɔŋlan dwě ee nɔmɔ ímôd útǝ̄ lôm mwání usu nâ úlôm mwáni",
+        "audio": "eton/saf_exp_069_take1_2c25d8ab.webm",
+        "duration": 7.53
+      }
+    },
+    "SAF_EXP_070": {
+      "code": "SAF_EXP_070",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Votre connexion avec Safinum Pay est protégée et chiffrée.",
+      "en": "Your connection with Safinum Pay is secure and encrypted.",
+      "eto": {
+        "text": "Ŋ̀kwál wɔ̄ ee Sadinum Pay ityâ ɛŋgaŋ.",
+        "audio": "eton/saf_exp_070_take1_d57d234d.webm",
+        "duration": 3.9
+      }
+    },
+    "SAF_EXP_071": {
+      "code": "SAF_EXP_071",
+      "category": "Explications Vocales (Famfingo)",
+      "fr": "Environnement de démonstration : n'entrez jamais vos vrais codes secrets ou coordonnées bancaires réelles.",
+      "en": "Demo environment: never enter your real secret PIN or real bank details.",
+      "eto": {
+        "text": "Ɛ́sǝ tɔ́ oó : Bǝ́pûd m̀paŋ ɛsɔ́ bibǝglǝ bibúg dɔ̂ ee m̀paŋ nɔmɔ á mpǝ̄g mwán á bāŋ wɔ̄.",
+        "audio": "eton/saf_exp_071_take1_adaceb33.webm",
+        "duration": 8.15
+      }
+    },
+    "SAF_NUM_001": {
+      "code": "SAF_NUM_001",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux cent cinquante mille francs CFA",
+      "en": "Two hundred and fifty thousand FCFA",
+      "eto": {
+        "text": "Ǹtɛd twágsîn íbā ee twágsîn mintɛd mítān.",
+        "audio": "eton/saf_num_001_take1_f4c3ff7e.webm",
+        "duration": 3.56
+      }
+    },
+    "SAF_NUM_002": {
+      "code": "SAF_NUM_002",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Quinze mille francs CFA",
+      "en": "Fifteen thousand FCFA",
+      "eto": {
+        "text": "Twágsîn ɛwóm ee ítān",
+        "audio": "eton/saf_num_002_take1_e39d0bd7.webm",
+        "duration": 2.13
+      }
+    },
+    "SAF_NUM_003": {
+      "code": "SAF_NUM_003",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Douze mille cinq cents francs CFA",
+      "en": "Twelve thousand five hundred FCFA",
+      "eto": {
+        "text": "Twágsîn ewóm ee íbā ee mintɛd mítān",
+        "audio": "eton/saf_num_003_take1_701fc666.webm",
+        "duration": 3.28
+      }
+    },
+    "SAF_NUM_004": {
+      "code": "SAF_NUM_004",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cent quatre-vingts mille francs CFA",
+      "en": "One hundred and eighty thousand FCFA",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ee twágsîn mǝwóm ŋmâm.",
+        "audio": "eton/saf_num_004_take1_8ad0c5a2.webm",
+        "duration": 3.65
+      }
+    },
+    "SAF_NUM_005": {
+      "code": "SAF_NUM_005",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cinquante mille francs CFA",
+      "en": "Fifty thousand FCFA",
+      "eto": {
+        "text": "Twágsîn mǝwóm tān",
+        "audio": "eton/saf_num_005_take3_0be66162.webm",
+        "duration": 2.42
+      }
+    },
+    "SAF_NUM_006": {
+      "code": "SAF_NUM_006",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Sept mille cinq cents francs CFA",
+      "en": "Seven thousand five hundred FCFA",
+      "eto": {
+        "text": "Twágsîn zaŋmál ee mintɛd mítān",
+        "audio": "eton/saf_num_006_take1_cbda9317.webm",
+        "duration": 3.4
+      }
+    },
+    "SAF_NUM_007": {
+      "code": "SAF_NUM_007",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cent francs CFA",
+      "en": "One hundred FCFA",
+      "eto": {
+        "text": "Ǹtɛd",
+        "audio": "eton/saf_num_007_take1_8bdcf75c.webm",
+        "duration": 1.88
+      }
+    },
+    "SAF_NUM_008": {
+      "code": "SAF_NUM_008",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux mille cinq cents francs CFA",
+      "en": "Two thousand five hundred FCFA",
+      "eto": {
+        "text": "Twágsîn íbā ee mintɛd mítān.",
+        "audio": "eton/saf_num_008_take1_e3f95f93.webm",
+        "duration": 3.25
+      }
+    },
+    "SAF_NUM_009": {
+      "code": "SAF_NUM_009",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux cents francs CFA",
+      "en": "Two hundred FCFA",
+      "eto": {
+        "text": "Mintɛd míbā",
+        "audio": "eton/saf_num_009_take1_c6ca4715.webm",
+        "duration": 2.22
+      }
+    },
+    "SAF_NUM_010": {
+      "code": "SAF_NUM_010",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cinq mille francs CFA",
+      "en": "Five thousand FCFA",
+      "eto": {
+        "text": "Twágsîn ítān",
+        "audio": "eton/saf_num_010_take1_bce4cdc0.webm",
+        "duration": 2.38
+      }
+    },
+    "SAF_NUM_011": {
+      "code": "SAF_NUM_011",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Zéro franc CFA",
+      "en": "Zero FCFA",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_011_take1_3a14d384.webm",
+        "duration": 1.52
+      }
+    },
+    "SAF_NUM_012": {
+      "code": "SAF_NUM_012",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Un virgule cinq pour cent",
+      "en": "One point five percent",
+      "eto": {
+        "text": "Pudsáŋ a pwág ɛtwan ɛ́ mvozobo ee itán",
+        "audio": "eton/saf_num_012_take1_1bbb77f2.webm",
+        "duration": 3.74
+      }
+    },
+    "SAF_NUM_013": {
+      "code": "SAF_NUM_013",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux pour cent",
+      "en": "Two percent",
+      "eto": {
+        "text": "Pudsáŋ íbā",
+        "audio": "eton/saf_num_013_take1_5b2660c3.webm",
+        "duration": 1.98
+      }
+    },
+    "SAF_NUM_014": {
+      "code": "SAF_NUM_014",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Numéro de compte : CM zéro zéro un, deux trois quatre cinq, six sept huit neuf, zéro un",
+      "en": "Account number: CM zero zero one, two three four five, six seven eight nine, zero one",
+      "eto": {
+        "text": "Nɔmɔ á mpǝ̄g mwání : CM zǝzǝ , zǝzǝ, pwág, ba, lá, na, tán, samna, zaŋmál, ŋmâm, ibuu, zǝzǝ, pwág",
+        "audio": "eton/saf_num_014_take1_4158028d.webm",
+        "duration": 16.38
+      }
+    },
+    "SAF_NUM_015": {
+      "code": "SAF_NUM_015",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Téléphone : plus deux cent trente-sept, six quatre-vingt-dix-neuf, zéro zéro, onze, vingt-deux",
+      "en": "Phone number: plus two three seven, six nine nine, zero zero, one one, two two",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n : úbâg Mintɛd míbā ee mǝwóm lā ee zaŋmál, samna, mǝwóm ibuu ee ibuu, zǝzǝ zǝzǝ, ewom ee pwág, mǝwóm ba ee ibā.",
+        "audio": "eton/saf_num_015_take1_6c775481.webm",
+        "duration": 14.07
+      }
+    },
+    "SAF_NUM_016": {
+      "code": "SAF_NUM_016",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Référence : S-A-F tiret deux mille vingt-six tiret X quatre-vingt-neuf",
+      "en": "Reference: S-A-F dash twenty twenty-six dash X eighty-nine",
+      "eto": {
+        "text": "Reference : S-A-F twágsîn ee mǝwóm bā ee samna ntɛn X mǝwóm ŋmâm ee ibuu.",
+        "audio": "eton/saf_num_016_take1_41d42866.webm",
+        "duration": 9.75
+      }
+    },
+    "SAF_NUM_017": {
+      "code": "SAF_NUM_017",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Un",
+      "en": "One",
+      "eto": {
+        "text": "Pwág",
+        "audio": "eton/saf_num_017_take1_3df57171.webm",
+        "duration": 1.45
+      }
+    },
+    "SAF_NUM_018": {
+      "code": "SAF_NUM_018",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux",
+      "en": "Two",
+      "eto": {
+        "text": "bā",
+        "audio": "eton/saf_num_018_take1_1fa5a8b2.webm",
+        "duration": 1.08
+      }
+    },
+    "SAF_NUM_019": {
+      "code": "SAF_NUM_019",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Trois",
+      "en": "Three",
+      "eto": {
+        "text": "lāá",
+        "audio": "eton/saf_num_019_take1_ad682116.webm",
+        "duration": 1.13
+      }
+    },
+    "SAF_NUM_020": {
+      "code": "SAF_NUM_020",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Quatre",
+      "en": "Four",
+      "eto": {
+        "text": "na",
+        "audio": "eton/saf_num_020_take1_40c8e5ae.webm",
+        "duration": 0.99
+      }
+    },
+    "SAF_NUM_021": {
+      "code": "SAF_NUM_021",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cinq",
+      "en": "Five",
+      "eto": {
+        "text": "tán",
+        "audio": "eton/saf_num_021_take1_54d34059.webm",
+        "duration": 1.4
+      }
+    },
+    "SAF_NUM_022": {
+      "code": "SAF_NUM_022",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Six",
+      "en": "Six",
+      "eto": {
+        "text": "samna",
+        "audio": "eton/saf_num_022_take1_7c84389a.webm",
+        "duration": 1.61
+      }
+    },
+    "SAF_NUM_023": {
+      "code": "SAF_NUM_023",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Sept",
+      "en": "Seven",
+      "eto": {
+        "text": "zaŋmál",
+        "audio": "eton/saf_num_023_take1_b1ac2cf3.webm",
+        "duration": 1.55
+      }
+    },
+    "SAF_NUM_024": {
+      "code": "SAF_NUM_024",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Huit",
+      "en": "Eight",
+      "eto": {
+        "text": "ŋmam",
+        "audio": "eton/saf_num_024_take1_899346b5.webm",
+        "duration": 1.4
+      }
+    },
+    "SAF_NUM_025": {
+      "code": "SAF_NUM_025",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Neuf",
+      "en": "Nine",
+      "eto": {
+        "text": "ibuu",
+        "audio": "eton/saf_num_025_take1_3c0ea601.webm",
+        "duration": 2.02
+      }
+    },
+    "SAF_NUM_026": {
+      "code": "SAF_NUM_026",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Zéro",
+      "en": "Zero",
+      "eto": {
+        "text": "zǝzǝ",
+        "audio": "eton/saf_num_026_take1_1966e64e.webm",
+        "duration": 1.49
+      }
+    },
+    "SAF_NUM_027": {
+      "code": "SAF_NUM_027",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Mille francs CFA",
+      "en": "One thousand FCFA",
+      "eto": {
+        "text": "Twágsîn",
+        "audio": "eton/saf_num_027_take1_2ed37687.webm",
+        "duration": 1.47
+      }
+    },
+    "SAF_NUM_028": {
+      "code": "SAF_NUM_028",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Deux mille francs CFA",
+      "en": "Two thousand FCFA",
+      "eto": {
+        "text": "Twágsîn íbā",
+        "audio": "eton/saf_num_028_take1_8c391d57.webm",
+        "duration": 1.86
+      }
+    },
+    "SAF_NUM_029": {
+      "code": "SAF_NUM_029",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Dix mille francs CFA",
+      "en": "Ten thousand FCFA",
+      "eto": {
+        "text": "Twágsîn ɛwóm",
+        "audio": "eton/saf_num_029_take1_58473ec1.webm",
+        "duration": 2.1
+      }
+    },
+    "SAF_NUM_030": {
+      "code": "SAF_NUM_030",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Vingt mille francs CFA",
+      "en": "Twenty thousand FCFA",
+      "eto": {
+        "text": "Twágsîn mǝwóm bā",
+        "audio": "eton/saf_num_030_take1_6633d352.webm",
+        "duration": 2.49
+      }
+    },
+    "SAF_NUM_031": {
+      "code": "SAF_NUM_031",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cent mille francs CFA",
+      "en": "One hundred thousand FCFA",
+      "eto": {
+        "text": "Ǹtɛd twágsîn",
+        "audio": "eton/saf_num_031_take1_0ed75cce.webm",
+        "duration": 2.12
+      }
+    },
+    "SAF_NUM_032": {
+      "code": "SAF_NUM_032",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Cinq cent mille francs CFA",
+      "en": "Five hundred thousand FCFA",
+      "eto": {
+        "text": "Ǹtɛd twágsîn ítān",
+        "audio": "eton/saf_num_032_take1_5d35a666.webm",
+        "duration": 2.58
+      }
+    },
+    "SAF_NUM_033": {
+      "code": "SAF_NUM_033",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Un million de francs CFA",
+      "en": "One million FCFA",
+      "eto": {
+        "text": "Miliɔ́ŋ mwág",
+        "audio": "eton/saf_num_033_take1_b103abb4.webm",
+        "duration": 1.81
+      }
+    },
+    "SAF_NUM_034": {
+      "code": "SAF_NUM_034",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Total : quinze mille deux cent vingt-cinq francs CFA",
+      "en": "Total: fifteen thousand two hundred and twenty-five FCFA",
+      "eto": {
+        "text": "Táŋ i mwání : twágsîn ewóm ee mintɛd míbā ee mǝwóm bā ee ítān",
+        "audio": "eton/saf_num_034_take1_e759c9d4.webm",
+        "duration": 6.2
+      }
+    },
+    "SAF_NUM_035": {
+      "code": "SAF_NUM_035",
+      "category": "Montants & Chiffres Safinum",
+      "fr": "Solde restant : deux cent trente-quatre mille sept cent soixante-quinze francs CFA",
+      "en": "Remaining balance: two hundred thirty-four thousand seven hundred seventy-five FCFA",
+      "eto": {
+        "text": "Táŋ i mwání : Ǹtɛd twágsîn íbā ee twágsîn mǝwóm lā ee mintɛd zaŋmál ee mǝwóm zaŋmál ee ítān",
+        "audio": "eton/saf_num_035_take1_bc347470.webm",
+        "duration": 9.38
+      }
+    },
+    "SAF_UI_001": {
+      "code": "SAF_UI_001",
+      "category": "Navigation & Accueil",
+      "fr": "Environnement de test — données fictives, aucune transaction réelle.",
+      "en": "Test environment — fictional data, no real transaction.",
+      "eto": {
+        "text": "Ípǝ̀ yi dâm ɛ́sǝ tɔ́",
+        "audio": "eton/saf_ui_001_take1_bc630dbf.webm",
+        "duration": 3.03
+      }
+    },
+    "SAF_UI_002": {
+      "code": "SAF_UI_002",
+      "category": "Navigation & Accueil",
+      "fr": "Banque en ligne",
+      "en": "Online banking",
+      "eto": {
+        "text": "Báŋ á intɛnɛd",
+        "audio": "eton/saf_ui_002_take1_055eb3b8.webm",
+        "duration": 2.2
+      }
+    },
+    "SAF_UI_003": {
+      "code": "SAF_UI_003",
+      "category": "Navigation & Accueil",
+      "fr": "Protocole de test",
+      "en": "Test protocol",
+      "eto": {
+        "text": "protokól abɔ́ tɛ́d",
+        "audio": "eton/saf_ui_003_take1_82018579.webm",
+        "duration": 2.41
+      }
+    },
+    "SAF_UI_004": {
+      "code": "SAF_UI_004",
+      "category": "Navigation & Accueil",
+      "fr": "Retour au hackathon",
+      "en": "Back to hackathon",
+      "eto": {
+        "text": "Dúgnǝ kǝ́ á hakatɔ́ŋ",
+        "audio": "eton/saf_ui_004_take1_489d7342.webm",
+        "duration": 2.3
+      }
+    },
+    "SAF_UI_005": {
+      "code": "SAF_UI_005",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde",
+      "en": "Balance",
+      "eto": {
+        "text": "Táŋ ī mwání inǝ́ á mpǝ̄g",
+        "audio": "eton/saf_ui_005_take1_e1b441b9.webm",
+        "duration": 2.1
+      }
+    },
+    "SAF_UI_006": {
+      "code": "SAF_UI_006",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais",
+      "en": "Fees",
+      "eto": {
+        "text": "Bɔ frɛ́",
+        "audio": "eton/saf_ui_006_take1_f10449f4.webm",
+        "duration": 1.33
+      }
+    },
+    "SAF_UI_007": {
+      "code": "SAF_UI_007",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Bénéficiaire",
+      "en": "Beneficiary",
+      "eto": {
+        "text": "Ímôdee gbǝ mwání",
+        "audio": "eton/saf_ui_007_take1_eac2de33.webm",
+        "duration": 2.29
+      }
+    },
+    "SAF_UI_008": {
+      "code": "SAF_UI_008",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Récapitulatif",
+      "en": "Summary",
+      "eto": {
+        "text": "Dâm ɛ́sǝ úkwâm",
+        "audio": "eton/saf_ui_008_take1_8e33366e.webm",
+        "duration": 1.64
+      }
+    },
+    "SAF_UI_009": {
+      "code": "SAF_UI_009",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Confirmation",
+      "en": "Confirmation",
+      "eto": {
+        "text": "koŋfirmasíōŋ",
+        "audio": "eton/saf_ui_009_take1_ad9cbf83.webm",
+        "duration": 1.71
+      }
+    },
+    "SAF_UI_010": {
+      "code": "SAF_UI_010",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Votre compte",
+      "en": "Your account",
+      "eto": {
+        "text": "Mpǝ́g mwán wɔ̄",
+        "audio": "eton/saf_ui_010_take1_82d1d231.webm",
+        "duration": 1.94
+      }
+    },
+    "SAF_UI_011": {
+      "code": "SAF_UI_011",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Bonjour, Amina",
+      "en": "Hello, Amina",
+      "eto": {
+        "text": "M̀mǝmǝ kídî Amina",
+        "audio": "eton/saf_ui_011_take1_92ec46cd.webm",
+        "duration": 2.16
+      }
+    },
+    "SAF_UI_012": {
+      "code": "SAF_UI_012",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Consultez votre solde et lancez un transfert en toute sécurité.",
+      "en": "Check your balance and start a secure transfer.",
+      "eto": {
+        "text": "Tál ítāŋ í mwání ugbɛlǝ̂ á mpǝ́g úlôm mwání tǝ́ pūn.",
+        "audio": "eton/saf_ui_012_take1_5880ea62.webm",
+        "duration": 4.82
+      }
+    },
+    "SAF_UI_013": {
+      "code": "SAF_UI_013",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Solde disponible",
+      "en": "Available balance",
+      "eto": {
+        "text": "Táŋ ī mwání anǝ wɔ á mpǝ̄g",
+        "audio": "eton/saf_ui_013_take2_cf18e389.webm",
+        "duration": 2.39
+      }
+    },
+    "SAF_UI_014": {
+      "code": "SAF_UI_014",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Compte courant",
+      "en": "Current account",
+      "eto": {
+        "text": "Táŋ ī mwání á bāŋ",
+        "audio": "eton/saf_ui_014_take1_f3a57398.webm",
+        "duration": 2.44
+      }
+    },
+    "SAF_UI_015": {
+      "code": "SAF_UI_015",
+      "category": "Navigation & Accueil",
+      "fr": "Effectuer un transfert",
+      "en": "Make a transfer",
+      "eto": {
+        "text": "Kwâm trásfɛɛ",
+        "audio": "eton/saf_ui_015_take1_936e3f69.webm",
+        "duration": 1.77
+      }
+    },
+    "SAF_UI_016": {
+      "code": "SAF_UI_016",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Consulter les frais",
+      "en": "View fees",
+      "eto": {
+        "text": "Tál bɔ frɛ",
+        "audio": "eton/saf_ui_016_take1_7ec59800.webm",
+        "duration": 2.1
+      }
+    },
+    "SAF_UI_017": {
+      "code": "SAF_UI_017",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transactions récentes",
+      "en": "Recent transactions",
+      "eto": {
+        "text": "Ílôm mwání úndom ákwâm",
+        "audio": "eton/saf_ui_017_take1_5d00a075.webm",
+        "duration": 2.73
+      }
+    },
+    "SAF_UI_018": {
+      "code": "SAF_UI_018",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Paiement marchand",
+      "en": "Merchant payment",
+      "eto": {
+        "text": "Iyágnâ ipatila",
+        "audio": "eton/saf_ui_018_take1_8fa07bac.webm",
+        "duration": 1.78
+      }
+    },
+    "SAF_UI_019": {
+      "code": "SAF_UI_019",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Salaire reçu",
+      "en": "Salary received",
+      "eto": {
+        "text": "mwán a ŋgwan úgbǝ̂",
+        "audio": "eton/saf_ui_019_take1_2c7e0adf.webm",
+        "duration": 1.98
+      }
+    },
+    "SAF_UI_020": {
+      "code": "SAF_UI_020",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Transfert reçu",
+      "en": "Transfer received",
+      "eto": {
+        "text": "Ílôm mwání mǝ́gbǝ̂",
+        "audio": "eton/saf_ui_020_take1_cefac217.webm",
+        "duration": 2.49
+      }
+    },
+    "SAF_UI_021": {
+      "code": "SAF_UI_021",
+      "category": "Étape 1 : Solde & Accueil",
+      "fr": "Facture électricité",
+      "en": "Electricity bill",
+      "eto": {
+        "text": "mwání a kudáŋ",
+        "audio": "eton/saf_ui_021_take1_c6cb4590.webm",
+        "duration": 2.07
+      }
+    },
+    "SAF_UI_022": {
+      "code": "SAF_UI_022",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de transfert",
+      "en": "Transfer fees",
+      "eto": {
+        "text": "frɛ bɔ traŋfɛɛ",
+        "audio": "eton/saf_ui_022_take1_9677de82.webm",
+        "duration": 2.42
+      }
+    },
+    "SAF_UI_023": {
+      "code": "SAF_UI_023",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Choisissez le type de transfert et le montant. Les frais sont calculés automatiquement.",
+      "en": "Choose the transfer type and amount. Fees are calculated automatically.",
+      "eto": {
+        "text": "twáb íkānî tráŋfɛ ee táŋ imwání. Táŋ itǝ́ kwamban ábɔ̄ frɛ inutɛ̂n.",
+        "audio": "eton/saf_ui_023_take1_4c61f28e.webm",
+        "duration": 7.03
+      }
+    },
+    "SAF_UI_024": {
+      "code": "SAF_UI_024",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Type d'opération",
+      "en": "Operation type",
+      "eto": {
+        "text": "íkāni opedasíōŋ",
+        "audio": "eton/saf_ui_024_take1_b6e4002c.webm",
+        "duration": 1.97
+      }
+    },
+    "SAF_UI_025": {
+      "code": "SAF_UI_025",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Compte Safinum",
+      "en": "Safinum account",
+      "eto": {
+        "text": "M̀pǝ́g mwání Safinum",
+        "audio": "eton/saf_ui_025_take1_d5a152e6.webm",
+        "duration": 2.55
+      }
+    },
+    "SAF_UI_026": {
+      "code": "SAF_UI_026",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Transfert instantané et gratuit",
+      "en": "Instant, free transfer",
+      "eto": {
+        "text": "Traŋfɛ inutɛ̂n ee a zǝzǝ.",
+        "audio": "eton/saf_ui_026_take1_267e964a.webm",
+        "duration": 2.83
+      }
+    },
+    "SAF_UI_027": {
+      "code": "SAF_UI_027",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Mobile Money",
+      "en": "Mobile Money",
+      "eto": {
+        "text": "Mobây mɔ́nî",
+        "audio": "eton/saf_ui_027_take1_62b7013d.webm",
+        "duration": 1.83
+      }
+    },
+    "SAF_UI_028": {
+      "code": "SAF_UI_028",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 1,5 % (min. 100 FCFA, max. 2 500 FCFA)",
+      "en": "1.5% fee (min. 100 FCFA, max. 2,500 FCFA)",
+      "eto": {
+        "text": "Bɔ Frɛ púdsáŋ a pwág etwan ɛ́ mvozobo (táŋ mǝkaza ntɛd, táŋ mǝmana mintɛd mítãn)",
+        "audio": "eton/saf_ui_028_take1_70293068.webm",
+        "duration": 8.91
+      }
+    },
+    "SAF_UI_029": {
+      "code": "SAF_UI_029",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Autre banque",
+      "en": "Other bank",
+      "eto": {
+        "text": "Báŋ mpǝ́bǝ̂",
+        "audio": "eton/saf_ui_029_take1_57623b29.webm",
+        "duration": 1.8
+      }
+    },
+    "SAF_UI_030": {
+      "code": "SAF_UI_030",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Frais de 2 % (min. 200 FCFA, max. 5 000 FCFA)",
+      "en": "2% fee (min. 200 FCFA, max. 5,000 FCFA)",
+      "eto": {
+        "text": "Bɔ frɛ pudsáŋ íbā (táŋ i mwání a mǝkaza mintɛd mítān táŋ i mwání á mǝmana twágsîn ítān)",
+        "audio": "eton/saf_ui_030_take1_51c50dd5.webm",
+        "duration": 7.6
+      }
+    },
+    "SAF_UI_031": {
+      "code": "SAF_UI_031",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Montant à envoyer",
+      "en": "Amount to send",
+      "eto": {
+        "text": "í Táŋ ī mwání weey lom",
+        "audio": "eton/saf_ui_031_take2_bdfdf580.webm",
+        "duration": 2.12
+      }
+    },
+    "SAF_UI_032": {
+      "code": "SAF_UI_032",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Gratuit",
+      "en": "Free",
+      "eto": {
+        "text": "á zǝzǝ",
+        "audio": "eton/saf_ui_032_take1_20779686.webm",
+        "duration": 1.88
+      }
+    },
+    "SAF_UI_033": {
+      "code": "SAF_UI_033",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Total à débiter",
+      "en": "Total to debit",
+      "eto": {
+        "text": "Ítāŋ ī mwání beey vaza",
+        "audio": "eton/saf_ui_033_take1_479329f6.webm",
+        "duration": 2.29
+      }
+    },
+    "SAF_UI_034": {
+      "code": "SAF_UI_034",
+      "category": "Étape 2 : Frais & Simulation",
+      "fr": "Solde après opération",
+      "en": "Balance after transfer",
+      "eto": {
+        "text": "Í tāŋ ī mwání á mbuz opedasíōŋ",
+        "audio": "eton/saf_ui_034_take1_a289d8ee.webm",
+        "duration": 3.09
+      }
+    },
+    "SAF_UI_035": {
+      "code": "SAF_UI_035",
+      "category": "Navigation & Accueil",
+      "fr": "Retour",
+      "en": "Back",
+      "eto": {
+        "text": "Á mbūz",
+        "audio": "eton/saf_ui_035_take1_00981a16.webm",
+        "duration": 1.21
+      }
+    },
+    "SAF_UI_036": {
+      "code": "SAF_UI_036",
+      "category": "Navigation & Accueil",
+      "fr": "Continuer",
+      "en": "Continue",
+      "eto": {
+        "text": "kǝ́ úsú",
+        "audio": "eton/saf_ui_036_take1_b6d89452.webm",
+        "duration": 2.12
+      }
+    },
+    "SAF_UI_037": {
+      "code": "SAF_UI_037",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Renseignez les informations du destinataire. Vérifiez toujours le numéro avant de valider.",
+      "en": "Enter the recipient details. Always verify the number before confirming.",
+      "eto": {
+        "text": "Púd idaŋtité ímôd utǝ́ lôm mwání. Ijɔŋ ísǝ̂ tɔŋlan nɔmɔ usúsú nâ ulôm mwání",
+        "audio": "eton/saf_ui_037_take1_9f377bdd.webm",
+        "duration": 7.33
+      }
+    },
+    "SAF_UI_038": {
+      "code": "SAF_UI_038",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Ce bénéficiaire n'a jamais été utilisé sur ce compte. Vérifiez le numéro avant de continuer.",
+      "en": "This beneficiary has never been used on this account. Verify the number before continuing.",
+      "eto": {
+        "text": "Imôd utǝ́ lôm mwání aŋgɛntǝ̄ bɛɛni ee mpǝ́g mwán vî. Tɔŋlan nɔmɔ usúsú nâ úkǝ̂ úsú",
+        "audio": "eton/saf_ui_038_take2_9b63cee1.webm",
+        "duration": 7.87
+      }
+    },
+    "SAF_UI_039": {
+      "code": "SAF_UI_039",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Nom du bénéficiaire",
+      "en": "Beneficiary name",
+      "eto": {
+        "text": "dwě ímôd utǝ́ lôm mwánî",
+        "audio": "eton/saf_ui_039_take1_a8c7fb69.webm",
+        "duration": 2.43
+      }
+    },
+    "SAF_UI_040": {
+      "code": "SAF_UI_040",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Numéro de téléphone",
+      "en": "Phone number",
+      "eto": {
+        "text": "nɔmɔ a téléfɔ̄n",
+        "audio": "eton/saf_ui_040_take1_fcb7c399.webm",
+        "duration": 2.19
+      }
+    },
+    "SAF_UI_041": {
+      "code": "SAF_UI_041",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Motif du transfert",
+      "en": "Transfer reason",
+      "eto": {
+        "text": "asú jǝ̂ utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_041_take1_29e0ea0a.webm",
+        "duration": 2.28
+      }
+    },
+    "SAF_UI_042": {
+      "code": "SAF_UI_042",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "Note (optionnel)",
+      "en": "Note (optional)",
+      "eto": {
+        "text": "nód",
+        "audio": "eton/saf_ui_042_take1_84a7184d.webm",
+        "duration": 0.71
+      }
+    },
+    "SAF_UI_043": {
+      "code": "SAF_UI_043",
+      "category": "Étape 3 : Bénéficiaire",
+      "fr": "J'ai vérifié le nom et le numéro du bénéficiaire.",
+      "en": "I have verified the beneficiary name and phone number.",
+      "eto": {
+        "text": "Mǝmâ cáz dwě ee nɔmɔ ímôd mǝtǝ́ lôm mwání",
+        "audio": "eton/saf_ui_043_take1_e24eef76.webm",
+        "duration": 3.72
+      }
+    },
+    "SAF_UI_044": {
+      "code": "SAF_UI_044",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Vérifiez les informations avant de confirmer le transfert.",
+      "en": "Check the details before confirming the transfer.",
+      "eto": {
+        "text": "Tɔ́ŋlân mǝpɔ́ ususu nâ úkwâm traŋsfɛ",
+        "audio": "eton/saf_ui_044_take1_36ae4285.webm",
+        "duration": 3.99
+      }
+    },
+    "SAF_UI_045": {
+      "code": "SAF_UI_045",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Montant",
+      "en": "Amount",
+      "eto": {
+        "text": "Táŋ ī mwání",
+        "audio": "eton/saf_ui_045_take1_50d73239.webm",
+        "duration": 1.53
+      }
+    },
+    "SAF_UI_046": {
+      "code": "SAF_UI_046",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Total débité",
+      "en": "Total debited",
+      "eto": {
+        "text": "Itāŋ ī lwání ivazban",
+        "audio": "eton/saf_ui_046_take1_7a887855.webm",
+        "duration": 2.45
+      }
+    },
+    "SAF_UI_047": {
+      "code": "SAF_UI_047",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Téléphone",
+      "en": "Phone",
+      "eto": {
+        "text": "Téléfɔ̄n",
+        "audio": "eton/saf_ui_047_take1_a236e4fb.webm",
+        "duration": 1.55
+      }
+    },
+    "SAF_UI_048": {
+      "code": "SAF_UI_048",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Référence",
+      "en": "Reference",
+      "eto": {
+        "text": "Rǝféraŋs",
+        "audio": "eton/saf_ui_048_take1_63c69c2d.webm",
+        "duration": 1.46
+      }
+    },
+    "SAF_UI_049": {
+      "code": "SAF_UI_049",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Opération",
+      "en": "Operation",
+      "eto": {
+        "text": "opérasíōŋ",
+        "audio": "eton/saf_ui_049_take1_fe2b9ae9.webm",
+        "duration": 2.18
+      }
+    },
+    "SAF_UI_050": {
+      "code": "SAF_UI_050",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Je confirme que les informations ci-dessus sont correctes.",
+      "en": "I confirm the information above is correct.",
+      "eto": {
+        "text": "Ilɛ́ ntī, mǝpɔ́ mǝ́vǝ̂ mǝnǝ tɔ̄",
+        "audio": "eton/saf_ui_050_take1_f5a12266.webm",
+        "duration": 3.62
+      }
+    },
+    "SAF_UI_051": {
+      "code": "SAF_UI_051",
+      "category": "Navigation & Accueil",
+      "fr": "Modifier",
+      "en": "Edit",
+      "eto": {
+        "text": "Cɛ́nî",
+        "audio": "eton/saf_ui_051_take1_9c32c7f8.webm",
+        "duration": 1.27
+      }
+    },
+    "SAF_UI_052": {
+      "code": "SAF_UI_052",
+      "category": "Étape 4 : Récapitulatif",
+      "fr": "Confirmer le transfert",
+      "en": "Confirm transfer",
+      "eto": {
+        "text": "Vǝ́ cīŋ i traŋsfɛ",
+        "audio": "eton/saf_ui_052_take1_34719753.webm",
+        "duration": 2.09
+      }
+    },
+    "SAF_UI_053": {
+      "code": "SAF_UI_053",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Transfert effectué",
+      "en": "Transfer completed",
+      "eto": {
+        "text": "Traŋsfɛ ikwâmban",
+        "audio": "eton/saf_ui_053_take1_c78b32a3.webm",
+        "duration": 2.44
+      }
+    },
+    "SAF_UI_054": {
+      "code": "SAF_UI_054",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Votre transfert a été envoyé avec succès.",
+      "en": "Your transfer has been sent successfully.",
+      "eto": {
+        "text": "Traŋsfɛ a mina ikwâmban ee mǝkaba",
+        "audio": "eton/saf_ui_054_take1_313f1fa7.webm",
+        "duration": 4.3
+      }
+    },
+    "SAF_UI_055": {
+      "code": "SAF_UI_055",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Statut",
+      "en": "Status",
+      "eto": {
+        "text": "Statu",
+        "audio": "eton/saf_ui_055_take1_40ab7c5d.webm",
+        "duration": 1.18
+      }
+    },
+    "SAF_UI_056": {
+      "code": "SAF_UI_056",
+      "category": "Étape 5 : Confirmation & Reçu",
+      "fr": "Succès",
+      "en": "Success",
+      "eto": {
+        "text": "Mǝkaba",
+        "audio": "eton/saf_ui_056_take1_2bc4142d.webm",
+        "duration": 1.34
+      }
+    },
+    "SAF_UI_057": {
+      "code": "SAF_UI_057",
+      "category": "Navigation & Accueil",
+      "fr": "Nouveau transfert",
+      "en": "New transfer",
+      "eto": {
+        "text": "M̀pámgî tráŋsfɛ",
+        "audio": "eton/saf_ui_057_take1_cbd3e57c.webm",
+        "duration": 1.66
+      }
+    },
+    "SAF_UI_058": {
+      "code": "SAF_UI_058",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Une erreur est survenue",
+      "en": "An error occurred",
+      "eto": {
+        "text": "Dâm laánjī wul mmǝŋ",
+        "audio": "eton/saf_ui_058_take1_9c772660.webm",
+        "duration": 2.11
+      }
+    },
+    "SAF_UI_059": {
+      "code": "SAF_UI_059",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité",
+      "en": "Security warning",
+      "eto": {
+        "text": "Ukálga",
+        "audio": "eton/saf_ui_059_take1_411ac1b2.webm",
+        "duration": 1.37
+      }
+    },
+    "SAF_UI_060": {
+      "code": "SAF_UI_060",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Message important",
+      "en": "Important message",
+      "eto": {
+        "text": "Mpaŋ pɔ́",
+        "audio": "eton/saf_ui_060_take1_2a6aa4c4.webm",
+        "duration": 1.86
+      }
+    },
+    "SAF_UI_061": {
+      "code": "SAF_UI_061",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Le montant doit être supérieur à zéro.",
+      "en": "The amount must be greater than zero.",
+      "eto": {
+        "text": "Itáŋ i mwánî utǝ́ lód zǝzǝ",
+        "audio": "eton/saf_ui_061_take1_afccbcf2.webm",
+        "duration": 2.74
+      }
+    },
+    "SAF_UI_062": {
+      "code": "SAF_UI_062",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Solde insuffisant pour effectuer ce transfert.",
+      "en": "Insufficient balance for this transfer.",
+      "eto": {
+        "text": "Itáŋ ī mwání ugbɛɛ isǝ́ abwî nâ úlôm mwánî",
+        "audio": "eton/saf_ui_062_take1_3ddc244f.webm",
+        "duration": 2.7
+      }
+    },
+    "SAF_UI_063": {
+      "code": "SAF_UI_063",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Veuillez renseigner le nom et le numéro du bénéficiaire.",
+      "en": "Please provide the beneficiary name and phone number.",
+      "eto": {
+        "text": "Púd do ee nɔmɔ ímôd utǝ́ lôm mwání",
+        "audio": "eton/saf_ui_063_take1_f04b48d4.webm",
+        "duration": 4.37
+      }
+    },
+    "SAF_UI_064": {
+      "code": "SAF_UI_064",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : vérifiez le numéro du bénéficiaire avant de continuer.",
+      "en": "Security warning: verify the beneficiary phone number before continuing.",
+      "eto": {
+        "text": "Ukálga : tál nɔmɔ ímôd utǝ́ lôm mwáni usúsú nâ úkǝ̂ usú.",
+        "audio": "eton/saf_ui_064_take1_09ac39af.webm",
+        "duration": 5.07
+      }
+    },
+    "SAF_UI_065": {
+      "code": "SAF_UI_065",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Alerte de sécurité : ce bénéficiaire n'a jamais été utilisé sur ce compte.",
+      "en": "Security warning: this beneficiary has never been used on this account.",
+      "eto": {
+        "text": "Ukalga : ímôd utǝ́ lôm mwání aŋgɛ́ntə̄ bɛɛni ee mpǝ́g mwán vî.",
+        "audio": "eton/saf_ui_065_take1_0f2174e7.webm",
+        "duration": 4.96
+      }
+    },
+    "SAF_UI_066": {
+      "code": "SAF_UI_066",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Erreur réseau : le service est temporairement indisponible. Réessayez.",
+      "en": "Network error: the service is temporarily unavailable. Please try again.",
+      "eto": {
+        "text": "Ivuz i reso : dàm ɛ́tǝ̄ dǝ́glǝ. Dúgnǝ̂ ndǝ̄ŋ á mbūz",
+        "audio": "eton/saf_ui_066_take1_12be85da.webm",
+        "duration": 4.1
+      }
+    },
+    "SAF_UI_067": {
+      "code": "SAF_UI_067",
+      "category": "Erreurs Officielles (TEST_ERRORS)",
+      "fr": "Vous devez confirmer les informations avant de valider le transfert.",
+      "en": "You must confirm the details before validating the transfer.",
+      "eto": {
+        "text": "Ugbɛɛ ú cɔŋfidmé mǝpɔ́ usúsú nâ ujǝ́blǝ̂ traŋsfɛ",
+        "audio": "eton/saf_ui_067_take1_96e7d33f.webm",
+        "duration": 4.98
+      }
+    },
+    "SAF_UI_068": {
+      "code": "SAF_UI_068",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Sécurité",
+      "en": "Security",
+      "eto": {
+        "text": "Sékudíté",
+        "audio": "eton/saf_ui_068_take1_4b32c3df.webm",
+        "duration": 1.19
+      }
+    },
+    "SAF_UI_069": {
+      "code": "SAF_UI_069",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Vérifiez toujours le nom et le numéro du bénéficiaire avant de confirmer un transfert.",
+      "en": "Always verify the beneficiary name and number before confirming a transfer.",
+      "eto": {
+        "text": "ijɔŋ isǝ tāl swě ee nɔmɔ ímôd utǝ́ lôm mwání usúsú nâ úkɔŋfidmé traŋsfɛ",
+        "audio": "eton/saf_ui_069_take1_65efd6ab.webm",
+        "duration": 7.55
+      }
+    },
+    "SAF_UI_070": {
+      "code": "SAF_UI_070",
+      "category": "Sécurité & Anti-Fraude",
+      "fr": "Connexion sécurisée",
+      "en": "Secure connection",
+      "eto": {
+        "text": "kɔnɛksíōŋ ityâ ɛŋgaŋ",
+        "audio": "eton/saf_ui_070_take1_5d0002f7.webm",
+        "duration": 2.42
+      }
+    },
+    "SAF_UI_071": {
+      "code": "SAF_UI_071",
+      "category": "Navigation & Accueil",
+      "fr": "Safinum Pay — environnement de démonstration. Ne saisissez aucune donnée personnelle réelle.",
+      "en": "Safinum Pay — demonstration environment. Do not enter real personal data.",
+      "eto": {
+        "text": "Safinum pay ɛ́nǝ̂ zǝkúl á ŋkâb. Bǝ́lígî idaŋtíté wɔ̂ i wē",
+        "audio": "eton/saf_ui_071_take1_c5e121b7.webm",
+        "duration": 4.56
+      }
+    }
+  }
 };
