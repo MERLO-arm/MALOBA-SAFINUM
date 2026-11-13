@@ -46,7 +46,11 @@
       typeof chrome.runtime !== "undefined" &&
       typeof chrome.runtime.getURL === "function"
     ) {
-      return chrome.runtime.getURL(relativePath);
+      try {
+        return chrome.runtime.getURL(relativePath);
+      } catch (_) {
+        return relativePath;
+      }
     }
 
     return relativePath;

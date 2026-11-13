@@ -1,366 +1,295 @@
 /**
  * =============================================================================
- * MALOBA ANYDOC — MULTILINGUAL VOICE & NUMBER-TO-SPEECH SYNTHESIS ENGINE
+ * MALOBA ANYDOC — REAL AUDIO PLAYBACK ENGINE (WEBM / OPUS)
  * =============================================================================
- * Integrates:
- *   1. `SafinumWebNumberEngine` (Gapless .ogg Web Audio API stitching for
- *      amounts 0 to 999,999,999 FCFA across the 42-key audio corpus).
- *   2. Sentence-by-sentence phonetic text-to-speech for:
- *      - Fulfulde of Cameroon (fub)
- *      - Ewondo of Cameroon (ewo)
- *      - Any additional registered national language
+ * Plays verified human-recorded native audio (.webm / Opus) bundled from
+ * EXPORT_DATASET_MALOBA via extension web-accessible resources.
  *
- * Enterprise-grade features:
- *   - Gapless Web Audio API `.ogg` stitching for standalone & embedded amounts
- *   - Automatic number-to-words expansion in national language phonetics
- *   - Utterance GC retention (prevents Chromium garbage-collection audio cutoffs)
- *   - SpeechSynthesis keep-alive heartbeat (prevents 15-second speech synthesis pauses)
- *   - Event-driven state notifications for UI highlighting
- *
- * All code comments and documentation are strictly in English.
+ * Production features:
+ *   - Sequential playback (UI phrase audio -> pause -> pedagogical explanation)
+ *   - Configurable playback speed (1.0x normal, 0.8x slow for accessibility)
+ *   - Race-free cancellation via monotonic playback token
+ *   - Graceful handling of missing audio files without crashing
+ *   - Event-driven state notifications (`safinum-voice-state`) for UI highlight
  * =============================================================================
  */
 
 (function () {
   "use strict";
 
-  const EMBEDDED_AMOUNT_REGEX =
-    /\b(\d{1,3}(?:[\s\u00A0\u202F.]\d{3})+|\d+)\s*(FCFA|XAF|F\s*CFA)?\b/gi;
-
   class SafinumVoiceEngine {
     constructor() {
-      this.synth =
-        typeof window !== "undefined" && window.speechSynthesis ? window.speechSynthesis : null;
       this.isSpeaking = false;
-      this.preferredVoice = null;
-      this.rate = 0.92;
-      this.pitch = 1.0;
-      this.activeUtterance = null; // Retain active utterance to prevent Chromium GC cutoff
-      this.keepAliveTimer = null;
-      this.initVoices();
+      this.activeAudio = null;
+      this.sequenceTimer = null;
+      this.playbackRate = 1.0;
+      this.playbackToken = 0;
     }
 
     /**
-     * Returns reference to the global SafinumWebNumberEngine singleton if loaded.
-     * @returns {Object|null}
+     * Resolves an extension-relative audio path to a chrome-extension:// URL.
+     * @param {string|null} relativePath - Path under assets/audio/ (e.g. "eton/saf_ui_001_take1_xxx.webm")
+     * @returns {string|null}
      */
-    get numberEngine() {
-      return (typeof window !== "undefined" && window.safinumNumberEngine) || null;
-    }
+    resolveAudioUrl(relativePath) {
+      if (!relativePath || typeof relativePath !== "string") return null;
+      const cleanPath = relativePath.replace(/^\/+/, "");
+      const assetPath = cleanPath.startsWith("assets/audio/")
+        ? cleanPath
+        : `assets/audio/${cleanPath}`;
 
-    /**
-     * Initializes and selects the optimal voice from the browser's speech synthesis engine.
-     */
-    initVoices() {
-      if (!this.synth) return;
-
-      const pickVoice = () => {
+      if (
+        typeof chrome !== "undefined" &&
+        chrome.runtime &&
+        typeof chrome.runtime.getURL === "function"
+      ) {
         try {
-          const voices = this.synth.getVoices() || [];
-          if (!voices.length) return;
-
-          this.preferredVoice =
-            voices.find(
-              (v) =>
-                v.lang &&
-                v.lang.toLowerCase().startsWith("fr") &&
-                /natural|neural|google|microsoft/i.test(v.name)
-            ) ||
-            voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("fr")) ||
-            voices[0] ||
-            null;
-        } catch (e) {
-          console.warn("[Maloba VoiceEngine] Error selecting speech voice:", e);
+          return chrome.runtime.getURL(assetPath);
+        } catch (_) {
+          // Extension context invalidated after reload; page refresh required
+          return null;
         }
-      };
-
-      pickVoice();
-      if (typeof this.synth.onvoiceschanged !== "undefined") {
-        this.synth.onvoiceschanged = pickVoice;
       }
+      return assetPath;
     }
 
     /**
-     * Halts any active speech playback (both Web Audio stitched numbers and SpeechSynthesis).
+     * Emits a standardized voice state event on window.
+     * @param {boolean} speaking
+     * @param {Object} [extra]
+     */
+    emitState(speaking, extra = {}) {
+      window.dispatchEvent(
+        new CustomEvent("safinum-voice-state", {
+          detail: { speaking, ...extra }
+        })
+      );
+    }
+
+    /**
+     * Halts any active audio playback, number stitching, and sequence timers.
      */
     stop() {
-      if (this.numberEngine) {
+      this.playbackToken++;
+      if (this.sequenceTimer) {
+        clearTimeout(this.sequenceTimer);
+        this.sequenceTimer = null;
+      }
+      if (
+        typeof window !== "undefined" &&
+        window.safinumNumberEngine &&
+        typeof window.safinumNumberEngine.stop === "function"
+      ) {
         try {
-          this.numberEngine.stop();
-        } catch (e) {
-          console.warn("[Maloba VoiceEngine] Error stopping numberEngine:", e);
+          window.safinumNumberEngine.stop();
+        } catch (_) {
+          // Ignore number engine teardown errors
         }
       }
-
-      if (this.synth) {
-        this.clearKeepAlive();
+      if (this.activeAudio) {
         try {
-          this.synth.cancel();
-        } catch (e) {
-          console.warn("[Maloba VoiceEngine] Error canceling speech synthesis:", e);
+          this.activeAudio.onended = null;
+          this.activeAudio.onerror = null;
+          this.activeAudio.pause();
+          this.activeAudio.currentTime = 0;
+          this.activeAudio.src = "";
+        } catch (_) {
+          // Ignore teardown errors on detached Audio elements
         }
+        this.activeAudio = null;
       }
-
-      this.isSpeaking = false;
-      this.activeUtterance = null;
-      if (typeof window !== "undefined") {
-        window.dispatchEvent(new CustomEvent("safinum-voice-state", { detail: { speaking: false } }));
+      if (this.isSpeaking) {
+        this.isSpeaking = false;
+        this.emitState(false);
       }
     }
 
     /**
-     * Directly speaks an integer amount (0 to 999,999,999 FCFA) using the gapless
-     * Web Audio API stitcher (`SafinumWebNumberEngine`).
-     *
-     * @param {number} amount - Integer amount in [0, 999,999,999]
-     * @param {{ lang?: string, includeCurrency?: boolean, onStart?: Function, onSegmentChange?: Function, onEnded?: Function }} [options]
+     * Speaks a numeric financial amount (0 to 999,999,999 FCFA) using gapless
+     * Web Audio number stitching (`safinumNumberEngine`).
+     * @param {number|string} amount - Monetary amount
+     * @param {Object} [options]
      * @returns {Promise<void>}
      */
     async speakAmount(amount, options = {}) {
       this.stop();
-      if (!this.numberEngine) return;
-
-      const lang = options.lang || "fub";
-      const includeCurrency =
-        typeof options.includeCurrency === "boolean" ? options.includeCurrency : true;
-
+      const numEngine = typeof window !== "undefined" ? window.safinumNumberEngine : null;
+      if (!numEngine || typeof numEngine.speakAmount !== "function") {
+        this.emitState(false, { missingAudio: true });
+        return;
+      }
+      const lang = options.lang || "eto";
       this.isSpeaking = true;
-      window.dispatchEvent(
-        new CustomEvent("safinum-voice-state", {
-          detail: { speaking: true, amount, lang }
-        })
-      );
+      this.emitState(true, { amount, lang });
+      try {
+        await numEngine.speakAmount(amount, {
+          ...options,
+          lang,
+          onEnded: () => {
+            this.isSpeaking = false;
+            this.emitState(false, { amount, lang });
+            if (typeof options.onEnded === "function") options.onEnded();
+          },
+          onError: (err) => {
+            this.isSpeaking = false;
+            this.emitState(false, { amount, lang });
+            if (typeof options.onError === "function") options.onError(err);
+          }
+        });
+      } catch (err) {
+        this.isSpeaking = false;
+        this.emitState(false, { amount, lang });
+        if (typeof options.onError === "function") options.onError(err);
+      }
+    }
 
-      await this.numberEngine.speakAmount(amount, {
-        lang,
-        includeCurrency,
-        onStart: options.onStart,
-        onSegmentChange: options.onSegmentChange,
-        onEnded: () => {
+    /**
+     * Plays a single bundled .webm audio file.
+     * @param {string} audioPath - Relative path under assets/audio/
+     * @param {Object} [options]
+     * @param {string} [options.displayText] - Text associated with this audio
+     * @param {number} [options.rate] - Playback rate (default: this.playbackRate)
+     * @param {Function} [options.onStart]
+     * @param {Function} [options.onEnd]
+     * @param {Function} [options.onError]
+     * @returns {Promise<boolean>} Resolves true if played to completion, false if skipped/stopped
+     */
+    playAudio(audioPath, options = {}) {
+      this.stop();
+      const token = this.playbackToken;
+      return this._playSingle(audioPath, token, options);
+    }
+
+    /**
+     * Internal single-file player bound to a monotonic cancellation token.
+     * @private
+     */
+    _playSingle(audioPath, token, options = {}) {
+      const url = this.resolveAudioUrl(audioPath);
+      if (!url) {
+        this.isSpeaking = false;
+        this.emitState(false, { missingAudio: true, text: options.displayText || "" });
+        if (typeof options.onError === "function") {
+          options.onError(new Error("Missing audio path"));
+        }
+        return Promise.resolve(false);
+      }
+
+      return new Promise((resolve) => {
+        if (token !== this.playbackToken) {
+          resolve(false);
+          return;
+        }
+
+        const audio = new Audio(url);
+        audio.playbackRate = options.rate || this.playbackRate;
+        this.activeAudio = audio;
+
+        const finish = (completed, err = null) => {
+          if (this.activeAudio === audio) {
+            this.activeAudio = null;
+          }
+          if (token !== this.playbackToken) {
+            resolve(false);
+            return;
+          }
           this.isSpeaking = false;
-          window.dispatchEvent(
-            new CustomEvent("safinum-voice-state", {
-              detail: { speaking: false, amount, lang }
+          this.emitState(false, { text: options.displayText || "" });
+          if (err && typeof options.onError === "function") {
+            options.onError(err);
+          } else if (completed && typeof options.onEnd === "function") {
+            options.onEnd();
+          }
+          resolve(completed);
+        };
+
+        audio.onended = () => finish(true);
+        audio.onerror = (e) => {
+          console.warn("[Maloba VoiceEngine] Audio playback error:", url, e);
+          finish(false, e);
+        };
+
+        const playPromise = audio.play();
+        if (playPromise && typeof playPromise.then === "function") {
+          playPromise
+            .then(() => {
+              if (token !== this.playbackToken) return;
+              this.isSpeaking = true;
+              this.emitState(true, { text: options.displayText || "" });
+              if (typeof options.onStart === "function") options.onStart();
             })
-          );
-          if (typeof options.onEnded === "function") options.onEnded();
-          if (typeof options.onEnd === "function") options.onEnd();
+            .catch((err) => {
+              console.warn("[Maloba VoiceEngine] audio.play() rejected:", err);
+              finish(false, err);
+            });
+        } else {
+          this.isSpeaking = true;
+          this.emitState(true, { text: options.displayText || "" });
+          if (typeof options.onStart === "function") options.onStart();
         }
       });
     }
 
     /**
-     * Starts a heartbeat timer that pauses and resumes speech synthesis every 10 seconds.
+     * Plays a phrase's audio followed by its pedagogical explanation audio.
+     * @param {Object} entry - Translation record from SafinumContextGraph
+     * @param {string} [lang="eto"] - Active language ISO code
+     * @param {Object} [options] - Optional rate/callbacks
      */
-    startKeepAlive() {
-      this.clearKeepAlive();
-      this.keepAliveTimer = setInterval(() => {
-        if (!this.synth || !this.isSpeaking) {
-          this.clearKeepAlive();
-          return;
-        }
-        try {
-          this.synth.pause();
-          this.synth.resume();
-        } catch (_) {
-          // Ignore transient keep-alive exceptions
-        }
-      }, 10000);
-    }
-
-    /**
-     * Clears the keep-alive interval.
-     */
-    clearKeepAlive() {
-      if (this.keepAliveTimer) {
-        clearInterval(this.keepAliveTimer);
-        this.keepAliveTimer = null;
-      }
-    }
-
-    /**
-     * Expands embedded integer numbers and currency tokens inside phonetic text
-     * into their authentic Fulfulde (`fub`) or Ewondo (`ewo`) numeral words.
-     *
-     * @param {string} rawText - Original text
-     * @param {string} phoneticText - Phonetic transcribed text
-     * @param {string} langCode - Language code ('fub' or 'ewo')
-     * @returns {string} Clean audio-ready string
-     */
-    preparePhoneticForSpeech(rawText, phoneticText, langCode = "fub") {
-      let txt = phoneticText || rawText || "";
-      txt = txt.replace(/\+237/g, "plus 237");
-
-      if (this.numberEngine) {
-        txt = txt.replace(EMBEDDED_AMOUNT_REGEX, (fullMatch, numPart, currencyPart) => {
-          const digits = String(numPart).replace(/[\s\u00A0\u202F.]/g, "");
-          if (!/^\d{1,9}$/.test(digits)) return fullMatch;
-          const val = Number.parseInt(digits, 10);
-          if (!Number.isSafeInteger(val) || val < 0 || val > 999999999) return fullMatch;
-          const hasCurrency = Boolean(currencyPart);
-          try {
-            return this.numberEngine.toWords(val, {
-              lang: langCode,
-              includeCurrency: hasCurrency,
-              phonetic: true
-            });
-          } catch (_) {
-            return fullMatch;
-          }
-        });
-      }
-
-      if (langCode === "fub") {
-        txt = txt.replace(/FCFA/g, "dalâdjé CFA");
-      } else if (langCode === "ewo") {
-        txt = txt.replace(/FCFA/g, "fala CFA");
-      } else if (langCode === "eto") {
-        txt = txt.replace(/FCFA/g, "mwani Fran CFA");
-      } else {
-        txt = txt.replace(/FCFA/g, "Fran CFA");
-      }
-
-      return txt;
-    }
-
-    /**
-     * Synthesizes and speaks text or amounts.
-     * If the input represents a standalone numeric amount (or `options.numericAmount` is provided),
-     * it plays the gapless `.ogg` sequence via `SafinumWebNumberEngine`.
-     *
-     * @param {string} displayText - Display string
-     * @param {string} phoneticText - Speech-optimized phonetic string
-     * @param {Object} options - Playback options
-     */
-    speak(displayText, phoneticText, options = {}) {
-      const langCode = options.lang || "fub";
-
-      // Check if this is a standalone number/amount that should use the gapless .ogg stitcher
-      if (this.numberEngine) {
-        const explicitAmount =
-          typeof options.numericAmount === "number"
-            ? options.numericAmount
-            : this.numberEngine.parseAmount(displayText);
-
-        if (explicitAmount !== null) {
-          const hasCurrency =
-            typeof options.includeCurrency === "boolean"
-              ? options.includeCurrency
-              : /FCFA|XAF|CFA/i.test(String(displayText));
-          this.speakAmount(explicitAmount, {
-            lang: langCode,
-            includeCurrency: hasCurrency,
-            onStart: options.onStart,
-            onEnded: options.onEnd || options.onEnded
-          });
-          return;
-        }
-      }
-
-      if (!this.synth) return;
-      this.stop();
-
-      const spokenText = this.preparePhoneticForSpeech(displayText, phoneticText, langCode);
-      const utterance = new SpeechSynthesisUtterance(spokenText);
-
-      this.activeUtterance = utterance;
-
-      if (this.preferredVoice) {
-        utterance.voice = this.preferredVoice;
-      }
-      utterance.lang = (this.preferredVoice && this.preferredVoice.lang) || "fr-FR";
-      utterance.rate = options.rate || this.rate;
-      utterance.pitch = options.pitch || this.pitch;
-
-      utterance.onstart = () => {
-        this.isSpeaking = true;
-        this.startKeepAlive();
-        window.dispatchEvent(
-          new CustomEvent("safinum-voice-state", {
-            detail: { speaking: true, text: displayText }
-          })
-        );
-        if (typeof options.onStart === "function") options.onStart();
-      };
-
-      utterance.onend = () => {
-        this.isSpeaking = false;
-        this.clearKeepAlive();
-        this.activeUtterance = null;
-        window.dispatchEvent(
-          new CustomEvent("safinum-voice-state", {
-            detail: { speaking: false, text: displayText }
-          })
-        );
-        if (typeof options.onEnd === "function") options.onEnd();
-      };
-
-      utterance.onerror = (e) => {
-        this.isSpeaking = false;
-        this.clearKeepAlive();
-        this.activeUtterance = null;
-        window.dispatchEvent(
-          new CustomEvent("safinum-voice-state", { detail: { speaking: false } })
-        );
-        if (typeof options.onError === "function") options.onError(e);
-      };
-
-      try {
-        this.synth.speak(utterance);
-      } catch (err) {
-        console.warn("[Maloba VoiceEngine] speech.speak failed:", err);
-        this.isSpeaking = false;
-        this.clearKeepAlive();
-        this.activeUtterance = null;
-      }
-    }
-
-    /**
-     * Reads a phrase (or stitched numeric amount) and immediately follows with its
-     * pedagogical explanation in the active language.
-     *
-     * @param {Object} entry - Translation or numeric record
-     * @param {string} lang - Active language ISO code ('fub', 'ewo')
-     */
-    speakPhraseAndExplanation(entry, lang = "fub") {
+    async speakPhraseAndExplanation(entry, lang = "eto", options = {}) {
       if (!entry) return;
-
-      const kbMeta = (window.SAFINUM_KB && window.SAFINUM_KB.meta) || {};
-      const langConfig = (kbMeta.languages && kbMeta.languages[lang]) || {};
-      const explainMarker = langConfig.explainWord || (lang === "ewo" ? "Fáám" : "Famfingo");
-
-      const exp = entry[`explain_${lang}`] || entry.explain_fub || entry.explain_fr || "";
-      const expPhon =
-        entry[`explain_${lang}_phonetic`] ||
-        (lang === "fub" ? entry.explain_fub_phonetic : null) ||
-        exp;
-
-      // If entry is a numeric amount, first stitch the .ogg audio keys gaplessly, then speak explanation
-      if (typeof entry.numericAmount === "number" && this.numberEngine) {
-        this.speakAmount(entry.numericAmount, {
+      if (typeof entry.numericAmount === "number") {
+        await this.speakAmount(entry.numericAmount, {
+          ...options,
           lang,
-          includeCurrency: entry.hasCurrency !== false,
-          onEnded: () => {
-            if (expPhon) {
-              this.speak(`${entry.original} — 💡 ${exp}`, `${explainMarker} : ${expPhon}.`, {
-                lang
-              });
-            }
-          }
+          includeCurrency: entry.hasCurrency !== false
         });
         return;
       }
+      this.stop();
+      const token = this.playbackToken;
 
-      const text = entry[lang] || entry.fub || entry.original || "";
-      const phon = entry[`phonetic_${lang}`] || (lang === "fub" ? entry.phonetic : null) || text;
+      const langData = (entry.languages && entry.languages[lang]) || {};
+      const phraseAudio = langData.audio || entry.audio || null;
+      const explainAudio = langData.explain_audio || entry.explain_audio || null;
+      const displayText = langData.text || entry[lang] || entry.original || "";
 
-      const fullPhonetic = `${phon}. ${explainMarker} : ${expPhon}.`;
-      const fullDisplay = `${text} — 💡 ${exp}`;
+      if (phraseAudio) {
+        const ok = await this._playSingle(phraseAudio, token, {
+          ...options,
+          displayText
+        });
+        if (!ok || token !== this.playbackToken) return;
+      }
 
-      this.speak(fullDisplay, fullPhonetic, { lang });
+      if (explainAudio && explainAudio !== phraseAudio) {
+        // Brief natural pause between UI label and pedagogical explanation
+        await new Promise((res) => {
+          this.sequenceTimer = setTimeout(res, 320);
+        });
+        if (token !== this.playbackToken) return;
+
+        await this._playSingle(explainAudio, token, {
+          ...options,
+          displayText: langData.explain_text || entry[`explain_${lang}`] || displayText
+        });
+      } else if (!phraseAudio) {
+        this.emitState(false, { missingAudio: true, text: displayText });
+      }
+    }
+
+    /**
+     * Sets global playback speed (e.g. 1.0 normal, 0.8 slow).
+     * @param {number} rate
+     */
+    setPlaybackRate(rate) {
+      const clamped = Math.min(1.5, Math.max(0.6, Number(rate) || 1.0));
+      this.playbackRate = clamped;
+      if (this.activeAudio) {
+        this.activeAudio.playbackRate = clamped;
+      }
     }
   }
 
-  // Export singleton instance onto window
   window.SafinumVoiceEngine = new SafinumVoiceEngine();
 })();

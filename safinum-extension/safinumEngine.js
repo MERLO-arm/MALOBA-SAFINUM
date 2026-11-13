@@ -49,7 +49,7 @@
   class SafinumWebNumberEngine {
     constructor(options) {
       const opts = options || {};
-      this.defaultLang = opts.defaultLang || "fub";
+      this.defaultLang = opts.defaultLang || "eto";
       const userCallbacks = opts.callbacks || {};
 
       this.player = new AudioStitcherPlayer(

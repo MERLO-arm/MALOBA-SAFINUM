@@ -1,92 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Maloba AnyDoc (fub)</title>
-  <link rel="stylesheet" href="popup.css" />
-</head>
-<body class="w-85 m-0 bg-slate-900 text-slate-50 font-sans p-3.5 select-none antialiased">
-  <div class="flex items-center gap-2.5 pb-3 border-b border-maloba-orange/25 mb-3">
-    <img src="icons/logo_maloba.png" alt="Maloba Logo" class="w-9 h-9 rounded-[10px] object-contain bg-maloba-orange/15 border border-maloba-orange/40 p-0.5" />
-    <div>
-      <div class="flex items-center gap-1.5">
-        <span class="text-sm font-extrabold tracking-tight text-white">Maloba AnyDoc</span>
-        <span class="text-[9px] px-1.5 py-0.5 rounded border border-maloba-orange/40 bg-maloba-orange/15 text-maloba-orange font-bold">Ekwali</span>
-      </div>
-      <div class="text-[11px] text-maloba-amber" id="popup-subtitle">Fulfuldé (fub), Ewondo (ewo) &amp; Éton (eto) · 3 Langues Actives</div>
-    </div>
-  </div>
-
-  <div class="grid grid-cols-[1.25fr_1fr_1fr] gap-1.5 bg-slate-800 p-1 rounded-[10px] mb-3 border border-slate-700">
-    <select id="popup-lang-select" class="lang-dropdown bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white border border-white/25 py-1.5 pl-1.5 pr-3.5 rounded-[7px] text-[11px] font-bold cursor-pointer outline-none shadow-[0_2px_6px_rgba(255,121,0,0.35)] appearance-none text-ellipsis whitespace-nowrap" title="Choisir la langue d'accessibilité">
-      <option value="fub" selected>🇨🇲 Fulfuldé (fub) · Grand-Nord</option>
-      <option value="ewo">🇨🇲 Ewondo (ewo) · Centre / Sud</option>
-      <option value="eto">🇨🇲 Éton (eto) · Centre / Lékié</option>
-      <option value="dua" disabled class="opacity-60">🇨🇲 Douala (dua) [À venir]</option>
-      <option value="bbj" disabled class="opacity-60">🇨🇲 Ghomálá' (bbj) [À venir]</option>
-      <option value="bas" disabled class="opacity-60">🇨🇲 Bassa (bas) [À venir]</option>
-    </select>
-    <button class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]" data-mode="bilingual">Bilingue</button>
-    <button class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]" data-mode="original">Original</button>
-  </div>
-
-  <div class="grid grid-cols-2 gap-1.5 mb-2.5">
-    <button class="speak-btn w-full border-0 bg-linear-to-br from-emerald-400 to-emerald-600 text-slate-950 font-extrabold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(16,185,129,0.3)] transition duration-150 hover:brightness-105" id="btn-read-page">
-      🔊 Lire toute la page
-    </button>
-    <button class="speak-btn w-full border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(255,121,0,0.3)] transition duration-150 hover:brightness-105" id="btn-speak-step">
-      🔊 Lire l'étape
-    </button>
-  </div>
-
-  <div class="bg-slate-800 border border-maloba-orange/40 rounded-[10px] p-2.5 mb-2.5">
-    <div class="flex justify-between items-center text-[10.5px] font-bold text-maloba-amber mb-1.5">
-      <span>🔢 SafinumWebNumberEngine (.ogg)</span>
-      <span id="popup-num-status" class="text-emerald-400 font-mono text-[10px]">42 clés · -14 LUFS</span>
-    </div>
-    <div class="flex gap-1.5 items-center mb-1.5">
-      <input
-        id="popup-amount-input"
-        type="text"
-        value="250 000"
-        placeholder="0 - 999 999 999"
-        class="flex-1 min-w-0 bg-slate-900 text-white border border-maloba-orange/40 rounded-[7px] px-2 py-1 text-[11.5px] font-mono font-bold outline-none"
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maloba AnyDoc (eto)</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body
+    class="w-85 m-0 bg-slate-900 text-slate-50 font-sans p-3.5 select-none antialiased"
+  >
+    <div
+      class="flex items-center gap-2.5 pb-3 border-b border-maloba-orange/25 mb-3"
+    >
+      <img
+        src="icons/logo_maloba.png"
+        alt="Maloba Logo"
+        class="w-9 h-9 rounded-[10px] object-contain bg-maloba-orange/15 border border-maloba-orange/40 p-0.5"
       />
+      <div>
+        <div class="flex items-center gap-1.5">
+          <span class="text-sm font-extrabold tracking-tight text-white"
+            >Maloba AnyDoc</span
+          >
+          <span
+            class="text-[9px] px-1.5 py-0.5 rounded border border-maloba-orange/40 bg-maloba-orange/15 text-maloba-orange font-bold"
+            >Ekwali</span
+          >
+        </div>
+        <div class="text-[11px] text-maloba-amber" id="popup-subtitle">
+          Éton (eto) · Dataset réel Maloba/Ekwali
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="grid grid-cols-[1.4fr_1fr_1fr] gap-1.5 bg-slate-800 p-1 rounded-[10px] mb-3 border border-slate-700 relative"
+    >
+      <div id="popup-lang-picker" class="relative">
+        <button
+          type="button"
+          id="popup-lang-trigger"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          class="w-full flex items-center justify-between gap-1.5 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white border border-white/25 py-1 pl-1.5 pr-2 rounded-[7px] text-[11px] font-bold cursor-pointer outline-none shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+          title="Choisir la langue d'accessibilité"
+        >
+          <span
+            id="popup-lang-trigger-content"
+            class="flex items-center gap-1.5 min-w-0 truncate"
+          ></span>
+          <span class="text-[9px] opacity-85 shrink-0">▾</span>
+        </button>
+        <div
+          id="popup-lang-menu"
+          role="listbox"
+          class="hidden absolute left-0 top-[calc(100%+6px)] w-68 max-h-64 overflow-y-auto bg-slate-900 border border-maloba-orange/45 rounded-[10px] p-1.5 shadow-2xl z-50 space-y-1"
+        ></div>
+      </div>
       <button
-        id="btn-speak-amount"
-        type="button"
-        class="border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11px] px-2.5 py-1.5 rounded-[7px] cursor-pointer whitespace-nowrap"
+        class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+        data-mode="bilingual"
       >
-        🔊 Lire FCFA
+        Bilingue
+      </button>
+      <button
+        class="mode-btn border-0 bg-transparent text-slate-400 py-1.5 px-1 rounded-[7px] text-[11px] font-semibold cursor-pointer transition-all duration-150 hover:text-white [&.active]:bg-maloba-orange [&.active]:text-white [&.active]:font-bold [&.active]:shadow-[0_2px_6px_rgba(255,121,0,0.35)]"
+        data-mode="original"
+      >
+        Original
       </button>
     </div>
-    <div id="popup-amount-words" class="text-[10.5px] text-slate-300 italic truncate">
-      teemerre ɗiɗi cappanɗe joyi ujunere FCFA (dalaaje CFA)
-    </div>
-  </div>
 
-  <div class="bg-slate-800 border border-maloba-orange/30 rounded-[10px] py-2.5 px-3 text-[11.5px] leading-relaxed text-slate-300 space-y-1">
-    <div class="flex justify-between items-center">
-      <span>Langues actives :</span>
-      <span class="text-maloba-orange font-bold" id="stat-lang-active">Fulfuldé, Ewondo &amp; Éton</span>
+    <div class="grid grid-cols-2 gap-1.5 mb-2.5">
+      <button
+        class="speak-btn w-full border-0 bg-linear-to-br from-emerald-400 to-emerald-600 text-slate-950 font-extrabold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(16,185,129,0.3)] transition duration-150 hover:brightness-105"
+        id="btn-read-page"
+      >
+        🔊 Lire toute la page
+      </button>
+      <button
+        class="speak-btn w-full border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11.5px] p-2 rounded-[10px] cursor-pointer shadow-[0_4px_12px_rgba(255,121,0,0.3)] transition duration-150 hover:brightness-105"
+        id="btn-speak-step"
+      >
+        🔊 Lire l'étape
+      </button>
     </div>
-    <div class="flex justify-between items-center">
-      <span>Corpus unifié :</span>
-      <span class="text-maloba-orange font-bold">18 sources (99 633 paires)</span>
-    </div>
-    <div class="flex justify-between items-center">
-      <span>Nœuds DOM traduits :</span>
-      <span class="text-maloba-orange font-bold" id="stat-nodes">--</span>
-    </div>
-    <div class="flex justify-between items-center">
-      <span>Intégrité des montants :</span>
-      <span class="text-emerald-500 font-bold">100 % Intègre (0 écart)</span>
-    </div>
-  </div>
 
-  <script src="numberDecomposer.js"></script>
-  <script src="audioStitcherPlayer.js"></script>
-  <script src="safinumEngine.js"></script>
-  <script src="popup.js"></script>
-</body>
+    <div class="flex gap-1.5 items-center bg-slate-800 border border-slate-700 rounded-[10px] p-1.5 mb-3">
+      <input
+        type="text"
+        id="popup-num-input"
+        class="flex-1 min-w-0 bg-slate-900 text-white border border-slate-700 rounded-md px-2 py-1 text-[11.5px] font-semibold outline-none focus:border-maloba-orange"
+        placeholder="Montant (ex: 250 000 FCFA)"
+        aria-label="Montant à lire"
+      />
+      <button
+        type="button"
+        id="popup-btn-speak-num"
+        class="border-0 bg-linear-to-br from-maloba-orange to-maloba-terracotta text-white font-bold text-[11px] px-2.5 py-1.5 rounded-md cursor-pointer shrink-0 hover:brightness-105"
+      >
+        🔢 Lire
+      </button>
+    </div>
+
+    <div
+      class="bg-slate-800 border border-maloba-orange/30 rounded-[10px] py-2.5 px-3 text-[11.5px] leading-relaxed text-slate-300 space-y-1"
+    >
+      <div class="flex justify-between items-center">
+        <span>Langue active :</span>
+        <span class="text-maloba-orange font-bold" id="stat-lang-active"
+          >Éton (eto)</span
+        >
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Dataset réel :</span>
+        <span class="text-maloba-orange font-bold" id="stat-dataset-info"
+          >192 entrées · 191 audios</span
+        >
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Nœuds DOM traduits :</span>
+        <span class="text-maloba-orange font-bold" id="stat-nodes">--</span>
+      </div>
+      <div class="flex justify-between items-center">
+        <span>Intégrité des montants :</span>
+        <span class="text-emerald-500 font-bold">100 % Intègre (0 écart)</span>
+      </div>
+    </div>
+
+    <script src="knowledge_base.js"></script>
+    <script src="popup.js"></script>
+  </body>
 </html>

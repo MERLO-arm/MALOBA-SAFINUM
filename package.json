@@ -6,7 +6,8 @@
   "scripts": {
     "build:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --minify",
     "watch:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:kb": "python3 scripts/build_dataset_kb.py",
+    "test": "node scripts/verify_extension.js"
   },
   "repository": {
     "type": "git",

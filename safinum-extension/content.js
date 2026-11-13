@@ -47,125 +47,61 @@
   /**
    * Builds a rich AnyDoc inspection and voice entry for a standalone numeric amount
    * without modifying the underlying DOM text node (preserving 100% Jury integrity).
-   * @param {number} amount - Validated integer amount (0 to 999,999,999)
+   * @param {number} amount - Validated integer amount (0..999,999,999)
    * @param {string} rawLabel - Original formatted string in DOM
    * @returns {Object}
    */
   function buildNumericAmountEntry(amount, rawLabel) {
     const hasCurrency = /FCFA|XAF|CFA/i.test(rawLabel) || true;
     const keys = NumberEngine ? NumberEngine.decompose(amount, { includeCurrency: hasCurrency }) : [];
-    const fubWords = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "fub", includeCurrency: hasCurrency })
-      : String(amount);
-    const ewoWords = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency })
-      : String(amount);
     const etoWords = NumberEngine
       ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency })
       : String(amount);
-    const fubPhon = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "fub", includeCurrency: hasCurrency, phonetic: true })
-      : fubWords;
-    const ewoPhon = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "ewo", includeCurrency: hasCurrency, phonetic: true })
-      : ewoWords;
-    const etoPhon = NumberEngine
-      ? NumberEngine.toWords(amount, { lang: "eto", includeCurrency: hasCurrency, phonetic: true })
-      : etoWords;
 
     return {
       original: rawLabel,
       numericAmount: amount,
       hasCurrency,
       audioKeys: keys,
-      fub: `${rawLabel} — 🔊 ${fubWords}`,
-      ewo: `${rawLabel} — 🔊 ${ewoWords}`,
-      eto: `${rawLabel} — 🔊 ${etoWords}`,
-      phonetic: fubPhon,
-      phonetic_ewo: ewoPhon,
-      phonetic_eto: etoPhon,
-      explain_fub: `Limngal ceede (${rawLabel}) : « ${fubWords} ». Laartu limngal ceede ngal booyma hidde a tabitina.`,
-      explain_fub_phonetic: `Limngal tchéédé : ${fubPhon}. Lârtou limngal tchéédé ngal bôyma hiddé a tabitina.`,
-      explain_ewo: `Akɔŋ mɔni (${rawLabel}) : « ${ewoWords} ». Laart akɔŋ mɔni osu na o kaməla.`,
-      explain_ewo_phonetic: `Akong moni : ${ewoPhon}. Lârt akong moni osou na o kameula.`,
-      explain_eto: `Itáŋ i mwání (${rawLabel}) : « ${etoWords} ». Laart itáŋ i mwání osu na o kaməla.`,
-      explain_eto_phonetic: `Itang i mwani : ${etoPhon}. Lârt itang i mwani osou na o kameula.`,
-      explain_fr: `Lecture vocale gapless (${keys.length} clés audio .ogg) : ${keys.join(" → ")}`,
-      category: "montant_audio",
-      source: "safinum_42_keys_audio_corpus (-14 LUFS)",
-      mode: "NUMBER_TO_SPEECH_ENGINE",
-      confidence: 1.0
+      eto: etoWords,
+      explain_eto: `Tán i mwání : ${etoWords}`,
+      explain_fr: `Montant détecté (${rawLabel}) lu chiffre par chiffre en Éton (${keys.length} segments audio .ogg).`,
+      category: "Montants & Chiffres Safinum",
+      entities: [rawLabel],
+      source: "SafinumWebNumberEngine (.ogg)",
+      mode: "NUMBER_STITCHER",
+      languages: {
+        eto: {
+          text: etoWords,
+          audio: null,
+          explain_text: `Tán i mwání : ${etoWords}`,
+          explain_audio: null
+        }
+      }
     };
   }
 
   /**
-   * Central Language Registry: defines active languages and upcoming national languages.
+   * Central Language Registry: sourced from compiled KB metadata,
+   * with Eton (eto) as the active production language.
    */
-  const DEFAULT_LANGUAGES = {
-    fub: {
-      code: "fub",
-      name: "Fulfuldé",
-      label: "Fulfuldé (fub) · Grand-Nord",
-      region: "Grand-Nord (Adamaoua, Nord, Extrême-Nord)",
-      flag: "🇨🇲",
-      listenWord: "Nanugo",
-      explainWord: "Famfingo",
-      active: true
-    },
-    ewo: {
-      code: "ewo",
-      name: "Ewondo",
-      label: "Ewondo (ewo) · Centre / Sud",
-      region: "Centre, Sud, Est (Zone Beti-Fang)",
-      flag: "🇨🇲",
-      listenWord: "Wóg",
-      explainWord: "Fáám",
-      active: true
-    },
+  const FALLBACK_LANGUAGES = {
     eto: {
       code: "eto",
       name: "Éton",
-      label: "Éton (eto) · Centre / Lékié",
-      region: "Centre (Lékié, Obala, Sa'a)",
+      label: "🇨🇲 Éton (eto) · Centre",
+      region: "Centre (Lekié, Mfoundi)",
       flag: "🇨🇲",
-      listenWord: "Wɔ́g",
-      explainWord: "Fáám",
-      active: true
-    },
-    dua: {
-      code: "dua",
-      name: "Douala",
-      label: "Douala (dua) [À venir]",
-      region: "Littoral, Sud-Ouest (Wouri)",
-      flag: "🇨🇲",
-      listenWord: "Senga",
-      explainWord: "Bwele",
-      active: false,
-      soon: true
-    },
-    bbj: {
-      code: "bbj",
-      name: "Ghomálá'",
-      label: "Ghomálá' (bbj) [À venir]",
-      region: "Ouest (Hauts-Plateaux / Bamiléké)",
-      flag: "🇨🇲",
-      listenWord: "Ju'",
-      explainWord: "Fa'",
-      active: false,
-      soon: true
-    },
-    bas: {
-      code: "bas",
-      name: "Bassa",
-      label: "Bassa (bas) [À venir]",
-      region: "Centre, Littoral (Sanaga-Maritime)",
-      flag: "🇨🇲",
-      listenWord: "Hɛp",
-      explainWord: "Tégəl",
-      active: false,
-      soon: true
+      listenWord: "Wóg",
+      explainWord: "Ndimzana",
+      active: true,
+      soon: false
     }
   };
+
+  function getLanguageRegistry() {
+    return (KB.meta && KB.meta.languages) || FALLBACK_LANGUAGES;
+  }
 
   /**
    * Resolves language configuration with fallback defaults.
@@ -173,22 +109,16 @@
    * @returns {Object} Language configuration object
    */
   function getLangConfig(code) {
-    const registry = (KB.meta && KB.meta.languages) || DEFAULT_LANGUAGES;
+    const registry = getLanguageRegistry();
     return (
       registry[code] ||
-      DEFAULT_LANGUAGES[code] || {
-        code: code || "fub",
-        name: code || "Fulfuldé",
-        label: code || "Langue",
-        flag: "🇨🇲",
-        listenWord: "Nanugo",
-        explainWord: "Famfingo"
-      }
+      registry[KB.meta?.default_language || "eto"] ||
+      FALLBACK_LANGUAGES.eto
     );
   }
 
   // Application state variables
-  let currentLang = "fub"; // Active language ('fub' | 'ewo')
+  let currentLang = (KB.meta && KB.meta.default_language) || "eto";
   let currentMode = "lang"; // Active mode ('lang' | 'bilingual' | 'original')
   let isApplyingDOMChanges = false;
   let mutationTimer = null;
@@ -251,15 +181,8 @@
     // Do not touch jury evaluation panel or jury toggle buttons
     if (parent.closest("aside.fixed") || parent.closest("button.fixed")) return true;
 
-    // Do not touch Maloba AnyDoc extension elements or detached screen reader overlay
-    if (
-      parent.closest("#safinum-anydoc-dock") ||
-      parent.closest("#safinum-anydoc-hover-pill") ||
-      parent.closest("#safinum-screen-reader-overlay") ||
-      parent.closest("#safinum-voice-root")
-    ) {
-      return true;
-    }
+    // Do not touch Maloba AnyDoc extension elements
+    if (parent.closest("#safinum-anydoc-dock") || parent.closest("#safinum-anydoc-hover-pill")) return true;
 
     return false;
   }
@@ -335,8 +258,6 @@
       if (!state) {
         if (!Graph || typeof Graph.isSacredOnly !== "function") return;
         if (Graph.isSacredOnly(trimmed)) {
-          // Attach SafinumWebNumberEngine audio metadata to standalone amounts (e.g., "250 000 FCFA")
-          // while keeping node.nodeValue 100% untouched for Jury 0-discrepancy integrity.
           if (NumberEngine && parent && parent.tagName !== "OPTION") {
             const parsedAmount = NumberEngine.parseAmount(trimmed);
             if (parsedAmount !== null) {
@@ -360,11 +281,12 @@
         const bilingualFormatted = {};
         const bilingualTrimmed = {};
 
-        const allLangs = Object.keys(DEFAULT_LANGUAGES);
-        for (const l of allLangs) {
-          const rawText =
-            result[l] || (l === "fub" ? result.fub : result.ewo || result.fub || trimmed || "");
+        const registry = getLanguageRegistry();
+        const activeLangs = Object.keys(registry).filter((l) => registry[l] && registry[l].active);
+        for (const l of activeLangs) {
+          const rawText = result[l] || (result.languages && result.languages[l] && result.languages[l].text) || "";
           const text = String(rawText || "");
+          if (!text) continue;
           langFormatted[l] = `${leadingSpace}${text}${trailingSpace}`;
           langTrimmed[l] = text.replace(/\s+/g, " ").trim();
           bilingualFormatted[l] = `${leadingSpace}${text} [${trimmed}]${trailingSpace}`;
@@ -389,15 +311,9 @@
 
       let targetValue = state.originalRaw;
       if (currentMode === "lang") {
-        targetValue =
-          (state.langFormatted && state.langFormatted[currentLang]) ||
-          (state.langFormatted && state.langFormatted.fub) ||
-          state.originalRaw;
+        targetValue = (state.langFormatted && state.langFormatted[currentLang]) || state.originalRaw;
       } else if (currentMode === "bilingual") {
-        targetValue =
-          (state.bilingualFormatted && state.bilingualFormatted[currentLang]) ||
-          (state.bilingualFormatted && state.bilingualFormatted.fub) ||
-          state.originalRaw;
+        targetValue = (state.bilingualFormatted && state.bilingualFormatted[currentLang]) || state.originalRaw;
       } else {
         targetValue = state.originalRaw;
       }
@@ -469,9 +385,15 @@
     pill = document.createElement("div");
     pill.id = "safinum-anydoc-hover-pill";
     pill.innerHTML = `
-      <span id="safinum-pill-lang-badge" style="padding-left:4px;font-weight:700;color:#ffa040;">${initCfg.flag} Maloba · ${initCfg.name}</span>
-      <button type="button" id="safinum-pill-speak" title="Écouter la prononciation">🔊 ${initCfg.listenWord}</button>
-      <button type="button" id="safinum-pill-explain" title="Comprendre l'explication">💡 ${initCfg.explainWord}</button>
+      <span id="safinum-pill-lang-badge" class="safinum-pill-lang">${initCfg.name}</span>
+      <span class="safinum-pill-divider" aria-hidden="true"></span>
+      <button type="button" id="safinum-pill-speak" class="safinum-pill-btn safinum-pill-btn-primary" title="Écouter la prononciation">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span id="safinum-pill-speak-label">${initCfg.listenWord}</span>
+      </button>
     `;
     document.body.appendChild(pill);
 
@@ -479,67 +401,77 @@
       e.stopPropagation();
       if (activeHoveredEntry) {
         highlightSpokenElement(activeHoveredElement);
-        setInspectorEntry(activeHoveredEntry, activeHoveredElement);
-        if (typeof activeHoveredEntry.numericAmount === "number" && Voice.speakAmount) {
+        if (typeof activeHoveredEntry.numericAmount === "number") {
           Voice.speakAmount(activeHoveredEntry.numericAmount, {
             lang: currentLang,
             includeCurrency: activeHoveredEntry.hasCurrency !== false
           });
-          return;
+        } else {
+          const langData =
+            (activeHoveredEntry.languages && activeHoveredEntry.languages[currentLang]) || {};
+          const spokenTxt =
+            langData.text || activeHoveredEntry[currentLang] || activeHoveredEntry.original;
+          const audioPath = langData.audio || activeHoveredEntry.audio;
+          if (audioPath) {
+            Voice.playAudio(audioPath, { displayText: spokenTxt });
+          } else {
+            Voice.speakPhraseAndExplanation(activeHoveredEntry, currentLang);
+          }
         }
-        const spokenTxt =
-          activeHoveredEntry[currentLang] || activeHoveredEntry.fub || activeHoveredEntry.original;
-        const spokenPhon =
-          activeHoveredEntry[`phonetic_${currentLang}`] || activeHoveredEntry.phonetic || spokenTxt;
-        Voice.speak(spokenTxt, spokenPhon, { lang: currentLang });
-      }
-    });
-
-    pill.querySelector("#safinum-pill-explain").addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (activeHoveredEntry) {
-        highlightSpokenElement(activeHoveredElement);
-        Voice.speakPhraseAndExplanation(activeHoveredEntry, currentLang);
         setInspectorEntry(activeHoveredEntry, activeHoveredElement);
-        const dock = document.getElementById("safinum-anydoc-dock");
-        if (dock) dock.classList.remove("safinum-dock-minimized");
       }
     });
 
-    // Pill hover retention: prevent pill from disappearing when cursor moves from text onto pill
-    pill.addEventListener("mouseenter", () => {
-      if (hoverHideTimer) clearTimeout(hoverHideTimer);
-    });
+    const hideHoverPill = () => {
+      pill.classList.remove("is-visible");
+      if (activeHoveredElement) {
+        activeHoveredElement.removeAttribute("data-safinum-hovered");
+      }
+    };
 
-    pill.addEventListener("mouseleave", () => {
-      hoverHideTimer = setTimeout(() => {
-        pill.style.display = "none";
-      }, 300);
+    pill.addEventListener("mouseleave", (e) => {
+      const nextTarget = e.relatedTarget;
+      if (nextTarget && nextTarget.closest?.('[data-safinum-translated="true"]') === activeHoveredElement) {
+        return;
+      }
+      hideHoverPill();
     });
 
     document.addEventListener("mouseover", (e) => {
+      if (currentMode === "original") {
+        hideHoverPill();
+        return;
+      }
+      if (e.target.closest?.("#safinum-anydoc-hover-pill")) {
+        return;
+      }
       const target = e.target.closest?.('[data-safinum-translated="true"]');
-      if (!target || !target.__safinumEntry) return;
+      if (!target || !target.__safinumEntry) {
+        hideHoverPill();
+        return;
+      }
 
-      if (hoverHideTimer) clearTimeout(hoverHideTimer);
-
+      if (activeHoveredElement && activeHoveredElement !== target) {
+        activeHoveredElement.removeAttribute("data-safinum-hovered");
+      }
       activeHoveredElement = target;
       activeHoveredEntry = target.__safinumEntry;
+      target.setAttribute("data-safinum-hovered", "true");
 
       const rect = target.getBoundingClientRect();
-      const top = Math.max(8, rect.top - 36);
-      const left = Math.min(window.innerWidth - 290, Math.max(8, rect.left));
+      const top = rect.top > 52 ? rect.top - 36 : Math.min(window.innerHeight - 44, rect.bottom + 4);
+      const left = Math.min(window.innerWidth - 200, Math.max(12, rect.left));
 
       pill.style.top = `${top}px`;
       pill.style.left = `${left}px`;
-      pill.style.display = "inline-flex";
+      pill.classList.add("is-visible");
     });
+
+    document.addEventListener("mouseleave", hideHoverPill);
 
     document.addEventListener(
       "scroll",
-      () => {
-        pill.style.display = "none";
-      },
+      hideHoverPill,
       { passive: true }
     );
 
@@ -547,24 +479,210 @@
   }
 
   /**
-   * Applies non-intrusive detached overlay focus highlight to the element currently being spoken
-   * without mutating any host element styles or attributes.
+   * Applies animated focus highlight to the element currently being spoken.
    * @param {HTMLElement} el - Element to highlight
    */
   function highlightSpokenElement(el) {
-    if (!el || !ScreenReader) return;
-    ScreenReader.moveHighlightTo(el);
-    if (!ScreenReader.isActive) {
+    document.querySelectorAll('[data-safinum-speaking="true"]').forEach((node) => {
+      node.removeAttribute("data-safinum-speaking");
+    });
+    if (el) {
+      el.setAttribute("data-safinum-speaking", "true");
       setTimeout(() => {
-        if (!ScreenReader.isActive) {
-          ScreenReader.hideOverlay();
-        }
-      }, 4000);
+        el.removeAttribute("data-safinum-speaking");
+      }, 4500);
     }
   }
 
   /**
-   * Instantiates and mounts the Maloba AnyDoc floating accessibility dock.
+   * Builds a hollow circular progress ring SVG with a 360deg skeleton track,
+   * thicker progress skin arc, and centered completion percentage text.
+   * @param {number} percent - Completion percentage (0..100)
+   * @param {number} [size=28] - Pixel diameter
+   * @returns {string} Inline SVG markup
+   */
+  function createCompletionRingSVG(percent, size = 28) {
+    const pct = Math.max(0, Math.min(100, Math.round(Number(percent) || 0)));
+    const r = 14;
+    const circumference = 2 * Math.PI * r;
+    const offset = circumference * (1 - pct / 100);
+    const strokeColor = pct >= 100 ? "#10b981" : pct > 0 ? "#ff7900" : "#64748b";
+
+    return `
+      <svg width="${size}" height="${size}" viewBox="0 0 36 36" style="flex-shrink:0;" aria-hidden="true">
+        <circle
+          cx="18" cy="18" r="${r}"
+          fill="none"
+          stroke="rgba(148, 163, 184, 0.28)"
+          stroke-width="2.2"
+        />
+        ${
+          pct > 0
+            ? `<circle
+                cx="18" cy="18" r="${r}"
+                fill="none"
+                stroke="${strokeColor}"
+                stroke-width="4.2"
+                stroke-linecap="round"
+                stroke-dasharray="${circumference.toFixed(2)}"
+                stroke-dashoffset="${offset.toFixed(2)}"
+                transform="rotate(-90 18 18)"
+              />`
+            : ""
+        }
+        <text
+          x="18" y="18"
+          text-anchor="middle"
+          dominant-baseline="central"
+          font-size="8.5"
+          font-weight="800"
+          fill="#ffffff"
+        >${pct}%</text>
+      </svg>
+    `;
+  }
+
+  /**
+   * Detects whether the host page's original language is French (FR) or English (EN).
+   * @returns {"FR"|"EN"}
+   */
+  function detectPageLanguageCode() {
+    const htmlLang = (document.documentElement?.lang || "").trim().toLowerCase();
+    if (htmlLang.startsWith("en")) return "EN";
+    if (htmlLang.startsWith("fr")) return "FR";
+
+    const sample = `${document.title || ""} ${(document.body?.innerText || "").slice(0, 600)}`.toLowerCase();
+    const enMatches = (sample.match(/\b(the|and|for|with|your|balance|amount|account|transfer|confirm)\b/g) || []).length;
+    const frMatches = (sample.match(/\b(le|la|les|des|une|pour|avec|votre|solde|montant|compte|étape)\b|[éèêàùç]/g) || []).length;
+    return enMatches > frMatches ? "EN" : "FR";
+  }
+
+  function renderDockLanguagePicker(dock) {
+    if (!dock) return;
+    const registry = getLanguageRegistry();
+    const activeCfg = getLangConfig(currentLang);
+    const isOriginalMode = currentMode === "original";
+    const pageLangCode = detectPageLanguageCode();
+    const pillLangName = dock.querySelector("#safinum-notch-lang-name");
+    const menu = dock.querySelector("#safinum-lang-menu");
+    const readPageBtn = dock.querySelector("#safinum-btn-read-page");
+    const pausePageBtn = dock.querySelector("#safinum-btn-pause-page");
+
+    if (pillLangName) {
+      pillLangName.textContent = isOriginalMode
+        ? `Original (${pageLangCode})`
+        : (activeCfg ? activeCfg.name : "Maloba");
+    }
+
+    if (readPageBtn) {
+      readPageBtn.disabled = isOriginalMode;
+      if (isOriginalMode) {
+        readPageBtn.classList.remove("active");
+        const labelEl = readPageBtn.querySelector("span");
+        if (labelEl) labelEl.textContent = "Lecture désactivée";
+        readPageBtn.title = "Sélectionnez une langue pour activer la lecture";
+      } else if (!ScreenReader || !ScreenReader.isActive) {
+        const labelEl = readPageBtn.querySelector("span");
+        if (labelEl) labelEl.textContent = "Lire toute la page";
+        readPageBtn.title = "Lire toute la page séquentiellement";
+      }
+    }
+    if (pausePageBtn && isOriginalMode) {
+      pausePageBtn.style.display = "none";
+    }
+
+    if (menu) {
+      const langItemsHtml = Object.values(registry)
+        .map((l) => {
+          const pct = l.completionPercent ?? (l.active ? 100 : 0);
+          const isSelected = !isOriginalMode && l.code === currentLang;
+          const isDisabled = Boolean(l.soon || !l.active);
+          const countInfo = `${l.recordsCount || 0}/${l.targetRecordsCount || 192}`;
+          return `
+            <button
+              type="button"
+              role="option"
+              aria-selected="${isSelected}"
+              data-lang="${l.code}"
+              ${isDisabled ? "disabled" : ""}
+              class="safinum-notch-lang-item ${isSelected ? "selected" : ""}"
+            >
+              ${createCompletionRingSVG(pct, 30)}
+              <div class="safinum-notch-lang-meta">
+                <div class="safinum-notch-lang-title">
+                  <span>${l.name}</span>
+                  <span class="safinum-notch-lang-code">${l.code}</span>
+                </div>
+                <div class="safinum-notch-lang-sub ${l.active ? "is-ready" : ""}">
+                  ${l.active ? `Disponible · ${pct}% (${countInfo})` : `En collecte · ${pct}% (${countInfo})`}
+                </div>
+              </div>
+              ${
+                isSelected
+                  ? `<svg class="safinum-notch-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+                  : ""
+              }
+            </button>
+          `;
+        })
+        .join("");
+
+      const originalOptionHtml = `
+        <button
+          type="button"
+          role="option"
+          aria-selected="${isOriginalMode}"
+          data-mode-original="true"
+          class="safinum-notch-lang-item safinum-notch-original-item ${isOriginalMode ? "selected" : ""}"
+        >
+          <span class="safinum-notch-original-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </span>
+          <div class="safinum-notch-lang-meta">
+            <div class="safinum-notch-lang-title">
+              <span>Texte original</span>
+              <span class="safinum-notch-lang-code">${pageLangCode}</span>
+            </div>
+            <div class="safinum-notch-lang-sub">
+              Désactive traduction, survol et lecture
+            </div>
+          </div>
+          ${
+            isOriginalMode
+              ? `<svg class="safinum-notch-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+              : ""
+          }
+        </button>
+      `;
+
+      menu.innerHTML = `${originalOptionHtml}${langItemsHtml}`;
+
+      menu.querySelectorAll("button[data-lang]:not([disabled])").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const newLang = btn.getAttribute("data-lang");
+          if (!newLang) return;
+          setLanguage(newLang);
+          setMode("lang");
+        });
+      });
+
+      const origBtn = menu.querySelector('button[data-mode-original="true"]');
+      if (origBtn) {
+        origBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          setMode("original");
+        });
+      }
+    }
+  }
+
+  /**
+   * Instantiates and mounts the Maloba AnyDoc floating Dynamic Island (Notch).
    */
   function createAnyDocDock() {
     if (document.getElementById("safinum-anydoc-dock")) return;
@@ -572,172 +690,209 @@
     const dock = document.createElement("aside");
     dock.id = "safinum-anydoc-dock";
 
-    const sourcesBreakdown = KB.meta?.sources_breakdown || {};
-    const sourcesLines = Object.entries(sourcesBreakdown)
-      .map(
-        ([k, v]) => `<div>• <strong>${k}</strong> : ${Number(v).toLocaleString("fr-FR")} entrées</div>`
-      )
-      .join("");
+    const cfg = getLangConfig(currentLang);
 
     dock.innerHTML = `
-      <div class="safinum-dock-header" id="safinum-dock-header-toggle" title="Cliquer pour réduire ou agrandir">
-        <div class="safinum-dock-brand">
-          <img src="${MALOBA_LOGO_DATA_URI}" alt="Maloba Logo" class="safinum-dock-logo-img" />
-          <div>
-            <div class="safinum-dock-title" style="display:flex;align-items:center;gap:7px;">
-              <span>Maloba AnyDoc</span>
-              <span class="safinum-equalizer" id="safinum-dock-equalizer" data-reading="false" title="Indicateur de lecture vocale">
-                <span class="safinum-eq-bar"></span>
-                <span class="safinum-eq-bar"></span>
-                <span class="safinum-eq-bar"></span>
-                <span class="safinum-eq-bar"></span>
-              </span>
-            </div>
-            <div class="safinum-dock-subtitle" id="safinum-dock-sub">Accessibilité Financière ${
-              cfg.name
-            } (${cfg.code}) · Graphe 5-Nœuds</div>
-          </div>
-        </div>
-        <button type="button" class="safinum-dock-toggle-btn" title="Réduire / Agrandir">−</button>
+      <div class="safinum-notch-pill">
+        <button
+          type="button"
+          class="safinum-notch-drag-handle"
+          id="safinum-notch-drag-handle"
+          title="Déplacer"
+          aria-label="Déplacer le widget flottant"
+        >
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <circle cx="5.5" cy="3.5" r="1.2"/>
+            <circle cx="10.5" cy="3.5" r="1.2"/>
+            <circle cx="5.5" cy="8" r="1.2"/>
+            <circle cx="10.5" cy="8" r="1.2"/>
+            <circle cx="5.5" cy="12.5" r="1.2"/>
+            <circle cx="10.5" cy="12.5" r="1.2"/>
+          </svg>
+        </button>
+
+        <img src="${MALOBA_LOGO_DATA_URI}" alt="Maloba" class="safinum-notch-logo" />
+
+        <span class="safinum-notch-lang" id="safinum-notch-lang-name">${currentMode === "original" ? `Original (${detectPageLanguageCode()})` : cfg.name}</span>
+
+        <span class="safinum-equalizer" id="safinum-dock-equalizer" data-reading="false" title="Indicateur audio">
+          <span class="safinum-eq-bar"></span>
+          <span class="safinum-eq-bar"></span>
+          <span class="safinum-eq-bar"></span>
+          <span class="safinum-eq-bar"></span>
+          <span class="safinum-eq-bar"></span>
+        </span>
+
+        <span class="safinum-notch-expand-icon" title="Survoler pour étendre" aria-hidden="true">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="7 15 12 20 17 15"></polyline>
+            <polyline points="7 9 12 4 17 9"></polyline>
+          </svg>
+        </span>
       </div>
 
-      <div class="safinum-dock-body">
-        <div class="safinum-mode-bar">
-          <select class="safinum-lang-dropdown" id="safinum-lang-select" title="Choisir la langue d'accessibilité">
-            ${Object.values(DEFAULT_LANGUAGES)
-              .map(
-                (l) =>
-                  `<option value="${l.code}" ${currentLang === l.code ? "selected" : ""} ${
-                    l.soon ? "disabled style='opacity:0.6;'" : ""
-                  }>${l.label}</option>`
-              )
-              .join("")}
-          </select>
-          <button type="button" class="safinum-mode-btn ${
-            currentMode === "bilingual" ? "active" : ""
-          }" data-mode="bilingual" title="Afficher traduction et original entre crochets">Bilingue</button>
-          <button type="button" class="safinum-mode-btn ${
-            currentMode === "original" ? "active" : ""
-          }" data-mode="original" title="Afficher l'interface originale">Original</button>
-        </div>
-
-        <div class="safinum-voice-actions" style="flex-wrap:wrap;">
-          <button type="button" class="safinum-action-read-page" id="safinum-btn-read-page" title="Parcourir et lire toute la page avec suivi lumineux">
-            🔊 Lire toute la page
-          </button>
-          <button type="button" class="safinum-action-pause" id="safinum-btn-pause-page" style="display:none;" title="Mettre en pause ou reprendre la lecture de la page">
-            ⏸
-          </button>
-          <button type="button" class="safinum-action-primary" id="safinum-btn-read-step" title="Lire vocalement et expliquer la consigne de l'étape active">
-            🔊 Lire l'étape
-          </button>
-          <button type="button" class="safinum-action-stop" id="safinum-btn-stop-voice" title="Arrêter la voix">
-            ⏹
-          </button>
-        </div>
-
-        <div class="safinum-number-engine-bar" style="background:rgba(15,23,42,0.85);border:1px solid rgba(255,121,0,0.35);border-radius:10px;padding:8px 10px;margin-bottom:8px;">
-          <div style="display:flex;justify-content:space-between;align-items:center;font-size:10.5px;font-weight:700;color:#ffa040;margin-bottom:5px;">
-            <span>🔢 LECTEUR VOCAL MONTANTS (.OGG GAPLESS)</span>
-            <span id="safinum-num-segment-badge" style="color:#10b981;font-family:monospace;font-size:10px;">42 clés prêtes</span>
-          </div>
-          <div style="display:flex;gap:5px;align-items:center;">
-            <input
-              type="text"
-              id="safinum-num-input"
-              value="250 000"
-              placeholder="0 - 999 999 999 FCFA"
-              style="flex:1;background:#0f172a;color:#f8fafc;border:1px solid rgba(255,121,0,0.4);border-radius:7px;padding:4px 8px;font-size:11.5px;font-family:monospace;font-weight:700;outline:none;"
-            />
-            <button
-              type="button"
-              id="safinum-btn-speak-num"
-              title="Décomposer et lire le montant en langue nationale"
-              style="background:linear-gradient(135deg,#ff7900,#e05515);color:#fff;border:none;border-radius:7px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;"
-            >
-              🔊 Lire FCFA
+      <div class="safinum-notch-body">
+        <div class="safinum-notch-body-inner">
+          <div class="safinum-notch-section-label">Langues disponibles</div>
+          <div class="safinum-notch-langs" id="safinum-lang-menu" role="listbox" aria-label="Langues disponibles"></div>
+          <div class="safinum-notch-footer">
+            <button type="button" class="safinum-notch-read-btn" id="safinum-btn-read-page" title="Lire toute la page séquentiellement">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <span>Lire toute la page</span>
+            </button>
+            <button type="button" class="safinum-notch-pause-btn" id="safinum-btn-pause-page" style="display:none;" title="Mettre en pause / Reprendre">
+              ⏸
             </button>
           </div>
         </div>
-
-        <div class="safinum-inspector-card" id="safinum-inspector-card">
-          <div class="safinum-inspector-label">
-            <span id="safinum-insp-mode">💡 EXPLICATION ANYDOC · MALOBA</span>
-            <button type="button" id="safinum-insp-speak-btn" style="background:#ff7900;color:#ffffff;border:none;border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;cursor:pointer;">
-              🔊 Écouter
-            </button>
-          </div>
-          <div class="safinum-inspector-fub" id="safinum-insp-fub">
-            Jaɓɓaama haa Safinum Pay! Ɓillu dow konngol fuu ngam nanugo e famfingo ngol bee Fulfuldé.
-          </div>
-          <div class="safinum-inspector-orig" id="safinum-insp-orig">
-            Survolez une phrase ou cliquez sur « Lire &amp; Expliquer l'étape » pour l'analyser.
-          </div>
-          <div class="safinum-inspector-explain" id="safinum-insp-explain-fub">
-            🗣️ <strong>Famfingo (fub) :</strong> Nokkuure ndee ɗon walla ma laartugo ceede maa, coggu nelal e jaɓoowo ceede bee kisal timmungal.
-          </div>
-          <div class="safinum-inspector-explain-fr" id="safinum-insp-explain-fr">
-            🇫🇷 <strong>Sens simplifié :</strong> Cet assistant traduit chaque étape en langue nationale, lit les consignes à haute voix et garantit 100 % d'intégrité financière.
-          </div>
-        </div>
-
-        <div class="safinum-stats-grid">
-          <div class="safinum-stat-box">
-            <div class="safinum-stat-val" id="safinum-stat-nodes">0</div>
-            <div class="safinum-stat-lbl">Textes traduits</div>
-          </div>
-          <div class="safinum-stat-box">
-            <div class="safinum-stat-val" style="color:#10b981;">100%</div>
-            <div class="safinum-stat-lbl">Intégrité chiffres</div>
-          </div>
-          <div class="safinum-stat-box">
-            <div class="safinum-stat-val">18</div>
-            <div class="safinum-stat-lbl">Sources (99 633)</div>
-          </div>
-        </div>
-
-        <details class="safinum-sources-details">
-          <summary>📚 Voir les 18 sources Fulfuldé &amp; Graphe RAG (99 633 paires)</summary>
-          <div class="safinum-sources-list">
-            ${sourcesLines}
-          </div>
-        </details>
       </div>
     `;
 
     document.body.appendChild(dock);
+    renderDockLanguagePicker(dock);
 
-    // Collapsible header toggle
-    dock.querySelector("#safinum-dock-header-toggle").addEventListener("click", (e) => {
-      if (e.target.closest("button.safinum-dock-toggle-btn") || e.currentTarget === e.target) {
-        dock.classList.toggle("safinum-dock-minimized");
+    // Restore saved position if any (anchor top or bottom depending on screen half so expansion stays in-bounds)
+    const applyDockedPosition = (left, top, height) => {
+      const maxLeft = Math.max(12, window.innerWidth - 328);
+      const clampedLeft = Math.min(Math.max(12, left), maxLeft);
+      dock.style.left = `${clampedLeft}px`;
+      dock.style.right = "auto";
+
+      if (top + height / 2 > window.innerHeight / 2) {
+        const bottom = Math.max(12, window.innerHeight - (top + height));
+        dock.style.bottom = `${bottom}px`;
+        dock.style.top = "auto";
+        dock.dataset.anchor = "bottom";
+      } else {
+        const clampedTop = Math.max(12, top);
+        dock.style.top = `${clampedTop}px`;
+        dock.style.bottom = "auto";
+        dock.dataset.anchor = "top";
       }
-    });
+    };
 
-    const langSelect = dock.querySelector("#safinum-lang-select");
-    if (langSelect) {
-      langSelect.addEventListener("change", (e) => {
-        setLanguage(e.target.value);
-        dock.querySelectorAll(".safinum-mode-btn").forEach((b) => b.classList.remove("active"));
-        setMode("lang");
+    try {
+      if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+        chrome.storage.local.get(["safinum_notch_pos"], (res) => {
+          const pos = res && res.safinum_notch_pos;
+          if (pos && typeof pos.left === "number" && typeof pos.top === "number") {
+            const rect = dock.getBoundingClientRect();
+            applyDockedPosition(pos.left, pos.top, rect.height || 44);
+          }
+        });
+      }
+    } catch (_) {}
+
+    // Dynamic Island hover-to-expand with smooth grace delay
+    let collapseTimer = null;
+    let isDragging = false;
+
+    const expandNotch = () => {
+      if (isDragging) return;
+      if (collapseTimer) {
+        clearTimeout(collapseTimer);
+        collapseTimer = null;
+      }
+      // Ensure expanded width doesn't overflow right edge
+      const rect = dock.getBoundingClientRect();
+      const maxLeft = Math.max(12, window.innerWidth - 328);
+      if (rect.left > maxLeft) {
+        dock.style.left = `${maxLeft}px`;
+      }
+      dock.classList.add("is-expanded");
+    };
+
+    const scheduleCollapseNotch = () => {
+      if (collapseTimer) clearTimeout(collapseTimer);
+      collapseTimer = setTimeout(() => {
+        if (!isDragging) {
+          dock.classList.remove("is-expanded");
+        }
+      }, 200);
+    };
+
+    dock.addEventListener("mouseenter", expandNotch);
+    dock.addEventListener("mouseleave", scheduleCollapseNotch);
+
+    // Draggable handle
+    const dragHandle = dock.querySelector("#safinum-notch-drag-handle");
+    if (dragHandle) {
+      let startX = 0;
+      let startY = 0;
+      let origLeft = 0;
+      let origTop = 0;
+
+      dragHandle.addEventListener("pointerdown", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        isDragging = true;
+        if (collapseTimer) clearTimeout(collapseTimer);
+        dock.classList.remove("is-expanded");
+        dock.classList.add("is-dragging");
+
+        const rect = dock.getBoundingClientRect();
+        origLeft = rect.left;
+        origTop = rect.top;
+        startX = e.clientX;
+        startY = e.clientY;
+
+        dock.style.left = `${origLeft}px`;
+        dock.style.top = `${origTop}px`;
+        dock.style.bottom = "auto";
+        dock.style.right = "auto";
+
+        if (dragHandle.setPointerCapture) {
+          try {
+            dragHandle.setPointerCapture(e.pointerId);
+          } catch (_) {}
+        }
       });
+
+      const onPointerMove = (e) => {
+        if (!isDragging) return;
+        const rect = dock.getBoundingClientRect();
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        const maxLeft = Math.max(12, window.innerWidth - rect.width - 12);
+        const maxTop = Math.max(12, window.innerHeight - rect.height - 12);
+        const nextLeft = Math.min(Math.max(12, origLeft + dx), maxLeft);
+        const nextTop = Math.min(Math.max(12, origTop + dy), maxTop);
+        dock.style.left = `${nextLeft}px`;
+        dock.style.top = `${nextTop}px`;
+      };
+
+      const onPointerUp = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        dock.classList.remove("is-dragging");
+        const rect = dock.getBoundingClientRect();
+        applyDockedPosition(rect.left, rect.top, rect.height);
+        try {
+          if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+            chrome.storage.local.set({
+              safinum_notch_pos: { left: Math.round(rect.left), top: Math.round(rect.top) }
+            });
+          }
+        } catch (_) {}
+      };
+
+      window.addEventListener("pointermove", onPointerMove);
+      window.addEventListener("pointerup", onPointerUp);
+      window.addEventListener("pointercancel", onPointerUp);
     }
-
-    dock.querySelectorAll(".safinum-mode-btn").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        dock.querySelectorAll(".safinum-mode-btn").forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        setMode(btn.getAttribute("data-mode"));
-      });
-    });
 
     const readPageBtn = dock.querySelector("#safinum-btn-read-page");
     const pausePageBtn = dock.querySelector("#safinum-btn-pause-page");
     const dockEqualizer = dock.querySelector("#safinum-dock-equalizer");
 
     if (readPageBtn) {
-      readPageBtn.addEventListener("click", () => {
-        if (!ScreenReader) return;
+      readPageBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (currentMode === "original" || !ScreenReader) return;
         if (ScreenReader.isActive) {
           ScreenReader.stop();
         } else {
@@ -747,7 +902,8 @@
     }
 
     if (pausePageBtn) {
-      pausePageBtn.addEventListener("click", () => {
+      pausePageBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
         if (!ScreenReader || !ScreenReader.isActive) return;
         if (ScreenReader.isPaused) {
           ScreenReader.resume();
@@ -757,20 +913,6 @@
       });
     }
 
-    dock.querySelector("#safinum-btn-read-step").addEventListener("click", () => {
-      if (ScreenReader && ScreenReader.isActive) {
-        ScreenReader.stop();
-      }
-      narrateActiveStep();
-    });
-
-    dock.querySelector("#safinum-btn-stop-voice").addEventListener("click", () => {
-      if (ScreenReader && ScreenReader.isActive) {
-        ScreenReader.stop();
-      }
-      Voice.stop();
-    });
-
     window.addEventListener("safinum-screen-reader-state", (e) => {
       const state = (e && e.detail) || {};
       const isReading = Boolean(state.isActive && !state.isPaused);
@@ -778,22 +920,20 @@
         dockEqualizer.setAttribute("data-reading", isReading ? "true" : "false");
       }
       if (readPageBtn) {
+        const labelEl = readPageBtn.querySelector("span");
         if (state.isActive) {
           const idx = Math.min(state.totalElements || 1, Math.max(1, (state.currentIndex || 0) + 1));
           readPageBtn.classList.add("active");
-          readPageBtn.textContent = `⏹ Arrêter (${idx}/${state.totalElements || 1})`;
+          if (labelEl) labelEl.textContent = `Arrêter (${idx}/${state.totalElements || 1})`;
         } else {
           readPageBtn.classList.remove("active");
-          readPageBtn.textContent = "🔊 Lire toute la page";
+          if (labelEl) labelEl.textContent = "Lire toute la page";
         }
       }
       if (pausePageBtn) {
         pausePageBtn.style.display = state.isActive ? "inline-flex" : "none";
         pausePageBtn.textContent = state.isPaused ? "▶" : "⏸";
         pausePageBtn.title = state.isPaused ? "Reprendre la lecture" : "Mettre en pause";
-      }
-      if (state.isActive && state.currentElement && state.currentElement.__safinumEntry) {
-        setInspectorEntry(state.currentElement.__safinumEntry, null);
       }
     });
 
@@ -802,60 +942,6 @@
       const detail = (e && e.detail) || {};
       if (dockEqualizer) {
         dockEqualizer.setAttribute("data-reading", detail.speaking ? "true" : "false");
-      }
-    });
-
-    dock.querySelector("#safinum-insp-speak-btn").addEventListener("click", () => {
-      if (dock.__currentEntry) {
-        Voice.speakPhraseAndExplanation(dock.__currentEntry, currentLang);
-      }
-    });
-
-    const numInput = dock.querySelector("#safinum-num-input");
-    const numSpeakBtn = dock.querySelector("#safinum-btn-speak-num");
-    const numBadge = dock.querySelector("#safinum-num-segment-badge");
-
-    const triggerDockNumberSpeech = () => {
-      if (!NumberEngine || !numInput) return;
-      const rawVal = numInput.value || "0";
-      const parsed = NumberEngine.parseAmount(rawVal);
-      if (parsed === null) {
-        if (numBadge) {
-          numBadge.textContent = "Montant invalide";
-          numBadge.style.color = "#ef4444";
-        }
-        return;
-      }
-      const formattedLabel = `${parsed.toLocaleString("fr-FR")} FCFA`;
-      const entry = buildNumericAmountEntry(parsed, formattedLabel);
-      setInspectorEntry(entry, null);
-      Voice.speakAmount(parsed, { lang: currentLang, includeCurrency: true });
-    };
-
-    if (numSpeakBtn) {
-      numSpeakBtn.addEventListener("click", triggerDockNumberSpeech);
-    }
-    if (numInput) {
-      numInput.addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          triggerDockNumberSpeech();
-        }
-      });
-    }
-
-    // Listen for real-time segment transitions from SafinumWebNumberEngine
-    window.addEventListener("safinum-number-speech-state", (e) => {
-      if (!numBadge) return;
-      const detail = (e && e.detail) || {};
-      if (detail.speaking && detail.currentKey) {
-        const idx = typeof detail.segmentIndex === "number" ? detail.segmentIndex + 1 : 1;
-        const total = Array.isArray(detail.keys) ? detail.keys.length : "?";
-        numBadge.textContent = `▶ [${idx}/${total}] ${detail.currentKey}.ogg`;
-        numBadge.style.color = "#fbbf24";
-      } else if (!detail.speaking) {
-        numBadge.textContent = "42 clés prêtes";
-        numBadge.style.color = "#10b981";
       }
     });
   }
@@ -875,29 +961,43 @@
     const origEl = dock.querySelector("#safinum-insp-orig");
     const expFubEl = dock.querySelector("#safinum-insp-explain-fub");
     const expFrEl = dock.querySelector("#safinum-insp-explain-fr");
+    const speakBtn = dock.querySelector("#safinum-insp-speak-btn");
 
     const cfg = getLangConfig(currentLang);
-    const activeText =
-      entry[currentLang] || entry.eto || entry.ewo || entry.fub || entry.original;
-    const activeExplain =
-      entry[`explain_${currentLang}`] ||
-      entry.explain_eto || entry.explain_ewo || entry.explain_fub || entry.explain_fr || "";
+    const langData = (entry.languages && entry.languages[currentLang]) || {};
+    const activeText = langData.text || entry[currentLang] || entry.original || "";
+    const activeExplain = langData.explain_text || entry[`explain_${currentLang}`] || "";
+    const hasAudio = Boolean(
+      typeof entry.numericAmount === "number" ||
+        langData.audio ||
+        langData.explain_audio ||
+        entry.audio ||
+        entry.explain_audio
+    );
+
+    if (speakBtn) {
+      speakBtn.disabled = !hasAudio;
+      speakBtn.style.opacity = hasAudio ? "1" : "0.5";
+      speakBtn.textContent = hasAudio ? "🔊 Écouter" : "🔇 Audio indisponible";
+    }
 
     if (modeEl) {
-      modeEl.textContent =
-        entry.mode === "CONTEXT_GRAPH_5_NODES_RAG"
-          ? `🧠 GRAPHE 5-NŒUDS (${cfg.name.toUpperCase()})`
-          : `💡 EXPLICATION ANYDOC · ${(entry.category || "FINANCE").toUpperCase()}`;
+      modeEl.textContent = `💡 EXPLICATION ANYDOC · ${(entry.category || "FINANCE").toUpperCase()}`;
     }
     if (fubEl) fubEl.textContent = activeText;
     if (origEl) origEl.textContent = `Original : « ${entry.original} »`;
-    if (expFubEl) expFubEl.innerHTML = `🗣️ <strong>${cfg.explainWord} (${cfg.code}) :</strong> ${activeExplain}`;
+    if (expFubEl) {
+      expFubEl.innerHTML = activeExplain
+        ? `🗣️ <strong>${cfg.explainWord} (${cfg.code}) :</strong> ${activeExplain}`
+        : `🗣️ <strong>${cfg.explainWord} (${cfg.code}) :</strong> —`;
+    }
     if (expFrEl) {
       const entitiesBadge =
         entry.entities && entry.entities.length
           ? `<br><span style="font-size:10px;color:#fbbf24;">🔒 Entités protégées : ${entry.entities.join(", ")}</span>`
           : "";
-      expFrEl.innerHTML = `🇫🇷 <strong>Explication :</strong> ${entry.explain_fr} <br><span style="font-size:10px;color:#ffa040;">📚 Source : ${entry.source}</span>${entitiesBadge}`;
+      const expFrText = entry.explain_fr || entry.original || "";
+      expFrEl.innerHTML = `🇫🇷 <strong>Explication :</strong> ${expFrText} <br><span style="font-size:10px;color:#ffa040;">📚 Source : ${entry.source}</span>${entitiesBadge}`;
     }
 
     if (sourceEl) {
@@ -941,31 +1041,49 @@
   }
 
   /**
+   * Persists user preferences in chrome.storage.local when available.
+   */
+  function persistPreferences() {
+    try {
+      if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+        chrome.storage.local.set({
+          safinum_lang: currentLang,
+          safinum_mode: currentMode
+        });
+      }
+    } catch (_) {
+      // Ignore storage quota or restricted context errors
+    }
+  }
+
+  /**
    * Switches active national language and updates UI labels.
-   * @param {string} newLang - Target language ISO code ('fub' | 'ewo')
+   * @param {string} newLang - Target language ISO code (e.g. 'eto')
    */
   function setLanguage(newLang) {
-    currentLang = newLang;
-    const cfg = getLangConfig(currentLang);
+    const cfg = getLangConfig(newLang);
+    if (!cfg || !cfg.active) return;
+    currentLang = cfg.code;
+    persistPreferences();
+
     const subEl = document.getElementById("safinum-dock-sub");
     if (subEl) {
-      subEl.textContent = `Accessibilité Financière ${cfg.name} (${cfg.code}) · Graphe 5-Nœuds`;
+      subEl.textContent = `Accessibilité Financière ${cfg.name} (${cfg.code}) · Dataset Maloba`;
     }
     const pillBadge = document.getElementById("safinum-pill-lang-badge");
     if (pillBadge) {
-      pillBadge.textContent = `${cfg.flag} Maloba · ${cfg.name}`;
+      pillBadge.textContent = cfg.name;
     }
-    const pillSpeak = document.getElementById("safinum-pill-speak");
-    if (pillSpeak) {
-      pillSpeak.textContent = `🔊 ${cfg.listenWord}`;
-    }
-    const pillExplain = document.getElementById("safinum-pill-explain");
-    if (pillExplain) {
-      pillExplain.textContent = `💡 ${cfg.explainWord}`;
+    const pillSpeakLabel = document.getElementById("safinum-pill-speak-label");
+    if (pillSpeakLabel) {
+      pillSpeakLabel.textContent = cfg.listenWord;
     }
     const dock = document.getElementById("safinum-anydoc-dock");
-    if (dock && dock.__currentEntry) {
-      setInspectorEntry(dock.__currentEntry, null);
+    if (dock) {
+      renderDockLanguagePicker(dock);
+      if (dock.__currentEntry) {
+        setInspectorEntry(dock.__currentEntry, null);
+      }
     }
     translateDOM();
   }
@@ -975,7 +1093,27 @@
    * @param {string} newMode - Display mode
    */
   function setMode(newMode) {
+    if (!["lang", "bilingual", "original"].includes(newMode)) return;
     currentMode = newMode;
+    document.documentElement.setAttribute("data-safinum-mode", currentMode);
+    if (currentMode === "original") {
+      if (ScreenReader && ScreenReader.isActive) {
+        ScreenReader.stop();
+      }
+      if (Voice && typeof Voice.stop === "function") {
+        Voice.stop();
+      }
+      const hoverPill = document.getElementById("safinum-anydoc-hover-pill");
+      if (hoverPill) hoverPill.classList.remove("is-visible");
+      document.querySelectorAll('[data-safinum-speaking="true"]').forEach((node) => {
+        node.removeAttribute("data-safinum-speaking");
+      });
+    }
+    const dock = document.getElementById("safinum-anydoc-dock");
+    if (dock) {
+      renderDockLanguagePicker(dock);
+    }
+    persistPreferences();
     translateDOM();
   }
 
@@ -983,13 +1121,31 @@
    * Main extension initialization sequence.
    */
   function init() {
-    createHoverPill();
-    createAnyDocDock();
+    const mountUI = () => {
+      document.documentElement.setAttribute("data-safinum-mode", currentMode);
+      createHoverPill();
+      createAnyDocDock();
 
-    // Initial 60ms delay ensures Vue 3's onMounted() registers baseline before translation
-    setTimeout(() => {
-      translateDOM();
-    }, 60);
+      // Initial 60ms delay ensures Vue 3's onMounted() registers baseline before translation
+      setTimeout(() => {
+        translateDOM();
+      }, 60);
+    };
+
+    if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.get(["safinum_lang", "safinum_mode"], (res) => {
+        if (res && res.safinum_lang) {
+          const cfg = getLangConfig(res.safinum_lang);
+          if (cfg && cfg.active) currentLang = cfg.code;
+        }
+        if (res && ["lang", "bilingual", "original"].includes(res.safinum_mode)) {
+          currentMode = res.safinum_mode;
+        }
+        mountUI();
+      });
+    } else {
+      mountUI();
+    }
 
     // Non-destructive MutationObserver watches dynamic step transitions and jury injections (#injected-*)
     const observer = new MutationObserver((mutations) => {
@@ -1001,8 +1157,6 @@
         if (
           t.closest?.("#safinum-anydoc-dock") ||
           t.closest?.("#safinum-anydoc-hover-pill") ||
-          t.closest?.("#safinum-screen-reader-overlay") ||
-          t.closest?.("#safinum-voice-root") ||
           t.closest?.("aside.fixed")
         ) {
           continue;
@@ -1038,6 +1192,7 @@
             mode: currentMode,
             lang: currentLang,
             translatedNodes: activeCount,
+            screenReaderActive: Boolean(ScreenReader && ScreenReader.isActive),
             stats: Graph ? Graph.stats : {},
             meta: KB.meta
           });
@@ -1049,49 +1204,33 @@
           setMode("lang");
           sendResponse({ ok: true, mode: currentMode, lang: currentLang });
         } else if (msg.type === "SPEAK_STEP") {
-          if (ScreenReader && ScreenReader.isActive) {
-            ScreenReader.stop();
-          }
+          if (ScreenReader && ScreenReader.isActive) ScreenReader.stop();
           narrateActiveStep();
           sendResponse({ ok: true });
-        } else if (msg.type === "READ_FULL_PAGE") {
+        } else if (msg.type === "READ_PAGE_TOGGLE") {
           if (ScreenReader) {
             if (ScreenReader.isActive) {
               ScreenReader.stop();
-              sendResponse({ ok: true, isActive: false });
             } else {
-              ScreenReader.start(msg.lang || currentLang);
-              sendResponse({ ok: true, isActive: true });
+              ScreenReader.start(currentLang);
             }
+            sendResponse({ ok: true, active: ScreenReader.isActive });
           } else {
             sendResponse({ ok: false });
           }
-        } else if (msg.type === "STOP_FULL_PAGE") {
-          if (ScreenReader) {
-            ScreenReader.stop();
-          }
-          Voice.stop();
-          sendResponse({ ok: true, isActive: false });
         } else if (msg.type === "SPEAK_AMOUNT") {
-          if (NumberEngine && typeof msg.amount === "number") {
-            const targetLang = msg.lang || currentLang;
-            const entry = buildNumericAmountEntry(
-              msg.amount,
-              `${msg.amount.toLocaleString("fr-FR")} FCFA`
-            );
-            setInspectorEntry(entry, null);
-            Voice.speakAmount(msg.amount, {
-              lang: targetLang,
-              includeCurrency: msg.includeCurrency !== false
-            });
-            sendResponse({
-              ok: true,
-              keys: entry.audioKeys,
-              words: NumberEngine.toWords(msg.amount, { lang: targetLang, includeCurrency: true })
-            });
-          } else {
-            sendResponse({ ok: false });
+          if (NumberEngine) {
+            const parsed = NumberEngine.parseAmount(msg.amount);
+            if (parsed !== null) {
+              const formattedLabel = `${parsed.toLocaleString("fr-FR")} FCFA`;
+              const entry = buildNumericAmountEntry(parsed, formattedLabel);
+              setInspectorEntry(entry, null);
+              Voice.speakAmount(parsed, { lang: currentLang, includeCurrency: true });
+              sendResponse({ ok: true, amount: parsed });
+              return false;
+            }
           }
+          sendResponse({ ok: false });
         }
         return false; // Synchronous responses handled
       });

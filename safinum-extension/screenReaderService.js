@@ -86,7 +86,7 @@
     constructor(options) {
       const opts = options || {};
       this.padding = typeof opts.padding === "number" ? opts.padding : 6;
-      this.highlightColor = opts.highlightColor || "#00E5A3";
+      this.highlightColor = opts.highlightColor || "#FF9F0A";
       this.scrollBehavior = opts.scrollBehavior || "smooth";
       this.onStateChangeCallback = opts.onStateChange;
       this.onElementFocusCallback = opts.onElementFocus;
@@ -97,7 +97,7 @@
       this.elementsQueue = [];
       this.currentIdx = -1;
       this.activeElement = null;
-      this.activeLang = "fub";
+      this.activeLang = "eto";
       this.isRunning = false;
       this.isPausedFlag = false;
       this.abortController = null;
@@ -131,7 +131,7 @@
         this.stop();
       }
 
-      this.activeLang = String(lang || "fub")
+      this.activeLang = String(lang || "eto")
         .trim()
         .toLowerCase();
       this.elementsQueue = this.scanElements();
@@ -325,41 +325,56 @@
           ? contextGraph.translateAndExplain(text)
           : null);
 
-      let displayText = text;
-      let phoneticText = text;
+      const langData = (entry && entry.languages && entry.languages[lang]) || {};
+      const audioPath = langData.audio || (entry && entry.audio) || null;
+      const displayText = langData.text || (entry && entry[lang]) || (entry && entry.original) || text;
 
-      if (entry) {
-        const langValue = entry[lang];
-        const localizedStr =
-          typeof langValue === "string" && langValue.trim().length > 0
-            ? langValue
-            : lang === "eto"
-              ? entry.eto || entry.ewo || entry.fub || entry.original || text
-              : lang === "ewo"
-              ? entry.ewo || entry.fub || entry.original || text
-              : entry.fub || entry.original || text;
-
-        const phoneticKey = "phonetic_" + lang;
-        const rawPhonetic = entry[phoneticKey];
-        const localizedPhonetic =
-          typeof rawPhonetic === "string" && rawPhonetic.trim().length > 0
-            ? rawPhonetic
-            : lang === "eto"
-              ? entry.phonetic_eto || localizedStr
-              : lang === "ewo"
-              ? entry.phonetic_ewo || localizedStr
-              : entry.phonetic || localizedStr;
-
-        displayText = localizedStr;
-        phoneticText = localizedPhonetic;
-      }
-
-      if (voiceEngine && typeof voiceEngine.speak === "function") {
-        await this.playViaSafinumVoiceEngine(voiceEngine, displayText, phoneticText, lang);
+      if (audioPath && voiceEngine && typeof voiceEngine.playAudio === "function") {
+        await this.playViaRealWebmAudio(voiceEngine, audioPath, displayText);
         return;
       }
 
-      await this.playViaWebSpeechSynthesis(phoneticText, lang);
+      // Brief focus pause when no .webm audio exists for this element
+      const signal = this.abortController ? this.abortController.signal : undefined;
+      await this.delay(900, signal);
+    }
+
+    async playViaRealWebmAudio(voiceEngine, audioPath, displayText) {
+      const signal = this.abortController ? this.abortController.signal : undefined;
+      if (signal && signal.aborted) return;
+
+      await new Promise((resolve) => {
+        let settled = false;
+        const done = () => {
+          if (settled) return;
+          settled = true;
+          this.activeAudioResolver = null;
+          if (signal) signal.removeEventListener("abort", onAbort);
+          resolve();
+        };
+        const onAbort = () => {
+          try {
+            voiceEngine.stop();
+          } catch (_) {
+            // Ignore
+          }
+          done();
+        };
+
+        this.activeAudioResolver = done;
+        if (signal) signal.addEventListener("abort", onAbort, { once: true });
+
+        voiceEngine
+          .playAudio(audioPath, {
+            displayText,
+            onEnd: done,
+            onError: done
+          })
+          .then((ok) => {
+            if (!ok) done();
+          })
+          .catch(done);
+      });
     }
 
     scanElements() {
@@ -512,20 +527,6 @@
       this.overlayEl.style.height = height + "px";
       this.overlayEl.style.opacity = this.isPausedFlag ? "0.75" : "1";
       this.overlayEl.style.transform = "scale(1)";
-
-      if (this.badgeEl) {
-        const total = this.elementsQueue.length;
-        const current = Math.min(total, Math.max(1, this.currentIdx + 1));
-        const langBadge = this.activeLang.toUpperCase();
-        this.badgeEl.textContent = "🔊 " + langBadge + " · " + current + "/" + total;
-        if (top < 28) {
-          this.badgeEl.style.top = "auto";
-          this.badgeEl.style.bottom = "-22px";
-        } else {
-          this.badgeEl.style.top = "-22px";
-          this.badgeEl.style.bottom = "auto";
-        }
-      }
     }
 
     async scrollIntoViewIfNeeded(el, signal) {
@@ -784,43 +785,25 @@
         existing.id = OVERLAY_ID;
         existing.setAttribute("aria-hidden", "true");
         existing.setAttribute("role", "presentation");
-
-        const badge = document.createElement("div");
-        badge.id = BADGE_ID;
-        badge.style.position = "absolute";
-        badge.style.right = "-2px";
-        badge.style.top = "-22px";
-        badge.style.background = "#0F172A";
-        badge.style.color = this.highlightColor;
-        badge.style.border = "1.5px solid " + this.highlightColor;
-        badge.style.borderRadius = "9999px";
-        badge.style.padding = "1px 8px";
-        badge.style.fontSize = "10px";
-        badge.style.fontWeight = "800";
-        badge.style.fontFamily =
-          'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-        badge.style.letterSpacing = "0.04em";
-        badge.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.45)";
-        badge.style.pointerEvents = "none";
-        badge.style.whiteSpace = "nowrap";
-
-        existing.appendChild(badge);
         document.body.appendChild(existing);
+      } else {
+        const staleBadge = existing.querySelector("#" + BADGE_ID);
+        if (staleBadge) staleBadge.remove();
       }
 
       this.overlayEl = existing;
-      this.badgeEl = existing.querySelector("#" + BADGE_ID) || null;
+      this.badgeEl = null;
 
       const s = this.overlayEl.style;
       s.position = "fixed";
       s.pointerEvents = "none";
       s.zIndex = "2147483646";
       s.boxSizing = "border-box";
-      s.border = "2.5px solid " + this.highlightColor;
-      s.background = "rgba(0, 229, 163, 0.12)";
+      s.border = "2px solid " + this.highlightColor;
+      s.background = "rgba(255, 159, 10, 0.1)";
       s.borderRadius = "8px";
       s.boxShadow =
-        "0 0 25px rgba(0, 229, 163, 0.45), inset 0 0 12px rgba(0, 229, 163, 0.18)";
+        "0 0 22px rgba(255, 159, 10, 0.35), inset 0 0 10px rgba(255, 159, 10, 0.14)";
       s.transition = "all 0.28s cubic-bezier(0.16, 1, 0.3, 1)";
       s.display = "block";
       s.opacity = "1";
