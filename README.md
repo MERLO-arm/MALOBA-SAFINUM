@@ -1,6 +1,6 @@
 # Maloba AnyDoc — Accessibilité Financière Multilingue (SAFINUM 2026)
 
-[![SAFINUM Challenge](https://img.shields.io/badge/SAFINUM-Innovate%202026-ff7900?style=for-the-badge)](https://safinum.cm/hackathon-test?jury=1)
+[![SAFINUM Challenge](https://img.shields.io/badge/SAFINUM-Innovate%202026-ff7900?style=for-the-badge)](https://safinum.cm/hackathon-test)
 [![Chrome Extension](https://img.shields.io/badge/Manifest-V3-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white)](safinum-extension/manifest.json)
 [![Active Language](https://img.shields.io/badge/%C3%89ton%20(eto)-100%25%20Verified%20Audio-10b981?style=for-the-badge)](#couverture-linguistique--dataset)
 [![Verification Suite](https://img.shields.io/badge/Tests-12%2F12%20Passing-10b981?style=for-the-badge)](#tests--v%C3%A9rification)
@@ -174,7 +174,7 @@ Aucune compilation n'est nécessaire pour tester l'extension : `safinum-extensio
    MALOBA-SAFINUM/safinum-extension
    ```
 4. Ouvrir la plateforme d'évaluation SAFINUM :
-   **[https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test)**
+   **[https://safinum.cm/hackathon-test](https://safinum.cm/hackathon-test)**
 5. Cliquer sur l'icône **Maloba AnyDoc** dans la barre d'extensions (ou utiliser le dock flottant injecté sur la page) pour activer la traduction en **Éton (`eto`)**, écouter les phrases et tester la lecture vocale des montants.
 
 ---

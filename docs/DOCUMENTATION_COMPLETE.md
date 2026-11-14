@@ -4,7 +4,7 @@
 **Event: SAFINUM Innovate Challenge 2026 — Salon de la Finance Numérique (Yaoundé, Cameroon)**  
 **Submission Deadline: November 14, 2026 at 23:59:59 UTC+1**  
 **Official Repository: [https://github.com/MERLO-arm/MALOBA-SAFINUM](https://github.com/MERLO-arm/MALOBA-SAFINUM)**  
-**Official Evaluation Platform: [https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**  
+**Official Evaluation Platform: [https://safinum.cm/hackathon-test](https://safinum.cm/hackathon-test)**  
 **Official Submission Form: [https://forms.gle/Dt6dzQwkEiMW7q2E8](https://forms.gle/Dt6dzQwkEiMW7q2E8)**  
 
 ---
@@ -94,7 +94,7 @@ The user interface strictly adheres to the official **Maloba Design System**:
 
 ## 3. REVERSE ENGINEERING INSIGHTS & PLATFORM MECHANICS
 
-In-depth technical analysis of the official evaluation platform (`https://safinum.cm/hackathon-test?jury=1`) revealed key architectural challenges:
+In-depth technical analysis of the official evaluation platform (`https://safinum.cm/hackathon-test`) revealed key architectural challenges:
 
 ### Secret #1: The Vue 3 Reactivity Trap (The "0 Discrepancy" Rule)
 * **Testing Engine**: The test portal is a reactive Vue 3 / Nuxt 3 Single Page Application. On form submission, an automated evaluation harness compares submitted values against a baseline model via `JSON.stringify()`.
@@ -239,7 +239,7 @@ Aggregated into `corpus/compiled/unified_fulfulde_corpus.parquet` via `scripts/h
 4. The Maloba AnyDoc icon will appear in your browser toolbar.
 
 ### 6.2. 5-Step Evaluation Protocol on Official Platform
-Navigate to: **[https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**
+Navigate to: **[https://safinum.cm/hackathon-test](https://safinum.cm/hackathon-test)**
 
 1. **Language Switching**: Use the dock dropdown to switch between **Fulfuldé (fub)** and **Ewondo (ewo)**. Observe immediate in-place translation.
 2. **Step 1 (Input)**: Enter `15 000 FCFA` and a phone number. Confirm labels are translated while form values remain unchanged.
