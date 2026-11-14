@@ -216,4 +216,28 @@ test("ScreenReaderService loads cleanly and defaults to Eton (eto)", () => {
   assert.strictEqual(sr.isActive, false);
 });
 
+test("Muriel Menye authentic human .webm audios are mapped for 250 000 FCFA, 15 000 FCFA and digits 1-9", () => {
+  const humanAmounts = sandboxWindow.SafinumHumanAmounts && sandboxWindow.SafinumHumanAmounts.eto;
+  assert.ok(humanAmounts, "SafinumHumanAmounts.eto must be registered on window");
+
+  // 250 000 FCFA (SAF_NUM_001)
+  assert.ok(humanAmounts[250000], "250 000 must have human audio entry");
+  assert.strictEqual(humanAmounts[250000].code, "SAF_NUM_001");
+  const path250k = path.join(EXT_DIR, "assets", "audio", humanAmounts[250000].audio);
+  assert.ok(fs.existsSync(path250k), `Audio file ${path250k} must exist on disk`);
+
+  // 15 000 FCFA (SAF_NUM_002)
+  assert.ok(humanAmounts[15000], "15 000 must have human audio entry");
+  assert.strictEqual(humanAmounts[15000].code, "SAF_NUM_002");
+  const path15k = path.join(EXT_DIR, "assets", "audio", humanAmounts[15000].audio);
+  assert.ok(fs.existsSync(path15k), `Audio file ${path15k} must exist on disk`);
+
+  // Digits 1 to 9 (SAF_NUM_017 to SAF_NUM_025)
+  for (let digit = 1; digit <= 9; digit++) {
+    assert.ok(humanAmounts[digit], `Digit ${digit} must have human audio entry`);
+    const pathDigit = path.join(EXT_DIR, "assets", "audio", humanAmounts[digit].audio);
+    assert.ok(fs.existsSync(pathDigit), `Audio file for digit ${digit} (${pathDigit}) must exist on disk`);
+  }
+});
+
 console.log(`\nSummary: ${passed} tests passed.`);

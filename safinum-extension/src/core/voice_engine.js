@@ -17,6 +17,164 @@
 (function () {
   "use strict";
 
+  /**
+   * Canonical monetary amounts and digits recorded with Muriel Menye's real human voice (.webm).
+   * Maps integer amount -> verified audio asset path and authentic Eton transcription.
+   */
+  const SAFINUM_HUMAN_AMOUNTS = {
+    eto: {
+      250000: {
+        text: "Ǹtɛd twágsîn íbā ee twágsîn mintɛd mítān.",
+        audio: "eton/saf_num_001_take1_f4c3ff7e.webm",
+        code: "SAF_NUM_001"
+      },
+      15000: {
+        text: "Twágsîn ɛwóm ee ítān",
+        audio: "eton/saf_num_002_take1_e39d0bd7.webm",
+        code: "SAF_NUM_002"
+      },
+      12500: {
+        text: "Twágsîn ewóm ee íbā ee mintɛd mítān",
+        audio: "eton/saf_num_003_take1_701fc666.webm",
+        code: "SAF_NUM_003"
+      },
+      180000: {
+        text: "Ǹtɛd twágsîn ee twágsîn mǝwóm ŋmâm.",
+        audio: "eton/saf_num_004_take1_8ad0c5a2.webm",
+        code: "SAF_NUM_004"
+      },
+      50000: {
+        text: "Twágsîn mǝwóm tān",
+        audio: "eton/saf_num_005_take3_0be66162.webm",
+        code: "SAF_NUM_005"
+      },
+      7500: {
+        text: "Twágsîn zaŋmál ee mintɛd mítān",
+        audio: "eton/saf_num_006_take1_cbda9317.webm",
+        code: "SAF_NUM_006"
+      },
+      100: {
+        text: "Ǹtɛd",
+        audio: "eton/saf_num_007_take1_8bdcf75c.webm",
+        code: "SAF_NUM_007"
+      },
+      2500: {
+        text: "Twágsîn íbā ee mintɛd mítān.",
+        audio: "eton/saf_num_008_take1_e3f95f93.webm",
+        code: "SAF_NUM_008"
+      },
+      200: {
+        text: "Mintɛd míbā",
+        audio: "eton/saf_num_009_take1_c6ca4715.webm",
+        code: "SAF_NUM_009"
+      },
+      5000: {
+        text: "Twágsîn ítān",
+        audio: "eton/saf_num_010_take1_bce4cdc0.webm",
+        code: "SAF_NUM_010"
+      },
+      0: {
+        text: "zǝzǝ",
+        audio: "eton/saf_num_011_take1_3a14d384.webm",
+        code: "SAF_NUM_011"
+      },
+      1: {
+        text: "Pwág",
+        audio: "eton/saf_num_017_take1_3df57171.webm",
+        code: "SAF_NUM_017"
+      },
+      2: {
+        text: "bā",
+        audio: "eton/saf_num_018_take1_1fa5a8b2.webm",
+        code: "SAF_NUM_018"
+      },
+      3: {
+        text: "lāá",
+        audio: "eton/saf_num_019_take1_ad682116.webm",
+        code: "SAF_NUM_019"
+      },
+      4: {
+        text: "na",
+        audio: "eton/saf_num_020_take1_40c8e5ae.webm",
+        code: "SAF_NUM_020"
+      },
+      5: {
+        text: "tán",
+        audio: "eton/saf_num_021_take1_54d34059.webm",
+        code: "SAF_NUM_021"
+      },
+      6: {
+        text: "samna",
+        audio: "eton/saf_num_022_take1_7c84389a.webm",
+        code: "SAF_NUM_022"
+      },
+      7: {
+        text: "zaŋmál",
+        audio: "eton/saf_num_023_take1_b1ac2cf3.webm",
+        code: "SAF_NUM_023"
+      },
+      8: {
+        text: "ŋmam",
+        audio: "eton/saf_num_024_take1_899346b5.webm",
+        code: "SAF_NUM_024"
+      },
+      9: {
+        text: "ibuu",
+        audio: "eton/saf_num_025_take1_3c0ea601.webm",
+        code: "SAF_NUM_025"
+      },
+      1000: {
+        text: "Twágsîn",
+        audio: "eton/saf_num_027_take1_2ed37687.webm",
+        code: "SAF_NUM_027"
+      },
+      2000: {
+        text: "Twágsîn íbā",
+        audio: "eton/saf_num_028_take1_8c391d57.webm",
+        code: "SAF_NUM_028"
+      },
+      10000: {
+        text: "Twágsîn ɛwóm",
+        audio: "eton/saf_num_029_take1_58473ec1.webm",
+        code: "SAF_NUM_029"
+      },
+      20000: {
+        text: "Twágsîn mǝwóm bā",
+        audio: "eton/saf_num_030_take1_6633d352.webm",
+        code: "SAF_NUM_030"
+      },
+      100000: {
+        text: "Ǹtɛd twágsîn",
+        audio: "eton/saf_num_031_take1_0ed75cce.webm",
+        code: "SAF_NUM_031"
+      },
+      500000: {
+        text: "Ǹtɛd twágsîn ítān",
+        audio: "eton/saf_num_032_take1_5d35a666.webm",
+        code: "SAF_NUM_032"
+      },
+      1000000: {
+        text: "Miliɔ́ŋ mwág",
+        audio: "eton/saf_num_033_take1_b103abb4.webm",
+        code: "SAF_NUM_033"
+      },
+      15225: {
+        text: "Táŋ i mwání : twágsîn ewóm ee mintɛd míbā ee mǝwóm bā ee ítān",
+        audio: "eton/saf_num_034_take1_e759c9d4.webm",
+        code: "SAF_NUM_034"
+      },
+      234775: {
+        text: "Táŋ i mwání : Ǹtɛd twágsîn íbā ee twágsîn mǝwóm lā ee mintɛd zaŋmál ee mǝwóm zaŋmál ee ítān",
+        audio: "eton/saf_num_035_take1_bc347470.webm",
+        code: "SAF_NUM_035"
+      }
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.SafinumHumanAmounts = SAFINUM_HUMAN_AMOUNTS;
+  }
+
   class SafinumVoiceEngine {
     constructor() {
       this.isSpeaking = false;
@@ -113,12 +271,31 @@
      */
     async speakAmount(amount, options = {}) {
       this.stop();
+      const lang = options.lang || "eto";
+      const cleanNum =
+        typeof amount === "number"
+          ? amount
+          : parseInt(String(amount).replace(/[^\d]/g, ""), 10);
+
+      // 1. Prioritize authentic human-recorded audio (.webm) if available for this exact amount
+      const humanRecordings = SAFINUM_HUMAN_AMOUNTS[lang] || SAFINUM_HUMAN_AMOUNTS.eto;
+      if (humanRecordings && !isNaN(cleanNum) && humanRecordings[cleanNum]) {
+        const humanItem = humanRecordings[cleanNum];
+        return this.playAudio(humanItem.audio, {
+          displayText: humanItem.text,
+          rate: options.rate || this.playbackRate,
+          onStart: options.onStart,
+          onEnd: options.onEnded,
+          onError: options.onError
+        });
+      }
+
+      // 2. Fall back to gapless number stitcher for uncatalogued amounts
       const numEngine = typeof window !== "undefined" ? window.safinumNumberEngine : null;
       if (!numEngine || typeof numEngine.speakAmount !== "function") {
         this.emitState(false, { missingAudio: true });
         return;
       }
-      const lang = options.lang || "eto";
       this.isSpeaking = true;
       this.emitState(true, { amount, lang });
       try {
