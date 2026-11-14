@@ -4,8 +4,9 @@
 MALOBA ANYDOC — EXTENSION AUDIO OPTIMIZER (.WEBM OPUS SPEECH)
 =============================================================================
 Compresses runtime `.webm` speech files in `safinum-extension/assets/audio/`
-using Opus VoIP/speech profile (24 kbps VBR mono) so the packaged extension
-stays well below the 10 MB submission limit while preserving voice clarity.
+from the original master recordings in `EXPORT_DATASET_MALOBA/eton/audios/`
+using Opus audio profile (48 kbps VBR mono) so the packaged extension
+stays well below the 10 MB submission limit with near-transparent fidelity.
 
 Original master recordings in `EXPORT_DATASET_MALOBA/` are never modified.
 =============================================================================
@@ -19,11 +20,14 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
+MASTER_AUDIO_DIR = ROOT_DIR / "EXPORT_DATASET_MALOBA" / "eton" / "audios"
 AUDIO_DIR = ROOT_DIR / "safinum-extension" / "assets" / "audio" / "eton"
 
 
 def optimize_file(webm_path: Path) -> tuple[int, int]:
-    before = webm_path.stat().st_size
+    master_path = MASTER_AUDIO_DIR / webm_path.name
+    source_path = master_path if master_path.exists() else webm_path
+    before = source_path.stat().st_size
     with tempfile.NamedTemporaryFile(suffix=".webm", delete=False) as tmp:
         tmp_path = Path(tmp.name)
 
@@ -36,16 +40,16 @@ def optimize_file(webm_path: Path) -> tuple[int, int]:
                 "-loglevel",
                 "error",
                 "-i",
-                str(webm_path),
+                str(source_path),
                 "-vn",
                 "-c:a",
                 "libopus",
                 "-b:a",
-                "24k",
+                "48k",
                 "-vbr",
                 "on",
                 "-application",
-                "voip",
+                "audio",
                 "-ac",
                 "1",
                 str(tmp_path),
