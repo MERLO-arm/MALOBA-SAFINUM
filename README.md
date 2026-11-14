@@ -174,7 +174,7 @@ Aucune compilation n'est nécessaire pour tester l'extension : `safinum-extensio
    MALOBA-SAFINUM/safinum-extension
    ```
 4. Ouvrir la plateforme d'évaluation SAFINUM :
-   **[https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**
+   **[https://safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test)**
 5. Cliquer sur l'icône **Maloba AnyDoc** dans la barre d'extensions (ou utiliser le dock flottant injecté sur la page) pour activer la traduction en **Éton (`eto`)**, écouter les phrases et tester la lecture vocale des montants.
 
 ---
