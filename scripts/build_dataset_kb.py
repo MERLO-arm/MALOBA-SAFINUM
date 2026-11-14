@@ -39,7 +39,7 @@ DATASET_DIR = ROOT_DIR / "EXPORT_DATASET_MALOBA"
 DATASET_JSON = DATASET_DIR / "dataset_complet.json"
 EXT_DIR = ROOT_DIR / "safinum-extension"
 AUDIO_OUT_DIR = EXT_DIR / "assets" / "audio"
-KB_OUT_FILE = EXT_DIR / "knowledge_base.js"
+KB_OUT_FILE = EXT_DIR / "src" / "core" / "knowledge_base.js"
 
 # Language registry mapping dataset folder -> ISO 639-3 & UI metadata
 LANGUAGE_REGISTRY: list[dict[str, Any]] = [

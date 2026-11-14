@@ -53,9 +53,9 @@ test("manifest.json is valid MV3 and exposes assets/audio/eton/*.webm", () => {
 });
 
 // 2. Load KB, ContextGraph, and VoiceEngine in a clean VM context
-const kbSource = fs.readFileSync(path.join(EXT_DIR, "knowledge_base.js"), "utf8");
-const graphSource = fs.readFileSync(path.join(EXT_DIR, "context_graph.js"), "utf8");
-const voiceSource = fs.readFileSync(path.join(EXT_DIR, "voice_engine.js"), "utf8");
+const kbSource = fs.readFileSync(path.join(EXT_DIR, "src", "core", "knowledge_base.js"), "utf8");
+const graphSource = fs.readFileSync(path.join(EXT_DIR, "src", "core", "context_graph.js"), "utf8");
+const voiceSource = fs.readFileSync(path.join(EXT_DIR, "src", "core", "voice_engine.js"), "utf8");
 
 const sandboxWindow = {
   addEventListener() {},
@@ -192,8 +192,8 @@ test("SafinumVoiceEngine resolves chrome-extension URLs and handles stop() clean
 });
 
 test("Number reader engine (numberDecomposer + safinumEngine) and Eton .ogg assets are intact", () => {
-  const decomposer = require(path.join(EXT_DIR, "numberDecomposer.js"));
-  const { SafinumWebNumberEngine } = require(path.join(EXT_DIR, "safinumEngine.js"));
+  const decomposer = require(path.join(EXT_DIR, "src", "numbers", "numberDecomposer.js"));
+  const { SafinumWebNumberEngine } = require(path.join(EXT_DIR, "src", "numbers", "safinumEngine.js"));
   const engine = new SafinumWebNumberEngine({ defaultLang: "eto" });
 
   assert.strictEqual(engine.parseAmount("250 000 FCFA"), 250000);
@@ -207,7 +207,7 @@ test("Number reader engine (numberDecomposer + safinumEngine) and Eton .ogg asse
 });
 
 test("ScreenReaderService loads cleanly and defaults to Eton (eto)", () => {
-  const srSource = fs.readFileSync(path.join(EXT_DIR, "screenReaderService.js"), "utf8");
+  const srSource = fs.readFileSync(path.join(EXT_DIR, "src", "services", "screenReaderService.js"), "utf8");
   vm.runInContext(srSource, context);
   const SRClass = sandboxWindow.ScreenReaderService || context.ScreenReaderService;
   assert.ok(SRClass, "ScreenReaderService must register on global/window");

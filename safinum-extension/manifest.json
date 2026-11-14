@@ -21,7 +21,7 @@
     "http://127.0.0.1:*/*"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "popup/popup.html",
     "default_title": "Maloba AnyDoc (Éton · Cameroun)",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -57,17 +57,17 @@
         "http://127.0.0.1:*/*"
       ],
       "css": [
-        "styles.css"
+        "src/content/styles.css"
       ],
       "js": [
-        "knowledge_base.js",
-        "context_graph.js",
-        "numberDecomposer.js",
-        "audioStitcherPlayer.js",
-        "safinumEngine.js",
-        "voice_engine.js",
-        "screenReaderService.js",
-        "content.js"
+        "src/core/knowledge_base.js",
+        "src/core/context_graph.js",
+        "src/numbers/numberDecomposer.js",
+        "src/numbers/audioStitcherPlayer.js",
+        "src/numbers/safinumEngine.js",
+        "src/core/voice_engine.js",
+        "src/services/screenReaderService.js",
+        "src/content/content.js"
       ],
       "run_at": "document_idle"
     }

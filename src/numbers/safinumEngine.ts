@@ -52,6 +52,23 @@ export interface SpeakAmountOptions {
   readonly onEnded?: () => void;
 }
 
+const EXACT_ETON_RECORDINGS: Readonly<Record<number, string>> = Object.freeze({
+  2000: "eton/saf_num_028_take1_8c391d57.webm",
+  2500: "eton/saf_num_008_take1_e3f95f93.webm",
+  5000: "eton/saf_num_010_take1_bce4cdc0.webm",
+  7500: "eton/saf_num_006_take1_cbda9317.webm",
+  10000: "eton/saf_num_029_take1_58473ec1.webm",
+  12500: "eton/saf_num_003_take1_701fc666.webm",
+  15000: "eton/saf_num_002_take1_e39d0bd7.webm",
+  20000: "eton/saf_num_030_take1_6633d352.webm",
+  50000: "eton/saf_num_005_take3_0be66162.webm",
+  100000: "eton/saf_num_031_take1_0ed75cce.webm",
+  180000: "eton/saf_num_004_take1_8ad0c5a2.webm",
+  250000: "eton/saf_num_001_take1_f4c3ff7e.webm",
+  500000: "eton/saf_num_032_take1_5d35a666.webm",
+  1000000: "eton/saf_num_033_take1_b103abb4.webm"
+});
+
 /**
  * Production-ready Number-to-Speech Engine (`SafinumWebNumberEngine`).
  */
@@ -110,7 +127,10 @@ export class SafinumWebNumberEngine {
     const lang = (options?.lang ?? this.defaultLang).trim().toLowerCase();
     const includeCurrency = options?.includeCurrency ?? true;
 
-    const audioKeys = decomposeNumber(validAmount, { includeCurrency });
+    const exactEtonRecording = lang === "eto" ? EXACT_ETON_RECORDINGS[validAmount] : undefined;
+    const audioKeys: string[] = exactEtonRecording
+      ? [exactEtonRecording]
+      : decomposeNumber(validAmount, { includeCurrency });
 
     const callbacks: AudioStitcherCallbacks = {
       onStart: () => {

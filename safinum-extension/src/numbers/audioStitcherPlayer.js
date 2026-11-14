@@ -38,7 +38,9 @@
       .trim()
       .toLowerCase();
     const safeKey = String(key).trim();
-    const relativePath = "assets/audio/" + safeLang + "/" + safeKey + ".ogg";
+    const relativePath = safeKey.endsWith(".webm")
+      ? "assets/audio/" + safeKey.replace(/^\/+/, "")
+      : "assets/audio/" + safeLang + "/" + safeKey + ".ogg";
 
     if (
       typeof chrome !== "undefined" &&

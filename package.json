@@ -1,13 +1,14 @@
 {
   "name": "maloba-safinum",
   "version": "1.0.0",
-  "description": "**Salon de la Finance Numérique (SAFINUM 2026) · Yaoundé, Cameroun**   **Date limite de soumission : 14 Novembre 2026 à 23:59:59**   **Plateforme d'évaluation officielle : [safinum.cm/hackathon-test?jury=1](https://safinum.cm/hackathon-test?jury=1)**   **Dépôt GitHub : [https://github.com/MERLO-arm/MALOBA-SAFINUM](https://github.com/MERLO-arm/MALOBA-SAFINUM)**   **Formulaire de dépôt : [forms.gle/Dt6dzQwkEiMW7q2E8](https://forms.gle/Dt6dzQwkEiMW7q2E8)**",
-  "main": "index.js",
+  "description": "Maloba AnyDoc — Multimodal digital financial accessibility browser extension (MV3) for Cameroonian national languages (SAFINUM Innovate Challenge 2026).",
   "scripts": {
-    "build:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --minify",
-    "watch:css": "tailwindcss -i safinum-extension/popup.input.css -o safinum-extension/popup.css --watch",
+    "build:css": "tailwindcss -i safinum-extension/popup/popup.input.css -o safinum-extension/popup/popup.css --minify",
+    "watch:css": "tailwindcss -i safinum-extension/popup/popup.input.css -o safinum-extension/popup/popup.css --watch",
     "build:kb": "python3 scripts/build_dataset_kb.py",
-    "test": "node scripts/verify_extension.js"
+    "build:numbers": "python3 scripts/build_eton_real_number_audio.py",
+    "package": "python3 scripts/package_extension.py",
+    "test": "node tests/verify_extension.js"
   },
   "repository": {
     "type": "git",

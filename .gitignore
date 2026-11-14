@@ -24,6 +24,11 @@ package-lock.json
 # Binary compiled automata
 *.bin
 
+# Build & packaging outputs
+dist/
+*.crx
+*.pem
+
 # Video demo file (optional, can be uploaded to release or video link if desired)
 *.mp4
 

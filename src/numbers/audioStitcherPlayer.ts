@@ -77,7 +77,9 @@ export interface AudioStitcherOptions {
 export function resolveAudioAssetUrl(key: string, lang: string): string {
   const safeLang = (lang || "fub").trim().toLowerCase();
   const safeKey = key.trim();
-  const relativePath = "assets/audio/" + safeLang + "/" + safeKey + ".ogg";
+  const relativePath = safeKey.endsWith(".webm")
+    ? "assets/audio/" + safeKey.replace(/^\/+/, "")
+    : "assets/audio/" + safeLang + "/" + safeKey + ".ogg";
 
   if (
     typeof chrome !== "undefined" &&
